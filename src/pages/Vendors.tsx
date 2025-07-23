@@ -1,0 +1,219 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const vendors = [
+  {
+    name: "OpenText",
+    logo: "OT",
+    description: "Core Data Protection Platform",
+    tagline: "Enterprise-grade data protection, availability, and secure cloud solutions",
+    solutions: [
+      "Data Protection - Availability & Migrate",
+      "Secure Cloud Suite - Cloud-to-Cloud Backup",
+      "Email Continuity & Archiving",
+      "Endpoint & Threat Protection"
+    ],
+    href: "/vendors/opentext",
+    color: "bg-blue-50 text-blue-700 border-blue-200"
+  },
+  {
+    name: "TDS",
+    logo: "TDS",
+    description: "Orchestration & IT Visibility",
+    tagline: "Advanced IT orchestration, dependency mapping, and migration automation",
+    solutions: [
+      "TransitionManager - DR Orchestration",
+      "Migration Wave Planning",
+      "Dependency Mapping & Visualization",
+      "IT Asset Discovery & Management"
+    ],
+    href: "/vendors/tds",
+    color: "bg-green-50 text-green-700 border-green-200"
+  },
+  {
+    name: "AppCURE",
+    logo: "AC",
+    description: "Application Modernization",
+    tagline: "Complete application transformation and modernization platform",
+    solutions: [
+      "Capture - Application Assessment",
+      "Studio - App Repackaging",
+      "Runtime - Secure Environments",
+      "DMT - Desktop Modernization"
+    ],
+    href: "/vendors/appcure",
+    color: "bg-purple-50 text-purple-700 border-purple-200"
+  },
+  {
+    name: "Sangfor",
+    logo: "SF",
+    description: "Infrastructure & Cybersecurity",
+    tagline: "Hyper-converged infrastructure and next-generation security solutions",
+    solutions: [
+      "HCI - Hyper-Converged Infrastructure",
+      "NGAF - Next-Gen Firewall",
+      "Selected security and infrastructure components"
+    ],
+    href: "/vendors/sangfor",
+    color: "bg-orange-50 text-orange-700 border-orange-200"
+  }
+];
+
+export default function Vendors() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main>
+        {/* Hero Section */}
+        <section className="py-16 bg-gradient-to-b from-primary-light to-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <Badge variant="secondary" className="mb-4">Technology Partners</Badge>
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+                Our Vendor Partners
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                S2 partners with industry-leading technology vendors to deliver comprehensive 
+                data protection, disaster recovery, and application modernization solutions.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Vendors Grid */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {vendors.map((vendor, index) => (
+                <Card key={index} className="hover:shadow-lg transition-all duration-300 group">
+                  <CardHeader>
+                    <div className="flex items-start space-x-4">
+                      <div className={`w-16 h-16 rounded-lg flex items-center justify-center font-bold text-lg border ${vendor.color}`}>
+                        {vendor.logo}
+                      </div>
+                      <div className="flex-1">
+                        <CardTitle className="text-2xl mb-2">{vendor.name}</CardTitle>
+                        <Badge variant="secondary" className="mb-3">{vendor.description}</Badge>
+                        <p className="text-muted-foreground">{vendor.tagline}</p>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-3">Key Solutions:</h4>
+                      <ul className="space-y-2">
+                        {vendor.solutions.map((solution, solutionIndex) => (
+                          <li key={solutionIndex} className="text-sm text-muted-foreground flex items-start">
+                            <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            {solution}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="pt-4 border-t">
+                      <Button asChild variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                        <Link to={vendor.href}>
+                          Learn More About {vendor.name}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Partnership Approach */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6">Our Partnership Approach</h2>
+              <p className="text-lg text-muted-foreground mb-12">
+                S2 maintains deep technical partnerships with leading vendors to ensure we can 
+                architect and deliver the most effective solutions for your enterprise needs.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <Card>
+                  <CardContent className="text-center p-6">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                      1
+                    </div>
+                    <h3 className="font-semibold mb-2">Deep Technical Expertise</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Our team maintains advanced certifications and technical expertise across all partner platforms
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card>
+                  <CardContent className="text-center p-6">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                      2
+                    </div>
+                    <h3 className="font-semibold mb-2">Solution Integration</h3>
+                    <p className="text-sm text-muted-foreground">
+                      We architect multi-vendor solutions that work seamlessly together in your environment
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card>
+                  <CardContent className="text-center p-6">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                      3
+                    </div>
+                    <h3 className="font-semibold mb-2">Ongoing Support</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Direct access to vendor support channels and S2's technical team for complete coverage
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Partner Portal CTA */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <Card className="max-w-4xl mx-auto">
+              <CardContent className="text-center p-8">
+                <h2 className="text-2xl font-bold mb-4">Partner Portal Access</h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Existing partners can access technical resources, documentation, and project management tools 
+                  through our dedicated partner portal.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" asChild>
+                    <a 
+                      href="https://preview--pipeline-pro-portal.lovable.app" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center"
+                    >
+                      Access Partner Portal
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" asChild>
+                    <Link to="/contact">Request Partner Access</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
