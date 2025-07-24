@@ -107,27 +107,50 @@ export default function About() {
           </div>
         </section>
 
-        {/* Our Core */}
+        {/* Core Values */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Core</h2>
+              <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                At our core, S2 is built on one simple principle — total commitment to those we serve.
+                The principles that drive every client engagement and solution delivery
               </p>
             </div>
             
-            <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <Card>
-                <CardContent className="p-8">
-                  <div className="space-y-6 text-center">
-                    <p className="text-lg text-muted-foreground">
-                      We don't push products. We listen, we learn, and we adapt. Our team takes the time to understand your challenges — whether you're a partner, a client, or both — and we craft solutions that fit you, not the other way around.
-                    </p>
-                    <p className="text-lg text-muted-foreground">
-                      With a diverse portfolio across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to mix, match, and customize offerings that work for your environment — efficiently, intelligently, and always with your goals in mind.
-                    </p>
-                  </div>
+                <CardHeader>
+                  <CardTitle>Technical Excellence</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    We maintain the highest levels of technical certification and expertise 
+                    to deliver enterprise-grade solutions that work reliably in production environments.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle>Client Partnership</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Every engagement is a partnership. We invest time to understand your unique 
+                    requirements and architect solutions that align with your business objectives.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle>Continuous Innovation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    We stay ahead of technology trends to bring the latest data protection, 
+                    disaster recovery, and application modernization capabilities to our clients.
+                  </p>
                 </CardContent>
               </Card>
             </div>
