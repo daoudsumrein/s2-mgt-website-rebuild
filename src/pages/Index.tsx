@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building, Users, Globe, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -43,7 +44,7 @@ const Index = () => {
                   <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">Regional Expertise</h3>
                   <p className="text-sm text-muted-foreground">
-                    Deep understanding of UAE & KSA market requirements
+                    Deep understanding of the Region market requirements
                   </p>
                 </CardContent>
               </Card>
@@ -53,7 +54,7 @@ const Index = () => {
                   <Users className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">Technical Excellence</h3>
                   <p className="text-sm text-muted-foreground">
-                    Certified experts in OpenText, TDS, and AppCURE solutions
+                    Certified experts delivering enterprise-grade solutions
                   </p>
                 </CardContent>
               </Card>
@@ -68,11 +69,11 @@ const Index = () => {
               <div className="space-y-6">
                 <Badge variant="secondary">Our Approach</Badge>
                 <h2 className="text-3xl lg:text-4xl font-bold">
-                  Consultancy-Led Implementation
+                  Consultancy-Led Selling & Services
                 </h2>
                 <p className="text-lg text-muted-foreground">
                   We don't just sell technology—we architect solutions. Our consultancy-first approach 
-                  ensures every implementation is tailored to your specific infrastructure and business requirements.
+                  ensures every inquiry or implementation is tailored to your specific infrastructure and business requirements.
                 </p>
                 
                 <div className="space-y-4">
@@ -101,9 +102,11 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <Button size="lg" className="mt-6">
-                  View All Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="mt-6" asChild>
+                  <Link to="/services">
+                    View All Services
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
               </div>
               
@@ -156,7 +159,7 @@ const Index = () => {
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let's discuss how S2 can help modernize your data protection, disaster recovery, 
-              and application infrastructure.
+              and application infrastructure in the Region.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
@@ -164,8 +167,10 @@ const Index = () => {
                   Request Consultation
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
-                View Solutions
+              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+                <Link to="/services">
+                  View Solutions
+                </Link>
               </Button>
             </div>
           </div>

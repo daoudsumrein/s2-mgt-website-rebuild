@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <footer className="bg-muted border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <img src={s2Logo} alt="S2 Management Solutions" className="h-8 w-auto" />
@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>UAE & Saudi Arabia</span>
+                <span>The Region</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
@@ -61,6 +61,33 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Services */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/disaster-recovery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Disaster Recovery
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/data-protection" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Data Protection
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/app-modernization" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  App Modernization
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Vendors */}
           <div className="space-y-4">
             <h3 className="font-semibold">Our Vendors</h3>
@@ -78,18 +105,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company & Partners */}
+          {/* Company */}
           <div className="space-y-4">
             <h3 className="font-semibold">Company</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   About S2
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Services
                 </Link>
               </li>
               <li>

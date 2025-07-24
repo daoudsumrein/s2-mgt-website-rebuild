@@ -1,6 +1,7 @@
 import { ArrowRight, Shield, Server, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 
 export default function HeroSection() {
@@ -26,29 +27,41 @@ export default function HeroSection() {
                 <span className="text-foreground">for the Modern Era</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                S2 Management Solutions delivers critical infrastructure projects across UAE & KSA with consultancy-led data protection, disaster recovery orchestration, and application modernization.
+                As a Value-Added Distributor, S2 enables digital transformation for the modern era through consultancy-driven solutions that modernize your IT infrastructure and business operations.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg px-8">
-                Explore Solutions
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="text-lg px-8" asChild>
+                <Link to="/services">
+                  Explore Solutions
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
-                Request Consultation
+              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+                <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">
+                  Request Consultation
+                </a>
               </Button>
             </div>
             
             {/* Trust Indicators */}
             <div className="pt-8 border-t border-border/50">
               <p className="text-sm text-muted-foreground mb-4">Trusted by enterprises across</p>
-              <div className="flex flex-wrap gap-6 text-sm font-medium text-muted-foreground">
-                <span>Government Sector</span>
+              <div className="flex flex-wrap gap-4 text-sm font-medium text-muted-foreground">
+                <span>Government</span>
                 <span>•</span>
-                <span>Banking & Finance</span>
+                <span>Banking & Financial Services</span>
                 <span>•</span>
                 <span>Healthcare</span>
+                <span>•</span>
+                <span>Oil & Gas</span>
+                <span>•</span>
+                <span>Telecommunications</span>
+                <span>•</span>
+                <span>Education</span>
+                <span>•</span>
+                <span>Manufacturing</span>
                 <span>•</span>
                 <span>Critical Infrastructure</span>
               </div>
@@ -67,7 +80,7 @@ export default function HeroSection() {
                     <div>
                       <h3 className="font-semibold mb-2">Data Protection & Continuity</h3>
                       <p className="text-sm text-muted-foreground">
-                        Real-time replication, cloud backup, and email archiving with OpenText solutions
+                        Real-time replication, cloud backup, and email archiving solutions
                       </p>
                     </div>
                   </div>
@@ -83,7 +96,7 @@ export default function HeroSection() {
                     <div>
                       <h3 className="font-semibold mb-2">DR Orchestration & Migration</h3>
                       <p className="text-sm text-muted-foreground">
-                        Automated disaster recovery and dependency mapping with TDS TransitionManager
+                        Automated disaster recovery and dependency mapping solutions
                       </p>
                     </div>
                   </div>
@@ -99,7 +112,7 @@ export default function HeroSection() {
                     <div>
                       <h3 className="font-semibold mb-2">Application Modernization</h3>
                       <p className="text-sm text-muted-foreground">
-                        Legacy app transformation and secure runtime environments with AppCURE
+                        Legacy app transformation and secure runtime environments
                       </p>
                     </div>
                   </div>
