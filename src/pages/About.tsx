@@ -20,7 +20,7 @@ export default function About() {
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 We are a consultancy-led Value-Added Distributor specializing in data protection, 
-                high availability, disaster recovery, and application modernization across UAE & KSA.
+                high availability, disaster recovery, and application modernization across MENA region.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function About() {
                     <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold">Regional Focus</h4>
-                      <p className="text-sm text-muted-foreground">Deep understanding of UAE and KSA regulatory and infrastructure requirements</p>
+                      <p className="text-sm text-muted-foreground">Deep understanding of MENA region regulatory and infrastructure requirements</p>
                     </div>
                   </div>
                   
@@ -83,7 +83,7 @@ export default function About() {
                   <CardContent className="p-6">
                     <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">Regional Presence</h3>
-                    <p className="text-sm text-muted-foreground">UAE & KSA operations since 2013</p>
+                    <p className="text-sm text-muted-foreground">MENA region operations since 2013</p>
                   </CardContent>
                 </Card>
                 

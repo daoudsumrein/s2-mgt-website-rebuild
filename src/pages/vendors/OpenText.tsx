@@ -65,7 +65,7 @@ export default function OpenTextPage() {
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Enterprise-grade data protection, high availability, and secure cloud solutions 
-                for mission-critical environments across UAE & KSA.
+                for mission-critical environments across MENA region.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg">

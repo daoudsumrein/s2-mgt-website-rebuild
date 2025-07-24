@@ -119,9 +119,9 @@ export default function Contact() {
                     <div className="flex items-start space-x-3">
                       <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-medium">UAE & Saudi Arabia</p>
+                        <p className="font-medium">MENA Region</p>
                         <p className="text-sm text-muted-foreground">
-                          Serving enterprise clients across the UAE and KSA region
+                          Serving enterprise clients across MENA region with offices in KSA and UAE (HQ)
                         </p>
                       </div>
                     </div>
@@ -179,7 +179,7 @@ export default function Contact() {
                   <CardContent>
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li>• Consultancy-led approach with technical expertise</li>
-                      <li>• Regional focus on UAE & KSA enterprise requirements</li>
+                      <li>• Regional focus on MENA region enterprise requirements</li>
                       <li>• Certified specialists in OpenText, TDS, and AppCURE</li>
                       <li>• End-to-end project delivery and ongoing support</li>
                       <li>• Proven track record in government and critical infrastructure</li>

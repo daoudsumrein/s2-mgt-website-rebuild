@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="space-y-4">
             <img src={s2Logo} alt="S2 Management Solutions" className="h-8 w-auto" />
             <p className="text-sm text-muted-foreground max-w-xs">
-              Value-Added Distributor delivering critical IT transformation projects across UAE & KSA since 2013.
+              Value-Added Distributor delivering critical IT transformation projects across MENA region since 2013. Offices in KSA and UAE (HQ).
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
