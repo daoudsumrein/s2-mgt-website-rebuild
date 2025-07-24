@@ -147,6 +147,21 @@ export default function Navigation() {
                 <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    <li className="md:col-span-2">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/solutions"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        >
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            View All Solutions
+                          </div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            Comprehensive IT infrastructure solutions for data protection, disaster recovery, and modernization.
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
                     {solutions.map((solution) => (
                       <li key={solution.href}>
                         <NavigationMenuLink asChild>
