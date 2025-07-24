@@ -18,6 +18,7 @@ import ITDiscovery from "./pages/solutions/ITDiscovery";
 import SecureCloud from "./pages/solutions/SecureCloud";
 import AppModernization from "./pages/solutions/AppModernization";
 import Security from "./pages/solutions/Security";
+import EmailArchiving from "./pages/solutions/EmailArchiving";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/solutions/secure-cloud" element={<SecureCloud />} />
           <Route path="/solutions/app-modernization" element={<AppModernization />} />
           <Route path="/solutions/security" element={<Security />} />
+          <Route path="/solutions/email-archiving" element={<EmailArchiving />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
