@@ -23,9 +23,7 @@ export default function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="text-foreground">Enterprise</span>{" "}
-                <span className="relative inline-block">
-                  <span className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold">IT Transformation</span>
-                </span>{" "}
+                <span className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold">IT Transformation</span>{" "}
                 <span className="text-foreground">for the Modern Era</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
@@ -76,8 +74,8 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-gradient-metallic-blue">
-                      <Shield className="h-6 w-6 text-white" />
+                    <div className="p-3 rounded-lg bg-primary-light">
+                      <Shield className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Data Protection & Continuity</h3>
@@ -92,8 +90,8 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-gradient-metallic-blue">
-                      <Workflow className="h-6 w-6 text-white" />
+                    <div className="p-3 rounded-lg bg-primary-light">
+                      <Workflow className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">DR Orchestration & Migration</h3>
@@ -108,8 +106,8 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-gradient-metallic-blue">
-                      <Server className="h-6 w-6 text-white" />
+                    <div className="p-3 rounded-lg bg-primary-light">
+                      <Server className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Application Modernization</h3>
