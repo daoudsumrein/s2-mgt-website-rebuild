@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>The Region</span>
+                <span>UAE (HQ), KSA</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
