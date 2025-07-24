@@ -40,7 +40,7 @@ export default function HeroSection() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+              <Button variant="gradient-border" size="lg" className="text-lg px-8" asChild>
                 <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">
                   Request Consultation
                 </a>
@@ -76,7 +76,7 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
+                    <div className="relative p-3 rounded-lg bg-background border border-transparent bg-gradient-metallic-blue bg-clip-padding before:absolute before:inset-0 before:bg-gradient-metallic-blue before:rounded-lg before:p-[1px] before:content-[''] before:-z-10">
                       <Shield className="h-6 w-6 text-primary" />
                     </div>
                     <div>
@@ -92,7 +92,7 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
+                    <div className="relative p-3 rounded-lg bg-background border border-transparent bg-gradient-metallic-blue bg-clip-padding before:absolute before:inset-0 before:bg-gradient-metallic-blue before:rounded-lg before:p-[1px] before:content-[''] before:-z-10">
                       <Workflow className="h-6 w-6 text-primary" />
                     </div>
                     <div>
@@ -108,7 +108,7 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
+                    <div className="relative p-3 rounded-lg bg-background border border-transparent bg-gradient-metallic-blue bg-clip-padding before:absolute before:inset-0 before:bg-gradient-metallic-blue before:rounded-lg before:p-[1px] before:content-[''] before:-z-10">
                       <Server className="h-6 w-6 text-primary" />
                     </div>
                     <div>
