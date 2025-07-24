@@ -33,6 +33,12 @@ const solutions = [
     items: ["Endpoint Backup", "Cloud Workload Protection", "Email Archiving & Continuity"]
   },
   {
+    title: "Email Archiving & Continuity",
+    href: "/solutions/email-archiving",
+    description: "Compliance, Access, and Uptime — Without Compromise",
+    items: ["Email Continuity", "Compliant Archiving", "Policy Management"]
+  },
+  {
     title: "Secure Cloud Suite",
     href: "/solutions/secure-cloud",
     description: "Microsoft 365/Google Workspace Backup, Endpoint & Email Protection",
