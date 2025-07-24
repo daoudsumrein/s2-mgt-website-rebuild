@@ -159,8 +159,10 @@ const Index = () => {
               and application infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                Request Consultation
+              <Button size="lg" className="text-lg px-8" asChild>
+                <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">
+                  Request Consultation
+                </a>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8">
                 View Solutions
