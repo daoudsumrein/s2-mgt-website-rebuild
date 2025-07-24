@@ -76,8 +76,8 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
-                      <Shield className="h-6 w-6 text-primary" />
+                    <div className="p-3 rounded-lg bg-gradient-metallic-blue">
+                      <Shield className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Data Protection & Continuity</h3>
@@ -92,8 +92,8 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
-                      <Workflow className="h-6 w-6 text-primary" />
+                    <div className="p-3 rounded-lg bg-gradient-metallic-blue">
+                      <Workflow className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">DR Orchestration & Migration</h3>
@@ -108,8 +108,8 @@ export default function HeroSection() {
               <Card className="group hover:shadow-lg transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
-                      <Server className="h-6 w-6 text-primary" />
+                    <div className="p-3 rounded-lg bg-gradient-metallic-blue">
+                      <Server className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Application Modernization</h3>
