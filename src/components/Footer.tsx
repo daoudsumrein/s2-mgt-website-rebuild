@@ -31,9 +31,13 @@ export default function Footer() {
               Value-Added Distributor delivering critical IT transformation projects across MENA region since 2013. Offices in KSA and UAE (HQ).
             </p>
             <div className="space-y-2">
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
+              </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span>UAE (HQ), KSA</span>
+                <Phone className="h-4 w-4" />
+                <span>+971 4 123 4567</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
