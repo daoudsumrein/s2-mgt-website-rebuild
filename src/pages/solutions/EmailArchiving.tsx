@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -80,6 +81,12 @@ const idealFor = [
 export default function EmailArchiving() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Email Archiving & Continuity Solutions MENA - Email Backup & Compliance | S2"
+        description="Professional email archiving and business continuity solutions for MENA enterprises. OpenText Email Backup, Microsoft 365 archiving, and compliance solutions across UAE, Saudi Arabia, and Middle East."
+        keywords="email archiving MENA, Microsoft 365 backup UAE, email compliance Middle East, OpenText archiving Saudi Arabia, business continuity, email backup solutions, regulatory compliance"
+        canonicalUrl="https://s2mgt.com/solutions/email-archiving"
+      />
       <Navigation />
       
       <main>

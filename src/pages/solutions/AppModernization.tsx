@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -92,6 +93,12 @@ const idealFor = [
 export default function AppModernization() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Application Modernization & Digital Transformation MENA | S2 Solutions"
+        description="Legacy application modernization and digital transformation services for MENA enterprises. Expert IT transformation, cloud migration, and application orchestration across UAE, Saudi Arabia, and Middle East."
+        keywords="application modernization MENA, digital transformation UAE, IT transformation Middle East, legacy modernization Saudi Arabia, cloud migration, app modernization, digital transformation services"
+        canonicalUrl="https://s2mgt.com/solutions/app-modernization"
+      />
       <Navigation />
       
       <main>

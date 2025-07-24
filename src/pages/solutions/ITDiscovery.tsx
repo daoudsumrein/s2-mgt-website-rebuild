@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -74,6 +75,12 @@ const idealFor = [
 export default function ITDiscovery() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="IT Discovery & Infrastructure Mapping MENA - IT Orchestration | S2 Solutions"
+        description="Comprehensive IT discovery and infrastructure mapping services for MENA enterprises. Expert IT orchestration, dependency mapping, and infrastructure analysis across UAE, Saudi Arabia, and Middle East."
+        keywords="IT discovery MENA, infrastructure mapping UAE, IT orchestration Middle East, dependency mapping Saudi Arabia, IT assessment, infrastructure analysis, IT transformation planning"
+        canonicalUrl="https://s2mgt.com/solutions/it-discovery"
+      />
       <Navigation />
       <main>
         {/* Hero Section */}

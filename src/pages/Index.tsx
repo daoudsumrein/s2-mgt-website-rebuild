@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,6 +12,13 @@ import { Link } from "react-router-dom";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="S2 Management Solutions - Leading IT Transformation, Disaster Recovery & Cybersecurity in MENA"
+        description="Premier IT transformation and digital modernization services in MENA. Expert disaster recovery, cybersecurity, data protection, and IT orchestration solutions for enterprises across UAE, Saudi Arabia, and Middle East."
+        keywords="disaster recovery MENA, cybersecurity UAE, IT transformation Middle East, digital transformation Saudi Arabia, Carbonite solutions, IT orchestration, data protection MENA, enterprise cybersecurity, business continuity"
+        canonicalUrl="https://s2mgt.com/"
+      />
+      <LocalBusinessSchema />
       <Navigation />
       <main>
         <HeroSection />
@@ -20,11 +29,12 @@ const Index = () => {
             <div className="text-center mb-12">
               <Badge variant="secondary" className="mb-4">Founded 2013</Badge>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Leading IT Transformation in the Middle East
+                Leading IT Transformation & Digital Modernization in MENA
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                S2 Management Solutions is a consultancy-led Value-Added Distributor specializing in 
-                data protection, high availability, disaster recovery, and application modernization.
+                S2 Management Solutions is the premier cybersecurity and disaster recovery consultancy in the Middle East, 
+                delivering enterprise-grade IT transformation, data protection, and digital orchestration solutions 
+                across UAE, Saudi Arabia, and the broader MENA region since 2013.
               </p>
             </div>
             
@@ -42,9 +52,9 @@ const Index = () => {
               <Card>
                 <CardContent className="text-center p-6">
                   <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Regional Expertise</h3>
+                  <h3 className="font-semibold mb-2">MENA Regional Leadership</h3>
                   <p className="text-sm text-muted-foreground">
-                    Deep understanding of the Region market requirements
+                    Deep cybersecurity and IT transformation expertise across UAE, Saudi Arabia, and MENA markets
                   </p>
                 </CardContent>
               </Card>

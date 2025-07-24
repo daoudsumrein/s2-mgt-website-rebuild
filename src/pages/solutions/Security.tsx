@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -105,6 +106,12 @@ const idealFor = [
 export default function Security() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Cybersecurity & Ransomware Protection MENA - Enterprise Security Solutions | S2"
+        description="Advanced cybersecurity and ransomware protection for MENA enterprises. Multi-layered threat defense, endpoint security, email protection, and managed detection & response (MDR) services across UAE and Middle East."
+        keywords="cybersecurity MENA, ransomware protection UAE, enterprise security Middle East, endpoint protection Saudi Arabia, email security, MDR services, threat detection MENA, cyber defense solutions"
+        canonicalUrl="https://s2mgt.com/solutions/security"
+      />
       <Navigation />
       
       <main>

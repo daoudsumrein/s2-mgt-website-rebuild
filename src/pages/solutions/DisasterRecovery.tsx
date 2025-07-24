@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -84,6 +85,12 @@ const idealFor = [
 export default function DisasterRecovery() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Disaster Recovery Solutions MENA - DR Orchestration & Business Continuity | S2 Solutions"
+        description="Enterprise disaster recovery solutions for MENA region. Expert DR orchestration, business continuity planning, and automated failover services. Carbonite partner serving UAE, Saudi Arabia, and Middle East."
+        keywords="disaster recovery MENA, business continuity UAE, DR orchestration Middle East, Carbonite disaster recovery, automated failover, business continuity planning Saudi Arabia, enterprise DR solutions"
+        canonicalUrl="https://s2mgt.com/solutions/disaster-recovery"
+      />
       <Navigation />
       <main>
         {/* Hero Section */}

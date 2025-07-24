@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -93,6 +94,12 @@ const solutions = [
 export default function Solutions() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="IT Solutions & Digital Transformation Services MENA | S2 Management Solutions"
+        description="Comprehensive IT solutions for MENA enterprises: disaster recovery, cybersecurity, data protection, digital transformation, and IT orchestration. Serving UAE, Saudi Arabia, and Middle East since 2013."
+        keywords="IT solutions MENA, digital transformation UAE, cybersecurity solutions Middle East, disaster recovery Saudi Arabia, Carbonite partner, IT orchestration, data protection services, enterprise cybersecurity, business continuity MENA"
+        canonicalUrl="https://s2mgt.com/solutions"
+      />
       <Navigation />
       <main>
         {/* Hero Section */}
