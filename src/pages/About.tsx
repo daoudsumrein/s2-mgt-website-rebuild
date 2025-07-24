@@ -119,20 +119,19 @@ export default function About() {
             
             {/* Our Core */}
             <div className="max-w-4xl mx-auto mb-16">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-4">Our Core</h3>
-              </div>
-              <div className="space-y-6 text-lg text-muted-foreground">
-                <p>
-                  At our core, S2 is built on one simple principle — total commitment to those we serve.
-                </p>
-                <p>
-                  We don't push products. We listen, we learn, and we adapt. Our team takes the time to understand your challenges — whether you're a partner, a client, or both — and we craft solutions that fit you, not the other way around.
-                </p>
-                <p>
-                  With a diverse portfolio across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to mix, match, and customize offerings that work for your environment — efficiently, intelligently, and always with your goals in mind.
-                </p>
-              </div>
+              <Card className="p-8">
+                <div className="space-y-6 text-lg text-muted-foreground">
+                  <p>
+                    At our core, S2 is built on one simple principle — total commitment to those we serve.
+                  </p>
+                  <p>
+                    We don't push products. We listen, we learn, and we adapt. Our team takes the time to understand your challenges — whether you're a partner, a client, or both — and we craft solutions that fit you, not the other way around.
+                  </p>
+                  <p>
+                    With a diverse portfolio across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to mix, match, and customize offerings that work for your environment — efficiently, intelligently, and always with your goals in mind.
+                  </p>
+                </div>
+              </Card>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
