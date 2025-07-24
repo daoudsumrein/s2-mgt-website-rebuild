@@ -39,6 +39,14 @@ export default function Footer() {
                 <Phone className="h-4 w-4" />
                 <span>+971 4 123 4567</span>
               </div>
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>KSA Office Address Here</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>+966 X XXX XXXX</span>
+              </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
