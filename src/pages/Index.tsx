@@ -32,9 +32,7 @@ const Index = () => {
                 Leading IT Transformation & Digital Modernization in MENA
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                S2 Management Solutions is the premier cybersecurity and disaster recovery consultancy in the Middle East, 
-                delivering enterprise-grade IT transformation, data protection, and digital orchestration solutions 
-                across UAE, Saudi Arabia, and the broader MENA region since 2013.
+                S2 Management Solutions is the leading Data Protection and disaster recovery consultancy in the Middle East. Since 2013, we have been delivering enterprise-grade IT transformation, data protection, and digital orchestration solutions across the UAE, Saudi Arabia, and the broader MENA region. Our mission is to empower organizations with resilient, secure, and future ready IT infrastructures tailored to their unique business needs.
               </p>
             </div>
             
@@ -54,7 +52,7 @@ const Index = () => {
                   <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">MENA Regional Leadership</h3>
                   <p className="text-sm text-muted-foreground">
-                    Deep cybersecurity and IT transformation expertise across UAE, Saudi Arabia, and MENA markets
+                    Deep Data Protection and IT transformation expertise across UAE, Saudi Arabia, and MENA markets
                   </p>
                 </CardContent>
               </Card>
@@ -135,7 +133,7 @@ const Index = () => {
                     <CardTitle className="text-lg">Disaster Recovery</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">DR orchestration and migration automation</p>
+                    <p className="text-sm text-muted-foreground">DR and migration orchestration and automation</p>
                   </CardContent>
                 </Card>
                 
@@ -178,7 +176,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8" asChild>
-                <Link to="/services">
+                <Link to="/solutions">
                   View Solutions
                 </Link>
               </Button>
