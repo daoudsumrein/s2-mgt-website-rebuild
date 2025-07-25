@@ -48,7 +48,7 @@ export default function About() {
                     <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold">Technical Expertise</h4>
-                      <p className="text-sm text-muted-foreground">Certified specialists in OpenText, TDS TransitionManager, and AppCURE solutions</p>
+                      <p className="text-sm text-muted-foreground">S2's technical team brings together certified experts with deep industry experience and advanced technical knowledge, ensuring the delivery of reliable, secure, and scalable IT solutions</p>
                     </div>
                   </div>
                   
@@ -56,7 +56,7 @@ export default function About() {
                     <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold">Regional Focus</h4>
-                      <p className="text-sm text-muted-foreground">Deep understanding of MENA region regulatory and infrastructure requirements</p>
+                      <p className="text-sm text-muted-foreground">Deep understanding of MENA region regulatory compliance and infrastructure requirements</p>
                     </div>
                   </div>
                   
@@ -183,12 +183,16 @@ export default function About() {
               Let's discuss how our expertise can help transform your IT infrastructure
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
-                Contact Our Team
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" asChild>
+                <a href="/contact">
+                  Contact Our Team
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                View Our Services
+              <Button variant="outline" size="lg" asChild>
+                <a href="/services">
+                  View Our Services
+                </a>
               </Button>
             </div>
           </div>
