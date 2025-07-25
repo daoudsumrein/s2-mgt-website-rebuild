@@ -125,10 +125,10 @@ export default function Solutions() {
               {solutions.map((solution, index) => {
                 const IconComponent = solution.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-all duration-300 group">
+                  <Card key={index} className="hover:shadow-lg transition-all duration-200 ease-out group">
                     <CardHeader>
                       <div className="flex items-start space-x-4">
-                        <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-200 ease-out">
                           <IconComponent className="h-6 w-6" />
                         </div>
                         <div className="flex-1">
