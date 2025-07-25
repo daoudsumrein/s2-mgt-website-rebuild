@@ -33,7 +33,7 @@ export default function HeroSection() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="text-lg px-8" asChild>
-                <Link to="/solutions">
+                <Link to="/services">
                   Explore Solutions
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -48,7 +48,7 @@ export default function HeroSection() {
             {/* Trust Indicators */}
             <div className="pt-8 border-t border-border/50">
               <p className="text-sm text-muted-foreground mb-4">Trusted by enterprises across</p>
-              <div className="flex flex-wrap gap-4 text-sm font-medium text-muted-foreground justify-start">
+              <div className="flex flex-wrap gap-4 text-sm font-medium text-muted-foreground">
                 <span>Government</span>
                 <span>•</span>
                 <span>Banking & Financial Services</span>
@@ -80,7 +80,7 @@ export default function HeroSection() {
                     <div>
                       <h3 className="font-semibold mb-2">Data Protection & Continuity</h3>
                       <p className="text-sm text-muted-foreground">
-                        Real-time replication, on premise and cloud backup, and email archiving solutions
+                        Real-time replication, cloud backup, and email archiving solutions
                       </p>
                     </div>
                   </div>
@@ -94,9 +94,9 @@ export default function HeroSection() {
                       <Workflow className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">DR & Migration Orchestration</h3>
+                      <h3 className="font-semibold mb-2">DR Orchestration & Migration</h3>
                       <p className="text-sm text-muted-foreground">
-                        Orchestrate and automate the Disaster Recovery and Migration workflow from the discovery level up to the management approval
+                        Automated disaster recovery and dependency mapping solutions
                       </p>
                     </div>
                   </div>
