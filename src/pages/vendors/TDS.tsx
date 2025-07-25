@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, ExternalLink, CheckCircle, ArrowRight, Workflow, Map, Eye } from "lucide-react";
+import { Download, ExternalLink, CheckCircle, ArrowRight, Workflow, Map, Eye, Search } from "lucide-react";
 
 export default function TDSPage() {
   return (
@@ -21,17 +21,21 @@ export default function TDSPage() {
                 TDS TransitionManager
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Advanced IT orchestration, dependency mapping, and migration automation platform 
-                for complex enterprise environments.
+                TDS is a powerful orchestration and automation platform that streamlines migration and 
+                disaster recovery, while enhancing and accelerating IT operations to drive digital transformation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
-                  Request Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" asChild>
+                  <a href="/contact">
+                    Request Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Datasheet
+                <Button variant="outline" size="lg" asChild>
+                  <a href="/contact">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Datasheet
+                  </a>
                 </Button>
               </div>
             </div>
@@ -50,28 +54,54 @@ export default function TDSPage() {
                 </p>
               </div>
 
-              <div className="grid lg:grid-cols-3 gap-8">
+              <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
                 <Card className="hover:shadow-lg transition-all duration-300">
                   <CardHeader>
-                    <Workflow className="h-12 w-12 text-green-600 mb-4" />
-                    <CardTitle>DR Orchestration</CardTitle>
+                    <Search className="h-12 w-12 text-green-600 mb-4" />
+                    <CardTitle>IT Discovery</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Automated disaster recovery workflows with intelligent sequencing and validation
+                      Comprehensive IT infrastructure discovery and asset identification
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Automated failover sequences</span>
+                        <span className="text-sm">Automated asset discovery</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Intelligent dependency handling</span>
+                        <span className="text-sm">Configuration tracking</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Validation and testing automation</span>
+                        <span className="text-sm">Inventory management</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover:shadow-lg transition-all duration-300">
+                  <CardHeader>
+                    <Eye className="h-12 w-12 text-green-600 mb-4" />
+                    <CardTitle>Dependency Mapping</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
+                      Complete IT infrastructure visualization with real-time dependency tracking
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                        <span className="text-sm">Real-time discovery</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                        <span className="text-sm">Visual dependency maps</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                        <span className="text-sm">Impact analysis</span>
                       </li>
                     </ul>
                   </CardContent>
@@ -105,25 +135,29 @@ export default function TDSPage() {
 
                 <Card className="hover:shadow-lg transition-all duration-300">
                   <CardHeader>
-                    <Eye className="h-12 w-12 text-green-600 mb-4" />
-                    <CardTitle>Dependency Mapping</CardTitle>
+                    <Workflow className="h-12 w-12 text-green-600 mb-4" />
+                    <CardTitle>DR Orchestration</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Complete IT infrastructure visualization with real-time dependency tracking
+                      Automated disaster recovery workflows with intelligent sequencing, validation, and reporting
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Real-time discovery</span>
+                        <span className="text-sm">Automated failover sequences</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Visual dependency maps</span>
+                        <span className="text-sm">Intelligent dependency handling</span>
                       </li>
                       <li className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Impact analysis</span>
+                        <span className="text-sm">Validation and testing automation</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                        <span className="text-sm">Comprehensive reporting</span>
                       </li>
                     </ul>
                   </CardContent>
@@ -235,12 +269,16 @@ export default function TDSPage() {
               infrastructure management and migration capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
-                Schedule TDS Demonstration
+              <Button size="lg" asChild>
+                <a href="/contact">
+                  Schedule TDS Demonstration
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Visit TDS Website
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://www.tds.com" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Visit TDS Website
+                </a>
               </Button>
             </div>
           </div>

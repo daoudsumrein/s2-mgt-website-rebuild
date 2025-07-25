@@ -26,8 +26,8 @@ const solutions = [
     products: [
       {
         name: "Cloud-to-Cloud Backup",
-        description: "Comprehensive backup for Microsoft 365 and Google Workspace",
-        features: ["Complete M365 protection", "Google Workspace backup", "Unlimited retention", "Granular recovery"]
+        description: "Comprehensive backup for Microsoft 365, Google Workspace, Salesforce, Box, and Dropbox",
+        features: ["Complete M365 protection", "Google Workspace backup", "Salesforce data protection", "Box & Dropbox backup", "Unlimited retention", "Granular recovery"]
       },
       {
         name: "Email Archiving & Continuity",
@@ -35,14 +35,9 @@ const solutions = [
         features: ["Email continuity", "Compliance archiving", "Advanced search", "Legal hold"]
       },
       {
-        name: "Endpoint Protection",
-        description: "Complete endpoint backup and security solution",
-        features: ["File & folder backup", "System image backup", "Ransomware protection", "Remote management"]
-      },
-      {
-        name: "Threat Protection",
-        description: "Advanced email and web threat protection",
-        features: ["Email filtering", "Anti-phishing", "URL protection", "Advanced threat detection"]
+        name: "Secure Cloud",
+        description: "Complete security and protection suite for enterprise environments",
+        features: ["Endpoint Protection", "EDR (Endpoint Detection & Response)", "MDR (Managed Detection & Response)", "Email Encryption", "DNS Protection", "Security Awareness Training"]
       }
     ]
   }
@@ -65,16 +60,20 @@ export default function OpenTextPage() {
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Enterprise-grade data protection, high availability, and secure cloud solutions 
-                for mission-critical environments across MENA region.
+                for mission-critical environments.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
-                  Request Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" asChild>
+                  <a href="/contact">
+                    Request Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Datasheet
+                <Button variant="outline" size="lg" asChild>
+                  <a href="/contact">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Datasheet
+                  </a>
                 </Button>
               </div>
             </div>
@@ -211,12 +210,16 @@ export default function OpenTextPage() {
               strategy for your enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
-                Contact Our OpenText Specialists
+              <Button size="lg" asChild>
+                <a href="/contact">
+                  Contact Our OT Specialists
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Visit OpenText.com
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://www.opentext.com" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Visit OpenText
+                </a>
               </Button>
             </div>
           </div>

@@ -25,18 +25,18 @@ const vendors = [
     name: "TDS",
     logo: "TDS",
     description: "Orchestration & IT Visibility",
-    tagline: "Advanced IT orchestration, dependency mapping, and migration automation",
+    tagline: "TDS is a powerful orchestration and automation platform that streamlines migration and disaster recovery, while enhancing and accelerating IT operations to drive digital transformation",
     solutions: [
-      "TransitionManager - DR Orchestration",
-      "Migration Wave Planning",
+      "IT Discovery & Asset Management",
       "Dependency Mapping & Visualization",
-      "IT Asset Discovery & Management"
+      "Migration Wave Planning",
+      "DR Orchestration & Reporting"
     ],
     href: "/vendors/tds",
     color: "bg-green-50 text-green-700 border-green-200"
   },
   {
-    name: "AppCURE",
+    name: "appCURE",
     logo: "AC",
     description: "Application Modernization",
     tagline: "Complete application transformation and modernization platform",
@@ -50,17 +50,32 @@ const vendors = [
     color: "bg-purple-50 text-purple-700 border-purple-200"
   },
   {
-    name: "Sangfor",
-    logo: "SF",
-    description: "Infrastructure & Cybersecurity",
-    tagline: "Hyper-converged infrastructure and next-generation security solutions",
+    name: "NAKIVO",
+    logo: "NK",
+    description: "Backup & Recovery",
+    tagline: "Comprehensive data protection solutions for virtual and cloud environments",
     solutions: [
-      "HCI - Hyper-Converged Infrastructure",
-      "NGAF - Next-Gen Firewall",
-      "Selected security and infrastructure components"
+      "VM Backup & Recovery",
+      "Cloud Data Protection",
+      "Microsoft 365 Backup",
+      "Disaster Recovery Orchestration"
     ],
-    href: "/vendors/sangfor",
-    color: "bg-orange-50 text-orange-700 border-orange-200"
+    href: "/vendors/nakivo",
+    color: "bg-blue-50 text-blue-700 border-blue-200"
+  },
+  {
+    name: "Arrosoft",
+    logo: "AS",
+    description: "Endpoint & Data Protection",
+    tagline: "Advanced endpoint backup and data protection solutions",
+    solutions: [
+      "Endpoint Backup & Recovery",
+      "Centralized Management",
+      "Continuous Data Protection",
+      "Bare Metal Recovery"
+    ],
+    href: "/vendors/arrosoft",
+    color: "bg-cyan-50 text-cyan-700 border-cyan-200"
   }
 ];
 
@@ -75,7 +90,7 @@ export default function Vendors() {
             <div className="max-w-4xl mx-auto text-center">
               <Badge variant="secondary" className="mb-4">Technology Partners</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                Our Vendor Partners
+                Our Strategic Vendors
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 S2 partners with industry-leading technology vendors to deliver comprehensive 

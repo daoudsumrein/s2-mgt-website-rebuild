@@ -65,20 +65,24 @@ export default function AppCUREPage() {
                 AC
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                AppCURE Application Modernization
+                appCURE Application Modernization
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Complete application transformation platform for legacy application modernization, 
                 VDI migration, and secure runtime environments.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
-                  Request Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" asChild>
+                  <a href="/contact">
+                    Request Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Datasheet
+                <Button variant="outline" size="lg" asChild>
+                  <a href="/contact">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Datasheet
+                  </a>
                 </Button>
               </div>
             </div>
@@ -91,7 +95,7 @@ export default function AppCUREPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <Badge variant="secondary" className="mb-4">Product Suite</Badge>
-                <h2 className="text-3xl font-bold mb-4">AppCURE Platform Components</h2>
+                <h2 className="text-3xl font-bold mb-4">appCURE Platform Components</h2>
                 <p className="text-lg text-muted-foreground">
                   End-to-end application modernization and transformation capabilities
                 </p>
@@ -224,12 +228,12 @@ export default function AppCUREPage() {
           </div>
         </section>
 
-        {/* Technical Benefits */}
+        {/* Technical Benefits & OS Support */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Technical Benefits</h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <h2 className="text-3xl font-bold mb-8 text-center">Technical Benefits & Platform Support</h2>
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <Card>
                   <CardHeader>
                     <CardTitle>Automation & Efficiency</CardTitle>
@@ -270,6 +274,41 @@ export default function AppCUREPage() {
                   </CardContent>
                 </Card>
               </div>
+
+              {/* Supported Operating Systems & Environments */}
+              <Card className="bg-gradient-to-r from-purple-50 to-purple-100 border-purple-200">
+                <CardHeader>
+                  <CardTitle className="text-center text-purple-800">Supported Operating Systems & Environments</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-3 gap-6 text-center">
+                    <div>
+                      <h4 className="font-semibold mb-2 text-purple-700">Windows Platforms</h4>
+                      <div className="space-y-1 text-sm">
+                        <div>Windows 11 / Windows 10</div>
+                        <div>Windows Server 2022/2019/2016</div>
+                        <div>Legacy Windows versions</div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-purple-700">Virtualization</h4>
+                      <div className="space-y-1 text-sm">
+                        <div>VMware vSphere</div>
+                        <div>Microsoft Hyper-V</div>
+                        <div>Citrix XenServer</div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-purple-700">Cloud Platforms</h4>
+                      <div className="space-y-1 text-sm">
+                        <div>Microsoft Azure</div>
+                        <div>Amazon AWS</div>
+                        <div>Google Cloud Platform</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -277,18 +316,22 @@ export default function AppCUREPage() {
         {/* CTA */}
         <section className="py-16 bg-purple-50">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Modernize Your Applications with AppCURE</h2>
+            <h2 className="text-3xl font-bold mb-4">Modernize Your Applications with appCURE</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let S2's application modernization experts help transform your legacy applications 
               for the modern enterprise environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
-                Schedule AppCURE Assessment
+              <Button size="lg" asChild>
+                <a href="/contact">
+                  Schedule appCURE Assessment
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Learn More About AppCURE
+              <Button variant="outline" size="lg" asChild>
+                <a href="https://www.appcure.com" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Learn More About appCURE
+                </a>
               </Button>
             </div>
           </div>
