@@ -154,9 +154,9 @@ export default function Solutions() {
                         </filter>
                       </defs>
                       
-                      {/* Data Protection Semi-Circle (Left Half) with gap */}
+                      {/* Data Protection Semi-Circle (Left Half) with straight gap */}
                       <path
-                        d="M 100 100 L 98 20 A 80 80 0 0 0 98 180 Z"
+                        d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 Z"
                         fill="#87CEEB"
                         stroke="#5A9FCD"
                         strokeWidth="2"
@@ -165,9 +165,9 @@ export default function Solutions() {
                         onMouseEnter={() => setHoveredSection('data')}
                       />
                       
-                      {/* Cybersecurity Semi-Circle (Right Half) with gap */}
+                      {/* Cybersecurity Semi-Circle (Right Half) with straight gap */}
                       <path
-                        d="M 100 100 L 102 20 A 80 80 0 0 1 102 180 Z"
+                        d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 Z"
                         fill="#00ffd0"
                         stroke="#00C7A3"
                         strokeWidth="2"
@@ -268,11 +268,11 @@ export default function Solutions() {
                                   y={textY}
                                   textAnchor="middle"
                                   dominantBaseline="middle"
-                                  className="text-[10px] font-medium pointer-events-none"
+                                  className="text-[8px] font-medium pointer-events-none"
                                   fill="white"
                                   transform={`rotate(${textAngle > 90 && textAngle < 270 ? textAngle + 180 : textAngle} ${textX} ${textY})`}
                                 >
-                                  {solution.title}
+                                  {solution.title.length > 15 ? solution.title.split(' ')[0] : solution.title}
                                 </text>
                               </g>
                             );
@@ -351,11 +351,11 @@ export default function Solutions() {
                                   y={textY}
                                   textAnchor="middle"
                                   dominantBaseline="middle"
-                                  className="text-[10px] font-medium pointer-events-none"
+                                  className="text-[8px] font-medium pointer-events-none"
                                   fill="white"
                                   transform={`rotate(${textAngle > 90 && textAngle < 270 ? textAngle + 180 : textAngle} ${textX} ${textY})`}
                                 >
-                                  {solution.title}
+                                  {solution.title.length > 12 ? solution.title.split(' ')[0] : solution.title}
                                 </text>
                               </g>
                             );
