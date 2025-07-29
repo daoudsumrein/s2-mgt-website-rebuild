@@ -24,8 +24,13 @@ All colors MUST be HSL.
     --primary-light: 217 91% 95%;
     --primary-muted: 217 50% 85%;
 
-    --secondary: 210 16% 96%;
-    --secondary-foreground: 210 12% 16%;
+    
+    --secondary: 174 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Legacy secondary for backwards compatibility */
+    --secondary-legacy: 210 16% 96%;
+    --secondary-legacy-foreground: 210 12% 16%;
 
     --muted: 210 16% 97%;
     --muted-foreground: 210 8% 46%;
