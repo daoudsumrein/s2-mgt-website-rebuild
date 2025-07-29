@@ -139,8 +139,8 @@ export default function Solutions() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="relative flex items-center justify-center min-h-[600px]">
-                <div className="relative w-[500px] h-[500px]">
+              <div className="relative flex items-center justify-center min-h-[800px]">
+                <div className="relative w-[700px] h-[700px]">
                   {/* Container for wheel interaction */}
                   <div 
                     className="absolute inset-0"
