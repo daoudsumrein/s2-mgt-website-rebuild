@@ -20,6 +20,7 @@ import SecureCloud from "./pages/solutions/SecureCloud";
 import AppModernization from "./pages/solutions/AppModernization";
 import Security from "./pages/solutions/Security";
 import EmailArchiving from "./pages/solutions/EmailArchiving";
+import EndpointBackup from "./pages/solutions/EndpointBackup";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/solutions/app-modernization" element={<AppModernization />} />
           <Route path="/solutions/security" element={<Security />} />
           <Route path="/solutions/email-archiving" element={<EmailArchiving />} />
+          <Route path="/solutions/endpoint-backup" element={<EndpointBackup />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
