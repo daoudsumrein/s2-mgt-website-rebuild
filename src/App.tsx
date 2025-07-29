@@ -25,6 +25,12 @@ import ServerBackup from "./pages/solutions/ServerBackup";
 import OnPremBackup from "./pages/solutions/OnPremBackup";
 import ServerMigration from "./pages/solutions/ServerMigration";
 import DROrchestration from "./pages/solutions/DROrchestration";
+import EndpointProtection from "./pages/solutions/EndpointProtection";
+import EDR from "./pages/solutions/EDR";
+import MDR from "./pages/solutions/MDR";
+import SecurityAwareness from "./pages/solutions/SecurityAwareness";
+import EmailProtection from "./pages/solutions/EmailProtection";
+import EmailEncryption from "./pages/solutions/EmailEncryption";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -58,6 +64,12 @@ const App = () => (
           <Route path="/solutions/onprem-backup" element={<OnPremBackup />} />
           <Route path="/solutions/server-migration" element={<ServerMigration />} />
           <Route path="/solutions/dr-orchestration" element={<DROrchestration />} />
+          <Route path="/solutions/endpoint-protection" element={<EndpointProtection />} />
+          <Route path="/solutions/edr" element={<EDR />} />
+          <Route path="/solutions/mdr" element={<MDR />} />
+          <Route path="/solutions/security-awareness" element={<SecurityAwareness />} />
+          <Route path="/solutions/email-protection" element={<EmailProtection />} />
+          <Route path="/solutions/email-encryption" element={<EmailEncryption />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
