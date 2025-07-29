@@ -1,110 +1,166 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Mail, Shield, Search, Clock, Users, Database, Globe } from "lucide-react";
+import { Mail, Shield, Database, Search, HardDrive, Users, CheckCircle, Target, FileText, Building, TrendingUp, BookOpen } from "lucide-react";
 
-const deliverables = [
+const features = [
   {
-    icon: Mail,
-    title: "Email Continuity",
-    features: [
-      "Guaranteed uptime during Office 365, Exchange, or server outages",
-      "Real-time failover for inbound and outbound email",
-      "Seamless browser-based access for users",
-      "No email loss, even during extended downtime"
-    ]
+    icon: Shield,
+    title: "Regulatory Compliance",
+    description: "Assistance with regulatory compliance helps companies to meet a growing number of compliance requirements and obligations under the GDPR"
   },
   {
     icon: Database,
-    title: "Email Archiving",
+    title: "Data Loss Protection",
+    description: "Protection against data loss, safeguard the integrity of the archive. Even PST files can be centrally archived and protected"
+  },
+  {
+    icon: HardDrive,
+    title: "Storage Optimization",
+    description: "Reduce storage requirements, rule-based deletion of emails from the server after archiving, de-duplication, and compression help you to save storage space"
+  },
+  {
+    icon: FileText,
+    title: "Simplified Backup & Restore",
+    description: "Simplified backup & restore, reduced data volumes on the email server and one-click restore options for users mean shorter backup and restore times"
+  },
+  {
+    icon: TrendingUp,
+    title: "Increased Productivity",
+    description: "Increase productivity, users benefit from the fast full-text search function, intuitive operation and the elimination of mailbox quotas"
+  },
+  {
+    icon: Mail,
+    title: "Email Service Independence",
+    description: "Independence from the email service is an additional security measure for your email data"
+  }
+];
+
+const deliverables = [
+  {
+    icon: Database,
+    title: "Centralized Storage",
     features: [
-      "Compliant, tamper-proof journaling of all inbound/outbound/internal emails",
-      "Long-term retention (7–15+ years)",
-      "Lightning-fast full-text search",
-      "Legal hold & eDiscovery features"
+      "Centralized storage of business-critical information",
+      "Automated archiving of all email communications",
+      "Seamless integration with Microsoft Outlook",
+      "Long-term data availability and protection regardless of volume"
     ]
   },
   {
     icon: Shield,
-    title: "Compliance & Policy Management",
+    title: "Data Preservation",
     features: [
-      "Granular retention policies by user, group, or department",
-      "Supports GDPR, HIPAA, SEC, FINRA, UAE data laws",
-      "Audit trails and access logs",
-      "Optional encryption and data loss prevention (DLP)"
+      "Preservation of classified company data",
+      "Tamper-proof archive integrity",
+      "Secure storage with advanced encryption",
+      "Protection against data corruption and loss"
     ]
   },
   {
-    icon: Globe,
-    title: "Flexible Deployment",
+    icon: FileText,
+    title: "Information Management",
     features: [
-      "Cloud-based (OpenText Secure Cloud)",
-      "On-premise or hybrid options (MailStore)",
-      "Supports Exchange, Office 365, Google Workspace, and IMAP"
+      "Information management enhancement",
+      "Intelligent categorization and indexing",
+      "Advanced search and retrieval capabilities",
+      "Efficient data organization and access"
+    ]
+  },
+  {
+    icon: Building,
+    title: "Corporate Strategy Support",
+    features: [
+      "Support corporate strategy execution",
+      "Strategic data insights and analytics",
+      "Business intelligence from archived communications",
+      "Enhanced decision-making capabilities"
+    ]
+  },
+  {
+    icon: Users,
+    title: "Communication Improvement",
+    features: [
+      "Business communication improvement",
+      "Enhanced collaboration and transparency",
+      "Better communication audit trails",
+      "Improved organizational knowledge sharing"
+    ]
+  },
+  {
+    icon: CheckCircle,
+    title: "Compliance & Risk Management",
+    features: [
+      "Compliance and risk mitigation",
+      "Regulatory adherence and reporting",
+      "Legal discovery and e-discovery support",
+      "Risk assessment and management tools"
+    ]
+  },
+  {
+    icon: TrendingUp,
+    title: "Data Utilization",
+    features: [
+      "Efficient data utilization",
+      "Optimized storage and performance",
+      "Cost-effective data management",
+      "Improved operational efficiency"
+    ]
+  },
+  {
+    icon: BookOpen,
+    title: "Educational Resources",
+    features: [
+      "Educational resources and training",
+      "User adoption and best practices",
+      "Ongoing support and guidance",
+      "Knowledge transfer and skill development"
     ]
   }
 ];
 
-const technologies = [
-  {
-    name: "OpenText Email Continuity",
-    purpose: "Always-on access during outages"
-  },
-  {
-    name: "OpenText Archiving",
-    purpose: "Secure, compliant journal archiving"
-  },
-  {
-    name: "MailStore",
-    purpose: "Lightweight, on-premise archiving for SMEs"
-  }
-];
-
-const outcomes = [
-  "24/7 email access — even when Microsoft goes down",
-  "Full compliance with data retention laws",
-  "No more lost emails or PST sprawl",
-  "Rapid response to audits, legal, or HR requests",
-  "Employee productivity protected"
+const keyBenefits = [
+  "Automatic storage of all emails in centralized archive",
+  "Full user access to archived messages",
+  "Seamless Microsoft Outlook integration",
+  "Fast full-text search functionality",
+  "Elimination of mailbox quotas",
+  "Enhanced data security and protection"
 ];
 
 const idealFor = [
-  "Companies with strict regulatory or legal archiving requirements",
-  "Organizations using Microsoft 365 or Google Workspace",
-  "IT teams looking to offload PST headaches",
-  "Firms seeking non-disruptive continuity during migrations"
+  "Organizations requiring GDPR compliance",
+  "Companies with growing email volumes",
+  "Businesses seeking storage optimization",
+  "Enterprises needing data loss protection",
+  "Organizations requiring audit trails",
+  "Companies with regulatory obligations"
 ];
 
 export default function EmailArchiving() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Email Archiving & Continuity Solutions MENA - Email Backup & Compliance | S2"
-        description="Professional email archiving and business continuity solutions for MENA enterprises. OpenText Email Backup, Microsoft 365 archiving, and compliance solutions across UAE, Saudi Arabia, and Middle East."
-        keywords="email archiving MENA, Microsoft 365 backup UAE, email compliance Middle East, OpenText archiving Saudi Arabia, business continuity, email backup solutions, regulatory compliance"
+        title="Email Archiving Solutions MENA - Compliance & Data Protection | S2 Solutions"
+        description="Advanced email archiving solutions for MENA enterprises. GDPR compliance, centralized storage, and data protection with seamless Outlook integration. Serving UAE, Saudi Arabia, and Middle East."
+        keywords="email archiving MENA, GDPR compliance UAE, email storage Middle East, data protection Saudi Arabia, email backup solutions, regulatory compliance, Microsoft Outlook integration"
         canonicalUrl="https://s2mgt.com/solutions/email-archiving"
       />
       <Navigation />
-      
       <main>
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                Email Archiving & Continuity
-              </h1>
+              <Badge className="mb-4">Solutions</Badge>
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">Email Archiving</h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Compliance, Access, and Uptime — Without Compromise
+                Enjoy the full advantages of modern email archiving securely and with ease
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Schedule Assessment</Button>
-                <Button variant="outline" size="lg">Download Datasheet</Button>
-              </div>
+              <Button size="lg">Request Archiving Assessment</Button>
             </div>
           </div>
         </section>
@@ -113,46 +169,65 @@ export default function EmailArchiving() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-center">Overview</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground">
-                <p className="text-center mb-8">
-                  Email is your organization's lifeline — and it's also your biggest compliance and continuity risk.
-                </p>
-                <p className="text-center mb-8">
-                  S2 provides enterprise-grade email continuity and archiving solutions that ensure your users never lose access to communication, 
-                  and your business never loses control of its data.
-                </p>
-                <p className="text-center">
-                  Powered by <strong>OpenText Secure Cloud</strong> and <strong>MailStore</strong>, we ensure your emails are always:<br />
-                  <em>Accessible. Searchable. Defensible.</em>
-                </p>
+              <h2 className="text-3xl font-bold mb-8 text-center">Overview</h2>
+              <Card>
+                <CardContent className="p-8">
+                  <p className="text-lg leading-relaxed mb-6">
+                    The solution enables organizations to <strong>enjoy the full advantages of modern email archiving securely and with ease</strong>. By automatically storing copies of all emails in a centralized archive, it ensures long-term data availability and protection, regardless of volume.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Users retain <strong>full access to their archived messages</strong> and can navigate them efficiently, thanks to features like seamless integration with Microsoft Outlook.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Key Features</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {features.map((feature, index) => (
+                  <Card key={index} className="h-full">
+                    <CardHeader>
+                      <div className="flex items-center space-x-3">
+                        <feature.icon className="h-8 w-8 text-primary" />
+                        <CardTitle className="text-lg">{feature.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">{feature.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Deliverables Section */}
-        <section className="py-16 bg-muted/50">
+        {/* What We Deliver Section */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {deliverables.map((deliverable, index) => (
-                  <Card key={index} className="h-full">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {deliverables.map((item, index) => (
+                  <Card key={index}>
                     <CardHeader>
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-primary/10 rounded-lg">
-                          <deliverable.icon className="h-6 w-6 text-primary" />
-                        </div>
-                        <CardTitle>{deliverable.title}</CardTitle>
+                      <div className="flex items-center space-x-3">
+                        <item.icon className="h-8 w-8 text-primary" />
+                        <CardTitle className="text-lg">{item.title}</CardTitle>
                       </div>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2">
-                        {deliverable.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start gap-2">
+                        {item.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start space-x-2">
                             <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground">{feature}</span>
+                            <span className="text-sm">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -164,51 +239,24 @@ export default function EmailArchiving() {
           </div>
         </section>
 
-        {/* Technologies Section */}
+        {/* Benefits & Ideal For Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Technologies We Use</h2>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b">
-                      <th className="text-left py-3 px-4 font-semibold">Platform/Tool</th>
-                      <th className="text-left py-3 px-4 font-semibold">Role</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {technologies.map((tech, index) => (
-                      <tr key={index} className="border-b">
-                        <td className="py-3 px-4 font-medium">{tech.name}</td>
-                        <td className="py-3 px-4 text-muted-foreground">{tech.purpose}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Ideal For & Outcomes Section */}
-        <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid lg:grid-cols-2 gap-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <Users className="h-5 w-5 text-primary" />
-                      Ideal For
+                    <CardTitle className="flex items-center space-x-2">
+                      <CheckCircle className="h-6 w-6 text-primary" />
+                      <span>Key Benefits</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
-                      {idealFor.map((item, index) => (
-                        <li key={index} className="flex items-start gap-2">
+                      {keyBenefits.map((benefit, index) => (
+                        <li key={index} className="flex items-start space-x-2">
                           <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                          <span className="text-sm text-muted-foreground">{item}</span>
+                          <span className="text-sm">{benefit}</span>
                         </li>
                       ))}
                     </ul>
@@ -217,17 +265,17 @@ export default function EmailArchiving() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary" />
-                      Outcomes
+                    <CardTitle className="flex items-center space-x-2">
+                      <Target className="h-6 w-6 text-primary" />
+                      <span>Ideal For</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
-                      {outcomes.map((outcome, index) => (
-                        <li key={index} className="flex items-start gap-2">
+                      {idealFor.map((item, index) => (
+                        <li key={index} className="flex items-start space-x-2">
                           <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                          <span className="text-sm text-muted-foreground">{outcome}</span>
+                          <span className="text-sm">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -242,20 +290,22 @@ export default function EmailArchiving() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Ready to Secure Your Email Infrastructure?</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Downtime is costly. Gaps in compliance are worse.<br />
-                Let S2 make your email always-on and legally bulletproof.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Schedule Archiving Assessment</Button>
-                <Button variant="outline" size="lg">Contact Specialist</Button>
-              </div>
+              <Card>
+                <CardContent className="p-12">
+                  <h2 className="text-3xl font-bold mb-4">Ready to Modernize Your Email Management?</h2>
+                  <p className="text-xl text-muted-foreground mb-8">
+                    Ensure compliance, protect data, and enhance productivity with our comprehensive email archiving solution.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button size="lg">Schedule Compliance Assessment</Button>
+                    <Button variant="outline" size="lg">Download Solution Guide</Button>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
