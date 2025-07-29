@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ExternalLink, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import s2Logo from "@/assets/s2-logo.png";
+import s2Logo from "@/assets/s2-logo-new.png";
 
 const solutions = [
   { name: "Disaster Recovery", href: "/solutions/disaster-recovery" },

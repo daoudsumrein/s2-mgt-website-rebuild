@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import s2Logo from "@/assets/s2-logo.png";
+import s2Logo from "@/assets/s2-logo-new.png";
 
 const dataProtectionSolutions = [
   {
