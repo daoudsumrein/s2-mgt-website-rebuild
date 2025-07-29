@@ -125,7 +125,7 @@ export default function Solutions() {
                     <circle cx="100" cy="100" r="18" fill="white" stroke="#ddd" strokeWidth="2" filter="url(#shadow)" />
                     
                     {/* S2 Logo */}
-                    <image x="88" y="88" width="24" height="24" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
+                    <image x="85" y="85" width="30" height="30" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
                     
                     {/* Data Protection Text - positioned in left semicircle */}
                     <text x="50" y="95" textAnchor="middle" className="text-xs font-medium" fill="white">
