@@ -21,6 +21,7 @@ import AppModernization from "./pages/solutions/AppModernization";
 import Security from "./pages/solutions/Security";
 import EmailArchiving from "./pages/solutions/EmailArchiving";
 import EndpointBackup from "./pages/solutions/EndpointBackup";
+import ServerBackup from "./pages/solutions/ServerBackup";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/solutions/security" element={<Security />} />
           <Route path="/solutions/email-archiving" element={<EmailArchiving />} />
           <Route path="/solutions/endpoint-backup" element={<EndpointBackup />} />
+          <Route path="/solutions/server-backup" element={<ServerBackup />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
