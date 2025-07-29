@@ -156,7 +156,7 @@ export default function Solutions() {
                       
                       {/* Data Protection Semi-Circle (Left Half) with straight gap */}
                       <path
-                        d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 Z"
+                        d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z"
                         fill="#87CEEB"
                         stroke="#5A9FCD"
                         strokeWidth="2"
@@ -167,7 +167,7 @@ export default function Solutions() {
                       
                       {/* Cybersecurity Semi-Circle (Right Half) with straight gap */}
                       <path
-                        d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 Z"
+                        d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z"
                         fill="#00ffd0"
                         stroke="#00C7A3"
                         strokeWidth="2"
@@ -249,7 +249,7 @@ export default function Solutions() {
                             `;
                             
                             const textAngle = startAngle + (angleStep / 2);
-                            const textRadius = (outerRadius + innerRadius) / 2;
+                            const textRadius = outerRadius - 12; // Move text closer to outer edge
                             const textX = 100 + Math.cos((textAngle * Math.PI) / 180) * textRadius;
                             const textY = 100 + Math.sin((textAngle * Math.PI) / 180) * textRadius;
                             
@@ -332,7 +332,7 @@ export default function Solutions() {
                             `;
                             
                             const textAngle = startAngle + (angleStep / 2);
-                            const textRadius = (outerRadius + innerRadius) / 2;
+                            const textRadius = outerRadius - 12; // Move text closer to outer edge
                             const textX = 100 + Math.cos((textAngle * Math.PI) / 180) * textRadius;
                             const textY = 100 + Math.sin((textAngle * Math.PI) / 180) * textRadius;
                             
