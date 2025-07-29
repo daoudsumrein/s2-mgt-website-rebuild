@@ -154,7 +154,7 @@ export default function Solutions() {
                       d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z"
                       fill="hsl(var(--primary) / 0.8)"
                       stroke="hsl(var(--primary))"
-                      strokeWidth="3"
+                      strokeWidth="2"
                       filter="url(#shadow)"
                     />
                     
