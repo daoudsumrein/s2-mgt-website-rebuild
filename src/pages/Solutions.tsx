@@ -12,92 +12,109 @@ import {
   Cloud, 
   Lock,
   ArrowRight,
-  CheckCircle 
+  CheckCircle,
+  Database,
+  Eye,
+  Users,
+  Mail,
+  Key
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-const solutions = [
+const dataProtectionSolutions = [
   {
-    icon: Shield,
-    title: "Data Protection & Availability",
-    description: "Comprehensive backup, replication, and high availability solutions",
-    features: [
-      "Real-time server replication with OpenText Availability",
-      "Endpoint and cloud workload backup",
-      "Email archiving and continuity solutions",
-      "Immutable backup architectures"
-    ],
-    link: "/solutions/data-protection"
-  },
-  {
-    icon: Workflow,
-    title: "Server Migration & DR",
-    description: "Disaster recovery orchestration and seamless server migrations",
-    features: [
-      "DR readiness planning and assessment",
-      "Automated failover and failback orchestration",
-      "Any-to-any server migration with OpenText Migrate",
-      "Workflow automation with TDS TransitionManager"
-    ],
+    icon: Server,
+    title: "Disaster Recovery",
+    description: "Comprehensive DR planning and orchestration",
     link: "/solutions/disaster-recovery"
   },
   {
-    icon: Server,
-    title: "Application Modernization",
-    description: "Legacy application transformation and secure runtime environments",
-    features: [
-      "Application capture and repackaging",
-      "Legacy to VDI migration",
-      "Secure application runtime environments",
-      "Desktop modernization toolkit"
-    ],
-    link: "/solutions/app-modernization"
+    icon: Workflow,
+    title: "Server Migration",
+    description: "Seamless any-to-any server migrations",
+    link: "/solutions/server-migration"
   },
   {
     icon: Search,
-    title: "IT Discovery & Dependency Mapping",
-    description: "Comprehensive infrastructure analysis and visualization",
-    features: [
-      "Application and infrastructure discovery",
-      "CMDB and ITSM integration",
-      "Dependency visualization and mapping",
-      "Migration wave planning"
-    ],
-    link: "/solutions/it-discovery"
+    title: "DR & Migration Orchestration",
+    description: "Automated workflow orchestration",
+    link: "/solutions/dr-orchestration"
   },
   {
-    icon: Cloud,
-    title: "Secure Cloud Suite",
-    description: "Cloud-to-cloud backup and email protection",
-    features: [
-      "Microsoft 365 backup and protection",
-      "Google Workspace data protection",
-      "Email threat protection and filtering",
-      "Cloud endpoint security"
-    ],
-    link: "/solutions/secure-cloud"
+    icon: Database,
+    title: "Endpoint Cloud Backup",
+    description: "Cloud-based endpoint protection",
+    link: "/solutions/endpoint-backup"
   },
   {
-    icon: Lock,
-    title: "Ransomware & Server Security",
-    description: "Advanced threat protection and security solutions",
-    features: [
-      "File-level ransomware protection",
-      "Immutable backup storage",
-      "Email and server threat detection",
-      "Security policy enforcement"
-    ],
-    link: "/solutions/security"
+    icon: Server,
+    title: "Servers Cloud Backup",
+    description: "Server backup and replication",
+    link: "/solutions/server-backup"
+  },
+  {
+    icon: Database,
+    title: "On Prem Backup",
+    description: "Local backup solutions",
+    link: "/solutions/onprem-backup"
+  },
+  {
+    icon: Mail,
+    title: "Email Archiving",
+    description: "Compliance and continuity",
+    link: "/solutions/email-archiving"
+  }
+];
+
+const cybersecuritySolutions = [
+  {
+    icon: Shield,
+    title: "Endpoint Protection",
+    description: "Advanced endpoint security",
+    link: "/solutions/endpoint-protection"
+  },
+  {
+    icon: Eye,
+    title: "EDR",
+    description: "Endpoint Detection and Response",
+    link: "/solutions/edr"
+  },
+  {
+    icon: Search,
+    title: "MDR",
+    description: "Managed Detection and Response",
+    link: "/solutions/mdr"
+  },
+  {
+    icon: Users,
+    title: "Security Awareness",
+    description: "User security training",
+    link: "/solutions/security-awareness"
+  },
+  {
+    icon: Mail,
+    title: "Email Protection",
+    description: "Email threat protection",
+    link: "/solutions/email-protection"
+  },
+  {
+    icon: Key,
+    title: "Email Encryption",
+    description: "Secure email communications",
+    link: "/solutions/email-encryption"
   }
 ];
 
 export default function Solutions() {
+  const [hoveredSection, setHoveredSection] = useState<'data' | 'cyber' | null>(null);
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="IT Solutions & Digital Transformation Services MENA | S2 Management Solutions"
-        description="Comprehensive IT solutions for MENA enterprises: disaster recovery, cybersecurity, data protection, digital transformation, and IT orchestration. Serving UAE, Saudi Arabia, and Middle East since 2013."
-        keywords="IT solutions MENA, digital transformation UAE, cybersecurity solutions Middle East, disaster recovery Saudi Arabia, Carbonite partner, IT orchestration, data protection services, enterprise cybersecurity, business continuity MENA"
+        description="Comprehensive IT solutions for MENA enterprises: data protection and cybersecurity solutions. Serving UAE, Saudi Arabia, and Middle East since 2013."
+        keywords="IT solutions MENA, data protection UAE, cybersecurity solutions Middle East, disaster recovery Saudi Arabia, endpoint protection, email security"
         canonicalUrl="https://s2mgt.com/solutions"
       />
       <Navigation />
@@ -108,97 +125,218 @@ export default function Solutions() {
             <div className="max-w-4xl mx-auto text-center">
               <Badge variant="secondary" className="mb-4">Solutions</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                Comprehensive IT Infrastructure Solutions
+                Two-Pillar Solution Portfolio
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                S2 delivers end-to-end solutions covering data protection, disaster recovery, 
-                application modernization, and IT infrastructure transformation.
+                S2 delivers comprehensive solutions across two core areas: Data Protection and Cybersecurity,
+                providing complete coverage for your enterprise infrastructure needs.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Solutions Grid */}
+        {/* Interactive Wheel Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => {
-                const IconComponent = solution.icon;
-                return (
-                  <Card key={index} className="hover:shadow-lg transition-all duration-200 ease-out group">
-                    <CardHeader>
-                      <div className="flex items-start space-x-4">
-                        <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-200 ease-out">
-                          <IconComponent className="h-6 w-6" />
-                        </div>
-                        <div className="flex-1">
-                          <CardTitle className="text-xl mb-2">{solution.title}</CardTitle>
-                          <p className="text-muted-foreground">{solution.description}</p>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="space-y-2">
-                        {solution.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-start space-x-2">
-                            <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground">{feature}</span>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative flex items-center justify-center">
+                <div className="relative w-96 h-96">
+                  {/* Main Circle */}
+                  <svg viewBox="0 0 200 200" className="w-full h-full">
+                    {/* Data Protection Half */}
+                    <path
+                      d="M 100 100 L 100 10 A 90 90 0 0 1 190 100 Z"
+                      fill="hsl(var(--primary) / 0.1)"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth="2"
+                      className="cursor-pointer transition-all duration-300 hover:fill-primary/20"
+                      onMouseEnter={() => setHoveredSection('data')}
+                      onMouseLeave={() => setHoveredSection(null)}
+                    />
+                    
+                    {/* Cybersecurity Half */}
+                    <path
+                      d="M 100 100 L 190 100 A 90 90 0 0 1 100 190 A 90 90 0 0 1 10 100 Z"
+                      fill="hsl(var(--secondary) / 0.1)"
+                      stroke="hsl(var(--secondary))"
+                      strokeWidth="2"
+                      className="cursor-pointer transition-all duration-300 hover:fill-secondary/20"
+                      onMouseEnter={() => setHoveredSection('cyber')}
+                      onMouseLeave={() => setHoveredSection(null)}
+                    />
+                    
+                    {/* Center Circle */}
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="25"
+                      fill="hsl(var(--background))"
+                      stroke="hsl(var(--border))"
+                      strokeWidth="2"
+                    />
+                    
+                    {/* Labels */}
+                    <text x="145" y="70" textAnchor="middle" className="text-sm font-semibold fill-current">
+                      Data
+                    </text>
+                    <text x="145" y="85" textAnchor="middle" className="text-sm font-semibold fill-current">
+                      Protection
+                    </text>
+                    
+                    <text x="55" y="140" textAnchor="middle" className="text-sm font-semibold fill-current">
+                      Cybersecurity
+                    </text>
+                    
+                    <text x="100" y="105" textAnchor="middle" className="text-xs font-medium fill-current">
+                      S2
+                    </text>
+                  </svg>
+
+                  {/* Floating Solution Branches */}
+                  {hoveredSection === 'data' && (
+                    <div className="absolute inset-0 pointer-events-none">
+                      {dataProtectionSolutions.map((solution, index) => {
+                        const angle = (index * 51.4) - 90; // Distribute across top half
+                        const radius = 150;
+                        const x = Math.cos((angle * Math.PI) / 180) * radius;
+                        const y = Math.sin((angle * Math.PI) / 180) * radius;
+                        
+                        return (
+                          <div
+                            key={solution.title}
+                            className="absolute transform -translate-x-1/2 -translate-y-1/2 animate-fade-in"
+                            style={{
+                              left: `calc(50% + ${x}px)`,
+                              top: `calc(50% + ${y}px)`,
+                            }}
+                          >
+                            <Card className="w-48 pointer-events-auto shadow-lg">
+                              <CardContent className="p-3">
+                                <div className="flex items-center space-x-2 mb-1">
+                                  <solution.icon className="h-4 w-4 text-primary" />
+                                  <h4 className="text-sm font-semibold">{solution.title}</h4>
+                                </div>
+                                <p className="text-xs text-muted-foreground mb-2">{solution.description}</p>
+                                <Button size="sm" variant="outline" asChild className="w-full h-7 text-xs">
+                                  <Link to={solution.link}>Learn More</Link>
+                                </Button>
+                              </CardContent>
+                            </Card>
                           </div>
-                        ))}
-                      </div>
-                      <Button asChild variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
-                        <Link to={solution.link}>
-                          Learn More
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {hoveredSection === 'cyber' && (
+                    <div className="absolute inset-0 pointer-events-none">
+                      {cybersecuritySolutions.map((solution, index) => {
+                        const angle = (index * 60) + 90; // Distribute across bottom half
+                        const radius = 150;
+                        const x = Math.cos((angle * Math.PI) / 180) * radius;
+                        const y = Math.sin((angle * Math.PI) / 180) * radius;
+                        
+                        return (
+                          <div
+                            key={solution.title}
+                            className="absolute transform -translate-x-1/2 -translate-y-1/2 animate-fade-in"
+                            style={{
+                              left: `calc(50% + ${x}px)`,
+                              top: `calc(50% + ${y}px)`,
+                            }}
+                          >
+                            <Card className="w-48 pointer-events-auto shadow-lg">
+                              <CardContent className="p-3">
+                                <div className="flex items-center space-x-2 mb-1">
+                                  <solution.icon className="h-4 w-4 text-secondary" />
+                                  <h4 className="text-sm font-semibold">{solution.title}</h4>
+                                </div>
+                                <p className="text-xs text-muted-foreground mb-2">{solution.description}</p>
+                                <Button size="sm" variant="outline" asChild className="w-full h-7 text-xs">
+                                  <Link to={solution.link}>Learn More</Link>
+                                </Button>
+                              </CardContent>
+                            </Card>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              </div>
+              
+              <div className="text-center mt-8">
+                <p className="text-muted-foreground">
+                  Hover over each section to explore our comprehensive solution portfolio
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Approach Section */}
+        {/* Solution Categories Grid */}
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Our Consultancy-Led Approach</h2>
-              <p className="text-lg text-muted-foreground mb-12">
-                We don't just deliver technology—we partner with you to architect solutions 
-                that align with your business objectives and infrastructure requirements.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                    1
-                  </div>
-                  <h3 className="font-semibold mb-2">Discovery & Assessment</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Comprehensive analysis of your current infrastructure, dependencies, and requirements
-                  </p>
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Data Protection Column */}
+              <div>
+                <div className="flex items-center space-x-3 mb-6">
+                  <Database className="h-8 w-8 text-primary" />
+                  <h2 className="text-2xl font-bold">Data Protection Solutions</h2>
                 </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                    2
-                  </div>
-                  <h3 className="font-semibold mb-2">Solution Architecture</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Custom design leveraging best-in-class technologies tailored to your environment
-                  </p>
+                <div className="space-y-4">
+                  {dataProtectionSolutions.map((solution, index) => {
+                    const IconComponent = solution.icon;
+                    return (
+                      <Card key={index} className="hover:shadow-md transition-shadow">
+                        <CardContent className="p-4">
+                          <div className="flex items-center space-x-3">
+                            <IconComponent className="h-5 w-5 text-primary" />
+                            <div className="flex-1">
+                              <h3 className="font-semibold">{solution.title}</h3>
+                              <p className="text-sm text-muted-foreground">{solution.description}</p>
+                            </div>
+                            <Button size="sm" variant="ghost" asChild>
+                              <Link to={solution.link}>
+                                <ArrowRight className="h-4 w-4" />
+                              </Link>
+                            </Button>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
                 </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                    3
-                  </div>
-                  <h3 className="font-semibold mb-2">Implementation & Support</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Professional deployment with ongoing technical support and optimization
-                  </p>
+              </div>
+
+              {/* Cybersecurity Column */}
+              <div>
+                <div className="flex items-center space-x-3 mb-6">
+                  <Shield className="h-8 w-8 text-secondary" />
+                  <h2 className="text-2xl font-bold">Cybersecurity Solutions</h2>
+                </div>
+                <div className="space-y-4">
+                  {cybersecuritySolutions.map((solution, index) => {
+                    const IconComponent = solution.icon;
+                    return (
+                      <Card key={index} className="hover:shadow-md transition-shadow">
+                        <CardContent className="p-4">
+                          <div className="flex items-center space-x-3">
+                            <IconComponent className="h-5 w-5 text-secondary" />
+                            <div className="flex-1">
+                              <h3 className="font-semibold">{solution.title}</h3>
+                              <p className="text-sm text-muted-foreground">{solution.description}</p>
+                            </div>
+                            <Button size="sm" variant="ghost" asChild>
+                              <Link to={solution.link}>
+                                <ArrowRight className="h-4 w-4" />
+                              </Link>
+                            </Button>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -208,10 +346,9 @@ export default function Solutions() {
         {/* CTA Section */}
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Infrastructure?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Secure and Protect Your Infrastructure?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's discuss how S2 can help modernize your data protection, disaster recovery, 
-              and application infrastructure.
+              Let's discuss how S2's data protection and cybersecurity solutions can strengthen your enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg">

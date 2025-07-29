@@ -13,48 +13,74 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import s2Logo from "@/assets/s2-logo.png";
 
-const solutions = [
+const dataProtectionSolutions = [
   {
     title: "Disaster Recovery",
     href: "/solutions/disaster-recovery",
-    description: "DR Readiness, Server Migration, Orchestration & Automation",
-    items: ["DR Readiness Planning", "Server Migrations", "DR Orchestration & Workflow Automation"]
+    description: "Comprehensive DR planning and orchestration"
   },
   {
-    title: "IT Discovery & Dependency Mapping",
-    href: "/solutions/it-discovery",
-    description: "App/Infrastructure Discovery, CMDB Integration, Dependency Visualization",
-    items: ["App/Infra Discovery", "CMDB/ITSM Integration", "Dependency Visualizations"]
+    title: "Server Migration",
+    href: "/solutions/server-migration",
+    description: "Seamless any-to-any server migrations"
   },
   {
-    title: "Data Protection & Backup",
-    href: "/solutions/data-protection",
-    description: "Endpoint Backup, Cloud Workload Protection, Email Archiving",
-    items: ["Endpoint Backup", "Cloud Workload Protection", "Email Archiving & Continuity"]
+    title: "DR & Migration Orchestration",
+    href: "/solutions/dr-orchestration",
+    description: "Automated workflow orchestration"
   },
   {
-    title: "Email Archiving & Continuity",
+    title: "Endpoint Cloud Backup",
+    href: "/solutions/endpoint-backup",
+    description: "Cloud-based endpoint protection"
+  },
+  {
+    title: "Servers Cloud Backup",
+    href: "/solutions/server-backup",
+    description: "Server backup and replication"
+  },
+  {
+    title: "On Prem Backup",
+    href: "/solutions/onprem-backup",
+    description: "Local backup solutions"
+  },
+  {
+    title: "Email Archiving",
     href: "/solutions/email-archiving",
-    description: "Compliance, Access, and Uptime — Without Compromise",
-    items: ["Email Continuity", "Compliant Archiving", "Policy Management"]
+    description: "Compliance and continuity"
+  }
+];
+
+const cybersecuritySolutions = [
+  {
+    title: "Endpoint Protection",
+    href: "/solutions/endpoint-protection",
+    description: "Advanced endpoint security"
   },
   {
-    title: "Secure Cloud Suite",
-    href: "/solutions/secure-cloud",
-    description: "Microsoft 365/Google Workspace Backup, Endpoint & Email Protection",
-    items: ["Microsoft 365 Backup", "Google Workspace Backup", "Endpoint Protection"]
+    title: "EDR",
+    href: "/solutions/edr",
+    description: "Endpoint Detection and Response"
   },
   {
-    title: "Application Modernization",
-    href: "/solutions/app-modernization",
-    description: "App Capture/Repackaging, Legacy to VDI, Secure Runtime Environments",
-    items: ["App Capture / Repackaging", "Legacy to VDI migration", "Secure Runtime Environments"]
+    title: "MDR",
+    href: "/solutions/mdr",
+    description: "Managed Detection and Response"
   },
   {
-    title: "Security & Ransomware Protection",
-    href: "/solutions/security",
-    description: "File-level Protection, Immutable Backup, Threat Detection",
-    items: ["File-level protection", "Immutable backup architecture", "Threat detection"]
+    title: "Security Awareness",
+    href: "/solutions/security-awareness",
+    description: "User security training"
+  },
+  {
+    title: "Email Protection",
+    href: "/solutions/email-protection",
+    description: "Email threat protection"
+  },
+  {
+    title: "Email Encryption",
+    href: "/solutions/email-encryption",
+    description: "Secure email communications"
   }
 ];
 
@@ -146,38 +172,69 @@ export default function Navigation() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    <li className="md:col-span-2">
+                  <div className="w-[600px] p-4">
+                    <div className="mb-4">
                       <NavigationMenuLink asChild>
                         <Link
                           to="/solutions"
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">
+                          <div className="mb-2 text-lg font-medium">
                             View All Solutions
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Comprehensive IT infrastructure solutions for data protection, disaster recovery, and modernization.
+                            Comprehensive data protection and cybersecurity solutions for enterprise infrastructure.
                           </p>
                         </Link>
                       </NavigationMenuLink>
-                    </li>
-                    {solutions.map((solution) => (
-                      <li key={solution.href}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={solution.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">{solution.title}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {solution.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-6">
+                      {/* Data Protection Column */}
+                      <div>
+                        <h3 className="font-semibold text-sm mb-3 text-primary">Data Protection Solutions</h3>
+                        <ul className="space-y-2">
+                          {dataProtectionSolutions.map((solution) => (
+                            <li key={solution.href}>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to={solution.href}
+                                  className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                >
+                                  <div className="text-xs font-medium leading-none">{solution.title}</div>
+                                  <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
+                                    {solution.description}
+                                  </p>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Cybersecurity Column */}
+                      <div>
+                        <h3 className="font-semibold text-sm mb-3 text-secondary">Cybersecurity Solutions</h3>
+                        <ul className="space-y-2">
+                          {cybersecuritySolutions.map((solution) => (
+                            <li key={solution.href}>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to={solution.href}
+                                  className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                >
+                                  <div className="text-xs font-medium leading-none">{solution.title}</div>
+                                  <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
+                                    {solution.description}
+                                  </p>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
@@ -249,16 +306,35 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
         </Link>
         <div className="space-y-2">
           <div className="text-sm font-medium text-muted-foreground">Solutions</div>
-          {solutions.map((solution) => (
-            <Link
-              key={solution.href}
-              to={solution.href}
-              onClick={() => setIsOpen(false)}
-              className="block text-sm pl-4 text-muted-foreground hover:text-foreground"
-            >
-              {solution.title}
-            </Link>
-          ))}
+          <Link to="/solutions" onClick={() => setIsOpen(false)} className="block text-sm pl-4 text-muted-foreground hover:text-foreground">
+            All Solutions
+          </Link>
+          <div className="pl-4 space-y-1">
+            <div className="text-xs font-medium text-primary">Data Protection</div>
+            {dataProtectionSolutions.map((solution) => (
+              <Link
+                key={solution.href}
+                to={solution.href}
+                onClick={() => setIsOpen(false)}
+                className="block text-xs pl-4 text-muted-foreground hover:text-foreground"
+              >
+                {solution.title}
+              </Link>
+            ))}
+          </div>
+          <div className="pl-4 space-y-1">
+            <div className="text-xs font-medium text-secondary">Cybersecurity</div>
+            {cybersecuritySolutions.map((solution) => (
+              <Link
+                key={solution.href}
+                to={solution.href}
+                onClick={() => setIsOpen(false)}
+                className="block text-xs pl-4 text-muted-foreground hover:text-foreground"
+              >
+                {solution.title}
+              </Link>
+            ))}
+          </div>
         </div>
         <Link to="/vendors" onClick={() => setIsOpen(false)} className="text-sm font-medium">
           Our Vendors
