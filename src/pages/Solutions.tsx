@@ -38,6 +38,11 @@ const dataProtectionSolutions = [{
   description: "Local backup solutions",
   link: "/solutions/onprem-backup"
 }, {
+  icon: Cloud,
+  title: "Cloud-to-Cloud Backup",
+  description: "SaaS data protection and backup",
+  link: "/solutions/cloud-to-cloud-backup"
+}, {
   icon: Mail,
   title: "Email Archiving",
   description: "Compliance and continuity",
