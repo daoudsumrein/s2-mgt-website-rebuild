@@ -152,9 +152,9 @@ export default function Solutions() {
                     {/* Data Protection Semi-Circle (Left Half) */}
                     <path
                       d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z"
-                      fill="hsl(var(--primary))"
+                      fill="hsl(var(--primary) / 0.8)"
                       stroke="hsl(var(--primary))"
-                      strokeWidth="2"
+                      strokeWidth="3"
                       filter="url(#shadow)"
                     />
                     
@@ -171,7 +171,7 @@ export default function Solutions() {
                     <circle
                       cx="100"
                       cy="100"
-                      r="25"
+                      r="18"
                       fill="white"
                       stroke="#ddd"
                       strokeWidth="2"
