@@ -138,142 +138,196 @@ export default function Solutions() {
         {/* Interactive Wheel Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="relative flex items-center justify-center">
-                <div className="relative w-[600px] h-[400px]">
-                  {/* SVG Wheel */}
-                  <svg viewBox="0 0 300 200" className="w-full h-full">
+            <div className="max-w-4xl mx-auto">
+              <div className="relative flex items-center justify-center min-h-[500px]">
+                <div className="relative w-[400px] h-[400px]">
+                  {/* Main SVG Wheel */}
+                  <svg viewBox="0 0 200 200" className="w-full h-full">
                     <defs>
                       <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1"/>
-                        <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.3"/>
+                        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.2"/>
+                        <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.4"/>
                       </linearGradient>
                       <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#00ffd0" stopOpacity="0.1"/>
-                        <stop offset="100%" stopColor="#00ffd0" stopOpacity="0.3"/>
+                        <stop offset="0%" stopColor="#00ffd0" stopOpacity="0.2"/>
+                        <stop offset="100%" stopColor="#00ffd0" stopOpacity="0.4"/>
                       </linearGradient>
                     </defs>
                     
-                    {/* Data Protection Half (Left) */}
+                    {/* Data Protection Semi-Circle (Left Half) */}
                     <path
-                      d="M 50 100 A 50 50 0 0 1 150 50 L 150 100 Z"
-                      fill="url(#dataGradient)"
-                      stroke="hsl(var(--primary))"
+                      d="M 100 100 m -80 0 A 80 80 0 0 1 100 20 Z"
+                      fill={hoveredSection === 'cyber' ? 'transparent' : 'url(#dataGradient)'}
+                      stroke={hoveredSection === 'cyber' ? 'transparent' : 'hsl(var(--primary))'}
                       strokeWidth="3"
-                      className="cursor-pointer transition-all duration-300"
+                      className={`cursor-pointer transition-all duration-500 ${hoveredSection === 'cyber' ? 'opacity-0' : 'opacity-100'}`}
                       onMouseEnter={() => setHoveredSection('data')}
                       onMouseLeave={() => setHoveredSection(null)}
                     />
                     
-                    {/* Cybersecurity Half (Right) */}
+                    {/* Cybersecurity Semi-Circle (Right Half) */}
                     <path
-                      d="M 150 100 L 150 50 A 50 50 0 0 1 250 100 A 50 50 0 0 1 150 150 Z"
-                      fill="url(#cyberGradient)"
-                      stroke="#00ffd0"
+                      d="M 100 100 m 80 0 A 80 80 0 0 1 100 20 Z"
+                      fill={hoveredSection === 'data' ? 'transparent' : 'url(#cyberGradient)'}
+                      stroke={hoveredSection === 'data' ? 'transparent' : '#00ffd0'}
                       strokeWidth="3"
-                      className="cursor-pointer transition-all duration-300"
+                      className={`cursor-pointer transition-all duration-500 ${hoveredSection === 'data' ? 'opacity-0' : 'opacity-100'}`}
                       onMouseEnter={() => setHoveredSection('cyber')}
                       onMouseLeave={() => setHoveredSection(null)}
                     />
                     
-                    {/* Center divider */}
-                    <line x1="150" y1="50" x2="150" y2="150" stroke="hsl(var(--border))" strokeWidth="2"/>
+                    {/* Center S2 Circle */}
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="20"
+                      fill="hsl(var(--background))"
+                      stroke="hsl(var(--border))"
+                      strokeWidth="2"
+                      className="drop-shadow-sm"
+                    />
                     
-                    {/* Labels */}
-                    <text x="100" y="90" textAnchor="middle" className="text-base font-bold fill-current">
-                      Data Protection
-                    </text>
-                    <text x="100" y="110" textAnchor="middle" className="text-sm fill-current opacity-70">
-                      Solutions
+                    {/* S2 Text */}
+                    <text x="100" y="105" textAnchor="middle" className="text-sm font-bold fill-current">
+                      S2
                     </text>
                     
-                    <text x="200" y="90" textAnchor="middle" className="text-base font-bold fill-current">
-                      Cybersecurity
-                    </text>
-                    <text x="200" y="110" textAnchor="middle" className="text-sm fill-current opacity-70">
-                      Solutions
-                    </text>
+                    {/* Section Labels - Only show when not hovering */}
+                    {!hoveredSection && (
+                      <>
+                        <text x="60" y="85" textAnchor="middle" className="text-xs font-semibold fill-current">
+                          Data
+                        </text>
+                        <text x="60" y="98" textAnchor="middle" className="text-xs font-semibold fill-current">
+                          Protection
+                        </text>
+                        
+                        <text x="140" y="85" textAnchor="middle" className="text-xs font-semibold fill-current">
+                          Cyber
+                        </text>
+                        <text x="140" y="98" textAnchor="middle" className="text-xs font-semibold fill-current">
+                          Security
+                        </text>
+                      </>
+                    )}
                   </svg>
 
-                  {/* Floating Solution Branches for Data Protection */}
+                  {/* Data Protection Solution Segments - Complete the circle */}
                   {hoveredSection === 'data' && (
-                    <div className="absolute inset-0 pointer-events-none">
-                      {dataProtectionSolutions.map((solution, index) => {
-                        // Position solutions in an arc on the left side
-                        const totalSolutions = dataProtectionSolutions.length;
-                        const angleStep = 140 / (totalSolutions - 1); // 140 degrees spread
-                        const startAngle = 200; // Start from bottom left
-                        const angle = startAngle + (index * angleStep);
-                        const radius = 140;
-                        const x = Math.cos((angle * Math.PI) / 180) * radius;
-                        const y = Math.sin((angle * Math.PI) / 180) * radius;
-                        
-                        return (
-                          <div
-                            key={solution.title}
-                            className="absolute transform -translate-x-1/2 -translate-y-1/2 animate-fade-in pointer-events-auto"
-                            style={{
-                              left: `calc(25% + ${x}px)`,
-                              top: `calc(50% + ${y}px)`,
-                              animationDelay: `${index * 50}ms`
-                            }}
-                          >
-                            <Card className="w-52 shadow-lg border-primary/20 bg-background/95 backdrop-blur-sm">
-                              <CardContent className="p-4">
-                                <div className="flex items-center space-x-2 mb-2">
-                                  <solution.icon className="h-5 w-5 text-primary" />
-                                  <h4 className="text-sm font-semibold">{solution.title}</h4>
-                                </div>
-                                <p className="text-xs text-muted-foreground mb-3">{solution.description}</p>
-                                <Button size="sm" variant="outline" asChild className="w-full h-7 text-xs">
-                                  <Link to={solution.link}>Learn More</Link>
-                                </Button>
-                              </CardContent>
-                            </Card>
-                          </div>
-                        );
-                      })}
+                    <div className="absolute inset-0">
+                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                        {dataProtectionSolutions.map((solution, index) => {
+                          const totalSolutions = dataProtectionSolutions.length;
+                          const angleStep = 180 / totalSolutions; // Right semi-circle
+                          const startAngle = 0; // Start from right
+                          const angle = startAngle + (index * angleStep) + (angleStep / 2);
+                          const startAngleRad = (angle * Math.PI) / 180;
+                          const endAngleRad = ((angle + angleStep) * Math.PI) / 180;
+                          
+                          // Calculate path for each segment
+                          const outerRadius = 80;
+                          const innerRadius = 40;
+                          
+                          const x1 = 100 + Math.cos(startAngleRad) * innerRadius;
+                          const y1 = 100 + Math.sin(startAngleRad) * innerRadius;
+                          const x2 = 100 + Math.cos(startAngleRad) * outerRadius;
+                          const y2 = 100 + Math.sin(startAngleRad) * outerRadius;
+                          const x3 = 100 + Math.cos(endAngleRad) * outerRadius;
+                          const y3 = 100 + Math.sin(endAngleRad) * outerRadius;
+                          const x4 = 100 + Math.cos(endAngleRad) * innerRadius;
+                          const y4 = 100 + Math.sin(endAngleRad) * innerRadius;
+                          
+                          const pathData = `
+                            M ${x1} ${y1}
+                            L ${x2} ${y2}
+                            A ${outerRadius} ${outerRadius} 0 0 1 ${x3} ${y3}
+                            L ${x4} ${y4}
+                            A ${innerRadius} ${innerRadius} 0 0 0 ${x1} ${y1}
+                            Z
+                          `;
+                          
+                          return (
+                            <g key={solution.title} className="animate-fade-in">
+                              <path
+                                d={pathData}
+                                fill="hsl(var(--primary) / 0.8)"
+                                stroke="hsl(var(--background))"
+                                strokeWidth="2"
+                                className="cursor-pointer hover:fill-primary transition-colors duration-200"
+                              />
+                              <text
+                                x={100 + Math.cos((angle * Math.PI) / 180) * 60}
+                                y={100 + Math.sin((angle * Math.PI) / 180) * 60}
+                                textAnchor="middle"
+                                className="text-xs font-medium fill-background pointer-events-none"
+                                transform={`rotate(${angle > 90 && angle < 270 ? angle + 180 : angle} ${100 + Math.cos((angle * Math.PI) / 180) * 60} ${100 + Math.sin((angle * Math.PI) / 180) * 60})`}
+                              >
+                                {solution.title}
+                              </text>
+                            </g>
+                          );
+                        })}
+                      </svg>
                     </div>
                   )}
 
-                  {/* Floating Solution Branches for Cybersecurity */}
+                  {/* Cybersecurity Solution Segments - Complete the circle */}
                   {hoveredSection === 'cyber' && (
-                    <div className="absolute inset-0 pointer-events-none">
-                      {cybersecuritySolutions.map((solution, index) => {
-                        // Position solutions in an arc on the right side
-                        const totalSolutions = cybersecuritySolutions.length;
-                        const angleStep = 140 / (totalSolutions - 1); // 140 degrees spread
-                        const startAngle = -20; // Start from top right
-                        const angle = startAngle + (index * angleStep);
-                        const radius = 140;
-                        const x = Math.cos((angle * Math.PI) / 180) * radius;
-                        const y = Math.sin((angle * Math.PI) / 180) * radius;
-                        
-                        return (
-                          <div
-                            key={solution.title}
-                            className="absolute transform -translate-x-1/2 -translate-y-1/2 animate-fade-in pointer-events-auto"
-                            style={{
-                              left: `calc(75% + ${x}px)`,
-                              top: `calc(50% + ${y}px)`,
-                              animationDelay: `${index * 50}ms`
-                            }}
-                          >
-                            <Card className="w-52 shadow-lg border-secondary/20 bg-background/95 backdrop-blur-sm">
-                              <CardContent className="p-4">
-                                <div className="flex items-center space-x-2 mb-2">
-                                  <solution.icon className="h-5 w-5" style={{ color: '#00ffd0' }} />
-                                  <h4 className="text-sm font-semibold">{solution.title}</h4>
-                                </div>
-                                <p className="text-xs text-muted-foreground mb-3">{solution.description}</p>
-                                <Button size="sm" variant="outline" asChild className="w-full h-7 text-xs">
-                                  <Link to={solution.link}>Learn More</Link>
-                                </Button>
-                              </CardContent>
-                            </Card>
-                          </div>
-                        );
-                      })}
+                    <div className="absolute inset-0">
+                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                        {cybersecuritySolutions.map((solution, index) => {
+                          const totalSolutions = cybersecuritySolutions.length;
+                          const angleStep = 180 / totalSolutions; // Left semi-circle
+                          const startAngle = 180; // Start from left
+                          const angle = startAngle + (index * angleStep) + (angleStep / 2);
+                          const startAngleRad = (angle * Math.PI) / 180;
+                          const endAngleRad = ((angle + angleStep) * Math.PI) / 180;
+                          
+                          // Calculate path for each segment
+                          const outerRadius = 80;
+                          const innerRadius = 40;
+                          
+                          const x1 = 100 + Math.cos(startAngleRad) * innerRadius;
+                          const y1 = 100 + Math.sin(startAngleRad) * innerRadius;
+                          const x2 = 100 + Math.cos(startAngleRad) * outerRadius;
+                          const y2 = 100 + Math.sin(startAngleRad) * outerRadius;
+                          const x3 = 100 + Math.cos(endAngleRad) * outerRadius;
+                          const y3 = 100 + Math.sin(endAngleRad) * outerRadius;
+                          const x4 = 100 + Math.cos(endAngleRad) * innerRadius;
+                          const y4 = 100 + Math.sin(endAngleRad) * innerRadius;
+                          
+                          const pathData = `
+                            M ${x1} ${y1}
+                            L ${x2} ${y2}
+                            A ${outerRadius} ${outerRadius} 0 0 1 ${x3} ${y3}
+                            L ${x4} ${y4}
+                            A ${innerRadius} ${innerRadius} 0 0 0 ${x1} ${y1}
+                            Z
+                          `;
+                          
+                          return (
+                            <g key={solution.title} className="animate-fade-in">
+                              <path
+                                d={pathData}
+                                fill="#00ffd0"
+                                fillOpacity="0.8"
+                                stroke="hsl(var(--background))"
+                                strokeWidth="2"
+                                className="cursor-pointer hover:fill-opacity-100 transition-all duration-200"
+                              />
+                              <text
+                                x={100 + Math.cos((angle * Math.PI) / 180) * 60}
+                                y={100 + Math.sin((angle * Math.PI) / 180) * 60}
+                                textAnchor="middle"
+                                className="text-xs font-medium fill-background pointer-events-none"
+                                transform={`rotate(${angle > 90 && angle < 270 ? angle + 180 : angle} ${100 + Math.cos((angle * Math.PI) / 180) * 60} ${100 + Math.sin((angle * Math.PI) / 180) * 60})`}
+                              >
+                                {solution.title}
+                              </text>
+                            </g>
+                          );
+                        })}
+                      </svg>
                     </div>
                   )}
                 </div>
@@ -281,7 +335,9 @@ export default function Solutions() {
               
               <div className="text-center mt-8">
                 <p className="text-muted-foreground">
-                  Hover over each section to explore our comprehensive solution portfolio
+                  {hoveredSection === 'data' && "Data Protection Solutions"}
+                  {hoveredSection === 'cyber' && "Cybersecurity Solutions"}
+                  {!hoveredSection && "Hover over each section to explore our solutions"}
                 </p>
               </div>
             </div>
