@@ -4,119 +4,80 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Shield, 
-  Server, 
-  Workflow, 
-  Search, 
-  Cloud, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  Database,
-  Eye,
-  Users,
-  Mail,
-  Key
-} from "lucide-react";
+import { Shield, Server, Workflow, Search, Cloud, Lock, ArrowRight, CheckCircle, Database, Eye, Users, Mail, Key } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
-const dataProtectionSolutions = [
-  {
-    icon: Server,
-    title: "Disaster Recovery",
-    description: "Comprehensive DR planning and orchestration",
-    link: "/solutions/disaster-recovery"
-  },
-  {
-    icon: Workflow,
-    title: "Server Migration",
-    description: "Seamless any-to-any server migrations",
-    link: "/solutions/server-migration"
-  },
-  {
-    icon: Search,
-    title: "DR & Migration Orchestration",
-    description: "Automated workflow orchestration",
-    link: "/solutions/dr-orchestration"
-  },
-  {
-    icon: Database,
-    title: "Endpoint Cloud Backup",
-    description: "Cloud-based endpoint protection",
-    link: "/solutions/endpoint-backup"
-  },
-  {
-    icon: Server,
-    title: "Servers Cloud Backup",
-    description: "Server backup and replication",
-    link: "/solutions/server-backup"
-  },
-  {
-    icon: Database,
-    title: "On Prem Backup",
-    description: "Local backup solutions",
-    link: "/solutions/onprem-backup"
-  },
-  {
-    icon: Mail,
-    title: "Email Archiving",
-    description: "Compliance and continuity",
-    link: "/solutions/email-archiving"
-  }
-];
-
-const cybersecuritySolutions = [
-  {
-    icon: Shield,
-    title: "Endpoint Protection",
-    description: "Advanced endpoint security",
-    link: "/solutions/endpoint-protection"
-  },
-  {
-    icon: Eye,
-    title: "EDR",
-    description: "Endpoint Detection and Response",
-    link: "/solutions/edr"
-  },
-  {
-    icon: Search,
-    title: "MDR",
-    description: "Managed Detection and Response",
-    link: "/solutions/mdr"
-  },
-  {
-    icon: Users,
-    title: "Security Awareness",
-    description: "User security training",
-    link: "/solutions/security-awareness"
-  },
-  {
-    icon: Mail,
-    title: "Email Protection",
-    description: "Email threat protection",
-    link: "/solutions/email-protection"
-  },
-  {
-    icon: Key,
-    title: "Email Encryption",
-    description: "Secure email communications",
-    link: "/solutions/email-encryption"
-  }
-];
-
+const dataProtectionSolutions = [{
+  icon: Server,
+  title: "Disaster Recovery",
+  description: "Comprehensive DR planning and orchestration",
+  link: "/solutions/disaster-recovery"
+}, {
+  icon: Workflow,
+  title: "Server Migration",
+  description: "Seamless any-to-any server migrations",
+  link: "/solutions/server-migration"
+}, {
+  icon: Search,
+  title: "DR & Migration Orchestration",
+  description: "Automated workflow orchestration",
+  link: "/solutions/dr-orchestration"
+}, {
+  icon: Database,
+  title: "Endpoint Cloud Backup",
+  description: "Cloud-based endpoint protection",
+  link: "/solutions/endpoint-backup"
+}, {
+  icon: Server,
+  title: "Servers Cloud Backup",
+  description: "Server backup and replication",
+  link: "/solutions/server-backup"
+}, {
+  icon: Database,
+  title: "On Prem Backup",
+  description: "Local backup solutions",
+  link: "/solutions/onprem-backup"
+}, {
+  icon: Mail,
+  title: "Email Archiving",
+  description: "Compliance and continuity",
+  link: "/solutions/email-archiving"
+}];
+const cybersecuritySolutions = [{
+  icon: Shield,
+  title: "Endpoint Protection",
+  description: "Advanced endpoint security",
+  link: "/solutions/endpoint-protection"
+}, {
+  icon: Eye,
+  title: "EDR",
+  description: "Endpoint Detection and Response",
+  link: "/solutions/edr"
+}, {
+  icon: Search,
+  title: "MDR",
+  description: "Managed Detection and Response",
+  link: "/solutions/mdr"
+}, {
+  icon: Users,
+  title: "Security Awareness",
+  description: "User security training",
+  link: "/solutions/security-awareness"
+}, {
+  icon: Mail,
+  title: "Email Protection",
+  description: "Email threat protection",
+  link: "/solutions/email-protection"
+}, {
+  icon: Key,
+  title: "Email Encryption",
+  description: "Secure email communications",
+  link: "/solutions/email-encryption"
+}];
 export default function Solutions() {
   const [hoveredSection, setHoveredSection] = useState<'data' | 'cyber' | null>(null);
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead
-        title="IT Solutions & Digital Transformation Services MENA | S2 Management Solutions"
-        description="Comprehensive IT solutions for MENA enterprises: data protection and cybersecurity solutions. Serving UAE, Saudi Arabia, and Middle East since 2013."
-        keywords="IT solutions MENA, data protection UAE, cybersecurity solutions Middle East, disaster recovery Saudi Arabia, endpoint protection, email security"
-        canonicalUrl="https://s2mgt.com/solutions"
-      />
+  return <div className="min-h-screen bg-background">
+      <SEOHead title="IT Solutions & Digital Transformation Services MENA | S2 Management Solutions" description="Comprehensive IT solutions for MENA enterprises: data protection and cybersecurity solutions. Serving UAE, Saudi Arabia, and Middle East since 2013." keywords="IT solutions MENA, data protection UAE, cybersecurity solutions Middle East, disaster recovery Saudi Arabia, endpoint protection, email security" canonicalUrl="https://s2mgt.com/solutions" />
       <Navigation />
       <main>
         {/* Hero Section */}
@@ -136,47 +97,27 @@ export default function Solutions() {
         </section>
 
         {/* Interactive Wheel Section */}
-        <section className="py-16">
+        <section className="py-[12px]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="relative flex items-center justify-center min-h-[800px]">
+              <div className="relative flex items-center justify-center min-h-[800px] py-0">
                 <div className="relative w-[700px] h-[700px]">
                   {/* Main SVG Wheel */}
                   <svg viewBox="0 0 200 200" className="w-full h-full">
                     <defs>
                       <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.3"/>
+                        <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.3" />
                       </filter>
                     </defs>
                     
                     {/* Data Protection Semi-Circle (Left Half) */}
-                    <path
-                      d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z"
-                      fill="hsl(var(--primary) / 0.8)"
-                      stroke="hsl(var(--primary))"
-                      strokeWidth="2"
-                      filter="url(#shadow)"
-                    />
+                    <path d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z" fill="hsl(var(--primary) / 0.8)" stroke="hsl(var(--primary))" strokeWidth="2" filter="url(#shadow)" />
                     
                     {/* Cybersecurity Semi-Circle (Right Half) */}
-                    <path
-                      d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z"
-                      fill="#00ffd0"
-                      stroke="#00C7A3"
-                      strokeWidth="2"
-                      filter="url(#shadow)"
-                    />
+                    <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="#00ffd0" stroke="#00C7A3" strokeWidth="2" filter="url(#shadow)" />
                     
                     {/* Center S2 Circle */}
-                    <circle
-                      cx="100"
-                      cy="100"
-                      r="18"
-                      fill="white"
-                      stroke="#ddd"
-                      strokeWidth="2"
-                      filter="url(#shadow)"
-                    />
+                    <circle cx="100" cy="100" r="18" fill="white" stroke="#ddd" strokeWidth="2" filter="url(#shadow)" />
                     
                     {/* S2 Text */}
                     <text x="100" y="107" textAnchor="middle" className="text-lg font-bold" fill="#333">
@@ -223,9 +164,8 @@ export default function Solutions() {
                 </div>
                 <div className="space-y-4">
                   {dataProtectionSolutions.map((solution, index) => {
-                    const IconComponent = solution.icon;
-                    return (
-                      <Card key={index} className="hover:shadow-md transition-shadow">
+                  const IconComponent = solution.icon;
+                  return <Card key={index} className="hover:shadow-md transition-shadow">
                         <CardContent className="p-4">
                           <div className="flex items-center space-x-3">
                             <IconComponent className="h-5 w-5 text-primary" />
@@ -240,26 +180,28 @@ export default function Solutions() {
                             </Button>
                           </div>
                         </CardContent>
-                      </Card>
-                    );
-                  })}
+                      </Card>;
+                })}
                 </div>
               </div>
 
               {/* Cybersecurity Column */}
               <div>
                 <div className="flex items-center space-x-3 mb-6">
-                  <Shield className="h-8 w-8" style={{ color: '#00ffd0' }} />
+                  <Shield className="h-8 w-8" style={{
+                  color: '#00ffd0'
+                }} />
                   <h2 className="text-2xl font-bold">Cybersecurity Solutions</h2>
                 </div>
                 <div className="space-y-4">
                   {cybersecuritySolutions.map((solution, index) => {
-                    const IconComponent = solution.icon;
-                    return (
-                      <Card key={index} className="hover:shadow-md transition-shadow">
+                  const IconComponent = solution.icon;
+                  return <Card key={index} className="hover:shadow-md transition-shadow">
                         <CardContent className="p-4">
                           <div className="flex items-center space-x-3">
-                            <IconComponent className="h-5 w-5" style={{ color: '#00ffd0' }} />
+                            <IconComponent className="h-5 w-5" style={{
+                          color: '#00ffd0'
+                        }} />
                             <div className="flex-1">
                               <h3 className="font-semibold">{solution.title}</h3>
                               <p className="text-sm text-muted-foreground">{solution.description}</p>
@@ -271,9 +213,8 @@ export default function Solutions() {
                             </Button>
                           </div>
                         </CardContent>
-                      </Card>
-                    );
-                  })}
+                      </Card>;
+                })}
                 </div>
               </div>
             </div>
@@ -300,6 +241,5 @@ export default function Solutions() {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 }
