@@ -124,10 +124,8 @@ export default function Solutions() {
                     {/* Center S2 Circle */}
                     <circle cx="100" cy="100" r="18" fill="white" stroke="#ddd" strokeWidth="2" filter="url(#shadow)" />
                     
-                    {/* S2 Text */}
-                    <text x="100" y="107" textAnchor="middle" className="text-lg font-bold" fill="#333">
-                      S2
-                    </text>
+                    {/* S2 Logo */}
+                    <image x="82" y="82" width="36" height="36" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
                     
                     {/* Data Protection Text - positioned in left semicircle */}
                     <text x="50" y="95" textAnchor="middle" className="text-xs font-medium" fill="white">
