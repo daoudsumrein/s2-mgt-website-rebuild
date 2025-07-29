@@ -118,7 +118,7 @@ export default function Navigation() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
-            <img src={s2Logo} alt="S2 Management Solutions" className="h-8 w-auto" />
+            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
@@ -295,7 +295,7 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
   return (
     <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
       <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-        <img src={s2Logo} alt="S2 Management Solutions" className="h-8 w-auto" />
+        <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
       </Link>
       <div className="flex flex-col space-y-3 mt-6">
         <Link to="/about" onClick={() => setIsOpen(false)} className="text-sm font-medium">

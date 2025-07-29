@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src={s2Logo} alt="S2 Management Solutions" className="h-8 w-auto" />
+            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
             <p className="text-sm text-muted-foreground max-w-xs">
               Value-Added Distributor delivering critical IT transformation projects across MENA region since 2013. Offices in KSA and UAE (HQ).
             </p>
