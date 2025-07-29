@@ -22,6 +22,7 @@ import Security from "./pages/solutions/Security";
 import EmailArchiving from "./pages/solutions/EmailArchiving";
 import EndpointBackup from "./pages/solutions/EndpointBackup";
 import ServerBackup from "./pages/solutions/ServerBackup";
+import OnPremBackup from "./pages/solutions/OnPremBackup";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/solutions/email-archiving" element={<EmailArchiving />} />
           <Route path="/solutions/endpoint-backup" element={<EndpointBackup />} />
           <Route path="/solutions/server-backup" element={<ServerBackup />} />
+          <Route path="/solutions/onprem-backup" element={<OnPremBackup />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
