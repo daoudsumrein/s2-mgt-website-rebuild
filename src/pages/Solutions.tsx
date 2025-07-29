@@ -152,8 +152,8 @@ export default function Solutions() {
                     {/* Data Protection Semi-Circle (Left Half) */}
                     <path
                       d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z"
-                      fill="#87CEEB"
-                      stroke="#5A9FCD"
+                      fill="hsl(var(--primary))"
+                      stroke="hsl(var(--primary))"
                       strokeWidth="2"
                       filter="url(#shadow)"
                     />
@@ -184,18 +184,18 @@ export default function Solutions() {
                     </text>
                     
                     {/* Data Protection Text - positioned in left semicircle */}
-                    <text x="50" y="95" textAnchor="middle" className="text-sm font-semibold" fill="#333">
+                    <text x="50" y="95" textAnchor="middle" className="text-xs font-medium" fill="white">
                       Data
                     </text>
-                    <text x="50" y="110" textAnchor="middle" className="text-sm font-semibold" fill="#333">
+                    <text x="50" y="107" textAnchor="middle" className="text-xs font-medium" fill="white">
                       Protection
                     </text>
                     
                     {/* Cybersecurity Text - positioned in right semicircle */}
-                    <text x="150" y="95" textAnchor="middle" className="text-sm font-semibold" fill="#333">
+                    <text x="150" y="95" textAnchor="middle" className="text-xs font-medium" fill="white">
                       Cyber
                     </text>
-                    <text x="150" y="110" textAnchor="middle" className="text-sm font-semibold" fill="#333">
+                    <text x="150" y="107" textAnchor="middle" className="text-xs font-medium" fill="white">
                       Security
                     </text>
                   </svg>
