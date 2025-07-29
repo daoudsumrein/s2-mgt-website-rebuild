@@ -147,14 +147,18 @@ export default function Solutions() {
                       <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
                         <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.3"/>
                       </filter>
+                      <linearGradient id="blueToPinkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#87CEEB" />
+                        <stop offset="100%" stopColor="#FFB6C1" />
+                      </linearGradient>
                     </defs>
                     
                     {/* Data Protection Semi-Circle (Left Half) */}
                     <path
                       d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z"
                       fill="hsl(var(--primary))"
-                      stroke="hsl(var(--primary))"
-                      strokeWidth="2"
+                      stroke="url(#blueToPinkGradient)"
+                      strokeWidth="3"
                       filter="url(#shadow)"
                     />
                     
@@ -171,7 +175,7 @@ export default function Solutions() {
                     <circle
                       cx="100"
                       cy="100"
-                      r="25"
+                      r="18"
                       fill="white"
                       stroke="#ddd"
                       strokeWidth="2"
@@ -179,7 +183,7 @@ export default function Solutions() {
                     />
                     
                     {/* S2 Text */}
-                    <text x="100" y="107" textAnchor="middle" className="text-lg font-bold" fill="#333">
+                    <text x="100" y="105" textAnchor="middle" className="text-sm font-bold" fill="#333">
                       S2
                     </text>
                     
