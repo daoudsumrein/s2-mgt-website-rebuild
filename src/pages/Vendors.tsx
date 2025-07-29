@@ -88,7 +88,7 @@ export default function Vendors() {
         <section className="py-16 bg-gradient-to-b from-primary-light to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Technology Partners</Badge>
+              <Badge className="mb-4">Technology Partners</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Our Strategic Vendors
               </h1>
@@ -113,7 +113,7 @@ export default function Vendors() {
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-2xl mb-2">{vendor.name}</CardTitle>
-                        <Badge variant="secondary" className="mb-3">{vendor.description}</Badge>
+                        <Badge className="mb-3">{vendor.description}</Badge>
                         <p className="text-muted-foreground">{vendor.tagline}</p>
                       </div>
                     </div>

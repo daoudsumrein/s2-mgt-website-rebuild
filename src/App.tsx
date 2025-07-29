@@ -23,6 +23,8 @@ import EmailArchiving from "./pages/solutions/EmailArchiving";
 import EndpointBackup from "./pages/solutions/EndpointBackup";
 import ServerBackup from "./pages/solutions/ServerBackup";
 import OnPremBackup from "./pages/solutions/OnPremBackup";
+import ServerMigration from "./pages/solutions/ServerMigration";
+import DROrchestration from "./pages/solutions/DROrchestration";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +56,8 @@ const App = () => (
           <Route path="/solutions/endpoint-backup" element={<EndpointBackup />} />
           <Route path="/solutions/server-backup" element={<ServerBackup />} />
           <Route path="/solutions/onprem-backup" element={<OnPremBackup />} />
+          <Route path="/solutions/server-migration" element={<ServerMigration />} />
+          <Route path="/solutions/dr-orchestration" element={<DROrchestration />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
