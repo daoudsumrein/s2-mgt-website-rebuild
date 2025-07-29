@@ -27,7 +27,7 @@ const Index = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <Badge variant="secondary" className="mb-4">Founded 2013</Badge>
+              <Badge className="mb-4">Founded 2013</Badge>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
                 Leading IT Transformation & Digital Modernization in MENA
               </h2>
@@ -75,7 +75,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <Badge variant="secondary">Our Approach</Badge>
+                <Badge>Our Approach</Badge>
                 <h2 className="text-3xl lg:text-4xl font-bold">
                   Consultancy-Led Selling & Services
                 </h2>
