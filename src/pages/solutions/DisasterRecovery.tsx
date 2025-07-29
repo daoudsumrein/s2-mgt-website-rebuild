@@ -127,7 +127,7 @@ export default function DisasterRecovery() {
         </section>
 
         {/* What We Deliver Section */}
-        <section className="py-16 bg-secondary/30">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
@@ -189,7 +189,7 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Ideal For & Outcomes Section */}
-        <section className="py-16 bg-secondary/30">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-8">
