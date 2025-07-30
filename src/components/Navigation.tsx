@@ -87,6 +87,11 @@ const cybersecuritySolutions = [
     href: "/solutions/email-encryption",
     description: "Secure email communications"
   },
+  {
+    title: "Servers and Data Protection",
+    href: "/solutions/servers-data-protection",
+    description: "Insider threat protection and access control"
+  },
 ];
 
 const vendors = [
