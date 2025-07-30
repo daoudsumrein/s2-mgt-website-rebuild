@@ -74,7 +74,7 @@ const deliverables = [
 
 export default function DisasterRecovery() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions"
         description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools."
@@ -82,17 +82,24 @@ export default function DisasterRecovery() {
         canonicalUrl="https://s2mgt.com/solutions/disaster-recovery"
       />
       <Navigation />
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary-light to-background">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Data Protection Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">Disaster Recovery</h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Ensure maximum uptime for your Windows and Linux servers with comprehensive DR solutions
+              <Badge variant="outline" className="mb-4 border-white/20 text-white">
+                Data Protection Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Disaster Recovery
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Ensure maximum uptime for your Windows and Linux servers with comprehensive DR solutions featuring continuous replication and automated failover.
               </p>
-              <Button size="lg">Request DR Assessment</Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">Request DR Assessment</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">Learn More</Button>
+              </div>
             </div>
           </div>
         </section>
@@ -149,7 +156,7 @@ export default function DisasterRecovery() {
                   <Card key={index}>
                     <CardHeader>
                       <div className="flex items-center space-x-3">
-                        <item.icon className="h-8 w-8 text-primary" />
+                        <item.icon className="h-8 w-8 text-teal-500" />
                         <CardTitle className="text-xl">{item.title}</CardTitle>
                       </div>
                     </CardHeader>

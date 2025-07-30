@@ -91,7 +91,7 @@ const idealFor = [
 
 export default function DataProtection() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Data Protection & Backup Solutions MENA - Enterprise Data Security | S2 Solutions"
         description="Comprehensive data protection and backup solutions for MENA enterprises. Carbonite partner offering endpoint, server, cloud-to-cloud backup with advanced cybersecurity features across UAE and Middle East."
@@ -99,17 +99,24 @@ export default function DataProtection() {
         canonicalUrl="https://s2mgt.com/solutions/data-protection"
       />
       <Navigation />
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary-light to-background">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">Data Protection & Backup</h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Servers, Endpoints, Cloud – Always Covered
+              <Badge variant="outline" className="mb-4 border-white/20 text-white">
+                Data Protection Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Data Protection & Backup
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Servers, Endpoints, Cloud – Always Covered with end-to-end data protection ensuring your critical systems are secure, recoverable, and compliant.
               </p>
-              <Button size="lg">Request Backup Audit</Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">Request Backup Audit</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">Learn More</Button>
+              </div>
             </div>
           </div>
         </section>
@@ -143,7 +150,7 @@ export default function DataProtection() {
                   <Card key={index}>
                     <CardHeader>
                       <div className="flex items-center space-x-3">
-                        <item.icon className="h-8 w-8 text-primary" />
+                        <item.icon className="h-8 w-8 text-teal-500" />
                         <CardTitle className="text-xl">{item.title}</CardTitle>
                       </div>
                     </CardHeader>
