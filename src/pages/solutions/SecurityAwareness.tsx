@@ -162,7 +162,7 @@ export default function SecurityAwareness() {
                   <Card key={index}>
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
                         <span className="text-sm font-medium">{deliverable}</span>
                       </div>
                     </CardContent>
