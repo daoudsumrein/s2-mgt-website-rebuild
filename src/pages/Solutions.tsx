@@ -50,14 +50,9 @@ const dataProtectionSolutions = [{
 }];
 const cybersecuritySolutions = [{
   icon: Shield,
-  title: "Endpoint Protection",
-  description: "Advanced endpoint security",
+  title: "Endpoint Protection with EDR",
+  description: "Comprehensive endpoint security with detection and response",
   link: "/solutions/endpoint-protection"
-}, {
-  icon: Eye,
-  title: "EDR",
-  description: "Endpoint Detection and Response",
-  link: "/solutions/edr"
 }, {
   icon: Search,
   title: "MDR",
