@@ -120,7 +120,7 @@ export default function Solutions() {
                     
                     {/* Right - Interactive Wheel */}
                     <div className="relative flex justify-center lg:justify-start lg:pl-8">
-                      <div className="w-96 h-72 flex items-center justify-center px-[11px] mx-[60px]">
+                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10 px-[11px] mx-[60px]">
                         <div className="relative w-[280px] h-[280px]">
                           {/* Main SVG Wheel */}
                           <svg viewBox="0 0 200 200" className="w-full h-full">
