@@ -72,7 +72,7 @@ export default function ServerMigration() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 md:py-6 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 relative overflow-hidden md:py-[55px]">
           <div className="container mx-auto px-2 md:px-4">
             <div className="mx-auto">
               {/* Floating Background Container with Gradient Border */}
@@ -101,7 +101,7 @@ export default function ServerMigration() {
                     
                     {/* Right Image Placeholder */}
                     <div className="relative flex justify-center lg:justify-start lg:pl-8">
-                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10 px-[11px] mx-[60px]">
                         
                       </div>
                     </div>
