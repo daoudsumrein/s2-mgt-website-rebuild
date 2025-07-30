@@ -141,38 +141,38 @@ export default function Solutions() {
                                 <stop offset="100%" stopColor="#fff" />
                               </linearGradient>
                               
-                              {/* Abstract line pattern for Data Protection side */}
-                              <pattern id="dataPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <path d="M0 10 Q5 5 10 10 T20 10" stroke="white" strokeWidth="0.8" strokeOpacity="0.2" fill="none" />
-                                <path d="M0 15 Q10 5 20 15" stroke="#ffed4e" strokeWidth="0.5" strokeOpacity="0.3" fill="none" />
-                                <path d="M5 0 Q10 10 15 0" stroke="white" strokeWidth="0.6" strokeOpacity="0.15" fill="none" />
+                              {/* Abstract organic line pattern for Data Protection side */}
+                              <pattern id="dataPattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
+                                <path d="M0 12 Q8 8 12 12 Q17 16 25 12" stroke="white" strokeWidth="0.8" strokeOpacity="0.15" fill="none" />
+                                <path d="M5 0 Q12 7 20 5 Q22 8 25 10" stroke="white" strokeWidth="0.6" strokeOpacity="0.1" fill="none" />
+                                <path d="M0 20 Q10 15 15 20 Q20 25 25 22" stroke="rgba(255,255,255,0.08)" strokeWidth="1" fill="none" />
                               </pattern>
                               
-                              {/* Abstract line pattern for Cybersecurity side */}
-                              <pattern id="cyberPattern" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
-                                <path d="M0 0 L18 18 M0 18 L18 0" stroke="white" strokeWidth="0.6" strokeOpacity="0.15" />
-                                <path d="M9 0 Q4.5 9 9 18 Q13.5 9 9 0" stroke="#00f5ff" strokeWidth="0.8" strokeOpacity="0.25" fill="none" />
-                                <circle cx="9" cy="9" r="2" stroke="white" strokeWidth="0.4" strokeOpacity="0.2" fill="none" />
+                              {/* Abstract organic line pattern for Cybersecurity side */}
+                              <pattern id="cyberPattern" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+                                <path d="M0 11 Q6 6 11 11 Q16 16 22 11" stroke="white" strokeWidth="0.7" strokeOpacity="0.12" fill="none" />
+                                <path d="M4 0 Q11 8 18 2 Q20 6 22 8" stroke="rgba(255,255,255,0.08)" strokeWidth="0.8" fill="none" />
+                                <path d="M0 18 Q8 14 14 18 Q18 22 22 20" stroke="white" strokeWidth="0.5" strokeOpacity="0.1" fill="none" />
                               </pattern>
                             </defs>
                             
-                            {/* Data Protection Semi-Circle (Left Half) with pattern overlay */}
-                            <path d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z" fill="hsl(var(--primary) / 0.8)" stroke="hsl(var(--primary))" strokeWidth="2" filter="url(#shadow)" />
-                            <path d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z" fill="url(#dataPattern)" />
+                            {/* Data Protection Semi-Circle (Left Half) - enlarged and separated */}
+                            <path d="M 100 100 L 96 100 L 96 10 A 90 90 0 0 0 96 190 L 96 100 Z" fill="hsl(var(--primary) / 0.8)" stroke="hsl(var(--primary))" strokeWidth="2" filter="url(#shadow)" />
+                            <path d="M 100 100 L 96 100 L 96 10 A 90 90 0 0 0 96 190 L 96 100 Z" fill="url(#dataPattern)" />
                             
-                            {/* Cybersecurity Semi-Circle (Right Half) with pattern overlay */}
-                            <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="rgb(20 184 166)" stroke="rgb(13 148 136)" strokeWidth="2" filter="url(#shadow)" />
-                            <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="url(#cyberPattern)" />
+                            {/* Cybersecurity Semi-Circle (Right Half) - enlarged and separated */}
+                            <path d="M 100 100 L 104 100 L 104 10 A 90 90 0 0 1 104 190 L 104 100 Z" fill="rgb(20 184 166)" stroke="rgb(13 148 136)" strokeWidth="2" filter="url(#shadow)" />
+                            <path d="M 100 100 L 104 100 L 104 10 A 90 90 0 0 1 104 190 L 104 100 Z" fill="url(#cyberPattern)" />
                             
-                            {/* Decorative elements for Data Protection side - more visible */}
-                            <circle cx="35" cy="70" r="2.5" fill="white" fillOpacity="0.6" />
-                            <circle cx="45" cy="130" r="2" fill="#fbbf24" fillOpacity="0.8" />
-                            <circle cx="65" cy="50" r="1.5" fill="white" fillOpacity="0.5" />
+                            {/* Decorative elements for Data Protection side */}
+                            <circle cx="30" cy="65" r="2" fill="white" fillOpacity="0.4" />
+                            <circle cx="40" cy="135" r="1.5" fill="white" fillOpacity="0.3" />
+                            <circle cx="60" cy="45" r="1.2" fill="white" fillOpacity="0.35" />
                             
-                            {/* Decorative elements for Cybersecurity side - more visible */}
-                            <polygon points="155,60 160,65 155,70 150,65" fill="white" fillOpacity="0.6" />
-                            <polygon points="135,130 140,135 135,140 130,135" fill="#fde68a" fillOpacity="0.8" />
-                            <rect x="163" y="48" width="4" height="4" fill="white" fillOpacity="0.5" transform="rotate(45 165 50)" />
+                            {/* Decorative elements for Cybersecurity side */}
+                            <circle cx="170" cy="65" r="2" fill="white" fillOpacity="0.4" />
+                            <circle cx="160" cy="135" r="1.5" fill="white" fillOpacity="0.3" />
+                            <circle cx="140" cy="45" r="1.2" fill="white" fillOpacity="0.35" />
                             
                             {/* Center S2 Circle */}
                             <circle cx="100" cy="100" r="18" fill="white" stroke="#ddd" strokeWidth="2" filter="url(#shadow)" />
@@ -180,19 +180,19 @@ export default function Solutions() {
                             {/* S2 Logo */}
                             <image x="85" y="85" width="30" height="30" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
                             
-                            {/* Data Protection Text with bright gradient and modern styling */}
-                            <text x="50" y="95" textAnchor="middle" className="text-sm font-black tracking-wide" fill="url(#dataGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            {/* Data Protection Text with bright gradient and smaller, modern styling */}
+                            <text x="48" y="96" textAnchor="middle" className="text-xs font-black tracking-wide" fill="url(#dataGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               DATA
                             </text>
-                            <text x="50" y="109" textAnchor="middle" className="text-sm font-black tracking-wide" fill="url(#dataGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            <text x="48" y="108" textAnchor="middle" className="text-xs font-black tracking-wide" fill="url(#dataGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               PROTECTION
                             </text>
                             
-                            {/* Cybersecurity Text with bright gradient and modern styling */}
-                            <text x="150" y="95" textAnchor="middle" className="text-sm font-black tracking-wide" fill="url(#cyberGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            {/* Cybersecurity Text with bright gradient and smaller, modern styling */}
+                            <text x="152" y="96" textAnchor="middle" className="text-xs font-black tracking-wide" fill="url(#cyberGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               CYBER
                             </text>
-                            <text x="150" y="109" textAnchor="middle" className="text-sm font-black tracking-wide" fill="url(#cyberGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            <text x="152" y="108" textAnchor="middle" className="text-xs font-black tracking-wide" fill="url(#cyberGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               SECURITY
                             </text>
                           </svg>
