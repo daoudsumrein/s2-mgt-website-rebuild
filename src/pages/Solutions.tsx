@@ -119,7 +119,7 @@ export default function Solutions() {
                     <path d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z" fill="hsl(var(--primary) / 0.8)" stroke="hsl(var(--primary))" strokeWidth="2" filter="url(#shadow)" />
                     
                     {/* Cybersecurity Semi-Circle (Right Half) */}
-                    <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="#00ffd0" stroke="#00C7A3" strokeWidth="2" filter="url(#shadow)" />
+                    <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="rgb(20 184 166)" stroke="rgb(13 148 136)" strokeWidth="2" filter="url(#shadow)" />
                     
                     {/* Center S2 Circle */}
                     <circle cx="100" cy="100" r="18" fill="white" stroke="#ddd" strokeWidth="2" filter="url(#shadow)" />
@@ -191,9 +191,7 @@ export default function Solutions() {
               {/* Cybersecurity Column */}
               <div>
                 <div className="flex items-center space-x-3 mb-6">
-                  <Shield className="h-8 w-8" style={{
-                  color: '#00ffd0'
-                }} />
+                  <Shield className="h-8 w-8 text-teal-500" />
                   <h2 className="text-2xl font-bold">Cybersecurity Solutions</h2>
                 </div>
                 <div className="space-y-4">
@@ -202,9 +200,7 @@ export default function Solutions() {
                   return <Card key={index} className="hover:shadow-md transition-shadow">
                         <CardContent className="p-4">
                           <div className="flex items-center space-x-3">
-                            <IconComponent className="h-5 w-5" style={{
-                          color: '#00ffd0'
-                        }} />
+                             <IconComponent className="h-5 w-5 text-teal-500" />
                             <div className="flex-1">
                               <h3 className="font-semibold">{solution.title}</h3>
                               <p className="text-sm text-muted-foreground">{solution.description}</p>

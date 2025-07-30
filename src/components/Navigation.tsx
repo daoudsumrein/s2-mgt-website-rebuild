@@ -223,7 +223,7 @@ export default function Navigation() {
                       {/* Cybersecurity Column */}
                       <div>
                         <h3 className="font-semibold text-sm mb-3 text-black flex items-center gap-2">
-                          <Shield className="h-4 w-4 text-secondary" />
+                          <Shield className="h-4 w-4 text-teal-500" />
                           Cybersecurity Solutions
                         </h3>
                         <ul className="space-y-2">
@@ -338,7 +338,7 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
           </div>
           <div className="pl-4 space-y-1">
             <div className="text-xs font-medium text-black flex items-center gap-2">
-              <Shield className="h-3 w-3 text-secondary" />
+              <Shield className="h-3 w-3 text-teal-500" />
               Cybersecurity
             </div>
             {cybersecuritySolutions.map((solution) => (
