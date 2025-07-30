@@ -129,26 +129,28 @@ export default function Solutions() {
                                 <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.3" />
                               </filter>
                               
-                              {/* Gradient for Data Protection text */}
+                              {/* Gradient for Data Protection text - contrasting against blue */}
                               <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stopColor="hsl(var(--primary))" />
-                                <stop offset="100%" stopColor="#60a5fa" />
+                                <stop offset="0%" stopColor="#fbbf24" />
+                                <stop offset="100%" stopColor="#f59e0b" />
                               </linearGradient>
                               
-                              {/* Gradient for Cybersecurity text */}
+                              {/* Gradient for Cybersecurity text - contrasting against teal */}
                               <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stopColor="rgb(20 184 166)" />
-                                <stop offset="100%" stopColor="rgb(6 182 212)" />
+                                <stop offset="0%" stopColor="#fef3c7" />
+                                <stop offset="100%" stopColor="#fde68a" />
                               </linearGradient>
                               
-                              {/* Pattern for Data Protection side */}
-                              <pattern id="dataPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-                                <circle cx="4" cy="4" r="0.8" fill="hsl(var(--primary) / 0.2)" />
+                              {/* Pattern for Data Protection side - more visible */}
+                              <pattern id="dataPattern" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+                                <circle cx="6" cy="6" r="1.5" fill="hsl(var(--primary) / 0.4)" />
+                                <circle cx="6" cy="6" r="0.8" fill="white" fillOpacity="0.3" />
                               </pattern>
                               
-                              {/* Pattern for Cybersecurity side */}
-                              <pattern id="cyberPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                                <path d="M0 5h10M5 0v10" stroke="rgb(20 184 166 / 0.15)" strokeWidth="0.5" />
+                              {/* Pattern for Cybersecurity side - more visible */}
+                              <pattern id="cyberPattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+                                <path d="M0 7.5h15M7.5 0v15" stroke="white" strokeWidth="1" strokeOpacity="0.2" />
+                                <path d="M0 7.5h15M7.5 0v15" stroke="rgb(6 182 212)" strokeWidth="0.5" strokeOpacity="0.4" />
                               </pattern>
                             </defs>
                             
@@ -160,15 +162,15 @@ export default function Solutions() {
                             <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="rgb(20 184 166)" stroke="rgb(13 148 136)" strokeWidth="2" filter="url(#shadow)" />
                             <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="url(#cyberPattern)" />
                             
-                            {/* Decorative elements for Data Protection side */}
-                            <circle cx="35" cy="70" r="2" fill="hsl(var(--primary) / 0.4)" />
-                            <circle cx="45" cy="130" r="1.5" fill="hsl(var(--primary) / 0.3)" />
-                            <circle cx="65" cy="50" r="1" fill="hsl(var(--primary) / 0.5)" />
+                            {/* Decorative elements for Data Protection side - more visible */}
+                            <circle cx="35" cy="70" r="2.5" fill="white" fillOpacity="0.6" />
+                            <circle cx="45" cy="130" r="2" fill="#fbbf24" fillOpacity="0.8" />
+                            <circle cx="65" cy="50" r="1.5" fill="white" fillOpacity="0.5" />
                             
-                            {/* Decorative elements for Cybersecurity side */}
-                            <polygon points="155,60 160,65 155,70 150,65" fill="rgb(20 184 166 / 0.4)" />
-                            <polygon points="135,130 140,135 135,140 130,135" fill="rgb(20 184 166 / 0.3)" />
-                            <rect x="163" y="48" width="3" height="3" fill="rgb(20 184 166 / 0.5)" transform="rotate(45 165 50)" />
+                            {/* Decorative elements for Cybersecurity side - more visible */}
+                            <polygon points="155,60 160,65 155,70 150,65" fill="white" fillOpacity="0.6" />
+                            <polygon points="135,130 140,135 135,140 130,135" fill="#fde68a" fillOpacity="0.8" />
+                            <rect x="163" y="48" width="4" height="4" fill="white" fillOpacity="0.5" transform="rotate(45 165 50)" />
                             
                             {/* Center S2 Circle */}
                             <circle cx="100" cy="100" r="18" fill="white" stroke="#ddd" strokeWidth="2" filter="url(#shadow)" />
