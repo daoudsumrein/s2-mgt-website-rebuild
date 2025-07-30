@@ -92,9 +92,6 @@ export default function EndpointProtection() {
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Endpoint Protection with EDR Functionality
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                A comprehensive, automated solution designed to secure users anywhere with highly effective real-time protection. Stops malware, ransomware, phishing, cryptomining, and other damaging attacks with award-winning management console and automated endpoint detection, prevention, and remediation.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg">Request Consultation</Button>
                 <Button variant="outline" size="lg">Learn More</Button>
