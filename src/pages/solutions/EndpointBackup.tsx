@@ -192,7 +192,7 @@ export default function EndpointBackup() {
                   <Card key={index}>
                     <CardHeader>
                       <div className="flex items-center space-x-3">
-                        <item.icon className="h-8 w-8 text-primary" />
+                        <item.icon className="h-8 w-8 text-teal-500" />
                         <CardTitle className="text-xl">{item.title}</CardTitle>
                       </div>
                     </CardHeader>
