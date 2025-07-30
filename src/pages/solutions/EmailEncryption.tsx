@@ -58,18 +58,20 @@ export default function EmailEncryption() {
         <section className="bg-gradient-to-br from-background via-muted/50 to-background py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="mb-4">
-                Cybersecurity Solutions
-              </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Email Encryption with Secure Compose
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                Email Encryption with Secure Compose empowers users to send secure messages and attachments. It aims to eliminate impersonation risks and cyberattacks associated with sending sensitive information via email.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-lg px-8">Request Implementation</Button>
-                <Button variant="outline" size="lg" className="text-lg px-8">Security Demo</Button>
+              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
+                <Badge variant="outline" className="mb-4">
+                  Cybersecurity Solutions
+                </Badge>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Email Encryption with Secure Compose
+                </h1>
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                  Email Encryption with Secure Compose empowers users to send secure messages and attachments. It aims to eliminate impersonation risks and cyberattacks associated with sending sensitive information via email.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="text-lg px-8">Request Implementation</Button>
+                  <Button variant="outline" size="lg" className="text-lg px-8">Security Demo</Button>
+                </div>
               </div>
             </div>
           </div>
