@@ -159,11 +159,11 @@ export default function ServerMigration() {
           </div>
         </section>
 
-        {/* Deliverables Section */}
+        {/* What We Deliver Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
               <Card>
                 <CardContent className="p-8">
                   <div className="space-y-6">
@@ -176,6 +176,79 @@ export default function ServerMigration() {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Ideal For & Key Benefits */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Ideal For */}
+                <div>
+                  <Card className="border-blue-200 bg-blue-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-blue-700">
+                        <Target className="h-6 w-6" />
+                        <span>Ideal For</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span>Organizations planning infrastructure migrations</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span>Companies moving to cloud environments</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span>Enterprises with mixed IT environments</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span>Businesses requiring minimal downtime</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Key Benefits */}
+                <div>
+                  <Card className="border-teal-200 bg-teal-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-teal-700">
+                        <CheckCircle className="h-6 w-6" />
+                        <span>Key Benefits</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                          <span>Planned migrations with minimal downtime</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                          <span>Extensive automation reducing migration risks</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                          <span>Lower infrastructure costs through optimization</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                          <span>Cross-platform migration flexibility</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
         </section>

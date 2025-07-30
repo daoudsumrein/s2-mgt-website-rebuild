@@ -156,11 +156,11 @@ export default function DROrchestration() {
           </div>
         </section>
 
-        {/* Deliverables Section */}
+        {/* What We Deliver Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
               <Card>
                 <CardContent className="p-8">
                   <div className="space-y-6">
@@ -173,6 +173,79 @@ export default function DROrchestration() {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Ideal For & Key Benefits */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Ideal For */}
+                <div>
+                  <Card className="border-blue-200 bg-blue-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-blue-700">
+                        <Target className="h-6 w-6" />
+                        <span>Ideal For</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span>Enterprise organizations with complex IT infrastructures</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span>Companies requiring automated disaster recovery</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span>Organizations with strict compliance requirements</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <span>Businesses needing migration orchestration</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Key Benefits */}
+                <div>
+                  <Card className="border-teal-200 bg-teal-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-teal-700">
+                        <CheckCircle className="h-6 w-6" />
+                        <span>Key Benefits</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                          <span>Intelligent discovery and dependency mapping</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                          <span>Automated orchestration reduces human error</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                          <span>Real-time task management and monitoring</span>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                          <span>Enhanced security and compliance adherence</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
         </section>
