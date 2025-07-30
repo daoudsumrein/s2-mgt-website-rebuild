@@ -190,25 +190,25 @@ export default function RansomwareProtection() {
             </div>
           </section>
 
-          {/* Ideal For Section */}
-          <section className="py-16 bg-blue-50">
+          {/* What We Deliver Section */}
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-12">Ideal For</h2>
+                <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {[
-                    "High-value target organizations",
-                    "Financial services sector",
-                    "Healthcare institutions",
-                    "Critical infrastructure",
-                    "Government agencies",
-                    "Manufacturing companies"
-                  ].map((item, index) => (
-                    <Card key={index} className="bg-white border-blue-200">
+                    "Last line of defense against ransomware",
+                    "Secure offline data vault",
+                    "Clean, verified backup sets",
+                    "Resilient backup infrastructure",
+                    "Enhanced backup security layer",
+                    "Compliance-ready backup environment"
+                  ].map((deliverable, index) => (
+                    <Card key={index}>
                       <CardContent className="p-6">
                         <div className="flex items-start space-x-3">
-                          <Target className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
-                          <span className="text-sm font-medium text-blue-900">{item}</span>
+                          <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
+                          <span className="text-sm font-medium">{deliverable}</span>
                         </div>
                       </CardContent>
                     </Card>
@@ -218,59 +218,68 @@ export default function RansomwareProtection() {
             </div>
           </section>
 
-          {/* What We Deliver Section */}
-          <section className="py-16 md:py-24">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  What We Deliver
-                </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Tangible benefits and outcomes from our ransomware protection solution
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                {deliverables.map((deliverable, index) => (
-                  <Card key={index} className="h-full">
-                    <CardHeader>
-                      <deliverable.icon className="h-8 w-8 text-teal-500 mb-2" />
-                      <CardTitle className="text-lg">{deliverable.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base">
-                        {deliverable.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Key Benefits Section */}
-          <section className="py-16 bg-teal-50">
+          {/* Ideal For & Key Benefits */}
+          <section className="py-16 bg-muted/30">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-12">Key Benefits</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {[
-                    "Proactive threat prevention",
-                    "Business continuity assurance",
-                    "Reduced recovery time",
-                    "Cost-effective protection",
-                    "Regulatory compliance",
-                    "Enhanced security posture"
-                  ].map((item, index) => (
-                    <Card key={index} className="bg-white border-teal-200">
-                      <CardContent className="p-6">
-                        <div className="flex items-start space-x-3">
-                          <Shield className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
-                          <span className="text-sm font-medium text-teal-900">{item}</span>
+                <div className="grid lg:grid-cols-2 gap-12">
+                  {/* Ideal For */}
+                  <div>
+                    <Card className="border-blue-200 bg-blue-50/50">
+                      <CardHeader>
+                        <CardTitle className="flex items-center space-x-3 text-blue-700">
+                          <Target className="h-6 w-6" />
+                          <span>Ideal For</span>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-3">
+                          {[
+                            "Organizations with critical data assets",
+                            "Companies in high-risk industries",
+                            "Businesses with remote workforce",
+                            "Enterprises requiring compliance",
+                            "Organizations with legacy systems",
+                            "Companies needing rapid recovery"
+                          ].map((item, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                              <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                              <span>{item}</span>
+                            </div>
+                          ))}
                         </div>
                       </CardContent>
                     </Card>
-                  ))}
+                  </div>
+
+                  {/* Key Benefits */}
+                  <div>
+                    <Card className="border-teal-200 bg-teal-50/50">
+                      <CardHeader>
+                        <CardTitle className="flex items-center space-x-3 text-teal-700">
+                          <Shield className="h-6 w-6" />
+                          <span>Key Benefits</span>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-3">
+                          {[
+                            "Proactive ransomware prevention",
+                            "Rapid recovery capabilities",
+                            "Minimal business disruption",
+                            "Enhanced security posture",
+                            "Reduced financial risk",
+                            "Improved business continuity"
+                          ].map((item, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                              <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
               </div>
             </div>

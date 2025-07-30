@@ -156,25 +156,18 @@ export default function EndpointProtection() {
           </div>
         </section>
 
-        {/* Ideal For Section */}
-        <section className="py-16 bg-blue-50">
+        {/* What We Deliver Section */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Ideal For</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  "SMEs and large enterprises",
-                  "Remote workforce organizations",
-                  "Financial services companies",
-                  "Healthcare institutions",
-                  "Government agencies",
-                  "Educational institutions"
-                ].map((item, index) => (
-                  <Card key={index} className="bg-white border-blue-200">
+                {deliverables.map((deliverable, index) => (
+                  <Card key={index}>
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-3">
-                        <Target className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
-                        <span className="text-sm font-medium text-blue-900">{item}</span>
+                        <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
+                        <span className="text-sm font-medium">{deliverable}</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -184,54 +177,68 @@ export default function EndpointProtection() {
           </div>
         </section>
 
-        {/* What We Deliver Section */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                What We Deliver
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Tangible benefits and outcomes from our endpoint protection solution
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              {deliverables.map((deliverable, index) => (
-                <Card key={index} className="h-full">
-                  <CardHeader>
-                    <CheckCircle className="h-8 w-8 text-teal-500 mb-2" />
-                    <CardTitle className="text-lg">{deliverable}</CardTitle>
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits Section */}
-        <section className="py-16 bg-teal-50">
+        {/* Ideal For & Key Benefits */}
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Key Benefits</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  "Advanced threat prevention",
-                  "Real-time protection",
-                  "Centralized management",
-                  "Reduced security incidents",
-                  "Improved productivity",
-                  "Compliance adherence"
-                ].map((item, index) => (
-                  <Card key={index} className="bg-white border-teal-200">
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-3">
-                        <Shield className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
-                        <span className="text-sm font-medium text-teal-900">{item}</span>
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Ideal For */}
+                <div>
+                  <Card className="border-blue-200 bg-blue-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-blue-700">
+                        <Target className="h-6 w-6" />
+                        <span>Ideal For</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {[
+                          "Organizations with diverse endpoint devices",
+                          "Companies with remote workforce",
+                          "Businesses handling sensitive data",
+                          "Enterprises requiring compliance",
+                          "Organizations with BYOD policies",
+                          "Companies needing centralized security"
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
                       </div>
                     </CardContent>
                   </Card>
-                ))}
+                </div>
+
+                {/* Key Benefits */}
+                <div>
+                  <Card className="border-teal-200 bg-teal-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-teal-700">
+                        <Shield className="h-6 w-6" />
+                        <span>Key Benefits</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {[
+                          "Comprehensive endpoint protection",
+                          "Reduced malware infections",
+                          "Enhanced threat visibility",
+                          "Simplified security management",
+                          "Improved compliance posture",
+                          "Cost-effective security solution"
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </div>
           </div>
