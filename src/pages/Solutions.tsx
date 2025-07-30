@@ -129,28 +129,30 @@ export default function Solutions() {
                                 <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.3" />
                               </filter>
                               
-                              {/* Gradient for Data Protection text - contrasting against blue */}
+                              {/* Gradient for Data Protection text - bright and vibrant */}
                               <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stopColor="#fbbf24" />
-                                <stop offset="100%" stopColor="#f59e0b" />
+                                <stop offset="0%" stopColor="#ffed4e" />
+                                <stop offset="100%" stopColor="#ff6b35" />
                               </linearGradient>
                               
-                              {/* Gradient for Cybersecurity text - contrasting against teal */}
+                              {/* Gradient for Cybersecurity text - bright and vibrant */}
                               <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stopColor="#fef3c7" />
-                                <stop offset="100%" stopColor="#fde68a" />
+                                <stop offset="0%" stopColor="#00f5ff" />
+                                <stop offset="100%" stopColor="#fff" />
                               </linearGradient>
                               
-                              {/* Pattern for Data Protection side - more visible */}
-                              <pattern id="dataPattern" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-                                <circle cx="6" cy="6" r="1.5" fill="hsl(var(--primary) / 0.4)" />
-                                <circle cx="6" cy="6" r="0.8" fill="white" fillOpacity="0.3" />
+                              {/* Abstract line pattern for Data Protection side */}
+                              <pattern id="dataPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <path d="M0 10 Q5 5 10 10 T20 10" stroke="white" strokeWidth="0.8" strokeOpacity="0.2" fill="none" />
+                                <path d="M0 15 Q10 5 20 15" stroke="#ffed4e" strokeWidth="0.5" strokeOpacity="0.3" fill="none" />
+                                <path d="M5 0 Q10 10 15 0" stroke="white" strokeWidth="0.6" strokeOpacity="0.15" fill="none" />
                               </pattern>
                               
-                              {/* Pattern for Cybersecurity side - more visible */}
-                              <pattern id="cyberPattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-                                <path d="M0 7.5h15M7.5 0v15" stroke="white" strokeWidth="1" strokeOpacity="0.2" />
-                                <path d="M0 7.5h15M7.5 0v15" stroke="rgb(6 182 212)" strokeWidth="0.5" strokeOpacity="0.4" />
+                              {/* Abstract line pattern for Cybersecurity side */}
+                              <pattern id="cyberPattern" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+                                <path d="M0 0 L18 18 M0 18 L18 0" stroke="white" strokeWidth="0.6" strokeOpacity="0.15" />
+                                <path d="M9 0 Q4.5 9 9 18 Q13.5 9 9 0" stroke="#00f5ff" strokeWidth="0.8" strokeOpacity="0.25" fill="none" />
+                                <circle cx="9" cy="9" r="2" stroke="white" strokeWidth="0.4" strokeOpacity="0.2" fill="none" />
                               </pattern>
                             </defs>
                             
@@ -178,20 +180,20 @@ export default function Solutions() {
                             {/* S2 Logo */}
                             <image x="85" y="85" width="30" height="30" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
                             
-                            {/* Data Protection Text with gradient - positioned in left semicircle */}
-                            <text x="50" y="95" textAnchor="middle" className="text-xs font-bold" fill="url(#dataGradient)" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-                              Data
+                            {/* Data Protection Text with bright gradient and modern styling */}
+                            <text x="50" y="95" textAnchor="middle" className="text-sm font-black tracking-wide" fill="url(#dataGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                              DATA
                             </text>
-                            <text x="50" y="107" textAnchor="middle" className="text-xs font-bold" fill="url(#dataGradient)" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-                              Protection
+                            <text x="50" y="109" textAnchor="middle" className="text-sm font-black tracking-wide" fill="url(#dataGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                              PROTECTION
                             </text>
                             
-                            {/* Cybersecurity Text with gradient - positioned in right semicircle */}
-                            <text x="150" y="95" textAnchor="middle" className="text-xs font-bold" fill="url(#cyberGradient)" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-                              Cyber
+                            {/* Cybersecurity Text with bright gradient and modern styling */}
+                            <text x="150" y="95" textAnchor="middle" className="text-sm font-black tracking-wide" fill="url(#cyberGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                              CYBER
                             </text>
-                            <text x="150" y="107" textAnchor="middle" className="text-xs font-bold" fill="url(#cyberGradient)" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-                              Security
+                            <text x="150" y="109" textAnchor="middle" className="text-sm font-black tracking-wide" fill="url(#cyberGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                              SECURITY
                             </text>
                           </svg>
                         </div>
