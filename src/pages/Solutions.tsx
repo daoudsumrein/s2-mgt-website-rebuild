@@ -180,11 +180,11 @@ export default function Solutions() {
                             {/* S2 Logo */}
                             <image x="85" y="85" width="30" height="30" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
                             
-                            {/* Data Protection Text with bright gradient and smaller styling */}
-                            <text x="48" y="97" textAnchor="middle" className="font-black tracking-wide" fill="url(#dataGradient)" style={{fontSize: '9px', fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            {/* Data Protection Text with white color and moved left */}
+                            <text x="44" y="97" textAnchor="middle" className="font-black tracking-wide" fill="white" style={{fontSize: '9px', fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               DATA
                             </text>
-                            <text x="48" y="107" textAnchor="middle" className="font-black tracking-wide" fill="url(#dataGradient)" style={{fontSize: '9px', fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            <text x="44" y="107" textAnchor="middle" className="font-black tracking-wide" fill="white" style={{fontSize: '9px', fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               PROTECTION
                             </text>
                             
