@@ -4,39 +4,75 @@ import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { GraduationCap, Mail, Target, Users, Award, TrendingUp } from "lucide-react";
+import { GraduationCap, Mail, Target, Users, Award, TrendingUp, Monitor, Settings, Cloud, CheckCircle } from "lucide-react";
 
-const programs = [
+const features = [
   {
     icon: GraduationCap,
-    title: "Interactive Training Modules",
-    description: "Engaging, interactive training courses covering essential cybersecurity topics"
+    title: "Continuous, Relevant, and Measurable Education",
+    description: "Ongoing education programs with measurable outcomes and relevant content"
   },
   {
     icon: Mail,
-    title: "Phishing Simulations",
-    description: "Regular simulated phishing attacks to test and improve user awareness"
+    title: "Full-Featured Phishing Simulator",
+    description: "Comprehensive phishing simulation tools to test user awareness"
+  },
+  {
+    icon: Monitor,
+    title: "Centralized Management Console",
+    description: "Single dashboard for managing all training programs and campaigns"
+  },
+  {
+    icon: Settings,
+    title: "Automated Learning Management System (LMS)",
+    description: "Fully automated learning management with progress tracking"
+  },
+  {
+    icon: Cloud,
+    title: "Microsoft Azure Active Directory Integration",
+    description: "Seamless integration with Microsoft Azure AD for user management"
   },
   {
     icon: Target,
-    title: "Targeted Campaigns",
-    description: "Role-specific training campaigns tailored to different departments and risk levels"
+    title: "Simple Setup Wizard",
+    description: "Easy configuration and deployment with guided setup process"
   },
   {
     icon: Users,
-    title: "Executive Briefings",
-    description: "Leadership-focused security awareness sessions for C-level executives"
+    title: "Flexible Scheduling",
+    description: "Customizable training schedules to fit organizational needs"
   },
   {
-    icon: Award,
-    title: "Certification Programs",
-    description: "Security awareness certification tracking and compliance reporting"
+    icon: Settings,
+    title: "Multi-Client/Site Management",
+    description: "Manage multiple clients or sites from a single platform"
   },
   {
     icon: TrendingUp,
-    title: "Progress Analytics",
-    description: "Detailed analytics and reporting on training effectiveness and user behavior"
+    title: "Comprehensive Reporting",
+    description: "Detailed analytics and reporting for compliance and effectiveness"
+  },
+  {
+    icon: Award,
+    title: "Turnkey Program",
+    description: "Ready-to-deploy training programs with minimal setup required"
+  },
+  {
+    icon: Monitor,
+    title: "Monthly Training Catalog Updates",
+    description: "Regular updates to training content and threat awareness materials"
   }
+];
+
+const deliverables = [
+  "Reduced Malware Incidents",
+  "Simple Administration and Campaign Management",
+  "High Relevancy and Frequency of Training Updates",
+  "Automated Training Management and Compliance Reporting",
+  "Minimizes Risky User Behaviors",
+  "Cost and Productivity Savings",
+  "Accountable and Measurable Cybersecurity Education",
+  "Cyber Resilience"
 ];
 
 export default function SecurityAwareness() {
@@ -59,9 +95,6 @@ export default function SecurityAwareness() {
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Security Awareness Training
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Transform your employees into your strongest line of defense with comprehensive security awareness training programs.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg">Start Training Program</Button>
                 <Button variant="outline" size="lg">View Demo</Button>
@@ -70,58 +103,66 @@ export default function SecurityAwareness() {
           </div>
         </section>
 
-        {/* Programs Grid */}
+        {/* Overview Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Training Programs</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Comprehensive security awareness training designed to build a human firewall against cyber threats.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {programs.map((program, index) => (
-                <Card key={index}>
-                  <CardHeader>
-                    <program.icon className="h-10 w-10 text-primary mb-4" />
-                    <CardTitle>{program.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{program.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Security Awareness</h2>
+              <Card>
+                <CardContent className="p-8">
+                  <p className="text-lg mb-6">
+                    Security Awareness Training is a comprehensive, cloud-based SaaS solution designed to reduce risk exposure through internal users. It aims to transform end-users from the weakest link in the security chain into a resilient first line of cyber defense.
+                  </p>
+                  <p className="text-lg mb-6">
+                    The training helps businesses empower end-users to identify and report scams, avoid risks, fulfill regulatory compliance requirements, and prevent modern cyberattacks through regular training as part of a layered defense approach to become cyber resilient.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
 
-        {/* Impact Section */}
-        <section className="py-16 bg-muted/50">
+        {/* Features Section */}
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Training Impact</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold">Reduced Human Risk</h3>
-                  <p className="text-muted-foreground">
-                    Significantly reduce successful phishing attacks and social engineering attempts through improved user awareness and behavior.
-                  </p>
-                  <h3 className="text-xl font-semibold">Compliance Ready</h3>
-                  <p className="text-muted-foreground">
-                    Meet regulatory requirements for security training and maintain comprehensive records for audit purposes.
-                  </p>
-                </div>
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold">Culture Change</h3>
-                  <p className="text-muted-foreground">
-                    Build a security-conscious culture where employees actively participate in protecting organizational assets.
-                  </p>
-                  <h3 className="text-xl font-semibold">Measurable Results</h3>
-                  <p className="text-muted-foreground">
-                    Track training effectiveness with detailed analytics and see measurable improvements in security behavior.
-                  </p>
-                </div>
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <div className="flex items-center space-x-3">
+                      <feature.icon className="h-8 w-8 text-primary" />
+                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Deliverables Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {deliverables.map((deliverable, index) => (
+                  <Card key={index}>
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm font-medium">{deliverable}</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
