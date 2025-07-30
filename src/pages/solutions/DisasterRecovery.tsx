@@ -88,7 +88,7 @@ export default function DisasterRecovery() {
                     </div>
                     
                     {/* Right Image Placeholder */}
-                    <div className="relative lg:max-w-xs lg:ml-auto">
+                    <div className="relative flex justify-center lg:justify-start lg:pl-8">
                       <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
                         <div className="text-center">
                           <Database className="h-8 w-8 text-white/60 mx-auto mb-1" />
