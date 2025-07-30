@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown, Menu, X, ExternalLink } from "lucide-react";
+import { ChevronDown, Menu, X, ExternalLink, Shield, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -197,7 +197,10 @@ export default function Navigation() {
                     <div className="grid grid-cols-2 gap-6">
                       {/* Data Protection Column */}
                       <div>
-                        <h3 className="font-semibold text-sm mb-3 text-primary">Data Protection Solutions</h3>
+                        <h3 className="font-semibold text-sm mb-3 text-black flex items-center gap-2">
+                          <Database className="h-4 w-4" />
+                          Data Protection Solutions
+                        </h3>
                         <ul className="space-y-2">
                           {dataProtectionSolutions.map((solution) => (
                             <li key={solution.href}>
@@ -219,7 +222,10 @@ export default function Navigation() {
 
                       {/* Cybersecurity Column */}
                       <div>
-                        <h3 className="font-semibold text-sm mb-3 text-secondary">Cybersecurity Solutions</h3>
+                        <h3 className="font-semibold text-sm mb-3 text-black flex items-center gap-2">
+                          <Shield className="h-4 w-4" />
+                          Cybersecurity Solutions
+                        </h3>
                         <ul className="space-y-2">
                           {cybersecuritySolutions.map((solution) => (
                             <li key={solution.href}>
@@ -315,7 +321,10 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
             All Solutions
           </Link>
           <div className="pl-4 space-y-1">
-            <div className="text-xs font-medium text-primary">Data Protection</div>
+            <div className="text-xs font-medium text-black flex items-center gap-2">
+              <Database className="h-3 w-3" />
+              Data Protection
+            </div>
             {dataProtectionSolutions.map((solution) => (
               <Link
                 key={solution.href}
@@ -328,7 +337,10 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
             ))}
           </div>
           <div className="pl-4 space-y-1">
-            <div className="text-xs font-medium text-secondary">Cybersecurity</div>
+            <div className="text-xs font-medium text-black flex items-center gap-2">
+              <Shield className="h-3 w-3" />
+              Cybersecurity
+            </div>
             {cybersecuritySolutions.map((solution) => (
               <Link
                 key={solution.href}
