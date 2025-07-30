@@ -4,39 +4,84 @@ import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Clock, Shield, Target, Eye, Zap } from "lucide-react";
+import { Users, Clock, Shield, Target, Eye, Zap, Monitor, Workflow, Cloud, Database, CheckCircle } from "lucide-react";
 
-const services = [
+const features = [
   {
-    icon: Users,
-    title: "Expert Security Team",
-    description: "Dedicated security analysts providing 24/7 monitoring and threat response"
-  },
-  {
-    icon: Clock,
-    title: "Round-the-Clock Monitoring",
-    description: "Continuous security monitoring across all endpoints and network infrastructure"
+    icon: Monitor,
+    title: "Continuous Monitoring and Response",
+    description: "24/7 security monitoring and immediate response capabilities"
   },
   {
     icon: Shield,
-    title: "Threat Intelligence",
-    description: "Real-time threat intelligence feeds to identify emerging threats and attack patterns"
+    title: "Threat Neutralization",
+    description: "Advanced threat detection and neutralization technologies"
   },
   {
     icon: Target,
-    title: "Proactive Hunting",
-    description: "Advanced threat hunting to discover hidden threats and persistent attackers"
+    title: "Customizable Response Strategies",
+    description: "Tailored response strategies to meet your specific security needs"
   },
   {
     icon: Eye,
-    title: "Incident Investigation",
-    description: "Comprehensive incident investigation and forensic analysis capabilities"
+    title: "Unified Visibility",
+    description: "Complete visibility across your entire security infrastructure"
+  },
+  {
+    icon: Cloud,
+    title: "Cloud SIEM",
+    description: "Cloud-native security information and event management"
+  },
+  {
+    icon: Workflow,
+    title: "More than 500 Integrations",
+    description: "Extensive integration capabilities with existing security tools"
   },
   {
     icon: Zap,
-    title: "Rapid Remediation",
-    description: "Fast containment and remediation of security incidents to minimize impact"
+    title: "SOAR for Customized Workflows",
+    description: "Security orchestration and automated response workflows"
+  },
+  {
+    icon: Users,
+    title: "Human Factor",
+    description: "SOC analysts and threat hunters for enhanced security operations"
+  },
+  {
+    icon: Database,
+    title: "Data Ingestion",
+    description: "Comprehensive data collection and analysis capabilities"
+  },
+  {
+    icon: Target,
+    title: "Data Correlation and Alerting",
+    description: "Advanced correlation engine for accurate threat detection"
+  },
+  {
+    icon: Shield,
+    title: "Response Actions",
+    description: "Executes response actions such as isolating, remediating, or scanning devices"
+  },
+  {
+    icon: Monitor,
+    title: "Extensive OS and Platform Support",
+    description: "Wide compatibility across operating systems and platforms"
+  },
+  {
+    icon: Cloud,
+    title: "Microsoft Solution Integration",
+    description: "Deep integration with Microsoft security solutions"
   }
+];
+
+const deliverables = [
+  "Simplified security operations",
+  "Improved security outcomes",
+  "Lowered security costs",
+  "Cloud-native, scalable, flexible, and reliable solution",
+  "In-house support and award-winning support",
+  "Enhanced protection",
+  "Manages business risk"
 ];
 
 export default function MDR() {
@@ -59,9 +104,6 @@ export default function MDR() {
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Managed Detection & Response (MDR)
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Expert-led security services providing 24/7 monitoring, threat hunting, and incident response capabilities.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg">Request Consultation</Button>
                 <Button variant="outline" size="lg">Service Overview</Button>
@@ -70,58 +112,66 @@ export default function MDR() {
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Overview Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">MDR Services</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Comprehensive managed detection and response services delivered by certified security experts.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Card key={index}>
-                  <CardHeader>
-                    <service.icon className="h-10 w-10 text-primary mb-4" />
-                    <CardTitle>{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">Simplified Security Platform</h2>
+              <Card>
+                <CardContent className="p-8">
+                  <p className="text-lg mb-6">
+                    MDR is a platform designed to simplify security for endpoints. It provides threat detection, response, and management by integrating with security stacks, offering expert analysis, threat hunting, threat intelligence, and human response.
+                  </p>
+                  <p className="text-lg mb-6">
+                    This cloud-native solution features a unified dashboard with multi-tenant support, powerful workflow automation, and over 500 integrations, making security operations simpler, outcomes improved, and costs lowered.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
 
-        {/* Value Proposition */}
-        <section className="py-16 bg-muted/50">
+        {/* Features Section */}
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our MDR Services?</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold">Expert Security Team</h3>
-                  <p className="text-muted-foreground">
-                    Access to a dedicated team of certified security analysts and threat hunters without the overhead of building an in-house SOC.
-                  </p>
-                  <h3 className="text-xl font-semibold">Cost Effective</h3>
-                  <p className="text-muted-foreground">
-                    Reduce security operations costs while improving coverage and response times with our managed service model.
-                  </p>
-                </div>
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold">Rapid Response</h3>
-                  <p className="text-muted-foreground">
-                    Mean time to detection under 15 minutes and rapid incident response to minimize business impact from security events.
-                  </p>
-                  <h3 className="text-xl font-semibold">Continuous Improvement</h3>
-                  <p className="text-muted-foreground">
-                    Regular security assessments and recommendations to strengthen your security posture and reduce risk exposure.
-                  </p>
-                </div>
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <div className="flex items-center space-x-3">
+                      <feature.icon className="h-8 w-8 text-primary" />
+                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Deliverables Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {deliverables.map((deliverable, index) => (
+                  <Card key={index}>
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm font-medium">{deliverable}</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
