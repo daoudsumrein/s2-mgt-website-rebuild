@@ -147,20 +147,20 @@ export default function EndpointProtection() {
         {/* Deliverables Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
-              <Card>
-                <CardContent className="p-8">
-                  <div className="space-y-6">
-                    {deliverables.map((deliverable, index) => (
-                      <div key={index} className="flex items-start space-x-3">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {deliverables.map((deliverable, index) => (
+                  <Card key={index}>
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-sm">{deliverable}</span>
+                        <span className="text-sm font-medium">{deliverable}</span>
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
