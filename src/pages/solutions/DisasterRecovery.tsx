@@ -84,12 +84,12 @@ export default function DisasterRecovery() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24 relative overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8 md:py-12 relative overflow-hidden">
+          <div className="container mx-auto px-2 md:px-4">
+            <div className="mx-auto">
               {/* Floating Background Container with Gradient Border */}
               <div className="relative p-0.5 rounded-3xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
-                <div className="bg-slate-800/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12">
+                <div className="bg-slate-800/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-8">
                   <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div>
