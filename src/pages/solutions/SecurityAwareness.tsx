@@ -102,7 +102,7 @@ export default function SecurityAwareness() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="text-lg px-8">Start Training Program</Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 border-white/20 text-white hover:bg-white/10">View Demo</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 border-white/20 text-white hover:bg-white hover:text-slate-900">View Demo</Button>
               </div>
             </div>
           </div>

@@ -99,7 +99,7 @@ export default function EndpointProtection() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="text-lg px-8">Request Consultation</Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 border-white/20 text-white hover:bg-white/10">Learn More</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 border-white/20 text-white hover:bg-white hover:text-slate-900">Learn More</Button>
               </div>
             </div>
           </div>

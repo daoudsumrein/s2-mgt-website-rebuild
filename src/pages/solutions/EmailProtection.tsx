@@ -79,7 +79,7 @@ const deliverables = [
 
 export default function EmailProtection() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Email Protection Solutions | Advanced Email Security MENA"
         description="Comprehensive email protection for MENA enterprises. Advanced threat protection, anti-phishing, and email security solutions for business communication."
@@ -88,18 +88,23 @@ export default function EmailProtection() {
       />
       <Navigation />
       
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Cybersecurity Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              <Badge variant="outline" className="mb-4 border-white/20 text-white">
+                Cybersecurity Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Email Threat Protection
               </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Advanced email protection with multi-layered filtering to block phishing, ransomware, impersonation, and business email compromise while allowing legitimate communications.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Request Demo</Button>
-                <Button variant="outline" size="lg">Security Assessment</Button>
+                <Button size="lg" className="text-lg px-8">Request Demo</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 border-white/20 text-white hover:bg-white hover:text-slate-900">Security Assessment</Button>
               </div>
             </div>
           </div>
