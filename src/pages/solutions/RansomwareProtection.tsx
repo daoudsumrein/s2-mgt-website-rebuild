@@ -131,7 +131,7 @@ export default function RansomwareProtection() {
                   <Button size="lg" className="text-lg px-8">
                     Learn More
                   </Button>
-                  <Button variant="outline" size="lg" className="text-lg px-8 border-white/20 text-white hover:bg-white hover:text-slate-900">
+                  <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">
                     Contact Us
                   </Button>
                 </div>

@@ -69,7 +69,7 @@ export default function EmailEncryption() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="text-lg px-8">Request Implementation</Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 border-white/20 text-white hover:bg-white hover:text-slate-900">Security Demo</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">Security Demo</Button>
               </div>
             </div>
           </div>
