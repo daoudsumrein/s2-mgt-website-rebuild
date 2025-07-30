@@ -67,7 +67,7 @@ export default function DisasterRecovery() {
               {/* Floating Background Container with Gradient Border */}
               <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
                 <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
-                  <div className="grid lg:grid-cols-2 gap-6 items-center">
+                  <div className="grid lg:grid-cols-2 gap-4 items-center">
                     {/* Left Content */}
                     <div>
                       <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
@@ -89,7 +89,7 @@ export default function DisasterRecovery() {
                     
                     {/* Right Image Placeholder */}
                     <div className="relative lg:max-w-xs lg:ml-auto">
-                      <div className="w-48 h-36 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
                         <div className="text-center">
                           <Database className="h-8 w-8 text-white/60 mx-auto mb-1" />
                           <p className="text-white/80 font-medium text-xs">Image about</p>
