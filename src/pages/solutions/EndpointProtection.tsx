@@ -103,45 +103,67 @@ export default function EndpointProtection() {
           </div>
         </section>
 
-        {/* Features Grid */}
+        {/* Overview Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Key Features</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Our endpoint protection solution leverages cloud computing and real-time machine learning to continuously monitor and adapt endpoint defenses.
-              </p>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Endpoint Security</h2>
+              <Card>
+                <CardContent className="p-8">
+                  <p className="text-lg mb-6">
+                    A comprehensive, automated solution designed to secure users anywhere with highly effective real-time protection. It solves problems related to stopping malware, ransomware, phishing, cryptomining, and other damaging attacks aimed at users and systems.
+                  </p>
+                  <p className="text-lg mb-6">
+                    The solution offers an award-winning, intuitive management console, over 40 third-party integrations, a RESTful API, and fully automated endpoint detection, prevention, and remediation. It complements an organization's cyber resilience strategy by leveraging cloud computing and real-time machine learning to continuously monitor and adapt endpoint defenses.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <Card key={index}>
                   <CardHeader>
-                    <feature.icon className="h-10 w-10 text-primary mb-4" />
-                    <CardTitle className="text-lg">{feature.title}</CardTitle>
+                    <div className="flex items-center space-x-3">
+                      <feature.icon className="h-8 w-8 text-primary" />
+                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    </div>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>{feature.description}</CardDescription>
+                    <p className="text-muted-foreground">{feature.description}</p>
                   </CardContent>
                 </Card>
               ))}
+            </div>
             </div>
           </div>
         </section>
 
         {/* Deliverables Section */}
-        <section className="py-16 bg-muted/50">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">What You Get</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {deliverables.map((deliverable, index) => (
-                  <div key={index} className="flex items-start space-x-3 p-4 bg-background rounded-lg">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">{deliverable}</span>
+              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
+              <Card>
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    {deliverables.map((deliverable, index) => (
+                      <div key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">{deliverable}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
