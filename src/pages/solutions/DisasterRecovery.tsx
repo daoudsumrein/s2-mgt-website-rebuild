@@ -7,15 +7,46 @@ import { Button } from "@/components/ui/button";
 import { Shield, Zap, Clock, Database, CheckCircle, Target } from "lucide-react";
 
 const features = [
-  "Data encryption, in flight, between the source and the target",
-  "Available automatic failover with server heartbeat monitor",
-  "Integrated DNS management",
-  "Support compression to minimize network impact",
-  "Available bandwidth throttling options",
-  "A comprehensive API",
-  "Available API for integration",
-  "Alerting and reporting features",
-  "Easy, non-disruptive testing"
+  {
+    icon: Shield,
+    title: "Data Encryption",
+    description: "Data encryption, in flight, between the source and the target"
+  },
+  {
+    icon: Zap,
+    title: "Automatic Failover",
+    description: "Available automatic failover with server heartbeat monitor"
+  },
+  {
+    icon: Database,
+    title: "DNS Management",
+    description: "Integrated DNS management"
+  },
+  {
+    icon: Target,
+    title: "Compression Support",
+    description: "Support compression to minimize network impact"
+  },
+  {
+    icon: Clock,
+    title: "Bandwidth Throttling",
+    description: "Available bandwidth throttling options"
+  },
+  {
+    icon: CheckCircle,
+    title: "Comprehensive API",
+    description: "A comprehensive API for integration"
+  },
+  {
+    icon: Shield,
+    title: "Alerting & Reporting",
+    description: "Alerting and reporting features"
+  },
+  {
+    icon: Target,
+    title: "Non-Disruptive Testing",
+    description: "Easy, non-disruptive testing"
+  }
 ];
 
 const deliverables = [
@@ -87,20 +118,23 @@ export default function DisasterRecovery() {
         {/* Features Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
-              <Card>
-                <CardContent className="p-8">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {features.map((feature, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
+                  <Card key={index}>
+                    <CardHeader>
+                      <div className="flex items-center space-x-3">
+                        <feature.icon className="h-8 w-8 text-primary" />
+                        <CardTitle className="text-xl">{feature.title}</CardTitle>
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground">{feature.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
