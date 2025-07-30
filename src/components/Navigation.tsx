@@ -86,6 +86,11 @@ const cybersecuritySolutions = [
     title: "Email Encryption",
     href: "/solutions/email-encryption",
     description: "Secure email communications"
+  },
+  {
+    title: "Ransomware Protection",
+    href: "/solutions/ransomware-protection",
+    description: "Advanced ransomware defense systems"
   }
 ];
 
