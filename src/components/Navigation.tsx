@@ -63,9 +63,9 @@ const cybersecuritySolutions = [
     description: "Advanced endpoint security"
   },
   {
-    title: "EDR",
-    href: "/solutions/edr",
-    description: "Endpoint Detection and Response"
+    title: "Ransomware Protection",
+    href: "/solutions/ransomware-protection",
+    description: "Advanced ransomware defense systems"
   },
   {
     title: "MDR",
@@ -87,11 +87,6 @@ const cybersecuritySolutions = [
     href: "/solutions/email-encryption",
     description: "Secure email communications"
   },
-  {
-    title: "Ransomware Protection",
-    href: "/solutions/ransomware-protection",
-    description: "Advanced ransomware defense systems"
-  }
 ];
 
 const vendors = [

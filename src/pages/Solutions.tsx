@@ -54,6 +54,11 @@ const cybersecuritySolutions = [{
   description: "Comprehensive endpoint security with detection and response",
   link: "/solutions/endpoint-protection"
 }, {
+  icon: Lock,
+  title: "Ransomware Protection",
+  description: "Advanced ransomware defense systems",
+  link: "/solutions/ransomware-protection"
+}, {
   icon: Search,
   title: "MDR",
   description: "Managed Detection and Response",
