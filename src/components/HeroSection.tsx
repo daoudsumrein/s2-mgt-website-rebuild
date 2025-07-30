@@ -23,7 +23,7 @@ export default function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="text-foreground">Enterprise</span>{" "}
-                <span className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold">IT Transformation</span>{" "}
+                <span className="bg-gradient-blue-green bg-clip-text text-transparent font-extrabold">IT Transformation</span>{" "}
                 <span className="text-foreground">for the Modern Era</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
@@ -38,7 +38,7 @@ export default function HeroSection() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+              <Button variant="secondary" size="lg" className="text-lg px-8" asChild>
                 <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">
                   Request Consultation
                 </a>
