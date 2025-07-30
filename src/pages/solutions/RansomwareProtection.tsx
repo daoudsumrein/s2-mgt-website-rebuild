@@ -206,7 +206,7 @@ export default function RansomwareProtection() {
                 {deliverables.map((deliverable, index) => (
                   <Card key={index} className="h-full">
                     <CardHeader>
-                      <deliverable.icon className="h-8 w-8 text-secondary mb-2" />
+                      <deliverable.icon className="h-8 w-8 text-teal-500 mb-2" />
                       <CardTitle className="text-lg">{deliverable.title}</CardTitle>
                     </CardHeader>
                     <CardContent>

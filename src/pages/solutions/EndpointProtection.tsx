@@ -172,7 +172,7 @@ export default function EndpointProtection() {
               {deliverables.map((deliverable, index) => (
                 <Card key={index} className="h-full">
                   <CardHeader>
-                    <CheckCircle className="h-8 w-8 text-secondary mb-2" />
+                    <CheckCircle className="h-8 w-8 text-teal-500 mb-2" />
                     <CardTitle className="text-lg">{deliverable}</CardTitle>
                   </CardHeader>
                 </Card>
