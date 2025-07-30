@@ -85,16 +85,25 @@ export default function EndpointProtection() {
       
       <main>
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-background via-muted/50 to-background py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Cybersecurity Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              <Badge variant="outline" className="mb-4">
+                Cybersecurity Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Endpoint Protection with EDR Functionality
               </h1>
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                A comprehensive, automated solution designed to secure users anywhere with highly effective real-time protection against malware, ransomware, phishing, and advanced threats.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Request Consultation</Button>
-                <Button variant="outline" size="lg">Learn More</Button>
+                <Button size="lg" className="text-lg px-8">
+                  Request Consultation
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8">
+                  Learn More
+                </Button>
               </div>
             </div>
           </div>
@@ -120,10 +129,17 @@ export default function EndpointProtection() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Advanced Protection Features
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive endpoint security with cutting-edge technology
+              </p>
+            </div>
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -145,10 +161,17 @@ export default function EndpointProtection() {
         </section>
 
         {/* Deliverables Section */}
-        <section className="py-16">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Key Deliverables
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Tangible benefits and outcomes from our endpoint protection solution
+              </p>
+            </div>
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {deliverables.map((deliverable, index) => (
                   <Card key={index}>
@@ -160,6 +183,28 @@ export default function EndpointProtection() {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-secondary/10">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Enhance Your Endpoint Security?
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Contact us to learn how our advanced endpoint protection can secure your organization against modern threats.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">
+                  Schedule Consultation
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8">
+                  Download Datasheet
+                </Button>
               </div>
             </div>
           </div>
