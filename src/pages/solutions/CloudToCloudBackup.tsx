@@ -314,7 +314,7 @@ export default function CloudToCloudBackup() {
                     <div className="space-y-3">
                       {outcomes.map((outcome, index) => (
                         <div key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
                           <span>{outcome}</span>
                         </div>
                       ))}

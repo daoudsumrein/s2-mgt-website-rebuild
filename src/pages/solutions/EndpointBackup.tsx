@@ -221,7 +221,7 @@ export default function EndpointBackup() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <CheckCircle className="h-6 w-6 text-primary" />
+                      <CheckCircle className="h-6 w-6 text-teal-500" />
                       <span>Key Benefits</span>
                     </CardTitle>
                   </CardHeader>
@@ -229,7 +229,7 @@ export default function EndpointBackup() {
                     <ul className="space-y-3">
                       {keyBenefits.map((benefit, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                           <CheckCircle className="h-4 w-4 text-teal-500 mt-1 flex-shrink-0" />
                           <span className="text-sm">{benefit}</span>
                         </li>
                       ))}
@@ -248,7 +248,7 @@ export default function EndpointBackup() {
                     <ul className="space-y-3">
                       {idealFor.map((item, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                           <CheckCircle className="h-4 w-4 text-teal-500 mt-1 flex-shrink-0" />
                           <span className="text-sm">{item}</span>
                         </li>
                       ))}
