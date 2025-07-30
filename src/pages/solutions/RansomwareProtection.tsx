@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Lock, Eye, Database, Settings, CheckCircle, AlertTriangle, Server, FileX } from "lucide-react";
+import { Shield, Lock, Eye, Database, Settings, CheckCircle, AlertTriangle, Server, FileX, Target } from "lucide-react";
 
 const features = [
   {
@@ -190,6 +190,34 @@ export default function RansomwareProtection() {
             </div>
           </section>
 
+          {/* Ideal For Section */}
+          <section className="py-16 bg-blue-50">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-12">Ideal For</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {[
+                    "High-value target organizations",
+                    "Financial services sector",
+                    "Healthcare institutions",
+                    "Critical infrastructure",
+                    "Government agencies",
+                    "Manufacturing companies"
+                  ].map((item, index) => (
+                    <Card key={index} className="bg-white border-blue-200">
+                      <CardContent className="p-6">
+                        <div className="flex items-start space-x-3">
+                          <Target className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                          <span className="text-sm font-medium text-blue-900">{item}</span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* What We Deliver Section */}
           <section className="py-16 md:py-24">
             <div className="container mx-auto px-4">
@@ -216,6 +244,34 @@ export default function RansomwareProtection() {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Key Benefits Section */}
+          <section className="py-16 bg-teal-50">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-12">Key Benefits</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {[
+                    "Proactive threat prevention",
+                    "Business continuity assurance",
+                    "Reduced recovery time",
+                    "Cost-effective protection",
+                    "Regulatory compliance",
+                    "Enhanced security posture"
+                  ].map((item, index) => (
+                    <Card key={index} className="bg-white border-teal-200">
+                      <CardContent className="p-6">
+                        <div className="flex items-start space-x-3">
+                          <Shield className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                          <span className="text-sm font-medium text-teal-900">{item}</span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </div>
           </section>

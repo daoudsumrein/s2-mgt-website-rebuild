@@ -98,32 +98,57 @@ export default function EDR() {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 bg-muted/50">
+        {/* Ideal For Section */}
+        <section className="py-16 bg-blue-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">EDR Benefits</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold">Enhanced Visibility</h3>
-                  <p className="text-muted-foreground">
-                    Complete visibility into endpoint activities with detailed logging and real-time monitoring of all security events.
-                  </p>
-                  <h3 className="text-xl font-semibold">Rapid Response</h3>
-                  <p className="text-muted-foreground">
-                    Automated response capabilities reduce mean time to detection and containment of security incidents.
-                  </p>
-                </div>
-                <div className="space-y-6">
-                  <h3 className="text-xl font-semibold">Advanced Analytics</h3>
-                  <p className="text-muted-foreground">
-                    AI-powered analytics and machine learning algorithms detect sophisticated threats that traditional tools miss.
-                  </p>
-                  <h3 className="text-xl font-semibold">Compliance Ready</h3>
-                  <p className="text-muted-foreground">
-                    Built-in compliance reporting and audit trails help meet regulatory requirements and security frameworks.
-                  </p>
-                </div>
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Ideal For</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  "Enterprises with advanced threat concerns",
+                  "Organizations requiring forensic capabilities",
+                  "Companies with compliance requirements",
+                  "Businesses needing rapid incident response",
+                  "Multi-location organizations",
+                  "Industries with sensitive data"
+                ].map((item, index) => (
+                  <Card key={index} className="bg-white border-blue-200">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-3">
+                        <Target className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <span className="text-sm font-medium text-blue-900">{item}</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Benefits Section */}
+        <section className="py-16 bg-teal-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Key Benefits</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  "Enhanced endpoint visibility",
+                  "Rapid threat detection and response",
+                  "Advanced behavioral analytics",
+                  "Automated incident containment",
+                  "Forensic investigation capabilities",
+                  "Compliance-ready reporting"
+                ].map((item, index) => (
+                  <Card key={index} className="bg-white border-teal-200">
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-3">
+                        <Shield className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                        <span className="text-sm font-medium text-teal-900">{item}</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
