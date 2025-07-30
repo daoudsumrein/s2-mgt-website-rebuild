@@ -61,13 +61,13 @@ export default function DisasterRecovery() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 md:py-6 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 relative overflow-hidden md:py-[55px]">
           <div className="container mx-auto px-2 md:px-4">
             <div className="mx-auto">
               {/* Floating Background Container with Gradient Border */}
               <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
                 <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
-                  <div className="max-w-5xl mx-auto pl-4">
+                  <div className="max-w-6xl mx-auto pl-8">
                     <div className="grid lg:grid-cols-2 gap-4 items-center justify-items-start">
                     {/* Left Content */}
                     <div>
@@ -103,7 +103,7 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Overview Section */}
-        <section className="py-16">
+        <section className="py-[11px]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card>
