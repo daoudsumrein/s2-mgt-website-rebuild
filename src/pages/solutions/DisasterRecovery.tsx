@@ -5,82 +5,59 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Zap, Clock, Database, CheckCircle, Target } from "lucide-react";
-
-const features = [
-  {
-    icon: Shield,
-    title: "Data Encryption",
-    description: "Data encryption, in flight, between the source and the target"
-  },
-  {
-    icon: Zap,
-    title: "Automatic Failover",
-    description: "Available automatic failover with server heartbeat monitor"
-  },
-  {
-    icon: Database,
-    title: "DNS Management",
-    description: "Integrated DNS management"
-  },
-  {
-    icon: Target,
-    title: "Compression Support",
-    description: "Support compression to minimize network impact"
-  },
-  {
-    icon: Clock,
-    title: "Bandwidth Throttling",
-    description: "Available bandwidth throttling options"
-  },
-  {
-    icon: CheckCircle,
-    title: "Comprehensive API",
-    description: "A comprehensive API for integration"
-  },
-  {
-    icon: Shield,
-    title: "Alerting & Reporting",
-    description: "Alerting and reporting features"
-  },
-  {
-    icon: Target,
-    title: "Non-Disruptive Testing",
-    description: "Easy, non-disruptive testing"
-  }
-];
-
-const deliverables = [
-  {
-    icon: Zap,
-    title: "No delays, no data loss",
-    description: "Continuous replication ensures zero data loss and rapid recovery"
-  },
-  {
-    icon: Clock,
-    title: "Rapid failovers prevent downtime",
-    description: "Instant failover capabilities minimize business disruption"
-  },
-  {
-    icon: Shield,
-    title: "Negligible performance impact",
-    description: "Lightweight solution that doesn't burden primary systems"
-  },
-  {
-    icon: Database,
-    title: "Physical systems support",
-    description: "Comprehensive support for diverse IT environments"
-  }
-];
-
+const features = [{
+  icon: Shield,
+  title: "Data Encryption",
+  description: "Data encryption, in flight, between the source and the target"
+}, {
+  icon: Zap,
+  title: "Automatic Failover",
+  description: "Available automatic failover with server heartbeat monitor"
+}, {
+  icon: Database,
+  title: "DNS Management",
+  description: "Integrated DNS management"
+}, {
+  icon: Target,
+  title: "Compression Support",
+  description: "Support compression to minimize network impact"
+}, {
+  icon: Clock,
+  title: "Bandwidth Throttling",
+  description: "Available bandwidth throttling options"
+}, {
+  icon: CheckCircle,
+  title: "Comprehensive API",
+  description: "A comprehensive API for integration"
+}, {
+  icon: Shield,
+  title: "Alerting & Reporting",
+  description: "Alerting and reporting features"
+}, {
+  icon: Target,
+  title: "Non-Disruptive Testing",
+  description: "Easy, non-disruptive testing"
+}];
+const deliverables = [{
+  icon: Zap,
+  title: "No delays, no data loss",
+  description: "Continuous replication ensures zero data loss and rapid recovery"
+}, {
+  icon: Clock,
+  title: "Rapid failovers prevent downtime",
+  description: "Instant failover capabilities minimize business disruption"
+}, {
+  icon: Shield,
+  title: "Negligible performance impact",
+  description: "Lightweight solution that doesn't burden primary systems"
+}, {
+  icon: Database,
+  title: "Physical systems support",
+  description: "Comprehensive support for diverse IT environments"
+}];
 export default function DisasterRecovery() {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions"
-        description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools."
-        keywords="disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools"
-        canonicalUrl="https://s2mgt.com/solutions/disaster-recovery"
-      />
+  return <div className="min-h-screen flex flex-col">
+      <SEOHead title="Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions" description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools." keywords="disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools" canonicalUrl="https://s2mgt.com/solutions/disaster-recovery" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
@@ -103,11 +80,7 @@ export default function DisasterRecovery() {
                         Ensure maximum uptime for your Windows and Linux servers with comprehensive DR solutions featuring continuous replication and automated failover.
                       </p>
                       <div className="flex flex-col sm:flex-row gap-4">
-                        <Button 
-                          size="lg" 
-                          className="text-lg px-8 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-                          onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Disaster%20Recovery%20Consultation', '_blank')}
-                        >
+                        <Button size="lg" className="text-lg px-8 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Disaster%20Recovery%20Consultation', '_blank')}>
                           <span className="relative z-10">Schedule Consultation</span>
                           <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
                         </Button>
@@ -116,7 +89,7 @@ export default function DisasterRecovery() {
                     
                     {/* Right Image Placeholder */}
                     <div className="relative">
-                      <div className="aspect-square bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-2xl flex items-center justify-center border border-white/10">
+                      <div className="aspect-square bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-2xl flex items-center justify-center border border-white/10 py-0 my-0">
                         <div className="text-center">
                           <Database className="h-20 w-20 text-white/60 mx-auto mb-4" />
                           <p className="text-white/80 font-medium">Image about</p>
@@ -158,8 +131,7 @@ export default function DisasterRecovery() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <Card key={index}>
+                {features.map((feature, index) => <Card key={index}>
                     <CardHeader>
                       <div className="flex items-center space-x-3">
                         <feature.icon className="h-8 w-8 text-primary" />
@@ -169,8 +141,7 @@ export default function DisasterRecovery() {
                     <CardContent>
                       <p className="text-muted-foreground">{feature.description}</p>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
             </div>
           </div>
@@ -182,8 +153,7 @@ export default function DisasterRecovery() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
               <div className="grid md:grid-cols-2 gap-8">
-                {deliverables.map((item, index) => (
-                  <Card key={index}>
+                {deliverables.map((item, index) => <Card key={index}>
                     <CardHeader>
                       <div className="flex items-center space-x-3">
                         <item.icon className="h-8 w-8 text-teal-500" />
@@ -193,8 +163,7 @@ export default function DisasterRecovery() {
                     <CardContent>
                       <p className="text-muted-foreground">{item.description}</p>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
             </div>
           </div>
@@ -294,6 +263,5 @@ export default function DisasterRecovery() {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 }
