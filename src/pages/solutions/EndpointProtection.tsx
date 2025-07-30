@@ -74,7 +74,7 @@ const deliverables = [
 
 export default function EndpointProtection() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Endpoint Protection with EDR Solutions | Advanced Security for MENA Enterprises"
         description="Comprehensive endpoint protection with EDR functionality for MENA region. Real-time threat detection, automated remediation, and cloud-based management for enterprise endpoints."
@@ -83,83 +83,121 @@ export default function EndpointProtection() {
       />
       <Navigation />
       
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-background via-muted/50 to-background py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Cybersecurity Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              <Badge variant="outline" className="mb-4">
+                Cybersecurity Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Endpoint Protection with EDR Functionality
               </h1>
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                A comprehensive, automated solution designed to secure users anywhere with highly effective real-time protection against malware, ransomware, phishing, and cryptomining attacks.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Request Consultation</Button>
-                <Button variant="outline" size="lg">Learn More</Button>
+                <Button size="lg" className="text-lg px-8">Request Consultation</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8">Learn More</Button>
               </div>
             </div>
           </div>
         </section>
 
         {/* Overview Section */}
-        <section className="py-16">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Endpoint Security</h2>
-              <Card>
-                <CardContent className="p-8">
-                  <p className="text-lg mb-6">
-                    A comprehensive, automated solution designed to secure users anywhere with highly effective real-time protection. It solves problems related to stopping malware, ransomware, phishing, cryptomining, and other damaging attacks aimed at users and systems.
-                  </p>
-                  <p className="text-lg mb-6">
-                    The solution offers an award-winning, intuitive management console, over 40 third-party integrations, a RESTful API, and fully automated endpoint detection, prevention, and remediation. It complements an organization's cyber resilience strategy by leveraging cloud computing and real-time machine learning to continuously monitor and adapt endpoint defenses.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Comprehensive Endpoint Security
+                </h2>
+              </div>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                <p className="mb-6">
+                  Our solution offers an award-winning, intuitive management console, over 40 third-party integrations, a RESTful API, and fully automated endpoint detection, prevention, and remediation.
+                </p>
+                <p>
+                  It complements an organization's cyber resilience strategy by leveraging cloud computing and real-time machine learning to continuously monitor and adapt endpoint defenses.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Advanced Protection Features
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive endpoint protection with cutting-edge security capabilities
+              </p>
+            </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {features.map((feature, index) => (
-                <Card key={index}>
+                <Card key={index} className="h-full">
                   <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <feature.icon className="h-8 w-8 text-primary" />
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
-                    </div>
+                    <feature.icon className="h-8 w-8 text-primary mb-2" />
+                    <CardTitle className="text-lg">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <CardDescription className="text-base">
+                      {feature.description}
+                    </CardDescription>
                   </CardContent>
                 </Card>
               ))}
-            </div>
             </div>
           </div>
         </section>
 
         {/* Deliverables Section */}
-        <section className="py-16">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {deliverables.map((deliverable, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-sm font-medium">{deliverable}</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Key Deliverables
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Tangible benefits and outcomes from our endpoint protection solution
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              {deliverables.map((deliverable, index) => (
+                <Card key={index} className="h-full">
+                  <CardHeader>
+                    <CheckCircle className="h-8 w-8 text-secondary mb-2" />
+                    <CardTitle className="text-lg">{deliverable}</CardTitle>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-secondary/10">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Strengthen Your Endpoint Security?
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Contact us to learn how our endpoint protection solution can safeguard your organization against advanced threats.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">
+                  Schedule Consultation
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8">
+                  Download Datasheet
+                </Button>
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ const capabilities = [
 
 export default function EDR() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Endpoint Detection and Response (EDR) Solutions | MENA Cybersecurity"
         description="Advanced EDR solutions for MENA enterprises. Real-time threat detection, behavioral analytics, and automated incident response for comprehensive endpoint security."
@@ -50,21 +50,23 @@ export default function EDR() {
       />
       <Navigation />
       
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-background via-muted/50 to-background py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Cybersecurity Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              <Badge variant="outline" className="mb-4">
+                Cybersecurity Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Endpoint Detection & Response (EDR)
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Advanced threat detection and response capabilities to identify, investigate, and respond to sophisticated cyber threats.
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                Advanced threat detection and response capabilities to identify, investigate, and respond to sophisticated cyber threats with real-time behavioral analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Request Demo</Button>
-                <Button variant="outline" size="lg">Learn More</Button>
+                <Button size="lg" className="text-lg px-8">Request Demo</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8">Learn More</Button>
               </div>
             </div>
           </div>

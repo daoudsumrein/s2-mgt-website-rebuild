@@ -44,7 +44,7 @@ const deliverables = [
 
 export default function EmailEncryption() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Email Encryption Solutions | Secure Communications MENA"
         description="Enterprise email encryption solutions for MENA region. End-to-end encryption, digital signatures, and secure document exchange for business communications."
@@ -53,80 +53,118 @@ export default function EmailEncryption() {
       />
       <Navigation />
       
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-background via-muted/50 to-background py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Cybersecurity Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              <Badge variant="outline" className="mb-4">
+                Cybersecurity Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Email Encryption with Secure Compose
               </h1>
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                Email Encryption with Secure Compose empowers users to send secure messages and attachments. It aims to eliminate impersonation risks and cyberattacks associated with sending sensitive information via email.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Request Implementation</Button>
-                <Button variant="outline" size="lg">Security Demo</Button>
+                <Button size="lg" className="text-lg px-8">Request Implementation</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8">Security Demo</Button>
               </div>
             </div>
           </div>
         </section>
 
         {/* Overview Section */}
-        <section className="py-16">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Secure Email Communications</h2>
-              <Card>
-                <CardContent className="p-8">
-                  <p className="text-lg mb-6">
-                    Email Encryption with Secure Compose empowers users to send secure messages and attachments. It aims to eliminate impersonation risks and cyberattacks associated with sending sensitive information via email, allowing for secure bidirectional email communication.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Secure Email Communications
+                </h2>
+              </div>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                <p>
+                  Our email encryption solution allows for secure bidirectional email communication, protecting against impersonation risks and cyberattacks when sending sensitive information via email.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Advanced Protection Features
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive email encryption with cutting-edge security features
+              </p>
+            </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {features.map((feature, index) => (
-                <Card key={index}>
+                <Card key={index} className="h-full">
                   <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <feature.icon className="h-8 w-8 text-primary" />
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
-                    </div>
+                    <feature.icon className="h-8 w-8 text-primary mb-2" />
+                    <CardTitle className="text-lg">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <CardDescription className="text-base">
+                      {feature.description}
+                    </CardDescription>
                   </CardContent>
                 </Card>
               ))}
-            </div>
             </div>
           </div>
         </section>
 
         {/* Deliverables Section */}
-        <section className="py-16">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {deliverables.map((deliverable, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-sm font-medium">{deliverable}</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Key Deliverables
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Tangible benefits and outcomes from our email encryption solution
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              {deliverables.map((deliverable, index) => (
+                <Card key={index} className="h-full">
+                  <CardHeader>
+                    <CheckCircle className="h-8 w-8 text-secondary mb-2" />
+                    <CardTitle className="text-lg">{deliverable}</CardTitle>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-secondary/10">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Secure Your Email Communications?
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Contact us to learn how our email encryption solution can protect your sensitive communications and ensure secure messaging.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">
+                  Schedule Consultation
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-8">
+                  Download Datasheet
+                </Button>
               </div>
             </div>
           </div>
