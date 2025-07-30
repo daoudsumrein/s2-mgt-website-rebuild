@@ -270,56 +270,53 @@ export default function CloudToCloudBackup() {
           </div>
         </section>
 
-        {/* Technologies & Outcomes */}
+        {/* Ideal For & Expected Outcomes */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12">
-                {/* Technologies */}
+                {/* Ideal For */}
                 <div>
-                  <h2 className="text-2xl font-bold mb-6">Technologies We Use</h2>
-                  <div className="space-y-4">
-                    {technologies.map((tech, index) => (
-                      <Card key={index}>
-                        <CardContent className="p-4">
-                          <div className="flex items-center space-x-3">
-                            <Zap className="h-5 w-5 text-primary" />
-                            <div>
-                              <h3 className="font-semibold">{tech.name}</h3>
-                              <p className="text-sm text-muted-foreground">{tech.purpose}</p>
-                            </div>
+                  <Card className="border-blue-200 bg-blue-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-blue-700">
+                        <Users className="h-6 w-6" />
+                        <span>Ideal For</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {idealFor.map((item, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                            <span>{item}</span>
                           </div>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
 
-                {/* Ideal For & Outcomes */}
-                <div className="space-y-8">
-                  <div>
-                    <h2 className="text-2xl font-bold mb-6">Ideal For</h2>
-                    <div className="space-y-3">
-                      {idealFor.map((item, index) => (
-                        <div key={index} className="flex items-start space-x-3">
-                          <Users className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h2 className="text-2xl font-bold mb-6">Expected Outcomes</h2>
-                    <div className="space-y-3">
-                      {outcomes.map((outcome, index) => (
-                        <div key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
-                          <span>{outcome}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                {/* Expected Outcomes */}
+                <div>
+                  <Card className="border-teal-200 bg-teal-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-teal-700">
+                        <CheckCircle className="h-6 w-6" />
+                        <span>Expected Outcomes</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {outcomes.map((outcome, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                            <span>{outcome}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </div>
