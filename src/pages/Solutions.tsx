@@ -91,70 +91,79 @@ export default function Solutions() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="mb-4 border-white/20 text-white">Solutions</Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Two-Pillar Solution Portfolio
-              </h1>
-              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-                S2 delivers comprehensive solutions across two core areas: Data Protection and Cybersecurity,
-                providing complete coverage for your enterprise infrastructure needs.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Interactive Wheel Section */}
-        <section className="py-[12px]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="relative flex items-center justify-center min-h-[800px] py-0">
-                <div className="relative w-[700px] h-[700px]">
-                  {/* Main SVG Wheel */}
-                  <svg viewBox="0 0 200 200" className="w-full h-full">
-                    <defs>
-                      <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.3" />
-                      </filter>
-                    </defs>
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 relative overflow-hidden md:py-[55px]">
+          <div className="container mx-auto px-2 md:px-4">
+            <div className="mx-auto">
+              {/* Floating Background Container with Gradient Border */}
+              <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
+                <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
+                  <div className="max-w-6xl mx-auto pl-8">
+                    <div className="grid lg:grid-cols-2 gap-4 items-center justify-items-start">
+                    {/* Left Content */}
+                    <div>
+                      <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
+                        Solutions Portfolio
+                      </Badge>
+                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Two-Pillar Solution Portfolio
+                      </h1>
+                      <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
+                        S2 delivers comprehensive solutions across two core areas: Data Protection and Cybersecurity, providing complete coverage for your enterprise infrastructure needs.
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button size="default" className="text-base px-6 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=IT%20Solutions%20Consultation', '_blank')}>
+                          <span className="relative z-10">Request Consultation</span>
+                          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
+                        </Button>
+                      </div>
+                    </div>
                     
-                    {/* Data Protection Semi-Circle (Left Half) */}
-                    <path d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z" fill="hsl(var(--primary) / 0.8)" stroke="hsl(var(--primary))" strokeWidth="2" filter="url(#shadow)" />
-                    
-                    {/* Cybersecurity Semi-Circle (Right Half) */}
-                    <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="rgb(20 184 166)" stroke="rgb(13 148 136)" strokeWidth="2" filter="url(#shadow)" />
-                    
-                    {/* Center S2 Circle */}
-                    <circle cx="100" cy="100" r="18" fill="white" stroke="#ddd" strokeWidth="2" filter="url(#shadow)" />
-                    
-                    {/* S2 Logo */}
-                    <image x="85" y="85" width="30" height="30" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
-                    
-                    {/* Data Protection Text - positioned in left semicircle */}
-                    <text x="50" y="95" textAnchor="middle" className="text-xs font-medium" fill="white">
-                      Data
-                    </text>
-                    <text x="50" y="107" textAnchor="middle" className="text-xs font-medium" fill="white">
-                      Protection
-                    </text>
-                    
-                    {/* Cybersecurity Text - positioned in right semicircle */}
-                    <text x="150" y="95" textAnchor="middle" className="text-xs font-medium" fill="white">
-                      Cyber
-                    </text>
-                    <text x="150" y="107" textAnchor="middle" className="text-xs font-medium" fill="white">
-                      Security
-                    </text>
-                  </svg>
+                    {/* Right - Interactive Wheel */}
+                    <div className="relative flex justify-center lg:justify-start lg:pl-8">
+                      <div className="w-96 h-72 flex items-center justify-center px-[11px] mx-[60px]">
+                        <div className="relative w-[280px] h-[280px]">
+                          {/* Main SVG Wheel */}
+                          <svg viewBox="0 0 200 200" className="w-full h-full">
+                            <defs>
+                              <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.3" />
+                              </filter>
+                            </defs>
+                            
+                            {/* Data Protection Semi-Circle (Left Half) */}
+                            <path d="M 100 100 L 99 100 L 99 20 A 80 80 0 0 0 99 180 L 99 100 Z" fill="hsl(var(--primary) / 0.8)" stroke="hsl(var(--primary))" strokeWidth="2" filter="url(#shadow)" />
+                            
+                            {/* Cybersecurity Semi-Circle (Right Half) */}
+                            <path d="M 100 100 L 101 100 L 101 20 A 80 80 0 0 1 101 180 L 101 100 Z" fill="rgb(20 184 166)" stroke="rgb(13 148 136)" strokeWidth="2" filter="url(#shadow)" />
+                            
+                            {/* Center S2 Circle */}
+                            <circle cx="100" cy="100" r="18" fill="white" stroke="#ddd" strokeWidth="2" filter="url(#shadow)" />
+                            
+                            {/* S2 Logo */}
+                            <image x="85" y="85" width="30" height="30" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
+                            
+                            {/* Data Protection Text - positioned in left semicircle */}
+                            <text x="50" y="95" textAnchor="middle" className="text-xs font-medium" fill="white">
+                              Data
+                            </text>
+                            <text x="50" y="107" textAnchor="middle" className="text-xs font-medium" fill="white">
+                              Protection
+                            </text>
+                            
+                            {/* Cybersecurity Text - positioned in right semicircle */}
+                            <text x="150" y="95" textAnchor="middle" className="text-xs font-medium" fill="white">
+                              Cyber
+                            </text>
+                            <text x="150" y="107" textAnchor="middle" className="text-xs font-medium" fill="white">
+                              Security
+                            </text>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="text-center mt-8">
-                <p className="text-muted-foreground">
-                  Our comprehensive two-pillar solution portfolio
-                </p>
               </div>
             </div>
           </div>
