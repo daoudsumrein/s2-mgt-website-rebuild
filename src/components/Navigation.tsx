@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X, ExternalLink, Shield, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -121,10 +121,19 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const isActive = (path: string) => location.pathname === path;
+  // Memoized function to prevent recreation on every render
+  const isActive = useCallback((path: string) => location.pathname === path, [location.pathname]);
+
+  // Memoized handler to prevent recreation
+  const handleSolutionsClick = useCallback(() => {
+    window.location.href = '/solutions';
+  }, []);
+
+  // Memoized close handler
+  const handleSheetClose = useCallback(() => setIsOpen(false), []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 will-change-transform">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
@@ -181,13 +190,13 @@ export default function Navigation() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger 
-                  className={`${isActive("/solutions") ? "text-primary" : ""}`}
-                  onClick={() => window.location.href = '/solutions'}
+                  className={`will-change-transform transition-colors duration-150 ${isActive("/solutions") ? "text-primary" : ""}`}
+                  onClick={handleSolutionsClick}
                 >
                   Solutions
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[600px] p-4">
+                  <div className="w-[600px] p-4 will-change-transform">
                     <div className="grid grid-cols-2 gap-6">
                       {/* Data Protection Column */}
                       <div>
@@ -287,7 +296,7 @@ export default function Navigation() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="pr-0">
-              <MobileNav setIsOpen={setIsOpen} />
+              <MobileNav setIsOpen={handleSheetClose} />
             </SheetContent>
           </Sheet>
         </div>

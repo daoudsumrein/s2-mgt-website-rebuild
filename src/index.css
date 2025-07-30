@@ -72,6 +72,34 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Navigation Performance Optimizations */
+  .navigation-menu-content {
+    contain: layout style paint;
+    will-change: transform, opacity;
+  }
+
+  .navigation-menu-trigger {
+    will-change: background-color, color;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  .navigation-menu-item:hover {
+    transform: translateZ(0);
+  }
+
+  /* Optimize dropdown animations */
+  [data-radix-navigation-menu-content] {
+    animation-fill-mode: forwards;
+    transform: translateZ(0);
+  }
+
+  /* Hardware acceleration for smooth interactions */
+  .hover\:bg-accent:hover,
+  .hover\:text-accent-foreground:hover {
+    transform: translateZ(0);
+  }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
