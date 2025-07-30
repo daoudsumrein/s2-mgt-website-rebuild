@@ -27,7 +27,7 @@ export default function Contact() {
             <div className="max-w-4xl mx-auto text-center">
               <Badge variant="secondary" className="mb-4">Get In Touch</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                Contact <span className="bg-gradient-blue-green bg-clip-text text-transparent">S2 Management Solutions</span>
+                Contact S2 Management Solutions
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Ready to discuss your IT infrastructure needs? Our team of experts is here to help 
@@ -202,7 +202,7 @@ export default function Contact() {
               <Button size="lg">
                 Request Technical Consultation
               </Button>
-              <Button variant="secondary" size="lg">
+              <Button variant="outline" size="lg">
                 View Our Case Studies
               </Button>
             </div>

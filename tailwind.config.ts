@@ -67,7 +67,6 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-metallic-blue': 'var(--gradient-metallic-blue)',
-				'gradient-blue-green': 'var(--gradient-blue-green)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

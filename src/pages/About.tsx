@@ -16,7 +16,7 @@ export default function About() {
             <div className="max-w-4xl mx-auto text-center">
               <Badge className="mb-4">Founded 2013</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                About <span className="bg-gradient-blue-green bg-clip-text text-transparent">S2 Management Solutions</span>
+                About S2 Management Solutions
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 We are a consultancy-led Value-Added Distributor specializing in data protection, 
@@ -111,7 +111,7 @@ export default function About() {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our <span className="bg-gradient-blue-green bg-clip-text text-transparent">Core Values</span></h2>
+              <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 The principles that drive every client engagement and solution delivery
               </p>
@@ -189,7 +189,7 @@ export default function About() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="secondary" size="lg" asChild>
+              <Button variant="outline" size="lg" asChild>
                 <a href="/services">
                   View Our Services
                 </a>

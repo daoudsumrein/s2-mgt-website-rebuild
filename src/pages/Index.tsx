@@ -29,7 +29,7 @@ const Index = () => {
             <div className="text-center mb-12">
               <Badge className="mb-4">Founded 2013</Badge>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                <span className="bg-gradient-blue-green bg-clip-text text-transparent">Leading IT Transformation & Digital Modernization</span> in MENA
+                Leading IT Transformation & Digital Modernization in MENA
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 S2 Management Solutions is the leading Data Protection and disaster recovery consultancy in the Middle East. Since 2013, we have been delivering enterprise-grade IT transformation, data protection, and digital orchestration solutions across the UAE, Saudi Arabia, and the broader MENA region. Our mission is to empower organizations with resilient, secure, and future ready IT infrastructures tailored to their unique business needs.
@@ -77,7 +77,7 @@ const Index = () => {
               <div className="space-y-6">
                 <Badge>Our Approach</Badge>
                 <h2 className="text-3xl lg:text-4xl font-bold">
-                  <span className="bg-gradient-blue-green bg-clip-text text-transparent">Consultancy-Led Selling</span> & Services
+                  Consultancy-Led Selling & Services
                 </h2>
                 <p className="text-lg text-muted-foreground">
                   We don't just sell technology—we architect solutions. Our consultancy-first approach 
@@ -163,7 +163,7 @@ const Index = () => {
         <section className="py-16 bg-primary-light">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ready to <span className="bg-gradient-blue-green bg-clip-text text-transparent">Transform Your IT Infrastructure</span>?
+              Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let's discuss how S2 can help modernize your data protection, disaster recovery, 
@@ -175,7 +175,7 @@ const Index = () => {
                   Request Consultation
                 </a>
               </Button>
-              <Button variant="secondary" size="lg" className="text-lg px-8" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
                 <Link to="/solutions">
                   View Solutions
                 </Link>
