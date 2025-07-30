@@ -72,21 +72,42 @@ export default function ServerMigration() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="mb-4 border-white/20 text-white">
-                Data Protection Solutions
-              </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Server Migration
-              </h1>
-              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Migrating physical, virtual, and cloud workloads made fast and easy with very little risk and almost no downtime.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-lg px-8">Request Migration Assessment</Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">Learn More</Button>
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 md:py-6 relative overflow-hidden">
+          <div className="container mx-auto px-2 md:px-4">
+            <div className="mx-auto">
+              {/* Floating Background Container with Gradient Border */}
+              <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
+                <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
+                  <div className="max-w-6xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-4 items-center">
+                    {/* Left Content */}
+                    <div>
+                      <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
+                        Migration Solutions
+                      </Badge>
+                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Server Migration
+                      </h1>
+                      <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
+                        Seamless any-to-any server migrations with minimal downtime and maximum efficiency
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button size="default" className="text-base px-6 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Consultation', '_blank')}>
+                          <span className="relative z-10">Schedule Consultation</span>
+                          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    {/* Right Image Placeholder */}
+                    <div className="relative flex justify-center lg:justify-start lg:pl-8">
+                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                        
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
