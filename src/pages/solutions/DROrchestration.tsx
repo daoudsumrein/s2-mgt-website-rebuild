@@ -54,25 +54,32 @@ const deliverables = [
 
 export default function DROrchestration() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="DR & Migration Orchestration Solutions MENA - Automated Workflow Management | S2 Solutions"
-        description="Advanced DR and migration orchestration solutions for MENA enterprises. Automated workflow orchestration with TDS TransitionManager technology. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="DR orchestration MENA, migration orchestration UAE, workflow automation Middle East, TDS TransitionManager Saudi Arabia, disaster recovery automation"
+        title="DR & Migration Orchestration Solutions MENA - Automated Infrastructure Management | S2 Solutions"
+        description="Advanced DR and migration orchestration for MENA enterprises. Automated failover, dependency mapping, and infrastructure orchestration. Serving UAE, Saudi Arabia, and Middle East."
+        keywords="DR orchestration MENA, migration orchestration UAE, automated failover Middle East, infrastructure automation Saudi Arabia, disaster recovery automation"
         canonicalUrl="https://s2mgt.com/solutions/dr-orchestration"
       />
       <Navigation />
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-4">Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">DR & Migration Orchestration</h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Intelligent DR planning powered by robust discovery tools, advanced dependency analytics, and real-time orchestration
+              <Badge variant="outline" className="mb-4 border-white/20 text-white">
+                Data Protection Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                DR & Migration Orchestration
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Intelligent DR planning with automated discovery, dependency mapping, and orchestration for seamless disaster recovery and migration operations.
               </p>
-              <Button size="lg">Request Orchestration Demo</Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">Request Orchestration Demo</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">Learn More</Button>
+              </div>
             </div>
           </div>
         </section>
@@ -159,7 +166,7 @@ export default function DROrchestration() {
                   <div className="space-y-6">
                     {deliverables.map((deliverable, index) => (
                       <div key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
                         <span className="text-sm">{deliverable}</span>
                       </div>
                     ))}

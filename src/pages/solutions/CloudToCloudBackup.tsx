@@ -126,7 +126,7 @@ const idealFor = [
 
 export default function CloudToCloudBackup() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="Cloud-to-Cloud Backup Solutions MENA - SaaS Data Protection | S2 Solutions"
         description="Enterprise cloud-to-cloud backup solutions for MENA region. Complete Microsoft 365 and Google Workspace protection with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East."
@@ -136,23 +136,26 @@ export default function CloudToCloudBackup() {
       
       <Navigation />
       
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Data Protection</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">Cloud-to-Cloud Backup</h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Complete protection for your SaaS applications including Microsoft 365, Google Workspace, 
-                and other cloud platforms with unlimited storage and enterprise-grade security.
+              <Badge variant="outline" className="mb-4 border-white/20 text-white">
+                Data Protection Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Cloud-to-Cloud Backup
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Complete protection for your SaaS applications including Microsoft 365, Google Workspace, and other cloud platforms with unlimited storage and enterprise-grade security.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
+                <Button size="lg" className="text-lg px-8">
                   Request Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">
                   Download Datasheet
                 </Button>
               </div>
@@ -224,7 +227,7 @@ export default function CloudToCloudBackup() {
                     <Card key={index}>
                       <CardHeader>
                         <CardTitle className="flex items-center space-x-3">
-                          <IconComponent className="h-6 w-6 text-primary" />
+                          <IconComponent className="h-6 w-6 text-teal-500" />
                           <span>{deliverable.title}</span>
                         </CardTitle>
                       </CardHeader>
@@ -232,7 +235,7 @@ export default function CloudToCloudBackup() {
                         <ul className="space-y-2">
                           {deliverable.features.map((feature, idx) => (
                             <li key={idx} className="flex items-start space-x-2">
-                              <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="h-4 w-4 text-teal-500 mt-0.5 flex-shrink-0" />
                               <span className="text-sm">{feature}</span>
                             </li>
                           ))}

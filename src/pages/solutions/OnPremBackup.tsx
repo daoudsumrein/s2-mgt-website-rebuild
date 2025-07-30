@@ -117,25 +117,32 @@ const idealFor = [
 
 export default function OnPremBackup() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="On-Premises Backup Solutions MENA - Endpoint & Server Protection | S2 Solutions"
-        description="Award-winning on-premises backup platform for MENA enterprises. Unified backup, replication, and instant recovery for endpoints and servers. Serving UAE, Saudi Arabia, and Middle East with cost-effective data protection."
-        keywords="on-premises backup MENA, local backup UAE, endpoint server backup Middle East, NAKIVO backup Saudi Arabia, hybrid backup solutions, MSP backup services, enterprise backup platform"
+        title="On-Premises Backup Solutions MENA - Local Data Protection | S2 Solutions"
+        description="Enterprise on-premises backup solutions for MENA region. Local data protection with high-performance platforms offering fast recovery, deduplication, and secure storage. Serving UAE, Saudi Arabia, and Middle East."
+        keywords="on-premises backup MENA, local backup UAE, enterprise backup Middle East, data protection Saudi Arabia, backup appliance, deduplication, fast recovery"
         canonicalUrl="https://s2mgt.com/solutions/onprem-backup"
       />
       <Navigation />
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-4">Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">On Prem Backup for Endpoint & Servers</h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Speedy, cost-effective, and award-winning platform that unifies backup, replication, instant recovery and infrastructure monitoring
+              <Badge variant="outline" className="mb-4 border-white/20 text-white">
+                Data Protection Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                On-Premises Backup
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Speedy, cost-effective, and award-winning platform that unifies backup, replication, instant recovery and infrastructure monitoring.
               </p>
-              <Button size="lg">Request Platform Demo</Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">Request Platform Demo</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">Learn More</Button>
+              </div>
             </div>
           </div>
         </section>
@@ -193,7 +200,7 @@ export default function OnPremBackup() {
                   <Card key={index} className="text-center">
                     <CardHeader>
                       <div className="flex flex-col items-center space-y-3">
-                        <item.icon className="h-12 w-12 text-primary" />
+                        <item.icon className="h-12 w-12 text-teal-500" />
                         <CardTitle className="text-xl">{item.title}</CardTitle>
                       </div>
                     </CardHeader>

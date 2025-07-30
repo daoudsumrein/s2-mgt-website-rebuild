@@ -109,7 +109,7 @@ const idealFor = [
 
 export default function EndpointBackup() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Endpoint Cloud Backup Solutions MENA - Automated Device Protection | S2 Solutions"
         description="Complete endpoint cloud backup solutions for MENA enterprises. Automated protection for all endpoint devices with advanced security, global tracking, and 24/7 support. Serving UAE, Saudi Arabia, and Middle East."
@@ -117,17 +117,24 @@ export default function EndpointBackup() {
         canonicalUrl="https://s2mgt.com/solutions/endpoint-backup"
       />
       <Navigation />
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-4">Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">Endpoint Cloud Backup</h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Complete and automated backup solution for all endpoint devices and their resident data
+              <Badge variant="outline" className="mb-4 border-white/20 text-white">
+                Data Protection Solutions
+              </Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Endpoint Cloud Backup
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Complete and automated backup solution for all endpoint devices and their resident data with advanced security and global tracking.
               </p>
-              <Button size="lg">Request Endpoint Assessment</Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="text-lg px-8">Request Endpoint Assessment</Button>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">Learn More</Button>
+              </div>
             </div>
           </div>
         </section>
@@ -161,7 +168,7 @@ export default function EndpointBackup() {
                   <Card key={index} className="h-full">
                     <CardHeader>
                       <div className="flex items-center space-x-3">
-                        <feature.icon className="h-8 w-8 text-primary" />
+                        <feature.icon className="h-8 w-8 text-teal-500" />
                         <CardTitle className="text-lg">{feature.title}</CardTitle>
                       </div>
                     </CardHeader>
