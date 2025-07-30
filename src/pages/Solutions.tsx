@@ -81,19 +81,19 @@ const cybersecuritySolutions = [{
 }];
 export default function Solutions() {
   const [hoveredSection, setHoveredSection] = useState<'data' | 'cyber' | null>(null);
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen flex flex-col bg-background">
       <SEOHead title="IT Solutions & Digital Transformation Services MENA | S2 Management Solutions" description="Comprehensive IT solutions for MENA enterprises: data protection and cybersecurity solutions. Serving UAE, Saudi Arabia, and Middle East since 2013." keywords="IT solutions MENA, data protection UAE, cybersecurity solutions Middle East, disaster recovery Saudi Arabia, endpoint protection, email security" canonicalUrl="https://s2mgt.com/solutions" />
       <Navigation />
-      <main>
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Solutions</Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              <Badge variant="outline" className="mb-4 border-white/20 text-white">Solutions</Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Two-Pillar Solution Portfolio
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
                 S2 delivers comprehensive solutions across two core areas: Data Protection and Cybersecurity,
                 providing complete coverage for your enterprise infrastructure needs.
               </p>
