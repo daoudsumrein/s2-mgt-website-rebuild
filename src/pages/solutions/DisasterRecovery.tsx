@@ -88,17 +88,14 @@ export default function DisasterRecovery() {
                     </div>
                     
                     {/* Right Image Placeholder */}
-                    <div className="relative">
-                      <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                    <div className="relative lg:max-w-xs lg:ml-auto">
+                      <div className="w-48 h-36 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
                         <div className="text-center">
-                          <Database className="h-10 w-10 text-white/60 mx-auto mb-1" />
+                          <Database className="h-8 w-8 text-white/60 mx-auto mb-1" />
                           <p className="text-white/80 font-medium text-xs">Image about</p>
                           <p className="text-[10px] text-white/60">solution</p>
                         </div>
                       </div>
-                      {/* Decorative elements */}
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500/60 rounded-full"></div>
-                      
                     </div>
                   </div>
                 </div>
