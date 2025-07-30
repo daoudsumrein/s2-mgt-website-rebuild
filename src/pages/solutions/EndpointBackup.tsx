@@ -200,7 +200,7 @@ export default function EndpointBackup() {
                       <ul className="space-y-2">
                         {item.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start space-x-2">
-                            <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                            <CheckCircle className="h-4 w-4 text-teal-500 mt-1 flex-shrink-0" />
                             <span className="text-sm">{feature}</span>
                           </li>
                         ))}
@@ -213,48 +213,54 @@ export default function EndpointBackup() {
           </div>
         </section>
 
-        {/* Benefits & Ideal For Section */}
+        {/* Ideal For & Key Benefits */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-8">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center space-x-2">
-                      <CheckCircle className="h-6 w-6 text-teal-500" />
-                      <span>Key Benefits</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      {keyBenefits.map((benefit, index) => (
-                        <li key={index} className="flex items-start space-x-2">
-                           <CheckCircle className="h-4 w-4 text-teal-500 mt-1 flex-shrink-0" />
-                          <span className="text-sm">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Ideal For */}
+                <div>
+                  <Card className="border-blue-200 bg-blue-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-blue-700">
+                        <Target className="h-6 w-6" />
+                        <span>Ideal For</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {idealFor.map((item, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center space-x-2">
-                      <Target className="h-6 w-6 text-primary" />
-                      <span>Ideal For</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      {idealFor.map((item, index) => (
-                        <li key={index} className="flex items-start space-x-2">
-                           <CheckCircle className="h-4 w-4 text-teal-500 mt-1 flex-shrink-0" />
-                          <span className="text-sm">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
+                {/* Key Benefits */}
+                <div>
+                  <Card className="border-teal-200 bg-teal-50/50">
+                    <CardHeader>
+                      <CardTitle className="flex items-center space-x-3 text-teal-700">
+                        <CheckCircle className="h-6 w-6" />
+                        <span>Key Benefits</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {keyBenefits.map((benefit, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                            <span>{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </div>
           </div>

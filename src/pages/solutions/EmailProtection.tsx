@@ -154,11 +154,11 @@ export default function EmailProtection() {
           </div>
         </section>
 
-        {/* Deliverables Section */}
+        {/* What We Deliver Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {deliverables.map((deliverable, index) => (
                   <Card key={index}>

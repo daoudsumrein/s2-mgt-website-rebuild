@@ -156,12 +156,12 @@ export default function EndpointProtection() {
           </div>
         </section>
 
-        {/* Deliverables Section */}
+        {/* What We Deliver Section */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Key Deliverables
+                What We Deliver
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Tangible benefits and outcomes from our endpoint protection solution
