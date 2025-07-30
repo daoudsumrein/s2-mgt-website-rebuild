@@ -4,7 +4,53 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Workflow, Settings, Monitor, Zap, CheckCircle, Target } from "lucide-react";
+import { Workflow, Settings, Monitor, Zap, CheckCircle, Target, Search, Network, Database, FileText, Clock, Users, Shield } from "lucide-react";
+
+const features = [
+  {
+    icon: Network,
+    title: "Dependency Analyzer",
+    description: "Dependency analyzer and visually identify application relationships using an interactive map"
+  },
+  {
+    icon: Database,
+    title: "Automated Data Ingestion",
+    description: "Automated data ingestion and speed up data gathering from CMDBs, files, and databases"
+  },
+  {
+    icon: Settings,
+    title: "Rules Engine",
+    description: "Rules engine to implement business and IT parameters on your data throughout each phase of a migration or recovery project to transform data, evaluate hypothetical situations, enforce organizational policies, and improve decision-making"
+  },
+  {
+    icon: Database,
+    title: "Consolidated Data Repository",
+    description: "Consolidated data repository by enhancing team collaboration providing access to uniform data"
+  },
+  {
+    icon: FileText,
+    title: "Automated Runbooks",
+    description: "Automated runbooks, mitigate risks during migrations or any type of system modification"
+  },
+  {
+    icon: Monitor,
+    title: "Custom Views",
+    description: "Custom views for reports, improve efficiency by saving frequently used queries as reports"
+  },
+  {
+    icon: Clock,
+    title: "Real-time Task Management",
+    description: "Real time task management, actively oversee projects in real-time with data tailored to specific roles"
+  }
+];
+
+const deliverables = [
+  "Minimizes potential hazards and mistakes made by people",
+  "Guarantees the correct order and completion of tasks",
+  "Decreases the time taken for execution, leading to greater scale and speed",
+  "Upholds security standards and adherence to regulations",
+  "Enables highly skilled engineers to shift their focus from routine operational tasks to more significant, strategic initiatives"
+];
 
 export default function DROrchestration() {
   return (
@@ -24,41 +70,99 @@ export default function DROrchestration() {
               <Badge className="mb-4">Solutions</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">DR & Migration Orchestration</h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Automated workflow orchestration for disaster recovery and migration operations
+                Intelligent DR planning powered by robust discovery tools, advanced dependency analytics, and real-time orchestration
               </p>
               <Button size="lg">Request Orchestration Demo</Button>
             </div>
           </div>
         </section>
 
-        {/* Placeholder Content */}
+        {/* Overview Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">Intelligent DR Planning</h2>
               <Card>
-                <CardContent className="p-12">
-                  <Workflow className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h2 className="text-2xl font-bold mb-4">DR & Migration Orchestration</h2>
-                  <p className="text-lg text-muted-foreground mb-8">
-                    This page will be populated with detailed orchestration content including automation workflows, 
-                    TDS TransitionManager capabilities, and orchestration methodologies.
+                <CardContent className="p-8">
+                  <p className="text-lg mb-6">
+                    In today's IT landscape, Disaster Recovery and Business Continuity are not just checkboxes, they shape and core the business critical strategies. Usually, DR plans and migration fail due to incomplete discovery, undocumented dependencies, and lack of orchestration.
                   </p>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="text-center">
-                      <Settings className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <h3 className="font-semibold">Automated Workflows</h3>
-                      <p className="text-sm text-muted-foreground">Intelligent orchestration</p>
+                  <div className="grid md:grid-cols-1 gap-8">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-4 flex items-center">
+                        <Search className="h-6 w-6 text-primary mr-3" />
+                        Discovery
+                      </h3>
+                      <p className="text-muted-foreground mb-4">
+                        Discovery is the first step toward resilience. It ensures you have full visibility of all systems, workloads, and applications across your infrastructure. Without it, blind spots can leave critical assets unprotected, turning a manageable incident into a crisis.
+                      </p>
                     </div>
-                    <div className="text-center">
-                      <Monitor className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <h3 className="font-semibold">Real-time Monitoring</h3>
-                      <p className="text-sm text-muted-foreground">Live dashboard visibility</p>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-4 flex items-center">
+                        <Network className="h-6 w-6 text-primary mr-3" />
+                        Dependency Mapping
+                      </h3>
+                      <p className="text-muted-foreground mb-4">
+                        Dependency Mapping uncovers the hidden connections between services, applications, and systems. Without this insight, a single failure can trigger a domino effect, cascading into a widespread outage that cripples operations. Knowing these relationships is key to minimizing impact and ensuring a targeted recovery.
+                      </p>
                     </div>
-                    <div className="text-center">
-                      <Zap className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <h3 className="font-semibold">Rapid Execution</h3>
-                      <p className="text-sm text-muted-foreground">Fast failover processes</p>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-4 flex items-center">
+                        <Workflow className="h-6 w-6 text-primary mr-3" />
+                        Orchestration
+                      </h3>
+                      <p className="text-muted-foreground mb-4">
+                        Orchestration is the glue that holds it all together. By automating recovery steps, orchestration reduces downtime, eliminates human error, and ensures precision when every second counts. It's the difference between a chaotic scramble and a seamless, efficient recovery process.
+                      </p>
                     </div>
+                  </div>
+                  <p className="text-lg mt-6 text-center font-medium">
+                    At S2 Management Solutions, we believe in intelligent DR planning that's powered by robust discovery tools, advanced dependency analytics, and real-time orchestration. Our approach gives organizations the confidence to face disruptions head-on, knowing their resilience is built on a solid foundation.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
+                  <Card key={index}>
+                    <CardHeader>
+                      <div className="flex items-center space-x-3">
+                        <feature.icon className="h-8 w-8 text-primary" />
+                        <CardTitle className="text-xl">{feature.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground">{feature.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Deliverables Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Deliverables</h2>
+              <Card>
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    {deliverables.map((deliverable, index) => (
+                      <div key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-sm">{deliverable}</span>
+                      </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
