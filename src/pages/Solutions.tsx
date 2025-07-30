@@ -49,6 +49,11 @@ const dataProtectionSolutions = [{
   link: "/solutions/email-archiving"
 }];
 const cybersecuritySolutions = [{
+  icon: Eye,
+  title: "Servers and Data Protection",
+  description: "Insider threat protection and access control",
+  link: "/solutions/servers-data-protection"
+}, {
   icon: Shield,
   title: "Endpoint Protection with EDR",
   description: "Comprehensive endpoint security with detection and response",

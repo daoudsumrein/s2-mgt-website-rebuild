@@ -58,6 +58,11 @@ const dataProtectionSolutions = [
 
 const cybersecuritySolutions = [
   {
+    title: "Servers and Data Protection",
+    href: "/solutions/servers-data-protection",
+    description: "Insider threat protection and access control"
+  },
+  {
     title: "Endpoint Protection",
     href: "/solutions/endpoint-protection",
     description: "Advanced endpoint security"
@@ -86,11 +91,6 @@ const cybersecuritySolutions = [
     title: "Email Encryption",
     href: "/solutions/email-encryption",
     description: "Secure email communications"
-  },
-  {
-    title: "Servers and Data Protection",
-    href: "/solutions/servers-data-protection",
-    description: "Insider threat protection and access control"
   },
 ];
 
