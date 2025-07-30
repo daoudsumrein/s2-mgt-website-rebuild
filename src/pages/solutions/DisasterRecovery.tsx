@@ -61,26 +61,26 @@ export default function DisasterRecovery() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8 md:py-12 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 md:py-6 relative overflow-hidden">
           <div className="container mx-auto px-2 md:px-4">
             <div className="mx-auto">
               {/* Floating Background Container with Gradient Border */}
-              <div className="relative p-0.5 rounded-3xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
-                <div className="bg-slate-800/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-8">
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
+                <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
+                  <div className="grid lg:grid-cols-2 gap-6 items-center">
                     {/* Left Content */}
                     <div>
-                      <Badge variant="outline" className="mb-6 border-primary/40 text-primary bg-primary/10">
+                      <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
                         Data Protection Solutions
                       </Badge>
-                      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                         Disaster Recovery
                       </h1>
-                      <p className="text-lg md:text-xl text-slate-200 mb-8 leading-relaxed">
+                      <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
                         Ensure maximum uptime for your Windows and Linux servers with comprehensive DR solutions featuring continuous replication and automated failover.
                       </p>
-                      <div className="flex flex-col sm:flex-row gap-4">
-                        <Button size="lg" className="text-lg px-8 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Disaster%20Recovery%20Consultation', '_blank')}>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button size="default" className="text-base px-6 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Disaster%20Recovery%20Consultation', '_blank')}>
                           <span className="relative z-10">Schedule Consultation</span>
                           <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
                         </Button>
@@ -89,16 +89,16 @@ export default function DisasterRecovery() {
                     
                     {/* Right Image Placeholder */}
                     <div className="relative">
-                      <div className="aspect-square bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-2xl flex items-center justify-center border border-white/10 py-0 my-0">
+                      <div className="aspect-square bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-xl flex items-center justify-center border border-white/10">
                         <div className="text-center">
-                          <Database className="h-20 w-20 text-white/60 mx-auto mb-4" />
-                          <p className="text-white/80 font-medium">Image about</p>
-                          <p className="text-sm text-white/60 mt-2">solution</p>
+                          <Database className="h-16 w-16 text-white/60 mx-auto mb-2" />
+                          <p className="text-white/80 font-medium text-sm">Image about</p>
+                          <p className="text-xs text-white/60 mt-1">solution</p>
                         </div>
                       </div>
                       {/* Decorative elements */}
-                      <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500/60 rounded-full"></div>
-                      <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary/60 rounded-full"></div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500/60 rounded-full"></div>
+                      <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-secondary/60 rounded-full"></div>
                     </div>
                   </div>
                 </div>
