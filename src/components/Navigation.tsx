@@ -180,25 +180,18 @@ export default function Navigation() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+                <NavigationMenuTrigger asChild>
+                  <Link
+                    to="/solutions"
+                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
+                      isActive("/solutions") ? "text-primary" : ""
+                    }`}
+                  >
+                    Solutions
+                  </Link>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="w-[600px] p-4">
-                    <div className="mb-4">
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/solutions"
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md"
-                        >
-                          <div className="mb-2 text-lg font-medium">
-                            View All Solutions
-                          </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
-                            Comprehensive data protection and cybersecurity solutions for enterprise infrastructure.
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </div>
-                    
                     <div className="grid grid-cols-2 gap-6">
                       {/* Data Protection Column */}
                       <div>
