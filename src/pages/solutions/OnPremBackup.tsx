@@ -133,7 +133,7 @@ export default function OnPremBackup() {
               {/* Floating Background Container with Gradient Border */}
               <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
                 <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
-                  <div className="max-w-5xl mx-auto pl-4">
+                  <div className="max-w-6xl mx-auto pl-8">
                     <div className="grid lg:grid-cols-2 gap-4 items-center justify-items-start">
                     {/* Left Content */}
                     <div>
