@@ -143,16 +143,16 @@ export default function Solutions() {
                               
                               {/* Abstract organic line pattern for Data Protection side */}
                               <pattern id="dataPattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
-                                <path d="M0 12 Q8 8 12 12 Q17 16 25 12" stroke="white" strokeWidth="0.8" strokeOpacity="0.15" fill="none" />
-                                <path d="M5 0 Q12 7 20 5 Q22 8 25 10" stroke="white" strokeWidth="0.6" strokeOpacity="0.1" fill="none" />
-                                <path d="M0 20 Q10 15 15 20 Q20 25 25 22" stroke="rgba(255,255,255,0.08)" strokeWidth="1" fill="none" />
+                                <path d="M0 12 Q8 8 12 12 Q17 16 25 12" stroke="white" strokeWidth="0.8" strokeOpacity="0.06" fill="none" />
+                                <path d="M5 0 Q12 7 20 5 Q22 8 25 10" stroke="white" strokeWidth="0.6" strokeOpacity="0.04" fill="none" />
+                                <path d="M0 20 Q10 15 15 20 Q20 25 25 22" stroke="rgba(255,255,255,0.03)" strokeWidth="1" fill="none" />
                               </pattern>
                               
                               {/* Abstract organic line pattern for Cybersecurity side */}
                               <pattern id="cyberPattern" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
-                                <path d="M0 11 Q6 6 11 11 Q16 16 22 11" stroke="white" strokeWidth="0.7" strokeOpacity="0.12" fill="none" />
-                                <path d="M4 0 Q11 8 18 2 Q20 6 22 8" stroke="rgba(255,255,255,0.08)" strokeWidth="0.8" fill="none" />
-                                <path d="M0 18 Q8 14 14 18 Q18 22 22 20" stroke="white" strokeWidth="0.5" strokeOpacity="0.1" fill="none" />
+                                <path d="M0 11 Q6 6 11 11 Q16 16 22 11" stroke="white" strokeWidth="0.7" strokeOpacity="0.05" fill="none" />
+                                <path d="M4 0 Q11 8 18 2 Q20 6 22 8" stroke="rgba(255,255,255,0.03)" strokeWidth="0.8" fill="none" />
+                                <path d="M0 18 Q8 14 14 18 Q18 22 22 20" stroke="white" strokeWidth="0.5" strokeOpacity="0.04" fill="none" />
                               </pattern>
                             </defs>
                             
@@ -180,19 +180,19 @@ export default function Solutions() {
                             {/* S2 Logo */}
                             <image x="85" y="85" width="30" height="30" href="/lovable-uploads/abad019c-82ea-40d6-ab24-2bcf8726240d.png" />
                             
-                            {/* Data Protection Text with bright gradient and smaller, modern styling */}
-                            <text x="48" y="96" textAnchor="middle" className="text-xs font-black tracking-wide" fill="url(#dataGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            {/* Data Protection Text with bright gradient and smaller styling */}
+                            <text x="48" y="97" textAnchor="middle" className="font-black tracking-wide" fill="url(#dataGradient)" style={{fontSize: '9px', fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               DATA
                             </text>
-                            <text x="48" y="108" textAnchor="middle" className="text-xs font-black tracking-wide" fill="url(#dataGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            <text x="48" y="107" textAnchor="middle" className="font-black tracking-wide" fill="url(#dataGradient)" style={{fontSize: '9px', fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               PROTECTION
                             </text>
                             
-                            {/* Cybersecurity Text with bright gradient and smaller, modern styling */}
-                            <text x="152" y="96" textAnchor="middle" className="text-xs font-black tracking-wide" fill="url(#cyberGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            {/* Cybersecurity Text with bright gradient and smaller styling */}
+                            <text x="152" y="97" textAnchor="middle" className="font-black tracking-wide" fill="url(#cyberGradient)" style={{fontSize: '9px', fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               CYBER
                             </text>
-                            <text x="152" y="108" textAnchor="middle" className="text-xs font-black tracking-wide" fill="url(#cyberGradient)" style={{fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
+                            <text x="152" y="107" textAnchor="middle" className="font-black tracking-wide" fill="url(#cyberGradient)" style={{fontSize: '9px', fontFamily: '"Inter", "Helvetica Neue", sans-serif', textShadow: '0 1px 2px rgba(0,0,0,0.3)'}}>
                               SECURITY
                             </text>
                           </svg>
