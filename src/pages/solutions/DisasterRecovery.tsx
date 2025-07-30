@@ -98,7 +98,7 @@ export default function DisasterRecovery() {
                       </div>
                       {/* Decorative elements */}
                       <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500/60 rounded-full"></div>
-                      <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-secondary/60 rounded-full"></div>
+                      
                     </div>
                   </div>
                 </div>
