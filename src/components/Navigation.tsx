@@ -198,7 +198,7 @@ export default function Navigation() {
                       {/* Data Protection Column */}
                       <div>
                         <h3 className="font-semibold text-sm mb-3 text-black flex items-center gap-2">
-                          <Database className="h-4 w-4" />
+                          <Database className="h-4 w-4 text-primary" />
                           Data Protection Solutions
                         </h3>
                         <ul className="space-y-2">
@@ -223,7 +223,7 @@ export default function Navigation() {
                       {/* Cybersecurity Column */}
                       <div>
                         <h3 className="font-semibold text-sm mb-3 text-black flex items-center gap-2">
-                          <Shield className="h-4 w-4" />
+                          <Shield className="h-4 w-4 text-secondary" />
                           Cybersecurity Solutions
                         </h3>
                         <ul className="space-y-2">
@@ -322,7 +322,7 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
           </Link>
           <div className="pl-4 space-y-1">
             <div className="text-xs font-medium text-black flex items-center gap-2">
-              <Database className="h-3 w-3" />
+              <Database className="h-3 w-3 text-primary" />
               Data Protection
             </div>
             {dataProtectionSolutions.map((solution) => (
@@ -338,7 +338,7 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
           </div>
           <div className="pl-4 space-y-1">
             <div className="text-xs font-medium text-black flex items-center gap-2">
-              <Shield className="h-3 w-3" />
+              <Shield className="h-3 w-3 text-secondary" />
               Cybersecurity
             </div>
             {cybersecuritySolutions.map((solution) => (
