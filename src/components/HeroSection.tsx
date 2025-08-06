@@ -76,7 +76,7 @@ export default function HeroSection() {
           <div className="lg:pl-8">
             <div className="grid gap-6">
               <Card className="group hover:shadow-[0_10px_10px_10px_#2393CF40] transition-all duration-300 border-border/50">
-                <CardContent className="p-6">
+                <CardContent className="p-6 motion-preset-slide-up motion-delay-300">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 rounded-lg bg-primary-light">
                       <Shield className="h-6 w-6 text-primary" />
