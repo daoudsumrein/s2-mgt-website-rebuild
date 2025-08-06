@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Vendors */}
-          <div className="space-y-2 md:space-y-3">
+          <div className="hidden md:block space-y-2 md:space-y-3">
             <h3 className="font-semibold text-sm">Vendors</h3>
             <ul className="space-y-1">
               {vendors.map((vendor) => (
