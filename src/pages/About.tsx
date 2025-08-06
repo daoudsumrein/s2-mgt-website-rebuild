@@ -108,7 +108,7 @@ export default function About() {
         </section>
 
         {/* Core Values */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-muted/30 motion-preset-slide-up motion-duration-700">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 motion-preset-slide-up motion-duration-700">
               <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
