@@ -23,7 +23,7 @@ const vendors = [
 export default function Footer() {
   return (
     <footer className="bg-muted border-t">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-4">
         {/* Mobile View */}
         <div className="md:hidden space-y-6">
           {/* Company Info */}
