@@ -24,32 +24,40 @@ export default function Footer() {
   return (
     <footer className="bg-muted border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="space-y-6">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
-            <div className="space-y-2">
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+971 4 123 4567</span>
-              </div>
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>KSA Office Address Here</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+966 X XXX XXXX</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
-                  info@s2mgt.com
-                </a>
+        <div className="grid grid-cols-1 gap-6">
+          {/* Company Info - Full width on mobile, part of grid on desktop */}
+          <div className="space-y-4 md:col-span-full">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between md:space-x-8">
+              <div className="space-y-4 md:max-w-md">
+                <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                      <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Phone className="h-4 w-4" />
+                      <span>+971 4 123 4567</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-start space-x-2">
+                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                      <span>KSA Office Address Here</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Phone className="h-4 w-4" />
+                      <span>+966 X XXX XXXX</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                  <Mail className="h-4 w-4" />
+                  <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
+                    info@s2mgt.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>
