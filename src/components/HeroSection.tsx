@@ -22,14 +22,12 @@ export default function HeroSection() {
           {/* Text Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide">
-             
+             <div className="w-80 min-h-[4rem] flex items-center">
                 <TypewriterText 
                   texts={["High Availability", "Disaster Recovery", "Server Migration", "Backup & Recovery"]}
-                  className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold"
-                />{" "}
-      
-              </h1>
+                  className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold break-words"
+                />
+              </div>
               <br></br>
               <p className="text-xl text-muted-foreground max-w-2xl">
                 As a Value-Added Distributor, S2 enables digital transformation for the modern era through consultancy-driven solutions that modernize your IT infrastructure and business operations.
