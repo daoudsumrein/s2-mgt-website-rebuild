@@ -30,29 +30,29 @@ export default function HeroSection() {
                 />{" "}
       
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 motion-preset-slide-up motion-delay-400">
                 As a Value-Added Distributor, S2 enables digital transformation for the modern era through consultancy-driven solutions that modernize your IT infrastructure and business operations.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start motion-preset-slide-up motion-delay-400">
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto motion-preset-slide-up motion-delay-400" asChild>
                 <Link to="/solutions">
                   Explore Solutions
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" asChild>
-                <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto motion-preset-slide-up motion-delay-400" asChild>
+                <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" className="motion-preset-slide-up motion-delay-800" target="_blank" rel="noopener noreferrer">
                   Request Consultation
                 </a>
               </Button>
             </div>
             
             {/* Trust Indicators */}
-            <div className="pt-6 sm:pt-8 border-t border-border/50">
+            <div className="pt-6 sm:pt-8 border-t border-border/50 motion-preset-slide-up motion-delay-400">
               <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">Trusted by enterprises across</p>
-              <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-muted-foreground justify-center lg:justify-start">
+              <div className="motion-preset-slide-up motion-delay-400 flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-muted-foreground justify-center lg:justify-start">
                 <span>Government</span>
                 <span className="hidden sm:inline">•</span>
                 <span>Banking & Financial Services</span>
