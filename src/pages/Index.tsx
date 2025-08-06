@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
@@ -25,7 +24,7 @@ const Index = () => {
         <HeroSection />
         
         {/* Company Overview Section */}
-        <section className="py-16 bg-muted/30">
+        {/* <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <Badge className="mb-4">Founded 2013</Badge>
@@ -69,10 +68,10 @@ const Index = () => {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Services Overview */}
-        <section className="py-16">
+        {/* <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -136,7 +135,7 @@ const Index = () => {
                   <CardContent>
                     <p className="text-sm text-muted-foreground">DR and migration orchestration and automation</p>
                   </CardContent>
-                  </Card>
+                </Card>
                 
                 <Card className="hover:shadow-lg transition-all duration-300">
                   <CardHeader className="pb-3">
@@ -158,10 +157,10 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
-        <section className="py-16 bg-primary-light">
+        {/* <section className="py-16 bg-primary-light">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Ready to Transform Your IT Infrastructure?
@@ -183,7 +182,7 @@ const Index = () => {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>
