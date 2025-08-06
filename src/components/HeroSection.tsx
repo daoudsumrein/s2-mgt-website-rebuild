@@ -75,7 +75,7 @@ export default function HeroSection() {
           {/* Feature Cards */}
           <div className="lg:pl-8">
             <div className="grid gap-6">
-              <Card className="group hover:shadow-[0_10px_10px_10px_#2393CF40] transition-all duration-300 border-border/50 motion-preset-slide-up motion-delay-400">
+              <Card className="group hover:shadow-[0_5px_5px_5px_#2393CF40] transition-all duration-300 border-border/50 motion-preset-slide-up motion-delay-400">
                 <CardContent className="p-6 motion-preset-slide-up motion-delay-800">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 rounded-lg bg-primary-light">
@@ -91,7 +91,7 @@ export default function HeroSection() {
                 </CardContent>
               </Card>
               
-              <Card className="group hover:shadow-[0_10px_10px_10px_#2393CF40] transition-all duration-300 border-border/50">
+              <Card className="group hover:shadow-[0_5px_5px_5px_#2393CF40] transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 rounded-lg bg-primary-light">
@@ -107,7 +107,7 @@ export default function HeroSection() {
                 </CardContent>
               </Card>
               
-              <Card className="group hover:shadow-[0_10px_10px_10px_#2393CF40] transition-all duration-300 border-border/50">
+              <Card className="group hover:shadow-[0_5px_5px_5px_#2393CF40] transition-all duration-300 border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 rounded-lg bg-primary-light">
