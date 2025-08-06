@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ExternalLink, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink, Linkedin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import s2Logo from "@/assets/s2-logo-new.png";
 
 const solutions = [
@@ -23,13 +24,10 @@ export default function Footer() {
   return (
     <footer className="bg-muted border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="space-y-6">
           {/* Company Info */}
           <div className="space-y-4">
             <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
-            {/* <p className="text-sm text-muted-foreground max-w-xs">
-              Value-Added Distributor delivering critical IT transformation projects across MENA region since 2013. Offices in KSA and UAE (HQ).
-            </p> */}
             <div className="space-y-2">
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -56,96 +54,194 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Solutions */}
-          <div className="space-y-4">
-            <h3 className="font-semibold">Solutions</h3>
-            <ul className="space-y-2">
-              {solutions.map((solution) => (
-                <li key={solution.href}>
-                  <Link 
-                    to={solution.href} 
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {solution.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Mobile Collapsible Sections - only show on mobile */}
+          <div className="md:hidden space-y-4">
+            {/* Solutions Collapsible */}
+            <Collapsible>
+              <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
+                Solutions
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="space-y-2 pt-2">
+                {solutions.map((solution) => (
+                  <div key={solution.href}>
+                    <Link 
+                      to={solution.href} 
+                      className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                    >
+                      {solution.name}
+                    </Link>
+                  </div>
+                ))}
+              </CollapsibleContent>
+            </Collapsible>
 
-          {/* Services */}
-          <div className="space-y-4">
-            <h3 className="font-semibold">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            {/* Services Collapsible */}
+            <Collapsible>
+              <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
+                Services
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="space-y-2 pt-2">
+                <Link to="/services" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   All Services
                 </Link>
-              </li>
-              <li>
-                <Link to="/solutions/disaster-recovery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/solutions/disaster-recovery" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   Disaster Recovery
                 </Link>
-              </li>
-              <li>
-                <Link to="/solutions/data-protection" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/solutions/data-protection" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   Data Protection
                 </Link>
-              </li>
-              <li>
-                <Link to="/solutions/app-modernization" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/solutions/app-modernization" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   App Modernization
                 </Link>
-              </li>
-            </ul>
-          </div>
+              </CollapsibleContent>
+            </Collapsible>
 
-          {/* Vendors */}
-          <div className="space-y-4">
-            <h3 className="font-semibold">Our Vendors</h3>
-            <ul className="space-y-2">
-              {vendors.map((vendor) => (
-                <li key={vendor.href}>
-                  <Link 
-                    to={vendor.href} 
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {vendor.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Vendors Collapsible */}
+            <Collapsible>
+              <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
+                Our Vendors
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="space-y-2 pt-2">
+                {vendors.map((vendor) => (
+                  <div key={vendor.href}>
+                    <Link 
+                      to={vendor.href} 
+                      className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                    >
+                      {vendor.name}
+                    </Link>
+                  </div>
+                ))}
+              </CollapsibleContent>
+            </Collapsible>
 
-          {/* Company */}
-          <div className="space-y-4">
-            <h3 className="font-semibold">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            {/* Company Collapsible */}
+            <Collapsible>
+              <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
+                Company
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="space-y-2 pt-2">
+                <Link to="/about" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   About S2
                 </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   Contact Us
                 </Link>
-              </li>
-            </ul>
-            
-            <div className="pt-4">
-              <h4 className="font-medium mb-2">Partners</h4>
-              <Button variant="outline" size="sm" asChild>
-                <a 
-                  href="https://preview--pipeline-pro-portal.lovable.app" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  Partner Portal
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-              </Button>
+                <div className="pt-2">
+                  <h4 className="font-medium mb-2 text-sm">Partners</h4>
+                  <Button variant="outline" size="sm" asChild>
+                    <a 
+                      href="https://preview--pipeline-pro-portal.lovable.app" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      Partner Portal
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </Button>
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+          </div>
+
+          {/* Desktop Grid - hidden on mobile */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Solutions */}
+            <div className="space-y-4">
+              <h3 className="font-semibold">Solutions</h3>
+              <ul className="space-y-2">
+                {solutions.map((solution) => (
+                  <li key={solution.href}>
+                    <Link 
+                      to={solution.href} 
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {solution.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div className="space-y-4">
+              <h3 className="font-semibold">Services</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    All Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/solutions/disaster-recovery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Disaster Recovery
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/solutions/data-protection" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Data Protection
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/solutions/app-modernization" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    App Modernization
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Vendors */}
+            <div className="space-y-4">
+              <h3 className="font-semibold">Our Vendors</h3>
+              <ul className="space-y-2">
+                {vendors.map((vendor) => (
+                  <li key={vendor.href}>
+                    <Link 
+                      to={vendor.href} 
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {vendor.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div className="space-y-4">
+              <h3 className="font-semibold">Company</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    About S2
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+              
+              <div className="pt-4">
+                <h4 className="font-medium mb-2">Partners</h4>
+                <Button variant="outline" size="sm" asChild>
+                  <a 
+                    href="https://preview--pipeline-pro-portal.lovable.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    Partner Portal
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
