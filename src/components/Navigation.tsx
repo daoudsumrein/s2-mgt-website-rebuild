@@ -133,7 +133,7 @@ export default function Navigation() {
   const handleSheetClose = useCallback(() => setIsOpen(false), []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b py-3 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 will-change-transform">
+    <header className="m-4 sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 will-change-transform">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
