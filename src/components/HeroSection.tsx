@@ -26,7 +26,7 @@ export default function HeroSection() {
              
                 <TypewriterText 
                   texts={["IT Transformation", "Disaster Recovery", "Migration", "Backup & Recovery"]}
-                  className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold"
+                  className="bg-gradient-metallic-blue bg-clip-text text-transparent font-bold"
                 />{" "}
       
               </h1>
