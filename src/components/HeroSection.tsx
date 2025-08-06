@@ -55,11 +55,11 @@ export default function HeroSection() {
               <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-muted-foreground justify-center lg:justify-start">
                 <span className="motion-preset-slide-up motion-delay-400">Government</span>
                 <span className="hidden sm:inline">•</span>
-                <span className="motion-preset-slide-up motion-delay-800">Banking & Financial Services</span>
+                <span className="motion-preset-slide-up motion-delay-1000">Banking & Financial Services</span>
                 <span className="hidden sm:inline">•</span>
-                <span className="motion-preset-slide-up motion-delay-1200">Healthcare</span>
+                <span className="motion-preset-slide-up motion-delay-1000">Healthcare</span>
                 <span className="hidden sm:inline">•</span>
-                <span className="motion-preset-slide-up motion-delay-1600">Oil & Gas</span>
+                <span className="motion-preset-slide-up motion-delay-1000">Oil & Gas</span>
                 <span className="hidden sm:inline">•</span>
                 <span className="motion-preset-slide-up motion-delay-2000">Telecommunications</span>
                 <span className="hidden sm:inline">•</span>
@@ -83,7 +83,7 @@ export default function HeroSection() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Data Protection & Continuity</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed className="motion-preset-slide-up motion-delay-1000"">
                         Real-time replication, on premise and cloud backup, and email archiving solutions
                       </p>
                     </div>
@@ -99,7 +99,7 @@ export default function HeroSection() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">DR & Migration Orchestration</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed className="motion-preset-slide-up motion-delay-1000"">
                         Orchestrate and automate the Disaster Recovery and Migration workflow from the discovery level up to the management approval
                       </p>
                     </div>
@@ -115,7 +115,7 @@ export default function HeroSection() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Application Modernization</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed className="motion-preset-slide-up motion-delay-1000"">
                         Legacy app transformation and secure runtime environments
                       </p>
                     </div>
