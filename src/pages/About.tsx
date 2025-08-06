@@ -14,7 +14,7 @@ export default function About() {
         <section className="py-16 bg-gradient-to-b from-primary-light to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-4">Founded 2013</Badge>
+              <Badge className="mb-4 text-lg px-6 py-2 font-semibold">Founded 2013</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 About S2 Management Solutions
               </h1>
