@@ -30,29 +30,29 @@ export default function HeroSection() {
                 />{" "}
       
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 motion-preset-slide-up motion-delay-400">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 As a Value-Added Distributor, S2 enables digital transformation for the modern era through consultancy-driven solutions that modernize your IT infrastructure and business operations.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start motion-preset-slide-up motion-delay-400">
-              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto motion-preset-slide-up motion-delay-400" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" asChild>
                 <Link to="/solutions">
                   Explore Solutions
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto motion-preset-slide-up motion-delay-400" asChild>
-                <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" className="motion-preset-slide-up motion-delay-800" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" asChild>
+                <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">
                   Request Consultation
                 </a>
               </Button>
             </div>
             
             {/* Trust Indicators */}
-            <div className="pt-6 sm:pt-8 border-t border-border/50 motion-preset-slide-up motion-delay-400">
+            <div className="pt-6 sm:pt-8 border-t border-border/50">
               <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">Trusted by enterprises across</p>
-              <div className="motion-preset-slide-up motion-delay-400 flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-muted-foreground justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-muted-foreground justify-center lg:justify-start">
                 <span>Government</span>
                 <span className="hidden sm:inline">•</span>
                 <span>Banking & Financial Services</span>
@@ -91,7 +91,7 @@ export default function HeroSection() {
                 </CardContent>
               </Card>
               
-              <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
+              <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50 motion-preset-slide-up motion-delay-400">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
@@ -99,7 +99,7 @@ export default function HeroSection() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">DR & Migration Orchestration</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed motion-preset-slide-up motion-delay-1000">
                         Orchestrate and automate the Disaster Recovery and Migration workflow from the discovery level up to the management approval
                       </p>
                     </div>
@@ -107,15 +107,15 @@ export default function HeroSection() {
                 </CardContent>
               </Card>
               
-              <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
+              <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50 motion-preset-slide-up motion-delay-400">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
                       <Server className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
-                    <div className="min-w-0">
+                    <div className="min-w-0 motion-preset-slide-up motion-delay-1000">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Application Modernization</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed motion-preset-slide-up motion-delay-400">
                         Legacy app transformation and secure runtime environments
                       </p>
                     </div>
