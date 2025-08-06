@@ -22,7 +22,7 @@ export default function HeroSection() {
           {/* Text Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-             <div className="w-80 min-h-[4rem] flex items-center">
+             <div className="w-80 min-h-[4rem] text-4xl sm:text-5xl lg:text-6xl font-bold tracking-wide flex items-center">
                 <TypewriterText 
                   texts={["High Availability", "Disaster Recovery", "Server Migration", "Backup & Recovery"]}
                   className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold break-words"
