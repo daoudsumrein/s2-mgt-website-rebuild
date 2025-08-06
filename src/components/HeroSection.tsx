@@ -53,20 +53,20 @@ export default function HeroSection() {
             <div className="pt-6 sm:pt-8 border-t border-border/50">
               <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">Trusted by enterprises across</p>
               <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-muted-foreground justify-center lg:justify-start">
-                <span className="motion-preset-slide-up motion-delay-400">Government</span>
-                <span className="hidden sm:inline">•</span>
+                <span className="motion-preset-slide-up motion-delay-1000">Government</span>
+                <span className="hidden sm:inline motion-preset-slide-up motion-delay-2000">•</span>
                 <span className="motion-preset-slide-up motion-delay-1000">Banking & Financial Services</span>
-                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline motion-preset-slide-up motion-delay-2000">•</span>
                 <span className="motion-preset-slide-up motion-delay-1000">Healthcare</span>
-                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline motion-preset-slide-up motion-delay-2000">•</span>
                 <span className="motion-preset-slide-up motion-delay-1000">Oil & Gas</span>
-                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline motion-preset-slide-up motion-delay-2000">•</span>
                 <span className="motion-preset-slide-up motion-delay-1000">Telecommunications</span>
-                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline motion-preset-slide-up motion-delay-2000">•</span>
                 <span className="motion-preset-slide-up motion-delay-1000">Education</span>
-                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline motion-preset-slide-up motion-delay-2000">•</span>
                 <span className="motion-preset-slide-up motion-delay-1000">Manufacturing</span>
-                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline motion-preset-slide-up motion-delay-2000">•</span>
                 <span className="motion-preset-slide-up motion-delay-1000">Critical Infrastructure</span>
               </div>
             </div>
