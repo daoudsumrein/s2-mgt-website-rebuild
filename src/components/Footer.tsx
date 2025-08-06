@@ -23,12 +23,12 @@ const vendors = [
 export default function Footer() {
   return (
     <footer className="bg-muted border-t">
-      <div className="container mx-auto px-4 py-6 md:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
+      <div className="container mx-auto px-3 py-4 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-8">
           {/* Company Info */}
-          <div className="space-y-3 md:space-y-4 sm:col-span-2 lg:col-span-1">
-            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-6 md:h-8 w-auto" />
-            <div className="space-y-1.5 md:space-y-2">
+          <div className="space-y-2 md:space-y-4 sm:col-span-2 lg:col-span-1">
+            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-5 md:h-8 w-auto" />
+            <div className="space-y-1 md:space-y-2">
               <div className="flex items-start space-x-2 text-xs md:text-sm text-muted-foreground">
                 <MapPin className="h-3 md:h-4 w-3 md:w-4 mt-0.5 flex-shrink-0" />
                 <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
@@ -55,9 +55,9 @@ export default function Footer() {
           </div>
 
           {/* Solutions */}
-          <div className="space-y-3 md:space-y-4">
+          <div className="space-y-2 md:space-y-4">
             <h3 className="font-semibold text-sm md:text-base">Solutions</h3>
-            <ul className="space-y-1.5 md:space-y-2">
+            <ul className="space-y-1 md:space-y-2">
               {solutions.map((solution) => (
                 <li key={solution.href}>
                   <Link 
@@ -72,9 +72,9 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="space-y-3 md:space-y-4">
+          <div className="space-y-2 md:space-y-4">
             <h3 className="font-semibold text-sm md:text-base">Services</h3>
-            <ul className="space-y-1.5 md:space-y-2">
+            <ul className="space-y-1 md:space-y-2">
               <li>
                 <Link to="/services" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">
                   All Services
@@ -99,9 +99,9 @@ export default function Footer() {
           </div>
 
           {/* Vendors */}
-          <div className="space-y-3 md:space-y-4">
+          <div className="space-y-2 md:space-y-4">
             <h3 className="font-semibold text-sm md:text-base">Our Vendors</h3>
-            <ul className="space-y-1.5 md:space-y-2">
+            <ul className="space-y-1 md:space-y-2">
               {vendors.map((vendor) => (
                 <li key={vendor.href}>
                   <Link 
@@ -116,9 +116,9 @@ export default function Footer() {
           </div>
 
           {/* Company */}
-          <div className="space-y-3 md:space-y-4">
+          <div className="space-y-2 md:space-y-4">
             <h3 className="font-semibold text-sm md:text-base">Company</h3>
-            <ul className="space-y-1.5 md:space-y-2">
+            <ul className="space-y-1 md:space-y-2">
               <li>
                 <Link to="/about" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">
                   About S2
@@ -131,8 +131,8 @@ export default function Footer() {
               </li>
             </ul>
             
-            <div className="pt-2 md:pt-4">
-              <h4 className="font-medium mb-1.5 md:mb-2 text-sm md:text-base">Partners</h4>
+            <div className="pt-1 md:pt-4">
+              <h4 className="font-medium mb-1 md:mb-2 text-sm md:text-base">Partners</h4>
               <Button variant="outline" size="sm" asChild>
                 <a 
                   href="https://preview--pipeline-pro-portal.lovable.app" 
@@ -148,7 +148,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-6 md:mt-8 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+        <div className="border-t border-border mt-3 md:mt-8 pt-3 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
           <p className="text-xs md:text-sm text-muted-foreground text-center md:text-left">
             © 2024 S2 Management Solutions. All rights reserved.
           </p>
