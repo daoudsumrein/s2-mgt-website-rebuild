@@ -135,9 +135,9 @@ export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 will-change-transform">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex my-2">
+        <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
-            <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-8 w-8 rounded-full object-contain" />
+            <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-16 w-full rounded-16 object-contain" />
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
