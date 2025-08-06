@@ -13,7 +13,7 @@ export default function About() {
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-b from-primary-light to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center motion-preset-slide-up motion-duration-700">
+            <div className="max-w-4xl mx-auto text-center motion-preset-slide-up motion-delay-300">
               <Badge className="mb-4 text-lg px-6 py-2 font-semibold">Founded 2013</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 About S2 Management Solutions
@@ -29,8 +29,8 @@ export default function About() {
         {/* Company Overview */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center motion-preset-slide-up motion-duration-700">
-              <div className="space-y-6 motion-preset-slide-up motion-duration-700 motion-delay-200">
+            <div className="grid lg:grid-cols-2 gap-12 items-center motion-preset-slide-up motion-delay-500">
+              <div className="space-y-6 motion-preset-slide-up motion-delay-700">
                 <h2 className="text-3xl font-bold">Our Mission</h2>
                 <p className="text-lg text-muted-foreground">
                   Since 2013, S2 Management Solutions has been at the forefront of critical IT infrastructure 
@@ -70,7 +70,7 @@ export default function About() {
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-6 motion-preset-slide-up motion-duration-700 motion-delay-400">
+              <div className="grid grid-cols-2 gap-6 motion-preset-slide-up motion-delay-900">
                 <Card className="text-center">
                   <CardContent className="p-6">
                     <Building2 className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -108,9 +108,9 @@ export default function About() {
         </section>
 
         {/* Core Values */}
-        <section className="py-16 bg-muted/30 motion-preset-slide-up motion-duration-700">
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12 motion-preset-slide-up motion-duration-700">
+            <div className="text-center mb-12 motion-preset-slide-up motion-delay-1000">
               <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 The principles that drive every client engagement and solution delivery
@@ -118,7 +118,7 @@ export default function About() {
             </div>
             
             {/* Our Core */}
-            <div className="max-w-4xl mx-auto mb-16 motion-preset-slide-up motion-duration-700 motion-delay-200">
+            <div className="max-w-4xl mx-auto mb-16 motion-preset-slide-up motion-delay-1200">
               <Card className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-center">Our Core</h3>
                 <div className="space-y-6 text-lg text-muted-foreground">
@@ -135,7 +135,7 @@ export default function About() {
               </Card>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto motion-preset-slide-up motion-duration-700 motion-delay-400">
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto motion-preset-slide-up motion-delay-1400">
               <Card>
                 <CardHeader>
                   <CardTitle>Technical Excellence</CardTitle>
@@ -177,7 +177,7 @@ export default function About() {
 
         {/* CTA Section */}
         <section className="py-16">
-          <div className="container mx-auto px-4 text-center motion-preset-slide-up motion-duration-700">
+          <div className="container mx-auto px-4 text-center motion-preset-slide-up motion-delay-1600">
             <h2 className="text-3xl font-bold mb-4">Ready to Partner with S2?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let's discuss how our expertise can help transform your IT infrastructure
