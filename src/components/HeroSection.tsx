@@ -7,7 +7,7 @@ import TypewriterText from "@/components/TypewriterText";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden py-8 sm:py-12">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -18,11 +18,11 @@ export default function HeroSection() {
       
       {/* Content */}
       <div className="container relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-normal">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-normal leading-tight">
                 
                 <TypewriterText 
                   texts={["High\nAvailability", "Disaster\n Recovery", "Server\n Migration", "Backup\n& Recovery"]}
@@ -30,19 +30,19 @@ export default function HeroSection() {
                 />{" "}
       
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 As a Value-Added Distributor, S2 enables digital transformation for the modern era through consultancy-driven solutions that modernize your IT infrastructure and business operations.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg px-8" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" asChild>
                 <Link to="/solutions">
                   Explore Solutions
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" asChild>
                 <a href="https://outlook.office365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">
                   Request Consultation
                 </a>
@@ -50,40 +50,40 @@ export default function HeroSection() {
             </div>
             
             {/* Trust Indicators */}
-            <div className="pt-8 border-t border-border/50">
-              <p className="text-sm text-muted-foreground mb-4">Trusted by enterprises across</p>
-              <div className="flex flex-wrap gap-4 text-sm font-medium text-muted-foreground justify-start">
+            <div className="pt-6 sm:pt-8 border-t border-border/50">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">Trusted by enterprises across</p>
+              <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-muted-foreground justify-center lg:justify-start">
                 <span>Government</span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span>Banking & Financial Services</span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span>Healthcare</span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span>Oil & Gas</span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span>Telecommunications</span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span>Education</span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span>Manufacturing</span>
-                <span>•</span>
+                <span className="hidden sm:inline">•</span>
                 <span>Critical Infrastructure</span>
               </div>
             </div>
           </div>
           
           {/* Feature Cards */}
-          <div className="lg:pl-8">
-            <div className="grid gap-6">
+          <div className="lg:pl-8 mt-8 lg:mt-0">
+            <div className="grid gap-4 sm:gap-6">
               <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50 motion-preset-slide-up motion-delay-400">
-                <CardContent className="p-6 motion-preset-slide-up motion-delay-800">
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
-                      <Shield className="h-6 w-6 text-primary" />
+                <CardContent className="p-4 sm:p-6 motion-preset-slide-up motion-delay-800">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
+                      <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">Data Protection & Continuity</h3>
-                      <p className="text-sm text-muted-foreground">
+                    <div className="min-w-0">
+                      <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Data Protection & Continuity</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Real-time replication, on premise and cloud backup, and email archiving solutions
                       </p>
                     </div>
@@ -92,14 +92,14 @@ export default function HeroSection() {
               </Card>
               
               <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
-                      <Workflow className="h-6 w-6 text-primary" />
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
+                      <Workflow className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">DR & Migration Orchestration</h3>
-                      <p className="text-sm text-muted-foreground">
+                    <div className="min-w-0">
+                      <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">DR & Migration Orchestration</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Orchestrate and automate the Disaster Recovery and Migration workflow from the discovery level up to the management approval
                       </p>
                     </div>
@@ -108,14 +108,14 @@ export default function HeroSection() {
               </Card>
               
               <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-primary-light">
-                      <Server className="h-6 w-6 text-primary" />
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
+                      <Server className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">Application Modernization</h3>
-                      <p className="text-sm text-muted-foreground">
+                    <div className="min-w-0">
+                      <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Application Modernization</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         Legacy app transformation and secure runtime environments
                       </p>
                     </div>
