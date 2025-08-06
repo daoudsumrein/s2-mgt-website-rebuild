@@ -83,7 +83,7 @@ export default function HeroSection() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Data Protection & Continuity</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed motion-preset-slide-up motion-delay-1000">
                         Real-time replication, on premise and cloud backup, and email archiving solutions
                       </p>
                     </div>
@@ -113,9 +113,9 @@ export default function HeroSection() {
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
                       <Server className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
-                    <div className="min-w-0 motion-preset-slide-up motion-delay-1000">
+                    <div className="min-w-0 motion-preset-slide-up motion-delay-400">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Application Modernization</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed motion-preset-slide-up motion-delay-400">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed motion-preset-slide-up motion-delay-1000">
                         Legacy app transformation and secure runtime environments
                       </p>
                     </div>
