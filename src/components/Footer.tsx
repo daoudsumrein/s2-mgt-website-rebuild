@@ -24,46 +24,39 @@ export default function Footer() {
   return (
     <footer className="bg-muted border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 gap-6">
-          {/* Company Info - Full width on mobile, part of grid on desktop */}
-          <div className="space-y-4 md:col-span-full">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between md:space-x-8">
-              <div className="space-y-4 md:max-w-md">
-                <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
-                  <div className="space-y-2">
-                    <div className="flex items-start space-x-2">
-                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                      <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Phone className="h-4 w-4" />
-                      <span>+971 4 123 4567</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-start space-x-2">
-                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                      <span>KSA Office Address Here</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Phone className="h-4 w-4" />
-                      <span>+966 X XXX XXXX</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <Mail className="h-4 w-4" />
-                  <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
-                    info@s2mgt.com
-                  </a>
-                </div>
+        {/* Mobile View */}
+        <div className="md:hidden space-y-6">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
+            <div className="space-y-2">
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>+971 4 123 4567</span>
+              </div>
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>KSA Office Address Here</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>+966 X XXX XXXX</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4" />
+                <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
+                  info@s2mgt.com
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Mobile Collapsible Sections - only show on mobile */}
-          <div className="md:hidden space-y-4">
+          {/* Mobile Collapsible Sections */}
+          <div className="space-y-4">
             {/* Solutions Collapsible */}
             <Collapsible>
               <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
@@ -156,100 +149,129 @@ export default function Footer() {
               </CollapsibleContent>
             </Collapsible>
           </div>
+        </div>
 
-          {/* Desktop Grid - hidden on mobile */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Solutions */}
-            <div className="space-y-4">
-              <h3 className="font-semibold">Solutions</h3>
-              <ul className="space-y-2">
-                {solutions.map((solution) => (
-                  <li key={solution.href}>
-                    <Link 
-                      to={solution.href} 
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {solution.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Services */}
-            <div className="space-y-4">
-              <h3 className="font-semibold">Services</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    All Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/solutions/disaster-recovery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Disaster Recovery
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/solutions/data-protection" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Data Protection
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/solutions/app-modernization" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    App Modernization
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Vendors */}
-            <div className="space-y-4">
-              <h3 className="font-semibold">Our Vendors</h3>
-              <ul className="space-y-2">
-                {vendors.map((vendor) => (
-                  <li key={vendor.href}>
-                    <Link 
-                      to={vendor.href} 
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {vendor.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div className="space-y-4">
-              <h3 className="font-semibold">Company</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    About S2
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-              
-              <div className="pt-4">
-                <h4 className="font-medium mb-2">Partners</h4>
-                <Button variant="outline" size="sm" asChild>
-                  <a 
-                    href="https://preview--pipeline-pro-portal.lovable.app" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    Partner Portal
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </Button>
+        {/* Desktop Grid - 5 columns aligned */}
+        <div className="hidden md:grid md:grid-cols-5 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
+            <div className="space-y-2">
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
               </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>+971 4 123 4567</span>
+              </div>
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>KSA Office Address Here</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>+966 X XXX XXXX</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4" />
+                <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
+                  info@s2mgt.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Solutions */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Solutions</h3>
+            <ul className="space-y-2">
+              {solutions.map((solution) => (
+                <li key={solution.href}>
+                  <Link 
+                    to={solution.href} 
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {solution.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/disaster-recovery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Disaster Recovery
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/data-protection" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Data Protection
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/app-modernization" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  App Modernization
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Vendors */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Our Vendors</h3>
+            <ul className="space-y-2">
+              {vendors.map((vendor) => (
+                <li key={vendor.href}>
+                  <Link 
+                    to={vendor.href} 
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {vendor.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div className="space-y-4">
+            <h3 className="font-semibold">Company</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  About S2
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+            
+            <div className="pt-4">
+              <h4 className="font-medium mb-2">Partners</h4>
+              <Button variant="outline" size="sm" asChild>
+                <a 
+                  href="https://preview--pipeline-pro-portal.lovable.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  Partner Portal
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
