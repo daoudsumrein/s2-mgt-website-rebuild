@@ -23,7 +23,7 @@ export default function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-                <span className="text-foreground">Enterprise</span>{" "}
+             
                 <TypewriterText 
                   texts={["IT Transformation", "Disaster Recovery", "Migration", "Backup & Recovery"]}
                   className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold"
