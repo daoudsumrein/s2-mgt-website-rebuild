@@ -27,9 +27,9 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
-            <p className="text-sm text-muted-foreground max-w-xs">
+            {/* <p className="text-sm text-muted-foreground max-w-xs">
               Value-Added Distributor delivering critical IT transformation projects across MENA region since 2013. Offices in KSA and UAE (HQ).
-            </p>
+            </p> */}
             <div className="space-y-2">
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
