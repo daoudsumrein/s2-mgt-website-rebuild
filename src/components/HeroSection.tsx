@@ -25,10 +25,10 @@ export default function HeroSection() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
              
                 <TypewriterText 
-                  texts={["IT Transformation", "Disaster Recovery", "Migration", "Backup & Recovery"]}
-                  className="bg-gradient-metallic-blue bg-clip-text text-transparent font-bold"
+                  texts={["High-Availability", "Disaster Recovery", "Server Migration", "Backup & Recovery"]}
+                  className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold"
                 />{" "}
-      
+                <br>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
                 As a Value-Added Distributor, S2 enables digital transformation for the modern era through consultancy-driven solutions that modernize your IT infrastructure and business operations.
