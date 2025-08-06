@@ -83,7 +83,7 @@ export default function HeroSection() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Data Protection & Continuity</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed className="motion-preset-slide-up motion-delay-1000"">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed motion-preset-slide-up motion-delay-2000">
                         Real-time replication, on premise and cloud backup, and email archiving solutions
                       </p>
                     </div>
@@ -99,7 +99,7 @@ export default function HeroSection() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">DR & Migration Orchestration</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed className="motion-preset-slide-up motion-delay-1000"">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed motion-preset-slide-up motion-delay-2000">
                         Orchestrate and automate the Disaster Recovery and Migration workflow from the discovery level up to the management approval
                       </p>
                     </div>
@@ -115,7 +115,7 @@ export default function HeroSection() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Application Modernization</h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed className="motion-preset-slide-up motion-delay-1000"">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed motion-preset-slide-up motion-delay-2000">
                         Legacy app transformation and secure runtime environments
                       </p>
                     </div>
