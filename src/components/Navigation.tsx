@@ -137,7 +137,7 @@ export default function Navigation() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
-            <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-10 w-10 rounded-full object-contain" />
+            <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-12 w-12 rounded-full object-contain" />
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
