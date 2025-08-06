@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
+import TypewriterText from "@/components/TypewriterText";
 
 export default function HeroSection() {
   return (
@@ -23,7 +24,10 @@ export default function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="text-foreground">Enterprise</span>{" "}
-                <span className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold">IT Transformation</span>{" "}
+                <TypewriterText 
+                  texts={["IT Transformation", "Disaster Recovery", "Migration", "Backup & Recovery"]}
+                  className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold"
+                />{" "}
                 <span className="text-foreground">for the Modern Era</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
