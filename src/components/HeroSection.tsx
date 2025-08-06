@@ -28,7 +28,7 @@ export default function HeroSection() {
                   texts={["IT Transformation", "Disaster Recovery", "Migration", "Backup & Recovery"]}
                   className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold"
                 />{" "}
-                <span className="text-foreground">for the Modern Era</span>
+      
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
                 As a Value-Added Distributor, S2 enables digital transformation for the modern era through consultancy-driven solutions that modernize your IT infrastructure and business operations.
