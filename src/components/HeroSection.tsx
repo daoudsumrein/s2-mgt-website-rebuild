@@ -61,13 +61,13 @@ export default function HeroSection() {
                 <span className="hidden sm:inline">•</span>
                 <span className="motion-preset-slide-up motion-delay-1000">Oil & Gas</span>
                 <span className="hidden sm:inline">•</span>
-                <span className="motion-preset-slide-up motion-delay-2000">Telecommunications</span>
+                <span className="motion-preset-slide-up motion-delay-1000">Telecommunications</span>
                 <span className="hidden sm:inline">•</span>
-                <span className="motion-preset-slide-up motion-delay-2000">Education</span>
+                <span className="motion-preset-slide-up motion-delay-1000">Education</span>
                 <span className="hidden sm:inline">•</span>
-                <span className="motion-preset-slide-up motion-delay-2000">Manufacturing</span>
+                <span className="motion-preset-slide-up motion-delay-1000">Manufacturing</span>
                 <span className="hidden sm:inline">•</span>
-                <span className="motion-preset-slide-up motion-delay-2000">Critical Infrastructure</span>
+                <span className="motion-preset-slide-up motion-delay-1000">Critical Infrastructure</span>
               </div>
             </div>
           </div>
