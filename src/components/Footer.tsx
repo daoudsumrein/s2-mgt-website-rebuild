@@ -62,7 +62,7 @@ export default function Footer() {
                 <li key={solution.href}>
                   <Link 
                     to={solution.href} 
-                    className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors" 
+                    className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {solution.name}
                   </Link>
