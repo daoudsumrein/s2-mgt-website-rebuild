@@ -79,9 +79,9 @@ const defaultImages = [
 ];
 
 export default function ClientCarousel({ images = defaultImages }: ClientCarouselProps) {
-  // Split images into 5 groups
-  const imagesPerCircle = Math.ceil(images.length / 5);
-  const imageGroups = Array.from({ length: 5 }, (_, i) => 
+  // Split images into 6 groups
+  const imagesPerCircle = Math.ceil(images.length / 6);
+  const imageGroups = Array.from({ length: 6 }, (_, i) => 
     images.slice(i * imagesPerCircle, (i + 1) * imagesPerCircle)
   );
 
@@ -114,11 +114,17 @@ export default function ClientCarousel({ images = defaultImages }: ClientCarouse
         to { transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); }
       }
       
-      .client-carousel-slider-1 { animation: autoRun1 18s linear infinite; }
-      .client-carousel-slider-2 { animation: autoRun2 22s linear infinite; }
-      .client-carousel-slider-3 { animation: autoRun3 20s linear infinite; }
-      .client-carousel-slider-4 { animation: autoRun4 25s linear infinite; }
-      .client-carousel-slider-5 { animation: autoRun5 16s linear infinite; }
+      @keyframes autoRun6 {
+        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
+        to { transform: perspective(1000px) rotateX(-16deg) rotateY(-360deg); }
+      }
+      
+      .client-carousel-slider-1 { animation: autoRun1 35s linear infinite; }
+      .client-carousel-slider-2 { animation: autoRun2 40s linear infinite; }
+      .client-carousel-slider-3 { animation: autoRun3 30s linear infinite; }
+      .client-carousel-slider-4 { animation: autoRun4 45s linear infinite; }
+      .client-carousel-slider-5 { animation: autoRun5 28s linear infinite; }
+      .client-carousel-slider-6 { animation: autoRun6 38s linear infinite; }
       
       .client-carousel-item {
         transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
@@ -166,11 +172,12 @@ export default function ClientCarousel({ images = defaultImages }: ClientCarouse
       {/* Multiple 3D Carousels - Vertical Layout */}
       {imageGroups.map((groupImages, groupIndex) => {
         const positions = [
-          { top: '5%', left: '50%', size: 'w-[120px] h-[150px]' },
-          { top: '20%', left: '50%', size: 'w-[140px] h-[170px]' },
-          { top: '40%', left: '50%', size: 'w-[130px] h-[160px]' },
-          { top: '60%', left: '50%', size: 'w-[110px] h-[140px]' },
-          { top: '75%', left: '50%', size: 'w-[100px] h-[130px]' }
+          { top: '2%', left: '50%', size: 'w-[120px] h-[150px]' },
+          { top: '18%', left: '50%', size: 'w-[140px] h-[170px]' },
+          { top: '34%', left: '50%', size: 'w-[130px] h-[160px]' },
+          { top: '50%', left: '50%', size: 'w-[110px] h-[140px]' },
+          { top: '66%', left: '50%', size: 'w-[100px] h-[130px]' },
+          { top: '82%', left: '50%', size: 'w-[95px] h-[125px]' }
         ];
         
         const position = positions[groupIndex];
