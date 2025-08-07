@@ -119,6 +119,58 @@ export default function Services() {
         <main>
           {/* Hero Section */}
           <section className="py-16 bg-gradient-to-b from-primary-light to-background">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold mb-4">Our Service Delivery Process</h2>
+                  <p className="text-lg text-muted-foreground">
+                    Structured, agile delivery model guaranteeing seamless execution and measurable results
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                      1
+                    </div>
+                    <h3 className="font-semibold mb-2">Assessment</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Comprehensive analysis of current state and requirements
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                      2
+                    </div>
+                    <h3 className="font-semibold mb-2">Design</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Solution architecture and implementation planning
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                      3
+                    </div>
+                    <h3 className="font-semibold mb-2">Implementation</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Execution with testing, training, and knowledge transfer
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                      4
+                    </div>
+                    <h3 className="font-semibold mb-2">Support</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Ongoing optimization and operational handover
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Services Carousel */}
@@ -212,61 +264,6 @@ export default function Services() {
             </div>
           </section>
 
-          {/* Process Overview */}
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">Our Service Delivery Process</h2>
-                  <p className="text-lg text-muted-foreground">
-                    Structured, agile delivery model guaranteeing seamless execution and measurable results
-                  </p>
-                </div>
-
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      1
-                    </div>
-                    <h3 className="font-semibold mb-2">Assessment</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Comprehensive analysis of current state and requirements
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      2
-                    </div>
-                    <h3 className="font-semibold mb-2">Design</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Solution architecture and implementation planning
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      3
-                    </div>
-                    <h3 className="font-semibold mb-2">Implementation</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Execution with testing, training, and knowledge transfer
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      4
-                    </div>
-                    <h3 className="font-semibold mb-2">Support</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Ongoing optimization and operational handover
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
 
         </main>
         <Footer />
