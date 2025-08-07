@@ -155,11 +155,11 @@ export default function Services() {
                   onMouseEnter={() => setIsPaused(true)}
                   onMouseLeave={() => setIsPaused(false)}
                 >
-                  <CarouselContent className="-ml-2 md:-ml-4">
+                  <CarouselContent className="ml-0">
                     {services.map((service, index) => {
                       const IconComponent = service.icon;
                       return (
-                        <CarouselItem key={index} className="pl-2 md:pl-4 basis-full">
+                        <CarouselItem key={index} className="pl-0 basis-full">
                           <div className="p-1">
                             <Card className="h-full bg-gradient-to-br from-background to-muted/30 border-2 hover:shadow-xl transition-all duration-500">
                               <CardContent className="p-0">
