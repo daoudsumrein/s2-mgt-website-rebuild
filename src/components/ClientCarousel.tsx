@@ -82,27 +82,38 @@ export default function ClientCarousel() {
   const row3 = companies.slice(companiesPerRow * 2, companiesPerRow * 3);
   const row4 = companies.slice(companiesPerRow * 3);
 
+  // Duplicate companies to eliminate blank space
+  const duplicatedRow1 = [...row1, ...row1];
+  const duplicatedRow2 = [...row2, ...row2];
+  const duplicatedRow3 = [...row3, ...row3];
+  const duplicatedRow4 = [...row4, ...row4];
+
   return (
     <>
       <style>{`
         @keyframes clientScrollLeft {
-          0% { transform: translateX(50%); }
-          100% { transform: translateX(-53%); }
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
         }
         @keyframes clientScrollRight {
-          0% { transform: translateX(-53%); }
-          100% { transform: translateX(50%); }
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0%); }
         }
         .client-scroll-left {
-          animation: clientScrollLeft 120s linear infinite;
-          animation-fill-mode: backwards;
+          animation: clientScrollLeft 60s linear infinite;
         }
         .client-scroll-right {
-          animation: clientScrollRight 140s linear infinite;
-          animation-fill-mode: backwards;
+          animation: clientScrollRight 70s linear infinite;
+        }
+        .client-scroll-left-slow {
+          animation: clientScrollLeft 80s linear infinite;
+        }
+        .client-scroll-right-fast {
+          animation: clientScrollRight 50s linear infinite;
         }
         @media (max-width: 780px) {
-          .client-scroll-left img, .client-scroll-right img { 
+          .client-scroll-left img, .client-scroll-right img,
+          .client-scroll-left-slow img, .client-scroll-right-fast img { 
             height: 60px !important; 
             max-width: 120px !important;
           }
@@ -111,9 +122,9 @@ export default function ClientCarousel() {
       
       <div className="w-full overflow-hidden bg-card py-8 space-y-6">
         {/* Row 1 - Left to Right */}
-        <div className="flex justify-center">
+        <div className="flex">
           <div className="flex items-center client-scroll-left w-max">
-            {row1.map((company, index) => (
+            {duplicatedRow1.map((company, index) => (
               <div key={`row1-${index}`} className="flex-shrink-0 mx-4">
                 <img 
                   src={company.url} 
@@ -126,9 +137,9 @@ export default function ClientCarousel() {
         </div>
 
         {/* Row 2 - Right to Left */}
-        <div className="flex justify-center">
+        <div className="flex">
           <div className="flex items-center client-scroll-right w-max">
-            {row2.map((company, index) => (
+            {duplicatedRow2.map((company, index) => (
               <div key={`row2-${index}`} className="flex-shrink-0 mx-4">
                 <img 
                   src={company.url} 
@@ -141,9 +152,9 @@ export default function ClientCarousel() {
         </div>
 
         {/* Row 3 - Left to Right (slower) */}
-        <div className="flex justify-center">
-          <div className="flex items-center w-max" style={{ animation: 'clientScrollLeft 160s linear infinite', animationFillMode: 'backwards' }}>
-            {row3.map((company, index) => (
+        <div className="flex">
+          <div className="flex items-center client-scroll-left-slow w-max">
+            {duplicatedRow3.map((company, index) => (
               <div key={`row3-${index}`} className="flex-shrink-0 mx-4">
                 <img 
                   src={company.url} 
@@ -156,9 +167,9 @@ export default function ClientCarousel() {
         </div>
 
         {/* Row 4 - Right to Left (faster) */}
-        <div className="flex justify-center">
-          <div className="flex items-center w-max" style={{ animation: 'clientScrollRight 100s linear infinite', animationFillMode: 'backwards' }}>
-            {row4.map((company, index) => (
+        <div className="flex">
+          <div className="flex items-center client-scroll-right-fast w-max">
+            {duplicatedRow4.map((company, index) => (
               <div key={`row4-${index}`} className="flex-shrink-0 mx-4">
                 <img 
                   src={company.url} 
