@@ -30,7 +30,7 @@ export default function Clients() {
 
           {/* Trust Indicators */}
           <section className="bg-muted/50 rounded-lg p-8 text-center">
-            <h2 className="text-4xl font-bold mb-6">Trusted by Organizations Nationwide</h2>
+            <h2 className="text-2xl font-bold mb-6">Trusted by Organizations Nationwide</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">50+</div>
