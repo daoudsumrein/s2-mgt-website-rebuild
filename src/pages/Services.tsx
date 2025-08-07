@@ -84,7 +84,11 @@ export default function Services() {
     if (!carouselApi) return;
 
     const interval = setInterval(() => {
-      carouselApi.scrollNext();
+      if (carouselApi.canScrollNext()) {
+        carouselApi.scrollNext();
+      } else {
+        carouselApi.scrollTo(0); // Loop back to first slide
+      }
     }, 5000);
 
     return () => clearInterval(interval);
