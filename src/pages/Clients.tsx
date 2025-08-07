@@ -4,23 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import ClientCarousel from "@/components/ClientCarousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const testimonials = [
-  {
-    quote: "S2 Management Solutions transformed our data protection strategy. Their expertise in cybersecurity gave us peace of mind.",
-    company: "Regional Healthcare Network",
-    industry: "Healthcare"
-  },
-  {
-    quote: "The disaster recovery solution implemented by S2 saved us during a critical system failure. Exceptional service and support.",
-    company: "Community Financial Group",
-    industry: "Financial Services"
-  },
-  {
-    quote: "S2's comprehensive approach to IT security has significantly reduced our risk exposure while improving operational efficiency.",
-    company: "Educational Technology District",
-    industry: "Education"
-  }
-];
 
 export default function Clients() {
   return (
@@ -45,27 +28,6 @@ export default function Clients() {
             </p>
           </div>
 
-          {/* Client Success Stories */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              What Our Clients Say
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="h-full">
-                  <CardContent className="p-6">
-                    <blockquote className="text-muted-foreground mb-4 italic">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div>
-                      <div className="font-semibold">{testimonial.company}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.industry}</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
 
           {/* Client Carousel */}
           <section className="mb-16">
