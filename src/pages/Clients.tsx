@@ -3,16 +3,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import ClientCarousel from "@/components/ClientCarousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-
 export default function Clients() {
-  return (
-    <>
-      <SEOHead 
-        title="Our Clients - S2 Management Solutions"
-        description="Discover the diverse range of clients we serve across healthcare, finance, education, and manufacturing sectors with our data protection and cybersecurity solutions."
-        keywords="S2 clients, cybersecurity clients, data protection customers, IT solutions clients"
-      />
+  return <>
+      <SEOHead title="Our Clients - S2 Management Solutions" description="Discover the diverse range of clients we serve across healthcare, finance, education, and manufacturing sectors with our data protection and cybersecurity solutions." keywords="S2 clients, cybersecurity clients, data protection customers, IT solutions clients" />
       <div className="min-h-screen bg-background">
         <Navigation />
         
@@ -31,9 +24,7 @@ export default function Clients() {
 
           {/* Client Carousel */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8">
-              Our Trusted Clients
-            </h2>
+            
             <ClientCarousel />
           </section>
 
@@ -63,6 +54,5 @@ export default function Clients() {
 
         <Footer />
       </div>
-    </>
-  );
+    </>;
 }
