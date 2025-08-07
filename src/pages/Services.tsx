@@ -88,18 +88,25 @@ export default function Services() {
         <Navigation />
         <main>
           {/* Hero Section */}
-          <section className="py-16 bg-gradient-to-b from-primary-light to-background">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="secondary" className="mb-4">Professional Services</Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+          <section className="relative py-20 bg-gradient-to-br from-primary via-primary/90 to-primary/80 overflow-hidden">
+            {/* Background Elements */}
+            <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"}}></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-white/10 to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-white/10 to-transparent rounded-full blur-3xl"></div>
+            
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="max-w-4xl mx-auto text-center text-primary-foreground">
+                <Badge variant="secondary" className="mb-6 bg-white/20 border-white/30 text-white backdrop-blur-sm">
+                  Professional Services
+                </Badge>
+                <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                   Our Services
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8">
-                  At S2 Management Solutions, we tailor our service offerings to meet the unique needs of every organization we support. Backed by deep expertise in cybersecurity, data protection, digital transformation, and business continuity, we deliver strategic, high-impact solutions that empower resilient and secure IT operations. Whether you're navigating complex challenges or pursuing ambitious growth, S2 is your trusted partner in building the technology foundation for lasting success.
+                <p className="text-xl lg:text-2xl text-white/90 mb-10 leading-relaxed">
+                  At S2 Management Solutions, we tailor our service offerings to meet the unique needs of every organization we support. Backed by deep expertise in cybersecurity, data protection, digital transformation, and business continuity.
                 </p>
-                <Button size="lg" asChild>
-                  <a href="/contact">
+                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  <a href="/contact" className="flex items-center">
                     Discuss Your Requirements
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
@@ -109,65 +116,80 @@ export default function Services() {
           </section>
 
           {/* Services Carousel */}
-          <section className="py-16">
+          <section className="py-20 bg-gradient-to-b from-background via-muted/20 to-background">
             <div className="container mx-auto px-4">
               <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">Comprehensive Service Portfolio</h2>
-                  <p className="text-lg text-muted-foreground">
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                    Comprehensive Service Portfolio
+                  </h2>
+                  <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                     From strategic planning to full implementation and ongoing support
                   </p>
                 </div>
 
-                <Carousel className="w-full">
+                <Carousel 
+                  className="w-full" 
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                >
                   <CarouselContent className="-ml-2 md:-ml-4">
                     {services.map((service, index) => {
                       const IconComponent = service.icon;
                       return (
                         <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/1 lg:basis-1/1">
-                          <div className="p-1">
-                            <Card className="h-full bg-gradient-to-br from-background to-muted/30 border-2 hover:shadow-xl transition-all duration-500">
-                              <CardContent className="p-0">
+                          <div className="p-2">
+                            <Card className="group h-full bg-gradient-to-br from-background via-background to-muted/30 border-0 shadow-xl hover:shadow-2xl transition-all duration-700 hover:scale-[1.02] overflow-hidden backdrop-blur-sm">
+                              <CardContent className="p-0 relative">
+                                {/* Animated Background Gradient */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                
                                 {/* Header Section */}
-                                <div className="bg-primary text-primary-foreground p-6 rounded-t-lg">
-                                  <div className="flex items-center space-x-4 mb-4">
-                                    <div className="p-3 rounded-lg bg-primary-foreground/20">
-                                      <IconComponent className="h-8 w-8" />
+                                <div className="relative bg-gradient-to-br from-primary to-primary/80 text-primary-foreground p-8">
+                                  {/* Decorative Elements */}
+                                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl transform translate-x-16 -translate-y-16"></div>
+                                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full blur-xl transform -translate-x-8 translate-y-8"></div>
+                                  
+                                  <div className="relative z-10 flex items-center space-x-6 mb-6">
+                                    <div className="p-4 rounded-2xl bg-white/20 backdrop-blur-sm group-hover:bg-white/30 transition-all duration-500 group-hover:scale-110">
+                                      <IconComponent className="h-10 w-10 group-hover:rotate-6 transition-transform duration-500" />
                                     </div>
                                     <div>
-                                      <h3 className="text-2xl font-bold">{service.title}</h3>
-                                      <p className="text-primary-foreground/80">{service.description}</p>
+                                      <h3 className="text-3xl font-bold mb-2">{service.title}</h3>
+                                      <p className="text-primary-foreground/90 text-lg">{service.description}</p>
                                     </div>
                                   </div>
                                 </div>
 
                                 {/* Content Section */}
-                                <div className="p-6 space-y-6">
+                                <div className="relative p-8 space-y-8">
                                   <div className="prose max-w-none">
-                                    <p className="text-muted-foreground leading-relaxed">
+                                    <p className="text-muted-foreground leading-relaxed text-lg">
                                       {service.content}
                                     </p>
                                   </div>
 
                                   {/* Key Capabilities */}
-                                  <div className="space-y-4">
-                                    <h4 className="font-semibold text-lg">Key Capabilities:</h4>
-                                    <div className="grid grid-cols-1 gap-3">
+                                  <div className="space-y-6">
+                                    <h4 className="font-bold text-xl text-foreground">Key Capabilities:</h4>
+                                    <div className="grid grid-cols-1 gap-4">
                                       {service.features.map((feature, featureIndex) => (
-                                        <div key={featureIndex} className="flex items-start space-x-3">
-                                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                          <span className="text-sm font-medium">{feature}</span>
+                                        <div key={featureIndex} className="group/item flex items-start space-x-4 p-3 rounded-lg hover:bg-muted/50 transition-all duration-300">
+                                          <div className="w-3 h-3 bg-gradient-to-r from-primary to-primary/60 rounded-full mt-1 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300"></div>
+                                          <span className="font-medium text-foreground group-hover/item:text-primary transition-colors duration-300">{feature}</span>
                                         </div>
                                       ))}
                                     </div>
                                   </div>
 
                                   {/* CTA Button */}
-                                  <div className="pt-4">
-                                    <Button asChild className="w-full">
-                                      <a href="/contact">
+                                  <div className="pt-6">
+                                    <Button asChild className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 shadow-lg hover:shadow-xl transition-all duration-300 text-lg py-6">
+                                      <a href="/contact" className="flex items-center justify-center">
                                         Learn More About {service.title}
-                                        <ArrowRight className="ml-2 h-4 w-4" />
+                                        <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                                       </a>
                                     </Button>
                                   </div>
@@ -179,9 +201,9 @@ export default function Services() {
                       );
                     })}
                   </CarouselContent>
-                  <div className="flex justify-center mt-8 space-x-4">
-                    <CarouselPrevious className="relative translate-y-0 left-0" />
-                    <CarouselNext className="relative translate-y-0 right-0" />
+                  <div className="flex justify-center mt-12 space-x-6">
+                    <CarouselPrevious className="relative translate-y-0 left-0 w-14 h-14 border-2 bg-background hover:bg-primary hover:text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300" />
+                    <CarouselNext className="relative translate-y-0 right-0 w-14 h-14 border-2 bg-background hover:bg-primary hover:text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300" />
                   </div>
                 </Carousel>
               </div>
@@ -189,53 +211,67 @@ export default function Services() {
           </section>
 
           {/* Process Overview */}
-          <section className="py-16">
+          <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/20">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">Our Service Delivery Process</h2>
-                  <p className="text-lg text-muted-foreground">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                    Our Service Delivery Process
+                  </h2>
+                  <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                     Structured, agile delivery model guaranteeing seamless execution and measurable results
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      1
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="group text-center p-6 rounded-2xl bg-background/50 backdrop-blur-sm hover:bg-background/80 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:scale-105">
+                    <div className="relative mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 text-primary-foreground rounded-2xl flex items-center justify-center mx-auto font-bold text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-6">
+                        1
+                      </div>
+                      <div className="absolute -inset-4 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
-                    <h3 className="font-semibold mb-2">Assessment</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors duration-300">Assessment</h3>
+                    <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                       Comprehensive analysis of current state and requirements
                     </p>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      2
+                  <div className="group text-center p-6 rounded-2xl bg-background/50 backdrop-blur-sm hover:bg-background/80 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:scale-105">
+                    <div className="relative mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 text-primary-foreground rounded-2xl flex items-center justify-center mx-auto font-bold text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-6">
+                        2
+                      </div>
+                      <div className="absolute -inset-4 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
-                    <h3 className="font-semibold mb-2">Design</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors duration-300">Design</h3>
+                    <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                       Solution architecture and implementation planning
                     </p>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      3
+                  <div className="group text-center p-6 rounded-2xl bg-background/50 backdrop-blur-sm hover:bg-background/80 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:scale-105">
+                    <div className="relative mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 text-primary-foreground rounded-2xl flex items-center justify-center mx-auto font-bold text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-6">
+                        3
+                      </div>
+                      <div className="absolute -inset-4 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
-                    <h3 className="font-semibold mb-2">Implementation</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors duration-300">Implementation</h3>
+                    <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                       Execution with testing, training, and knowledge transfer
                     </p>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      4
+                  <div className="group text-center p-6 rounded-2xl bg-background/50 backdrop-blur-sm hover:bg-background/80 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:scale-105">
+                    <div className="relative mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 text-primary-foreground rounded-2xl flex items-center justify-center mx-auto font-bold text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-6">
+                        4
+                      </div>
+                      <div className="absolute -inset-4 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
-                    <h3 className="font-semibold mb-2">Support</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors duration-300">Support</h3>
+                    <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                       Ongoing optimization and operational handover
                     </p>
                   </div>
@@ -245,25 +281,34 @@ export default function Services() {
           </section>
 
           {/* CTA */}
-          <section className="py-16 bg-primary text-primary-foreground">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                Whether you're migrating to the cloud, implementing disaster recovery, or modernizing your infrastructure, 
-                S2's structured delivery model ensures seamless execution, minimal disruption, and measurable results.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild>
-                  <a href="/contact">
-                    Start Your Project
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                  <a href="/solutions">
-                    View Our Solutions
-                  </a>
-                </Button>
+          <section className="relative py-20 bg-gradient-to-br from-primary via-primary/90 to-primary/80 overflow-hidden">
+            {/* Background Elements */}
+            <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20l20-20H20v20zM0 40l20-20v20H0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"}}></div>
+            <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-white/10 to-transparent rounded-full blur-3xl"></div>
+            
+            <div className="container mx-auto px-4 text-center relative z-10">
+              <div className="max-w-4xl mx-auto text-primary-foreground">
+                <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
+                  Ready to Transform Your IT Infrastructure?
+                </h2>
+                <p className="text-xl lg:text-2xl mb-10 max-w-3xl mx-auto text-white/90 leading-relaxed">
+                  Whether you're migrating to the cloud, implementing disaster recovery, or modernizing your infrastructure, 
+                  S2's structured delivery model ensures seamless execution, minimal disruption, and measurable results.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-lg py-6 px-8">
+                    <a href="/contact" className="flex items-center">
+                      Start Your Project
+                      <ArrowRight className="ml-3 h-5 w-5" />
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="outline" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 text-lg py-6 px-8">
+                    <a href="/solutions">
+                      View Our Solutions
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </section>
