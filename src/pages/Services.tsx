@@ -80,9 +80,10 @@ const services = [
 export default function Services() {
   const [carouselApi, setCarouselApi] = useState(null);
   const [direction, setDirection] = useState('forward'); // Track direction
+  const [isPaused, setIsPaused] = useState(false); // Track pause state
 
   useEffect(() => {
-    if (!carouselApi) return;
+    if (!carouselApi || isPaused) return;
 
     const interval = setInterval(() => {
       if (direction === 'forward') {
@@ -103,7 +104,7 @@ export default function Services() {
     }, 10000);
 
     return () => clearInterval(interval);
-  }, [carouselApi, direction]);
+  }, [carouselApi, direction, isPaused]);
 
   return (
     <>
@@ -148,7 +149,12 @@ export default function Services() {
                   </p>
                 </div>
 
-                <Carousel className="w-full" setApi={setCarouselApi}>
+                <Carousel 
+                  className="w-full" 
+                  setApi={setCarouselApi}
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
+                >
                   <CarouselContent className="-ml-2 md:-ml-4">
                     {services.map((service, index) => {
                       const IconComponent = service.icon;
