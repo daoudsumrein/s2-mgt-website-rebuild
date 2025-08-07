@@ -76,10 +76,16 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           position: relative;
           background: hsl(var(--background));
           display: flex;
+          flex-direction: column;
+        }
+        @media (min-width: 768px) {
+          .stack-area {
+            flex-direction: row;
+          }
         }
         .left {
           height: 100vh;
-          flex-basis: 50%;
+          flex-basis: 100%;
           position: sticky;
           top: 0;
           left: 0;
@@ -88,27 +94,49 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           justify-content: center;
           box-sizing: border-box;
           flex-direction: column;
+          padding: 1rem;
+        }
+        @media (min-width: 768px) {
+          .left {
+            flex-basis: 50%;
+            padding: 2rem;
+          }
         }
         .right {
           height: 100vh;
-          flex-basis: 50%;
+          flex-basis: 100%;
           position: sticky;
           top: 0;
         }
+        @media (min-width: 768px) {
+          .right {
+            flex-basis: 50%;
+          }
+        }
         .card {
-          width: 350px;
-          height: 350px;
-          border-radius: 25px;
+          width: 280px;
+          height: 280px;
+          border-radius: 20px;
           margin-bottom: 10px;
           position: absolute;
-          top: calc(50% - 175px);
-          left: calc(50% - 175px);
+          top: calc(50% - 140px);
+          left: calc(50% - 140px);
           transition: 0.5s ease-in-out;
           box-sizing: border-box;
-          padding: 35px;
+          padding: 24px;
           display: flex;
           justify-content: space-between;
           flex-direction: column;
+        }
+        @media (min-width: 768px) {
+          .card {
+            width: 350px;
+            height: 350px;
+            border-radius: 25px;
+            top: calc(50% - 175px);
+            left: calc(50% - 175px);
+            padding: 35px;
+          }
         }
         .card:nth-child(1) {
           background: hsl(var(--primary));
@@ -126,25 +154,37 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           transform-origin: bottom left;
         }
         .sub {
-          font-size: 14px;
+          font-size: 12px;
           font-weight: 700;
           color: white;
-          margin-bottom: 8px;
+          margin-bottom: 6px;
+        }
+        @media (min-width: 768px) {
+          .sub {
+            font-size: 14px;
+            margin-bottom: 8px;
+          }
         }
         .content {
-          font-size: 24px;
+          font-size: 18px;
           font-weight: 700;
-          line-height: 28px;
+          line-height: 22px;
           color: white;
+        }
+        @media (min-width: 768px) {
+          .content {
+            font-size: 24px;
+            line-height: 28px;
+          }
         }
       `}</style>
 
       <div className="stack-area">
         <div className="left">
-          <div className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
+          <div className="text-2xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight text-foreground text-center md:text-left">
             Our Services
           </div>
-          <div className="max-w-lg text-lg text-muted-foreground mb-8">
+          <div className="max-w-lg text-base sm:text-lg text-muted-foreground mb-8 text-center md:text-left px-4 md:px-0">
             From strategic planning to full implementation and ongoing support, 
             we deliver comprehensive solutions tailored to your business needs.
             <br />
