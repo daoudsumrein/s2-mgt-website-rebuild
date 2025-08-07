@@ -119,23 +119,6 @@ export default function Services() {
         <main>
           {/* Hero Section */}
           <section className="py-16 bg-gradient-to-b from-primary-light to-background">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="secondary" className="mb-4">Professional Services</Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                  Our Services
-                </h1>
-                <p className="text-xl text-muted-foreground mb-8">
-                  At S2 Management Solutions, we tailor our service offerings to meet the unique needs of every organization we support. Backed by deep expertise in cybersecurity, data protection, digital transformation, and business continuity, we deliver strategic, high-impact solutions that empower resilient and secure IT operations. Whether you're navigating complex challenges or pursuing ambitious growth, S2 is your trusted partner in building the technology foundation for lasting success.
-                </p>
-                <Button size="lg" asChild>
-                  <a href="/contact">
-                    Discuss Your Requirements
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-              </div>
-            </div>
           </section>
 
           {/* Services Carousel */}
