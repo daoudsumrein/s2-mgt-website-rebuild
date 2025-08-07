@@ -79,20 +79,31 @@ const services = [
 
 export default function Services() {
   const [carouselApi, setCarouselApi] = useState(null);
+  const [direction, setDirection] = useState('forward'); // Track direction
 
   useEffect(() => {
     if (!carouselApi) return;
 
     const interval = setInterval(() => {
-      if (carouselApi.canScrollNext()) {
-        carouselApi.scrollNext();
+      if (direction === 'forward') {
+        if (carouselApi.canScrollNext()) {
+          carouselApi.scrollNext();
+        } else {
+          setDirection('backward'); // Switch to reverse
+          carouselApi.scrollPrev();
+        }
       } else {
-        carouselApi.scrollTo(0); // Loop back to first slide
+        if (carouselApi.canScrollPrev()) {
+          carouselApi.scrollPrev();
+        } else {
+          setDirection('forward'); // Switch to forward
+          carouselApi.scrollNext();
+        }
       }
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [carouselApi]);
+  }, [carouselApi, direction]);
 
   return (
     <>
@@ -142,7 +153,7 @@ export default function Services() {
                     {services.map((service, index) => {
                       const IconComponent = service.icon;
                       return (
-                        <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/1 lg:basis-1/1">
+                        <CarouselItem key={index} className="pl-2 md:pl-4 basis-full">
                           <div className="p-1">
                             <Card className="h-full bg-gradient-to-br from-background to-muted/30 border-2 hover:shadow-xl transition-all duration-500">
                               <CardContent className="p-0">
@@ -198,8 +209,14 @@ export default function Services() {
                     })}
                   </CarouselContent>
                   <div className="flex justify-center mt-8 space-x-4">
-                    <CarouselPrevious className="relative translate-y-0 left-0" />
-                    <CarouselNext className="relative translate-y-0 right-0" />
+                    <CarouselPrevious className="relative translate-y-0 left-0 hidden sm:flex" />
+                    <CarouselNext className="relative translate-y-0 right-0 hidden sm:flex" />
+                  </div>
+                  {/* Mobile indicators */}
+                  <div className="flex justify-center mt-4 space-x-2 sm:hidden">
+                    {services.map((_, index) => (
+                      <div key={index} className="w-2 h-2 bg-muted rounded-full"></div>
+                    ))}
                   </div>
                 </Carousel>
               </div>
