@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -18,6 +19,7 @@ interface StackingCardsProps {
 
 export default function StackingCards({ cards }: StackingCardsProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const checkMobile = () => {
@@ -223,7 +225,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
             From strategic planning to full implementation and ongoing support, 
             we deliver comprehensive solutions tailored to your business needs.
             <br />
-            <Button size="lg" className="mt-6 group">
+            <Button size="lg" className="mt-6 group" onClick={() => navigate('/vendors')}>
               See More Details
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
