@@ -36,25 +36,39 @@ export default function StackingCards({ cards }: StackingCardsProps) {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!stackAreaRef.current) return;
+    const cards = document.querySelectorAll(".card");
+    const stackArea = document.querySelector(".stack-area");
 
-      const distance = window.innerHeight * 0.5;
-      const topVal = stackAreaRef.current.getBoundingClientRect().top;
+    function rotateCards() {
+      let angle = 0;
+      cards.forEach((card, index) => {
+        const cardElement = card as HTMLElement;
+        if (cardElement.classList.contains("away")) {
+          cardElement.style.transform = `translateY(-120vh) rotate(-48deg)`;
+        } else {
+          cardElement.style.transform = ` rotate(${angle}deg)`;
+          angle = angle - 10;
+          cardElement.style.zIndex = (cards.length - index).toString();
+        }
+      });
+    }
+
+    const handleScroll = () => {
+      if (!stackArea) return;
+
+      let distance = window.innerHeight * 0.5;
+      let topVal = stackArea.getBoundingClientRect().top;
       let index = -1 * (topVal / distance + 1);
       index = Math.floor(index);
 
-      // Update classes for each card
-      cardRefs.current.forEach((card, i) => {
-        if (card) {
-          if (i <= index) {
-            card.classList.add("away");
-          } else {
-            card.classList.remove("away");
-          }
+      for (let i = 0; i < cards.length; i++) {
+        const cardElement = cards[i] as HTMLElement;
+        if (i <= index) {
+          cardElement.classList.add("away");
+        } else {
+          cardElement.classList.remove("away");
         }
-      });
-
+      }
       rotateCards();
     };
 
@@ -66,7 +80,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
   }, [cards.length]);
 
   return (
-    <div ref={stackAreaRef} className="relative w-full bg-background" style={{ height: "300vh" }}>
+    <div ref={stackAreaRef} className="stack-area relative w-full bg-background" style={{ height: "300vh" }}>
       <div className="flex w-full h-screen">
         {/* Left Side - Fixed Content */}
         <div className="flex-1 sticky top-0 left-0 h-screen flex items-center justify-center p-8">
