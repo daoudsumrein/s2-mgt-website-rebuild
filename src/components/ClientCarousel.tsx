@@ -75,95 +75,31 @@ const companies = [
 ];
 
 export default function ClientCarousel() {
-  // Split companies into 4 rows
-  const companiesPerRow = Math.ceil(companies.length / 4);
-  const row1 = companies.slice(0, companiesPerRow);
-  const row2 = companies.slice(companiesPerRow, companiesPerRow * 2);
-  const row3 = companies.slice(companiesPerRow * 2, companiesPerRow * 3);
-  const row4 = companies.slice(companiesPerRow * 3);
-
   return (
     <>
       <style>{`
-        @keyframes clientScrollLeft {
+        @keyframes clientScroll {
           0% { transform: translateX(50%); }
           100% { transform: translateX(-53%); }
         }
-        @keyframes clientScrollRight {
-          0% { transform: translateX(-53%); }
-          100% { transform: translateX(50%); }
-        }
-        .client-scroll-left {
-          animation: clientScrollLeft 120s linear infinite;
-          animation-fill-mode: backwards;
-        }
-        .client-scroll-right {
-          animation: clientScrollRight 140s linear infinite;
+        .client-scroll {
+          animation: clientScroll 160s linear infinite;
           animation-fill-mode: backwards;
         }
         @media (max-width: 780px) {
-          .client-scroll-left img, .client-scroll-right img { 
-            height: 60px !important; 
-            max-width: 120px !important;
-          }
+          .client-scroll img { height: 90px !important; }
         }
       `}</style>
       
-      <div className="w-full overflow-hidden bg-card py-8 space-y-6">
-        {/* Row 1 - Left to Right */}
+      <div className="w-full overflow-hidden bg-card py-5">
         <div className="flex justify-center">
-          <div className="flex items-center client-scroll-left w-max">
-            {row1.map((company, index) => (
-              <div key={`row1-${index}`} className="flex-shrink-0 mx-4">
+          <div className="flex items-center client-scroll w-max">
+            {companies.map((company, index) => (
+              <div key={index} className="flex-shrink-0 mx-5">
                 <img 
                   src={company.url} 
                   alt={company.name}
-                  className="h-20 w-auto max-w-40 md:h-32 md:max-w-48 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Row 2 - Right to Left */}
-        <div className="flex justify-center">
-          <div className="flex items-center client-scroll-right w-max">
-            {row2.map((company, index) => (
-              <div key={`row2-${index}`} className="flex-shrink-0 mx-4">
-                <img 
-                  src={company.url} 
-                  alt={company.name}
-                  className="h-20 w-auto max-w-40 md:h-32 md:max-w-48 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Row 3 - Left to Right (slower) */}
-        <div className="flex justify-center">
-          <div className="flex items-center w-max" style={{ animation: 'clientScrollLeft 160s linear infinite', animationFillMode: 'backwards' }}>
-            {row3.map((company, index) => (
-              <div key={`row3-${index}`} className="flex-shrink-0 mx-4">
-                <img 
-                  src={company.url} 
-                  alt={company.name}
-                  className="h-20 w-auto max-w-40 md:h-32 md:max-w-48 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Row 4 - Right to Left (faster) */}
-        <div className="flex justify-center">
-          <div className="flex items-center w-max" style={{ animation: 'clientScrollRight 100s linear infinite', animationFillMode: 'backwards' }}>
-            {row4.map((company, index) => (
-              <div key={`row4-${index}`} className="flex-shrink-0 mx-4">
-                <img 
-                  src={company.url} 
-                  alt={company.name}
-                  className="h-20 w-auto max-w-40 md:h-32 md:max-w-48 object-contain"
+                  className="h-32 w-auto max-w-64 md:h-64 md:max-w-64 object-contain"
                 />
               </div>
             ))}
