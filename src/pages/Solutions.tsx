@@ -104,9 +104,9 @@ export default function Solutions() {
                       <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
                         Solutions Portfolio
                       </Badge>
-                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        Two-Pillar Solution Portfolio
-                      </h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
+            Two-Pillar Solution Portfolio
+          </h1>
                       <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
                         S2 delivers comprehensive solutions across two core areas: Data Protection and Cybersecurity, providing complete coverage for your enterprise infrastructure needs.
                       </p>
