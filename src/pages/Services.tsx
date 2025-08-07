@@ -100,7 +100,7 @@ export default function Services() {
           carouselApi.scrollNext();
         }
       }
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [carouselApi, direction]);
