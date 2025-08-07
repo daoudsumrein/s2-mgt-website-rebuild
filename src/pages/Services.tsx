@@ -199,12 +199,12 @@ export default function Services() {
 
                                   {/* CTA Button */}
                                   <div className="pt-4">
-                                    <Button asChild className="w-full">
-                                      <a href="/contact">
-                                        Learn More About {service.title}
-                                        <ArrowRight className="ml-2 h-4 w-4" />
-                                      </a>
-                                    </Button>
+                                     <Button asChild className="w-full">
+                                       <a href="/contact">
+                                         {service.title}
+                                         <ArrowRight className="ml-2 h-4 w-4" />
+                                       </a>
+                                     </Button>
                                   </div>
                                 </div>
                               </CardContent>
