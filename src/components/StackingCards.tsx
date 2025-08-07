@@ -126,14 +126,15 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           transform-origin: bottom left;
         }
         .sub {
-          font-size: 20px;
+          font-size: 14px;
           font-weight: 700;
           color: white;
+          margin-bottom: 8px;
         }
         .content {
-          font-size: 44px;
+          font-size: 24px;
           font-weight: 700;
-          line-height: 54px;
+          line-height: 28px;
           color: white;
         }
       `}</style>
