@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 interface ClientCarouselProps {
   images?: string[];
@@ -79,38 +79,60 @@ const defaultImages = [
 ];
 
 export default function ClientCarousel({ images = defaultImages }: ClientCarouselProps) {
-  const carouselRef = useRef<HTMLDivElement>(null);
+  // Split images into 5 groups
+  const imagesPerCircle = Math.ceil(images.length / 5);
+  const imageGroups = Array.from({ length: 5 }, (_, i) => 
+    images.slice(i * imagesPerCircle, (i + 1) * imagesPerCircle)
+  );
 
   useEffect(() => {
     // Add CSS custom properties and styles
     const style = document.createElement('style');
     style.textContent = `
-      @keyframes autoRun {
-        from {
-          transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-        }
-        to {
-          transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
-        }
+      @keyframes autoRun1 {
+        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
+        to { transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); }
       }
       
-      .client-carousel-slider {
-        animation: autoRun 20s linear infinite;
+      @keyframes autoRun2 {
+        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
+        to { transform: perspective(1000px) rotateX(-16deg) rotateY(-360deg); }
       }
+      
+      @keyframes autoRun3 {
+        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
+        to { transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); }
+      }
+      
+      @keyframes autoRun4 {
+        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
+        to { transform: perspective(1000px) rotateX(-16deg) rotateY(-360deg); }
+      }
+      
+      @keyframes autoRun5 {
+        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
+        to { transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); }
+      }
+      
+      .client-carousel-slider-1 { animation: autoRun1 18s linear infinite; }
+      .client-carousel-slider-2 { animation: autoRun2 22s linear infinite; }
+      .client-carousel-slider-3 { animation: autoRun3 20s linear infinite; }
+      .client-carousel-slider-4 { animation: autoRun4 25s linear infinite; }
+      .client-carousel-slider-5 { animation: autoRun5 16s linear infinite; }
       
       .client-carousel-item {
-        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
       }
       
       @media screen and (max-width: 1023px) {
         .client-carousel-item {
-          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(250px);
         }
       }
       
       @media screen and (max-width: 767px) {
         .client-carousel-item {
-          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
+          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(150px);
         }
       }
     `;
@@ -141,33 +163,49 @@ export default function ClientCarousel({ images = defaultImages }: ClientCarouse
         }}
       />
 
-      {/* 3D Carousel */}
-      <div 
-        ref={carouselRef}
-        className="client-carousel-slider absolute w-[200px] h-[250px] top-[10%] left-1/2 transform -translate-x-1/2 md:w-[160px] md:h-[200px] md:left-1/2 md:-translate-x-20 sm:w-[100px] sm:h-[150px] sm:-translate-x-12 z-20"
-        style={{
-          transformStyle: 'preserve-3d',
-          transform: 'perspective(1000px)',
-          '--quantity': images.length
-        } as React.CSSProperties & { '--quantity': number }}
-      >
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className="client-carousel-item absolute inset-0"
+      {/* Multiple 3D Carousels */}
+      {imageGroups.map((groupImages, groupIndex) => {
+        const positions = [
+          { top: '15%', left: '20%', size: 'w-[120px] h-[150px]' },
+          { top: '10%', left: '50%', size: 'w-[140px] h-[170px]' },
+          { top: '15%', left: '80%', size: 'w-[120px] h-[150px]' },
+          { top: '45%', left: '30%', size: 'w-[100px] h-[130px]' },
+          { top: '45%', left: '70%', size: 'w-[100px] h-[130px]' }
+        ];
+        
+        const position = positions[groupIndex];
+        
+        return (
+          <div 
+            key={groupIndex}
+            className={`client-carousel-slider-${groupIndex + 1} absolute ${position.size} md:w-[80px] md:h-[100px] sm:w-[60px] sm:h-[80px] z-20 transform -translate-x-1/2`}
             style={{
-              '--position': index + 1,
-              '--quantity': images.length
-            } as React.CSSProperties & { '--position': number; '--quantity': number }}
+              transformStyle: 'preserve-3d',
+              transform: 'perspective(1000px)',
+              '--quantity': groupImages.length,
+              top: position.top,
+              left: position.left
+            } as React.CSSProperties & { '--quantity': number }}
           >
-            <img
-              src={image}
-              alt={`Client ${index + 1}`}
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
+            {groupImages.map((image, index) => (
+              <div
+                key={index}
+                className="client-carousel-item absolute inset-0"
+                style={{
+                  '--position': index + 1,
+                  '--quantity': groupImages.length
+                } as React.CSSProperties & { '--position': number; '--quantity': number }}
+              >
+                <img
+                  src={image}
+                  alt={`Client ${groupIndex * imagesPerCircle + index + 1}`}
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        );
+      })}
 
       {/* Content */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1400px] h-max pb-24 flex flex-wrap justify-between items-center z-10 px-4">
