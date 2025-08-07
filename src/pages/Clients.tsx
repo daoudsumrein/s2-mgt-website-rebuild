@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import ClientCarousel from "@/components/ClientCarousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Users, Globe, Award } from "lucide-react";
@@ -84,17 +85,10 @@ export default function Clients() {
       <div className="min-h-screen bg-background">
         <Navigation />
         
+        {/* 3D Carousel Hero Section */}
+        <ClientCarousel />
+        
         <main className="container mx-auto px-4 py-16">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
-              Our Valued <span className="text-primary">Clients</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We proudly serve organizations across multiple industries, providing tailored 
-              data protection and cybersecurity solutions that meet their unique needs.
-            </p>
-          </div>
 
           {/* Client Categories */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
