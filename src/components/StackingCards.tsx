@@ -1,5 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight } from "lucide-react";
 
 interface StackingCard {
@@ -15,9 +17,23 @@ interface StackingCardsProps {
 }
 
 export default function StackingCards({ cards }: StackingCardsProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // Skip scroll animation on mobile
+
     const handleScroll = () => {
-      const cards = document.querySelectorAll(".card");
+      const cards = document.querySelectorAll(".desktop-card");
       const stackArea = document.querySelector(".stack-area");
 
       function rotateCards() {
@@ -52,8 +68,8 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       rotateCards();
     };
 
-    // Initial setup
-    const cards = document.querySelectorAll(".card");
+    // Initial setup for desktop
+    const cards = document.querySelectorAll(".desktop-card");
     let angle = 0;
     cards.forEach((card, index) => {
       const cardElement = card as HTMLElement;
@@ -64,11 +80,66 @@ export default function StackingCards({ cards }: StackingCardsProps) {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMobile]);
 
+  // Mobile Design
+  if (isMobile) {
+    return (
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-foreground">Our Services</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              From strategic planning to full implementation and ongoing support, 
+              we deliver comprehensive solutions tailored to your business needs.
+            </p>
+          </div>
+
+          <Carousel className="w-full max-w-sm mx-auto">
+            <CarouselContent>
+              {cards.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <CarouselItem key={index}>
+                    <Card className="h-96">
+                      <CardHeader className="text-center pb-4">
+                        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                          <IconComponent className="h-8 w-8 text-primary-foreground" />
+                        </div>
+                        <h3 className="text-xl font-bold">{service.title}</h3>
+                      </CardHeader>
+                      <CardContent className="text-center">
+                        <p className="text-muted-foreground leading-relaxed">
+                          {service.description}
+                        </p>
+                        <Button variant="outline" className="mt-4 w-full">
+                          Learn More
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+
+          <div className="text-center mt-8">
+            <Button size="lg" className="group">
+              View All Services
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop Design
   return (
     <>
-      {/* Add the required CSS styles */}
+      {/* Add the required CSS styles for desktop */}
       <style>{`
         .stack-area {
           width: 100%;
@@ -76,16 +147,10 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           position: relative;
           background: hsl(var(--background));
           display: flex;
-          flex-direction: column;
-        }
-        @media (min-width: 768px) {
-          .stack-area {
-            flex-direction: row;
-          }
         }
         .left {
           height: 100vh;
-          flex-basis: 100%;
+          flex-basis: 50%;
           position: sticky;
           top: 0;
           left: 0;
@@ -94,97 +159,67 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           justify-content: center;
           box-sizing: border-box;
           flex-direction: column;
-          padding: 1rem;
-        }
-        @media (min-width: 768px) {
-          .left {
-            flex-basis: 50%;
-            padding: 2rem;
-          }
+          padding: 2rem;
         }
         .right {
           height: 100vh;
-          flex-basis: 100%;
+          flex-basis: 50%;
           position: sticky;
           top: 0;
         }
-        @media (min-width: 768px) {
-          .right {
-            flex-basis: 50%;
-          }
-        }
-        .card {
-          width: 280px;
-          height: 280px;
-          border-radius: 20px;
+        .desktop-card {
+          width: 350px;
+          height: 350px;
+          border-radius: 25px;
           margin-bottom: 10px;
           position: absolute;
-          top: calc(50% - 140px);
-          left: calc(50% - 140px);
+          top: calc(50% - 175px);
+          left: calc(50% - 175px);
           transition: 0.5s ease-in-out;
           box-sizing: border-box;
-          padding: 24px;
+          padding: 35px;
           display: flex;
           justify-content: space-between;
           flex-direction: column;
         }
-        @media (min-width: 768px) {
-          .card {
-            width: 350px;
-            height: 350px;
-            border-radius: 25px;
-            top: calc(50% - 175px);
-            left: calc(50% - 175px);
-            padding: 35px;
-          }
-        }
-        .card:nth-child(1) {
+        .desktop-card:nth-child(1) {
           background: hsl(var(--primary));
         }
-        .card:nth-child(2) {
+        .desktop-card:nth-child(2) {
           background: hsl(var(--secondary));
         }
-        .card:nth-child(3) {
+        .desktop-card:nth-child(3) {
           background: rgb(186, 113, 245);
         }
-        .card:nth-child(4) {
+        .desktop-card:nth-child(4) {
           background: rgb(247, 92, 208);
+        }
+        .desktop-card:nth-child(5) {
+          background: rgb(92, 184, 247);
         }
         .away {
           transform-origin: bottom left;
         }
         .sub {
-          font-size: 12px;
+          font-size: 14px;
           font-weight: 700;
           color: white;
-          margin-bottom: 6px;
-        }
-        @media (min-width: 768px) {
-          .sub {
-            font-size: 14px;
-            margin-bottom: 8px;
-          }
+          margin-bottom: 8px;
         }
         .content {
-          font-size: 18px;
+          font-size: 24px;
           font-weight: 700;
-          line-height: 22px;
+          line-height: 28px;
           color: white;
-        }
-        @media (min-width: 768px) {
-          .content {
-            font-size: 24px;
-            line-height: 28px;
-          }
         }
       `}</style>
 
       <div className="stack-area">
         <div className="left">
-          <div className="text-2xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight text-foreground text-center md:text-left">
+          <div className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
             Our Services
           </div>
-          <div className="max-w-lg text-base sm:text-lg text-muted-foreground mb-8 text-center md:text-left px-4 md:px-0">
+          <div className="max-w-lg text-lg text-muted-foreground mb-8">
             From strategic planning to full implementation and ongoing support, 
             we deliver comprehensive solutions tailored to your business needs.
             <br />
@@ -198,7 +233,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           {cards.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div key={index} className="card">
+              <div key={index} className="desktop-card">
                 <div className="sub">
                   <IconComponent className="h-8 w-8 mb-2 text-white" />
                   {service.title.split(' ')[0]}
