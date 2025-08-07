@@ -79,67 +79,21 @@ const defaultImages = [
 ];
 
 export default function ClientCarousel({ images = defaultImages }: ClientCarouselProps) {
-  // Split images into 6 groups
-  const imagesPerCircle = Math.ceil(images.length / 6);
-  const imageGroups = Array.from({ length: 6 }, (_, i) => 
-    images.slice(i * imagesPerCircle, (i + 1) * imagesPerCircle)
-  );
-
   useEffect(() => {
-    // Add CSS custom properties and styles
     const style = document.createElement('style');
     style.textContent = `
-      @keyframes autoRun1 {
-        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
-        to { transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); }
-      }
-      
-      @keyframes autoRun2 {
-        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
-        to { transform: perspective(1000px) rotateX(-16deg) rotateY(-360deg); }
-      }
-      
-      @keyframes autoRun3 {
-        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
-        to { transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); }
-      }
-      
-      @keyframes autoRun4 {
-        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
-        to { transform: perspective(1000px) rotateX(-16deg) rotateY(-360deg); }
-      }
-      
-      @keyframes autoRun5 {
-        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
-        to { transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); }
-      }
-      
-      @keyframes autoRun6 {
-        from { transform: perspective(1000px) rotateX(-16deg) rotateY(0deg); }
-        to { transform: perspective(1000px) rotateX(-16deg) rotateY(-360deg); }
-      }
-      
-      .client-carousel-slider-1 { animation: autoRun1 35s linear infinite; }
-      .client-carousel-slider-2 { animation: autoRun2 40s linear infinite; }
-      .client-carousel-slider-3 { animation: autoRun3 30s linear infinite; }
-      .client-carousel-slider-4 { animation: autoRun4 45s linear infinite; }
-      .client-carousel-slider-5 { animation: autoRun5 28s linear infinite; }
-      .client-carousel-slider-6 { animation: autoRun6 38s linear infinite; }
-      
-      .client-carousel-item {
-        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
-      }
-      
-      @media screen and (max-width: 1023px) {
-        .client-carousel-item {
-          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(250px);
+      @keyframes scroll {
+        0% {
+          transform: translateX(50%);
+        }
+        100% {
+          transform: translateX(-53%);
         }
       }
       
-      @media screen and (max-width: 767px) {
-        .client-carousel-item {
-          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(150px);
-        }
+      .company-scroll {
+        animation: scroll 160s linear infinite;
+        animation-fill-mode: backwards;
       }
     `;
     document.head.appendChild(style);
@@ -169,50 +123,20 @@ export default function ClientCarousel({ images = defaultImages }: ClientCarouse
         }}
       />
 
-      {/* Multiple 3D Carousels - Vertical Layout */}
-      {imageGroups.map((groupImages, groupIndex) => {
-        const positions = [
-          { top: '2%', left: '50%', size: 'w-[120px] h-[150px]' },
-          { top: '18%', left: '50%', size: 'w-[140px] h-[170px]' },
-          { top: '34%', left: '50%', size: 'w-[130px] h-[160px]' },
-          { top: '50%', left: '50%', size: 'w-[110px] h-[140px]' },
-          { top: '66%', left: '50%', size: 'w-[100px] h-[130px]' },
-          { top: '82%', left: '50%', size: 'w-[95px] h-[125px]' }
-        ];
-        
-        const position = positions[groupIndex];
-        
-        return (
-          <div 
-            key={groupIndex}
-            className={`client-carousel-slider-${groupIndex + 1} absolute ${position.size} md:w-[80px] md:h-[100px] sm:w-[60px] sm:h-[80px] z-20 transform -translate-x-1/2`}
-            style={{
-              transformStyle: 'preserve-3d',
-              transform: 'perspective(1000px)',
-              '--quantity': groupImages.length,
-              top: position.top,
-              left: position.left
-            } as React.CSSProperties & { '--quantity': number }}
-          >
-            {groupImages.map((image, index) => (
-              <div
-                key={index}
-                className="client-carousel-item absolute inset-0"
-                style={{
-                  '--position': index + 1,
-                  '--quantity': groupImages.length
-                } as React.CSSProperties & { '--position': number; '--quantity': number }}
-              >
-                <img
-                  src={image}
-                  alt={`Client ${groupIndex * imagesPerCircle + index + 1}`}
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-              </div>
-            ))}
-          </div>
-        );
-      })}
+      {/* Scrolling Company Logos */}
+      <div className="absolute top-1/2 left-0 w-full overflow-hidden bg-background/80 backdrop-blur-sm py-8 transform -translate-y-1/2 z-20">
+        <div className="company-scroll flex justify-center items-center w-max">
+          {images.map((image, index) => (
+            <div key={index} className="flex-shrink-0 mx-5">
+              <img
+                src={image}
+                alt={`Client ${index + 1}`}
+                className="max-h-[150px] w-auto max-w-[150px] object-contain md:max-h-[90px] md:max-w-[90px]"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Content */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1400px] h-max pb-24 flex flex-wrap justify-between items-center z-10 px-4">
