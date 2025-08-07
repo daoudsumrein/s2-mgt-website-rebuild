@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
 
 const services = [
@@ -107,10 +108,10 @@ export default function Services() {
             </div>
           </section>
 
-          {/* Services Overview */}
+          {/* Services Carousel */}
           <section className="py-16">
             <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
+              <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                   <h2 className="text-3xl font-bold mb-4">Comprehensive Service Portfolio</h2>
                   <p className="text-lg text-muted-foreground">
@@ -118,84 +119,71 @@ export default function Services() {
                   </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                  {services.map((service, index) => {
-                    const IconComponent = service.icon;
-                    return (
-                      <Card key={index} className="hover:shadow-lg transition-all duration-300 h-full">
-                        <CardHeader>
-                          <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-lg bg-primary/10">
-                              <IconComponent className="h-6 w-6 text-primary" />
-                            </div>
-                            <div className="flex-1">
-                              <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                              <p className="text-sm text-muted-foreground">{service.description}</p>
-                            </div>
-                          </div>
-                        </CardHeader>
-                      </Card>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </section>
+                <Carousel className="w-full">
+                  <CarouselContent className="-ml-2 md:-ml-4">
+                    {services.map((service, index) => {
+                      const IconComponent = service.icon;
+                      return (
+                        <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/1 lg:basis-1/1">
+                          <div className="p-1">
+                            <Card className="h-full bg-gradient-to-br from-background to-muted/30 border-2 hover:shadow-xl transition-all duration-500">
+                              <CardContent className="p-0">
+                                {/* Header Section */}
+                                <div className="bg-primary text-primary-foreground p-6 rounded-t-lg">
+                                  <div className="flex items-center space-x-4 mb-4">
+                                    <div className="p-3 rounded-lg bg-primary-foreground/20">
+                                      <IconComponent className="h-8 w-8" />
+                                    </div>
+                                    <div>
+                                      <h3 className="text-2xl font-bold">{service.title}</h3>
+                                      <p className="text-primary-foreground/80">{service.description}</p>
+                                    </div>
+                                  </div>
+                                </div>
 
-          {/* Detailed Services */}
-          <section className="py-16 bg-muted/30">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto space-y-16">
-                {services.map((service, index) => {
-                  const IconComponent = service.icon;
-                  return (
-                    <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                      <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                        <div className="flex items-center space-x-4 mb-6">
-                          <div className="p-3 rounded-lg bg-primary text-primary-foreground">
-                            <IconComponent className="h-8 w-8" />
+                                {/* Content Section */}
+                                <div className="p-6 space-y-6">
+                                  <div className="prose max-w-none">
+                                    <p className="text-muted-foreground leading-relaxed">
+                                      {service.content}
+                                    </p>
+                                  </div>
+
+                                  {/* Key Capabilities */}
+                                  <div className="space-y-4">
+                                    <h4 className="font-semibold text-lg">Key Capabilities:</h4>
+                                    <div className="grid grid-cols-1 gap-3">
+                                      {service.features.map((feature, featureIndex) => (
+                                        <div key={featureIndex} className="flex items-start space-x-3">
+                                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                          <span className="text-sm font-medium">{feature}</span>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+
+                                  {/* CTA Button */}
+                                  <div className="pt-4">
+                                    <Button asChild className="w-full">
+                                      <a href="/contact">
+                                        Learn More About {service.title}
+                                        <ArrowRight className="ml-2 h-4 w-4" />
+                                      </a>
+                                    </Button>
+                                  </div>
+                                </div>
+                              </CardContent>
+                            </Card>
                           </div>
-                          <div>
-                            <h2 className="text-3xl font-bold">{service.title}</h2>
-                            <p className="text-lg text-muted-foreground">{service.description}</p>
-                          </div>
-                        </div>
-                        <p className="text-muted-foreground mb-6 leading-relaxed">
-                          {service.content}
-                        </p>
-                        <div className="space-y-3">
-                          <h4 className="font-semibold">Key Capabilities:</h4>
-                          <ul className="space-y-2">
-                            {service.features.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-start space-x-2">
-                                <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                                <span className="text-sm">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                        <Card className="bg-background border-2">
-                          <CardContent className="p-8">
-                            <div className="text-center">
-                              <IconComponent className="h-24 w-24 text-primary mx-auto mb-6" />
-                              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                              <p className="text-muted-foreground mb-6">{service.description}</p>
-                              <Button asChild>
-                                <a href="/contact">
-                                  Learn More
-                                  <ArrowRight className="ml-2 h-4 w-4" />
-                                </a>
-                              </Button>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </div>
-                  );
-                })}
+                        </CarouselItem>
+                      );
+                    })}
+                  </CarouselContent>
+                  <div className="flex justify-center mt-8 space-x-4">
+                    <CarouselPrevious className="relative translate-y-0 left-0" />
+                    <CarouselNext className="relative translate-y-0 right-0" />
+                  </div>
+                </Carousel>
               </div>
             </div>
           </section>
