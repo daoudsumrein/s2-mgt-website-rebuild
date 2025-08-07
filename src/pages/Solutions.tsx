@@ -86,15 +86,26 @@ const cybersecuritySolutions = [{
 }];
 export default function Solutions() {
   const [activeSection, setActiveSection] = useState<'data' | 'cyber' | null>(null);
-  const [particles, setParticles] = useState<Array<{id: number, x: number, y: number, delay: number}>>([]);
+  const [particles, setParticles] = useState<Array<{
+    id: number, 
+    x: number, 
+    y: number, 
+    delay: number,
+    size: number,
+    speed: number,
+    direction: number
+  }>>([]);
 
   useEffect(() => {
-    // Generate floating particles
-    const newParticles = Array.from({length: 15}, (_, i) => ({
+    // Generate floating particles with more properties for movement
+    const newParticles = Array.from({length: 20}, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      delay: Math.random() * 6
+      delay: Math.random() * 6,
+      size: Math.random() * 3 + 1, // 1-4px
+      speed: Math.random() * 20 + 10, // 10-30s duration
+      direction: Math.random() * 360 // random direction
     }));
     setParticles(newParticles);
   }, []);
@@ -133,16 +144,42 @@ export default function Solutions() {
             {particles.map((particle) => (
               <div
                 key={particle.id}
-                className="absolute w-1 h-1 bg-primary/60 rounded-full animate-pulse"
+                className="absolute rounded-full animate-pulse"
                 style={{
                   left: `${particle.x}%`,
                   top: `${particle.y}%`,
+                  width: `${particle.size}px`,
+                  height: `${particle.size}px`,
+                  backgroundColor: `hsl(var(--primary) / ${0.4 + Math.random() * 0.3})`,
                   animationDelay: `${particle.delay}s`,
-                  animationDuration: '6s'
+                  animationDuration: `${particle.speed}s`,
+                  animation: `floatMove ${particle.speed}s infinite, pulse 2s infinite`,
+                  transform: `rotate(${particle.direction}deg)`
                 }}
               />
             ))}
           </div>
+
+          {/* Additional moving particles with different effects */}
+          <div className="absolute inset-0 pointer-events-none">
+            {particles.slice(0, 8).map((particle) => (
+              <div
+                key={`glow-${particle.id}`}
+                className="absolute rounded-full"
+                style={{
+                  left: `${(particle.x + 20) % 100}%`,
+                  top: `${(particle.y + 30) % 100}%`,
+                  width: `${particle.size * 1.5}px`,
+                  height: `${particle.size * 1.5}px`,
+                  backgroundColor: `hsl(var(--secondary) / ${0.2 + Math.random() * 0.2})`,
+                  animation: `floatCircle ${particle.speed * 1.5}s infinite, glowPulse ${particle.speed * 0.8}s infinite`,
+                  animationDelay: `${particle.delay * 1.5}s`,
+                  filter: 'blur(0.5px)'
+                }}
+              />
+            ))}
+          </div>
+
 
           <div className="container mx-auto px-4 min-h-screen flex items-center">
             <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
