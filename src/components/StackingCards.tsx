@@ -54,7 +54,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
 
       if (!stackArea) return;
 
-      let distance = window.innerHeight * 0.5;
+      let distance = window.innerHeight * 0.3;
       let topVal = stackArea.getBoundingClientRect().top;
       let index = -1 * (topVal / distance + 1);
       index = Math.floor(index);
@@ -145,7 +145,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       <style>{`
         .stack-area {
           width: 100%;
-          height: 300vh;
+          height: 180vh;
           position: relative;
           background: hsl(var(--background));
           display: flex;
