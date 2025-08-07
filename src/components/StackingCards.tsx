@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -15,162 +17,127 @@ interface StackingCardsProps {
 }
 
 export default function StackingCards({ cards }: StackingCardsProps) {
+  const stackAreaRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const rotateCards = () => {
+    let angle = 0;
+    cardRefs.current.forEach((card, index) => {
+      if (card) {
+        if (card.classList.contains("away")) {
+          card.style.transform = `translateY(-120vh) rotate(-48deg)`;
+        } else {
+          card.style.transform = `rotate(${angle}deg)`;
+          angle = angle - 10;
+          card.style.zIndex = (cards.length - index).toString();
+        }
+      }
+    });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      const cards = document.querySelectorAll(".card");
-      const stackArea = document.querySelector(".stack-area");
+      if (!stackAreaRef.current) return;
 
-      function rotateCards() {
-        let angle = 0;
-        cards.forEach((card, index) => {
-          const cardElement = card as HTMLElement;
-          if (cardElement.classList.contains("away")) {
-            cardElement.style.transform = `translateY(-120vh) rotate(-48deg)`;
-          } else {
-            cardElement.style.transform = ` rotate(${angle}deg)`;
-            angle = angle - 10;
-            cardElement.style.zIndex = (cards.length - index).toString();
-          }
-        });
-      }
-
-      if (!stackArea) return;
-
-      let distance = window.innerHeight * 0.5;
-      let topVal = stackArea.getBoundingClientRect().top;
+      const distance = window.innerHeight * 0.5;
+      const topVal = stackAreaRef.current.getBoundingClientRect().top;
       let index = -1 * (topVal / distance + 1);
       index = Math.floor(index);
 
-      for (let i = 0; i < cards.length; i++) {
-        const cardElement = cards[i] as HTMLElement;
-        if (i <= index) {
-          cardElement.classList.add("away");
-        } else {
-          cardElement.classList.remove("away");
+      // Update classes for each card
+      cardRefs.current.forEach((card, i) => {
+        if (card) {
+          if (i <= index) {
+            card.classList.add("away");
+          } else {
+            card.classList.remove("away");
+          }
         }
-      }
+      });
+
       rotateCards();
     };
 
     // Initial setup
-    const cards = document.querySelectorAll(".card");
-    let angle = 0;
-    cards.forEach((card, index) => {
-      const cardElement = card as HTMLElement;
-      cardElement.style.transform = ` rotate(${angle}deg)`;
-      angle = angle - 10;
-      cardElement.style.zIndex = (cards.length - index).toString();
-    });
-
+    rotateCards();
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [cards.length]);
 
   return (
-    <>
-      {/* Add the required CSS styles */}
-      <style>{`
-        .stack-area {
-          width: 100%;
-          height: 300vh;
-          position: relative;
-          background: hsl(var(--background));
-          display: flex;
-        }
-        .left {
-          height: 100vh;
-          flex-basis: 50%;
-          position: sticky;
-          top: 0;
-          left: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-sizing: border-box;
-          flex-direction: column;
-        }
-        .right {
-          height: 100vh;
-          flex-basis: 50%;
-          position: sticky;
-          top: 0;
-        }
-        .card {
-          width: 350px;
-          height: 350px;
-          border-radius: 25px;
-          margin-bottom: 10px;
-          position: absolute;
-          top: calc(50% - 175px);
-          left: calc(50% - 175px);
-          transition: 0.5s ease-in-out;
-          box-sizing: border-box;
-          padding: 35px;
-          display: flex;
-          justify-content: space-between;
-          flex-direction: column;
-        }
-        .card:nth-child(1) {
-          background: hsl(var(--primary));
-        }
-        .card:nth-child(2) {
-          background: hsl(var(--secondary));
-        }
-        .card:nth-child(3) {
-          background: rgb(186, 113, 245);
-        }
-        .card:nth-child(4) {
-          background: rgb(247, 92, 208);
-        }
-        .away {
-          transform-origin: bottom left;
-        }
-        .sub {
-          font-size: 14px;
-          font-weight: 700;
-          color: white;
-          margin-bottom: 8px;
-        }
-        .content {
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 28px;
-          color: white;
-        }
-      `}</style>
-
-      <div className="stack-area">
-        <div className="left">
-          <div className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
-            Our Services
-          </div>
-          <div className="max-w-lg text-lg text-muted-foreground mb-8">
-            From strategic planning to full implementation and ongoing support, 
-            we deliver comprehensive solutions tailored to your business needs.
-            <br />
-            <Button size="lg" className="mt-6 group">
+    <div ref={stackAreaRef} className="relative w-full bg-background" style={{ height: "300vh" }}>
+      <div className="flex w-full h-screen">
+        {/* Left Side - Fixed Content */}
+        <div className="flex-1 sticky top-0 left-0 h-screen flex items-center justify-center p-8">
+          <div className="max-w-lg">
+            <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              Our Services
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              From strategic planning to full implementation and ongoing support, 
+              we deliver comprehensive solutions tailored to your business needs.
+            </p>
+            <Button size="lg" className="group">
               See More Details
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
-        <div className="right">
+
+        {/* Right Side - Stacking Cards */}
+        <div className="flex-1 sticky top-0 h-screen relative">
           {cards.map((service, index) => {
             const IconComponent = service.icon;
+            
+            // Define colors for each card
+            const cardColors = [
+              "rgb(64, 122, 255)",   // Blue
+              "rgb(221, 62, 88)",    // Red  
+              "rgb(186, 113, 245)",  // Purple
+              "rgb(247, 92, 208)"    // Pink
+            ];
+            
             return (
-              <div key={index} className="card">
-                <div className="sub">
-                  <IconComponent className="h-8 w-8 mb-2 text-white" />
-                  {service.title.split(' ')[0]}
-                </div>
-                <div className="content">
-                  {service.description}
+              <div
+                key={index}
+                ref={(el) => (cardRefs.current[index] = el)}
+                className="card absolute rounded-3xl transition-all duration-500 ease-in-out"
+                style={{
+                  width: "350px",
+                  height: "350px",
+                  top: "calc(50% - 175px)",
+                  left: "calc(50% - 175px)",
+                  backgroundColor: cardColors[index % cardColors.length],
+                  transformOrigin: "bottom left"
+                }}
+              >
+                <div className="h-full w-full p-8 flex flex-col justify-between text-white">
+                  <div>
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-2 rounded-lg bg-white/20">
+                        <IconComponent className="h-6 w-6" />
+                      </div>
+                      <div className="bg-white/20 text-white border-none px-2 py-1 rounded text-sm font-medium">
+                        {service.title.split(' ')[0]}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-3xl font-bold leading-tight mb-4">
+                      {service.title.replace(service.title.split(' ')[0] + ' ', '')}
+                    </h3>
+                    <p className="text-white/90 text-base leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }
