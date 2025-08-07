@@ -123,13 +123,13 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-6 text-center">Our Core</h3>
                 <div className="space-y-6 text-lg text-muted-foreground">
                   <p>
-                    At our core, S2 is built on one simple principle — <span className="text-primary font-semibold">total commitment to those we serve</span>.
+                    At our core, S2 is built on one simple principle - <span className="text-primary font-semibold">total commitment to those we serve</span>.
                   </p>
                   <p>
                     We don't push products. We <span className="text-primary font-semibold">listen, we learn, and we adapt</span>. Our team takes the time to understand your challenges - whether you're a partner, a client, or both - and we craft <span className="text-primary font-semibold">solutions that fit you</span>, not the other way around.
                   </p>
                   <p>
-                    With a <span className="text-primary font-semibold">diverse portfolio</span> across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to <span className="text-primary font-semibold">mix, match, and customize</span> offerings that work for your environment — efficiently, intelligently, and always with <span className="text-primary font-semibold">your goals in mind</span>.
+                    With a <span className="text-primary font-semibold">diverse portfolio</span> across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to <span className="text-primary font-semibold">mix, match, and customize</span> offerings that work for your environment - efficiently, intelligently, and always with <span className="text-primary font-semibold">your goals in mind</span>.
                   </p>
                 </div>
               </Card>
