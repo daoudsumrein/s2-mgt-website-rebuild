@@ -97,18 +97,32 @@ export default function Solutions() {
   }>>([]);
 
   useEffect(() => {
-    // Generate floating particles with more properties for movement
-    const newParticles = Array.from({length: 20}, (_, i) => ({
+    // Generate more floating particles with properties for movement
+    const newParticles = Array.from({length: 35}, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      delay: Math.random() * 6,
-      size: Math.random() * 3 + 1, // 1-4px
-      speed: Math.random() * 20 + 10, // 10-30s duration
+      delay: Math.random() * 8,
+      size: Math.random() * 4 + 1, // 1-5px
+      speed: Math.random() * 25 + 8, // 8-33s duration
       direction: Math.random() * 360 // random direction
     }));
     setParticles(newParticles);
   }, []);
+
+  // Get particle colors based on active section
+  const getParticleColor = (index: number) => {
+    if (activeSection === 'data') {
+      return `hsl(var(--primary) / ${0.3 + Math.random() * 0.4})`;
+    } else if (activeSection === 'cyber') {
+      return `hsl(var(--secondary) / ${0.3 + Math.random() * 0.4})`;
+    } else {
+      // Mixed colors when no section is active
+      return index % 2 === 0 
+        ? `hsl(var(--primary) / ${0.2 + Math.random() * 0.3})`
+        : `hsl(var(--secondary) / ${0.2 + Math.random() * 0.3})`;
+    }
+  };
 
   const handleSectionHover = (section: 'data' | 'cyber') => {
     setActiveSection(section);
@@ -139,18 +153,18 @@ export default function Solutions() {
       <main className="flex-1">
         {/* Interactive Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen relative overflow-hidden">
-          {/* Floating Particles */}
+          {/* Floating Particles - Dynamic Colors */}
           <div className="absolute inset-0 pointer-events-none">
             {particles.map((particle) => (
               <div
                 key={particle.id}
-                className="absolute rounded-full animate-pulse"
+                className="absolute rounded-full animate-pulse transition-all duration-1000"
                 style={{
                   left: `${particle.x}%`,
                   top: `${particle.y}%`,
                   width: `${particle.size}px`,
                   height: `${particle.size}px`,
-                  backgroundColor: `hsl(var(--primary) / ${0.4 + Math.random() * 0.3})`,
+                  backgroundColor: getParticleColor(particle.id),
                   animationDelay: `${particle.delay}s`,
                   animationDuration: `${particle.speed}s`,
                   animation: `floatMove ${particle.speed}s infinite, pulse 2s infinite`,
@@ -160,21 +174,51 @@ export default function Solutions() {
             ))}
           </div>
 
-          {/* Additional moving particles with different effects */}
+          {/* Additional moving particles with glow effects */}
           <div className="absolute inset-0 pointer-events-none">
-            {particles.slice(0, 8).map((particle) => (
+            {particles.slice(0, 15).map((particle) => (
               <div
                 key={`glow-${particle.id}`}
-                className="absolute rounded-full"
+                className="absolute rounded-full transition-all duration-1000"
                 style={{
                   left: `${(particle.x + 20) % 100}%`,
                   top: `${(particle.y + 30) % 100}%`,
                   width: `${particle.size * 1.5}px`,
                   height: `${particle.size * 1.5}px`,
-                  backgroundColor: `hsl(var(--secondary) / ${0.2 + Math.random() * 0.2})`,
+                  backgroundColor: activeSection === 'data' 
+                    ? `hsl(var(--primary) / ${0.15 + Math.random() * 0.2})`
+                    : activeSection === 'cyber'
+                    ? `hsl(var(--secondary) / ${0.15 + Math.random() * 0.2})`
+                    : particle.id % 2 === 0 
+                    ? `hsl(var(--primary) / ${0.1 + Math.random() * 0.15})`
+                    : `hsl(var(--secondary) / ${0.1 + Math.random() * 0.15})`,
                   animation: `floatCircle ${particle.speed * 1.5}s infinite, glowPulse ${particle.speed * 0.8}s infinite`,
                   animationDelay: `${particle.delay * 1.5}s`,
                   filter: 'blur(0.5px)'
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Extra scattered particles for more density */}
+          <div className="absolute inset-0 pointer-events-none">
+            {particles.slice(15, 25).map((particle) => (
+              <div
+                key={`extra-${particle.id}`}
+                className="absolute rounded-full transition-all duration-1000"
+                style={{
+                  left: `${(particle.x + 40) % 100}%`,
+                  top: `${(particle.y + 60) % 100}%`,
+                  width: `${particle.size * 0.7}px`,
+                  height: `${particle.size * 0.7}px`,
+                  backgroundColor: activeSection === 'data' 
+                    ? `hsl(var(--blue-400) / ${0.2 + Math.random() * 0.3})`
+                    : activeSection === 'cyber'
+                    ? `hsl(var(--green-400) / ${0.2 + Math.random() * 0.3})`
+                    : `hsl(var(--primary) / ${0.1 + Math.random() * 0.2})`,
+                  animation: `floatMove ${particle.speed * 0.8}s infinite reverse`,
+                  animationDelay: `${particle.delay * 2}s`,
+                  filter: 'blur(1px)'
                 }}
               />
             ))}
