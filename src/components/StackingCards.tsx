@@ -74,7 +74,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           width: 100%;
           height: 300vh;
           position: relative;
-          background: white;
+          background: hsl(var(--background));
           display: flex;
         }
         .left {
@@ -111,10 +111,10 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           flex-direction: column;
         }
         .card:nth-child(1) {
-          background: rgb(64, 122, 255);
+          background: hsl(var(--primary));
         }
         .card:nth-child(2) {
-          background: rgb(221, 62, 88);
+          background: hsl(var(--secondary));
         }
         .card:nth-child(3) {
           background: rgb(186, 113, 245);
@@ -126,13 +126,11 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           transform-origin: bottom left;
         }
         .sub {
-          font-family: poppins;
           font-size: 20px;
           font-weight: 700;
           color: white;
         }
         .content {
-          font-family: poppins;
           font-size: 44px;
           font-weight: 700;
           line-height: 54px;
@@ -142,39 +140,16 @@ export default function StackingCards({ cards }: StackingCardsProps) {
 
       <div className="stack-area">
         <div className="left">
-          <div style={{ 
-            width: '420px', 
-            fontSize: '84px', 
-            fontFamily: 'poppins', 
-            fontWeight: '700', 
-            lineHeight: '88px',
-            color: 'black'
-          }}>
+          <div className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
             Our Services
           </div>
-          <div style={{ 
-            width: '420px', 
-            fontFamily: 'poppins', 
-            fontSize: '14px', 
-            marginTop: '30px',
-            color: 'black'
-          }}>
+          <div className="max-w-lg text-lg text-muted-foreground mb-8">
             From strategic planning to full implementation and ongoing support, 
             we deliver comprehensive solutions tailored to your business needs.
             <br />
-            <Button style={{ 
-              fontFamily: 'poppins',
-              fontSize: '14px',
-              padding: '15px 30px',
-              background: 'black',
-              color: 'white',
-              borderRadius: '8mm',
-              border: 'none',
-              outline: 'none',
-              cursor: 'pointer',
-              marginTop: '20px'
-            }}>
+            <Button size="lg" className="mt-6 group">
               See More Details
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
