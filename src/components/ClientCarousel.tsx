@@ -99,18 +99,18 @@ export default function ClientCarousel({ images = defaultImages }: ClientCarouse
       }
       
       .client-carousel-item {
-        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(800px);
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
       }
       
       @media screen and (max-width: 1023px) {
         .client-carousel-item {
-          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(500px);
+          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
         }
       }
       
       @media screen and (max-width: 767px) {
         .client-carousel-item {
-          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+          transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
         }
       }
     `;
