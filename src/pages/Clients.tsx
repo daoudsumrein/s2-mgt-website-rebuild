@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import ClientCarousel from "@/components/ClientCarousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Users, Globe, Award } from "lucide-react";
@@ -150,6 +151,14 @@ export default function Clients() {
                 </Card>
               ))}
             </div>
+          </section>
+
+          {/* Client Carousel */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-8">
+              Our Trusted Partners
+            </h2>
+            <ClientCarousel />
           </section>
 
           {/* Trust Indicators */}
