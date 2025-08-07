@@ -17,7 +17,6 @@ interface StackingCardsProps {
 }
 
 export default function StackingCards({ cards }: StackingCardsProps) {
-  const [awayCards, setAwayCards] = useState<number[]>([]);
   const stackAreaRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -25,7 +24,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
     let angle = 0;
     cardRefs.current.forEach((card, index) => {
       if (card) {
-        if (awayCards.includes(index)) {
+        if (card.classList.contains("away")) {
           card.style.transform = `translateY(-120vh) rotate(-48deg)`;
         } else {
           card.style.transform = `rotate(${angle}deg)`;
@@ -37,32 +36,37 @@ export default function StackingCards({ cards }: StackingCardsProps) {
   };
 
   useEffect(() => {
-    rotateCards();
-  }, [awayCards, cards.length]);
-
-  useEffect(() => {
     const handleScroll = () => {
       if (!stackAreaRef.current) return;
 
       const distance = window.innerHeight * 0.5;
       const topVal = stackAreaRef.current.getBoundingClientRect().top;
-      const index = Math.floor(-1 * (topVal / distance + 1));
+      let index = -1 * (topVal / distance + 1);
+      index = Math.floor(index);
 
-      const newAwayCards: number[] = [];
-      for (let i = 0; i < cards.length; i++) {
-        if (i <= index) {
-          newAwayCards.push(i);
+      // Update classes for each card
+      cardRefs.current.forEach((card, i) => {
+        if (card) {
+          if (i <= index) {
+            card.classList.add("away");
+          } else {
+            card.classList.remove("away");
+          }
         }
-      }
-      setAwayCards(newAwayCards);
+      });
+
+      rotateCards();
     };
 
+    // Initial setup
+    rotateCards();
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [cards.length]);
 
   return (
-    <div ref={stackAreaRef} className="relative w-full" style={{ height: "300vh" }}>
+    <div ref={stackAreaRef} className="relative w-full bg-background" style={{ height: "300vh" }}>
       <div className="flex w-full h-screen">
         {/* Left Side - Fixed Content */}
         <div className="flex-1 sticky top-0 left-0 h-screen flex items-center justify-center p-8">
@@ -85,42 +89,50 @@ export default function StackingCards({ cards }: StackingCardsProps) {
         <div className="flex-1 sticky top-0 h-screen relative">
           {cards.map((service, index) => {
             const IconComponent = service.icon;
+            
+            // Define colors for each card
+            const cardColors = [
+              "rgb(64, 122, 255)",   // Blue
+              "rgb(221, 62, 88)",    // Red  
+              "rgb(186, 113, 245)",  // Purple
+              "rgb(247, 92, 208)"    // Pink
+            ];
+            
             return (
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="absolute w-80 h-96 rounded-3xl transition-all duration-500 ease-in-out origin-bottom-left"
+                className="card absolute rounded-3xl transition-all duration-500 ease-in-out"
                 style={{
-                  top: "calc(50% - 192px)",
-                  left: "calc(50% - 160px)",
-                  backgroundColor: index === 0 ? "hsl(var(--primary))" : 
-                                 index === 1 ? "#dd3e58" : 
-                                 index === 2 ? "#ba71f5" : "#f75cd0"
+                  width: "350px",
+                  height: "350px",
+                  top: "calc(50% - 175px)",
+                  left: "calc(50% - 175px)",
+                  backgroundColor: cardColors[index % cardColors.length],
+                  transformOrigin: "bottom left"
                 }}
               >
-                <Card className="h-full w-full bg-transparent border-none text-white overflow-hidden">
-                  <CardContent className="p-8 h-full flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center space-x-3 mb-4">
-                        <div className="p-2 rounded-lg bg-white/20">
-                          <IconComponent className="h-6 w-6" />
-                        </div>
-                        <Badge variant="secondary" className="bg-white/20 text-white border-none">
-                          {service.title.split(' ')[0]}
-                        </Badge>
+                <div className="h-full w-full p-8 flex flex-col justify-between text-white">
+                  <div>
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-2 rounded-lg bg-white/20">
+                        <IconComponent className="h-6 w-6" />
+                      </div>
+                      <div className="bg-white/20 text-white border-none px-2 py-1 rounded text-sm font-medium">
+                        {service.title.split(' ')[0]}
                       </div>
                     </div>
-                    
-                    <div>
-                      <h3 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
-                        {service.title}
-                      </h3>
-                      <p className="text-white/80 text-sm leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-3xl font-bold leading-tight mb-4">
+                      {service.title.replace(service.title.split(' ')[0] + ' ', '')}
+                    </h3>
+                    <p className="text-white/90 text-base leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}
