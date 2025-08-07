@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const services = [
   {
@@ -76,6 +77,18 @@ const services = [
 ];
 
 export default function Services() {
+  const [carouselApi, setCarouselApi] = useState(null);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    const interval = setInterval(() => {
+      carouselApi.scrollNext();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [carouselApi]);
+
   return (
     <>
       <SEOHead 
@@ -119,7 +132,7 @@ export default function Services() {
                   </p>
                 </div>
 
-                <Carousel className="w-full">
+                <Carousel className="w-full" setApi={setCarouselApi}>
                   <CarouselContent className="-ml-2 md:-ml-4">
                     {services.map((service, index) => {
                       const IconComponent = service.icon;
