@@ -16,7 +16,7 @@ export default function Clients() {
               Our Valued <span className="text-primary">Clients</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              S2 Management Solutions delivers expert Data Management, Cybersecurity, and Backup services. helping businesses achieve their goals with confidence.
+              S2 Management Solutions delivers expert Data Management, Cybersecurity, and Backup services helping businesses achieve their goals with confidence.
 
             </p>
           </div>
