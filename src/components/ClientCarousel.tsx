@@ -163,14 +163,14 @@ export default function ClientCarousel({ images = defaultImages }: ClientCarouse
         }}
       />
 
-      {/* Multiple 3D Carousels */}
+      {/* Multiple 3D Carousels - Vertical Layout */}
       {imageGroups.map((groupImages, groupIndex) => {
         const positions = [
-          { top: '15%', left: '20%', size: 'w-[120px] h-[150px]' },
-          { top: '10%', left: '50%', size: 'w-[140px] h-[170px]' },
-          { top: '15%', left: '80%', size: 'w-[120px] h-[150px]' },
-          { top: '45%', left: '30%', size: 'w-[100px] h-[130px]' },
-          { top: '45%', left: '70%', size: 'w-[100px] h-[130px]' }
+          { top: '5%', left: '50%', size: 'w-[120px] h-[150px]' },
+          { top: '20%', left: '50%', size: 'w-[140px] h-[170px]' },
+          { top: '40%', left: '50%', size: 'w-[130px] h-[160px]' },
+          { top: '60%', left: '50%', size: 'w-[110px] h-[140px]' },
+          { top: '75%', left: '50%', size: 'w-[100px] h-[130px]' }
         ];
         
         const position = positions[groupIndex];
