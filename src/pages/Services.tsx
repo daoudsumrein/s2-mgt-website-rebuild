@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
+import StackingCards from "@/components/StackingCards";
 import { useEffect, useState } from "react";
 
 // Auto-sliding carousel implementation
@@ -173,96 +174,8 @@ export default function Services() {
             </div>
           </section>
 
-          {/* Services Carousel */}
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">Comprehensive Service Portfolio</h2>
-                  <p className="text-lg text-muted-foreground">
-                    From strategic planning to full implementation and ongoing support
-                  </p>
-                </div>
-
-                <Carousel 
-                  className="w-full" 
-                  setApi={setCarouselApi}
-                  onMouseEnter={() => setIsPaused(true)}
-                  onMouseLeave={() => setIsPaused(false)}
-                >
-                  <CarouselContent className="ml-0">
-                    {services.map((service, index) => {
-                      const IconComponent = service.icon;
-                      return (
-                        <CarouselItem key={index} className="pl-0 basis-full">
-                          <div className="p-1">
-                            <Card className="h-full bg-gradient-to-br from-background to-muted/30 border-2 hover:shadow-xl transition-all duration-500">
-                              <CardContent className="p-0">
-                                {/* Header Section */}
-                                <div className="bg-primary text-primary-foreground p-6 rounded-t-lg">
-                                  <div className="flex items-center space-x-4 mb-4">
-                                    <div className="p-3 rounded-lg bg-primary-foreground/20">
-                                      <IconComponent className="h-8 w-8" />
-                                    </div>
-                                    <div>
-                                      <h3 className="text-2xl font-bold">{service.title}</h3>
-                                      <p className="text-primary-foreground/80">{service.description}</p>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                {/* Content Section */}
-                                <div className="p-6 space-y-6">
-                                  <div className="prose max-w-none">
-                                    <p className="text-muted-foreground leading-relaxed">
-                                      {service.content}
-                                    </p>
-                                  </div>
-
-                                  {/* Key Capabilities */}
-                                  <div className="space-y-4">
-                                    <h4 className="font-semibold text-lg">Key Capabilities:</h4>
-                                    <div className="grid grid-cols-1 gap-3">
-                                      {service.features.map((feature, featureIndex) => (
-                                        <div key={featureIndex} className="flex items-start space-x-3">
-                                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                          <span className="text-sm font-medium">{feature}</span>
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-
-                                  {/* CTA Button */}
-                                  <div className="pt-4">
-                                     <Button asChild className="w-full">
-                                       <a href="/contact">
-                                         {service.title}
-                                         <ArrowRight className="ml-2 h-4 w-4" />
-                                       </a>
-                                     </Button>
-                                  </div>
-                                </div>
-                              </CardContent>
-                            </Card>
-                          </div>
-                        </CarouselItem>
-                      );
-                    })}
-                  </CarouselContent>
-                  <div className="flex justify-center mt-8 space-x-4">
-                    <CarouselPrevious className="relative translate-y-0 left-0 hidden sm:flex" />
-                    <CarouselNext className="relative translate-y-0 right-0 hidden sm:flex" />
-                  </div>
-                  {/* Mobile indicators */}
-                  <div className="flex justify-center mt-4 space-x-2 sm:hidden">
-                    {services.map((_, index) => (
-                      <div key={index} className="w-2 h-2 bg-muted rounded-full"></div>
-                    ))}
-                  </div>
-                </Carousel>
-              </div>
-            </div>
-          </section>
+          {/* Stacking Cards Section */}
+          <StackingCards cards={services} />
 
 
         </main>
