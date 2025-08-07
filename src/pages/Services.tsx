@@ -118,6 +118,9 @@ export default function Services() {
       <div className="min-h-screen bg-background">
         <Navigation />
         <main>
+          {/* Stacking Cards Section */}
+          <StackingCards cards={services} />
+
           {/* Hero Section */}
           <section className="py-16 bg-gradient-to-b from-primary-light to-background">
             <div className="container mx-auto px-4">
@@ -173,9 +176,6 @@ export default function Services() {
               </div>
             </div>
           </section>
-
-          {/* Stacking Cards Section */}
-          <StackingCards cards={services} />
 
 
         </main>
