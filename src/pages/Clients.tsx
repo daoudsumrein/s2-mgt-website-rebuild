@@ -156,7 +156,7 @@ export default function Clients() {
           {/* Client Carousel */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-8">
-              Our Trusted Partners
+              Our Trusted Clients
             </h2>
             <ClientCarousel />
           </section>
