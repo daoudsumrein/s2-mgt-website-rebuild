@@ -171,6 +171,19 @@ export default function Navigation() {
                         </Link>
                       </NavigationMenuLink>
                     </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/clients"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Our Clients</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Industries we serve and client success stories
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -358,6 +371,9 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
         </div>
         <Link to="/vendors" onClick={() => setIsOpen(false)} className="text-sm font-medium">
           Our Vendors
+        </Link>
+        <Link to="/clients" onClick={() => setIsOpen(false)} className="text-sm font-medium">
+          Our Clients
         </Link>
         <Link to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium">
           Contact Us

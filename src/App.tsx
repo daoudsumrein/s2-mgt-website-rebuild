@@ -35,6 +35,7 @@ import RansomwareProtection from "./pages/solutions/RansomwareProtection";
 import CloudToCloudBackup from "./pages/solutions/CloudToCloudBackup";
 import ServersDataProtection from "./pages/solutions/ServersDataProtection";
 import NotFound from "./pages/NotFound";
+import Clients from "./pages/Clients";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/vendors" element={<Vendors />} />
+          <Route path="/clients" element={<Clients />} />
           <Route path="/vendors/opentext" element={<OpenTextPage />} />
           <Route path="/vendors/tds" element={<TDSPage />} />
           <Route path="/vendors/appcure" element={<AppCUREPage />} />
