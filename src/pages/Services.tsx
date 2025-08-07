@@ -8,6 +8,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
 import { useEffect, useState } from "react";
 
+// Auto-sliding carousel implementation
 const services = [
   {
     icon: Users,
