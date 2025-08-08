@@ -198,7 +198,6 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           flex-basis: 50%;
           position: sticky;
           top: 0;
-          position: relative;
         }
         .navigation-arrows {
           position: absolute;
