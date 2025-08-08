@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight, ChevronUp, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface StackingCard {
   icon: React.ComponentType<{ className?: string }>;
@@ -19,7 +19,6 @@ interface StackingCardsProps {
 
 export default function StackingCards({ cards }: StackingCardsProps) {
   const [isMobile, setIsMobile] = useState(false);
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,32 +30,6 @@ export default function StackingCards({ cards }: StackingCardsProps) {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
-  // Manual navigation functions
-  const navigateToCard = (targetIndex: number) => {
-    if (targetIndex < 0 || targetIndex >= cards.length) return;
-    
-    const stackArea = document.querySelector(".stack-area");
-    if (!stackArea) return;
-
-    const distance = window.innerHeight * 0.5;
-    const targetScrollY = (targetIndex + 1) * distance - window.innerHeight * 0.5;
-    
-    window.scrollTo({
-      top: targetScrollY,
-      behavior: 'smooth'
-    });
-    
-    setCurrentCardIndex(targetIndex);
-  };
-
-  const navigateUp = () => {
-    navigateToCard(Math.max(0, currentCardIndex - 1));
-  };
-
-  const navigateDown = () => {
-    navigateToCard(Math.min(cards.length - 1, currentCardIndex + 1));
-  };
 
   useEffect(() => {
     if (isMobile) return; // Skip scroll animation on mobile
@@ -84,10 +57,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       let distance = window.innerHeight * 0.5;
       let topVal = stackArea.getBoundingClientRect().top;
       let index = -1 * (topVal / distance + 1);
-      index = Math.floor(Math.max(0, Math.min(cards.length - 1, index)));
-
-      // Update current card index based on scroll
-      setCurrentCardIndex(index);
+      index = Math.floor(index);
 
       for (let i = 0; i < cards.length; i++) {
         const cardElement = cards[i] as HTMLElement;
@@ -199,50 +169,6 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           position: sticky;
           top: 0;
         }
-        .navigation-arrows {
-          position: absolute;
-          right: 20px;
-          top: 50%;
-          transform: translateY(-50%);
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          z-index: 1000;
-        }
-        .nav-arrow {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          background: hsl(var(--primary));
-          border: none;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s ease;
-          color: white;
-        }
-        .nav-arrow:hover {
-          background: hsl(var(--primary) / 0.8);
-          transform: scale(1.1);
-        }
-        .nav-arrow:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-          transform: none;
-        }
-        .card-counter {
-          position: absolute;
-          right: 20px;
-          bottom: 20px;
-          background: hsl(var(--background) / 0.9);
-          padding: 8px 16px;
-          border-radius: 20px;
-          font-size: 14px;
-          font-weight: 600;
-          color: hsl(var(--foreground));
-          border: 1px solid hsl(var(--border));
-        }
         .desktop-card {
           width: 350px;
           height: 350px;
@@ -306,31 +232,6 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           </div>
         </div>
         <div className="right">
-          {/* Navigation Arrows */}
-          <div className="navigation-arrows">
-            <button 
-              className="nav-arrow"
-              onClick={navigateUp}
-              disabled={currentCardIndex === 0}
-              aria-label="Previous card"
-            >
-              <ChevronUp size={20} />
-            </button>
-            <button 
-              className="nav-arrow"
-              onClick={navigateDown}
-              disabled={currentCardIndex === cards.length - 1}
-              aria-label="Next card"
-            >
-              <ChevronDown size={20} />
-            </button>
-          </div>
-
-          {/* Card Counter */}
-          <div className="card-counter">
-            {currentCardIndex + 1} / {cards.length}
-          </div>
-
           {cards.map((service, index) => {
             const IconComponent = service.icon;
             return (
