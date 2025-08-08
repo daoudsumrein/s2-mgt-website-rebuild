@@ -11,7 +11,7 @@ interface TypewriterTextProps {
 export default function TypewriterText({ 
   texts, 
   className = "", 
-  typingSpeed = 100,
+  typingSpeed = 1001,
   deletingSpeed = 50,
   delayBetweenTexts = 2000
 }: TypewriterTextProps) {
