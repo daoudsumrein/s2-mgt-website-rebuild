@@ -82,8 +82,12 @@ export default function Services() {
   const [carouselApi, setCarouselApi] = useState(null);
   const [direction, setDirection] = useState('forward'); // Track direction
   const [isPaused, setIsPaused] = useState(false); // Track pause state
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState(services[0]); // Default to first service
   const [hoveredService, setHoveredService] = useState(null);
+
+  const handleCardClick = (service, index) => {
+    setSelectedService(service);
+  };
 
   useEffect(() => {
     if (!carouselApi || isPaused) return;
@@ -122,8 +126,55 @@ export default function Services() {
         <main>
           {/* Stacking Cards Section */}
           <div id="stacking-cards">
-            <StackingCards cards={services} />
+            <StackingCards cards={services} onCardClick={handleCardClick} />
           </div>
+
+          {/* Service Details Section */}
+          {selectedService && (
+            <section className="py-16 bg-card/30 backdrop-blur-sm">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
+                      <selectedService.icon className="h-8 w-8 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <h2 className="text-3xl font-bold text-foreground">{selectedService.title}</h2>
+                      <p className="text-lg text-muted-foreground">{selectedService.description}</p>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-4">Overview</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {selectedService.content}
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground mb-4">Key Features</h3>
+                      <ul className="space-y-3">
+                        {selectedService.features.map((feature, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="text-muted-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 text-center">
+                    <Button size="lg" className="group">
+                      Get Started with {selectedService.title}
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* Hero Section with Animated Particles */}
           <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-background via-primary-light to-accent">

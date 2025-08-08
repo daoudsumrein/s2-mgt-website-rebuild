@@ -15,9 +15,10 @@ interface StackingCard {
 
 interface StackingCardsProps {
   cards: StackingCard[];
+  onCardClick?: (card: StackingCard, index: number) => void;
 }
 
-export default function StackingCards({ cards }: StackingCardsProps) {
+export default function StackingCards({ cards, onCardClick }: StackingCardsProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [currentCard, setCurrentCard] = useState(0);
   const navigate = useNavigate();
@@ -314,7 +315,11 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           {cards.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div key={index} className="desktop-card">
+              <div 
+                key={index} 
+                className="desktop-card cursor-pointer transition-transform hover:scale-105"
+                onClick={() => onCardClick?.(service, index)}
+              >
                 <div className="sub">
                   <IconComponent className="h-8 w-8 mb-2 text-white" />
                   {service.title.split(' ')[0]}
