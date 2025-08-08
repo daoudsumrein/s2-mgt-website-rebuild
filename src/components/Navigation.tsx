@@ -270,7 +270,7 @@ export default function Navigation() {
                   <Link
                     to="/contact"
                     className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
-                      isActive("/contact") ? "text-primary" : ""
+                      isActive("/contact") ? "text-primary" : "animate-ping"
                     }`}
                   >
                     Contact Us
@@ -375,7 +375,7 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
         <Link to="/clients" onClick={() => setIsOpen(false)} className="text-sm font-medium">
           Our Clients
         </Link>
-        <Link to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium animate-ping">
+        <Link to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium">
           Contact Us
         </Link>
         <a 
