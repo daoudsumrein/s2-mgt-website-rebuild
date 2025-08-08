@@ -28,14 +28,7 @@ export default function Footer() {
         <div className="md:hidden space-y-6">
           {/* Company Info */}
           <div className="space-y-4">
-            <a 
-              href="https://linkedin.com/company/s2-management-solutions" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors"
-            >
-              <Linkedin className="h-8 w-8" />
-            </a>
+            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
             <div className="space-y-2">
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -162,14 +155,7 @@ export default function Footer() {
         <div className="hidden md:grid md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <a 
-              href="https://linkedin.com/company/s2-management-solutions" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors"
-            >
-              <Linkedin className="h-8 w-8" />
-            </a>
+            <img src="/lovable-uploads/eb7f3e31-40a6-49e7-9ffc-c95c8289130d.png" alt="S2 Management Solutions" className="h-8 w-auto" />
             <div className="space-y-2">
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -292,8 +278,18 @@ export default function Footer() {
 
         <div className="border-t border-border mt-2 pt-2 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-muted-foreground">
-            © 2024 S2 Management Solutions. All rights reserved.
+            © 2025 S2 Management Solutions. All rights reserved.
           </p>
+          <div className="flex items-center space-x-4">
+            <a 
+              href="https://linkedin.com/company/s2-management-solutions" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
