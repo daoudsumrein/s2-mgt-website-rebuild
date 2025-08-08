@@ -196,17 +196,11 @@ export default function Services() {
                       onMouseLeave={() => setHoveredService(null)}
                       onClick={() => {
                         setSelectedService(service);
-                        // Only scroll if not already in the stacking cards viewport
-                        const stackingSection = document.querySelector('#stacking-cards');
-                        const rect = stackingSection?.getBoundingClientRect();
-                        const isInViewport = rect && rect.top <= window.innerHeight && rect.bottom >= 0;
-                        
-                        if (!isInViewport) {
-                          stackingSection?.scrollIntoView({ 
-                            behavior: 'smooth',
-                            block: 'start'
-                          });
-                        }
+                        // Smooth scroll to stacking cards section
+                        document.querySelector('#stacking-cards')?.scrollIntoView({ 
+                          behavior: 'smooth',
+                          block: 'start'
+                        });
                       }}
                     >
                       {/* Gradient top border */}
