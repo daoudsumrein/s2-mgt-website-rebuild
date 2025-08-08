@@ -1,113 +1,182 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
-import StackingCards from "@/components/StackingCards";
 import { useEffect, useState } from "react";
 
-// Auto-sliding carousel implementation
-const services = [
-  {
-    icon: Users,
-    title: "Consultancy Services",
-    description: "Expert, vendor-neutral guidance tailored to your unique challenges and goals",
-    content: "At S2 Management Solutions, our consultancy approach is grounded in a simple but powerful principle that to assure the total commitment to those we serve. We don't lead with products, we lead with purpose. Our consultants begin by listening carefully and understanding the specific needs, challenges, and goals of each client. From strategic planning to technology assessments and roadmap development, we provide expert, vendor-neutral guidance to design solutions that are practical, scalable, and aligned with your long-term vision. Every recommendation we make is tailored to solve real business challenges, never a one-size-fits-all answer, but a partnership built on trust, insight, and results.",
-    features: [
-      "Strategic technology planning",
-      "Vendor-neutral assessments", 
-      "Roadmap development",
-      "Risk analysis and mitigation",
-      "Business continuity planning"
-    ]
-  },
-  {
-    icon: Building,
-    title: "Solutions Architecture",
-    description: "Robust, scalable, and future-proof IT environments designed for your ecosystem",
-    content: "Our strength in solutions architecture lies in our ability to design robust, scalable, and future proof IT environments tailored to each client's unique ecosystem. Backed by deep technical expertise and industry recognized certifications, our architects bridge business objectives with technology strategies. Whether it's cloud transformation, cybersecurity architecture, disaster recovery design, or infrastructure modernization, we take a holistic, vendor agnostic approach to craft architectures that perform reliably in complex, mission critical environments. With S2, you don't just get a design, you get a roadmap to sustainable innovation.",
-    features: [
-      "Cloud transformation architecture",
-      "Cybersecurity framework design",
-      "Disaster recovery planning",
-      "Infrastructure modernization",
-      "Vendor-agnostic approach"
-    ]
-  },
-  {
-    icon: Wrench,
-    title: "Professional Services",
-    description: "Comprehensive, milestone-driven project execution from start to finish",
-    content: "S2 Professional Services are designed to deliver comprehensive, milestone driven project execution from start to finish. We manage the full lifecycle, beginning with assessment and planning, through implementation, optimization, and post deployment support, ensuring each phase is executed with precision and aligned to your business objectives. Our certified technical team leads every project through well-defined stages, including solution design, architecture, deployment, testing, onsite training and knowledge transfer, culminating in a smooth operational handover. We place strong emphasis on empowering your internal teams through hands on training and documentation, ensuring long-term success and self-sufficiency.",
-    features: [
-      "Full lifecycle project management",
-      "Solution design and implementation",
-      "Testing and optimization",
-      "Onsite training and knowledge transfer",
-      "Smooth operational handover"
-    ]
-  },
-  {
-    icon: Shield,
-    title: "Service Level Agreements",
-    description: "Business-critical commitment with measurable reliability and accountability",
-    content: "At S2 Management Solutions, we understand that Disaster Recovery is not just technology, it's a business critical commitment. Our SLAs for DR operations are designed to deliver measurable reliability, performance, and accountability when it matters most. We offer customizable SLA tiers to align with your specific RTOs and RPOs, ensuring your critical systems and data are protected and recoverable within agreed timelines. From incident response to regular DR testing and 24/7 support, our SLA framework ensures operational continuity, compliance, and peace of mind.",
-    features: [
-      "Customizable SLA tiers",
-      "Defined RTOs and RPOs",
-      "24/7 incident response",
-      "Regular DR testing",
-      "Transparent escalation paths"
-    ]
-  },
-  {
-    icon: RefreshCw,
-    title: "Application Modernization and Migration",
-    description: "Seamless transition from legacy systems to modern, secure platforms",
-    content: "At S2 Management Solutions, our Application Modernization and Migration services are purpose-built to transition your critical applications from outdated, legacy operating systems to modern, secure, and fully supported platforms. We specialize in assessing legacy environments, identifying application dependencies, and executing seamless migrations to updated OS versions, whether on premises, in the cloud, or across hybrid environments. Our process ensures minimal downtime, data integrity, and application continuity, while also enhancing security, performance, and long-term maintainability.",
-    features: [
-      "Legacy environment assessment",
-      "Application dependency mapping",
-      "Seamless migration execution",
-      "Multi-platform support",
-      "Risk-managed approach"
-    ]
-  }
-];
-
 export default function Services() {
-  const [carouselApi, setCarouselApi] = useState(null);
-  const [direction, setDirection] = useState('forward'); // Track direction
-  const [isPaused, setIsPaused] = useState(false); // Track pause state
-  const [selectedService, setSelectedService] = useState(null);
-  const [hoveredService, setHoveredService] = useState(null);
+  const [cardsArranged, setCardsArranged] = useState(false);
 
   useEffect(() => {
-    if (!carouselApi || isPaused) return;
+    // Create floating particles
+    const createParticles = () => {
+      const particlesContainer = document.getElementById('particles');
+      if (!particlesContainer) return;
+      
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.width = Math.random() * 4 + 2 + 'px';
+        particle.style.height = particle.style.width;
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+        particlesContainer.appendChild(particle);
+      }
+    };
 
-    const interval = setInterval(() => {
-      if (direction === 'forward') {
-        if (carouselApi.canScrollNext()) {
-          carouselApi.scrollNext();
+    // Navbar scroll effect
+    const handleNavbarScroll = () => {
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
         } else {
-          setDirection('backward'); // Switch to reverse
-          carouselApi.scrollPrev();
-        }
-      } else {
-        if (carouselApi.canScrollPrev()) {
-          carouselApi.scrollPrev();
-        } else {
-          setDirection('forward'); // Switch to forward
-          carouselApi.scrollNext();
+          navbar.classList.remove('scrolled');
         }
       }
-    }, 10000);
+    };
 
-    return () => clearInterval(interval);
-  }, [carouselApi, direction, isPaused]);
+    // Scatter service cards initially
+    const scatterServiceCards = () => {
+      const cards = document.querySelectorAll('.service-card') as NodeListOf<HTMLElement>;
+      
+      cards.forEach((card, index) => {
+        card.classList.add('scattered');
+        
+        // Generate random positions within viewport
+        const randomX = Math.random() * (window.innerWidth - 350);
+        const randomY = Math.random() * (window.innerHeight - 200);
+        const randomRotation = (Math.random() - 0.5) * 60; // -30 to 30 degrees
+        const randomScale = 0.6 + Math.random() * 0.4; // 0.6 to 1.0
+        
+        card.style.left = randomX + 'px';
+        card.style.top = randomY + 'px';
+        card.style.transform = `rotate(${randomRotation}deg) scale(${randomScale})`;
+        card.style.opacity = '0.3';
+        
+        // Add entrance delay
+        setTimeout(() => {
+          card.style.opacity = '0.7';
+        }, index * 150);
+      });
+    };
+
+    // Arrange service cards into grid
+    const arrangeServiceCards = () => {
+      const cards = document.querySelectorAll('.service-card') as NodeListOf<HTMLElement>;
+      
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.remove('scattered');
+          card.classList.add('arranged');
+          card.style.left = '';
+          card.style.top = '';
+          card.style.transform = '';
+          card.style.opacity = '';
+          setCardsArranged(true);
+        }, index * 200);
+      });
+    };
+
+    // Setup scroll animations
+    const setupScrollAnimations = () => {
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      // Services section observer
+      const servicesObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            arrangeServiceCards();
+            servicesObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const servicesSection = document.querySelector('.services');
+      if (servicesSection) {
+        servicesObserver.observe(servicesSection);
+      }
+
+      // Stats section observer with counter animation
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      const statsSection = document.querySelector('.stats');
+      if (statsSection) {
+        statsObserver.observe(statsSection);
+      }
+    };
+
+    // Counter animation for stats
+    const animateCounters = () => {
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+        const target = counter.textContent;
+        if (target.includes('%')) {
+          animateNumber(counter, 0, 99.9, 2000, '%');
+        } else if (target.includes('+')) {
+          animateNumber(counter, 0, 500, 2000, '+');
+        } else if (target.includes('min')) {
+          animateNumber(counter, 0, 15, 1500, 'min');
+        } else if (target.includes('/')) {
+          counter.textContent = '24/7';
+        }
+      });
+    };
+
+    const animateNumber = (element, start, end, duration, suffix = '') => {
+      const startTime = performance.now();
+      
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = start + (end - start) * easeOutCubic(progress);
+        
+        if (suffix === '%') {
+          element.textContent = current.toFixed(1) + suffix;
+        } else if (suffix === 'min') {
+          element.textContent = Math.round(current) + suffix;
+        } else {
+          element.textContent = Math.round(current) + suffix;
+        }
+        
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      };
+      
+      requestAnimationFrame(update);
+    };
+
+    const easeOutCubic = (t) => {
+      return 1 - Math.pow(1 - t, 3);
+    };
+
+    // Initialize everything
+    createParticles();
+    setupScrollAnimations();
+    
+    // Scatter service cards initially after a brief delay
+    setTimeout(() => {
+      scatterServiceCards();
+    }, 500);
+
+    window.addEventListener('scroll', handleNavbarScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleNavbarScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -117,129 +186,317 @@ export default function Services() {
         keywords="IT consultancy, solutions architecture, professional services, application modernization, disaster recovery SLA, UAE IT services"
       />
       
-      <div className="min-h-screen bg-background">
-        <Navigation />
-        <main>
-          {/* Hero Section with Animated Particles */}
-          <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-background via-primary-light to-accent">
-            {/* Animated Particles Background */}
-            <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-radial from-primary/10 to-transparent"></div>
-              {Array.from({ length: 30 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute rounded-full bg-gradient-to-r from-primary to-secondary opacity-40"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    width: `${Math.random() * 6 + 3}px`,
-                    height: `${Math.random() * 6 + 3}px`,
-                    animation: `floatMove ${Math.random() * 8 + 6}s ease-in-out infinite`,
-                    animationDelay: `${Math.random() * 5}s`,
-                  }}
-                />
-              ))}
-              {/* Additional floating elements with circular motion */}
-              {Array.from({ length: 15 }).map((_, i) => (
-                <div
-                  key={`circle-${i}`}
-                  className="absolute rounded-full bg-gradient-to-br from-primary/30 to-secondary/30"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    width: `${Math.random() * 4 + 2}px`,
-                    height: `${Math.random() * 4 + 2}px`,
-                    animation: `floatCircle ${Math.random() * 15 + 10}s linear infinite`,
-                    animationDelay: `${Math.random() * 3}s`,
-                  }}
-                />
-              ))}
+      <div 
+        className="min-h-screen text-white overflow-x-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)',
+          fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+        }}
+      >
+        {/* Animated background particles */}
+        <div 
+          id="particles" 
+          className="fixed w-full h-full z-[-1]"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(29, 78, 216, 0.1) 0%, transparent 50%)'
+          }}
+        ></div>
+
+        {/* Navigation */}
+        <nav 
+          id="navbar"
+          className="fixed top-0 w-full px-8 py-4 bg-[rgba(15,15,35,0.8)] backdrop-blur-[10px] border-b border-[rgba(59,130,246,0.2)] z-[1000] transition-all duration-300"
+        >
+          <div className="flex justify-between items-center max-w-[1400px] mx-auto">
+            <div 
+              className="text-[1.8rem] font-extrabold bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent"
+              style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+            >
+              S2
             </div>
-
-            <div className="relative z-10 max-w-7xl mx-auto px-4">
-              {/* Hero Content */}
-              <div className="mb-16 animate-fade-in">
-                <h1 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent leading-tight">
-                  Cybersecurity & IT Excellence
-                </h1>
-                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                  S2 Management Solutions delivers strategic, high-impact technology solutions that empower resilient and secure IT operations. Your trusted partner in building the foundation for lasting success.
-                </p>
-                <a 
-                  href="#contact" 
-                  className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-lg rounded-full hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
-                >
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-foreground/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
-                  Start Your Transformation
-                </a>
-              </div>
-
-              {/* Services Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {services.slice(0, 6).map((service, index) => {
-                  const IconComponent = service.icon;
-                  return (
-                    <div
-                      key={index}
-                      className={`group relative bg-card/50 backdrop-blur-lg border border-primary/20 rounded-2xl p-6 transition-all duration-500 cursor-pointer transform hover:-translate-y-4 hover:scale-105 hover:bg-primary/5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/20 animate-fade-in ${
-                        hoveredService === index ? 'ring-2 ring-primary/50' : ''
-                      }`}
-                      style={{
-                        animationDelay: `${index * 0.15}s`,
-                      }}
-                      onMouseEnter={() => setHoveredService(index)}
-                      onMouseLeave={() => setHoveredService(null)}
-                      onClick={() => {
-                        setSelectedService(service);
-                        // Smooth scroll to stacking cards section
-                        document.querySelector('#stacking-cards')?.scrollIntoView({ 
-                          behavior: 'smooth',
-                          block: 'start'
-                        });
-                      }}
-                    >
-                      {/* Gradient top border */}
-                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary rounded-t-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                      
-                      {/* Interactive glow effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      
-                      {/* Icon */}
-                      <div className="relative w-16 h-16 mb-4 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-primary-foreground transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-primary/40">
-                        <IconComponent className="w-8 h-8 transition-transform duration-300 group-hover:scale-110" />
-                      </div>
-                      
-                      {/* Content */}
-                      <h3 className="relative text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-all duration-300 group-hover:translate-x-1">
-                        {service.title}
-                      </h3>
-                      <p className="relative text-muted-foreground leading-relaxed text-sm group-hover:text-foreground transition-all duration-300">
-                        {service.description}
-                      </p>
-                      
-                      {/* Interactive arrow */}
-                      <div className="absolute bottom-4 right-4 w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
-                        <ArrowRight className="w-4 h-4 text-primary" />
-                      </div>
-                      
-                      {/* Click ripple effect */}
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-active:opacity-100 transition-opacity duration-150"></div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
-
-          {/* Stacking Cards Section */}
-          <div id="stacking-cards">
-            <StackingCards cards={services} />
+            <ul className="flex gap-8 list-none">
+              <li><a href="#home" className="text-[#e2e8f0] no-underline font-medium transition-all duration-300 relative hover:text-[#3b82f6] hover:-translate-y-0.5">Home</a></li>
+              <li><a href="#services" className="text-[#e2e8f0] no-underline font-medium transition-all duration-300 relative hover:text-[#3b82f6] hover:-translate-y-0.5">Services</a></li>
+              <li><a href="#about" className="text-[#e2e8f0] no-underline font-medium transition-all duration-300 relative hover:text-[#3b82f6] hover:-translate-y-0.5">About</a></li>
+              <li><a href="#contact" className="text-[#e2e8f0] no-underline font-medium transition-all duration-300 relative hover:text-[#3b82f6] hover:-translate-y-0.5">Contact</a></li>
+            </ul>
           </div>
+        </nav>
 
+        {/* Hero Section */}
+        <section 
+          id="home"
+          className="h-screen flex items-center justify-center text-center relative overflow-hidden"
+        >
+          <div className="max-w-[800px] z-[2] animate-fade-in">
+            <h1 
+              className="text-4xl md:text-6xl font-black mb-6 leading-[1.2] bg-gradient-to-br from-white via-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent"
+              style={{ 
+                WebkitBackgroundClip: 'text', 
+                WebkitTextFillColor: 'transparent',
+                fontSize: 'clamp(2.5rem, 5vw, 4rem)'
+              }}
+            >
+              Cybersecurity & IT Excellence
+            </h1>
+            <p className="text-xl mb-8 text-[#cbd5e1] leading-relaxed">
+              S2 Management Solutions delivers strategic, high-impact technology solutions that empower resilient and secure IT operations. Your trusted partner in building the foundation for lasting success.
+            </p>
+            <a 
+              href="#contact" 
+              className="inline-block px-10 py-4 bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] text-white no-underline rounded-full font-semibold text-lg transition-all duration-400 shadow-[0_10px_30px_rgba(59,130,246,0.3)] relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)]"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.2)] to-transparent -translate-x-full transition-transform duration-500 hover:translate-x-full"></span>
+              Start Your Transformation
+            </a>
+          </div>
+        </section>
 
-        </main>
+        {/* Services Section */}
+        <section id="services" className="services py-24 px-8 max-w-[1400px] mx-auto">
+          <h2 
+            className="text-center text-5xl font-extrabold mb-16 bg-gradient-to-br from-white to-[#3b82f6] bg-clip-text text-transparent"
+            style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+          >
+            Our Expertise
+          </h2>
+          <div className="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="service-card bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] border border-[rgba(59,130,246,0.2)] rounded-[20px] p-10 transition-all duration-[1.2s] cubic-bezier-[0.4,0,0.2,1] relative overflow-hidden cursor-pointer opacity-0 transform rotate-[15deg] scale-[0.8] hover:-translate-y-3 hover:bg-[rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] transform scale-x-0 transition-transform duration-400 hover:scale-x-100"></div>
+              <div className="service-icon w-[60px] h-[60px] mb-6 bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] rounded-[15px] flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 hover:rotate-[5deg]">
+                🎯
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Strategic Consultancy</h3>
+              <p className="text-[#cbd5e1] leading-relaxed">Expert, vendor-neutral guidance designed around your unique challenges. We lead with purpose, not products, delivering practical solutions aligned with your long-term vision.</p>
+            </div>
+            
+            <div className="service-card bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] border border-[rgba(59,130,246,0.2)] rounded-[20px] p-10 transition-all duration-[1.2s] cubic-bezier-[0.4,0,0.2,1] relative overflow-hidden cursor-pointer opacity-0 transform rotate-[15deg] scale-[0.8] hover:-translate-y-3 hover:bg-[rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] transform scale-x-0 transition-transform duration-400 hover:scale-x-100"></div>
+              <div className="service-icon w-[60px] h-[60px] mb-6 bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] rounded-[15px] flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 hover:rotate-[5deg]">
+                🏗️
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Solutions Architecture</h3>
+              <p className="text-[#cbd5e1] leading-relaxed">Robust, scalable, and future-proof IT environments. Our certified architects bridge business objectives with technology strategies for mission-critical performance.</p>
+            </div>
+            
+            <div className="service-card bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] border border-[rgba(59,130,246,0.2)] rounded-[20px] p-10 transition-all duration-[1.2s] cubic-bezier-[0.4,0,0.2,1] relative overflow-hidden cursor-pointer opacity-0 transform rotate-[15deg] scale-[0.8] hover:-translate-y-3 hover:bg-[rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] transform scale-x-0 transition-transform duration-400 hover:scale-x-100"></div>
+              <div className="service-icon w-[60px] h-[60px] mb-6 bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] rounded-[15px] flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 hover:rotate-[5deg]">
+                ⚡
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Professional Services</h3>
+              <p className="text-[#cbd5e1] leading-relaxed">Comprehensive, milestone-driven project execution from assessment to deployment. Seamless delivery with minimal disruption, on time and within budget.</p>
+            </div>
+            
+            <div className="service-card bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] border border-[rgba(59,130,246,0.2)] rounded-[20px] p-10 transition-all duration-[1.2s] cubic-bezier-[0.4,0,0.2,1] relative overflow-hidden cursor-pointer opacity-0 transform rotate-[15deg] scale-[0.8] hover:-translate-y-3 hover:bg-[rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] transform scale-x-0 transition-transform duration-400 hover:scale-x-100"></div>
+              <div className="service-icon w-[60px] h-[60px] mb-6 bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] rounded-[15px] flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 hover:rotate-[5deg]">
+                🛡️
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Disaster Recovery SLAs</h3>
+              <p className="text-[#cbd5e1] leading-relaxed">Business-critical DR commitments with customizable SLA tiers. Guaranteed response times, 24/7 support, and operational continuity when it matters most.</p>
+            </div>
+            
+            <div className="service-card bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] border border-[rgba(59,130,246,0.2)] rounded-[20px] p-10 transition-all duration-[1.2s] cubic-bezier-[0.4,0,0.2,1] relative overflow-hidden cursor-pointer opacity-0 transform rotate-[15deg] scale-[0.8] hover:-translate-y-3 hover:bg-[rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] transform scale-x-0 transition-transform duration-400 hover:scale-x-100"></div>
+              <div className="service-icon w-[60px] h-[60px] mb-6 bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] rounded-[15px] flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 hover:rotate-[5deg]">
+                🚀
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Application Modernization</h3>
+              <p className="text-[#cbd5e1] leading-relaxed">Seamless migration from legacy systems to modern, secure platforms. Minimal downtime, enhanced security, and reduced technical debt.</p>
+            </div>
+            
+            <div className="service-card bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] border border-[rgba(59,130,246,0.2)] rounded-[20px] p-10 transition-all duration-[1.2s] cubic-bezier-[0.4,0,0.2,1] relative overflow-hidden cursor-pointer opacity-0 transform rotate-[15deg] scale-[0.8] hover:-translate-y-3 hover:bg-[rgba(59,130,246,0.1)] hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.2)]">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] transform scale-x-0 transition-transform duration-400 hover:scale-x-100"></div>
+              <div className="service-icon w-[60px] h-[60px] mb-6 bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] rounded-[15px] flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 hover:rotate-[5deg]">
+                🔒
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Data Protection</h3>
+              <p className="text-[#cbd5e1] leading-relaxed">Comprehensive cybersecurity and data protection strategies that safeguard your digital assets while enabling business growth and innovation.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="stats bg-[rgba(59,130,246,0.1)] backdrop-blur-[10px] py-16 px-8 my-16">
+          <div className="stats-container max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+            <div className="stat-item animate-fade-in">
+              <span 
+                className="stat-number text-5xl font-black bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent block"
+                style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+              >
+                99.9%
+              </span>
+              <div className="stat-label text-lg text-[#cbd5e1] mt-2">Uptime Guarantee</div>
+            </div>
+            <div className="stat-item animate-fade-in">
+              <span 
+                className="stat-number text-5xl font-black bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent block"
+                style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+              >
+                24/7
+              </span>
+              <div className="stat-label text-lg text-[#cbd5e1] mt-2">Support Coverage</div>
+            </div>
+            <div className="stat-item animate-fade-in">
+              <span 
+                className="stat-number text-5xl font-black bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent block"
+                style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+              >
+                500+
+              </span>
+              <div className="stat-label text-lg text-[#cbd5e1] mt-2">Projects Delivered</div>
+            </div>
+            <div className="stat-item animate-fade-in">
+              <span 
+                className="stat-number text-5xl font-black bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent block"
+                style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+              >
+                15min
+              </span>
+              <div className="stat-label text-lg text-[#cbd5e1] mt-2">Response Time</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="contact py-24 px-8 text-center max-w-[800px] mx-auto">
+          <h2 
+            className="text-4xl font-extrabold mb-8 bg-gradient-to-br from-white to-[#3b82f6] bg-clip-text text-transparent"
+            style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+          >
+            Ready to Transform Your IT?
+          </h2>
+          <p className="text-xl text-[#cbd5e1] mb-12 leading-relaxed">
+            Whether you're navigating complex challenges or pursuing ambitious growth, S2 is your trusted partner in building the technology foundation for lasting success.
+          </p>
+          <a 
+            href="#" 
+            className="inline-block px-10 py-4 bg-gradient-to-br from-[#3b82f6] to-[#8b5cf6] text-white no-underline rounded-full font-semibold text-lg transition-all duration-400 shadow-[0_10px_30px_rgba(59,130,246,0.3)] relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)]"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.2)] to-transparent -translate-x-full transition-transform duration-500 hover:translate-x-full"></span>
+            Get Started Today
+          </a>
+        </section>
+
         <Footer />
       </div>
+
+      <style>{`
+        .particle {
+          position: absolute;
+          background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+          border-radius: 50%;
+          animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { 
+            transform: translateY(0px) rotate(0deg); 
+            opacity: 0.7; 
+          }
+          50% { 
+            transform: translateY(-20px) rotate(180deg); 
+            opacity: 1; 
+          }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fadeInUp 1s ease-out;
+        }
+
+        nav.scrolled {
+          background: rgba(15, 15, 35, 0.95) !important;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links a::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+          transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+          width: 100%;
+        }
+
+        .service-card.scattered {
+          position: absolute;
+          z-index: 10;
+        }
+
+        .service-card.arranged {
+          opacity: 1 !important;
+          transform: rotate(0deg) scale(1) !important;
+          position: relative;
+          z-index: 1;
+        }
+
+        .service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+          transform: scaleX(0);
+          transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+          transform: scaleX(1);
+        }
+
+        .cta-button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+          left: 100%;
+        }
+
+        @media (max-width: 768px) {
+          .nav-links {
+            display: none;
+          }
+          
+          .services {
+            padding: 4rem 1rem;
+          }
+          
+          .services-grid {
+            grid-template-columns: 1fr;
+          }
+          
+          .service-card {
+            padding: 2rem;
+          }
+        }
+      `}</style>
     </>
   );
 }
