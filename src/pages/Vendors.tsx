@@ -5,6 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import tdsLogo from "@/assets/logos/tds-logo.png";
+import appcureLogo from "@/assets/logos/appcure-logo.png";
+import nakivoLogo from "@/assets/logos/nakivo-logo.ico";
+import arrosoftLogo from "@/assets/logos/arrosoft-logo.svg";
 
 const vendors = [
   {
@@ -23,7 +27,7 @@ const vendors = [
   },
   {
     name: "TDS",
-    logo: "TDS",
+    logo: tdsLogo,
     description: "Orchestration & IT Visibility",
     tagline: "TDS is a powerful orchestration and automation platform that streamlines migration and disaster recovery, while enhancing and accelerating IT operations to drive digital transformation",
     solutions: [
@@ -37,7 +41,7 @@ const vendors = [
   },
   {
     name: "appCURE",
-    logo: "AC",
+    logo: appcureLogo,
     description: "Application Modernization",
     tagline: "Complete application transformation and modernization platform",
     solutions: [
@@ -51,7 +55,7 @@ const vendors = [
   },
   {
     name: "NAKIVO",
-    logo: "NK",
+    logo: nakivoLogo,
     description: "Backup & Recovery",
     tagline: "Comprehensive data protection solutions for virtual and cloud environments",
     solutions: [
@@ -65,7 +69,7 @@ const vendors = [
   },
   {
     name: "Arrosoft",
-    logo: "AS",
+    logo: arrosoftLogo,
     description: "Endpoint & Data Protection",
     tagline: "Advanced endpoint backup and data protection solutions",
     solutions: [
@@ -108,8 +112,12 @@ export default function Vendors() {
                 <Card key={index} className="hover:shadow-lg transition-all duration-300 group">
                   <CardHeader>
                     <div className="flex items-start space-x-4">
-                      <div className={`w-16 h-16 rounded-lg flex items-center justify-center font-bold text-lg border ${vendor.color}`}>
-                        {vendor.logo}
+                      <div className={`w-16 h-16 rounded-lg flex items-center justify-center font-bold text-lg border ${vendor.color} overflow-hidden`}>
+                        {typeof vendor.logo === 'string' && vendor.logo.length <= 3 ? (
+                          vendor.logo
+                        ) : (
+                          <img src={vendor.logo} alt={`${vendor.name} logo`} className="w-12 h-12 object-contain" />
+                        )}
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-2xl mb-2">{vendor.name}</CardTitle>
