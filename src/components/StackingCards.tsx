@@ -19,6 +19,7 @@ interface StackingCardsProps {
 
 export default function StackingCards({ cards }: StackingCardsProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,6 +31,21 @@ export default function StackingCards({ cards }: StackingCardsProps) {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  // Function to scroll to next card
+  const scrollToCard = (cardIndex: number) => {
+    if (isMobile) return;
+    
+    const stackArea = document.querySelector(".stack-area") as HTMLElement;
+    if (!stackArea) return;
+    
+    const scrollAmount = window.innerHeight * 0.5 * (cardIndex + 1);
+    window.scrollTo({
+      top: stackArea.offsetTop + scrollAmount,
+      behavior: 'smooth'
+    });
+    setCurrentCardIndex(cardIndex);
+  };
 
   useEffect(() => {
     if (isMobile) return; // Skip scroll animation on mobile
@@ -235,7 +251,12 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           {cards.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div key={index} className="desktop-card">
+              <div 
+                key={index} 
+                className="desktop-card"
+                onClick={() => scrollToCard(index)}
+                style={{ cursor: 'pointer' }}
+              >
                 <div className="sub">
                   <IconComponent className="h-8 w-8 mb-2 text-white" />
                   {service.title.split(' ')[0]}
