@@ -319,11 +319,11 @@ export default function Solutions() {
                       <div className={`text-center transition-all duration-500 px-4 ${
                         activeSection ? 'opacity-0 scale-75' : 'opacity-100 scale-100'
                       }`}>
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto mb-2 md:mb-4 bg-gradient-to-r from-primary to-teal-500 rounded-full flex items-center justify-center overflow-hidden">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto mb-2 md:mb-4 rounded-full flex items-center justify-center overflow-hidden">
                           <img 
-                            src="/src/assets/s2-logo-new.png" 
+                            src="/lovable-uploads/d9e8afa7-fa2b-4fac-a063-2ffcc263786e.png" 
                             alt="S2 Management Solutions Logo" 
-                            className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain"
+                            className="w-full h-full object-cover"
                           />
                         </div>
                         <div className="text-white font-semibold text-sm sm:text-base md:text-lg">Two-Pillar Solution</div>
