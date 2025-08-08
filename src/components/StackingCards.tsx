@@ -305,7 +305,7 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
           <div className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
             Our Services
           </div>
-          <div className="max-w-lg text-lg text-muted-foreground mb-8">
+          <div className="text-lg text-muted-foreground mb-8">
             From strategic planning to full implementation and ongoing support, 
             we deliver comprehensive solutions tailored to your business needs.
             <br />
