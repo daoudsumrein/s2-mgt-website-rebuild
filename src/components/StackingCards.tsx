@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronUp, ChevronDown } from "lucide-react";
 
 interface StackingCard {
   icon: React.ComponentType<{ className?: string }>;
@@ -19,6 +19,7 @@ interface StackingCardsProps {
 
 export default function StackingCards({ cards }: StackingCardsProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const [currentCard, setCurrentCard] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,6 +60,9 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       let index = -1 * (topVal / distance + 1);
       index = Math.floor(index);
 
+      // Update current card state
+      setCurrentCard(Math.max(0, Math.min(index, cards.length - 1)));
+
       for (let i = 0; i < cards.length; i++) {
         const cardElement = cards[i] as HTMLElement;
         if (i <= index) {
@@ -82,7 +86,34 @@ export default function StackingCards({ cards }: StackingCardsProps) {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMobile]);
+  }, [isMobile, cards.length]);
+
+  const scrollToCard = (cardIndex: number) => {
+    if (isMobile) return;
+    
+    const stackArea = document.querySelector(".stack-area");
+    if (!stackArea) return;
+
+    const distance = window.innerHeight * 0.5;
+    const targetScrollY = (cardIndex + 1) * distance;
+    
+    window.scrollTo({
+      top: targetScrollY,
+      behavior: 'smooth'
+    });
+  };
+
+  const goToPreviousCard = () => {
+    if (currentCard > 0) {
+      scrollToCard(currentCard - 1);
+    }
+  };
+
+  const goToNextCard = () => {
+    if (currentCard < cards.length - 1) {
+      scrollToCard(currentCard + 1);
+    }
+  };
 
   // Mobile Design
   if (isMobile) {
@@ -208,13 +239,50 @@ export default function StackingCards({ cards }: StackingCardsProps) {
           color: white;
           margin-bottom: 8px;
         }
-        .content {
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 28px;
-          color: white;
-        }
-      `}</style>
+         .content {
+           font-size: 24px;
+           font-weight: 700;
+           line-height: 28px;
+           color: white;
+         }
+         .navigation-arrows {
+           position: fixed;
+           right: 2rem;
+           top: 50%;
+           transform: translateY(-50%);
+           display: flex;
+           flex-direction: column;
+           gap: 0.5rem;
+           z-index: 1000;
+         }
+         .arrow-button {
+           background: hsl(var(--background));
+           border: 2px solid hsl(var(--border));
+           border-radius: 50%;
+           width: 48px;
+           height: 48px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           cursor: pointer;
+           transition: all 0.3s ease;
+           color: hsl(var(--foreground));
+         }
+         .arrow-button:hover {
+           background: hsl(var(--primary));
+           color: hsl(var(--primary-foreground));
+           border-color: hsl(var(--primary));
+         }
+         .arrow-button:disabled {
+           opacity: 0.5;
+           cursor: not-allowed;
+         }
+         .arrow-button:disabled:hover {
+           background: hsl(var(--background));
+           color: hsl(var(--foreground));
+           border-color: hsl(var(--border));
+         }
+       `}</style>
 
       <div className="stack-area">
         <div className="left">
@@ -246,6 +314,26 @@ export default function StackingCards({ cards }: StackingCardsProps) {
               </div>
             );
           })}
+        </div>
+        
+        {/* Navigation Arrows */}
+        <div className="navigation-arrows">
+          <button 
+            className="arrow-button"
+            onClick={goToPreviousCard}
+            disabled={currentCard === 0}
+            aria-label="Previous card"
+          >
+            <ChevronUp className="h-5 w-5" />
+          </button>
+          <button 
+            className="arrow-button"
+            onClick={goToNextCard}
+            disabled={currentCard === cards.length - 1}
+            aria-label="Next card"
+          >
+            <ChevronDown className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </>
