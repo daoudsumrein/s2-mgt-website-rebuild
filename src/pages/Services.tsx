@@ -120,6 +120,11 @@ export default function Services() {
       <div className="min-h-screen bg-background">
         <Navigation />
         <main>
+          {/* Stacking Cards Section */}
+          <div id="stacking-cards">
+            <StackingCards cards={services} />
+          </div>
+
           {/* Hero Section with Animated Particles */}
           <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-background via-primary-light to-accent">
             {/* Animated Particles Background */}
@@ -230,12 +235,6 @@ export default function Services() {
               </div>
             </div>
           </section>
-
-          {/* Stacking Cards Section */}
-          <div id="stacking-cards">
-            <StackingCards cards={services} />
-          </div>
-
 
         </main>
         <Footer />
