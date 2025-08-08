@@ -119,53 +119,90 @@ export default function Services() {
         <Navigation />
         <main>
           {/* Hero Section */}
-          <section className="py-16 bg-gradient-to-b from-primary-light to-background">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">Our Service Delivery Process</h2>
-                  <p className="text-lg text-muted-foreground">
+          <section className="relative py-24 overflow-hidden">
+            {/* Animated background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.1)_0%,transparent_50%)]"></div>
+            </div>
+            
+            {/* Floating particles */}
+            <div className="absolute inset-0 overflow-hidden">
+              {Array.from({ length: 30 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute bg-gradient-to-br from-primary to-secondary rounded-full opacity-20 animate-pulse"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    width: `${Math.random() * 8 + 4}px`,
+                    height: `${Math.random() * 8 + 4}px`,
+                    animationDelay: `${Math.random() * 4}s`,
+                    animationDuration: `${Math.random() * 3 + 2}s`,
+                  }}
+                />
+              ))}
+            </div>
+
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+                    Our Service Delivery Process
+                  </h2>
+                  <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                     Structured, agile delivery model guaranteeing seamless execution and measurable results
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      1
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="group text-center">
+                    <div className="relative mb-6">
+                      <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary text-primary-foreground rounded-2xl flex items-center justify-center mx-auto font-bold text-2xl shadow-2xl shadow-primary/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        1
+                      </div>
+                      <div className="absolute -inset-2 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h3 className="font-semibold mb-2">Assessment</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-xl mb-3 text-foreground">Assessment</h3>
+                    <p className="text-muted-foreground leading-relaxed">
                       Comprehensive analysis of current state and requirements
                     </p>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      2
+                  <div className="group text-center">
+                    <div className="relative mb-6">
+                      <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary text-primary-foreground rounded-2xl flex items-center justify-center mx-auto font-bold text-2xl shadow-2xl shadow-primary/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        2
+                      </div>
+                      <div className="absolute -inset-2 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h3 className="font-semibold mb-2">Design</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-xl mb-3 text-foreground">Design</h3>
+                    <p className="text-muted-foreground leading-relaxed">
                       Solution architecture and implementation planning
                     </p>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      3
+                  <div className="group text-center">
+                    <div className="relative mb-6">
+                      <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary text-primary-foreground rounded-2xl flex items-center justify-center mx-auto font-bold text-2xl shadow-2xl shadow-primary/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        3
+                      </div>
+                      <div className="absolute -inset-2 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h3 className="font-semibold mb-2">Implementation</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-xl mb-3 text-foreground">Implementation</h3>
+                    <p className="text-muted-foreground leading-relaxed">
                       Execution with testing, training, and knowledge transfer
                     </p>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      4
+                  <div className="group text-center">
+                    <div className="relative mb-6">
+                      <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary text-primary-foreground rounded-2xl flex items-center justify-center mx-auto font-bold text-2xl shadow-2xl shadow-primary/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        4
+                      </div>
+                      <div className="absolute -inset-2 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <h3 className="font-semibold mb-2">Support</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold text-xl mb-3 text-foreground">Support</h3>
+                    <p className="text-muted-foreground leading-relaxed">
                       Ongoing optimization and operational handover
                     </p>
                   </div>
