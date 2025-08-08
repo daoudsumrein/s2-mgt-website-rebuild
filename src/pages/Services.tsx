@@ -136,10 +136,7 @@ export default function Services() {
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-                      {(() => {
-                        const IconComponent = selectedService.icon;
-                        return <IconComponent className="h-8 w-8 text-primary-foreground" />;
-                      })()}
+                      <selectedService.icon className="h-8 w-8 text-primary-foreground" />
                     </div>
                     <div>
                       <h2 className="text-3xl font-bold text-foreground">{selectedService.title}</h2>
