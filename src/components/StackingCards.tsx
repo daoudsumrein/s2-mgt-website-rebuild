@@ -157,7 +157,11 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
                         <p className="text-muted-foreground leading-relaxed">
                           {service.description}
                         </p>
-                        <Button variant="outline" className="mt-4 w-full">
+                        <Button 
+                          variant="outline" 
+                          className="mt-4 w-full"
+                          onClick={() => onCardClick?.(service, index)}
+                        >
                           Learn More
                         </Button>
                       </CardContent>
@@ -305,7 +309,19 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
             From strategic planning to full implementation and ongoing support, 
             we deliver comprehensive solutions tailored to your business needs.
             <br />
-            <Button size="lg" className="mt-6 group" onClick={() => navigate('/vendors')}>
+            <Button 
+              size="lg" 
+              className="mt-6 group" 
+              onClick={() => {
+                const servicesSection = document.querySelector('#service-0');
+                if (servicesSection) {
+                  servicesSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center'
+                  });
+                }
+              }}
+            >
               See More Details
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
