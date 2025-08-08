@@ -5,15 +5,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import tdsLogo from "@/assets/logos/tds-logo.png";
-import appcureLogo from "@/assets/logos/appcure-logo.png";
-import nakivoLogo from "@/assets/logos/nakivo-logo.ico";
-import arrosoftLogo from "@/assets/logos/arrosoft-logo.svg";
 
 const vendors = [
   {
     name: "OpenText",
-    logo: "OT",
+    logo: "https://www.opentext.com/assets/images/favicon.png",
     description: "Core Data Protection Platform",
     tagline: "Enterprise-grade data protection, availability, and secure cloud solutions",
     solutions: [
@@ -27,7 +23,7 @@ const vendors = [
   },
   {
     name: "TDS",
-    logo: tdsLogo,
+    logo: "https://www.transitionaldata.com/uploads/2024/06/TDS-Website-Favicon-100x100.png",
     description: "Orchestration & IT Visibility",
     tagline: "TDS is a powerful orchestration and automation platform that streamlines migration and disaster recovery, while enhancing and accelerating IT operations to drive digital transformation",
     solutions: [
@@ -41,7 +37,7 @@ const vendors = [
   },
   {
     name: "appCURE",
-    logo: appcureLogo,
+    logo: "https://appcure.io/wp-content/uploads/2025/04/light-logo.png",
     description: "Application Modernization",
     tagline: "Complete application transformation and modernization platform",
     solutions: [
@@ -55,7 +51,7 @@ const vendors = [
   },
   {
     name: "NAKIVO",
-    logo: nakivoLogo,
+    logo: "https://www.nakivo.com/favicon.ico",
     description: "Backup & Recovery",
     tagline: "Comprehensive data protection solutions for virtual and cloud environments",
     solutions: [
@@ -69,7 +65,7 @@ const vendors = [
   },
   {
     name: "Arrosoft",
-    logo: arrosoftLogo,
+    logo: "https://www.arrosoft.com/favicon.svg",
     description: "Endpoint & Data Protection",
     tagline: "Advanced endpoint backup and data protection solutions",
     solutions: [
@@ -113,11 +109,7 @@ export default function Vendors() {
                   <CardHeader>
                     <div className="flex items-start space-x-4">
                       <div className={`w-16 h-16 rounded-lg flex items-center justify-center font-bold text-lg border ${vendor.color} overflow-hidden`}>
-                        {typeof vendor.logo === 'string' && vendor.logo.length <= 3 ? (
-                          vendor.logo
-                        ) : (
-                          <img src={vendor.logo} alt={`${vendor.name} logo`} className="w-12 h-12 object-contain" />
-                        )}
+                        <img src={vendor.logo} alt={`${vendor.name} logo`} className="w-12 h-12 object-contain" />
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-2xl mb-2">{vendor.name}</CardTitle>
