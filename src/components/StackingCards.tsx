@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronUp, ChevronDown } from "lucide-react";
 
 interface StackingCard {
   icon: React.ComponentType<{ className?: string }>;
@@ -45,6 +45,18 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       behavior: 'smooth'
     });
     setCurrentCardIndex(cardIndex);
+  };
+
+  // Navigate to next card
+  const nextCard = () => {
+    const nextIndex = Math.min(currentCardIndex + 1, cards.length - 1);
+    scrollToCard(nextIndex);
+  };
+
+  // Navigate to previous card
+  const prevCard = () => {
+    const prevIndex = Math.max(currentCardIndex - 1, 0);
+    scrollToCard(prevIndex);
   };
 
   useEffect(() => {
@@ -244,6 +256,33 @@ export default function StackingCards({ cards }: StackingCardsProps) {
             <Button size="lg" className="mt-6 group" onClick={() => navigate('/vendors')}>
               See More Details
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+          
+          {/* Navigation Arrows */}
+          <div className="flex flex-col gap-4 mt-8">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={prevCard}
+              disabled={currentCardIndex === 0}
+              className="w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary/10 disabled:opacity-50"
+            >
+              <ChevronUp className="h-6 w-6" />
+            </Button>
+            
+            <div className="text-center text-sm text-muted-foreground">
+              {currentCardIndex + 1} / {cards.length}
+            </div>
+            
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={nextCard}
+              disabled={currentCardIndex === cards.length - 1}
+              className="w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary/10 disabled:opacity-50"
+            >
+              <ChevronDown className="h-6 w-6" />
             </Button>
           </div>
         </div>
