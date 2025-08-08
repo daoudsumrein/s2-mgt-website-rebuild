@@ -15,65 +15,65 @@ const services = [
     icon: Users,
     title: "Consultancy Services",
     description: "Expert, vendor-neutral guidance tailored to your unique challenges and goals",
-    content: "At S2 Management Solutions, our consultancy approach is grounded in a simple but powerful principle that to assure the total commitment to those we serve. We don't lead with products, we lead with purpose. Our consultants begin by listening carefully and understanding the specific needs, challenges, and goals of each client. From strategic planning to technology assessments and roadmap development, we provide expert, vendor-neutral guidance to design solutions that are practical, scalable, and aligned with your long-term vision. Every recommendation we make is tailored to solve real business challenges, never a one-size-fits-all answer, but a partnership built on trust, insight, and results.",
+    content: "We listen first, then provide solutions. Our consultants focus on understanding your specific needs and challenges before recommending technology solutions. We offer strategic planning, technology assessments, and roadmap development that align with your business goals. Every recommendation is tailored to solve real problems, not sell products.",
     features: [
-      "Strategic technology planning and assessments",
-      "Vendor-neutral guidance and recommendations", 
-      "Customized roadmap development",
-      "Risk analysis and mitigation strategies",
-      "Business continuity and resilience planning"
+      "Strategic technology planning",
+      "Vendor-neutral assessments", 
+      "Custom roadmap development",
+      "Risk analysis and mitigation",
+      "Business continuity planning"
     ]
   },
   {
     icon: Building,
     title: "Solutions Architecture",
     description: "Robust, scalable, and future-proof IT environments designed for your ecosystem",
-    content: "Our strength in solutions architecture lies in our ability to design robust, scalable, and future proof IT environments tailored to each client's unique ecosystem. Backed by deep technical expertise and industry recognized certifications, our architects bridge business objectives with technology strategies. Whether it's cloud transformation, cybersecurity architecture, disaster recovery design, or infrastructure modernization, we take a holistic, vendor agnostic approach to craft architectures that perform reliably in complex, mission critical environments. With S2, you don't just get a design, you get a roadmap to sustainable innovation.",
+    content: "We design IT environments that grow with your business. Our certified architects create scalable solutions for cloud transformation, cybersecurity, disaster recovery, and infrastructure modernization. We take a vendor-neutral approach to ensure your architecture performs reliably in mission-critical environments.",
     features: [
-      "Cloud transformation architecture design",
-      "Cybersecurity framework and infrastructure",
-      "Disaster recovery and business continuity",
-      "Infrastructure modernization strategies",
-      "Vendor-agnostic, future-proof solutions"
+      "Cloud transformation design",
+      "Cybersecurity architecture",
+      "Disaster recovery planning",
+      "Infrastructure modernization",
+      "Future-proof solutions"
     ]
   },
   {
     icon: Wrench,
     title: "Professional Services",
     description: "Comprehensive, milestone-driven project execution from start to finish",
-    content: "S2 Professional Services are designed to deliver comprehensive, milestone driven project execution from start to finish. We manage the full lifecycle, beginning with assessment and planning, through implementation, optimization, and post deployment support, ensuring each phase is executed with precision and aligned to your business objectives. Our certified technical team leads every project through well-defined stages, including solution design, architecture, deployment, testing, onsite training and knowledge transfer, culminating in a smooth operational handover. We place strong emphasis on empowering your internal teams through hands on training and documentation, ensuring long-term success and self-sufficiency. Whether you're migrating to the cloud, implementing a disaster recovery solution, or modernizing your infrastructure, S2's structured and agile delivery model guarantees seamless execution, minimal disruption, and measurable results, on time and within budget.",
+    content: "We handle your IT projects from start to finish. Our team manages the complete lifecycle including planning, implementation, testing, and support. We execute projects in clear stages with defined milestones, ensuring everything is delivered on time and within budget. We also provide training to empower your internal teams.",
     features: [
-      "Full lifecycle project management",
-      "Milestone-driven execution and delivery",
-      "Comprehensive testing and optimization",
-      "Onsite training and knowledge transfer",
-      "Seamless operational handover process"
+      "Full project lifecycle management",
+      "Milestone-driven delivery",
+      "Comprehensive testing",
+      "Team training and knowledge transfer",
+      "On-time, on-budget execution"
     ]
   },
   {
     icon: Shield,
     title: "Service Level Agreements",
     description: "Business-critical commitment with measurable reliability and accountability",
-    content: "At S2 Management Solutions, we understand that Disaster Recovery is not just technology, it's a business critical commitment. Our SLAs for DR operations are designed to deliver measurable reliability, performance, and accountability when it matters most. We offer customizable SLA tiers to align with your specific RTOs and RPOs, ensuring your critical systems and data are protected and recoverable within agreed timelines. From incident response to regular DR testing and 24/7 support, our SLA framework ensures operational continuity, compliance, and peace of mind. With clearly defined escalation paths, guaranteed response times, and full transparency, S2 acts as an extension of your team, committed to keeping your business running through any disruption.",
+    content: "Disaster recovery isn't just technology—it's a business commitment. Our SLAs guarantee measurable reliability and performance when you need it most. We offer customizable service levels that align with your specific recovery time objectives, ensuring your critical systems are protected and recoverable within agreed timeframes.",
     features: [
-      "Customizable SLA tiers for specific needs",
-      "Defined RTOs and RPOs with guarantees",
-      "24/7 incident response and support",
-      "Regular DR testing and validation",
-      "Transparent escalation and communication"
+      "Customizable service levels",
+      "Guaranteed recovery times",
+      "24/7 incident response",
+      "Regular testing and validation",
+      "Clear escalation procedures"
     ]
   },
   {
     icon: RefreshCw,
     title: "Application Modernization and Migration",
     description: "Seamless transition from legacy systems to modern, secure platforms",
-    content: "At S2 Management Solutions, our Application Modernization and Migration services are purpose-built to transition your critical applications from outdated, legacy operating systems to modern, secure, and fully supported platforms. We specialize in assessing legacy environments, identifying application dependencies, and executing seamless migrations to updated OS versions, whether on premises, in the cloud, or across hybrid environments. Our process ensures minimal downtime, data integrity, and application continuity, while also enhancing security, performance, and long-term maintainability. From discovery and planning to execution, testing, and post-migration support, S2 delivers a structured, risk managed approach that helps organizations reduce technical debt and unlock the benefits of a modern IT ecosystem.",
+    content: "We move your critical applications from outdated systems to modern, secure platforms. Our process includes assessing your current environment, identifying dependencies, and executing migrations with minimal downtime. Whether moving to cloud, on-premises, or hybrid environments, we ensure data integrity and improved performance.",
     features: [
-      "Legacy environment assessment and analysis",
-      "Application dependency mapping and planning",
-      "Seamless migration with minimal downtime",
-      "Multi-platform support (on-premises, cloud, hybrid)",
-      "Risk-managed approach with thorough testing"
+      "Legacy system assessment",
+      "Dependency mapping",
+      "Minimal downtime migration",
+      "Multi-platform support",
+      "Risk-managed approach"
     ]
   }
 ];
