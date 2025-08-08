@@ -82,6 +82,8 @@ export default function Services() {
   const [carouselApi, setCarouselApi] = useState(null);
   const [direction, setDirection] = useState('forward'); // Track direction
   const [isPaused, setIsPaused] = useState(false); // Track pause state
+  const [selectedService, setSelectedService] = useState(null);
+  const [hoveredService, setHoveredService] = useState(null);
 
   useEffect(() => {
     if (!carouselApi || isPaused) return;
@@ -164,26 +166,49 @@ export default function Services() {
                   return (
                     <div
                       key={index}
-                      className="group relative bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-6 transition-all duration-300 hover:transform hover:-translate-y-3 hover:bg-blue-600/10 hover:border-blue-400/40 hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer"
+                      className={`group relative bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-6 transition-all duration-500 cursor-pointer transform hover:-translate-y-4 hover:scale-105 hover:bg-blue-600/15 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/30 animate-fade-in ${
+                        hoveredService === index ? 'ring-2 ring-blue-400/50' : ''
+                      }`}
                       style={{
-                        animationDelay: `${index * 0.1}s`,
+                        animationDelay: `${index * 0.15}s`,
+                      }}
+                      onMouseEnter={() => setHoveredService(index)}
+                      onMouseLeave={() => setHoveredService(null)}
+                      onClick={() => {
+                        setSelectedService(service);
+                        // Smooth scroll to stacking cards section
+                        document.querySelector('#stacking-cards')?.scrollIntoView({ 
+                          behavior: 'smooth',
+                          block: 'start'
+                        });
                       }}
                     >
                       {/* Gradient top border */}
-                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-t-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-t-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                      
+                      {/* Interactive glow effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       
                       {/* Icon */}
-                      <div className="w-15 h-15 mb-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        <IconComponent className="w-8 h-8" />
+                      <div className="relative w-16 h-16 mb-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-blue-500/40">
+                        <IconComponent className="w-8 h-8 transition-transform duration-300 group-hover:scale-110" />
                       </div>
                       
                       {/* Content */}
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
+                      <h3 className="relative text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300 group-hover:translate-x-1">
                         {service.title}
                       </h3>
-                      <p className="text-slate-300 leading-relaxed text-sm">
+                      <p className="relative text-slate-300 leading-relaxed text-sm group-hover:text-slate-200 transition-all duration-300">
                         {service.description}
                       </p>
+                      
+                      {/* Interactive arrow */}
+                      <div className="absolute bottom-4 right-4 w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+                        <ArrowRight className="w-4 h-4 text-blue-300" />
+                      </div>
+                      
+                      {/* Click ripple effect */}
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-active:opacity-100 transition-opacity duration-150"></div>
                     </div>
                   );
                 })}
@@ -192,7 +217,9 @@ export default function Services() {
           </section>
 
           {/* Stacking Cards Section */}
-          <StackingCards cards={services} />
+          <div id="stacking-cards">
+            <StackingCards cards={services} />
+          </div>
 
 
         </main>
