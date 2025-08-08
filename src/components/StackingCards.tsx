@@ -60,8 +60,14 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       let index = -1 * (topVal / distance + 1);
       index = Math.floor(index);
 
-      // Update current card state
-      setCurrentCard(Math.max(0, Math.min(index, cards.length - 1)));
+      // Debug logging
+      console.log('Scroll Debug:', { topVal, distance, index, currentCard });
+
+      // Update current card state - fix the bounds
+      const newCurrentCard = Math.max(0, Math.min(index, cards.length - 1));
+      if (newCurrentCard !== currentCard) {
+        setCurrentCard(newCurrentCard);
+      }
 
       for (let i = 0; i < cards.length; i++) {
         const cardElement = cards[i] as HTMLElement;
@@ -91,11 +97,17 @@ export default function StackingCards({ cards }: StackingCardsProps) {
   const scrollToCard = (cardIndex: number) => {
     if (isMobile) return;
     
-    const stackArea = document.querySelector(".stack-area");
+    console.log('Scrolling to card:', cardIndex, 'Current card:', currentCard);
+    
+    const stackArea = document.querySelector(".stack-area") as HTMLElement;
     if (!stackArea) return;
 
     const distance = window.innerHeight * 0.5;
-    const targetScrollY = (cardIndex + 1) * distance;
+    // Fix the scroll calculation - use stackArea's offset
+    const stackAreaTop = stackArea.offsetTop;
+    const targetScrollY = stackAreaTop + (cardIndex * distance);
+    
+    console.log('Scroll calculation:', { distance, stackAreaTop, targetScrollY });
     
     window.scrollTo({
       top: targetScrollY,
