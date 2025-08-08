@@ -86,12 +86,11 @@ export default function Services() {
   const [hoveredService, setHoveredService] = useState(null);
 
   const handleCardClick = (service, index) => {
-    setSelectedService(service);
-    // Scroll to the service details section
+    // Scroll to the specific service section
     setTimeout(() => {
-      const detailsSection = document.querySelector('#service-details');
-      if (detailsSection) {
-        detailsSection.scrollIntoView({ 
+      const serviceSection = document.querySelector(`#service-${index}`);
+      if (serviceSection) {
+        serviceSection.scrollIntoView({ 
           behavior: 'smooth',
           block: 'start'
         });
@@ -139,52 +138,64 @@ export default function Services() {
             <StackingCards cards={services} onCardClick={handleCardClick} />
           </div>
 
-          {/* Service Details Section */}
-          {selectedService && (
-            <section id="service-details" className="py-16 bg-card/30 backdrop-blur-sm">
-              <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto">
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-                      <selectedService.icon className="h-8 w-8 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-bold text-foreground">{selectedService.title}</h2>
-                      <p className="text-lg text-muted-foreground">{selectedService.description}</p>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-4">Overview</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {selectedService.content}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-4">Key Features</h3>
-                      <ul className="space-y-3">
-                        {selectedService.features.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-muted-foreground">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 text-center">
-                    <Button size="lg" className="group">
-                      Get Started with {selectedService.title}
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </div>
-                </div>
+          {/* Service Details Section - All Services */}
+          <section className="py-16 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-foreground mb-4">Our Services in Detail</h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Comprehensive information about each of our specialized service offerings
+                </p>
               </div>
-            </section>
-          )}
+
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <div key={index} id={`service-${index}`} className="mb-16 last:mb-0">
+                    <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
+                      <div className="flex items-center gap-4 mb-8">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
+                          <IconComponent className="h-8 w-8 text-primary-foreground" />
+                        </div>
+                        <div>
+                          <h3 className="text-3xl font-bold text-foreground">{service.title}</h3>
+                          <p className="text-lg text-muted-foreground">{service.description}</p>
+                        </div>
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-8">
+                        <div>
+                          <h4 className="text-xl font-semibold text-foreground mb-4">Overview</h4>
+                          <p className="text-muted-foreground leading-relaxed">
+                            {service.content}
+                          </p>
+                        </div>
+
+                        <div>
+                          <h4 className="text-xl font-semibold text-foreground mb-4">Key Features</h4>
+                          <ul className="space-y-3">
+                            {service.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-start gap-3">
+                                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-muted-foreground">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="mt-8 text-center">
+                        <Button size="lg" className="group">
+                          Get Started with {service.title}
+                          <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
 
 
         </main>
