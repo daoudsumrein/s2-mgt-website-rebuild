@@ -118,58 +118,75 @@ export default function Services() {
       <div className="min-h-screen bg-background">
         <Navigation />
         <main>
-          {/* Hero Section */}
-          <section className="py-16 bg-gradient-to-b from-primary-light to-background">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">Our Service Delivery Process</h2>
-                  <p className="text-lg text-muted-foreground">
-                    Structured, agile delivery model guaranteeing seamless execution and measurable results
-                  </p>
-                </div>
+          {/* Hero Section with Animated Particles */}
+          <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800">
+            {/* Animated Particles Background */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-radial from-blue-600/10 to-transparent"></div>
+              {Array.from({ length: 20 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-70 animate-pulse"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    width: `${Math.random() * 4 + 2}px`,
+                    height: `${Math.random() * 4 + 2}px`,
+                    animationDelay: `${Math.random() * 6}s`,
+                    animationDuration: `${Math.random() * 4 + 4}s`,
+                  }}
+                />
+              ))}
+            </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      1
+            <div className="relative z-10 max-w-7xl mx-auto px-4">
+              {/* Hero Content */}
+              <div className="mb-16 animate-fade-in">
+                <h1 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+                  Cybersecurity & IT Excellence
+                </h1>
+                <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                  S2 Management Solutions delivers strategic, high-impact technology solutions that empower resilient and secure IT operations. Your trusted partner in building the foundation for lasting success.
+                </p>
+                <a 
+                  href="#contact" 
+                  className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
+                  Start Your Transformation
+                </a>
+              </div>
+
+              {/* Services Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {services.slice(0, 6).map((service, index) => {
+                  const IconComponent = service.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="group relative bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-6 transition-all duration-300 hover:transform hover:-translate-y-3 hover:bg-blue-600/10 hover:border-blue-400/40 hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer"
+                      style={{
+                        animationDelay: `${index * 0.1}s`,
+                      }}
+                    >
+                      {/* Gradient top border */}
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-t-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                      
+                      {/* Icon */}
+                      <div className="w-15 h-15 mb-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        <IconComponent className="w-8 h-8" />
+                      </div>
+                      
+                      {/* Content */}
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-slate-300 leading-relaxed text-sm">
+                        {service.description}
+                      </p>
                     </div>
-                    <h3 className="font-semibold mb-2">Assessment</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Comprehensive analysis of current state and requirements
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      2
-                    </div>
-                    <h3 className="font-semibold mb-2">Design</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Solution architecture and implementation planning
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      3
-                    </div>
-                    <h3 className="font-semibold mb-2">Implementation</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Execution with testing, training, and knowledge transfer
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      4
-                    </div>
-                    <h3 className="font-semibold mb-2">Support</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Ongoing optimization and operational handover
-                    </p>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </section>
