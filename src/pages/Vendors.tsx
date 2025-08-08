@@ -108,7 +108,7 @@ export default function Vendors() {
                 <Card key={index} className="hover:shadow-lg transition-all duration-300 group">
                   <CardHeader>
                     <div className="flex items-start space-x-4">
-                      <div className={`w-16 h-16 rounded-lg flex items-center justify-center font-bold text-lg border ${vendor.color} overflow-hidden`}>
+                      <div className="w-16 h-16 rounded-lg flex items-center justify-center font-bold text-lg border bg-white overflow-hidden">
                         <img src={vendor.logo} alt={`${vendor.name} logo`} className="w-12 h-12 object-contain" />
                       </div>
                       <div className="flex-1">
