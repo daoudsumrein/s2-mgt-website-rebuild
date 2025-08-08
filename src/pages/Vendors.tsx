@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import nakivoLogo from "@/assets/logos/nakivo-logo-new.png";
 
 const vendors = [
   {
@@ -51,7 +52,7 @@ const vendors = [
   },
   {
     name: "NAKIVO",
-    logo: "https://www.nakivo.com/favicon.ico",
+    logo: nakivoLogo,
     description: "Backup & Recovery",
     tagline: "Comprehensive data protection solutions for virtual and cloud environments",
     solutions: [
