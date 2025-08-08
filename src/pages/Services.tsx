@@ -121,21 +121,36 @@ export default function Services() {
         <Navigation />
         <main>
           {/* Hero Section with Animated Particles */}
-          <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800">
+          <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-background via-primary-light to-accent">
             {/* Animated Particles Background */}
             <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-radial from-blue-600/10 to-transparent"></div>
-              {Array.from({ length: 20 }).map((_, i) => (
+              <div className="absolute inset-0 bg-gradient-radial from-primary/10 to-transparent"></div>
+              {Array.from({ length: 30 }).map((_, i) => (
                 <div
                   key={i}
-                  className="absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-70 animate-pulse"
+                  className="absolute rounded-full bg-gradient-to-r from-primary to-secondary opacity-40"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    width: `${Math.random() * 6 + 3}px`,
+                    height: `${Math.random() * 6 + 3}px`,
+                    animation: `floatMove ${Math.random() * 8 + 6}s ease-in-out infinite`,
+                    animationDelay: `${Math.random() * 5}s`,
+                  }}
+                />
+              ))}
+              {/* Additional floating elements with circular motion */}
+              {Array.from({ length: 15 }).map((_, i) => (
+                <div
+                  key={`circle-${i}`}
+                  className="absolute rounded-full bg-gradient-to-br from-primary/30 to-secondary/30"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                     width: `${Math.random() * 4 + 2}px`,
                     height: `${Math.random() * 4 + 2}px`,
-                    animationDelay: `${Math.random() * 6}s`,
-                    animationDuration: `${Math.random() * 4 + 4}s`,
+                    animation: `floatCircle ${Math.random() * 15 + 10}s linear infinite`,
+                    animationDelay: `${Math.random() * 3}s`,
                   }}
                 />
               ))}
@@ -144,17 +159,17 @@ export default function Services() {
             <div className="relative z-10 max-w-7xl mx-auto px-4">
               {/* Hero Content */}
               <div className="mb-16 animate-fade-in">
-                <h1 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+                <h1 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-foreground via-primary to-secondary bg-clip-text text-transparent leading-tight">
                   Cybersecurity & IT Excellence
                 </h1>
-                <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
                   S2 Management Solutions delivers strategic, high-impact technology solutions that empower resilient and secure IT operations. Your trusted partner in building the foundation for lasting success.
                 </p>
                 <a 
                   href="#contact" 
-                  className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
+                  className="inline-block px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold text-lg rounded-full hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-foreground/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
                   Start Your Transformation
                 </a>
               </div>
@@ -166,8 +181,8 @@ export default function Services() {
                   return (
                     <div
                       key={index}
-                      className={`group relative bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-6 transition-all duration-500 cursor-pointer transform hover:-translate-y-4 hover:scale-105 hover:bg-blue-600/15 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/30 animate-fade-in ${
-                        hoveredService === index ? 'ring-2 ring-blue-400/50' : ''
+                      className={`group relative bg-card/50 backdrop-blur-lg border border-primary/20 rounded-2xl p-6 transition-all duration-500 cursor-pointer transform hover:-translate-y-4 hover:scale-105 hover:bg-primary/5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/20 animate-fade-in ${
+                        hoveredService === index ? 'ring-2 ring-primary/50' : ''
                       }`}
                       style={{
                         animationDelay: `${index * 0.15}s`,
@@ -184,31 +199,31 @@ export default function Services() {
                       }}
                     >
                       {/* Gradient top border */}
-                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-t-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary rounded-t-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                       
                       {/* Interactive glow effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       
                       {/* Icon */}
-                      <div className="relative w-16 h-16 mb-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-blue-500/40">
+                      <div className="relative w-16 h-16 mb-4 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-primary-foreground transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-primary/40">
                         <IconComponent className="w-8 h-8 transition-transform duration-300 group-hover:scale-110" />
                       </div>
                       
                       {/* Content */}
-                      <h3 className="relative text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300 group-hover:translate-x-1">
+                      <h3 className="relative text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-all duration-300 group-hover:translate-x-1">
                         {service.title}
                       </h3>
-                      <p className="relative text-slate-300 leading-relaxed text-sm group-hover:text-slate-200 transition-all duration-300">
+                      <p className="relative text-muted-foreground leading-relaxed text-sm group-hover:text-foreground transition-all duration-300">
                         {service.description}
                       </p>
                       
                       {/* Interactive arrow */}
-                      <div className="absolute bottom-4 right-4 w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
-                        <ArrowRight className="w-4 h-4 text-blue-300" />
+                      <div className="absolute bottom-4 right-4 w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+                        <ArrowRight className="w-4 h-4 text-primary" />
                       </div>
                       
                       {/* Click ripple effect */}
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-active:opacity-100 transition-opacity duration-150"></div>
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-active:opacity-100 transition-opacity duration-150"></div>
                     </div>
                   );
                 })}
