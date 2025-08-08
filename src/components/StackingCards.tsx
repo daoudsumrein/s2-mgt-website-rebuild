@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight, ChevronUp, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface StackingCard {
   icon: React.ComponentType<{ className?: string }>;
@@ -19,7 +19,6 @@ interface StackingCardsProps {
 
 export default function StackingCards({ cards }: StackingCardsProps) {
   const [isMobile, setIsMobile] = useState(false);
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,88 +31,10 @@ export default function StackingCards({ cards }: StackingCardsProps) {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Function to scroll to specific card
-  const scrollToCard = (cardIndex: number) => {
-    if (isMobile) return;
-    
-    console.log('Scrolling to card:', cardIndex); // Debug log
-    
-    const stackArea = document.querySelector(".stack-area") as HTMLElement;
-    if (!stackArea) return;
-    
-    // Calculate the exact scroll position for each card
-    // The scroll should position the stack area so that the card index shows correctly
-    const scrollAmount = stackArea.offsetTop + (window.innerHeight * 0.5 * cardIndex);
-    
-    console.log('Scroll amount:', scrollAmount, 'Stack area offset:', stackArea.offsetTop, 'Target index:', cardIndex); // Debug log
-    
-    // Set manual scroll flag before scrolling
-    if ((window as any).setManualScroll) {
-      (window as any).setManualScroll();
-    }
-    
-    window.scrollTo({
-      top: scrollAmount,
-      behavior: 'smooth'
-    });
-    
-    // Update state immediately to prevent conflicts
-    setCurrentCardIndex(cardIndex);
-  };
-
-  // Navigate to next card (one by one)
-  const nextCard = () => {
-    console.log('Next card clicked, current:', currentCardIndex); // Debug log
-    
-    // Set manual scroll flag to prevent interference
-    if ((window as any).setManualScroll) {
-      (window as any).setManualScroll();
-    }
-    
-    const nextIndex = Math.min(currentCardIndex + 1, cards.length - 1);
-    if (nextIndex !== currentCardIndex) {
-      scrollToCard(nextIndex);
-    }
-  };
-
-  // Navigate to previous card (one by one)
-  const prevCard = () => {
-    console.log('Prev card clicked, current:', currentCardIndex); // Debug log
-    
-    // Set manual scroll flag to prevent interference
-    if ((window as any).setManualScroll) {
-      (window as any).setManualScroll();
-    }
-    
-    const prevIndex = Math.max(currentCardIndex - 1, 0);
-    if (prevIndex !== currentCardIndex) {
-      scrollToCard(prevIndex);
-    }
-  };
-
   useEffect(() => {
     if (isMobile) return; // Skip scroll animation on mobile
 
-    let isManualScroll = false;
-    let manualScrollTimeout: NodeJS.Timeout;
-
-    // Function to temporarily disable scroll event handling during manual navigation
-    const setManualScroll = () => {
-      isManualScroll = true;
-      clearTimeout(manualScrollTimeout);
-      manualScrollTimeout = setTimeout(() => {
-        isManualScroll = false;
-        console.log('Manual scroll timeout ended, re-enabling auto detection');
-      }, 800); // Shorter timeout for better responsiveness
-    };
-
-    // Expose setManualScroll to the component
-    (window as any).setManualScroll = setManualScroll;
-
     const handleScroll = () => {
-      // Skip automatic updates during manual scroll
-      if (isManualScroll) return;
-
       const cards = document.querySelectorAll(".desktop-card");
       const stackArea = document.querySelector(".stack-area");
 
@@ -135,23 +56,8 @@ export default function StackingCards({ cards }: StackingCardsProps) {
 
       let distance = window.innerHeight * 0.5;
       let topVal = stackArea.getBoundingClientRect().top;
-      
-      // Improved calculation - more precise index detection
-      let rawIndex = -1 * (topVal / distance);
-      let index = Math.round(rawIndex);
-      
-      // Ensure index is within bounds
-      index = Math.max(0, Math.min(index, cards.length - 1));
-      
-      // Add some tolerance to prevent rapid changes near boundaries
-      const tolerance = 0.1;
-      const indexDiff = Math.abs(rawIndex - currentCardIndex);
-      
-      // Only update if the index has actually changed significantly
-      if (index !== currentCardIndex && indexDiff > tolerance) {
-        console.log('Auto scroll detected, updating index from', currentCardIndex, 'to', index, 'rawIndex:', rawIndex.toFixed(2));
-        setCurrentCardIndex(index);
-      }
+      let index = -1 * (topVal / distance + 1);
+      index = Math.floor(index);
 
       for (let i = 0; i < cards.length; i++) {
         const cardElement = cards[i] as HTMLElement;
@@ -175,12 +81,8 @@ export default function StackingCards({ cards }: StackingCardsProps) {
     });
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(manualScrollTimeout);
-      delete (window as any).setManualScroll;
-    };
-  }, [isMobile, currentCardIndex]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobile]);
 
   // Mobile Design
   if (isMobile) {
@@ -329,43 +231,11 @@ export default function StackingCards({ cards }: StackingCardsProps) {
             </Button>
           </div>
         </div>
-        <div className="right relative">
-          {/* Navigation Arrows positioned beside cards */}
-          <div className="absolute right-8 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-50">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prevCard}
-              disabled={currentCardIndex === 0}
-              className="w-12 h-12 rounded-full bg-background/90 backdrop-blur-sm border-primary/30 hover:bg-primary/10 disabled:opacity-30 shadow-lg"
-            >
-              <ChevronUp className="h-6 w-6" />
-            </Button>
-            
-            <div className="text-center text-sm text-muted-foreground bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 border border-primary/20">
-              {currentCardIndex + 1}/{cards.length}
-            </div>
-            
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={nextCard}
-              disabled={currentCardIndex === cards.length - 1}
-              className="w-12 h-12 rounded-full bg-background/90 backdrop-blur-sm border-primary/30 hover:bg-primary/10 disabled:opacity-30 shadow-lg"
-            >
-              <ChevronDown className="h-6 w-6" />
-            </Button>
-          </div>
-
+        <div className="right">
           {cards.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div 
-                key={index} 
-                className="desktop-card"
-                onClick={() => scrollToCard(index)}
-                style={{ cursor: 'pointer' }}
-              >
+              <div key={index} className="desktop-card">
                 <div className="sub">
                   <IconComponent className="h-8 w-8 mb-2 text-white" />
                   {service.title.split(' ')[0]}
