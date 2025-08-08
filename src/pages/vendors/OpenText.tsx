@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink, CheckCircle, ArrowRight } from "lucide-react";
+import openTextLogo from "@/assets/logos/opentext-logo.png";
 
 const solutions = [
   {
@@ -52,8 +53,8 @@ export default function OpenTextPage() {
         <section className="py-16 bg-gradient-to-b from-blue-50 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="w-20 h-20 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center font-bold text-2xl mx-auto mb-6 border border-blue-200">
-                OT
+              <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center mx-auto mb-6 border border-blue-200 p-3">
+                <img src={openTextLogo} alt="OpenText logo" className="w-full h-full object-contain" />
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 OpenText Data Protection Platform
