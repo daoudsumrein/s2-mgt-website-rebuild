@@ -92,7 +92,7 @@ export default function Services() {
       if (serviceSection) {
         serviceSection.scrollIntoView({ 
           behavior: 'smooth',
-          block: 'start'
+          block: 'center'
         });
       }
     }, 100);
