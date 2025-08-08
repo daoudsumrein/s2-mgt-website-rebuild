@@ -275,22 +275,22 @@ export default function Solutions() {
           </div>
 
 
-          <div className="container mx-auto px-4 min-h-screen flex items-center">
-            <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+          <div className="container mx-auto px-4 py-8 md:py-16 min-h-screen flex items-center">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center w-full">
               {/* Left Content */}
-              <div className="z-10">
-                <Badge variant="outline" className="mb-6 border-primary/40 text-primary bg-primary/10 backdrop-blur-sm">
+              <div className="z-10 text-center lg:text-left">
+                <Badge variant="outline" className="mb-4 md:mb-6 border-primary/40 text-primary bg-primary/10 backdrop-blur-sm">
                   Solutions Portfolio
                 </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-blue-400 to-teal-400 bg-clip-text text-transparent">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-primary via-blue-400 to-teal-400 bg-clip-text text-transparent">
                   Two-Pillar Solution Portfolio
                 </h1>
-                <p className="text-xl text-slate-200 mb-8 leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl text-slate-200 mb-6 md:mb-8 leading-relaxed px-4 lg:px-0">
                   S2 delivers comprehensive solutions across two core areas: Data Protection and Cybersecurity, providing complete coverage for your enterprise infrastructure needs.
                 </p>
                 <Button 
                   size="lg" 
-                  className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+                  className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
                   onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=IT%20Solutions%20Consultation', '_blank')}
                 >
                   Request Consultation
@@ -298,11 +298,11 @@ export default function Solutions() {
               </div>
 
               {/* Interactive Circle Visualization */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
                 <div className="relative">
                   {/* Main Circle Container */}
                   <div 
-                    className={`relative w-96 h-96 cursor-pointer transition-all duration-500 ${
+                    className={`relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 cursor-pointer transition-all duration-500 ${
                       activeSection ? 'scale-105' : 'hover:scale-102'
                     }`}
                   >
@@ -314,34 +314,34 @@ export default function Solutions() {
                     }`} />
                     
                     {/* Inner Circle */}
-                    <div className="absolute inset-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center overflow-hidden">
+                    <div className="absolute inset-2 sm:inset-3 md:inset-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-full flex items-center justify-center overflow-hidden">
                       {/* Default Content */}
-                      <div className={`text-center transition-all duration-500 ${
+                      <div className={`text-center transition-all duration-500 px-4 ${
                         activeSection ? 'opacity-0 scale-75' : 'opacity-100 scale-100'
                       }`}>
-                        <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-primary to-teal-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto mb-2 md:mb-4 bg-gradient-to-r from-primary to-teal-500 rounded-full flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold text-white">
                           S2
                         </div>
-                        <div className="text-white font-semibold text-lg">Two-Pillar Solution</div>
-                        <div className="text-slate-400 text-sm mt-2">Hover to explore</div>
+                        <div className="text-white font-semibold text-sm sm:text-base md:text-lg">Two-Pillar Solution</div>
+                        <div className="text-slate-400 text-xs sm:text-sm mt-1 md:mt-2">Hover to explore</div>
                       </div>
 
                       {/* Data Protection Content */}
-                      <div className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 ${
+                      <div className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 px-4 ${
                         activeSection === 'data' ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                       }`}>
-                        <h3 className="text-2xl font-bold text-primary mb-4">DATA PROTECTION</h3>
-                        <p className="text-slate-200 text-sm px-8 leading-relaxed">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-2 md:mb-4">DATA PROTECTION</h3>
+                        <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
                           Comprehensive data backup, recovery, and protection solutions to safeguard your critical business information.
                         </p>
                       </div>
 
                       {/* Cybersecurity Content */}
-                      <div className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 ${
+                      <div className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 px-4 ${
                         activeSection === 'cyber' ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                       }`}>
-                        <h3 className="text-2xl font-bold text-teal-400 mb-4">CYBER SECURITY</h3>
-                        <p className="text-slate-200 text-sm px-8 leading-relaxed">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-teal-400 mb-2 md:mb-4">CYBER SECURITY</h3>
+                        <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
                           Advanced cybersecurity solutions including threat detection, prevention, and response to protect your infrastructure.
                         </p>
                       </div>
@@ -362,20 +362,20 @@ export default function Solutions() {
                     />
                   </div>
 
-                  {/* Info Cards */}
-                  <div className={`absolute -bottom-20 left-1/2 transform -translate-x-1/2 flex gap-6 transition-all duration-500 ${
+                  {/* Info Cards - Hide on mobile */}
+                  <div className={`absolute -bottom-16 md:-bottom-20 left-1/2 transform -translate-x-1/2 hidden sm:flex gap-4 md:gap-6 transition-all duration-500 ${
                     activeSection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}>
-                    <Card className="w-48 bg-slate-800/80 backdrop-blur-sm border-primary/30">
-                      <CardContent className="p-4 text-center">
-                        <h4 className="font-semibold text-primary mb-2">Data Protection</h4>
-                        <p className="text-sm text-slate-300">Advanced backup & recovery solutions</p>
+                    <Card className="w-36 sm:w-40 md:w-48 bg-slate-800/80 backdrop-blur-sm border-primary/30">
+                      <CardContent className="p-3 md:p-4 text-center">
+                        <h4 className="font-semibold text-primary mb-1 md:mb-2 text-sm md:text-base">Data Protection</h4>
+                        <p className="text-xs md:text-sm text-slate-300">Advanced backup & recovery solutions</p>
                       </CardContent>
                     </Card>
-                    <Card className="w-48 bg-slate-800/80 backdrop-blur-sm border-teal-500/30">
-                      <CardContent className="p-4 text-center">
-                        <h4 className="font-semibold text-teal-400 mb-2">Cyber Security</h4>
-                        <p className="text-sm text-slate-300">Comprehensive threat protection</p>
+                    <Card className="w-36 sm:w-40 md:w-48 bg-slate-800/80 backdrop-blur-sm border-teal-500/30">
+                      <CardContent className="p-3 md:p-4 text-center">
+                        <h4 className="font-semibold text-teal-400 mb-1 md:mb-2 text-sm md:text-base">Cyber Security</h4>
+                        <p className="text-xs md:text-sm text-slate-300">Comprehensive threat protection</p>
                       </CardContent>
                     </Card>
                   </div>
@@ -386,37 +386,37 @@ export default function Solutions() {
         </section>
 
         {/* Solution Categories Grid */}
-        <section id="solutions-grid" className="py-20 bg-muted/50">
+        <section id="solutions-grid" className="py-12 md:py-20 bg-muted/50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Explore Our Solutions</h2>
-              <p className="text-muted-foreground text-lg">Choose from our comprehensive portfolio of enterprise solutions</p>
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Explore Our Solutions</h2>
+              <p className="text-muted-foreground text-base md:text-lg px-4 lg:px-0">Choose from our comprehensive portfolio of enterprise solutions</p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
               {/* Data Protection Column */}
               <div className="space-y-6">
-                <div className="flex items-center space-x-3 mb-8">
-                  <Database className="h-10 w-10 text-primary" />
-                  <h3 className="text-3xl font-bold">Data Protection Solutions</h3>
+                <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6 md:mb-8">
+                  <Database className="h-8 w-8 md:h-10 md:w-10 text-primary" />
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left">Data Protection Solutions</h3>
                 </div>
                 <div className="space-y-4">
                   {dataProtectionSolutions.map((solution, index) => {
                     const IconComponent = solution.icon;
                     return (
                       <Card key={index} className="group hover:shadow-xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-primary/30 hover:border-l-primary">
-                        <CardContent className="p-6">
-                          <div className="flex items-center space-x-4">
-                            <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <IconComponent className="h-6 w-6 text-primary" />
+                        <CardContent className="p-4 md:p-6">
+                          <div className="flex items-center space-x-3 md:space-x-4">
+                            <div className="p-2 md:p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                              <IconComponent className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                             </div>
-                            <div className="flex-1">
-                              <h4 className="font-semibold text-lg mb-1">{solution.title}</h4>
-                              <p className="text-muted-foreground">{solution.description}</p>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="font-semibold text-base md:text-lg mb-1">{solution.title}</h4>
+                              <p className="text-muted-foreground text-sm md:text-base">{solution.description}</p>
                             </div>
-                            <Button size="sm" variant="ghost" asChild className="opacity-70 group-hover:opacity-100 transition-opacity">
+                            <Button size="sm" variant="ghost" asChild className="opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0">
                               <Link to={solution.link}>
-                                <ArrowRight className="h-5 w-5" />
+                                <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
                               </Link>
                             </Button>
                           </div>
@@ -429,27 +429,27 @@ export default function Solutions() {
 
               {/* Cybersecurity Column */}
               <div className="space-y-6">
-                <div className="flex items-center space-x-3 mb-8">
-                  <Shield className="h-10 w-10 text-teal-500" />
-                  <h3 className="text-3xl font-bold">Cybersecurity Solutions</h3>
+                <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6 md:mb-8">
+                  <Shield className="h-8 w-8 md:h-10 md:w-10 text-teal-500" />
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left">Cybersecurity Solutions</h3>
                 </div>
                 <div className="space-y-4">
                   {cybersecuritySolutions.map((solution, index) => {
                     const IconComponent = solution.icon;
                     return (
                       <Card key={index} className="group hover:shadow-xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-teal-500/30 hover:border-l-teal-500">
-                        <CardContent className="p-6">
-                          <div className="flex items-center space-x-4">
-                            <div className="p-3 rounded-lg bg-teal-500/10 group-hover:bg-teal-500/20 transition-colors">
-                              <IconComponent className="h-6 w-6 text-teal-500" />
+                        <CardContent className="p-4 md:p-6">
+                          <div className="flex items-center space-x-3 md:space-x-4">
+                            <div className="p-2 md:p-3 rounded-lg bg-teal-500/10 group-hover:bg-teal-500/20 transition-colors flex-shrink-0">
+                              <IconComponent className="h-5 w-5 md:h-6 md:w-6 text-teal-500" />
                             </div>
-                            <div className="flex-1">
-                              <h4 className="font-semibold text-lg mb-1">{solution.title}</h4>
-                              <p className="text-muted-foreground">{solution.description}</p>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="font-semibold text-base md:text-lg mb-1">{solution.title}</h4>
+                              <p className="text-muted-foreground text-sm md:text-base">{solution.description}</p>
                             </div>
-                            <Button size="sm" variant="ghost" asChild className="opacity-70 group-hover:opacity-100 transition-opacity">
+                            <Button size="sm" variant="ghost" asChild className="opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0">
                               <Link to={solution.link}>
-                                <ArrowRight className="h-5 w-5" />
+                                <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
                               </Link>
                             </Button>
                           </div>
