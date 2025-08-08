@@ -15,7 +15,7 @@ export default function TDSPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="w-20 h-20 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold text-xl mx-auto mb-6 border border-green-200">
-                TDS
+                Transition Manager
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 TDS TransitionManager
