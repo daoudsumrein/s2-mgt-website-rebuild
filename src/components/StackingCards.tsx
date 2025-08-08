@@ -86,6 +86,10 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       let topVal = stackArea.getBoundingClientRect().top;
       let index = -1 * (topVal / distance + 1);
       index = Math.floor(index);
+      
+      // Update current card index based on scroll position
+      const newIndex = Math.max(0, Math.min(index, cards.length - 1));
+      setCurrentCardIndex(newIndex);
 
       for (let i = 0; i < cards.length; i++) {
         const cardElement = cards[i] as HTMLElement;
@@ -258,21 +262,22 @@ export default function StackingCards({ cards }: StackingCardsProps) {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          
-          {/* Navigation Arrows */}
-          <div className="flex flex-col gap-4 mt-8">
+        </div>
+        <div className="right relative">
+          {/* Navigation Arrows positioned beside cards */}
+          <div className="absolute right-8 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-50">
             <Button
               variant="outline"
               size="icon"
               onClick={prevCard}
               disabled={currentCardIndex === 0}
-              className="w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary/10 disabled:opacity-50"
+              className="w-12 h-12 rounded-full bg-background/90 backdrop-blur-sm border-primary/30 hover:bg-primary/10 disabled:opacity-30 shadow-lg"
             >
               <ChevronUp className="h-6 w-6" />
             </Button>
             
-            <div className="text-center text-sm text-muted-foreground">
-              {currentCardIndex + 1} / {cards.length}
+            <div className="text-center text-sm text-muted-foreground bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 border border-primary/20">
+              {currentCardIndex + 1}/{cards.length}
             </div>
             
             <Button
@@ -280,13 +285,12 @@ export default function StackingCards({ cards }: StackingCardsProps) {
               size="icon"
               onClick={nextCard}
               disabled={currentCardIndex === cards.length - 1}
-              className="w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary/10 disabled:opacity-50"
+              className="w-12 h-12 rounded-full bg-background/90 backdrop-blur-sm border-primary/30 hover:bg-primary/10 disabled:opacity-30 shadow-lg"
             >
               <ChevronDown className="h-6 w-6" />
             </Button>
           </div>
-        </div>
-        <div className="right">
+
           {cards.map((service, index) => {
             const IconComponent = service.icon;
             return (
