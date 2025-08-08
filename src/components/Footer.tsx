@@ -28,7 +28,14 @@ export default function Footer() {
         <div className="md:hidden space-y-6">
           {/* Company Info */}
           <div className="space-y-4">
-            <Linkedin className="h-8 w-8 text-primary" />
+            <a 
+              href="https://linkedin.com/company/s2-management-solutions" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors"
+            >
+              <Linkedin className="h-8 w-8" />
+            </a>
             <div className="space-y-2">
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -155,7 +162,14 @@ export default function Footer() {
         <div className="hidden md:grid md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Linkedin className="h-8 w-8 text-primary" />
+            <a 
+              href="https://linkedin.com/company/s2-management-solutions" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors"
+            >
+              <Linkedin className="h-8 w-8" />
+            </a>
             <div className="space-y-2">
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
