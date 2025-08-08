@@ -292,7 +292,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-2 pt-2 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-muted-foreground">
-            © 2024 S2 Management Solutions. All rights reserved.
+            © 2025 S2 Management Solutions. All rights reserved.
           </p>
         </div>
       </div>
