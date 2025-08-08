@@ -55,23 +55,24 @@ export default function StackingCards({ cards }: StackingCardsProps) {
 
       if (!stackArea) return;
 
-      let distance = window.innerHeight * 0.5;
-      let topVal = stackArea.getBoundingClientRect().top;
-      let index = -1 * (topVal / distance + 1);
-      index = Math.floor(index);
+      const distance = window.innerHeight * 0.5;
+      const stackAreaTop = stackArea.getBoundingClientRect().top;
+      
+      // Fix the index calculation - when stackArea.top is 0, we want index 0
+      // When scrolled down by distance, we want index 1, etc.
+      let index = Math.round(-stackAreaTop / distance);
+      
+      // Clamp the index to valid range
+      index = Math.max(0, Math.min(index, cards.length - 1));
 
-      // Debug logging
-      console.log('Scroll Debug:', { topVal, distance, index, currentCard });
-
-      // Update current card state - fix the bounds
-      const newCurrentCard = Math.max(0, Math.min(index, cards.length - 1));
-      if (newCurrentCard !== currentCard) {
-        setCurrentCard(newCurrentCard);
+      // Update current card state
+      if (index !== currentCard) {
+        setCurrentCard(index);
       }
 
       for (let i = 0; i < cards.length; i++) {
         const cardElement = cards[i] as HTMLElement;
-        if (i <= index) {
+        if (i < index) {
           cardElement.classList.add("away");
         } else {
           cardElement.classList.remove("away");
@@ -90,24 +91,22 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       cardElement.style.zIndex = (cards.length - index).toString();
     });
 
+    // Initial call to set up the state correctly
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMobile, cards.length]);
+  }, [isMobile, cards.length, currentCard]);
 
   const scrollToCard = (cardIndex: number) => {
     if (isMobile) return;
-    
-    console.log('Scrolling to card:', cardIndex, 'Current card:', currentCard);
     
     const stackArea = document.querySelector(".stack-area") as HTMLElement;
     if (!stackArea) return;
 
     const distance = window.innerHeight * 0.5;
-    // Fix the scroll calculation - use stackArea's offset
     const stackAreaTop = stackArea.offsetTop;
     const targetScrollY = stackAreaTop + (cardIndex * distance);
-    
-    console.log('Scroll calculation:', { distance, stackAreaTop, targetScrollY });
     
     window.scrollTo({
       top: targetScrollY,
