@@ -1,21 +1,18 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
-import StackingCards from "@/components/StackingCards";
-import { useEffect, useState } from "react";
+import { Target, Building, Wrench, FileText, Rocket, Database } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
 
-// Auto-sliding carousel implementation
 const services = [
   {
-    icon: Users,
+    icon: Target,
     title: "Consultancy Services",
     description: "Expert, vendor-neutral guidance tailored to your unique challenges and goals",
-    content: "At S2 Management Solutions, our consultancy approach is grounded in a simple but powerful principle that to assure the total commitment to those we serve. We don't lead with products, we lead with purpose. Our consultants begin by listening carefully and understanding the specific needs, challenges, and goals of each client. From strategic planning to technology assessments and roadmap development, we provide expert, vendor-neutral guidance to design solutions that are practical, scalable, and aligned with your long-term vision. Every recommendation we make is tailored to solve real business challenges, never a one-size-fits-all answer, but a partnership built on trust, insight, and results.",
+    content: "At S2 Management Solutions, our consultancy approach is grounded in a simple but powerful principle: total commitment to those we serve. We don't lead with products, we lead with purpose. Our consultants begin by listening carefully and understanding the specific needs, challenges, and goals of each client.",
     features: [
       "Strategic technology planning",
       "Vendor-neutral assessments", 
@@ -28,7 +25,7 @@ const services = [
     icon: Building,
     title: "Solutions Architecture",
     description: "Robust, scalable, and future-proof IT environments designed for your ecosystem",
-    content: "Our strength in solutions architecture lies in our ability to design robust, scalable, and future proof IT environments tailored to each client's unique ecosystem. Backed by deep technical expertise and industry recognized certifications, our architects bridge business objectives with technology strategies. Whether it's cloud transformation, cybersecurity architecture, disaster recovery design, or infrastructure modernization, we take a holistic, vendor agnostic approach to craft architectures that perform reliably in complex, mission critical environments. With S2, you don't just get a design, you get a roadmap to sustainable innovation.",
+    content: "Our strength in solutions architecture lies in our ability to design robust, scalable, and future-proof IT environments tailored to each client's unique ecosystem. Backed by deep technical expertise and industry-recognized certifications, our architects bridge business objectives with technology strategies.",
     features: [
       "Cloud transformation architecture",
       "Cybersecurity framework design",
@@ -41,7 +38,7 @@ const services = [
     icon: Wrench,
     title: "Professional Services",
     description: "Comprehensive, milestone-driven project execution from start to finish",
-    content: "S2 Professional Services are designed to deliver comprehensive, milestone driven project execution from start to finish. We manage the full lifecycle, beginning with assessment and planning, through implementation, optimization, and post deployment support, ensuring each phase is executed with precision and aligned to your business objectives. Our certified technical team leads every project through well-defined stages, including solution design, architecture, deployment, testing, onsite training and knowledge transfer, culminating in a smooth operational handover. We place strong emphasis on empowering your internal teams through hands on training and documentation, ensuring long-term success and self-sufficiency.",
+    content: "S2 Professional Services are designed to deliver comprehensive, milestone-driven project execution from start to finish. We manage the full lifecycle, beginning with assessment and planning, through implementation, optimization, and post-deployment support.",
     features: [
       "Full lifecycle project management",
       "Solution design and implementation",
@@ -51,10 +48,10 @@ const services = [
     ]
   },
   {
-    icon: Shield,
+    icon: FileText,
     title: "Service Level Agreements",
     description: "Business-critical commitment with measurable reliability and accountability",
-    content: "At S2 Management Solutions, we understand that Disaster Recovery is not just technology, it's a business critical commitment. Our SLAs for DR operations are designed to deliver measurable reliability, performance, and accountability when it matters most. We offer customizable SLA tiers to align with your specific RTOs and RPOs, ensuring your critical systems and data are protected and recoverable within agreed timelines. From incident response to regular DR testing and 24/7 support, our SLA framework ensures operational continuity, compliance, and peace of mind.",
+    content: "At S2 Management Solutions, we understand that Disaster Recovery is not just technology, it's a business-critical commitment. Our SLAs for DR operations are designed to deliver measurable reliability, performance, and accountability when it matters most.",
     features: [
       "Customizable SLA tiers",
       "Defined RTOs and RPOs",
@@ -64,10 +61,10 @@ const services = [
     ]
   },
   {
-    icon: RefreshCw,
-    title: "Application Modernization and Migration",
+    icon: Rocket,
+    title: "Application Modernization",
     description: "Seamless transition from legacy systems to modern, secure platforms",
-    content: "At S2 Management Solutions, our Application Modernization and Migration services are purpose-built to transition your critical applications from outdated, legacy operating systems to modern, secure, and fully supported platforms. We specialize in assessing legacy environments, identifying application dependencies, and executing seamless migrations to updated OS versions, whether on premises, in the cloud, or across hybrid environments. Our process ensures minimal downtime, data integrity, and application continuity, while also enhancing security, performance, and long-term maintainability.",
+    content: "At S2 Management Solutions, our Application Modernization services are purpose-built to transition your critical applications from outdated, legacy operating systems to modern, secure, and fully supported platforms.",
     features: [
       "Legacy environment assessment",
       "Application dependency mapping",
@@ -75,110 +72,238 @@ const services = [
       "Multi-platform support",
       "Risk-managed approach"
     ]
+  },
+  {
+    icon: Database,
+    title: "Migration Services",
+    description: "Secure and efficient data and system migration",
+    content: "Comprehensive migration services that ensure your data and applications are transferred securely and efficiently to new platforms with zero data loss and minimal downtime.",
+    features: [
+      "Data migration planning",
+      "System transfer execution",
+      "Testing and validation",
+      "Rollback planning",
+      "Post-migration support"
+    ]
   }
 ];
 
 export default function Services() {
-  const [carouselApi, setCarouselApi] = useState(null);
-  const [direction, setDirection] = useState('forward'); // Track direction
-  const [isPaused, setIsPaused] = useState(false); // Track pause state
+  const [particles, setParticles] = useState<Array<{
+    id: number;
+    x: number;
+    y: number;
+    size: number;
+    opacity: number;
+    speedX: number;
+    speedY: number;
+  }>>([]);
+  const animationRef = useRef<number>();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!carouselApi || isPaused) return;
+    // Create 100 particles
+    const newParticles = Array.from({ length: 100 }, (_, i) => ({
+      id: i,
+      x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+      y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
+      size: Math.random() * 3 + 1,
+      opacity: Math.random() * 0.5 + 0.2,
+      speedX: (Math.random() - 0.5) * 0.5,
+      speedY: (Math.random() - 0.5) * 0.5,
+    }));
+    setParticles(newParticles);
 
-    const interval = setInterval(() => {
-      if (direction === 'forward') {
-        if (carouselApi.canScrollNext()) {
-          carouselApi.scrollNext();
-        } else {
-          setDirection('backward'); // Switch to reverse
-          carouselApi.scrollPrev();
-        }
-      } else {
-        if (carouselApi.canScrollPrev()) {
-          carouselApi.scrollPrev();
-        } else {
-          setDirection('forward'); // Switch to forward
-          carouselApi.scrollNext();
-        }
+    const animateParticles = () => {
+      if (typeof window === 'undefined') return;
+      
+      setParticles(prev => prev.map(particle => {
+        const newX = particle.x + particle.speedX;
+        const newY = particle.y + particle.speedY;
+        
+        return {
+          ...particle,
+          x: newX > window.innerWidth ? 0 : newX < 0 ? window.innerWidth : newX,
+          y: newY > window.innerHeight ? 0 : newY < 0 ? window.innerHeight : newY,
+        };
+      }));
+      animationRef.current = requestAnimationFrame(animateParticles);
+    };
+
+    animationRef.current = requestAnimationFrame(animateParticles);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
       }
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, [carouselApi, direction, isPaused]);
+    };
+  }, []);
 
   return (
     <>
       <SEOHead 
-        title="Professional IT Services | S2 Management Solutions"
-        description="Comprehensive IT services including consultancy, solutions architecture, professional services, SLAs, and application modernization. Expert guidance for your digital transformation."
-        keywords="IT consultancy, solutions architecture, professional services, application modernization, disaster recovery SLA, UAE IT services"
+        title="Professional IT Services & Solutions | S2 Management Solutions"
+        description="Comprehensive IT services including consultancy, architecture, professional services, SLAs, application modernization, and migration. Expert solutions for enterprise technology needs."
+        keywords="IT services, consultancy, solutions architecture, professional services, SLA, application modernization, migration, enterprise technology"
       />
       
-      <div className="min-h-screen bg-background">
-        <Navigation />
-        <main>
-          {/* Hero Section */}
-          <section className="py-16 bg-gradient-to-b from-primary-light to-background">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">Our Service Delivery Process</h2>
-                  <p className="text-lg text-muted-foreground">
-                    Structured, agile delivery model guaranteeing seamless execution and measurable results
-                  </p>
-                </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+        {/* Animated background particles */}
+        <div 
+          ref={containerRef}
+          className="fixed inset-0 pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1) 0%, transparent 50%)'
+          }}
+        >
+          {particles.map((particle) => (
+            <div
+              key={particle.id}
+              className="absolute rounded-full bg-gradient-to-r from-blue-400 to-purple-400"
+              style={{
+                left: `${particle.x}px`,
+                top: `${particle.y}px`,
+                width: `${particle.size}px`,
+                height: `${particle.size}px`,
+                opacity: particle.opacity,
+                filter: 'blur(0.5px)',
+              }}
+            />
+          ))}
+        </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      1
-                    </div>
-                    <h3 className="font-semibold mb-2">Assessment</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Comprehensive analysis of current state and requirements
-                    </p>
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent leading-tight">
+              Professional IT Services
+            </h1>
+            <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+              S2 Management Solutions delivers strategic, high-impact technology solutions that empower resilient and secure IT operations. Your trusted partner in building the foundation for lasting success.
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Start Your Transformation
+            </Button>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
+              Our Expertise
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card 
+                    key={index} 
+                    className="group relative bg-white/5 backdrop-blur-lg border border-blue-500/20 hover:border-blue-400/40 transition-all duration-500 hover:scale-105 hover:bg-white/10 rounded-2xl overflow-hidden"
+                  >
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    {/* Top border gradient */}
+                    <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                    
+                    <CardHeader className="relative z-10 pb-4">
+                      <div className="w-16 h-16 mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        <IconComponent className="h-8 w-8 text-white" />
+                      </div>
+                      <CardTitle className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+                        {service.title}
+                      </CardTitle>
+                      <CardDescription className="text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
+                        {service.description}
+                      </CardDescription>
+                    </CardHeader>
+                    
+                    <CardContent className="relative z-10 pt-0">
+                      <p className="text-slate-300 mb-6 leading-relaxed">
+                        {service.content}
+                      </p>
+                      
+                      <div className="space-y-2">
+                        <h4 className="font-semibold text-white mb-3">Key Features:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {service.features.map((feature, featureIndex) => (
+                            <Badge 
+                              key={featureIndex} 
+                              variant="secondary" 
+                              className="bg-blue-900/30 text-blue-200 border border-blue-500/30 hover:bg-blue-800/40 transition-colors duration-300"
+                            >
+                              {feature}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="relative py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-blue-600/10 backdrop-blur-lg border border-blue-500/20 rounded-3xl p-8 lg:p-12">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div className="space-y-2">
+                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    99.9%
                   </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      2
-                    </div>
-                    <h3 className="font-semibold mb-2">Design</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Solution architecture and implementation planning
-                    </p>
+                  <div className="text-slate-300 text-sm lg:text-base">Uptime Guarantee</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    24/7
                   </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      3
-                    </div>
-                    <h3 className="font-semibold mb-2">Implementation</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Execution with testing, training, and knowledge transfer
-                    </p>
+                  <div className="text-slate-300 text-sm lg:text-base">Support Coverage</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    500+
                   </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      4
-                    </div>
-                    <h3 className="font-semibold mb-2">Support</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Ongoing optimization and operational handover
-                    </p>
+                  <div className="text-slate-300 text-sm lg:text-base">Projects Delivered</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    15min
                   </div>
+                  <div className="text-slate-300 text-sm lg:text-base">Response Time</div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Stacking Cards Section */}
-          <StackingCards cards={services} />
-
-
-        </main>
+        {/* Contact Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
+              Ready to Transform Your IT?
+            </h2>
+            <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+              Whether you're navigating complex challenges or pursuing ambitious growth, S2 is your trusted partner in building the technology foundation for lasting success.
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Get Started Today
+            </Button>
+          </div>
+        </section>
+        
         <Footer />
       </div>
     </>
