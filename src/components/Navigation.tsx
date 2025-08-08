@@ -375,7 +375,7 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
         <Link to="/clients" onClick={() => setIsOpen(false)} className="text-sm font-medium">
           Our Clients
         </Link>
-        <Link to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium">
+        <Link to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium animate-ping">
           Contact Us
         </Link>
         <a 
