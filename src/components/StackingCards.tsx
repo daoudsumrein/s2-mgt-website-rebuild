@@ -42,15 +42,22 @@ export default function StackingCards({ cards }: StackingCardsProps) {
     if (!stackArea) return;
     
     // Calculate the exact scroll position for each card
+    // The scroll should position the stack area so that the card index shows correctly
     const scrollAmount = stackArea.offsetTop + (window.innerHeight * 0.5 * cardIndex);
     
-    console.log('Scroll amount:', scrollAmount, 'Stack area offset:', stackArea.offsetTop); // Debug log
+    console.log('Scroll amount:', scrollAmount, 'Stack area offset:', stackArea.offsetTop, 'Target index:', cardIndex); // Debug log
+    
+    // Set manual scroll flag before scrolling
+    if ((window as any).setManualScroll) {
+      (window as any).setManualScroll();
+    }
     
     window.scrollTo({
       top: scrollAmount,
       behavior: 'smooth'
     });
     
+    // Update state immediately to prevent conflicts
     setCurrentCardIndex(cardIndex);
   };
 
@@ -96,7 +103,8 @@ export default function StackingCards({ cards }: StackingCardsProps) {
       clearTimeout(manualScrollTimeout);
       manualScrollTimeout = setTimeout(() => {
         isManualScroll = false;
-      }, 1500); // Give 1.5 seconds for manual scroll to complete
+        console.log('Manual scroll timeout ended, re-enabling auto detection');
+      }, 800); // Shorter timeout for better responsiveness
     };
 
     // Expose setManualScroll to the component
@@ -127,14 +135,21 @@ export default function StackingCards({ cards }: StackingCardsProps) {
 
       let distance = window.innerHeight * 0.5;
       let topVal = stackArea.getBoundingClientRect().top;
-      let index = Math.round(-1 * (topVal / distance));
+      
+      // Improved calculation - more precise index detection
+      let rawIndex = -1 * (topVal / distance);
+      let index = Math.round(rawIndex);
       
       // Ensure index is within bounds
       index = Math.max(0, Math.min(index, cards.length - 1));
       
-      // Only update if the index has actually changed
-      if (index !== currentCardIndex) {
-        console.log('Auto scroll detected, updating index from', currentCardIndex, 'to', index);
+      // Add some tolerance to prevent rapid changes near boundaries
+      const tolerance = 0.1;
+      const indexDiff = Math.abs(rawIndex - currentCardIndex);
+      
+      // Only update if the index has actually changed significantly
+      if (index !== currentCardIndex && indexDiff > tolerance) {
+        console.log('Auto scroll detected, updating index from', currentCardIndex, 'to', index, 'rawIndex:', rawIndex.toFixed(2));
         setCurrentCardIndex(index);
       }
 
