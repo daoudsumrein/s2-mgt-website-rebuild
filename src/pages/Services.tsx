@@ -87,6 +87,16 @@ export default function Services() {
 
   const handleCardClick = (service, index) => {
     setSelectedService(service);
+    // Scroll to the service details section
+    setTimeout(() => {
+      const detailsSection = document.querySelector('#service-details');
+      if (detailsSection) {
+        detailsSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 100);
   };
 
   useEffect(() => {
@@ -131,7 +141,7 @@ export default function Services() {
 
           {/* Service Details Section */}
           {selectedService && (
-            <section className="py-16 bg-card/30 backdrop-blur-sm">
+            <section id="service-details" className="py-16 bg-card/30 backdrop-blur-sm">
               <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-4 mb-8">
