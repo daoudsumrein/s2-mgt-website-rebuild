@@ -32,37 +32,80 @@ export default function StackingCards({ cards }: StackingCardsProps) {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Function to scroll to next card
+  // Function to scroll to specific card
   const scrollToCard = (cardIndex: number) => {
     if (isMobile) return;
+    
+    console.log('Scrolling to card:', cardIndex); // Debug log
     
     const stackArea = document.querySelector(".stack-area") as HTMLElement;
     if (!stackArea) return;
     
-    const scrollAmount = window.innerHeight * 0.5 * (cardIndex + 1);
+    // Calculate the exact scroll position for each card
+    const scrollAmount = stackArea.offsetTop + (window.innerHeight * 0.5 * cardIndex);
+    
+    console.log('Scroll amount:', scrollAmount, 'Stack area offset:', stackArea.offsetTop); // Debug log
+    
     window.scrollTo({
-      top: stackArea.offsetTop + scrollAmount,
+      top: scrollAmount,
       behavior: 'smooth'
     });
+    
     setCurrentCardIndex(cardIndex);
   };
 
-  // Navigate to next card
+  // Navigate to next card (one by one)
   const nextCard = () => {
+    console.log('Next card clicked, current:', currentCardIndex); // Debug log
+    
+    // Set manual scroll flag to prevent interference
+    if ((window as any).setManualScroll) {
+      (window as any).setManualScroll();
+    }
+    
     const nextIndex = Math.min(currentCardIndex + 1, cards.length - 1);
-    scrollToCard(nextIndex);
+    if (nextIndex !== currentCardIndex) {
+      scrollToCard(nextIndex);
+    }
   };
 
-  // Navigate to previous card
+  // Navigate to previous card (one by one)
   const prevCard = () => {
+    console.log('Prev card clicked, current:', currentCardIndex); // Debug log
+    
+    // Set manual scroll flag to prevent interference
+    if ((window as any).setManualScroll) {
+      (window as any).setManualScroll();
+    }
+    
     const prevIndex = Math.max(currentCardIndex - 1, 0);
-    scrollToCard(prevIndex);
+    if (prevIndex !== currentCardIndex) {
+      scrollToCard(prevIndex);
+    }
   };
 
   useEffect(() => {
     if (isMobile) return; // Skip scroll animation on mobile
 
+    let isManualScroll = false;
+    let manualScrollTimeout: NodeJS.Timeout;
+
+    // Function to temporarily disable scroll event handling during manual navigation
+    const setManualScroll = () => {
+      isManualScroll = true;
+      clearTimeout(manualScrollTimeout);
+      manualScrollTimeout = setTimeout(() => {
+        isManualScroll = false;
+      }, 1500); // Give 1.5 seconds for manual scroll to complete
+    };
+
+    // Expose setManualScroll to the component
+    (window as any).setManualScroll = setManualScroll;
+
     const handleScroll = () => {
+      // Skip automatic updates during manual scroll
+      if (isManualScroll) return;
+
       const cards = document.querySelectorAll(".desktop-card");
       const stackArea = document.querySelector(".stack-area");
 
@@ -84,12 +127,16 @@ export default function StackingCards({ cards }: StackingCardsProps) {
 
       let distance = window.innerHeight * 0.5;
       let topVal = stackArea.getBoundingClientRect().top;
-      let index = -1 * (topVal / distance + 1);
-      index = Math.floor(index);
+      let index = Math.round(-1 * (topVal / distance));
       
-      // Update current card index based on scroll position
-      const newIndex = Math.max(0, Math.min(index, cards.length - 1));
-      setCurrentCardIndex(newIndex);
+      // Ensure index is within bounds
+      index = Math.max(0, Math.min(index, cards.length - 1));
+      
+      // Only update if the index has actually changed
+      if (index !== currentCardIndex) {
+        console.log('Auto scroll detected, updating index from', currentCardIndex, 'to', index);
+        setCurrentCardIndex(index);
+      }
 
       for (let i = 0; i < cards.length; i++) {
         const cardElement = cards[i] as HTMLElement;
@@ -113,8 +160,12 @@ export default function StackingCards({ cards }: StackingCardsProps) {
     });
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMobile]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(manualScrollTimeout);
+      delete (window as any).setManualScroll;
+    };
+  }, [isMobile, currentCardIndex]);
 
   // Mobile Design
   if (isMobile) {
