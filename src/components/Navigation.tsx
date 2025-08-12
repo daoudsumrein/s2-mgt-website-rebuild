@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown, Menu, X, ExternalLink, Shield, Database } from "lucide-react";
+import { ChevronDown, Menu, X, ExternalLink, Shield, Database, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -141,6 +141,20 @@ export default function Navigation() {
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to="/"
+                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 ${
+                      isActive("/") ? "text-primary" : ""
+                    }`}
+                  >
+                    <Home className="h-4 w-4" />
+                    Home
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger>About S2</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -329,6 +343,10 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
         <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-8 w-8 rounded-full object-contain" />
       </Link>
       <div className="flex flex-col space-y-3 mt-6">
+        <Link to="/" onClick={() => setIsOpen(false)} className="text-sm font-medium flex items-center gap-2">
+          <Home className="h-4 w-4" />
+          Home
+        </Link>
         <Link to="/about" onClick={() => setIsOpen(false)} className="text-sm font-medium">
           About S2
         </Link>
