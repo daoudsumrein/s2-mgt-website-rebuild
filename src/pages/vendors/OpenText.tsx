@@ -50,32 +50,42 @@ export default function OpenTextPage() {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-blue-50 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center mx-auto mb-6 border border-blue-200 p-3">
-                <img src="https://www.opentext.com/assets/images/favicon.png" alt="OpenText logo" className="w-full h-full object-contain" />
+        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="container mx-auto px-4 py-20 lg:py-32 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="text-left">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center p-2">
+                    <img src="/src/assets/logos/opentext-logo.png" alt="OpenText logo" className="w-full h-full object-contain" />
+                  </div>
+                  <span className="text-white/80 font-medium">OpenText Solutions</span>
+                </div>
+                
+                <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                  Data protection made 
+                  <span className="block text-blue-200">simple</span>
+                </h1>
+                
+                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                  Focus on moving your business forward with enterprise-grade protection, 
+                  zero-downtime migrations, and secure cloud solutions.
+                </p>
+                
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold">
+                  Explore products
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                OpenText Data Protection Platform
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Enterprise-grade data protection, high availability, and secure cloud solutions 
-                for mission-critical environments.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <a href="/contact">
-                    Request Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="/contact">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Datasheet
-                  </a>
-                </Button>
+              
+              <div className="relative lg:block hidden">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <img 
+                    src="/lovable-uploads/9170555c-1cfd-4ce2-9a0e-3574bf5975d2.png" 
+                    alt="Professional working with data protection solutions" 
+                    className="w-full h-auto rounded-xl object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
