@@ -97,15 +97,26 @@ export default function Solutions() {
   }>>([]);
 
   useEffect(() => {
-    // Generate 100 floating particles with properties for movement
-    const newParticles = Array.from({length: 100}, (_, i) => ({
+    // Detect performance preference and adjust particle count accordingly
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isSlowDevice = navigator.hardwareConcurrency <= 2 || (navigator as any).deviceMemory <= 2;
+    
+    // Reduce particles for better performance on slower devices
+    const particleCount = prefersReducedMotion ? 0 : isSlowDevice ? 25 : 50;
+    
+    if (particleCount === 0) {
+      setParticles([]);
+      return;
+    }
+    
+    const newParticles = Array.from({length: particleCount}, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      delay: Math.random() * 10,
-      size: Math.random() * 4 + 1, // 1-5px
-      speed: Math.random() * 30 + 8, // 8-38s duration
-      direction: Math.random() * 360 // random direction
+      delay: Math.random() * 5, // Reduced delay range
+      size: Math.random() * 3 + 2, // 2-5px
+      speed: Math.random() * 20 + 15, // 15-35s duration (slower)
+      direction: Math.random() * 360
     }));
     setParticles(newParticles);
   }, []);
@@ -174,105 +185,33 @@ export default function Solutions() {
             ))}
           </div>
 
-          {/* Additional moving particles with glow effects */}
-          <div className="absolute inset-0 pointer-events-none">
-            {particles.slice(0, 25).map((particle) => (
-              <div
-                key={`glow-${particle.id}`}
-                className="absolute rounded-full transition-all duration-1000"
-                style={{
-                  left: `${(particle.x + 20) % 100}%`,
-                  top: `${(particle.y + 30) % 100}%`,
-                  width: `${particle.size * 1.5}px`,
-                  height: `${particle.size * 1.5}px`,
-                  backgroundColor: activeSection === 'data' 
-                    ? `hsl(217 91% ${50 + Math.random() * 20}% / ${0.15 + Math.random() * 0.2})`
-                    : activeSection === 'cyber'
-                    ? `hsl(158 64% ${40 + Math.random() * 20}% / ${0.15 + Math.random() * 0.2})`
-                    : particle.id % 2 === 0 
-                    ? `hsl(217 91% ${45 + Math.random() * 15}% / ${0.1 + Math.random() * 0.15})`
-                    : `hsl(158 64% ${35 + Math.random() * 15}% / ${0.1 + Math.random() * 0.15})`,
-                  animation: `floatCircle ${particle.speed * 1.5}s infinite, glowPulse ${particle.speed * 0.8}s infinite`,
-                  animationDelay: `${particle.delay * 1.5}s`,
-                  filter: 'blur(0.5px)'
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Extra scattered particles for more density */}
-          <div className="absolute inset-0 pointer-events-none">
-            {particles.slice(25, 50).map((particle) => (
-              <div
-                key={`extra-${particle.id}`}
-                className="absolute rounded-full transition-all duration-1000"
-                style={{
-                  left: `${(particle.x + 40) % 100}%`,
-                  top: `${(particle.y + 60) % 100}%`,
-                  width: `${particle.size * 0.7}px`,
-                  height: `${particle.size * 0.7}px`,
-                  backgroundColor: activeSection === 'data' 
-                    ? `hsl(217 91% ${45 + Math.random() * 25}% / ${0.2 + Math.random() * 0.3})`
-                    : activeSection === 'cyber'
-                    ? `hsl(158 64% ${35 + Math.random() * 25}% / ${0.2 + Math.random() * 0.3})`
-                    : `hsl(217 91% ${40 + Math.random() * 20}% / ${0.1 + Math.random() * 0.2})`,
-                  animation: `floatMove ${particle.speed * 0.8}s infinite reverse`,
-                  animationDelay: `${particle.delay * 2}s`,
-                  filter: 'blur(1px)'
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Even more particles for maximum density */}
-          <div className="absolute inset-0 pointer-events-none">
-            {particles.slice(50, 75).map((particle) => (
-              <div
-                key={`dense-${particle.id}`}
-                className="absolute rounded-full transition-all duration-1000"
-                style={{
-                  left: `${(particle.x + 60) % 100}%`,
-                  top: `${(particle.y + 20) % 100}%`,
-                  width: `${particle.size * 0.5}px`,
-                  height: `${particle.size * 0.5}px`,
-                  backgroundColor: activeSection === 'data' 
-                    ? `hsl(217 91% ${55 + Math.random() * 15}% / ${0.3 + Math.random() * 0.2})`
-                    : activeSection === 'cyber'
-                    ? `hsl(158 64% ${45 + Math.random() * 15}% / ${0.3 + Math.random() * 0.2})`
-                    : particle.id % 3 === 0 
-                    ? `hsl(217 91% ${50 + Math.random() * 10}% / ${0.15 + Math.random() * 0.15})`
-                    : `hsl(158 64% ${40 + Math.random() * 10}% / ${0.15 + Math.random() * 0.15})`,
-                  animation: `floatMove ${particle.speed * 1.2}s infinite`,
-                  animationDelay: `${particle.delay * 0.5}s`,
-                  filter: 'blur(0.3px)'
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Final layer of micro particles */}
-          <div className="absolute inset-0 pointer-events-none">
-            {particles.slice(75, 100).map((particle) => (
-              <div
-                key={`micro-${particle.id}`}
-                className="absolute rounded-full transition-all duration-1000"
-                style={{
-                  left: `${(particle.x + 80) % 100}%`,
-                  top: `${(particle.y + 10) % 100}%`,
-                  width: `${particle.size * 0.3}px`,
-                  height: `${particle.size * 0.3}px`,
-                  backgroundColor: activeSection === 'data' 
-                    ? `hsl(217 91% ${65 + Math.random() * 10}% / ${0.4 + Math.random() * 0.3})`
-                    : activeSection === 'cyber'
-                    ? `hsl(158 64% ${50 + Math.random() * 10}% / ${0.4 + Math.random() * 0.3})`
-                    : `hsl(217 91% ${55 + Math.random() * 10}% / ${0.2 + Math.random() * 0.2})`,
-                  animation: `floatCircle ${particle.speed * 2}s infinite`,
-                  animationDelay: `${particle.delay * 0.3}s`,
-                  filter: 'blur(0.2px)'
-                }}
-              />
-            ))}
-          </div>
+          {/* Optional additional particles - only render if not a slow device */}
+          {particles.length > 25 && (
+            <div className="absolute inset-0 pointer-events-none">
+              {particles.slice(0, Math.min(15, particles.length - 10)).map((particle) => (
+                <div
+                  key={`glow-${particle.id}`}
+                  className="absolute rounded-full will-change-transform"
+                  style={{
+                    left: `${(particle.x + 20) % 100}%`,
+                    top: `${(particle.y + 30) % 100}%`,
+                    width: `${particle.size * 1.2}px`,
+                    height: `${particle.size * 1.2}px`,
+                    backgroundColor: activeSection === 'data' 
+                      ? `hsl(217 91% ${50 + Math.random() * 20}% / 0.2)`
+                      : activeSection === 'cyber'
+                      ? `hsl(158 64% ${40 + Math.random() * 20}% / 0.2)`
+                      : particle.id % 2 === 0 
+                      ? `hsl(217 91% ${45 + Math.random() * 15}% / 0.15)`
+                      : `hsl(158 64% ${35 + Math.random() * 15}% / 0.15)`,
+                    animation: `floatCircle ${particle.speed * 1.5}s infinite linear`,
+                    animationDelay: `${particle.delay}s`,
+                    filter: 'blur(0.5px)'
+                  }}
+                />
+              ))}
+            </div>
+          )}
 
 
           <div className="container mx-auto px-4 py-8 md:py-16 min-h-screen flex items-center">
