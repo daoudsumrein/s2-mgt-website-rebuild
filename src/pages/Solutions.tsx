@@ -101,8 +101,8 @@ export default function Solutions() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isSlowDevice = navigator.hardwareConcurrency <= 2 || (navigator as any).deviceMemory <= 2;
     
-    // Reduce particles for better performance on slower devices
-    const particleCount = prefersReducedMotion ? 0 : isSlowDevice ? 25 : 50;
+    // Optimized particle count - more particles with better performance
+    const particleCount = prefersReducedMotion ? 0 : isSlowDevice ? 40 : 80;
     
     if (particleCount === 0) {
       setParticles([]);
@@ -113,25 +113,27 @@ export default function Solutions() {
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      delay: Math.random() * 5, // Reduced delay range
-      size: Math.random() * 3 + 2, // 2-5px
-      speed: Math.random() * 20 + 15, // 15-35s duration (slower)
+      delay: Math.random() * 8,
+      size: Math.random() * 3 + 1.5, // 1.5-4.5px
+      speed: Math.random() * 25 + 20, // 20-45s duration
       direction: Math.random() * 360
     }));
     setParticles(newParticles);
   }, []);
 
-  // Get particle colors based on active section
+  // Optimized particle colors with reduced calculations
   const getParticleColor = (index: number) => {
+    const baseOpacity = 0.3;
+    const variation = (index % 10) * 0.02; // Deterministic variation
+    
     if (activeSection === 'data') {
-      return `hsl(217 91% ${60 + Math.random() * 20}% / ${0.4 + Math.random() * 0.4})`;
+      return `hsl(217 91% ${60 + (index % 20)}% / ${baseOpacity + variation})`;
     } else if (activeSection === 'cyber') {
-      return `hsl(158 64% ${45 + Math.random() * 20}% / ${0.4 + Math.random() * 0.4})`;
+      return `hsl(158 64% ${45 + (index % 20)}% / ${baseOpacity + variation})`;
     } else {
-      // Mixed colors when no section is active
       return index % 2 === 0 
-        ? `hsl(217 91% ${50 + Math.random() * 15}% / ${0.2 + Math.random() * 0.3})`
-        : `hsl(158 64% ${40 + Math.random() * 15}% / ${0.2 + Math.random() * 0.3})`;
+        ? `hsl(217 91% ${50 + (index % 15)}% / ${baseOpacity * 0.7})`
+        : `hsl(158 64% ${40 + (index % 15)}% / ${baseOpacity * 0.7})`;
     }
   };
 
@@ -164,54 +166,51 @@ export default function Solutions() {
       <main className="flex-1">
         {/* Interactive Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen relative overflow-hidden">
-          {/* Floating Particles - Dynamic Colors */}
-          <div className="absolute inset-0 pointer-events-none">
+          {/* Optimized Floating Particles - GPU Accelerated */}
+          <div className="absolute inset-0 pointer-events-none" style={{ contain: 'layout style paint' }}>
             {particles.map((particle) => (
               <div
                 key={particle.id}
-                className="absolute rounded-full animate-pulse transition-all duration-1000"
+                className="absolute rounded-full will-change-transform"
                 style={{
-                  left: `${particle.x}%`,
-                  top: `${particle.y}%`,
+                  transform: `translate3d(${particle.x}vw, ${particle.y}vh, 0) rotate(${particle.direction}deg)`,
                   width: `${particle.size}px`,
                   height: `${particle.size}px`,
                   backgroundColor: getParticleColor(particle.id),
+                  animation: `floatMove ${particle.speed}s infinite linear, pulse ${particle.speed * 0.5}s infinite ease-in-out alternate`,
                   animationDelay: `${particle.delay}s`,
-                  animationDuration: `${particle.speed}s`,
-                  animation: `floatMove ${particle.speed}s infinite, pulse 2s infinite`,
-                  transform: `rotate(${particle.direction}deg)`
+                  backfaceVisibility: 'hidden',
+                  perspective: '1000px'
                 }}
               />
             ))}
           </div>
 
-          {/* Optional additional particles - only render if not a slow device */}
-          {particles.length > 25 && (
-            <div className="absolute inset-0 pointer-events-none">
-              {particles.slice(0, Math.min(15, particles.length - 10)).map((particle) => (
-                <div
-                  key={`glow-${particle.id}`}
-                  className="absolute rounded-full will-change-transform"
-                  style={{
-                    left: `${(particle.x + 20) % 100}%`,
-                    top: `${(particle.y + 30) % 100}%`,
-                    width: `${particle.size * 1.2}px`,
-                    height: `${particle.size * 1.2}px`,
-                    backgroundColor: activeSection === 'data' 
-                      ? `hsl(217 91% ${50 + Math.random() * 20}% / 0.2)`
-                      : activeSection === 'cyber'
-                      ? `hsl(158 64% ${40 + Math.random() * 20}% / 0.2)`
-                      : particle.id % 2 === 0 
-                      ? `hsl(217 91% ${45 + Math.random() * 15}% / 0.15)`
-                      : `hsl(158 64% ${35 + Math.random() * 15}% / 0.15)`,
-                    animation: `floatCircle ${particle.speed * 1.5}s infinite linear`,
-                    animationDelay: `${particle.delay}s`,
-                    filter: 'blur(0.5px)'
-                  }}
-                />
-              ))}
-            </div>
-          )}
+          {/* Secondary particle layer with different movement patterns */}
+          <div className="absolute inset-0 pointer-events-none" style={{ contain: 'layout style paint' }}>
+            {particles.slice(0, Math.floor(particles.length * 0.4)).map((particle) => (
+              <div
+                key={`secondary-${particle.id}`}
+                className="absolute rounded-full will-change-transform"
+                style={{
+                  transform: `translate3d(${(particle.x + 25) % 100}vw, ${(particle.y + 40) % 100}vh, 0)`,
+                  width: `${particle.size * 1.3}px`,
+                  height: `${particle.size * 1.3}px`,
+                  backgroundColor: activeSection === 'data' 
+                    ? `hsl(217 91% ${50 + (particle.id % 20)}% / 0.25)`
+                    : activeSection === 'cyber'
+                    ? `hsl(158 64% ${40 + (particle.id % 20)}% / 0.25)`
+                    : particle.id % 2 === 0 
+                    ? `hsl(217 91% ${45 + (particle.id % 15)}% / 0.2)`
+                    : `hsl(158 64% ${35 + (particle.id % 15)}% / 0.2)`,
+                  animation: `floatCircle ${particle.speed * 1.2}s infinite linear`,
+                  animationDelay: `${particle.delay * 0.7}s`,
+                  filter: 'blur(0.5px)',
+                  backfaceVisibility: 'hidden'
+                }}
+              />
+            ))}
+          </div>
 
 
           <div className="container mx-auto px-4 py-8 md:py-16 min-h-screen flex items-center">
