@@ -97,8 +97,8 @@ export default function OpenTextPage() {
                 </div>
                 
                 <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Data protection made 
-                  <span className="block text-blue-200">simple</span>
+                  OpenText Data Protection Solutions
+                  <span className="block text-blue-200 text-2lg">Official Distributor for the Middle East & North Africa</span>
                 </h1>
                 
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
