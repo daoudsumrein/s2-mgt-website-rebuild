@@ -112,7 +112,7 @@ export default function OpenTextPage() {
                 </div>
               </div>
               
-              <div className="relative order-first lg:order-last motion-preset-slide-left motion-delay-500">
+              <div className="relative order-first lg:order-last motion-preset-slide-left motion-delay-500 motion-duration-once">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-white/20 motion-preset-float">
                   <div className="vidyard-player-wrap">
                     <img className="vidyard-player-embed js-embed-vidyard w-full h-auto rounded-xl object-cover" 
