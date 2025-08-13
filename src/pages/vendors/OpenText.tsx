@@ -40,7 +40,6 @@ export default function OpenTextPage() {
     script.src = 'https://play.vidyard.com/embed/v4.js';
     script.async = true;
     document.head.appendChild(script);
-
     return () => {
       // Cleanup: remove script when component unmounts
       const existingScript = document.querySelector('script[src="https://play.vidyard.com/embed/v4.js"]');
@@ -49,15 +48,8 @@ export default function OpenTextPage() {
       }
     };
   }, []);
-
   return <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="OpenText Data Protection Solutions - S2 Management Solutions"
-        description="Enterprise-grade OpenText data protection, disaster recovery, and secure cloud solutions. Zero-downtime migrations, high availability, and comprehensive backup for MENA businesses."
-        keywords="OpenText data protection, disaster recovery, zero downtime migration, enterprise backup, high availability, secure cloud, data replication, business continuity"
-        canonicalUrl="https://s2mgt.com/vendors/opentext"
-        ogImage="https://s2mgt.com/assets/opentext-og.png"
-      />
+      <SEOHead title="OpenText Data Protection Solutions - S2 Management Solutions" description="Enterprise-grade OpenText data protection, disaster recovery, and secure cloud solutions. Zero-downtime migrations, high availability, and comprehensive backup for MENA businesses." keywords="OpenText data protection, disaster recovery, zero downtime migration, enterprise backup, high availability, secure cloud, data replication, business continuity" canonicalUrl="https://s2mgt.com/vendors/opentext" ogImage="https://s2mgt.com/assets/opentext-og.png" />
       <Navigation />
       <main>
         {/* Hero Section */}
@@ -115,13 +107,7 @@ export default function OpenTextPage() {
               <div className="relative lg:block hidden">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="vidyard-player-wrap">
-                    <img className="vidyard-player-embed js-embed-vidyard w-full h-auto rounded-xl object-cover" 
-                         data-uuid="b6xu2sAXPMQNB1bgy4CrQz"
-                         data-v="4" 
-                         data-init-load="true" 
-                         data-type="inline" 
-                         src="https://cdn.vidyard.com/thumbnails/45187710/Ny3bZA8EQZGoXaUzP_YGaA.jpg" 
-                         alt="OpenText Information Management Video" />
+                    <img className="vidyard-player-embed js-embed-vidyard w-full h-auto rounded-xl object-cover" data-uuid="b6xu2sAXPMQNB1bgy4CrQz" data-v="4" data-init-load="true" data-type="inline" src="https://cdn.vidyard.com/thumbnails/45187710/Ny3bZA8EQZGoXaUzP_YGaA.jpg" alt="OpenText Information Management Video" />
                   </div>
                 </div>
               </div>
@@ -130,50 +116,7 @@ export default function OpenTextPage() {
         </section>
 
         {/* Overview */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <Badge variant="secondary" className="mb-4">Core Platform</Badge>
-                <h2 className="text-3xl font-bold mb-4">Complete Data Protection Ecosystem</h2>
-                <p className="text-lg text-muted-foreground">
-                  OpenText provides the backbone of S2's data protection offerings, delivering 
-                  enterprise-grade availability, migration, and secure cloud solutions.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 mb-12">
-                <Card>
-                  <CardContent className="text-center p-6">
-                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      99.9%
-                    </div>
-                    <h3 className="font-semibold mb-2">Uptime Guarantee</h3>
-                    <p className="text-sm text-muted-foreground">Mission-critical availability</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="text-center p-6">
-                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      0
-                    </div>
-                    <h3 className="font-semibold mb-2">Zero Downtime</h3>
-                    <p className="text-sm text-muted-foreground">Live migration & replication</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="text-center p-6">
-                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      24/7
-                    </div>
-                    <h3 className="font-semibold mb-2">Global Support</h3>
-                    <p className="text-sm text-muted-foreground">Enterprise-grade support</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Solutions */}
         <section className="py-16 bg-muted/30">
