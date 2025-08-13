@@ -102,7 +102,7 @@ export default function OpenTextPage() {
                 </h1>
                 
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                   S2 Management Solutions is the official OpenText distributor in the Middle East and North Africa.
+                   S2 Management Solutions provides enterprise data protection, disaster recovery, secure cloud, and zero-downtime migration for business resilience.
                 </p>
                 
                 <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold">
