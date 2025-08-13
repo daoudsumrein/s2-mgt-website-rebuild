@@ -96,7 +96,7 @@ export default function OpenTextPage() {
                 </div>
                 
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-bold mb-4 lg:mb-6 leading-tight text-center lg:text-left motion-preset-fade motion-delay-500">
-                  OpenText Data Protection Solutions
+                  OpenText Data Protection Solutions 
                   <span className="block text-blue-200 text-sm sm:text-base lg:text-lg mt-2">Official Distributor for the Middle East & North Africa</span>
                 </h1>
                 
