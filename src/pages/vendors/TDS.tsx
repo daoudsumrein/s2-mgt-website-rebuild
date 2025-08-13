@@ -11,32 +11,61 @@ export default function TDSPage() {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-green-50 to-background">
+        <section className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-700 via-cyan-600 to-teal-700 text-white flex items-center py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-100 text-green-700 rounded-lg flex items-center justify-center font-bold text-xl mx-auto mb-6 border border-green-200">
-                Transition Manager
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                TDS TransitionManager
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                TDS is a powerful orchestration and automation platform that streamlines migration and 
-                disaster recovery, while enhancing and accelerating IT operations to drive digital transformation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <a href="/contact">
-                    Request Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="/contact">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Datasheet
-                  </a>
-                </Button>
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                {/* Hero Content */}
+                <div className="space-y-6 motion-preset-slide-right motion-delay-200">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight motion-preset-fade motion-delay-300">
+                    Enterprise Data Migration Made Simple
+                  </h1>
+                  <div className="text-xl md:text-2xl font-medium opacity-90 motion-preset-fade motion-delay-500">
+                    Transitional Data Solutions
+                  </div>
+                  <p className="text-lg md:text-xl opacity-80 leading-relaxed motion-preset-fade motion-delay-700">
+                    Transform your data infrastructure with our industry-leading platform for seamless cloud migration, data center modernization, and enterprise transformations.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4 motion-preset-fade motion-delay-1000">
+                    <Button 
+                      size="lg" 
+                      className="bg-orange-500 hover:bg-orange-600 text-white border-none px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/30"
+                      asChild
+                    >
+                      <a href="#video" className="flex items-center gap-2">
+                        Watch Demo
+                        <ArrowRight className="h-5 w-5" />
+                      </a>
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1"
+                      asChild
+                    >
+                      <a href="/contact">
+                        Get Started
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Video Container */}
+                <div className="motion-preset-slide-left motion-delay-500" id="video">
+                  <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-6 lg:p-8">
+                    <div className="relative w-full pb-[56.25%] rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
+                      <iframe 
+                        className="absolute inset-0 w-full h-full border-none rounded-2xl"
+                        src="https://www.youtube.com/embed/FS_oklVl0Cw?si=3UrsVbzUD6qPUrIt" 
+                        title="TDS Platform Demo" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" 
+                        allowFullScreen>
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
