@@ -54,7 +54,7 @@ export default function OpenTextPage() {
       <SEOHead 
         title="Official OpenText Distributor in Middle East, GCC & Africa"
         description="Official OpenText distributor for the Middle East, GCC & Africa. We specialise in secure cloud, business continuity, and seamless migrations with expert regional support."
-        keywords="OpenText data protection, disaster recovery, zero downtime migration, enterprise backup, high availability, secure cloud, data replication, business continuity"
+        keywords="official opentext distributor mena, opentext partner saudi arabia uae, opentext cybersecurity solutions gcc, opentext distributor middle east, opentext enterprise solutions mena region"
         canonicalUrl="https://s2mgt.com/vendors/opentext"
         ogImage="https://s2mgt.com/assets/opentext-og.png"
       />
