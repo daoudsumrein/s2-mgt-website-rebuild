@@ -46,7 +46,7 @@ export default function OpenTextPage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
-          <div className="container mx-auto px-4 py-20 lg:py-32 relative z-10">
+          <div className="container mx-auto px-2 py-20 lg:py-32 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-left">
                 <div className="flex items-center gap-3 mb-6">
