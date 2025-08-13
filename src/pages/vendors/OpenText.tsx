@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -33,6 +34,22 @@ const solutions = [{
   }]
 }];
 export default function OpenTextPage() {
+  useEffect(() => {
+    // Load Vidyard script
+    const script = document.createElement('script');
+    script.src = 'https://play.vidyard.com/embed/v4.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup: remove script when component unmounts
+      const existingScript = document.querySelector('script[src="https://play.vidyard.com/embed/v4.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
   return <div className="min-h-screen bg-background">
       <SEOHead 
         title="OpenText Data Protection Solutions - S2 Management Solutions"
@@ -97,27 +114,14 @@ export default function OpenTextPage() {
               
               <div className="relative lg:block hidden">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <div className="relative cursor-pointer group" onClick={() => {
-                    const iframe = document.createElement('iframe');
-                    iframe.src = 'https://play.vidyard.com/b6xu2sAXPMQNB1bgy4CrQz?disable_popouts=1&v=4.3.15&init-load=true&type=inline&autoplay=1';
-                    iframe.width = '100%';
-                    iframe.height = '400';
-                    iframe.style.borderRadius = '12px';
-                    iframe.allowFullscreen = true;
-                    const container = document.getElementById('video-container');
-                    if (container) {
-                      container.innerHTML = '';
-                      container.appendChild(iframe);
-                    }
-                  }} id="video-container">
-                    <img src="/src/assets/opentext-video-thumbnail.jpg" alt="OpenText Information Management Video" className="w-full h-auto rounded-xl object-cover" />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-xl group-hover:bg-black/30 transition-all">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                        <svg className="w-6 h-6 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
-                        </svg>
-                      </div>
-                    </div>
+                  <div className="vidyard-player-wrap">
+                    <img className="vidyard-player-embed js-embed-vidyard w-full h-auto rounded-xl object-cover" 
+                         data-uuid="b6xu2sAXPMQNB1bgy4CrQz"
+                         data-v="4" 
+                         data-init-load="true" 
+                         data-type="inline" 
+                         src="https://cdn.vidyard.com/thumbnails/45187710/Ny3bZA8EQZGoXaUzP_YGaA.jpg" 
+                         alt="OpenText Information Management Video" />
                   </div>
                 </div>
               </div>
