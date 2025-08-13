@@ -50,8 +50,8 @@ export default function OpenTextPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-left">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="bg-white backdrop-blur-sm rounded-lg flex items-center justify-center p-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="42" viewBox="0 0 200 32" fill="none" className="w-60 h-auto rounded-sm">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="32" viewBox="0 0 200 32" fill="none" className="w-32 h-auto rounded-sm">
                       <g clipPath="url(#ot-logo-clip-path)">
                          <path d="M64.1399 15.9434C64.1399 20.8204 61.3318 26.1042 53.7955 26.1042C48.3674 26.1042 43.416 23.073 43.416 15.9434C43.416 10.0342 47.147 5.48963 54.5347 5.89641C62.4034 6.33818 64.1399 12.4355 64.1399 15.9434ZM50.1038 12.2343C49.404 13.3147 49.1415 14.6137 49.1415 15.9128C49.1415 18.9046 50.6199 21.6121 53.7955 21.6121C56.971 21.6121 58.375 19.1189 58.375 16.1621C58.375 14.0714 57.8589 12.4486 56.7873 11.4382C55.6063 10.3579 54.2766 10.3229 53.463 10.3929C51.8359 10.5022 50.878 11.0402 50.0994 12.2299H50.1038V12.2343Z" fill="#101C2F"></path>
                          <path d="M114.581 8.07472C115.136 7.48424 115.503 7.04247 116.501 6.56133C117.389 6.19391 118.644 5.89648 120.009 5.89648C121.155 5.89648 122.445 6.08019 123.447 6.63569C125.48 7.70731 125.997 9.44378 125.997 12.4356V25.6231H120.345V14.7625C120.345 13.0261 120.31 12.3962 120.087 11.8801C119.646 10.8478 118.648 10.4017 117.537 10.4017C114.546 10.4017 114.546 12.803 114.546 15.2043V25.6231H108.855V6.37762H114.581V8.0791V8.07472Z" fill="#101C2F"></path>
@@ -81,10 +81,10 @@ export default function OpenTextPage() {
                 
                 <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                   Data protection made 
-                  <span className="block text-blue-200">simple</span>
+                  <span className="block ">simple</span>
                 </h1>
                 
-                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                <p className="text-xl mb-8 leading-relaxed">
                   Focus on moving your business forward with enterprise-grade protection, 
                   zero-downtime migrations, and secure cloud solutions.
                 </p>
