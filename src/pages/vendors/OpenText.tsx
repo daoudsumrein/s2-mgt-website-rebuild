@@ -97,11 +97,11 @@ export default function OpenTextPage() {
                 </div>
                 
                 <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                  OpenText Data Protection Solutions 
-                  <span className="block text-blue-200">Official Distributor for the Middle East & North Africa</span>
+                  Data protection made 
+                  <span className="block text-blue-200">simple</span>
                 </h1>
                 
-                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                <p className="text-xl text-blue-100 mb-8 leading-relaxed text-2xl lg:text-4xl">
                    S2 Management Solutions is the official OpenText distributor in the Middle East and North Africa.
                 </p>
                 
