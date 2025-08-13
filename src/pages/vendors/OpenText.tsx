@@ -97,7 +97,28 @@ export default function OpenTextPage() {
               
               <div className="relative lg:block hidden">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <img src="/lovable-uploads/9170555c-1cfd-4ce2-9a0e-3574bf5975d2.png" alt="Professional working with data protection solutions" className="w-full h-auto rounded-xl object-cover" />
+                  <div className="relative cursor-pointer group" onClick={() => {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = 'https://play.vidyard.com/b6xu2sAXPMQNB1bgy4CrQz?disable_popouts=1&v=4.3.15&init-load=true&type=inline&autoplay=1';
+                    iframe.width = '100%';
+                    iframe.height = '400';
+                    iframe.style.borderRadius = '12px';
+                    iframe.allowFullscreen = true;
+                    const container = document.getElementById('video-container');
+                    if (container) {
+                      container.innerHTML = '';
+                      container.appendChild(iframe);
+                    }
+                  }} id="video-container">
+                    <img src="/src/assets/opentext-video-thumbnail.jpg" alt="OpenText Information Management Video" className="w-full h-auto rounded-xl object-cover" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-xl group-hover:bg-black/30 transition-all">
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
