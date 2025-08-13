@@ -129,51 +129,7 @@ export default function OpenTextPage() {
           </div>
         </section>
 
-        {/* Overview */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <Badge variant="secondary" className="mb-4">Core Platform</Badge>
-                <h2 className="text-3xl font-bold mb-4">Complete Data Protection Ecosystem</h2>
-                <p className="text-lg text-muted-foreground">
-                  OpenText provides the backbone of S2's data protection offerings, delivering 
-                  enterprise-grade availability, migration, and secure cloud solutions.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 mb-12">
-                <Card>
-                  <CardContent className="text-center p-6">
-                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      99.9%
-                    </div>
-                    <h3 className="font-semibold mb-2">Uptime Guarantee</h3>
-                    <p className="text-sm text-muted-foreground">Mission-critical availability</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="text-center p-6">
-                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      0
-                    </div>
-                    <h3 className="font-semibold mb-2">Zero Downtime</h3>
-                    <p className="text-sm text-muted-foreground">Live migration & replication</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="text-center p-6">
-                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
-                      24/7
-                    </div>
-                    <h3 className="font-semibold mb-2">Global Support</h3>
-                    <p className="text-sm text-muted-foreground">Enterprise-grade support</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         {/* Solutions */}
         <section className="py-16 bg-muted/30">
