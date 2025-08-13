@@ -52,7 +52,7 @@ export default function OpenTextPage() {
 
   return <div className="min-h-screen bg-background">
       <SEOHead 
-        title="OpenText Data Protection Solutions - S2 Management Solutions"
+        title="Official OpenText Partner & Distributor - Middle East, GCC & Africa"
         description="Enterprise-grade OpenText data protection, disaster recovery, and secure cloud solutions. Zero-downtime migrations, high availability, and comprehensive backup for MENA businesses."
         keywords="OpenText data protection, disaster recovery, zero downtime migration, enterprise backup, high availability, secure cloud, data replication, business continuity"
         canonicalUrl="https://s2mgt.com/vendors/opentext"
@@ -63,12 +63,12 @@ export default function OpenTextPage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
-          <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-32 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="text-center lg:text-left order-2 lg:order-1">
-                <div className="flex justify-center lg:justify-start items-center gap-3 mb-6">
-                  <div className="bg-white backdrop-blur-sm rounded-lg flex items-center justify-center p-3 sm:p-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="42" viewBox="0 0 200 32" fill="none" className="w-48 sm:w-64 lg:w-72 h-auto rounded-sm">
+          <div className="container mx-auto px-2 py-20 lg:py-32 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="text-left">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="bg-white backdrop-blur-sm rounded-lg flex items-center justify-center p-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="42" viewBox="0 0 200 32" fill="none" className="w-72 h-auto rounded-sm">
                       <g clipPath="url(#ot-logo-clip-path)">
                          <path d="M64.1399 15.9434C64.1399 20.8204 61.3318 26.1042 53.7955 26.1042C48.3674 26.1042 43.416 23.073 43.416 15.9434C43.416 10.0342 47.147 5.48963 54.5347 5.89641C62.4034 6.33818 64.1399 12.4355 64.1399 15.9434ZM50.1038 12.2343C49.404 13.3147 49.1415 14.6137 49.1415 15.9128C49.1415 18.9046 50.6199 21.6121 53.7955 21.6121C56.971 21.6121 58.375 19.1189 58.375 16.1621C58.375 14.0714 57.8589 12.4486 56.7873 11.4382C55.6063 10.3579 54.2766 10.3229 53.463 10.3929C51.8359 10.5022 50.878 11.0402 50.0994 12.2299H50.1038V12.2343Z" fill="#101C2F"></path>
                          <path d="M114.581 8.07472C115.136 7.48424 115.503 7.04247 116.501 6.56133C117.389 6.19391 118.644 5.89648 120.009 5.89648C121.155 5.89648 122.445 6.08019 123.447 6.63569C125.48 7.70731 125.997 9.44378 125.997 12.4356V25.6231H120.345V14.7625C120.345 13.0261 120.31 12.3962 120.087 11.8801C119.646 10.8478 118.648 10.4017 117.537 10.4017C114.546 10.4017 114.546 12.803 114.546 15.2043V25.6231H108.855V6.37762H114.581V8.0791V8.07472Z" fill="#101C2F"></path>
@@ -93,25 +93,26 @@ export default function OpenTextPage() {
                       </defs>
                     </svg>
                   </div>
+                  
                 </div>
                 
-                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                   Data protection made 
                   <span className="block text-blue-200">simple</span>
                 </h1>
                 
-                <p className="text-lg sm:text-xl text-blue-100 mb-8 leading-relaxed">
+                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                    S2 Management Solutions is the official OpenText distributor in the Middle East and North Africa.
                 </p>
                 
-                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto font-semibold w-full sm:w-auto">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-lg px-8 py-6 h-auto font-semibold">
                   Explore products
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
               
-              <div className="relative order-1 lg:order-2">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
+              <div className="relative lg:block hidden">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="vidyard-player-wrap">
                     <img className="vidyard-player-embed js-embed-vidyard w-full h-auto rounded-xl object-cover" 
                          data-uuid="b6xu2sAXPMQNB1bgy4CrQz"
@@ -128,19 +129,19 @@ export default function OpenTextPage() {
         </section>
 
         {/* Overview */}
-        <section className="py-12 sm:py-16">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8 sm:mb-12">
+              <div className="text-center mb-12">
                 <Badge variant="secondary" className="mb-4">Core Platform</Badge>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Complete Data Protection Ecosystem</h2>
-                <p className="text-base sm:text-lg text-muted-foreground">
+                <h2 className="text-3xl font-bold mb-4">Complete Data Protection Ecosystem</h2>
+                <p className="text-lg text-muted-foreground">
                   OpenText provides the backbone of S2's data protection offerings, delivering 
                   enterprise-grade availability, migration, and secure cloud solutions.
                 </p>
               </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+              <div className="grid md:grid-cols-3 gap-6 mb-12">
                 <Card>
                   <CardContent className="text-center p-6">
                     <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
@@ -174,19 +175,19 @@ export default function OpenTextPage() {
         </section>
 
         {/* Solutions */}
-        <section className="py-12 sm:py-16 bg-muted/30">
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8 sm:mb-12">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">OpenText Solution Portfolio</h2>
-                <p className="text-base sm:text-lg text-muted-foreground">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">OpenText Solution Portfolio</h2>
+                <p className="text-lg text-muted-foreground">
                   Comprehensive data protection and secure cloud solutions
                 </p>
               </div>
 
-              {solutions.map((category, categoryIndex) => <div key={categoryIndex} className="mb-8 sm:mb-12">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">{category.category}</h3>
-                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+              {solutions.map((category, categoryIndex) => <div key={categoryIndex} className="mb-12">
+                  <h3 className="text-2xl font-bold mb-6 text-center">{category.category}</h3>
+                  <div className="grid lg:grid-cols-2 gap-6">
                     {category.products.map((product, productIndex) => <Card key={productIndex} className="hover:shadow-lg transition-all duration-300">
                         <CardHeader>
                           <CardTitle className="text-xl">{product.name}</CardTitle>
@@ -208,11 +209,11 @@ export default function OpenTextPage() {
         </section>
 
         {/* Use Cases */}
-        <section className="py-12 sm:py-16">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Ideal Use Cases</h2>
-              <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-3xl font-bold mb-8 text-center">Ideal Use Cases</h2>
+              <div className="space-y-6">
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-2">Government & Public Sector</h3>
@@ -243,14 +244,14 @@ export default function OpenTextPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-12 sm:py-16 bg-blue-50">
+        <section className="py-16 bg-blue-50">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Implement OpenText Solutions?</h2>
-            <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">Ready to Implement OpenText Solutions?</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let S2's certified OpenText specialists design and implement the right data protection 
               strategy for your enterprise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <a href="/contact">
                   Contact Our OT Specialists
