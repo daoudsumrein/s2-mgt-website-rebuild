@@ -179,37 +179,7 @@ export default function OpenTextPage() {
         </section>
 
         {/* Use Cases */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Ideal Use Cases</h2>
-              <div className="space-y-6">
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2">Government & Public Sector</h3>
-                    <p className="text-muted-foreground">
-                      High availability requirements, compliance needs, and citizen service continuity
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2">Banking & Financial Services</h3>
-                    <p className="text-muted-foreground">
-                      Zero-downtime requirements, regulatory compliance, and data sovereignty
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2">Healthcare & Critical Infrastructure</h3>
-                    
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* CTA */}
         <section className="py-16 bg-blue-50">
