@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -33,6 +34,13 @@ const solutions = [{
 }];
 export default function OpenTextPage() {
   return <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="OpenText Data Protection Solutions - S2 Management Solutions"
+        description="Enterprise-grade OpenText data protection, disaster recovery, and secure cloud solutions. Zero-downtime migrations, high availability, and comprehensive backup for MENA businesses."
+        keywords="OpenText data protection, disaster recovery, zero downtime migration, enterprise backup, high availability, secure cloud, data replication, business continuity"
+        canonicalUrl="https://s2mgt.com/vendors/opentext"
+        ogImage="https://s2mgt.com/assets/opentext-og.png"
+      />
       <Navigation />
       <main>
         {/* Hero Section */}
