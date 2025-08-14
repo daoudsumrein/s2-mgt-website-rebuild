@@ -40,7 +40,7 @@ const Arrosoft = () => {
           
           {/* Content */}
           <motion.div 
-            className="relative z-30 max-w-2xl text-white md:text-gray-900 mx-auto md:mx-0 text-center md:text-left"
+            className="relative z-30 max-w-2xl text-white mx-auto md:mx-0 text-center md:text-left"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -55,7 +55,7 @@ const Arrosoft = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-base md:text-lg lg:text-xl leading-relaxed mb-10 text-white/80 md:text-gray-700 max-w-lg mx-auto md:mx-0"
+              className="text-base md:text-lg lg:text-xl leading-relaxed mb-10 text-white/80 max-w-lg mx-auto md:mx-0"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
