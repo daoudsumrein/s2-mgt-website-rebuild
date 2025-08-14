@@ -6,6 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink, CheckCircle, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+
 const solutions = [{
   category: "Data Protection",
   products: [{
@@ -33,6 +35,7 @@ const solutions = [{
     features: ["Endpoint Protection", "EDR (Endpoint Detection & Response)", "MDR (Managed Detection & Response)", "Email Encryption", "DNS Protection", "Security Awareness Training"]
   }]
 }];
+
 export default function OpenTextPage() {
   useEffect(() => {
     // Load Vidyard script
@@ -50,7 +53,8 @@ export default function OpenTextPage() {
     };
   }, []);
 
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       <SEOHead 
         title="Official OpenText Distributor in Middle East, GCC & Africa"
         description="Official OpenText distributor for the Middle East, GCC & Africa. We specialise in secure cloud, business continuity, and seamless migrations with expert regional support."
@@ -65,9 +69,19 @@ export default function OpenTextPage() {
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-32 relative z-10">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="text-left motion-preset-slide-right motion-duration-700">
-                <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
-                  <div className="bg-white backdrop-blur-sm rounded-lg flex items-center justify-center p-2 motion-preset-bounce motion-delay-300">
+              <motion.div 
+                className="text-left"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <motion.div 
+                  className="flex items-center justify-center lg:justify-start gap-3 mb-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                >
+                  <div className="bg-white backdrop-blur-sm rounded-lg flex items-center justify-center p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="42" viewBox="0 0 200 32" fill="none" className="w-48 sm:w-56 lg:w-72 h-auto rounded-sm">
                        <g clipPath="url(#ot-logo-clip-path)">
                           <path d="M64.1399 15.9434C64.1399 20.8204 61.3318 26.1042 53.7955 26.1042C48.3674 26.1042 43.416 23.073 43.416 15.9434C43.416 10.0342 47.147 5.48963 54.5347 5.89641C62.4034 6.33818 64.1399 12.4355 64.1399 15.9434ZM50.1038 12.2343C49.404 13.3147 49.1415 14.6137 49.1415 15.9128C49.1415 18.9046 50.6199 21.6121 53.7955 21.6121C56.971 21.6121 58.375 19.1189 58.375 16.1621C58.375 14.0714 57.8589 12.4486 56.7873 11.4382C55.6063 10.3579 54.2766 10.3229 53.463 10.3929C51.8359 10.5022 50.878 11.0402 50.0994 12.2299H50.1038V12.2343Z" fill="#101C2F"></path>
@@ -93,26 +107,46 @@ export default function OpenTextPage() {
                        </defs>
                     </svg>
                   </div>
-                </div>
+                </motion.div>
                 
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-bold mb-4 lg:mb-6 leading-tight text-center lg:text-left motion-preset-fade motion-delay-500">
+                <motion.h1 
+                  className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-bold mb-4 lg:mb-6 leading-tight text-center lg:text-left"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                >
                   OpenText Data Protection Solutions 
                   <span className="block text-blue-200 text-sm sm:text-base lg:text-lg mt-2">Official Distributor for the Middle East & North Africa</span>
-                </h1>
+                </motion.h1>
                 
-                <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-6 lg:mb-8 leading-relaxed text-center lg:text-left motion-preset-slide-up motion-delay-700">
+                <motion.p 
+                  className="text-base sm:text-lg lg:text-xl text-blue-100 mb-6 lg:mb-8 leading-relaxed text-center lg:text-left"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                >
                    S2 Management Solutions provides enterprise data protection, disaster recovery, secure cloud, and zero-downtime migration for business resilience.
-                </p>
+                </motion.p>
                 
-                <div className="flex justify-center lg:justify-start motion-preset-bounce motion-delay-1000">
+                <motion.div 
+                  className="flex justify-center lg:justify-start"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                >
                   <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 text-base lg:text-lg px-6 lg:px-8 py-4 lg:py-6 h-auto font-semibold transition-all duration-300 hover:scale-105">
                     Explore products
                     <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                   </Button>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               
-              <div className="relative order-first lg:order-last motion-preset-slide-left motion-delay-300 ">
+              <motion.div 
+                className="relative order-first lg:order-last"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              >
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-white/20 ">
                   <div className="vidyard-player-wrap">
                     <img className="vidyard-player-embed js-embed-vidyard w-full h-auto rounded-xl object-cover" 
@@ -124,7 +158,7 @@ export default function OpenTextPage() {
                          alt="OpenText Information Management Video" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -133,43 +167,44 @@ export default function OpenTextPage() {
         <section className="py-12 sm:py-16">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8 sm:mb-12 motion-preset-fade motion-delay-300">
-                <Badge variant="secondary" className="mb-4 motion-preset-bounce">Core Platform</Badge>
+              <motion.div 
+                className="text-center mb-8 sm:mb-12"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <Badge variant="secondary" className="mb-4">Core Platform</Badge>
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Complete Data Protection Ecosystem</h2>
                 <p className="text-base sm:text-lg text-muted-foreground">
                   OpenText provides the backbone of S2's data protection offerings, delivering 
                   enterprise-grade availability, migration, and secure cloud solutions.
                 </p>
-              </div>
+              </motion.div>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
-                <Card className="motion-preset-slide-up motion-delay-500 hover:motion-preset-bounce">
-                  <CardContent className="text-center p-4 sm:p-6">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base">
-                      99.9%
-                    </div>
-                    <h3 className="font-semibold mb-2 text-sm sm:text-base">Uptime Guarantee</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Mission-critical availability</p>
-                  </CardContent>
-                </Card>
-                <Card className="motion-preset-slide-up motion-delay-700 hover:motion-preset-bounce">
-                  <CardContent className="text-center p-4 sm:p-6">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base">
-                      0
-                    </div>
-                    <h3 className="font-semibold mb-2 text-sm sm:text-base">Zero Downtime</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Live migration & replication</p>
-                  </CardContent>
-                </Card>
-                <Card className="motion-preset-slide-up motion-delay-1000 hover:motion-preset-bounce sm:col-span-2 lg:col-span-1">
-                  <CardContent className="text-center p-4 sm:p-6">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base">
-                      24/7
-                    </div>
-                    <h3 className="font-semibold mb-2 text-sm sm:text-base">Global Support</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Enterprise-grade support</p>
-                  </CardContent>
-                </Card>
+                {[
+                  { value: "99.9%", title: "Uptime Guarantee", description: "Mission-critical availability" },
+                  { value: "0", title: "Zero Downtime", description: "Live migration & replication" },
+                  { value: "24/7", title: "Global Support", description: "Enterprise-grade support" }
+                ].map((item, index) => (
+                  <motion.div key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="hover:shadow-lg transition-all duration-300">
+                      <CardContent className="text-center p-4 sm:p-6">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base">
+                          {item.value}
+                        </div>
+                        <h3 className="font-semibold mb-2 text-sm sm:text-base">{item.title}</h3>
+                        <p className="text-xs sm:text-sm text-muted-foreground">{item.description}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
@@ -179,32 +214,59 @@ export default function OpenTextPage() {
         <section className="py-12 sm:py-16 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8 sm:mb-12 motion-preset-fade motion-delay-300">
+              <motion.div 
+                className="text-center mb-8 sm:mb-12"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">OpenText Solution Portfolio</h2>
                 <p className="text-base sm:text-lg text-muted-foreground">
                   Comprehensive data protection and secure cloud solutions
                 </p>
-              </div>
+              </motion.div>
 
-              {solutions.map((category, categoryIndex) => <div key={categoryIndex} className="mb-8 sm:mb-12 motion-preset-slide-up" style={{animationDelay: `${(categoryIndex + 1) * 300}ms`}}>
+              {solutions.map((category, categoryIndex) => (
+                <motion.div 
+                  key={categoryIndex} 
+                  className="mb-8 sm:mb-12"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+                  viewport={{ once: true }}
+                >
                   <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">{category.category}</h3>
                   <div className="grid gap-4 sm:gap-6 lg:grid-cols-2">
-                    {category.products.map((product, productIndex) => <Card key={productIndex} className="hover:shadow-lg transition-all duration-300 motion-preset-bounce hover:motion-preset-wobble">
-                        <CardHeader className="pb-3 sm:pb-4">
-                          <CardTitle className="text-lg sm:text-xl">{product.name}</CardTitle>
-                          <p className="text-sm sm:text-base text-muted-foreground">{product.description}</p>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                          <div className="space-y-2">
-                            {product.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-start space-x-2">
-                                <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600 flex-shrink-0 mt-0.5" />
-                                <span className="text-xs sm:text-sm">{feature}</span>
-                              </div>)}
-                          </div>
-                        </CardContent>
-                      </Card>)}
+                    {category.products.map((product, productIndex) => (
+                      <motion.div
+                        key={productIndex}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: productIndex * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        <Card className="hover:shadow-lg transition-all duration-300 h-full">
+                          <CardHeader className="pb-3 sm:pb-4">
+                            <CardTitle className="text-lg sm:text-xl">{product.name}</CardTitle>
+                            <p className="text-sm sm:text-base text-muted-foreground">{product.description}</p>
+                          </CardHeader>
+                          <CardContent className="pt-0">
+                            <div className="space-y-2">
+                              {product.features.map((feature, featureIndex) => (
+                                <div key={featureIndex} className="flex items-start space-x-2">
+                                  <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                                  <span className="text-xs sm:text-sm">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
+                    ))}
                   </div>
-                </div>)}
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -213,32 +275,49 @@ export default function OpenTextPage() {
         <section className="py-12 sm:py-16">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center motion-preset-fade motion-delay-300">Ideal Use Cases</h2>
+              <motion.h2 
+                className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                Ideal Use Cases
+              </motion.h2>
               <div className="space-y-4 sm:space-y-6">
-                <Card className="motion-preset-slide-right motion-delay-500 hover:motion-preset-bounce">
-                  <CardContent className="p-4 sm:p-6">
-                    <h3 className="font-semibold mb-2 text-sm sm:text-base">Government & Public Sector</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      High availability requirements, compliance needs, and citizen service continuity
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="motion-preset-slide-right motion-delay-700 hover:motion-preset-bounce">
-                  <CardContent className="p-4 sm:p-6">
-                    <h3 className="font-semibold mb-2 text-sm sm:text-base">Banking & Financial Services</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      Zero-downtime requirements, regulatory compliance, and data sovereignty
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="motion-preset-slide-right motion-delay-1000 hover:motion-preset-bounce">
-                  <CardContent className="p-4 sm:p-6">
-                    <h3 className="font-semibold mb-2 text-sm sm:text-base">Healthcare & Critical Infrastructure</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      Patient data protection, system availability, and disaster recovery
-                    </p>
-                  </CardContent>
-                </Card>
+                {[
+                  {
+                    title: "Government & Public Sector",
+                    description: "High availability requirements, compliance needs, and citizen service continuity"
+                  },
+                  {
+                    title: "Financial Services",
+                    description: "Real-time replication for trading systems, regulatory compliance, and zero-tolerance downtime"
+                  },
+                  {
+                    title: "Healthcare Organizations",
+                    description: "Patient data protection, HIPAA compliance, and 24/7 availability for critical systems"
+                  },
+                  {
+                    title: "Enterprise Cloud Migration",
+                    description: "Zero-downtime migration to cloud platforms with comprehensive data protection"
+                  }
+                ].map((useCase, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="hover:shadow-lg transition-all duration-300">
+                      <CardContent className="p-4 sm:p-6">
+                        <h3 className="font-semibold mb-2 text-sm sm:text-base">{useCase.title}</h3>
+                        <p className="text-xs sm:text-sm text-muted-foreground">{useCase.description}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
@@ -247,29 +326,35 @@ export default function OpenTextPage() {
         {/* CTA */}
         <section className="py-12 sm:py-16 bg-blue-50">
           <div className="container mx-auto px-4 sm:px-6 text-center">
-            <div className="motion-preset-fade motion-delay-300">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Implement OpenText Solutions?</h2>
               <p className="text-base sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
                 Let S2's certified OpenText specialists design and implement the right data protection 
                 strategy for your enterprise.
               </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center motion-preset-slide-up motion-delay-500">
-              <Button size="lg" asChild className="transition-all duration-300 hover:scale-105">
-                <a href="/contact">
-                  Contact Our OT Specialists
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="transition-all duration-300 hover:scale-105">
-                <a href="https://www.opentext.com" target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-                  Visit OpenText
-                </a>
-              </Button>
-            </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" asChild className="transition-all duration-300 hover:scale-105">
+                  <a href="/contact">
+                    Contact Our OT Specialists
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild className="transition-all duration-300 hover:scale-105">
+                  <a href="https://www.opentext.com" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                    Visit OpenText
+                  </a>
+                </Button>
+              </div>
+            </motion.div>
           </div>
         </section>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 }
