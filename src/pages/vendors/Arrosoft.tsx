@@ -16,9 +16,20 @@ const Arrosoft = () => {
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="min-h-screen relative overflow-hidden flex items-center px-4 md:px-8 pt-20">
-          {/* Background Image */}
+          {/* Background Image - Clear on Desktop */}
           <div 
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 hidden md:block"
+            style={{
+              backgroundImage: `url('https://www.arrosoft.com/_next/image?url=%2Fhome%2Fhero-1.webp&w=3840&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+          
+          {/* Background Image with Overlay - Mobile Only */}
+          <div 
+            className="absolute inset-0 z-0 md:hidden"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://www.arrosoft.com/_next/image?url=%2Fhome%2Fhero-1.webp&w=3840&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr')`,
               backgroundSize: 'cover',
@@ -29,7 +40,7 @@ const Arrosoft = () => {
           
           {/* Content */}
           <motion.div 
-            className="relative z-30 max-w-2xl text-white mx-auto md:mx-0 text-center md:text-left"
+            className="relative z-30 max-w-2xl text-white md:text-gray-900 mx-auto md:mx-0 text-center md:text-left"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -44,7 +55,7 @@ const Arrosoft = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-base md:text-lg lg:text-xl leading-relaxed mb-10 text-white/80 max-w-lg mx-auto md:mx-0"
+              className="text-base md:text-lg lg:text-xl leading-relaxed mb-10 text-white/80 md:text-gray-700 max-w-lg mx-auto md:mx-0"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
