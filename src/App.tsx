@@ -13,6 +13,7 @@ import OpenTextPage from "./pages/vendors/OpenText";
 import TDSPage from "./pages/vendors/TDS";
 import AppCUREPage from "./pages/vendors/AppCURE";
 import SangforPage from "./pages/vendors/Sangfor";
+import ArrosoftPage from "./pages/vendors/Arrosoft";
 import DisasterRecovery from "./pages/solutions/DisasterRecovery";
 import DataProtection from "./pages/solutions/DataProtection";
 import ITDiscovery from "./pages/solutions/ITDiscovery";
@@ -58,7 +59,8 @@ const App = () => (
           <Route path="/vendors/opentext" element={<OpenTextPage />} />
           <Route path="/vendors/tds" element={<TDSPage />} />
           <Route path="/vendors/appcure" element={<AppCUREPage />} />
-          <Route path="/vendors/sangfor" element={<SangforPage />} />
+           <Route path="/vendors/sangfor" element={<SangforPage />} />
+           <Route path="/vendors/arrosoft" element={<ArrosoftPage />} />
           <Route path="/solutions/disaster-recovery" element={<DisasterRecovery />} />
           <Route path="/solutions/data-protection" element={<DataProtection />} />
           <Route path="/solutions/it-discovery" element={<ITDiscovery />} />
