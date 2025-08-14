@@ -3,15 +3,28 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import ClientCarousel from "@/components/ClientCarousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 export default function Clients() {
-  return <>
+  const { ref: heroRef, isInView: heroInView } = useScrollAnimation();
+  const { ref: carouselRef, isInView: carouselInView } = useScrollAnimation();
+  const { ref: trustRef, isInView: trustInView } = useScrollAnimation();
+
+  return (
+    <>
       <SEOHead title="Our Clients - S2 Management Solutions" description="Discover the diverse range of clients we serve across healthcare, finance, education, and manufacturing sectors with our data protection and cybersecurity solutions." keywords="S2 clients, cybersecurity clients, data protection customers, IT solutions clients" />
       <div className="min-h-screen bg-background">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16">
           {/* Hero Section */}
-          <div className="text-center mb-16">
+          <motion.div 
+            ref={heroRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
               Our Valued <span className="text-primary">Clients</span>
             </h1>
@@ -19,17 +32,29 @@ export default function Clients() {
               S2 Management Solutions delivers expert Data Management, Cybersecurity, and Backup services helping businesses achieve their goals with confidence.
 
             </p>
-          </div>
+          </motion.div>
 
 
           {/* Client Carousel */}
-          <section className="mb-16">
+          <motion.section 
+            ref={carouselRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={carouselInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
             
             <ClientCarousel />
-          </section>
+          </motion.section>
 
           {/* Trust Indicators */}
-          <section className="bg-muted/50 rounded-lg p-8 text-center">
+          <motion.section 
+            ref={trustRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={trustInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            className="bg-muted/50 rounded-lg p-8 text-center"
+          >
             <h2 className="text-4xl font-bold mb-6">Trusted by Organizations Nationwide</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
@@ -49,10 +74,11 @@ export default function Clients() {
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
             </div>
-          </section>
+          </motion.section>
         </main>
 
         <Footer />
       </div>
-    </>;
+    </>
+  );
 }

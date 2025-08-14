@@ -8,6 +8,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
 import StackingCards from "@/components/StackingCards";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Auto-sliding carousel implementation
 const services = [
@@ -84,6 +86,7 @@ export default function Services() {
   const [isPaused, setIsPaused] = useState(false); // Track pause state
   const [selectedService, setSelectedService] = useState(services[0]); // Default to first service
   const [hoveredService, setHoveredService] = useState(null);
+  const { ref: detailsRef, isInView: detailsInView } = useScrollAnimation();
 
   const handleCardClick = (service, index) => {
     // Scroll to the specific service section
@@ -139,7 +142,13 @@ export default function Services() {
           </div>
 
           {/* Service Details Section - All Services */}
-          <section className="py-16 bg-background">
+          <motion.section 
+            ref={detailsRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={detailsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            className="py-16 bg-background"
+          >
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-foreground mb-4">Our Services in Detail</h2>
@@ -151,7 +160,14 @@ export default function Services() {
               {services.map((service, index) => {
                 const IconComponent = service.icon;
                 return (
-                  <div key={index} id={`service-${index}`} className="mb-16 last:mb-0">
+                  <motion.div 
+                    key={index} 
+                    id={`service-${index}`} 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={detailsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="mb-16 last:mb-0"
+                  >
                     <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-8">
                       <div className="flex items-center gap-4 mb-8">
                         <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
@@ -185,11 +201,11 @@ export default function Services() {
                       </div>
 
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </section>
+          </motion.section>
 
 
         </main>

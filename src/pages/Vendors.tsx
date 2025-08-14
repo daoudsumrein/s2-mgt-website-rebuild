@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import nakivoLogo from "@/assets/logos/nakivo-logo-new.png";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const vendors = [
   {
@@ -81,12 +83,23 @@ const vendors = [
 ];
 
 export default function Vendors() {
+  const { ref: heroRef, isInView: heroInView } = useScrollAnimation();
+  const { ref: vendorsRef, isInView: vendorsInView } = useScrollAnimation();
+  const { ref: partnershipRef, isInView: partnershipInView } = useScrollAnimation();
+  const { ref: portalRef, isInView: portalInView } = useScrollAnimation();
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary-light to-background">
+        <motion.section 
+          ref={heroRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="py-16 bg-gradient-to-b from-primary-light to-background"
+        >
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <Badge className="mb-4">Technology Partners</Badge>
@@ -99,14 +112,26 @@ export default function Vendors() {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Vendors Grid */}
-        <section className="py-16">
+        <motion.section 
+          ref={vendorsRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={vendorsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="py-16"
+        >
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {vendors.map((vendor, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all duration-300 group">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={vendorsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <Card className="hover:shadow-lg transition-all duration-300 group">
                   <CardHeader>
                     <div className="flex items-start space-x-4">
                       <div className="w-16 h-16 rounded-lg flex items-center justify-center font-bold text-lg border bg-white overflow-hidden">
@@ -142,13 +167,20 @@ export default function Vendors() {
                     </div>
                   </CardContent>
                 </Card>
+                </motion.div>
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Partnership Approach */}
-        <section className="py-16 bg-muted/30">
+        <motion.section 
+          ref={partnershipRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={partnershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="py-16 bg-muted/30"
+        >
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Our Partnership Approach</h2>
@@ -196,10 +228,16 @@ export default function Vendors() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Partner Portal CTA */}
-        <section className="py-16">
+        <motion.section 
+          ref={portalRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={portalInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="py-16"
+        >
           <div className="container mx-auto px-4">
             <Card className="max-w-4xl mx-auto">
               <CardContent className="text-center p-8">
@@ -227,7 +265,7 @@ export default function Vendors() {
               </CardContent>
             </Card>
           </div>
-        </section>
+        </motion.section>
       </main>
       <Footer />
     </div>

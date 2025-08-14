@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Shield, Server, Workflow, Search, Cloud, Lock, ArrowRight, CheckCircle, Database, Eye, Users, Mail, Key } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const dataProtectionSolutions = [{
   icon: Server,
   title: "Disaster Recovery",
@@ -95,6 +97,7 @@ export default function Solutions() {
     speed: number,
     direction: number
   }>>([]);
+  const { ref: solutionsRef, isInView: solutionsInView } = useScrollAnimation();
 
   useEffect(() => {
     // Detect performance preference and adjust particle count accordingly
@@ -329,7 +332,14 @@ export default function Solutions() {
         </section>
 
         {/* Solution Categories Grid */}
-        <section id="solutions-grid" className="py-12 md:py-20 bg-muted/50">
+        <motion.section 
+          ref={solutionsRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={solutionsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          id="solutions-grid" 
+          className="py-12 md:py-20 bg-muted/50"
+        >
           <div className="container mx-auto px-4">
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Explore Our Solutions</h2>
@@ -404,7 +414,7 @@ export default function Solutions() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
       
       <Footer />
