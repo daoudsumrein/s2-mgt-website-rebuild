@@ -4,8 +4,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 import TypewriterText from "@/components/TypewriterText";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function HeroSection() {
+  const { ref: heroRef, isInView: heroInView } = useScrollAnimation();
+  const { ref: cardsRef, isInView: cardsInView } = useScrollAnimation();
+  
   return (
     <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden py-8 sm:py-12">
       {/* Background Image with Overlay */}
@@ -20,7 +25,13 @@ export default function HeroSection() {
       <div className="container relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+          <motion.div 
+            ref={heroRef}
+            initial={{ opacity: 0, x: -60 }}
+            animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6 sm:space-y-8 text-center lg:text-left"
+          >
             <div className="space-y-3 sm:space-y-4">
               <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-normal leading-tight">
                 
@@ -70,13 +81,24 @@ export default function HeroSection() {
                 <span className="motion-preset-slide-up motion-delay-1000">Critical Infrastructure</span>
               </div>
             </div>
-          </div>
+          </motion.div>
           
           {/* Feature Cards */}
-          <div className="lg:pl-8 mt-8 lg:mt-0">
+          <motion.div 
+            ref={cardsRef}
+            initial={{ opacity: 0 }}
+            animate={cardsInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+            className="lg:pl-8 mt-8 lg:mt-0"
+          >
             <div className="grid gap-4 sm:gap-6">
-              <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50 motion-preset-slide-up motion-delay-400">
-                <CardContent className="p-4 sm:p-6 motion-preset-slide-up motion-delay-800">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
+                  <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
                       <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
@@ -87,12 +109,18 @@ export default function HeroSection() {
                         Real-time replication, on premise and cloud backup, and email archiving solutions
                       </p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
               
-              <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
-                <CardContent className="p-4 sm:p-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
+                  <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
                       <Workflow className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
@@ -103,12 +131,18 @@ export default function HeroSection() {
                         Orchestrate and automate the Disaster Recovery and Migration workflow from the discovery level up to the management approval
                       </p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
               
-              <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
-                <CardContent className="p-4 sm:p-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
+                  <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
                       <Server className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
@@ -119,11 +153,12 @@ export default function HeroSection() {
                         Legacy app transformation and secure runtime environments
                       </p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

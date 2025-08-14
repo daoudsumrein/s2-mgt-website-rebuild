@@ -3,6 +3,8 @@ import { Mail, Phone, MapPin, ExternalLink, Linkedin, ChevronDown } from "lucide
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import s2Logo from "@/assets/s2-logo-new.png";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const solutions = [
   { name: "Disaster Recovery", href: "/solutions/disaster-recovery" },
@@ -21,8 +23,16 @@ const vendors = [
 ];
 
 export default function Footer() {
+  const { ref: footerRef, isInView: footerInView } = useScrollAnimation();
+  
   return (
-    <footer className="bg-muted border-t">
+    <motion.footer 
+      ref={footerRef}
+      initial={{ opacity: 0, y: 30 }}
+      animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6 }}
+      className="bg-muted border-t"
+    >
       <div className="container mx-auto px-4 py-4">
         {/* Mobile View */}
         <div className="md:hidden space-y-6">
@@ -296,6 +306,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

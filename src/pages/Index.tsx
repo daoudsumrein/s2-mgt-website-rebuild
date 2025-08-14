@@ -8,8 +8,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building, Users, Globe, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
+  const { ref: navigationRef, isInView: navigationInView } = useScrollAnimation();
+  
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -19,7 +23,14 @@ const Index = () => {
         canonicalUrl="https://s2mgt.com/"
       />
       <LocalBusinessSchema />
-      <Navigation />
+      <motion.div
+        ref={navigationRef}
+        initial={{ opacity: 0, y: -20 }}
+        animate={navigationInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Navigation />
+      </motion.div>
       <main>
         <HeroSection />
         
