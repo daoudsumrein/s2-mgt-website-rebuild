@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -54,8 +55,15 @@ const products = [
 
 export default function AppCUREPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <>
+      <SEOHead 
+        title="AppCURE Application Modernization Solutions | S2 Management"
+        description="Transform legacy applications with AppCURE's complete modernization platform. VDI migration, application repackaging, and secure runtime environments."
+        keywords="AppCURE partner, application modernization, VDI migration, legacy applications, app repackaging, desktop modernization"
+        canonicalUrl="https://s2mgt.com/vendors/appcure"
+      />
+      <div className="min-h-screen bg-background">
+        <Navigation />
       <main>
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-b from-purple-50 to-background">
@@ -336,8 +344,9 @@ export default function AppCUREPage() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }

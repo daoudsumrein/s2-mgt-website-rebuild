@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,8 +8,15 @@ import { Download, ExternalLink, CheckCircle, ArrowRight, Server, Shield } from 
 
 export default function SangforPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <>
+      <SEOHead 
+        title="Sangfor HCI & Security Solutions | S2 Management"
+        description="Hyper-converged infrastructure and next-generation firewall solutions by Sangfor. Cost-effective infrastructure and security for enterprise environments."
+        keywords="Sangfor partner, hyper-converged infrastructure, NGAF firewall, HCI solutions, network security, infrastructure consolidation"
+        canonicalUrl="https://s2mgt.com/vendors/sangfor"
+      />
+      <div className="min-h-screen bg-background">
+        <Navigation />
       <main>
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-b from-orange-50 to-background">
@@ -210,8 +218,9 @@ export default function SangforPage() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }

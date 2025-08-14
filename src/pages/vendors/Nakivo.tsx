@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
@@ -12,8 +13,15 @@ export default function NakivoPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <>
+      <SEOHead 
+        title="NAKIVO Backup & Replication Solutions | S2 Management"
+        description="Comprehensive data protection with NAKIVO's enterprise backup and replication platform. Trusted by organizations with strict cybersecurity standards."
+        keywords="NAKIVO partner, data protection, backup replication, enterprise backup, VM backup, cloud data protection"
+        canonicalUrl="https://s2mgt.com/vendors/nakivo"
+      />
+      <div className="min-h-screen bg-background">
+        <Navigation />
       <main>
         {/* Hero Section with Background */}
         <section className="min-h-screen relative overflow-hidden flex items-center px-4 md:px-8 pt-20">
@@ -209,8 +217,9 @@ export default function NakivoPage() {
             </motion.div>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }

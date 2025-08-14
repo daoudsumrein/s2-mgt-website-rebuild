@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -14,8 +15,15 @@ export default function About() {
   const { ref: ctaRef, isInView: ctaInView } = useScrollAnimation();
   
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <>
+      <SEOHead 
+        title="About S2 Management Solutions - Leading IT Transformation Company MENA"
+        description="Since 2013, S2 Management Solutions delivers expert data protection, disaster recovery, and application modernization across MENA. Trusted by governments and enterprises."
+        keywords="S2 Management Solutions, IT transformation MENA, data protection company, disaster recovery expert, application modernization UAE, enterprise IT"
+        canonicalUrl="https://s2mgt.com/about"
+      />
+      <div className="min-h-screen bg-background">
+        <Navigation />
       <main>
         {/* Hero Section */}
         <motion.section 
@@ -229,7 +237,8 @@ export default function About() {
           </div>
         </motion.section>
       </main>
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }

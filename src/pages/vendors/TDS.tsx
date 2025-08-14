@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,8 +8,15 @@ import { Download, ExternalLink, CheckCircle, ArrowRight, Workflow, Map, Eye, Se
 
 export default function TDSPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <>
+      <SEOHead 
+        title="TDS TransitionManager - IT Orchestration & Migration | S2 Management"
+        description="Enterprise IT orchestration platform by TDS. Comprehensive migration planning, dependency mapping, DR orchestration, and IT discovery solutions."
+        keywords="TDS partner, TransitionManager, IT orchestration, migration planning, dependency mapping, DR orchestration, IT discovery"
+        canonicalUrl="https://s2mgt.com/vendors/tds"
+      />
+      <div className="min-h-screen bg-background">
+        <Navigation />
       <main>
         {/* Hero Section */}
         <section className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-700 via-cyan-600 to-teal-700 text-white flex items-center py-16">
@@ -312,8 +320,9 @@ export default function TDSPage() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
