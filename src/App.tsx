@@ -12,6 +12,7 @@ import Vendors from "./pages/Vendors";
 import OpenTextPage from "./pages/vendors/OpenText";
 import TDSPage from "./pages/vendors/TDS";
 import AppCUREPage from "./pages/vendors/AppCURE";
+import AppCUREVendorPage from "./pages/vendors/AppCUREVendor";
 import SangforPage from "./pages/vendors/Sangfor";
 import ArrosoftPage from "./pages/vendors/Arrosoft";
 import NakivoPage from "./pages/vendors/Nakivo";
@@ -59,7 +60,7 @@ const App = () => (
           <Route path="/clients" element={<Clients />} />
           <Route path="/vendors/opentext" element={<OpenTextPage />} />
           <Route path="/vendors/tds" element={<TDSPage />} />
-           <Route path="/vendors/appcure" element={<AppCUREPage />} />
+           <Route path="/vendors/appcure" element={<AppCUREVendorPage />} />
             <Route path="/vendors/sangfor" element={<SangforPage />} />
             <Route path="/vendors/arrosoft" element={<ArrosoftPage />} />
             <Route path="/vendors/nakivo" element={<NakivoPage />} />
