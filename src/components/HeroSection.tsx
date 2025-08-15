@@ -33,14 +33,13 @@ export default function HeroSection() {
             className="space-y-6 sm:space-y-8 text-center lg:text-left"
           >
             <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-normal leading-tight">
-                
+              <h1 className="sr-only">Disaster Recovery Orchestrator & Automation</h1>
+              <div className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-normal leading-tight">
                 <TypewriterText 
-                  texts={["Disaster Recovery Orchestrator & Automation"]}
+                  texts={["DR Orchestration & Automation","High Availability", "Disaster Recovery", "Server Migration", "Backup & Recovery"]}
                   className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold"
-                />{" "}
-      
-              </h1>
+                />
+              </div>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 As a Value-Added Distributor, S2 enables digital transformation for the modern era through consultancy-driven solutions that modernize your IT infrastructure and business operations.
               </p>
