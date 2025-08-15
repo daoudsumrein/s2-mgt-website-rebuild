@@ -157,9 +157,9 @@ export default function Solutions() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEOHead 
-        title="IT Solutions & Digital Transformation Services MENA | S2 Management Solutions" 
-        description="Comprehensive IT solutions for MENA enterprises: data protection and cybersecurity solutions. Serving UAE, Saudi Arabia, and Middle East since 2013." 
-        keywords="IT solutions MENA, data protection UAE, cybersecurity solutions Middle East, disaster recovery Saudi Arabia, endpoint protection, email security" 
+        title="Data Protection & Cybersecurity Solutions – UAE, KSA, MENA" 
+        description="Comprehensive data protection & cybersecurity solutions in UAE, KSA & MENA. DR, backup, migration, endpoint security, email protection & ransomware defense." 
+        keywords="Data Protection Solutions MENA,Cybersecurity Solutions UAE,Disaster Recovery Planning KSA,Server Migration Services MENA,Cloud Backup & Replication UAE" 
         canonicalUrl="https://s2mgt.com/solutions" 
       />
       <Navigation />
@@ -276,7 +276,7 @@ export default function Solutions() {
                       <div className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 px-4 ${
                         activeSection === 'data' ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                       }`}>
-                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-2 md:mb-4">DATA PROTECTION</h2>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-2 md:mb-4">DATA PROTECTION</h3>
                         <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
                           Comprehensive data backup, recovery, and protection solutions to safeguard your critical business information.
                         </p>
@@ -286,7 +286,7 @@ export default function Solutions() {
                       <div className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 px-4 ${
                         activeSection === 'cyber' ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                       }`}>
-                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-teal-400 mb-2 md:mb-4">CYBER SECURITY</h2>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-teal-400 mb-2 md:mb-4">CYBER SECURITY</h3>
                         <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
                           Advanced cybersecurity solutions including threat detection, prevention, and response to protect your infrastructure.
                         </p>
@@ -351,7 +351,7 @@ export default function Solutions() {
               <div className="space-y-6">
                 <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6 md:mb-8">
                   <Database className="h-8 w-8 md:h-10 md:w-10 text-primary" />
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left">Data Protection Solutions</h2>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left">Data Protection Solutions</h3>
                 </div>
                 <div className="space-y-4">
                   {dataProtectionSolutions.map((solution, index) => {
@@ -364,7 +364,7 @@ export default function Solutions() {
                               <IconComponent className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <h3 className="font-semibold text-base md:text-lg mb-1">{solution.title}</h3>
+                              <h4 className="font-semibold text-base md:text-lg mb-1">{solution.title}</h4>
                               <p className="text-muted-foreground text-sm md:text-base">{solution.description}</p>
                             </div>
                             <Button size="sm" variant="ghost" asChild className="opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0">
@@ -384,7 +384,7 @@ export default function Solutions() {
               <div className="space-y-6">
                 <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6 md:mb-8">
                   <Shield className="h-8 w-8 md:h-10 md:w-10 text-teal-500" />
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left">Cybersecurity Solutions</h2>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center lg:text-left">Cybersecurity Solutions</h3>
                 </div>
                 <div className="space-y-4">
                   {cybersecuritySolutions.map((solution, index) => {
@@ -397,7 +397,7 @@ export default function Solutions() {
                               <IconComponent className="h-5 w-5 md:h-6 md:w-6 text-teal-500" />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <h3 className="font-semibold text-base md:text-lg mb-1">{solution.title}</h3>
+                              <h4 className="font-semibold text-base md:text-lg mb-1">{solution.title}</h4>
                               <p className="text-muted-foreground text-sm md:text-base">{solution.description}</p>
                             </div>
                             <Button size="sm" variant="ghost" asChild className="opacity-70 group-hover:opacity-100 transition-opacity flex-shrink-0">
