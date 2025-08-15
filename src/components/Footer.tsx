@@ -7,12 +7,8 @@ import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const solutions = [
-  { name: "Disaster Recovery", href: "/solutions/disaster-recovery" },
-  { name: "Data Protection", href: "/solutions/data-protection" },
-  { name: "Application Modernization", href: "/solutions/app-modernization" },
-  { name: "IT Discovery", href: "/solutions/it-discovery" },
-  { name: "Secure Cloud", href: "/solutions/secure-cloud" },
-  { name: "Security", href: "/solutions/security" }
+  { name: "Data Protection", href: "/solutions" },
+  { name: "Cyber Security", href: "/solutions" }
 ];
 
 const vendors = [
@@ -36,8 +32,8 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-4">
         {/* Mobile View */}
         <div className="md:hidden space-y-6">
-          {/* Company Info */}
-          <div className="space-y-4">
+          {/* LinkedIn */}
+          <div className="flex justify-center">
             <a 
               href="https://linkedin.com/company/s2-management-solutions" 
               target="_blank" 
@@ -46,28 +42,54 @@ export default function Footer() {
             >
               <Linkedin className="h-8 w-8" />
             </a>
-            <div className="space-y-2">
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
+          </div>
+
+          {/* Office Information */}
+          <div className="space-y-6">
+            {/* UAE Office */}
+            <div className="space-y-3">
+              <h4 className="font-semibold text-primary flex items-center gap-2">
+                🇦🇪 UAE Office
+              </h4>
+              <div className="space-y-2">
+                <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                  <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                  <Phone className="h-4 w-4" />
+                  <a href="tel:+97141234567" className="hover:text-primary transition-colors">+971 4 123 4567</a>
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+971 4 123 4567</span>
+            </div>
+
+            {/* Saudi Arabia Office */}
+            <div className="space-y-3">
+              <h4 className="font-semibold text-primary flex items-center gap-2">
+                🇸🇦 SA Office
+              </h4>
+              <div className="space-y-2">
+                <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                  <span>Building No. 7036, Saiyda st., Riyadh Saudi Arabia | P.O. Box: 12796, Riyadh, KSA.</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                  <Phone className="h-4 w-4" />
+                  <a href="tel:+966550846532" className="hover:text-primary transition-colors">+966 550846532</a>
+                </div>
               </div>
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>KSA Office Address Here</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+966 X XXX XXXX</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+            </div>
+
+            {/* Shared Information */}
+            <div className="space-y-2 pt-4 border-t border-border">
+              <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
-                  info@s2mgt.com
+                <a href="mailto:admin@s2mgt.com" className="hover:text-primary transition-colors">
+                  admin@s2mgt.com
                 </a>
+              </div>
+              <div className="text-center text-sm text-muted-foreground">
+                Monday to Friday, 9:00 AM to 6:00 PM (GST)
               </div>
             </div>
           </div>
@@ -168,10 +190,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Desktop Grid - 5 columns aligned */}
-        <div className="hidden md:grid md:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
+        {/* Desktop Grid - Offices and Navigation */}
+        <div className="hidden md:grid md:grid-cols-12 gap-8">
+          {/* LinkedIn - Centered */}
+          <div className="col-span-12 flex justify-center mb-4">
             <a 
               href="https://linkedin.com/company/s2-management-solutions" 
               target="_blank" 
@@ -180,6 +202,11 @@ export default function Footer() {
             >
               <Linkedin className="h-8 w-8" />
             </a>
+          </div>
+
+          {/* UAE Office */}
+          <div className="col-span-6 space-y-4">
+            <h3 className="font-semibold text-primary flex items-center gap-2">🇦🇪 UAE Office</h3>
             <div className="space-y-2">
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -187,27 +214,41 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
-                <span>+971 4 123 4567</span>
-              </div>
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>KSA Office Address Here</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+966 X XXX XXXX</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
-                  info@s2mgt.com
-                </a>
+                <a href="tel:+97141234567" className="hover:text-primary transition-colors">+971 4 123 4567</a>
               </div>
             </div>
           </div>
 
+          {/* Saudi Arabia Office */}
+          <div className="col-span-6 space-y-4">
+            <h3 className="font-semibold text-primary flex items-center gap-2">🇸🇦 SA Office</h3>
+            <div className="space-y-2">
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>Building No. 7036, Saiyda st., Riyadh Saudi Arabia | P.O. Box: 12796, Riyadh, KSA.</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+966550846532" className="hover:text-primary transition-colors">+966 550846532</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Shared Information - Full Width Centered */}
+          <div className="col-span-12 border-t border-border pt-6 space-y-3">
+            <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+              <Mail className="h-4 w-4" />
+              <a href="mailto:admin@s2mgt.com" className="hover:text-primary transition-colors">
+                admin@s2mgt.com
+              </a>
+            </div>
+            <div className="text-center text-sm text-muted-foreground">
+              Monday to Friday, 9:00 AM to 6:00 PM (GST)
+            </div>
+          </div>
+
           {/* Solutions */}
-          <div className="space-y-4">
+          <div className="col-span-3 space-y-4">
             <h3 className="font-semibold">Solutions</h3>
             <ul className="space-y-2">
               {solutions.map((solution) => (
@@ -224,7 +265,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
+          <div className="col-span-3 space-y-4">
             <h3 className="font-semibold">Services</h3>
             <ul className="space-y-2">
               <li>
@@ -251,7 +292,7 @@ export default function Footer() {
           </div>
 
           {/* Vendors */}
-          <div className="space-y-4">
+          <div className="col-span-3 space-y-4">
             <h3 className="font-semibold">Our Vendors</h3>
             <ul className="space-y-2">
               {vendors.map((vendor) => (
@@ -268,7 +309,7 @@ export default function Footer() {
           </div>
 
           {/* Company */}
-          <div className="space-y-4">
+          <div className="col-span-3 space-y-4">
             <h3 className="font-semibold">Company</h3>
             <ul className="space-y-2">
               <li>
