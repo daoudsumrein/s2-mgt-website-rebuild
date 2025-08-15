@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import WebPageSchema from "@/components/WebPageSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -128,9 +130,35 @@ export default function Services() {
   return (
     <>
       <SEOHead 
-        title="IT Consultancy & Professional Services – UAE, KSA & MENA"
-        description="Consultancy-led IT services in MENA: strategy, solutions architecture, DR planning, migration, SLAs & modernization. Vendor-neutral, enterprise-focused delivery."
-        keywords="IT Consultancy Services MENA,Disaster Recovery Planning KSA,IT Migration & Modernization Solutions,Business Continuity & SLA Management MENA,IT Migration & Modernization Solutions,IT Solutions Architecture UAE"
+        title="Professional IT Consultancy & Services – UAE, KSA & MENA | S2 Management"
+        description="Expert IT consultancy services in MENA: solutions architecture, disaster recovery planning, application modernization, SLA management & professional services. Vendor-neutral, enterprise-focused delivery across UAE, KSA & Middle East."
+        keywords="IT consultancy services MENA, disaster recovery planning KSA, application modernization UAE, IT solutions architecture, business continuity services, SLA management, professional IT services Middle East, vendor neutral consulting"
+        canonicalUrl="https://s2mgt.com/services"
+        ogType="website"
+      />
+      <WebPageSchema
+        title="Professional IT Services & Consultancy"
+        description="Comprehensive IT consultancy and professional services across MENA region"
+        url="https://s2mgt.com/services"
+        pageType="Service"
+        breadcrumbs={[
+          { name: "Home", url: "https://s2mgt.com/" },
+          { name: "Services", url: "https://s2mgt.com/services" }
+        ]}
+      />
+      <ServiceSchema
+        serviceName="IT Consultancy & Professional Services"
+        description="Expert IT consultancy, solutions architecture, and professional services for enterprise clients across MENA region"
+        url="https://s2mgt.com/services"
+        features={[
+          "Strategic Technology Planning",
+          "Vendor-Neutral Assessments", 
+          "Solutions Architecture Design",
+          "Disaster Recovery Planning",
+          "Application Modernization",
+          "SLA Management"
+        ]}
+        category="Information Technology Consulting"
       />
       
       <div className="min-h-screen bg-background">

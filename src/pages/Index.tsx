@@ -3,6 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import OrganizationSchema from "@/components/OrganizationSchema";
+import WebPageSchema from "@/components/WebPageSchema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,12 +19,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Trusted Cybersecurity & Data Protection Distributor UAE, KSA"
-        description="S2 Management delivers backup & replication, data protection, DR orchestration, business continuity & resilience. Official MENA distributor for OpenText, TDS, appCURE, NAKIVO & Arrosoft."
-        keywords="Disaster recovery solutions UAE, KSA, MENA, OpenText distributor Middle East, Enterprise data protection KSA, application modernization MENA, Carbonite solutions, IT orchestration, data protection MENA, Migration Orchestration Dubai & KSA, DR Orchestration Dubai & Riyadh"
+        title="Leading IT Transformation & Data Protection Solutions in UAE, KSA & MENA | S2 Management"
+        description="Premier data protection, disaster recovery & cybersecurity solutions in MENA. Official distributor for OpenText, NAKIVO, TDS, appCURE & Arrosoft. Serving enterprises across UAE, Saudi Arabia & Middle East since 2013."
+        keywords="data protection UAE, disaster recovery KSA, cybersecurity MENA, IT transformation Middle East, OpenText distributor, NAKIVO partner, enterprise backup solutions, business continuity planning, ransomware protection, cloud data protection"
         canonicalUrl="https://s2mgt.com/"
+        ogType="website"
+        ogImage="https://s2mgt.com/assets/s2-logo-new.png"
       />
       <LocalBusinessSchema />
+      <OrganizationSchema />
+      <WebPageSchema
+        title="S2 Management Solutions - Leading IT Solutions Provider in MENA"
+        description="Premier IT transformation, data protection, and cybersecurity solutions across UAE, KSA, and MENA region since 2013."
+        url="https://s2mgt.com/"
+        pageType="WebPage"
+      />
       <motion.div
         ref={navigationRef}
         initial={{ opacity: 0, y: -20 }}
