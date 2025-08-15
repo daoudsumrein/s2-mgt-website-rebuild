@@ -18,7 +18,7 @@ export default function About() {
     <>
       <SEOHead 
         title="Data Protection & DR Specialists in UAE, KSA & MENA"
-        description="Since 2013, S2 Management Solutions delivers expert data protection, disaster recovery, and application modernization across MENA. Trusted by governments and enterprises."
+        description="Leading MENA IT consultancy since 2013, specializing in data protection, disaster recovery, backup, and business continuity for government & enterprise clients."
         keywords="S2 Management Solutions, IT transformation MENA, data protection company, disaster recovery expert, application modernization UAE, enterprise IT"
         canonicalUrl="https://s2mgt.com/about"
       />
