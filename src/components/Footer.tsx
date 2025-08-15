@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="lg:hidden space-y-6">
           {/* Contact Information Mobile */}
           <div className="space-y-4">
-            <h3 className="text-base font-semibold text-foreground">📞 Contact Information</h3>
+            <div className="text-base font-semibold text-foreground">📞 Contact Information</div>
             
             {/* UAE Office */}
             <div className="pb-4 border-b border-border">
@@ -149,7 +149,7 @@ export default function Footer() {
         <div className="hidden lg:grid lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8">
           {/* Contact Information Section */}
           <div className="space-y-4">
-            <h3 className="text-base font-semibold text-foreground">📞 Contact Information</h3>
+            <div className="text-base font-semibold text-foreground">📞 Contact Information</div>
             
             {/* UAE Office */}
             <div className="pb-4 mb-5 border-b border-border">
@@ -188,7 +188,7 @@ export default function Footer() {
 
           {/* Solutions & Services Section */}
           <div className="space-y-4">
-            <h3 className="text-base font-semibold text-foreground">Solutions & Services</h3>
+            <div className="text-base font-semibold text-foreground">Solutions & Services</div>
             <ul className="space-y-2">
               {solutions.map((solution) => (
                 <li key={solution.href}>
@@ -205,7 +205,7 @@ export default function Footer() {
 
           {/* Our Vendors Section */}
           <div className="space-y-4">
-            <h3 className="text-base font-semibold text-foreground">Our Vendors</h3>
+            <div className="text-base font-semibold text-foreground">Our Vendors</div>
             <ul className="space-y-2">
               {vendors.map((vendor) => (
                 <li key={vendor.href}>
@@ -222,7 +222,7 @@ export default function Footer() {
 
           {/* Company & Partners Section */}
           <div className="space-y-4">
-            <h3 className="text-base font-semibold text-foreground">Company</h3>
+            <div className="text-base font-semibold text-foreground">Company</div>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -232,7 +232,7 @@ export default function Footer() {
             </ul>
             
             <div className="mt-5">
-              <h4 className="text-base font-semibold text-foreground mb-2">Partners</h4>
+              <div className="text-base font-semibold text-foreground mb-2">Partners</div>
               <ul className="space-y-2">
                 <li>
                   <a 
