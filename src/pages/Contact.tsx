@@ -172,7 +172,7 @@ export default function Contact() {
                     </Button>
                     
                     <Button variant="outline" className="w-full justify-start" asChild>
-                      <a href="mailto:info@s2mgt.com">
+                      <a href="mailto:admin@s2mgt.com">
                         <Mail className="mr-2 h-4 w-4" />
                         Email Direct
                       </a>
