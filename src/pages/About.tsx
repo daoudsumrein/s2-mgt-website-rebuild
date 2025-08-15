@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import WebPageSchema from "@/components/WebPageSchema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,21 +17,10 @@ export default function About() {
   return (
     <>
       <SEOHead 
-        title="About S2 Management - Data Protection & DR Specialists in UAE, KSA & MENA"
-        description="Leading MENA IT consultancy since 2013, specializing in data protection, disaster recovery, backup, and business continuity for government & enterprise clients across UAE, Saudi Arabia and Middle East."
-        keywords="about S2 Management, data protection specialists MENA, disaster recovery experts UAE, IT consultancy KSA, business continuity planning, OpenText distributor Middle East, enterprise cybersecurity services"
+        title="Data Protection & DR Specialists in UAE, KSA & MENA"
+        description="Leading MENA IT consultancy since 2013, specializing in data protection, disaster recovery, backup, and business continuity for government & enterprise clients."
+        keywords="OpenText Data Protection Distributor MENA,Business Continuity & Resilience KSA,Disaster Recovery Services UAE,DR Orchestration & Automation MENA, Cybersecurity & Endpoint Protection UAE, High Availability Solutions KSA"
         canonicalUrl="https://s2mgt.com/about"
-        ogType="website"
-      />
-      <WebPageSchema
-        title="About S2 Management Solutions"
-        description="Leading MENA IT consultancy since 2013, specializing in data protection, disaster recovery, and business continuity solutions."
-        url="https://s2mgt.com/about"
-        pageType="AboutPage"
-        breadcrumbs={[
-          { name: "Home", url: "https://s2mgt.com/" },
-          { name: "About", url: "https://s2mgt.com/about" }
-        ]}
       />
       <div className="min-h-screen bg-background">
         <Navigation />
