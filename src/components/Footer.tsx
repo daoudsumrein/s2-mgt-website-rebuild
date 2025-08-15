@@ -33,7 +33,7 @@ export default function Footer() {
       transition={{ duration: 0.6 }}
       className="bg-muted border-t"
     >
-      <div className="container mx-auto px-5 py-10">
+      <div className="container mx-auto px-5 pt-10 pb-4">
         {/* Mobile View */}
         <div className="lg:hidden space-y-6">
           {/* Contact Information Mobile */}
