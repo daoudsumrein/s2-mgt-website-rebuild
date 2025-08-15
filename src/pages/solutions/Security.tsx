@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import WebPageSchema from "@/components/WebPageSchema";
-import ServiceSchema from "@/components/ServiceSchema";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -109,36 +107,10 @@ export default function Security() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Enterprise Cybersecurity Solutions – UAE, KSA & MENA | S2 Management"
-        description="Advanced cybersecurity solutions across MENA. Endpoint protection, threat detection & response, security awareness training, compliance management, and 24/7 security monitoring for enterprises in UAE, KSA, and Middle East."
-        keywords="enterprise cybersecurity UAE, endpoint protection KSA, threat detection MENA, security awareness training, SOC services, compliance management Middle East, cybersecurity consulting, security solutions"
+        title="Cybersecurity & Ransomware Protection MENA - Enterprise Security Solutions | S2"
+        description="Advanced cybersecurity and ransomware protection for MENA enterprises. Multi-layered threat defense, endpoint security, email protection, and managed detection & response (MDR) services across UAE and Middle East."
+        keywords="cybersecurity MENA, ransomware protection UAE, enterprise security Middle East, endpoint protection Saudi Arabia, email security, MDR services, threat detection MENA, cyber defense solutions"
         canonicalUrl="https://s2mgt.com/solutions/security"
-        ogType="article"
-      />
-      <WebPageSchema
-        title="Enterprise Cybersecurity Solutions"
-        description="Comprehensive cybersecurity services including endpoint protection, threat detection, and security awareness"
-        url="https://s2mgt.com/solutions/security"
-        pageType="Service"
-        breadcrumbs={[
-          { name: "Home", url: "https://s2mgt.com/" },
-          { name: "Solutions", url: "https://s2mgt.com/solutions" },
-          { name: "Security", url: "https://s2mgt.com/solutions/security" }
-        ]}
-      />
-      <ServiceSchema
-        serviceName="Cybersecurity Solutions"
-        description="Comprehensive enterprise cybersecurity services including endpoint protection and threat detection"
-        url="https://s2mgt.com/solutions/security"
-        features={[
-          "Endpoint Protection",
-          "Threat Detection & Response",
-          "Security Awareness Training",
-          "Compliance Management",
-          "24/7 SOC Services",
-          "Vulnerability Assessment"
-        ]}
-        category="Cybersecurity Services"
       />
       <Navigation />
       

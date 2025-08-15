@@ -4,58 +4,25 @@ Allow: /
 # Sitemap location
 Sitemap: https://s2mgt.com/sitemap.xml
 
-# High-priority pages for search engines
-User-agent: *
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /solutions/
-Allow: /vendors/
-
-# SEO-optimized crawl delays for major search engines
+# SEO-optimized crawl delays
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0.5
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 0.5
+Crawl-delay: 1
 
 User-agent: Yandexbot
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 2
 
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-# Social media crawlers - fast access
+# Social media crawlers
 User-agent: facebookexternalhit
 Allow: /
-Crawl-delay: 0
 
 User-agent: Twitterbot
 Allow: /
-Crawl-delay: 0
 
 User-agent: LinkedInBot
 Allow: /
-Crawl-delay: 0
-
-# WhatsApp crawler
-User-agent: WhatsApp
-Allow: /
-
-# Telegram crawler  
-User-agent: TelegramBot
-Allow: /
-
-# Block common bot threats while allowing legitimate crawlers
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /

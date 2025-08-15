@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import WebPageSchema from "@/components/WebPageSchema";
-import ServiceSchema from "@/components/ServiceSchema";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
@@ -17,37 +15,10 @@ export default function NakivoPage() {
   return (
     <>
       <SEOHead 
-        title="NAKIVO Backup & Replication Solutions in UAE, KSA & MENA | S2 Management"
-        description="Enterprise-grade NAKIVO backup and replication solutions in MENA. Comprehensive data protection, VM backup, cloud backup, and disaster recovery trusted by organizations with strict cybersecurity standards."
-        keywords="NAKIVO backup solutions UAE, VM backup and replication KSA, enterprise data protection MENA, NAKIVO partner Middle East, cloud backup solutions, disaster recovery, virtualization backup, VMware backup"
+        title="NAKIVO Backup & Replication Solutions | S2 Management"
+        description="Comprehensive data protection with NAKIVO's enterprise backup and replication platform. Trusted by organizations with strict cybersecurity standards."
+        keywords="NAKIVO partner, data protection, backup replication, enterprise backup, VM backup, cloud data protection"
         canonicalUrl="https://s2mgt.com/vendors/nakivo"
-        ogType="website"
-      />
-      <WebPageSchema
-        title="NAKIVO Backup & Replication Solutions"
-        description="Enterprise data protection with NAKIVO's comprehensive backup and replication platform"
-        url="https://s2mgt.com/vendors/nakivo"
-        pageType="Product"
-        breadcrumbs={[
-          { name: "Home", url: "https://s2mgt.com/" },
-          { name: "Vendors", url: "https://s2mgt.com/vendors" },
-          { name: "NAKIVO", url: "https://s2mgt.com/vendors/nakivo" }
-        ]}
-      />
-      <ServiceSchema
-        serviceName="NAKIVO Backup & Replication"
-        description="Comprehensive enterprise data protection with NAKIVO's advanced backup, replication, and recovery platform"
-        url="https://s2mgt.com/vendors/nakivo"
-        features={[
-          "VM Backup and Replication",
-          "Cloud Data Protection",
-          "Instant VM Recovery",
-          "Enterprise Security Standards",
-          "Cost-Effective Pricing",
-          "Cross-Platform Support"
-        ]}
-        category="Data Protection Software"
-        serviceType="SoftwareApplication"
       />
       <div className="min-h-screen bg-background">
         <Navigation />
