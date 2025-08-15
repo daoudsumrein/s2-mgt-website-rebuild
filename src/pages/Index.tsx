@@ -34,20 +34,6 @@ const Index = () => {
       <main>
         <HeroSection />
         
-        {/* Core Services Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Our Core Solutions
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Comprehensive IT transformation and data protection services designed for modern enterprises
-              </p>
-            </div>
-          </div>
-        </section>
-        
         {/* Company Overview Section */}
         {/* <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
