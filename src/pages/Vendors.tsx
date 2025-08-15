@@ -139,7 +139,7 @@ export default function Vendors() {
                   animate={vendorsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card className="hover:shadow-lg transition-all duration-300 group">
+                  <Card className="hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
                   <CardHeader>
                     <div className="flex items-start space-x-4">
                       <div className="w-16 h-16 rounded-lg flex items-center justify-center font-bold text-lg border bg-white overflow-hidden">
@@ -152,8 +152,8 @@ export default function Vendors() {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
+                  <CardContent className="flex-1 flex flex-col">
+                    <div className="flex-1">
                       <h4 className="font-semibold mb-3">Key Solutions:</h4>
                       <ul className="space-y-2">
                         {vendor.solutions.map((solution, solutionIndex) => (
@@ -165,7 +165,7 @@ export default function Vendors() {
                       </ul>
                     </div>
                     
-                    <div className="pt-4 border-t">
+                    <div className="pt-4 border-t mt-auto">
                       <Button asChild variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
                         <Link to={vendor.href}>
                           Learn More About {vendor.name}
