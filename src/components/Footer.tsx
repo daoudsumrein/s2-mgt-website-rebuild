@@ -251,7 +251,7 @@ export default function Footer() {
         </div>
 
         {/* Social Media & Copyright */}
-        <div className="border-t border-border mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+        <div className="border-t border-border mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center lg:space-y-0">
           <div className="flex items-center space-x-4">
             <a 
               href="https://linkedin.com/company/s2-management-solutions" 
