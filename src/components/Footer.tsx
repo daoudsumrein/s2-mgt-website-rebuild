@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ExternalLink, Linkedin, ChevronDown } from "lucide-react";
+import { ExternalLink, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import s2Logo from "@/assets/s2-logo-new.png";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const solutions = [
+  { name: "All Services", href: "/services" },
   { name: "Disaster Recovery", href: "/solutions/disaster-recovery" },
   { name: "Data Protection", href: "/solutions/data-protection" },
   { name: "Application Modernization", href: "/solutions/app-modernization" },
@@ -33,52 +33,55 @@ export default function Footer() {
       transition={{ duration: 0.6 }}
       className="bg-muted border-t"
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-5 py-10">
         {/* Mobile View */}
-        <div className="md:hidden space-y-6">
-          {/* Company Info */}
+        <div className="lg:hidden space-y-6">
+          {/* Contact Information Mobile */}
           <div className="space-y-4">
-            <a 
-              href="https://linkedin.com/company/s2-management-solutions" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors"
-            >
-              <Linkedin className="h-8 w-8" />
-            </a>
-            <div className="space-y-2">
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
+            <h3 className="text-base font-semibold text-foreground">📞 Contact Information</h3>
+            
+            {/* UAE Office */}
+            <div className="pb-4 border-b border-border">
+              <div className="font-semibold text-sm text-foreground mb-2">🇦🇪 UAE Office</div>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <span className="text-primary">📍</span>
+                  <span>Office 101, Building 10, Dubai Internet City, UAE</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-primary">📞</span>
+                  <a href="tel:+97141234567" className="text-muted-foreground hover:text-primary transition-colors">
+                    +971 4 123 4567
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+971 4 123 4567</span>
-              </div>
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>KSA Office Address Here</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+966 X XXX XXXX</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
-                  info@s2mgt.com
-                </a>
+            </div>
+            
+            {/* Saudi Arabia Office */}
+            <div>
+              <div className="font-semibold text-sm text-foreground mb-2">🇸🇦 Saudi Arabia Office</div>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <span className="text-primary">📍</span>
+                  <span>Building No. 7036, Saiyda st., Riyadh Saudi Arabia | P.O. Box: 12796, Riyadh, KSA</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-primary">📞</span>
+                  <a href="tel:+966550846532" className="text-muted-foreground hover:text-primary transition-colors">
+                    +966 550846532
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Mobile Collapsible Sections */}
           <div className="space-y-4">
-            {/* Solutions Collapsible */}
+            {/* Solutions & Services Collapsible */}
             <Collapsible>
               <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
-                Solutions
-                <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
+                Solutions & Services
+                <span className="text-sm">+</span>
               </CollapsibleTrigger>
               <CollapsibleContent className="space-y-2 pt-2">
                 {solutions.map((solution) => (
@@ -94,33 +97,11 @@ export default function Footer() {
               </CollapsibleContent>
             </Collapsible>
 
-            {/* Services Collapsible */}
-            <Collapsible>
-              <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
-                Services
-                <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
-              </CollapsibleTrigger>
-              <CollapsibleContent className="space-y-2 pt-2">
-                <Link to="/services" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
-                  All Services
-                </Link>
-                <Link to="/solutions/disaster-recovery" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
-                  Disaster Recovery
-                </Link>
-                <Link to="/solutions/data-protection" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
-                  Data Protection
-                </Link>
-                <Link to="/solutions/app-modernization" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
-                  App Modernization
-                </Link>
-              </CollapsibleContent>
-            </Collapsible>
-
             {/* Vendors Collapsible */}
             <Collapsible>
               <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
                 Our Vendors
-                <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
+                <span className="text-sm">+</span>
               </CollapsibleTrigger>
               <CollapsibleContent className="space-y-2 pt-2">
                 {vendors.map((vendor) => (
@@ -136,79 +117,78 @@ export default function Footer() {
               </CollapsibleContent>
             </Collapsible>
 
-            {/* Company Collapsible */}
+            {/* Company & Partners Collapsible */}
             <Collapsible>
               <CollapsibleTrigger className="flex items-center justify-between w-full py-2 font-semibold text-left">
                 Company
-                <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
+                <span className="text-sm">+</span>
               </CollapsibleTrigger>
-              <CollapsibleContent className="space-y-2 pt-2">
+              <CollapsibleContent className="space-y-4 pt-2">
                 <Link to="/about" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   About S2
                 </Link>
-                <Link to="/contact" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
-                  Contact Us
-                </Link>
-                <div className="pt-2">
-                  <h4 className="font-medium mb-2 text-sm">Partners</h4>
-                  <Button variant="outline" size="sm" asChild>
-                    <a 
-                      href="https://preview--pipeline-pro-portal.lovable.app" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      Partner Portal
-                      <ExternalLink className="h-3 w-3" />
-                    </a>
-                  </Button>
+                
+                <div>
+                  <div className="font-semibold text-sm text-foreground mb-2">Partners</div>
+                  <a 
+                    href="https://preview--pipeline-pro-portal.lovable.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Partner Portal 
+                    <span className="text-xs">↗</span>
+                  </a>
                 </div>
               </CollapsibleContent>
             </Collapsible>
           </div>
         </div>
 
-        {/* Desktop Grid - 5 columns aligned */}
-        <div className="hidden md:grid md:grid-cols-5 gap-8">
-          {/* Company Info */}
+        {/* Desktop Grid Layout */}
+        <div className="hidden lg:grid lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8">
+          {/* Contact Information Section */}
           <div className="space-y-4">
-            <a 
-              href="https://linkedin.com/company/s2-management-solutions" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors"
-            >
-              <Linkedin className="h-8 w-8" />
-            </a>
-            <div className="space-y-2">
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Office 101, Building 10, Dubai Internet City, UAE.</span>
+            <h3 className="text-base font-semibold text-foreground">📞 Contact Information</h3>
+            
+            {/* UAE Office */}
+            <div className="pb-4 mb-5 border-b border-border">
+              <div className="font-semibold text-sm text-foreground mb-2">🇦🇪 UAE Office</div>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <span className="text-primary mt-0.5">📍</span>
+                  <span>Office 101, Building 10, Dubai Internet City, UAE</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-primary">📞</span>
+                  <a href="tel:+97141234567" className="text-muted-foreground hover:text-primary transition-colors">
+                    +971 4 123 4567
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+971 4 123 4567</span>
-              </div>
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>KSA Office Address Here</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+966 X XXX XXXX</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:info@s2mgt.com" className="hover:text-primary transition-colors">
-                  info@s2mgt.com
-                </a>
+            </div>
+            
+            {/* Saudi Arabia Office */}
+            <div>
+              <div className="font-semibold text-sm text-foreground mb-2">🇸🇦 Saudi Arabia Office</div>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <span className="text-primary mt-0.5">📍</span>
+                  <span>Building No. 7036, Saiyda st., Riyadh Saudi Arabia | P.O. Box: 12796, Riyadh, KSA</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-primary">📞</span>
+                  <a href="tel:+966550846532" className="text-muted-foreground hover:text-primary transition-colors">
+                    +966 550846532
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Solutions */}
+          {/* Solutions & Services Section */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Solutions</h3>
+            <h3 className="text-base font-semibold text-foreground">Solutions & Services</h3>
             <ul className="space-y-2">
               {solutions.map((solution) => (
                 <li key={solution.href}>
@@ -223,36 +203,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Our Vendors Section */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  All Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/disaster-recovery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Disaster Recovery
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/data-protection" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Data Protection
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions/app-modernization" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  App Modernization
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Vendors */}
-          <div className="space-y-4">
-            <h3 className="font-semibold">Our Vendors</h3>
+            <h3 className="text-base font-semibold text-foreground">Our Vendors</h3>
             <ul className="space-y-2">
               {vendors.map((vendor) => (
                 <li key={vendor.href}>
@@ -267,40 +220,48 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company & Partners Section */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Company</h3>
+            <h3 className="text-base font-semibold text-foreground">Company</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   About S2
                 </Link>
               </li>
-              <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Contact Us
-                </Link>
-              </li>
             </ul>
             
-            <div className="pt-4">
-              <h4 className="font-medium mb-2">Partners</h4>
-              <Button variant="outline" size="sm" asChild>
-                <a 
-                  href="https://preview--pipeline-pro-portal.lovable.app" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  Partner Portal
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-              </Button>
+            <div className="mt-5">
+              <h4 className="text-base font-semibold text-foreground mb-2">Partners</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a 
+                    href="https://preview--pipeline-pro-portal.lovable.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Partner Portal 
+                    <span className="text-xs">↗</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-border mt-2 pt-2 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        {/* Social Media & Copyright */}
+        <div className="border-t border-border mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+          <div className="flex items-center space-x-4">
+            <a 
+              href="https://linkedin.com/company/s2-management-solutions" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
+          </div>
           <p className="text-sm text-muted-foreground">
             © 2025 S2 Management Solutions. All rights reserved.
           </p>
