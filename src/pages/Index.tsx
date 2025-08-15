@@ -17,7 +17,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Cybersecurity & Data Protection Distributor – Trusted in UAE, KSA, MENA | S2 Management Solutions"
+        title="Trusted Cybersecurity & Data Protection Distributor in UAE, KSA, MENA"
         description="Premier IT transformation and digital modernization services in MENA. Expert disaster recovery, cybersecurity, data protection, and IT orchestration solutions for enterprises across UAE, Saudi Arabia, and Middle East."
         keywords="disaster recovery MENA, cybersecurity UAE, IT transformation Middle East, digital transformation Saudi Arabia, Carbonite solutions, IT orchestration, data protection MENA, enterprise cybersecurity, business continuity"
         canonicalUrl="https://s2mgt.com/"
