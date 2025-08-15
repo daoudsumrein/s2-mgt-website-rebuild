@@ -128,9 +128,9 @@ export default function Services() {
   return (
     <>
       <SEOHead 
-        title="Professional IT Services | S2 Management Solutions"
-        description="Comprehensive IT services including consultancy, solutions architecture, professional services, SLAs, and application modernization. Expert guidance for your digital transformation."
-        keywords="IT consultancy, solutions architecture, professional services, application modernization, disaster recovery SLA, UAE IT services"
+        title="IT Consultancy & Professional Services – UAE, KSA & MENA"
+        description="Consultancy-led IT services in MENA: strategy, solutions architecture, DR planning, migration, SLAs & modernization. Vendor-neutral, enterprise-focused delivery."
+        keywords="IT Consultancy Services MENA,Disaster Recovery Planning KSA,IT Migration & Modernization Solutions,Business Continuity & SLA Management MENA,IT Migration & Modernization Solutions,IT Solutions Architecture UAE"
       />
       
       <div className="min-h-screen bg-background">
