@@ -36,7 +36,7 @@ export default function HeroSection() {
               <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-normal leading-tight">
                 
                 <TypewriterText 
-                  texts={["DR Orchestration & Automation","High Availability", "Disaster\n Recovery", "Server\n Migration", "Backup\n& Recovery"]}
+                  texts={["Disaster Recovery Orchestrator & Automation"]}
                   className="bg-gradient-metallic-blue bg-clip-text text-transparent font-extrabold"
                 />{" "}
       
