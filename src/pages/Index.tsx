@@ -19,7 +19,7 @@ const Index = () => {
       <SEOHead
         title="Trusted Cybersecurity & Data Protection Distributor UAE, KSA"
         description="S2 Management delivers backup & replication, data protection, DR orchestration, business continuity & resilience. Official MENA distributor for OpenText, TDS, appCURE, NAKIVO & Arrosoft."
-        keywords="ddisaster recovery solutions UAE, OpenText distributor Middle East, Enterprise data protection KSA, application modernization MENA, Carbonite solutions, IT orchestration, data protection MENA, migration orchestration Dubai & KSA"
+        keywords="Disaster recovery solutions UAE, KSA, MENA, OpenText distributor Middle East, Enterprise data protection KSA, application modernization MENA, Carbonite solutions, IT orchestration, data protection MENA, Migration Orchestration Dubai & KSA, DR Orchestration Dubai & Riyadh"
         canonicalUrl="https://s2mgt.com/"
       />
       <LocalBusinessSchema />
