@@ -1,10 +1,14 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
 
 # Sitemap location
 Sitemap: https://s2mgt.com/sitemap.xml
 
-# SEO-optimized crawl delays
+# SEO-optimized crawl delays for major search engines
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -17,6 +21,14 @@ User-agent: Yandexbot
 Allow: /
 Crawl-delay: 2
 
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
 # Social media crawlers
 User-agent: facebookexternalhit
 Allow: /
@@ -26,3 +38,32 @@ Allow: /
 
 User-agent: LinkedInBot
 Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Additional SEO crawlers
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+# Block unwanted bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
