@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import WebPageSchema from "@/components/WebPageSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -57,7 +59,38 @@ const deliverables = [{
 }];
 export default function DisasterRecovery() {
   return <div className="min-h-screen flex flex-col">
-      <SEOHead title="Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions" description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools." keywords="disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools" canonicalUrl="https://s2mgt.com/solutions/disaster-recovery" />
+      <SEOHead 
+        title="Enterprise Disaster Recovery Solutions – UAE, KSA & MENA | S2 Management"
+        description="Comprehensive disaster recovery and business continuity solutions across MENA. Advanced DR orchestration, automated failover, RTO optimization, and 24/7 monitoring for enterprise clients in UAE, KSA, and Middle East."
+        keywords="disaster recovery solutions UAE, business continuity planning KSA, DR orchestration MENA, automated failover, backup and recovery, RTO optimization Middle East, disaster recovery services, enterprise DR solutions"
+        canonicalUrl="https://s2mgt.com/solutions/disaster-recovery"
+        ogType="article"
+      />
+      <WebPageSchema
+        title="Enterprise Disaster Recovery Solutions"
+        description="Comprehensive disaster recovery and business continuity planning services"
+        url="https://s2mgt.com/solutions/disaster-recovery"
+        pageType="Service"
+        breadcrumbs={[
+          { name: "Home", url: "https://s2mgt.com/" },
+          { name: "Solutions", url: "https://s2mgt.com/solutions" },
+          { name: "Disaster Recovery", url: "https://s2mgt.com/solutions/disaster-recovery" }
+        ]}
+      />
+      <ServiceSchema
+        serviceName="Disaster Recovery Solutions"
+        description="Enterprise disaster recovery planning, DR orchestration, and business continuity services"
+        url="https://s2mgt.com/solutions/disaster-recovery"
+        features={[
+          "DR Orchestration & Automation",
+          "Business Continuity Planning",
+          "Automated Failover",
+          "RTO/RPO Optimization",
+          "24/7 Monitoring",
+          "Recovery Testing"
+        ]}
+        category="Disaster Recovery Services"
+      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
