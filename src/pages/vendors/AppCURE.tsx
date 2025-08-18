@@ -66,27 +66,27 @@ export default function AppCUREPage() {
         <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-purple-50 to-background">
-          <div className="container mx-auto px-4">
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-purple-50 to-background">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="w-20 h-20 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center font-bold text-xl mx-auto mb-6 border border-purple-200">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center font-bold text-lg sm:text-xl mx-auto mb-6 border border-purple-200">
                 AC
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                 appCURE Application Modernization
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed px-2">
                 Complete application transformation platform for legacy application modernization, 
                 VDI migration, and secure runtime environments.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
+                <Button size="lg" asChild className="w-full sm:w-auto">
                   <a href="/contact">
                     Request Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
                   <a href="/contact">
                     <Download className="mr-2 h-4 w-4" />
                     Download Datasheet
@@ -98,39 +98,39 @@ export default function AppCUREPage() {
         </section>
 
         {/* Product Suite */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
+        <section className="py-12 sm:py-16">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center mb-8 sm:mb-12">
                 <Badge variant="secondary" className="mb-4">Product Suite</Badge>
-                <h2 className="text-3xl font-bold mb-4">appCURE Platform Components</h2>
-                <p className="text-lg text-muted-foreground">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 px-2">appCURE Platform Components</h2>
+                <p className="text-base sm:text-lg text-muted-foreground px-4">
                   End-to-end application modernization and transformation capabilities
                 </p>
               </div>
 
-              <div className="grid lg:grid-cols-2 gap-8">
+              <div className="grid gap-6 md:gap-8 md:grid-cols-2">
                 {products.map((product, index) => {
                   const IconComponent = product.icon;
                   return (
                     <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                      <CardHeader>
-                        <div className="flex items-start space-x-4">
-                          <div className="p-3 rounded-lg bg-purple-100">
-                            <IconComponent className="h-6 w-6 text-purple-600" />
+                      <CardHeader className="pb-4">
+                        <div className="flex items-start space-x-3 sm:space-x-4">
+                          <div className="p-2 sm:p-3 rounded-lg bg-purple-100 flex-shrink-0">
+                            <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600" />
                           </div>
-                          <div>
-                            <CardTitle className="text-xl">{product.name}</CardTitle>
-                            <p className="text-muted-foreground">{product.description}</p>
+                          <div className="min-w-0 flex-1">
+                            <CardTitle className="text-lg sm:text-xl">{product.name}</CardTitle>
+                            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{product.description}</p>
                           </div>
                         </div>
                       </CardHeader>
-                      <CardContent>
+                      <CardContent className="pt-0">
                         <ul className="space-y-2">
                           {product.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center space-x-2">
-                              <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                              <span className="text-sm">{feature}</span>
+                            <li key={featureIndex} className="flex items-start space-x-2">
+                              <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0 mt-0.5" />
+                              <span className="text-sm leading-relaxed">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -144,17 +144,17 @@ export default function AppCUREPage() {
         </section>
 
         {/* Modernization Process */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Application Modernization Process</h2>
-              <div className="grid md:grid-cols-4 gap-6">
+        <section className="py-12 sm:py-16 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center px-2">Application Modernization Process</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                     1
                   </div>
-                  <h3 className="font-semibold mb-2">Discover</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="font-semibold mb-2 text-base sm:text-lg">Discover</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed px-2">
                     Automated application inventory and assessment
                   </p>
                 </div>
@@ -163,8 +163,8 @@ export default function AppCUREPage() {
                   <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                     2
                   </div>
-                  <h3 className="font-semibold mb-2">Analyze</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="font-semibold mb-2 text-base sm:text-lg">Analyze</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed px-2">
                     Compatibility analysis and modernization planning
                   </p>
                 </div>
@@ -173,8 +173,8 @@ export default function AppCUREPage() {
                   <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                     3
                   </div>
-                  <h3 className="font-semibold mb-2">Transform</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="font-semibold mb-2 text-base sm:text-lg">Transform</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed px-2">
                     Application repackaging and modernization
                   </p>
                 </div>
@@ -183,8 +183,8 @@ export default function AppCUREPage() {
                   <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                     4
                   </div>
-                  <h3 className="font-semibold mb-2">Deploy</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="font-semibold mb-2 text-base sm:text-lg">Deploy</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed px-2">
                     Secure deployment and runtime management
                   </p>
                 </div>
@@ -322,16 +322,16 @@ export default function AppCUREPage() {
         </section>
 
         {/* Industrialisation Hero */}
-        <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-24 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-16 sm:py-20 lg:py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-30">
             <div className="w-full h-full" style={{ backgroundImage: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><pattern id='tech-grid' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='%23ffffff' opacity='0.1'/></pattern></defs><rect width='100' height='100' fill='url(%23tech-grid)'/></svg>")` }}></div>
           </div>
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent px-2">
                 The Industrialisation of Application Transformation
               </h2>
-              <p className="text-xl lg:text-2xl opacity-90">
+              <p className="text-lg sm:text-xl lg:text-2xl opacity-90 px-4 leading-relaxed">
                 <span className="text-pink-200 font-bold">appCURE</span> is accelerating the application transformation market with its leading processes and methodologies.
               </p>
             </div>
@@ -339,14 +339,14 @@ export default function AppCUREPage() {
         </section>
 
         {/* CURE Methodology */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-16 text-purple-600">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16 text-purple-600 px-2">
                 The <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">CURE</span> Methodology
               </h2>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-slate-50 to-slate-100">
                   <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
                   <CardContent className="p-8">
