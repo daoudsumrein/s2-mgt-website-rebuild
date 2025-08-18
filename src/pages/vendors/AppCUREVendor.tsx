@@ -247,7 +247,14 @@ export default function AppCUREVendorPage() {
     }} viewport={{
       once: true
     }}>
-        <div className="max-w-7xl mx-auto relative z-10">
+        {/* Background pattern similar to the reference */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-full h-full" style={{
+          backgroundImage: `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dark-grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#333333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(#dark-grid)"/></svg>')}")`
+        }} />
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{
             opacity: 0,
@@ -261,14 +268,14 @@ export default function AppCUREVendorPage() {
             once: true
           }}>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
-                Reduce Time to <span className="text-blue-400">Production</span>
+                Reduce Time to <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Production</span>
               </h2>
               <p className="text-xl text-gray-300 leading-relaxed mb-8">
                 Moving applications at speed, understanding the issues, offering solutions and automating creation of the package, the format and the volume.
               </p>
               
-              <ul className="space-y-6">
-                {["Accelerated migration timelines", "Automated package creation", "Comprehensive issue resolution", "Scalable volume processing"].map((feature, index) => <motion.li key={index} className="flex items-center text-lg text-white" initial={{
+              <ul className="space-y-4">
+                {["Accelerated migration timelines", "Automated package creation", "Comprehensive issue resolution", "Scalable volume processing"].map((feature, index) => <motion.li key={index} className="flex items-center text-lg text-gray-200" initial={{
                 opacity: 0,
                 x: -20
               }} whileInView={{
@@ -280,13 +287,13 @@ export default function AppCUREVendorPage() {
               }} viewport={{
                 once: true
               }}>
-                    <span className="text-2xl mr-4 text-orange-400">⚡</span>
+                    <span className="text-2xl mr-4 text-blue-400">⚡</span>
                     {feature}
                   </motion.li>)}
               </ul>
             </motion.div>
 
-            <motion.div className="flex justify-center" initial={{
+            <motion.div className="text-center" initial={{
             opacity: 0,
             x: 50
           }} whileInView={{
@@ -298,7 +305,7 @@ export default function AppCUREVendorPage() {
           }} viewport={{
             once: true
           }}>
-              <motion.img src="/lovable-uploads/9ab85d44-97a8-4f14-8db5-d88578f6ba4a.png" alt="appCURE Application Transformation Workflow" className="w-full max-w-4xl h-auto" loading="lazy" whileHover={{
+              <motion.img src="/lovable-uploads/75204d0b-a5d7-45c6-a0c0-e2cc1622b43e.png" alt="appCURE Application Transformation Workflow" className="w-full max-w-6xl h-auto mt-10 rounded-3xl shadow-2xl transition-transform duration-300" loading="lazy" whileHover={{
               scale: 1.02
             }} />
             </motion.div>
