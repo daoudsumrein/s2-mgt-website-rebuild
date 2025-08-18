@@ -334,7 +334,7 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
   return (
     <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6 overflow-y-auto">
       <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-        <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-12 w-auto object-contain" />
+        <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-16 w-auto object-contain" />
       </Link>
       <div className="flex flex-col space-y-3 mt-6">
         <Link to="/" onClick={() => setIsOpen(false)} className="text-sm font-medium flex items-center gap-2 hover:text-primary transition-colors">
