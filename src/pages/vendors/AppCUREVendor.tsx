@@ -305,7 +305,7 @@ export default function AppCUREVendorPage() {
           }} viewport={{
             once: true
           }}>
-              <motion.img src="/lovable-uploads/49c8e8d9-7642-40a1-8a7e-0527d4cb1c5c.png" alt="appCURE Application Transformation Workflow" className="w-full max-w-4xl h-auto mt-10 rounded-3xl shadow-2xl transition-transform duration-300" loading="lazy" whileHover={{
+              <motion.img src="/lovable-uploads/75204d0b-a5d7-45c6-a0c0-e2cc1622b43e.png" alt="appCURE Application Transformation Workflow" className="w-full max-w-6xl h-auto mt-10 rounded-3xl shadow-2xl transition-transform duration-300" loading="lazy" whileHover={{
               scale: 1.02
             }} />
             </motion.div>
