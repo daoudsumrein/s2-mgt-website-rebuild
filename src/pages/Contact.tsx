@@ -63,7 +63,7 @@ export default function Contact() {
         'service_9srgxev', // Your service ID
         'template_0c4b9ao', // Your template ID
         templateParams,
-        'YOUR_PUBLIC_KEY' // You'll need to provide your EmailJS public key
+        'lCvR_JwGsyx3Weo1g' // Your EmailJS public key
       );
 
       toast({
