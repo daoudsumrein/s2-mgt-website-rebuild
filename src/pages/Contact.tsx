@@ -108,7 +108,7 @@ export default function Contact() {
         <section className="py-16 bg-gradient-to-b from-primary-light to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="secondary" className="mb-4">Get In Touch</Badge>
+              <Badge variant="default" className="mb-4 text-base px-6 py-2">Get In Touch</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Contact S2 Management Solutions
               </h1>
