@@ -64,6 +64,205 @@ export default function AppCUREVendorPage() {
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Industrialisation Hero Section */}
+      <motion.section 
+        className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-24 px-4 relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-full h-full" style={{
+            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="tech-grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="#ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(#tech-grid)"/></svg>')}")`
+          }} />
+        </div>
+        
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            The Industrialisation of Application Transformation
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <span className="text-pink-200 font-bold">appCURE</span> is accelerating the application transformation market with its leading processes and methodologies.
+          </motion.p>
+        </div>
+      </motion.section>
+
+      {/* CURE Methodology Section */}
+      <motion.section 
+        className="bg-white py-24 px-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <motion.h2 
+            className="text-center text-4xl md:text-5xl font-bold text-purple-600 mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            The <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">CURE</span> Methodology
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: "C",
+                title: "Capture",
+                description: "Find the installed parts of the application and capture them, ready to be moved to the target Operating System.",
+                delay: 0.1
+              },
+              {
+                icon: "U", 
+                title: "Update",
+                description: "Look at the differences between the \"today\" and where it is being delivered to.",
+                delay: 0.2
+              },
+              {
+                icon: "R",
+                title: "Remediate", 
+                description: "Find errors and apply fixes.",
+                delay: 0.3
+              },
+              {
+                icon: "E",
+                title: "Execute",
+                description: "Deliver applications to your chosen vendor/platform.",
+                delay: 0.4
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl border-t-4 border-transparent bg-clip-padding relative overflow-hidden group hover:-translate-y-2 transition-all duration-300"
+                style={{
+                  borderImage: "linear-gradient(90deg, #3b82f6, #8b5cf6, #d946ef) 1"
+                }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: item.delay }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600" />
+                <div className="w-15 h-15 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl mb-6 flex items-center justify-center text-white text-2xl font-bold">
+                  {item.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-purple-600 mb-4">{item.title}</h3>
+                <p className="text-slate-600 text-lg leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Quote Section */}
+      <motion.section 
+        className="bg-black text-white py-16 px-4 relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="absolute inset-0 opacity-30">
+          <div className="w-full h-full" style={{
+            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="black-grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#333333" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(#black-grid)"/></svg>')}")`
+          }} />
+        </div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8" />
+          <motion.p 
+            className="text-2xl md:text-3xl font-light italic opacity-90"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            "Transforming applications with precision, speed, and reliability."
+          </motion.p>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mt-8" />
+        </div>
+      </motion.section>
+
+      {/* Production Section */}
+      <motion.section 
+        className="bg-gradient-to-br from-gray-50 to-gray-100 py-24 px-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-purple-600 mb-8 leading-tight">
+                Reduce Time to <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Production</span>
+              </h2>
+              <p className="text-xl text-slate-600 leading-relaxed mb-8">
+                Moving Applications at speed, Understanding the issues, offering solutions and automating creation of the package, the format and the volume.
+              </p>
+              
+              <ul className="space-y-4">
+                {[
+                  "Accelerated migration timelines",
+                  "Automated package creation", 
+                  "Comprehensive issue resolution",
+                  "Scalable volume processing"
+                ].map((feature, index) => (
+                  <motion.li
+                    key={index}
+                    className="flex items-center text-lg text-slate-700"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <span className="text-2xl mr-4">⚡</span>
+                    {feature}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.img
+                src="https://appcure.io/wp-content/uploads/2025/06/Homepage.png"
+                alt="appCURE Application Transformation Platform"
+                className="max-w-full h-auto rounded-3xl shadow-2xl transition-transform duration-300"
+                loading="lazy"
+                whileHover={{ scale: 1.05 }}
+              />
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
       
       <Footer />
     </div>
