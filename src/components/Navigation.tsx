@@ -137,6 +137,11 @@ export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 will-change-transform">
       <div className="container flex h-24 items-center">
+        {/* Mobile Logo */}
+        <Link to="/" className="mr-4 flex items-center md:hidden">
+          <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-16 w-auto object-contain" />
+        </Link>
+        
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
             <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-20 w-auto object-contain" />
