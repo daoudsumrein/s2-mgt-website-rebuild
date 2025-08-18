@@ -321,6 +321,150 @@ export default function AppCUREPage() {
           </div>
         </section>
 
+        {/* Industrialisation Hero */}
+        <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-24 overflow-hidden">
+          <div className="absolute inset-0 opacity-30">
+            <div className="w-full h-full" style={{ backgroundImage: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><pattern id='tech-grid' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='10' cy='10' r='1' fill='%23ffffff' opacity='0.1'/></pattern></defs><rect width='100' height='100' fill='url(%23tech-grid)'/></svg>")` }}></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                The Industrialisation of Application Transformation
+              </h2>
+              <p className="text-xl lg:text-2xl opacity-90">
+                <span className="text-pink-200 font-bold">appCURE</span> is accelerating the application transformation market with its leading processes and methodologies.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CURE Methodology */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-bold text-center mb-16 text-purple-600">
+                The <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">CURE</span> Methodology
+              </h2>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-slate-50 to-slate-100">
+                  <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-6">
+                      C
+                    </div>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Capture</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Find the installed parts of the application and capture them, ready to be moved to the target Operating System.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-slate-50 to-slate-100">
+                  <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-6">
+                      U
+                    </div>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Update</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Look at the differences between the "today" and where it is being delivered to.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-slate-50 to-slate-100">
+                  <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-pink-600 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-6">
+                      R
+                    </div>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Remediate</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Find errors and apply fixes.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-slate-50 to-slate-100">
+                  <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-6">
+                      E
+                    </div>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Execute</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Deliver applications to your chosen vendor/platform.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quote Section */}
+        <section className="py-16 bg-black text-white relative">
+          <div className="absolute inset-0 opacity-30">
+            <div className="w-full h-full bg-grid-white/[0.05]"></div>
+          </div>
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8"></div>
+              <p className="text-2xl font-light italic opacity-90 leading-relaxed">
+                "Transforming applications with precision, speed, and reliability."
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mt-8"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Production Section */}
+        <section className="py-24 bg-gradient-to-br from-slate-50 to-slate-100">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+                    Reduce Time to <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Production</span>
+                  </h2>
+                  <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+                    Moving Applications at speed, Understanding the issues, offering solutions and automating creation of the package, the format and the volume.
+                  </p>
+                  
+                  <ul className="space-y-4">
+                    <li className="flex items-center text-lg text-slate-700">
+                      <span className="text-2xl mr-4">⚡</span>
+                      Accelerated migration timelines
+                    </li>
+                    <li className="flex items-center text-lg text-slate-700">
+                      <span className="text-2xl mr-4">⚡</span>
+                      Automated package creation
+                    </li>
+                    <li className="flex items-center text-lg text-slate-700">
+                      <span className="text-2xl mr-4">⚡</span>
+                      Comprehensive issue resolution
+                    </li>
+                    <li className="flex items-center text-lg text-slate-700">
+                      <span className="text-2xl mr-4">⚡</span>
+                      Scalable volume processing
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="text-center">
+                  <img 
+                    src="https://appcure.io/wp-content/uploads/2025/06/Homepage.png" 
+                    alt="appCURE Application Transformation Platform" 
+                    className="max-w-full h-auto rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 bg-purple-50">
           <div className="container mx-auto px-4 text-center">
