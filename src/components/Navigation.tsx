@@ -360,9 +360,9 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
                 Data Protection
               </div>
               {dataProtectionOpen ? (
-                <Minus className="h-3 w-3 transition-transform duration-200" />
+                <Minus className="h-3 w-3 transition-transform duration-200 pr-2" />
               ) : (
-                <Plus className="h-3 w-3 transition-transform duration-200" />
+                <Plus className="h-3 w-3 transition-transform duration-200 pr-2" />
               )}
             </button>
             <div className={`overflow-hidden transition-all duration-300 ease-in-out ${dataProtectionOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -392,9 +392,9 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
                 Cybersecurity
               </div>
               {cybersecurityOpen ? (
-                <Minus className="h-3 w-3 transition-transform duration-200" />
+                <Minus className="h-3 w-3 transition-transform duration-200 pr-2" />
               ) : (
-                <Plus className="h-3 w-3 transition-transform duration-200" />
+                <Plus className="h-3 w-3 transition-transform duration-200 pr-2" />
               )}
             </button>
             <div className={`overflow-hidden transition-all duration-300 ease-in-out ${cybersecurityOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -419,6 +419,9 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
         </Link>
         <Link to="/clients" onClick={() => setIsOpen(false)} className="text-sm font-medium hover:text-primary transition-colors">
           Our Clients
+        </Link>
+        <Link to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium hover:text-primary transition-colors">
+          Contact Us
         </Link>
         <a 
           href="https://preview--pipeline-pro-portal.lovable.app" 
