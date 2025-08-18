@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, ExternalLink, CheckCircle, ArrowRight, Package, Settings, Play, Monitor } from "lucide-react";
+import { Download, ExternalLink, CheckCircle, ArrowRight, Package, Settings, Play, Monitor, Gauge, RefreshCw, AlertTriangle, Zap } from "lucide-react";
 
 const products = [
   {
@@ -66,21 +66,24 @@ export default function AppCUREPage() {
         <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-purple-50 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="w-20 h-20 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center font-bold text-xl mx-auto mb-6 border border-purple-200">
+        <section className="relative py-20 lg:py-32 bg-gradient-to-br from-primary/10 via-purple-500/10 to-pink-500/10 overflow-hidden">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='tech-grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='10' cy='10' r='1' fill='%2394a3b8' opacity='0.1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23tech-grid)'/%3E%3C/svg%3E")`,
+            opacity: 0.3
+          }}></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-5xl mx-auto text-center">
+              <div className="w-24 h-24 bg-gradient-to-br from-primary to-purple-600 text-white rounded-2xl flex items-center justify-center font-bold text-2xl mx-auto mb-8 shadow-lg">
                 AC
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                appCURE Application Modernization
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
+                The Industrialisation of Application Transformation
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Complete application transformation platform for legacy application modernization, 
-                VDI migration, and secure runtime environments.
+              <p className="text-xl lg:text-2xl text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
+                <span className="font-semibold text-purple-600">appCURE</span> is accelerating the application transformation market with its leading processes and methodologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
+                <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90" asChild>
                   <a href="/contact">
                     Request Demo
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -92,6 +95,146 @@ export default function AppCUREPage() {
                     Download Datasheet
                   </a>
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CURE Methodology Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <Badge variant="secondary" className="mb-4 text-sm px-3 py-1">Core Methodology</Badge>
+                <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+                  The <span className="bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent">CURE</span> Methodology
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Our proven four-step approach transforms applications with precision, speed, and reliability
+                </p>
+              </div>
+
+              <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
+                <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-purple-600"></div>
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 text-white rounded-2xl flex items-center justify-center font-bold text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      C
+                    </div>
+                    <CardTitle className="text-xl text-primary">Capture</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground leading-relaxed">
+                      Find the installed parts of the application and capture them, ready to be moved to the target Operating System.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-purple-600/20 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-pink-600"></div>
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-2xl flex items-center justify-center font-bold text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      U
+                    </div>
+                    <CardTitle className="text-xl text-purple-600">Update</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground leading-relaxed">
+                      Look at the differences between the "today" and where it is being delivered to.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-pink-600/20 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-600 to-orange-500"></div>
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-pink-600 to-orange-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      R
+                    </div>
+                    <CardTitle className="text-xl text-pink-600">Remediate</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground leading-relaxed">
+                      Find errors and apply fixes to ensure seamless application functionality.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-orange-500/20 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-yellow-500 text-white rounded-2xl flex items-center justify-center font-bold text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      E
+                    </div>
+                    <CardTitle className="text-xl text-orange-600">Execute</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground leading-relaxed">
+                      Deliver applications to your chosen vendor/platform with confidence.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quote Section */}
+        <section className="py-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white relative overflow-hidden">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='black-grid' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='%23374151' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23black-grid)'/%3E%3C/svg%3E")`,
+            opacity: 0.3
+          }}></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="w-20 h-1 bg-gradient-to-r from-primary to-purple-600 mx-auto mb-8"></div>
+              <blockquote className="text-2xl lg:text-3xl font-light italic leading-relaxed mb-8">
+                "Transforming applications with precision, speed, and reliability."
+              </blockquote>
+              <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Production Benefits Section */}
+        <section className="py-20 bg-gradient-to-br from-muted/30 to-muted/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <h2 className="text-3xl lg:text-4xl font-bold">
+                    Reduce Time to <span className="bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent">Production</span>
+                  </h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Moving Applications at speed, Understanding the issues, offering solutions and automating creation of the package, the format and the volume.
+                  </p>
+                  
+                  <ul className="space-y-4">
+                    {[
+                      "Accelerated migration timelines",
+                      "Automated package creation", 
+                      "Comprehensive issue resolution",
+                      "Scalable volume processing"
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-primary to-purple-600 rounded-full flex-shrink-0"></div>
+                        <span className="text-foreground font-medium">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="text-center lg:text-right">
+                  <div className="relative inline-block">
+                    <img 
+                      src="https://appcure.io/wp-content/uploads/2025/06/Homepage.png" 
+                      alt="appCURE Application Transformation Platform" 
+                      className="max-w-full h-auto rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
