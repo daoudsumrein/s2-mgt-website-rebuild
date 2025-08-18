@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -7,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 import { 
   Mail, 
   Phone, 
@@ -18,6 +21,78 @@ import {
 } from "lucide-react";
 
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    phone: "",
+    interest: "",
+    message: ""
+  });
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      // Prepare template parameters matching your EmailJS template
+      const templateParams = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        interest: formData.interest,
+        message: formData.message,
+        send_date: new Date().toLocaleString(),
+        submission_id: Math.random().toString(36).substr(2, 9)
+      };
+
+      await emailjs.send(
+        'service_9srgxev', // Your service ID
+        'YOUR_TEMPLATE_ID', // You'll need to provide your template ID
+        templateParams,
+        'YOUR_PUBLIC_KEY' // You'll need to provide your EmailJS public key
+      );
+
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        phone: "",
+        interest: "",
+        message: ""
+      });
+
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <>
       <SEOHead 
@@ -57,60 +132,114 @@ export default function Contact() {
                     Fill out the form below and our technical team will get back to you within 24 hours.
                   </p>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="John" />
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="firstName">First Name</Label>
+                        <Input 
+                          id="firstName" 
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          placeholder="John" 
+                          required 
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="lastName">Last Name</Label>
+                        <Input 
+                          id="lastName" 
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          placeholder="Doe" 
+                          required 
+                        />
+                      </div>
                     </div>
+                    
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Doe" />
+                      <Label htmlFor="email">Email Address</Label>
+                      <Input 
+                        id="email" 
+                        name="email"
+                        type="email" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="john.doe@company.com" 
+                        required 
+                      />
                     </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="john.doe@company.com" />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
-                    <Input id="company" placeholder="Your Company Name" />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" placeholder="+971 XX XXX XXXX" />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="interest">Area of Interest</Label>
-                    <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-                      <option value="">Select a solution area</option>
-                      <option value="data-protection">Data Protection & Backup</option>
-                      <option value="disaster-recovery">Disaster Recovery</option>
-                      <option value="app-modernization">Application Modernization</option>
-                      <option value="it-discovery">IT Discovery & Mapping</option>
-                      <option value="secure-cloud">Secure Cloud Solutions</option>
-                      <option value="security">Security & Ransomware Protection</option>
-                      <option value="general">General Inquiry</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Tell us about your infrastructure requirements, current challenges, or specific project needs..."
-                      rows={4}
-                    />
-                  </div>
-                  
-                  <Button className="w-full" size="lg">
-                    Send Message
-                    <Send className="ml-2 h-4 w-4" />
-                  </Button>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="company">Company</Label>
+                      <Input 
+                        id="company" 
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        placeholder="Your Company Name" 
+                        required 
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Phone Number</Label>
+                      <Input 
+                        id="phone" 
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="+971 XX XXX XXXX" 
+                        required 
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="interest">Area of Interest</Label>
+                      <select 
+                        id="interest"
+                        name="interest"
+                        value={formData.interest}
+                        onChange={handleInputChange}
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                        required
+                      >
+                        <option value="">Select a solution area</option>
+                        <option value="Data Protection & Backup">Data Protection & Backup</option>
+                        <option value="Disaster Recovery">Disaster Recovery</option>
+                        <option value="Application Modernization">Application Modernization</option>
+                        <option value="IT Discovery & Mapping">IT Discovery & Mapping</option>
+                        <option value="Secure Cloud Solutions">Secure Cloud Solutions</option>
+                        <option value="Security & Ransomware Protection">Security & Ransomware Protection</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                      </select>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea 
+                        id="message" 
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Tell us about your infrastructure requirements, current challenges, or specific project needs..."
+                        rows={4}
+                        required
+                      />
+                    </div>
+                    
+                    <Button 
+                      type="submit" 
+                      className="w-full" 
+                      size="lg" 
+                      disabled={isLoading}
+                    >
+                      {isLoading ? "Sending..." : "Send Message"}
+                      <Send className="ml-2 h-4 w-4" />
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
 
