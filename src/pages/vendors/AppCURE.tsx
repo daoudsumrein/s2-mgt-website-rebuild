@@ -464,6 +464,115 @@ export default function AppCUREPage() {
           </div>
         </section>
 
+        {/* Enhanced Additional Content Section */}
+        <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              {/* Enhanced Production Benefits */}
+              <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+                <div className="space-y-8">
+                  <div>
+                    <Badge variant="secondary" className="mb-4">Platform Advantage</Badge>
+                    <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                      Reduce Time to <span className="bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent">Production</span>
+                    </h2>
+                    <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                      Moving Applications at speed, Understanding the issues, offering solutions and automating creation of the package, the format and the volume.
+                    </p>
+                  </div>
+                  
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    {[
+                      { icon: Zap, title: "Accelerated Migration", desc: "Reduce project timelines by up to 70%" },
+                      { icon: Package, title: "Automated Packaging", desc: "Smart package creation and optimization" },
+                      { icon: AlertTriangle, title: "Issue Resolution", desc: "Proactive identification and remediation" },
+                      { icon: RefreshCw, title: "Scalable Processing", desc: "Handle thousands of applications efficiently" }
+                    ].map((item, index) => (
+                      <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
+                        <div className="flex items-center space-x-4">
+                          <div className="p-3 rounded-xl bg-gradient-to-br from-primary/10 to-purple-600/10">
+                            <item.icon className="h-6 w-6 text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-sm text-foreground">{item.title}</h3>
+                            <p className="text-xs text-muted-foreground mt-1">{item.desc}</p>
+                          </div>
+                        </div>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-3xl transform rotate-3"></div>
+                  <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
+                    <img 
+                      src="https://appcure.io/wp-content/uploads/2025/06/Homepage.png" 
+                      alt="appCURE Application Transformation Platform Interface" 
+                      className="w-full h-auto rounded-2xl"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Enhanced Features Grid */}
+              <div className="text-center mb-16">
+                <h3 className="text-3xl font-bold mb-4">
+                  Why Choose <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">appCURE</span>?
+                </h3>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  The most comprehensive application transformation platform designed for enterprise-scale modernization projects
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: "Industrial Scale Processing",
+                    description: "Handle thousands of applications simultaneously with automated workflows",
+                    icon: "🏭"
+                  },
+                  {
+                    title: "Zero-Touch Automation",
+                    description: "Minimize manual intervention with intelligent automation capabilities",
+                    icon: "🤖"
+                  },
+                  {
+                    title: "Platform Agnostic",
+                    description: "Deploy to any cloud, on-premises, or hybrid environment",
+                    icon: "🌐"
+                  },
+                  {
+                    title: "Risk Mitigation",
+                    description: "Comprehensive testing and validation before deployment",
+                    icon: "🛡️"
+                  },
+                  {
+                    title: "Legacy Application Support",
+                    description: "Modernize even the most complex legacy applications",
+                    icon: "📱"
+                  },
+                  {
+                    title: "Continuous Optimization",
+                    description: "Ongoing performance monitoring and optimization",
+                    icon: "⚡"
+                  }
+                ].map((feature, index) => (
+                  <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <CardContent className="p-8 text-center">
+                      <div className="text-4xl mb-4">{feature.icon}</div>
+                      <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 bg-purple-50">
           <div className="container mx-auto px-4 text-center">
