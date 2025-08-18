@@ -29,7 +29,7 @@ export default function TDSPage() {
                     Enterprise Data Migration Made Simple
                   </h1>
                   <div className="text-xl md:text-2xl font-medium opacity-90 motion-preset-fade motion-delay-500">
-                    Transitional Data Solutions
+                    Transitional Data Services
                   </div>
                   <p className="text-lg md:text-xl opacity-80 leading-relaxed motion-preset-fade motion-delay-700">
                     Transform your data infrastructure with our industry-leading platform for seamless cloud migration, data center modernization, and enterprise transformations.
