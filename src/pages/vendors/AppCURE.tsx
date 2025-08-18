@@ -66,36 +66,55 @@ export default function AppCUREPage() {
         <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 bg-gradient-to-br from-primary/10 via-purple-500/10 to-pink-500/10 overflow-hidden">
+        <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+          {/* Grid Pattern Background */}
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='tech-grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='10' cy='10' r='1' fill='%2394a3b8' opacity='0.1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23tech-grid)'/%3E%3C/svg%3E")`,
-            opacity: 0.3
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='grid' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='%23334155' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grid)'/%3E%3C/svg%3E")`,
+            opacity: 0.4
           }}></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-primary to-purple-600 text-white rounded-2xl flex items-center justify-center font-bold text-2xl mx-auto mb-8 shadow-lg">
-                AC
-              </div>
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
-                The Industrialisation of Application Transformation
-              </h1>
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
-                <span className="font-semibold text-purple-600">appCURE</span> is accelerating the application transformation market with its leading processes and methodologies.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90" asChild>
-                  <a href="/contact">
-                    Request Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
+          
+          {/* Floating 3D Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            {/* Red/Orange Cubes */}
+            <div className="absolute top-20 right-20 w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 transform rotate-45 animate-pulse" style={{ animationDelay: '0s' }}></div>
+            <div className="absolute top-40 right-32 w-12 h-12 bg-gradient-to-br from-red-400 to-red-500 transform rotate-12 animate-bounce" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-60 right-16 w-6 h-6 bg-gradient-to-br from-orange-500 to-red-500 transform rotate-45 animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute bottom-40 right-24 w-10 h-10 bg-gradient-to-br from-red-500 to-pink-500 transform rotate-12 animate-bounce" style={{ animationDelay: '3s' }}></div>
+            
+            {/* Purple/Pink Cubes */}
+            <div className="absolute top-32 right-40 w-7 h-7 bg-gradient-to-br from-purple-500 to-pink-500 transform rotate-45 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+            <div className="absolute top-72 right-12 w-9 h-9 bg-gradient-to-br from-purple-400 to-purple-500 transform rotate-12 animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+            <div className="absolute bottom-60 right-36 w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-500 transform rotate-45 animate-pulse" style={{ animationDelay: '2.5s' }}></div>
+            
+            {/* Colorful Circle Element */}
+            <div className="absolute top-1/2 right-32 w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-spin" style={{ animationDuration: '8s' }}>
+              <div className="w-full h-full rounded-full bg-gradient-to-r from-transparent via-transparent to-red-500" style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}></div>
+            </div>
+            
+            {/* Additional scattered elements */}
+            <div className="absolute top-16 right-60 w-4 h-4 bg-gradient-to-br from-blue-400 to-blue-500 transform rotate-45 animate-pulse" style={{ animationDelay: '4s' }}></div>
+            <div className="absolute bottom-20 right-56 w-6 h-6 bg-gradient-to-br from-green-400 to-blue-500 transform rotate-12 animate-bounce" style={{ animationDelay: '5s' }}></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10 flex items-center min-h-screen">
+            <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+              {/* Content Card */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-2xl">
+                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
+                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">appCURE</span>
+                  <span className="text-gray-900"> + Industry Leaders Accelerate Migration to Modern Windows</span>
+                </h1>
+                <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                  Struggling to migrate from older versions of Windows and your applications are holding you back? Whether it's Client, Server, cloud or even hybrid <span className="font-semibold text-purple-600">appCURE</span> is partnering with the leading names in the industry to support your digital transformation projects at speed.
+                </p>
+                <Button size="lg" className="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">
+                  Discover
+                  <ArrowRight className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="/contact">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Datasheet
-                  </a>
-                </Button>
               </div>
+              
+              {/* Empty space for 3D elements on the right */}
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
