@@ -171,7 +171,7 @@ export default function AppCUREVendorPage() {
     }} viewport={{
       once: true
     }}>
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-50">
           <div className="w-full h-full" style={{
           backgroundImage: `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="black-grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#333333" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(#black-grid)"/></svg>')}")`
         }} />
@@ -207,7 +207,7 @@ export default function AppCUREVendorPage() {
       once: true
     }}>
         {/* Background pattern similar to the reference */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full" style={{
           backgroundImage: `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dark-grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#333333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(#dark-grid)"/></svg>')}")`
         }} />
