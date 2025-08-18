@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown, Menu, X, ExternalLink, Shield, Database, Home } from "lucide-react";
+import { ChevronDown, Menu, X, ExternalLink, Shield, Database, Home, Plus, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -119,6 +119,8 @@ const vendors = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dataProtectionOpen, setDataProtectionOpen] = useState(false);
+  const [cybersecurityOpen, setCybersecurityOpen] = useState(false);
   const location = useLocation();
 
   // Memoized function to prevent recreation on every render
@@ -134,10 +136,10 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 will-change-transform">
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-24 items-center">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
-            <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-14 w-full rounded-14 object-contain" />
+            <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-20 w-auto object-contain" />
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
@@ -279,22 +281,6 @@ export default function Navigation() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link
-                    to="/contact"
-                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 relative ${
-                      isActive("/contact") ? "text-primary" : ""
-                    }`}
-                  >
-                    Contact Us
-                    <span className="absolute -top-1 -right-1 flex size-3">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
-                      <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
-                    </span>
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
@@ -337,74 +323,109 @@ export default function Navigation() {
 }
 
 function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
+  const [dataProtectionOpen, setDataProtectionOpen] = useState(false);
+  const [cybersecurityOpen, setCybersecurityOpen] = useState(false);
+
   return (
-    <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+    <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6 overflow-y-auto">
       <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-        <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-8 w-8 rounded-full object-contain" />
+        <img src="/lovable-uploads/fe3bd2a5-dd8f-4976-ae4b-b206b6aec68e.png" alt="S2 Management Solutions" className="h-12 w-auto object-contain" />
       </Link>
       <div className="flex flex-col space-y-3 mt-6">
-        <Link to="/" onClick={() => setIsOpen(false)} className="text-sm font-medium flex items-center gap-2">
+        <Link to="/" onClick={() => setIsOpen(false)} className="text-sm font-medium flex items-center gap-2 hover:text-primary transition-colors">
           <Home className="h-4 w-4" />
           Home
         </Link>
-        <Link to="/about" onClick={() => setIsOpen(false)} className="text-sm font-medium">
+        <Link to="/about" onClick={() => setIsOpen(false)} className="text-sm font-medium hover:text-primary transition-colors">
           About S2
         </Link>
-        <Link to="/services" onClick={() => setIsOpen(false)} className="text-sm font-medium">
+        <Link to="/services" onClick={() => setIsOpen(false)} className="text-sm font-medium hover:text-primary transition-colors">
           Services
         </Link>
+        
+        {/* Solutions with animated dropdowns */}
         <div className="space-y-2">
           <div className="text-sm font-medium text-muted-foreground">Solutions</div>
-          <Link to="/solutions" onClick={() => setIsOpen(false)} className="block text-sm pl-4 text-muted-foreground hover:text-foreground">
+          <Link to="/solutions" onClick={() => setIsOpen(false)} className="block text-sm pl-4 text-muted-foreground hover:text-primary transition-colors">
             All Solutions
           </Link>
+          
+          {/* Data Protection Dropdown */}
           <div className="pl-4 space-y-1">
-            <div className="text-xs font-medium text-black flex items-center gap-2">
-              <Database className="h-3 w-3 text-primary" />
-              Data Protection
+            <button
+              onClick={() => setDataProtectionOpen(!dataProtectionOpen)}
+              className="text-xs font-medium text-black flex items-center justify-between w-full group hover:text-primary transition-colors"
+            >
+              <div className="flex items-center gap-2">
+                <Database className="h-3 w-3 text-primary" />
+                Data Protection
+              </div>
+              {dataProtectionOpen ? (
+                <Minus className="h-3 w-3 transition-transform duration-200" />
+              ) : (
+                <Plus className="h-3 w-3 transition-transform duration-200" />
+              )}
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${dataProtectionOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="pt-1 space-y-1">
+                {dataProtectionSolutions.map((solution) => (
+                  <Link
+                    key={solution.href}
+                    to={solution.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-xs pl-4 text-muted-foreground hover:text-primary transition-colors py-1"
+                  >
+                    {solution.title}
+                  </Link>
+                ))}
+              </div>
             </div>
-            {dataProtectionSolutions.map((solution) => (
-              <Link
-                key={solution.href}
-                to={solution.href}
-                onClick={() => setIsOpen(false)}
-                className="block text-xs pl-4 text-muted-foreground hover:text-foreground"
-              >
-                {solution.title}
-              </Link>
-            ))}
           </div>
+          
+          {/* Cybersecurity Dropdown */}
           <div className="pl-4 space-y-1">
-            <div className="text-xs font-medium text-black flex items-center gap-2">
-              <Shield className="h-3 w-3 text-teal-500" />
-              Cybersecurity
+            <button
+              onClick={() => setCybersecurityOpen(!cybersecurityOpen)}
+              className="text-xs font-medium text-black flex items-center justify-between w-full group hover:text-primary transition-colors"
+            >
+              <div className="flex items-center gap-2">
+                <Shield className="h-3 w-3 text-teal-500" />
+                Cybersecurity
+              </div>
+              {cybersecurityOpen ? (
+                <Minus className="h-3 w-3 transition-transform duration-200" />
+              ) : (
+                <Plus className="h-3 w-3 transition-transform duration-200" />
+              )}
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${cybersecurityOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="pt-1 space-y-1">
+                {cybersecuritySolutions.map((solution) => (
+                  <Link
+                    key={solution.href}
+                    to={solution.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-xs pl-4 text-muted-foreground hover:text-primary transition-colors py-1"
+                  >
+                    {solution.title}
+                  </Link>
+                ))}
+              </div>
             </div>
-            {cybersecuritySolutions.map((solution) => (
-              <Link
-                key={solution.href}
-                to={solution.href}
-                onClick={() => setIsOpen(false)}
-                className="block text-xs pl-4 text-muted-foreground hover:text-foreground"
-              >
-                {solution.title}
-              </Link>
-            ))}
           </div>
         </div>
-        <Link to="/vendors" onClick={() => setIsOpen(false)} className="text-sm font-medium">
+        
+        <Link to="/vendors" onClick={() => setIsOpen(false)} className="text-sm font-medium hover:text-primary transition-colors">
           Our Vendors
         </Link>
-        <Link to="/clients" onClick={() => setIsOpen(false)} className="text-sm font-medium">
+        <Link to="/clients" onClick={() => setIsOpen(false)} className="text-sm font-medium hover:text-primary transition-colors">
           Our Clients
-        </Link>
-        <Link to="/contact" onClick={() => setIsOpen(false)} className="text-sm font-medium">
-          Contact Us
         </Link>
         <a 
           href="https://preview--pipeline-pro-portal.lovable.app" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-sm font-medium flex items-center gap-2"
+          className="text-sm font-medium flex items-center gap-2 hover:text-primary transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Partner Portal
