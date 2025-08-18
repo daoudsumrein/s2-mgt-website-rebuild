@@ -61,7 +61,7 @@ export default function Contact() {
 
       await emailjs.send(
         'service_9srgxev', // Your service ID
-        'YOUR_TEMPLATE_ID', // You'll need to provide your template ID
+        'template_0c4b9ao', // Your template ID
         templateParams,
         'YOUR_PUBLIC_KEY' // You'll need to provide your EmailJS public key
       );
