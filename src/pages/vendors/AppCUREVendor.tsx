@@ -238,7 +238,7 @@ export default function AppCUREVendorPage() {
       </motion.section>
 
       {/* Production Section */}
-      <motion.section className="bg-gradient-to-br from-gray-50 to-gray-100 py-24 px-4" initial={{
+      <motion.section className="bg-black text-white py-24 px-4 relative overflow-hidden" initial={{
       opacity: 0
     }} whileInView={{
       opacity: 1
@@ -247,7 +247,14 @@ export default function AppCUREVendorPage() {
     }} viewport={{
       once: true
     }}>
-        <div className="max-w-6xl mx-auto">
+        {/* Background pattern similar to the reference */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-full h-full" style={{
+          backgroundImage: `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dark-grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#333333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(#dark-grid)"/></svg>')}")`
+        }} />
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{
             opacity: 0,
@@ -260,15 +267,15 @@ export default function AppCUREVendorPage() {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-4xl md:text-5xl font-bold text-purple-600 mb-8 leading-tight">
-                Reduce Time to <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Production</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+                Reduce Time to <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Production</span>
               </h2>
-              <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                Moving Applications at speed, Understanding the issues, offering solutions and automating creation of the package, the format and the volume.
+              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                Moving applications at speed, understanding the issues, offering solutions and automating creation of the package, the format and the volume.
               </p>
               
               <ul className="space-y-4">
-                {["Accelerated migration timelines", "Automated package creation", "Comprehensive issue resolution", "Scalable volume processing"].map((feature, index) => <motion.li key={index} className="flex items-center text-lg text-slate-700" initial={{
+                {["Accelerated migration timelines", "Automated package creation", "Comprehensive issue resolution", "Scalable volume processing"].map((feature, index) => <motion.li key={index} className="flex items-center text-lg text-gray-200" initial={{
                 opacity: 0,
                 x: -20
               }} whileInView={{
@@ -280,7 +287,7 @@ export default function AppCUREVendorPage() {
               }} viewport={{
                 once: true
               }}>
-                    <span className="text-2xl mr-4">⚡</span>
+                    <span className="text-2xl mr-4 text-blue-400">⚡</span>
                     {feature}
                   </motion.li>)}
               </ul>
@@ -298,8 +305,8 @@ export default function AppCUREVendorPage() {
           }} viewport={{
             once: true
           }}>
-              <motion.img src="https://appcure.io/wp-content/uploads/2025/06/Homepage.png" alt="appCURE Application Transformation Platform" className="w-full max-w-4xl h-auto mt-10 rounded-3xl shadow-2xl transition-transform duration-300 bg-black p-4" loading="lazy" whileHover={{
-              scale: 1.05
+              <motion.img src="/lovable-uploads/49c8e8d9-7642-40a1-8a7e-0527d4cb1c5c.png" alt="appCURE Application Transformation Workflow" className="w-full max-w-4xl h-auto mt-10 rounded-3xl shadow-2xl transition-transform duration-300" loading="lazy" whileHover={{
+              scale: 1.02
             }} />
             </motion.div>
           </div>
