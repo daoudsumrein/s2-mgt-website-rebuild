@@ -90,6 +90,90 @@ const Arrosoft = () => {
           </motion.div>
         </section>
         
+        {/* Partner Carousel Section */}
+        <section className="py-20 bg-black text-white relative overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+            <motion.h2 
+              className="text-2xl md:text-4xl font-light mb-16 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Empowering 100+ global partners with data protection solutions
+            </motion.h2>
+            
+            <motion.div 
+              className="mb-10 overflow-hidden partner-carousel-mask"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex animate-partner-slide partner-track">
+                {/* First set of logos */}
+                {[
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2F101-Stealth.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Stealth" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2F102-AirGap.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "AirGap" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2F103-SentinelOne.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "SentinelOne" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2F104-Arctic-Security.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Arctic Security" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FAttronica-1.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Attronica" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FChief-1.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Chief" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FNeoway.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Neoway" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FPresidio-1.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Presidio" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FSystex.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Systex" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FTWS.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "TWS" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FWinslow-1.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Winslow" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FePlus-Technology.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "ePlus Technology" }
+                ].concat([
+                  // Duplicate set for seamless loop
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2F101-Stealth.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Stealth" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2F102-AirGap.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "AirGap" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2F103-SentinelOne.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "SentinelOne" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2F104-Arctic-Security.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Arctic Security" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FAttronica-1.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Attronica" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FChief-1.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Chief" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FNeoway.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Neoway" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FPresidio-1.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Presidio" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FSystex.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Systex" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FTWS.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "TWS" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FWinslow-1.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "Winslow" },
+                  { src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FePlus-Technology.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr", alt: "ePlus Technology" }
+                ]).map((logo, index) => (
+                  <div key={index} className="flex-none w-50 h-20 flex items-center justify-center mx-5 px-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
+                    <img 
+                      src={logo.src} 
+                      alt={logo.alt}
+                      className="max-w-full max-h-12 object-contain brightness-90 contrast-125"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.a 
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40 hover:-translate-y-0.5"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Partner With Us
+              <motion.span 
+                className="text-lg"
+                whileHover={{ x: 4 }}
+                transition={{ duration: 0.3 }}
+              >
+                →
+              </motion.span>
+            </motion.a>
+          </div>
+        </section>
+
         {/* Additional Content Sections */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">

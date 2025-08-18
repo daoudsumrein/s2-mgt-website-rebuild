@@ -188,3 +188,28 @@ All colors MUST be HSL.
     transform: scale(1.2);
   }
 }
+
+/* Partner carousel animation */
+@keyframes partner-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Partner carousel styles */
+.partner-carousel-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  pointer-events: none;
+}
+
+.partner-track {
+  width: calc(200% + 200px);
+}
+
+.animate-partner-slide {
+  animation: partner-slide 30s linear infinite;
+}
