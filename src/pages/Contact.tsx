@@ -254,7 +254,7 @@ export default function Contact() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                      <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0 animate-pulse" />
                       <div>
                         <p className="font-medium">MENA Region</p>
                         <p className="text-sm text-muted-foreground">
