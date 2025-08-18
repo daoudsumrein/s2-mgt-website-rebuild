@@ -293,7 +293,7 @@ export default function AppCUREVendorPage() {
           }} viewport={{
             once: true
           }}>
-              <motion.img src="https://appcure.io/wp-content/uploads/2025/06/Homepage.png" alt="appCURE Application Transformation Platform" className="max-w-full h-auto rounded-3xl shadow-2xl transition-transform duration-300" loading="lazy" whileHover={{
+              <motion.img src="https://appcure.io/wp-content/uploads/2025/06/Homepage.png" alt="appCURE Application Transformation Platform" className="w-full max-w-2xl h-auto mt-10 rounded-3xl shadow-2xl transition-transform duration-300 bg-black p-4" loading="lazy" whileHover={{
               scale: 1.05
             }} />
             </motion.div>
