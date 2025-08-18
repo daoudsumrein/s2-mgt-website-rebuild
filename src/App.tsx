@@ -60,7 +60,7 @@ const App = () => (
           <Route path="/clients" element={<Clients />} />
           <Route path="/vendors/opentext" element={<OpenTextPage />} />
           <Route path="/vendors/tds" element={<TDSPage />} />
-           <Route path="/vendors/appcure" element={<AppCUREVendorPage />} />
+           <Route path="/vendors/appcure" element={<AppCUREPage />} />
             <Route path="/vendors/sangfor" element={<SangforPage />} />
             <Route path="/vendors/arrosoft" element={<ArrosoftPage />} />
             <Route path="/vendors/nakivo" element={<NakivoPage />} />
