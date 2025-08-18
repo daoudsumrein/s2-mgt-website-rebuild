@@ -267,6 +267,13 @@ export default function AppCUREVendorPage() {
           }} viewport={{
             once: true
           }}>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="relative flex size-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                  <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+                </span>
+                <span className="text-sm text-sky-400 font-medium">Live Production Environment</span>
+              </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
                 Reduce Time to <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Production</span>
               </h2>
