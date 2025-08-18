@@ -170,9 +170,7 @@ export default function AppCUREVendorPage() {
             title: "Execute",
             description: "Deliver applications to your chosen vendor/platform.",
             delay: 0.4
-          }].map((item, index) => <motion.div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl border-t-4 border-transparent bg-clip-padding relative overflow-hidden group hover:-translate-y-2 transition-all duration-300" style={{
-            borderImage: "linear-gradient(90deg, #3b82f6, #8b5cf6, #d946ef) 1"
-          }} initial={{
+          }].map((item, index) => <motion.div key={index} className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl border border-gray-200/50" initial={{
             opacity: 0,
             y: 30
           }} whileInView={{
@@ -186,9 +184,16 @@ export default function AppCUREVendorPage() {
           }} whileHover={{
             y: -10
           }}>
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600" />
-                <div className="w-15 h-15 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl mb-6 flex items-center justify-center text-white text-2xl font-bold">
-                  {item.icon}
+                {/* Enhanced top gradient bar */}
+                <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-t-3xl" />
+                
+                {/* Enhanced icon with better spacing and shadow */}
+                <div className="relative mb-8 mt-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-3xl mb-2 flex items-center justify-center text-white text-3xl font-bold shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    {item.icon}
+                  </div>
+                  {/* Decorative glow effect */}
+                  <div className="absolute -inset-2 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <h3 className="text-2xl font-bold text-purple-600 mb-4">{item.title}</h3>
                 <p className="text-slate-600 text-lg leading-relaxed">{item.description}</p>
