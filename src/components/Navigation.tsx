@@ -290,11 +290,15 @@ export default function Navigation() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/contact"
-                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
+                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 ${
                       isActive("/contact") ? "text-primary" : ""
                     }`}
                   >
                     Contact Us
+                    <span className="relative flex size-3">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                      <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+                    </span>
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
