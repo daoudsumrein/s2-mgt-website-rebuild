@@ -345,8 +345,7 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
         
         {/* Solutions with animated dropdowns */}
         <div className="space-y-2">
-          <div className="text-sm font-medium text-muted-foreground">Solutions</div>
-          <Link to="/solutions" onClick={() => setIsOpen(false)} className="block text-sm pl-4 text-muted-foreground hover:text-primary transition-colors">
+          <Link to="/solutions" onClick={() => setIsOpen(false)} className="block text-sm text-muted-foreground hover:text-primary transition-colors font-medium">
             All Solutions
           </Link>
           
