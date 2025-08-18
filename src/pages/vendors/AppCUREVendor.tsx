@@ -81,48 +81,7 @@ export default function AppCUREVendorPage() {
       </motion.section>
 
       {/* Industrialisation Hero Section */}
-      <motion.section className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-24 px-4 relative overflow-hidden" initial={{
-      opacity: 0
-    }} whileInView={{
-      opacity: 1
-    }} transition={{
-      duration: 0.8
-    }} viewport={{
-      once: true
-    }}>
-        
-        
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.2
-        }} viewport={{
-          once: true
-        }}>
-            The Industrialisation of Application Transformation
-          </motion.h1>
-          <motion.p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto" initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.4
-        }} viewport={{
-          once: true
-        }}>
-            <span className="text-pink-200 font-bold">appCURE</span> is accelerating the application transformation market with its leading processes and methodologies.
-          </motion.p>
-        </div>
-      </motion.section>
+      
 
       {/* CURE Methodology Section */}
       <motion.section className="bg-white py-24 px-4" initial={{
