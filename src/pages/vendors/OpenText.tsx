@@ -163,46 +163,57 @@ export default function OpenTextPage() {
           </div>
         </section>
 
-        {/* Overview */}
-        <section className="py-12 sm:py-16">
+        {/* OpenText Products Showcase */}
+        <section className="relative min-h-screen flex items-center justify-center py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto">
-              <motion.div 
-                className="text-center mb-8 sm:mb-12"
+            <div className="max-w-6xl mx-auto text-center p-8 sm:p-16 bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 shadow-2xl">
+              <motion.h2 
+                className="text-white text-3xl sm:text-4xl lg:text-5xl font-light mb-4 tracking-wide leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
               >
-                <Badge variant="secondary" className="mb-4">Core Platform</Badge>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Complete Data Protection Ecosystem</h2>
-                <p className="text-base sm:text-lg text-muted-foreground">
-                  OpenText provides the backbone of S2's data protection offerings, delivering 
-                  enterprise-grade availability, migration, and secure cloud solutions.
-                </p>
-              </motion.div>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
+                Discover other OpenText products that<br />
+                enhance your cybersecurity:
+              </motion.h2>
+              <motion.p 
+                className="text-white/80 text-lg sm:text-xl font-light mt-4 mb-12"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                Comprehensive security solutions for modern enterprises
+              </motion.p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                 {[
-                  { value: "99.9%", title: "Uptime Guarantee", description: "Mission-critical availability" },
-                  { value: "0", title: "Zero Downtime", description: "Live migration & replication" },
-                  { value: "24/7", title: "Global Support", description: "Enterprise-grade support" }
-                ].map((item, index) => (
-                  <motion.div key={index}
+                  { name: "Carbonite", subtitle: "Data Protection", color: "border-blue-400 hover:shadow-blue-400/20", delay: 0.2 },
+                  { name: "Webroot", subtitle: "Endpoint Security", color: "border-green-400 hover:shadow-green-400/20", delay: 0.4 },
+                  { name: "MailStore", subtitle: "Email Archiving", color: "border-orange-400 hover:shadow-orange-400/20", delay: 0.6 },
+                  { name: "Cloudally", subtitle: "SaaS Data Protection", color: "border-cyan-400 hover:shadow-cyan-400/20", delay: 0.8 }
+                ].map((product, index) => (
+                  <motion.div
+                    key={index}
+                    className={`relative bg-white/8 backdrop-blur-sm rounded-2xl p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-white/20 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 overflow-hidden group ${product.color}`}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    transition={{ duration: 0.8, delay: product.delay, ease: "easeOut" }}
                     viewport={{ once: true }}
                   >
-                    <Card className="hover:shadow-lg transition-all duration-300">
-                      <CardContent className="text-center p-4 sm:p-6">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base">
-                          {item.value}
-                        </div>
-                        <h3 className="font-semibold mb-2 text-sm sm:text-base">{item.title}</h3>
-                        <p className="text-xs sm:text-sm text-muted-foreground">{item.description}</p>
-                      </CardContent>
-                    </Card>
+                    <div className="absolute top-0 left-0 w-0 h-full bg-gradient-to-r from-white/10 to-transparent transition-all duration-600 group-hover:w-full"></div>
+                    <div className="relative z-10">
+                      <div className="text-white text-2xl font-bold tracking-wider uppercase mb-2">
+                        {product.name}
+                      </div>
+                      <div className="text-white/70 text-sm font-light tracking-wide mb-4">
+                        {product.subtitle}
+                      </div>
+                      <div className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide opacity-90">
+                        by OpenText
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </div>
