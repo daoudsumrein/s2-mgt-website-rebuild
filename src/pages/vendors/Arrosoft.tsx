@@ -13,7 +13,7 @@ const Arrosoft = () => {
       
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="min-h-screen relative overflow-hidden flex items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-12 sm:pt-16 md:pt-20">
+        <section className="min-h-screen relative overflow-hidden flex items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-16 sm:pt-20">
           {/* Background Image - Clear on Desktop */}
           <div className="absolute inset-0 z-0 hidden md:block" style={{
           backgroundImage: `url('https://www.arrosoft.com/_next/image?url=%2Fhome%2Fhero-1.webp&w=3840&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr')`,
