@@ -146,6 +146,17 @@ export default function NakivoPage() {
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-br from-background via-muted/30 to-background">
           <div className="container mx-auto px-4 max-w-7xl">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+                More Capabilities, Half the Price
+              </h2>
+            </motion.div>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
               {[
                 {
