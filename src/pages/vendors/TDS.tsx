@@ -75,7 +75,7 @@ export default function TDSPage() {
           </section>
 
           {/* Three Core Capabilities */}
-          <section className="py-20 bg-muted/30">
+          <section className="py-20 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/lovable-uploads/6bd07eac-4ff8-45f6-9b34-0929b1c18007.png)' }}>
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
                 {/* Insight */}
