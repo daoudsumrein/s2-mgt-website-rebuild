@@ -38,7 +38,7 @@ export default function ContactForm() {
       };
 
       await emailjs.send(
-        'default_service', // You may need to update this with your actual service ID
+        'service_9srgxev',
         'template_n8f9d6k',
         templateParams,
         'lCvR_JwGsyx3Weo1g'
