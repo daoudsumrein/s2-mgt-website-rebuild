@@ -255,15 +255,10 @@ export default function NakivoPage() {
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Let S2's data protection experts help you implement NAKIVO's comprehensive backup and replication solution.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button size="lg" variant="secondary" asChild>
                   <a href="/contact">
                     Schedule NAKIVO Demo
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
-                  <a href="https://www.nakivo.com" target="_blank" rel="noopener noreferrer">
-                    Learn More About NAKIVO
                   </a>
                 </Button>
               </div>
