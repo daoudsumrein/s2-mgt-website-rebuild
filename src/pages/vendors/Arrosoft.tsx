@@ -225,7 +225,7 @@ const Arrosoft = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/40" />
           
-          <div className="container mx-auto px-4 md:px-10 relative z-10 w-full">
+          <div className="max-w-6xl mx-auto px-4 md:px-10 relative z-10 w-full">
             {/* Navigation Buttons */}
             <div className="fixed top-10 left-1/2 transform -translate-x-1/2 flex gap-0 bg-black/30 rounded-full p-1 backdrop-blur-xl border border-white/10 z-50">
               {[
@@ -247,15 +247,14 @@ const Arrosoft = () => {
               ))}
             </div>
 
-            {/* Content Sections */}
-            <div className="max-w-4xl pt-20">
+            {/* All Content Sections */}
+            <div className="pt-20">
               {/* Protect Data Content */}
-              {activeSection === 'protect-data' && (
+              <div className={`max-w-4xl text-white ${activeSection === 'protect-data' ? 'block' : 'hidden'}`}>
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="text-white"
                 >
                   <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6">
                     Managed security for total peace of mind
@@ -272,15 +271,14 @@ const Arrosoft = () => {
                     Learn More
                   </motion.a>
                 </motion.div>
-              )}
+              </div>
 
               {/* Recover Businesses Content */}
-              {activeSection === 'recover-businesses' && (
+              <div className={`max-w-4xl text-white ${activeSection === 'recover-businesses' ? 'block' : 'hidden'}`}>
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="text-white"
                 >
                   <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6">
                     Managed data protection for unstoppable business continuity
@@ -297,15 +295,14 @@ const Arrosoft = () => {
                     Explore Solutions
                   </motion.a>
                 </motion.div>
-              )}
+              </div>
 
               {/* Empower Partners Content */}
-              {activeSection === 'empower-partners' && (
+              <div className={`max-w-4xl text-white ${activeSection === 'empower-partners' ? 'block' : 'hidden'}`}>
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="text-white"
                 >
                   <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6">
                     Empowering partners with cutting-edge technology solutions
@@ -322,7 +319,7 @@ const Arrosoft = () => {
                     Become a Partner
                   </motion.a>
                 </motion.div>
-              )}
+              </div>
             </div>
           </div>
         </section>
