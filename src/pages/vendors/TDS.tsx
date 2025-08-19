@@ -47,14 +47,16 @@ export default function TDSPage() {
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
                 {/* Insight */}
-                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4" style={{ borderTopColor: '#00C6F8' }}>
                   <CardContent className="p-12">
-                    <img 
-                      src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Insight.png" 
-                      alt="TransitionManager Insight" 
-                      className="w-32 h-32 mx-auto mb-8 object-contain"
-                    />
-                    <h3 className="text-2xl font-semibold mb-6 text-foreground">
+                    <div className="w-40 h-40 mx-auto mb-8 rounded-full flex items-center justify-center" style={{ backgroundColor: '#00C6F8', opacity: 0.1 }}>
+                      <img 
+                        src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Insight.png" 
+                        alt="TransitionManager Insight" 
+                        className="w-32 h-32 object-contain"
+                      />
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-6" style={{ color: '#00C6F8' }}>
                       Insight
                     </h3>
                     <p className="text-base text-muted-foreground mb-8 leading-relaxed">
@@ -94,14 +96,16 @@ export default function TDSPage() {
                 </Card>
 
                 {/* Orchestrator */}
-                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4" style={{ borderTopColor: '#9DCF65' }}>
                   <CardContent className="p-12">
-                    <img 
-                      src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Orchestrate-Green.png" 
-                      alt="TransitionManager Orchestrator" 
-                      className="w-32 h-32 mx-auto mb-8 object-contain"
-                    />
-                    <h3 className="text-2xl font-semibold mb-6 text-foreground">
+                    <div className="w-40 h-40 mx-auto mb-8 rounded-full flex items-center justify-center" style={{ backgroundColor: '#9DCF65', opacity: 0.1 }}>
+                      <img 
+                        src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Orchestrate-Green.png" 
+                        alt="TransitionManager Orchestrator" 
+                        className="w-32 h-32 object-contain"
+                      />
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-6" style={{ color: '#9DCF65' }}>
                       Orchestrator
                     </h3>
                     <p className="text-base text-muted-foreground mb-8 leading-relaxed">
@@ -141,14 +145,16 @@ export default function TDSPage() {
                 </Card>
 
                 {/* Accelerate */}
-                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4" style={{ borderTopColor: '#F69B5F' }}>
                   <CardContent className="p-12">
-                    <img 
-                      src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Accelerate-Orange.png" 
-                      alt="TransitionManager Accelerate" 
-                      className="w-32 h-32 mx-auto mb-8 object-contain"
-                    />
-                    <h3 className="text-2xl font-semibold mb-6 text-foreground">
+                    <div className="w-40 h-40 mx-auto mb-8 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F69B5F', opacity: 0.1 }}>
+                      <img 
+                        src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Accelerate-Orange.png" 
+                        alt="TransitionManager Accelerate" 
+                        className="w-32 h-32 object-contain"
+                      />
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-6" style={{ color: '#F69B5F' }}>
                       Accelerate
                     </h3>
                     <p className="text-base text-muted-foreground mb-8 leading-relaxed">
