@@ -226,7 +226,7 @@ const Arrosoft = () => {
           <div className="absolute inset-0 bg-black/60 md:bg-black/40" />
           
           {/* Navigation */}
-          <nav className="absolute top-10 left-1/2 transform -translate-x-1/2 bg-black/30 border border-white/10 rounded-full p-1 backdrop-blur-xl z-40 flex">
+          <nav className="absolute top-4 md:top-10 left-1/2 transform -translate-x-1/2 bg-black/30 border border-white/10 rounded-full p-0.5 md:p-1 backdrop-blur-xl z-40 flex max-w-[95vw] overflow-x-auto">
             {[
               { id: 'protect-data', label: 'Protect Data' },
               { id: 'recover-businesses', label: 'Recover Businesses' },
@@ -235,7 +235,7 @@ const Arrosoft = () => {
               <button
                 key={item.id}
                 onClick={() => setActiveSection(item.id)}
-                className={`px-6 md:px-7 py-3 border-none rounded-full cursor-pointer text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+                className={`px-3 md:px-6 lg:px-7 py-2 md:py-3 border-none rounded-full cursor-pointer text-xs md:text-sm font-medium whitespace-nowrap transition-all duration-300 ${
                   activeSection === item.id
                     ? 'bg-blue-600 text-white'
                     : 'bg-transparent text-white/80 hover:text-white'
