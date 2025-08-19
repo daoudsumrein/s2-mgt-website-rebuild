@@ -20,7 +20,9 @@ export default function TDSPage() {
         <main>
           {/* Hero Section */}
           <section className="pt-32 pb-20 bg-background relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/lovable-uploads/1f2a065f-da31-4139-963d-9275169e01e8.png)' }}>
-            <div className="container mx-auto px-4">
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="container mx-auto px-4 relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
                 <div className="lg:col-span-2">
                   <h1 className="text-5xl font-light mb-2 leading-tight" style={{ color: '#00C6F8' }}>
