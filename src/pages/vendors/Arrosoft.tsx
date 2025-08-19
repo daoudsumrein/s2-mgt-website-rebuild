@@ -31,7 +31,7 @@ const Arrosoft = () => {
         }} />
           
           {/* Content */}
-          <motion.div className="relative z-30 max-w-2xl text-white mx-auto md:mx-0 text-center md:text-left" initial={{
+          <motion.div className="relative z-30 max-w-2xl text-white ml-4 md:ml-10 mr-auto text-center md:text-left" initial={{
           opacity: 0,
           y: 30
         }} animate={{
