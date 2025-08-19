@@ -75,177 +75,146 @@ export default function TDSPage() {
           </section>
 
           {/* Three Core Capabilities */}
-          <section className="py-20 bg-muted/30">
+          <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {/* Insight */}
-                <Card id="insight" className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-background">
-                  <CardContent className="p-10">
-                    <div className="flex items-center mb-6">
-                      <div 
-                        className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-4"
-                        style={{ backgroundColor: '#00C6F8' }}
-                      >
-                        📊
-                      </div>
-                      <h3 className="text-xl font-semibold text-foreground">
-                        TransitionManager Insight
-                      </h3>
-                    </div>
-                    <ul className="text-left space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
+                <div id="insight" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="px-6 py-5 flex items-center gap-3" style={{ backgroundColor: '#00C6F8' }}>
+                    <div className="text-3xl">🔍</div>
+                    <h3 className="text-xl font-semibold text-white">
+                      TransitionManager Insight
+                    </h3>
+                  </div>
+                  <div className="p-6">
+                    <ul className="space-y-3">
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#00C6F8' }}>•</span>
                         Integrate with data sources – CMDB, DCIM, ITSM, etc.*
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#00C6F8' }}>•</span>
                         Capture vital data; make it immediately actionable
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#00C6F8' }}>•</span>
                         Consolidate data, gain a single pane of glass view
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#00C6F8' }}>•</span>
                         Breakdown IT and business silos – no user count limits
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#00C6F8' }}>•</span>
                         Track relevant IT and business data for all IT assets
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#00C6F8' }}>•</span>
                         Visualize dependency connections between all assets
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#00C6F8' }}>•</span>
                         Enterprise-wide insight aggregate of multiple systems of record
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#00C6F8' }}>•</span>
                         Accurate and actionable asset information
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#00C6F8' }}>•</span>
-                        Scenario-based analysis – faster adoption of emerging tech
-                      </li>
                     </ul>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                {/* Orchestrator */}
-                <Card id="orchestrate" className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-background">
-                  <CardContent className="p-10">
-                    <div className="flex items-center mb-6">
-                      <div 
-                        className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-4"
-                        style={{ backgroundColor: '#9DCF65' }}
-                      >
-                        🎯
-                      </div>
-                      <h3 className="text-xl font-semibold text-foreground">
-                        TransitionManager Orchestrate
-                      </h3>
-                    </div>
-                    <ul className="text-left space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
+                {/* Orchestrate */}
+                <div id="orchestrate" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="px-6 py-5 flex items-center gap-3" style={{ backgroundColor: '#9DCF65' }}>
+                    <div className="text-3xl">👥</div>
+                    <h3 className="text-xl font-semibold text-white">
+                      Orchestrate
+                    </h3>
+                  </div>
+                  <div className="p-6">
+                    <ul className="space-y-3">
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#9DCF65' }}>•</span>
                         Proven methodologies – repeatable, consistent results
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#9DCF65' }}>•</span>
                         Visualize apps, infrastructure, and their dependencies
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#9DCF65' }}>•</span>
                         Analyze dependencies, identify gaps and conflicts
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#9DCF65' }}>•</span>
                         Efficient event planning inherently mitigates risks
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#9DCF65' }}>•</span>
                         Generate dynamic workflows that scale automatically
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#9DCF65' }}>•</span>
                         Sequence automated and manual tasks precisely
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#9DCF65' }}>•</span>
                         Identify repeatable planning strategies – accelerate efforts
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
-                        Manage tasks real time for all asset types
-                      </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#9DCF65' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#9DCF65' }}>•</span>
                         Understand and track against critical path
                       </li>
                     </ul>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
                 {/* Accelerate */}
-                <Card id="accelerate" className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-background">
-                  <CardContent className="p-10">
-                    <div className="flex items-center mb-6">
-                      <div 
-                        className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-4"
-                        style={{ backgroundColor: '#F69B5F' }}
-                      >
-                        ⚡
-                      </div>
-                      <h3 className="text-xl font-semibold text-foreground">
-                        TransitionManager Accelerate
-                      </h3>
-                    </div>
-                    <ul className="text-left space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
+                <div id="accelerate" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+                  <div className="px-6 py-5 flex items-center gap-3" style={{ backgroundColor: '#F69B5F' }}>
+                    <div className="text-3xl">⚡</div>
+                    <h3 className="text-xl font-semibold text-white">
+                      Accelerate
+                    </h3>
+                  </div>
+                  <div className="p-6">
+                    <ul className="space-y-3">
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#F69B5F' }}>•</span>
                         Accelerate migration projects – virtually eliminate risk
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#F69B5F' }}>•</span>
                         Optimize resources, centralize data, collaborate real-time
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#F69B5F' }}>•</span>
                         Enhance project experience and build team confidence
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
-                        Secure transformations with behind-firewall local app*
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#F69B5F' }}>•</span>
+                        Secure transformations with behind-firewall local app
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#F69B5F' }}>•</span>
                         Meet security compliance benchmarks – control your data
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#F69B5F' }}>•</span>
                         An integrated, end-to-end toolchain of all disparate tools
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#F69B5F' }}>•</span>
                         Launch each integrated task from a single platform
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
+                      <li className="flex items-start text-gray-700 text-sm leading-relaxed">
+                        <span className="font-bold mr-3 mt-1 text-lg" style={{ color: '#F69B5F' }}>•</span>
                         Easy credential management for third-party tools
                       </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
-                        Perform full audits for automated activities
-                      </li>
-                      <li className="flex items-start">
-                        <span className="font-bold mr-3 mt-0.5" style={{ color: '#F69B5F' }}>•</span>
-                        Optimize expert time by simplifying once-expert responsibilities
-                      </li>
                     </ul>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
