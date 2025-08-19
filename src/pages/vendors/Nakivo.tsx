@@ -157,7 +157,7 @@ export default function NakivoPage() {
                 More Capabilities, Half the Price
               </h2>
             </motion.div>
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
               {[
                 {
                   icon: "/lovable-uploads/f148bb84-417a-4fb7-a214-c38e19f53a70.png",
