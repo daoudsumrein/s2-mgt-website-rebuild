@@ -212,7 +212,7 @@ const Arrosoft = () => {
           </div>
         </section>
 
-        {/* Dynamic Hero Section */}
+        {/* Hero Section */}
         <section className="min-h-screen relative flex items-center bg-black overflow-hidden">
           {/* Background Image */}
           <div 
@@ -225,101 +225,99 @@ const Arrosoft = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/40" />
           
+          {/* Fixed Navigation */}
+          <nav className="fixed top-10 left-1/2 transform -translate-x-1/2 bg-black/30 border border-white/10 rounded-full p-1 backdrop-blur-xl z-50 flex">
+            {[
+              { id: 'protect-data', label: 'Protect Data' },
+              { id: 'recover-businesses', label: 'Recover Businesses' },
+              { id: 'empower-partners', label: 'Empower Partners' }
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => setActiveSection(item.id)}
+                className={`px-6 md:px-7 py-3 border-none rounded-full cursor-pointer text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+                  activeSection === item.id
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-transparent text-white/80 hover:text-white'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+
+          {/* Hero Container */}
           <div className="max-w-6xl mx-auto px-4 md:px-10 relative z-10 w-full">
-            {/* Navigation Buttons */}
-            <div className="fixed top-10 left-1/2 transform -translate-x-1/2 flex gap-0 bg-black/30 rounded-full p-1 backdrop-blur-xl border border-white/10 z-50">
-              {[
-                { id: 'protect-data', label: 'Protect Data' },
-                { id: 'recover-businesses', label: 'Recover Businesses' },
-                { id: 'empower-partners', label: 'Empower Partners' }
-              ].map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => setActiveSection(item.id)}
-                  className={`px-6 md:px-7 py-3 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
-                    activeSection === item.id
-                      ? 'bg-blue-600 text-white'
-                      : 'text-white/80 hover:text-white'
-                  }`}
+            {/* Content 1: Protect Data */}
+            <div className={`max-w-4xl ${activeSection === 'protect-data' ? 'block' : 'hidden'}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
+                  Managed security for total peace of mind
+                </h1>
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
+                  Cyber threats are evolving—your security should be too. Our comprehensive managed security solutions provide 24/7 protection, threat detection, and rapid response to keep your data safe from emerging cyber threats.
+                </p>
+                <motion.a
+                  href="/solutions/security"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:bg-blue-700"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  {item.label}
-                </button>
-              ))}
+                  Learn More
+                </motion.a>
+              </motion.div>
             </div>
 
-            {/* All Content Sections */}
-            <div className="pt-20">
-              {/* Protect Data Content */}
-              <div className={`max-w-4xl text-white ${activeSection === 'protect-data' ? 'block' : 'hidden'}`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+            {/* Content 2: Recover Businesses */}
+            <div className={`max-w-4xl ${activeSection === 'recover-businesses' ? 'block' : 'hidden'}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
+                  Managed data protection for unstoppable business continuity
+                </h1>
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
+                  Data loss isn't an option—rapid recovery is. Our enterprise-grade backup and disaster recovery solutions ensure your business operations continue seamlessly, even in the face of unexpected disruptions.
+                </p>
+                <motion.a
+                  href="/solutions/data-protection"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:bg-blue-700"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6">
-                    Managed security for total peace of mind
-                  </h1>
-                  <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
-                    Cyber threats are evolving—your security should be too. Our comprehensive managed security solutions provide 24/7 protection, threat detection, and rapid response to keep your data safe from emerging cyber threats.
-                  </p>
-                  <motion.a
-                    href="/solutions/security"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-blue-700"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Learn More
-                  </motion.a>
-                </motion.div>
-              </div>
+                  Explore Solutions
+                </motion.a>
+              </motion.div>
+            </div>
 
-              {/* Recover Businesses Content */}
-              <div className={`max-w-4xl text-white ${activeSection === 'recover-businesses' ? 'block' : 'hidden'}`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+            {/* Content 3: Empower Partners (Default Active) */}
+            <div className={`max-w-4xl ${activeSection === 'empower-partners' ? 'block' : 'hidden'}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
+                  Empowering partners with cutting-edge technology solutions
+                </h1>
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
+                  Success is a shared journey. We provide our partners with industry-leading tools, comprehensive training, and dedicated support to help them deliver exceptional results and grow their businesses.
+                </p>
+                <motion.a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:bg-blue-700"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6">
-                    Managed data protection for unstoppable business continuity
-                  </h1>
-                  <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
-                    Data loss isn't an option—rapid recovery is. Our enterprise-grade backup and disaster recovery solutions ensure your business operations continue seamlessly, even in the face of unexpected disruptions.
-                  </p>
-                  <motion.a
-                    href="/solutions/data-protection"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-blue-700"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Explore Solutions
-                  </motion.a>
-                </motion.div>
-              </div>
-
-              {/* Empower Partners Content */}
-              <div className={`max-w-4xl text-white ${activeSection === 'empower-partners' ? 'block' : 'hidden'}`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6">
-                    Empowering partners with cutting-edge technology solutions
-                  </h1>
-                  <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
-                    Success is a shared journey. We provide our partners with industry-leading tools, comprehensive training, and dedicated support to help them deliver exceptional results and grow their businesses.
-                  </p>
-                  <motion.a
-                    href="/contact"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-blue-700"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Become a Partner
-                  </motion.a>
-                </motion.div>
-              </div>
+                  Become a Partner
+                </motion.a>
+              </motion.div>
             </div>
           </div>
         </section>
