@@ -223,7 +223,7 @@ const Arrosoft = () => {
           />
           
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/60 md:bg-black/40" />
+          <div className="absolute inset-0 bg-black/30 md:bg-black/20" />
           
           {/* Navigation */}
           <nav className="absolute top-4 md:top-10 left-1/2 transform -translate-x-1/2 bg-black/30 border border-white/10 rounded-full p-0.5 md:p-1 backdrop-blur-xl z-40 flex max-w-[95vw] overflow-x-auto">
