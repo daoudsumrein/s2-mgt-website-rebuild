@@ -80,7 +80,7 @@ const Arrosoft = () => {
             delay: 0.6,
             ease: "easeOut"
           }}>
-              <motion.a href="#contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-base md:text-lg transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40" whileHover={{
+              <motion.a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-base md:text-lg transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40" whileHover={{
               y: -2,
               scale: 1.02
             }} whileTap={{
