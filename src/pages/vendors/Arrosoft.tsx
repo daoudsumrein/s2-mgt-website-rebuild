@@ -247,7 +247,7 @@ const Arrosoft = () => {
           </nav>
 
           {/* Hero Container */}
-          <div className="max-w-6xl mx-auto px-4 md:px-10 relative z-10 w-full mt-24">
+          <div className="max-w-6xl ml-4 md:ml-10 mr-auto px-4 md:px-10 relative z-10 w-full mt-24">
             {/* Content 1: Protect Data */}
             <div className={`max-w-4xl ${activeSection === 'protect-data' ? 'block' : 'hidden'}`}>
               <motion.div
