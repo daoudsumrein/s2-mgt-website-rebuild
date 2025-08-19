@@ -35,11 +35,11 @@ export default function TDSPage() {
                     Three Core Capabilities.
                   </div>
                   
-                  <p className="text-base text-white/90 mb-4 leading-relaxed">
+                  <p className="text-base text-white/90 mb-4 leading-relaxed font-medium">
                     The platform built to provide clear <span className="font-semibold text-cyan-300">insight</span> into IT and let teams <span className="font-semibold text-lime-300">orchestrate</span>, <span className="font-semibold text-orange-300">accelerate</span> and de-risk migration, modernization, and other IT transformation initiatives.
                   </p>
                   
-                  <p className="text-base text-white/90 leading-relaxed">
+                  <p className="text-base text-white/90 leading-relaxed font-medium">
                     <strong className="text-white">TransitionManager's</strong> three modules address the unique challenges of complex migrations, modernizations, and transformations.
                   </p>
                 </div>
