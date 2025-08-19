@@ -226,7 +226,7 @@ const Arrosoft = () => {
           <div className="absolute inset-0 bg-black/40" />
           
           {/* Navigation */}
-          <nav className="absolute top-32 left-1/2 transform -translate-x-1/2 bg-black/30 border border-white/10 rounded-full p-1 backdrop-blur-xl z-50 flex">
+          <nav className="absolute top-10 left-1/2 transform -translate-x-1/2 bg-black/30 border border-white/10 rounded-full p-1 backdrop-blur-xl z-40 flex">
             {[
               { id: 'protect-data', label: 'Protect Data' },
               { id: 'recover-businesses', label: 'Recover Businesses' },
