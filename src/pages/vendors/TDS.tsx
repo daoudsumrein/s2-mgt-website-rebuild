@@ -25,13 +25,13 @@ export default function TDSPage() {
             <div className="container mx-auto px-4 relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
                 <div className="lg:col-span-2">
-                  <h1 className="text-5xl font-light mb-2 leading-tight text-white">
+                  <h1 className="text-5xl font-bold mb-2 leading-tight text-cyan-300">
                     TransitionManager®
                   </h1>
-                  <div className="text-4xl font-light mb-2 text-white leading-tight">
+                  <div className="text-4xl font-semibold mb-2 text-white leading-tight">
                     One Platform.
                   </div>
-                  <div className="text-4xl font-light mb-8 text-white leading-tight">
+                  <div className="text-4xl font-semibold mb-8 text-white leading-tight">
                     Three Core Capabilities.
                   </div>
                   
