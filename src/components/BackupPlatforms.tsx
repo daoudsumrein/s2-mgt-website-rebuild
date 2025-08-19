@@ -126,14 +126,14 @@ const BackupPlatforms = () => {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/60 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               
               {/* Logo container */}
-              <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center rounded-xl overflow-hidden">
-                {platform.logo ? (
-                  <img 
-                    src={platform.logo} 
-                    alt={`${platform.name} logo`}
-                    className="w-20 h-20 object-contain"
-                  />
-                ) : (
+               <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center rounded-xl overflow-hidden">
+                 {platform.logo ? (
+                   <img 
+                     src={platform.logo} 
+                     alt={`${platform.name} logo`}
+                     className="w-24 h-24 object-contain"
+                   />
+                 ) : (
                   <span className="text-2xl font-bold text-primary">
                     {getTextLogo(platform.className)}
                   </span>
