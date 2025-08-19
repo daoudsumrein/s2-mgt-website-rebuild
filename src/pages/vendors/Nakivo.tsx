@@ -143,50 +143,86 @@ export default function NakivoPage() {
         {/* Backup Platforms Section */}
         <BackupPlatforms />
 
-        {/* Why NAKIVO Stands Out Section */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <motion.div 
-              className="max-w-4xl mx-auto text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold mb-8">Why NAKIVO Stands Out</h2>
-            </motion.div>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8">
-                {[
-                  {
-                    title: "Enterprise Security",
-                    description: "Trusted by organizations with the strictest cybersecurity requirements and compliance standards."
-                  },
-                  {
-                    title: "Unified Platform", 
-                    description: "Complete data protection solution covering backup, replication, and recovery in one platform."
-                  },
-                  {
-                    title: "Cost Effective",
-                    description: "Achieve enterprise-grade data protection at a fraction of the cost of competing solutions."
-                  }
-                ].map((feature, index) => (
-                  <motion.div 
-                    key={index}
-                    className="space-y-4 text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto">
-                      <CheckCircle className="w-8 h-8" />
-                    </div>
-                    <h3 className="font-semibold text-lg">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </motion.div>
-                ))}
-              </div>
+        {/* Features Section */}
+        <section className="py-20 bg-gradient-to-br from-background via-muted/30 to-background">
+          <div className="container mx-auto px-4 max-w-7xl">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
+              {[
+                {
+                  icon: "/lovable-uploads/f148bb84-417a-4fb7-a214-c38e19f53a70.png",
+                  title: "Save time on routine tasks",
+                  features: [
+                    "One platform for all your workloads",
+                    "Fast backup and replication", 
+                    "Powerful automation options"
+                  ]
+                },
+                {
+                  icon: "/lovable-uploads/79b0c06d-0165-429f-81e0-4ba016484354.png", 
+                  title: "Reliable uptime, short RTOs",
+                  features: [
+                    "Instant full and granular recovery",
+                    "Recovery flexibility across platforms",
+                    "Disaster recovery orchestration"
+                  ]
+                },
+                {
+                  icon: "/lovable-uploads/5fa38de6-21bb-4e68-9d3f-75594406855d.png",
+                  title: "Ransomware-proof for peace of mind", 
+                  features: [
+                    "Immutable and air-gapped storage",
+                    "Source-side backup encryption",
+                    "Pre-recovery backup malware scan"
+                  ]
+                },
+                {
+                  icon: "/lovable-uploads/b7ffacde-f80e-4224-8b4d-6d3fe7583f73.png",
+                  title: "Get started in minutes",
+                  features: [
+                    "Deploy where you need",
+                    "Agentless for modern infrastructures", 
+                    "MSP-ready"
+                  ]
+                }
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="group bg-card border border-border rounded-2xl p-12 text-left shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  {/* Animated top border */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/60 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                  
+                  {/* Icon */}
+                  <div className="w-30 h-30 mb-8 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-105">
+                    <img 
+                      src={feature.icon}
+                      alt={`${feature.title} icon`}
+                      className="w-30 h-30 object-contain drop-shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-foreground mb-7 leading-tight transition-colors duration-300 group-hover:text-primary">
+                    {feature.title}
+                  </h3>
+                  
+                  {/* Features List */}
+                  <ul className="space-y-4">
+                    {feature.features.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start text-muted-foreground font-medium transition-colors duration-200 group-hover:text-foreground">
+                        <div className="w-5 h-5 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-0.5 transition-all duration-200 group-hover:scale-110 group-hover:shadow-md">
+                          <CheckCircle className="w-3 h-3 text-white" />
+                        </div>
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
