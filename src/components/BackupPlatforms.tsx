@@ -5,19 +5,19 @@ const BackupPlatforms = () => {
     {
       name: "VMware vSphere",
       description: "Virtualization Platform",
-      logo: "/lovable-uploads/d9e8afa7-fa2b-4fac-a063-2ffcc263786e.png", // VMware from existing uploads
+      logo: "/lovable-uploads/17046bc2-136b-45c5-9f5a-50c4c703519b.png",
       className: "vmware"
     },
     {
       name: "Proxmox", 
       description: "Open Source Virtualization",
-      logo: null, // Will use text logo "P" as fallback
+      logo: "/lovable-uploads/3b7db38b-b108-4244-b0e2-34a68e620431.png",
       className: "proxmox"
     },
     {
       name: "Microsoft Hyper-V",
       description: "Windows Virtualization", 
-      logo: null, // Will use text logo "H" as fallback
+      logo: "/lovable-uploads/de3c3677-ec2d-4243-8459-47af2d3230cd.png",
       className: "hyperv"
     },
     {
@@ -126,12 +126,12 @@ const BackupPlatforms = () => {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/60 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               
               {/* Logo container */}
-              <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-xl overflow-hidden bg-muted/50">
+              <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center rounded-xl overflow-hidden">
                 {platform.logo ? (
                   <img 
                     src={platform.logo} 
                     alt={`${platform.name} logo`}
-                    className="w-16 h-16 object-contain"
+                    className="w-20 h-20 object-contain"
                   />
                 ) : (
                   <span className="text-2xl font-bold text-primary">
