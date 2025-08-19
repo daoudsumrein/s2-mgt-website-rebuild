@@ -13,7 +13,7 @@ const Arrosoft = () => {
       
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="min-h-screen relative overflow-hidden flex items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-20">
+        <section className="min-h-screen relative overflow-hidden flex items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-16 sm:pt-20">
           {/* Background Image - Clear on Desktop */}
           <div className="absolute inset-0 z-0 hidden md:block" style={{
           backgroundImage: `url('https://www.arrosoft.com/_next/image?url=%2Fhome%2Fhero-1.webp&w=3840&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr')`,
@@ -55,7 +55,7 @@ const Arrosoft = () => {
               Redefining the standard in data security for your clients
             </motion.h1>
             
-            <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-10 text-white/80 max-w-lg mx-auto md:mx-0 px-2 sm:px-0" initial={{
+            <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8 md:mb-10 text-white/80 max-w-lg mx-auto md:mx-0 px-2 sm:px-0" initial={{
             opacity: 0,
             y: 30
           }} animate={{
@@ -100,9 +100,9 @@ const Arrosoft = () => {
         </section>
         
         {/* Partner Carousel Section */}
-        <section className="py-12 sm:py-16 md:py-20 bg-black text-white relative overflow-hidden">
+        <section className="py-8 sm:py-12 md:py-16 bg-black text-white relative overflow-hidden">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
-            <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-12 sm:mb-16 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent leading-tight px-2 sm:px-0" initial={{
+            <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent leading-tight px-2 sm:px-0" initial={{
             opacity: 0,
             y: 30
           }} whileInView={{
@@ -258,7 +258,7 @@ const Arrosoft = () => {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-4 sm:mb-6 text-white px-2 sm:px-0">
                   Managed security for total peace of mind
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8 sm:mb-10 px-2 sm:px-0">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-6 sm:mb-8 md:mb-10 px-2 sm:px-0">
                   Cyber threats are evolving—your security should be too. Our comprehensive managed security solutions provide 24/7 protection, threat detection, and rapid response to keep your data safe from emerging cyber threats.
                 </p>
                 <motion.a
@@ -282,7 +282,7 @@ const Arrosoft = () => {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-4 sm:mb-6 text-white px-2 sm:px-0">
                   Managed data protection for unstoppable business continuity
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8 sm:mb-10 px-2 sm:px-0">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-6 sm:mb-8 md:mb-10 px-2 sm:px-0">
                   Data loss isn't an option—rapid recovery is. Our enterprise-grade backup and disaster recovery solutions ensure your business operations continue seamlessly, even in the face of unexpected disruptions.
                 </p>
                 <motion.a
@@ -306,7 +306,7 @@ const Arrosoft = () => {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-4 sm:mb-6 text-white px-2 sm:px-0">
                   Empowering partners with cutting-edge technology solutions
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8 sm:mb-10 px-2 sm:px-0">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-6 sm:mb-8 md:mb-10 px-2 sm:px-0">
                   Success is a shared journey. We provide our partners with industry-leading tools, comprehensive training, and dedicated support to help them deliver exceptional results and grow their businesses.
                 </p>
                 <motion.a
@@ -323,7 +323,7 @@ const Arrosoft = () => {
         </section>
         
         {/* Contact Section */}
-        <section id="contact" className="py-12 sm:py-16 md:py-20 bg-muted/50">
+        <section id="contact" className="py-8 sm:py-12 md:py-16 bg-muted/50">
           <div className="container mx-auto px-4 sm:px-6 md:px-8 text-center">
             <motion.div initial={{
             opacity: 0,
