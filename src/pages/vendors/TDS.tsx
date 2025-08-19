@@ -229,12 +229,19 @@ export default function TDSPage() {
                 <h2 className="text-4xl font-semibold mb-8 text-foreground">
                   Transform Your IT Infrastructure with Confidence
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  TransitionManager's three integrated modules address the unique challenges of complex migrations, modernizations, and transformations, providing enterprise-wide visibility and control over your IT transformation journey.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  As your trusted regional distributor in the UAE, we provide localized expertise, comprehensive training, and ongoing support to ensure your IT transformation success across the Middle East region.
-                </p>
+                <div className="relative w-full aspect-video max-w-3xl mx-auto">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/e_W0pd2WS34?si=C5iM3PD4XPdAja3C&start=1" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                    className="rounded-lg shadow-lg"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </section>
