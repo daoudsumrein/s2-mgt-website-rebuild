@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import BackupPlatforms from "@/components/BackupPlatforms";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
@@ -138,6 +139,9 @@ export default function NakivoPage() {
             </div>
           </div>
         </section>
+
+        {/* Backup Platforms Section */}
+        <BackupPlatforms />
 
         {/* Why NAKIVO Stands Out Section */}
         <section className="py-16 bg-muted/30">
