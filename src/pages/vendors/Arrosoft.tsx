@@ -13,7 +13,7 @@ const Arrosoft = () => {
       
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="min-h-screen relative overflow-hidden flex items-center px-4 sm:px-6 md:px-8 lg:px-12 pt-20">
+        <section className="min-h-screen relative overflow-hidden flex items-center px-4 md:px-8 pt-20">
           {/* Background Image - Clear on Desktop */}
           <div className="absolute inset-0 z-0 hidden md:block" style={{
           backgroundImage: `url('https://www.arrosoft.com/_next/image?url=%2Fhome%2Fhero-1.webp&w=3840&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr')`,
@@ -24,14 +24,14 @@ const Arrosoft = () => {
           
           {/* Background Image with Overlay - Mobile Only */}
           <div className="absolute inset-0 z-0 md:hidden" style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://www.arrosoft.com/_next/image?url=%2Fhome%2Fhero-1.webp&w=3840&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://www.arrosoft.com/_next/image?url=%2Fhome%2Fhero-1.webp&w=3840&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }} />
           
           {/* Content */}
-          <motion.div className="relative z-30 w-full max-w-2xl lg:max-w-4xl text-white mx-auto md:ml-4 lg:ml-10 md:mr-auto text-center md:text-left" initial={{
+          <motion.div className="relative z-30 max-w-2xl text-white ml-4 md:ml-10 mr-auto text-center md:text-left" initial={{
           opacity: 0,
           y: 30
         }} animate={{
@@ -41,7 +41,7 @@ const Arrosoft = () => {
           duration: 0.8,
           ease: "easeOut"
         }}>
-            <motion.h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-4 sm:mb-6 tracking-tight px-2 sm:px-0" initial={{
+            <motion.h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-6 tracking-tight" initial={{
             opacity: 0,
             y: 30
           }} animate={{
@@ -55,7 +55,7 @@ const Arrosoft = () => {
               Redefining the standard in data security for your clients
             </motion.h1>
             
-            <motion.p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-10 text-white/80 max-w-lg mx-auto md:mx-0 px-2 sm:px-0" initial={{
+            <motion.p className="text-base md:text-lg lg:text-xl leading-relaxed mb-10 text-white/80 max-w-lg mx-auto md:mx-0" initial={{
             opacity: 0,
             y: 30
           }} animate={{
@@ -80,14 +80,14 @@ const Arrosoft = () => {
             delay: 0.6,
             ease: "easeOut"
           }}>
-              <motion.a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-sm sm:text-base md:text-lg transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40" whileHover={{
+              <motion.a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-base md:text-lg transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40" whileHover={{
               y: -2,
               scale: 1.02
             }} whileTap={{
               scale: 0.98
             }}>
                 Book a Discovery Call
-                <motion.span className="text-base sm:text-lg md:text-xl" whileHover={{
+                <motion.span className="text-lg md:text-xl" whileHover={{
                 x: 3
               }} transition={{
                 duration: 0.3
@@ -100,9 +100,9 @@ const Arrosoft = () => {
         </section>
         
         {/* Partner Carousel Section */}
-        <section className="py-12 sm:py-16 md:py-20 bg-black text-white relative overflow-hidden">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
-            <motion.h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-12 sm:mb-16 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent leading-tight px-2 sm:px-0" initial={{
+        <section className="py-20 bg-black text-white relative overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
+            <motion.h2 className="text-2xl md:text-4xl font-light mb-16 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent leading-tight" initial={{
             opacity: 0,
             y: 30
           }} whileInView={{
@@ -226,7 +226,7 @@ const Arrosoft = () => {
           <div className="absolute inset-0 bg-black/60 md:bg-black/40" />
           
           {/* Navigation */}
-          <nav className="absolute top-8 sm:top-10 left-1/2 transform -translate-x-1/2 bg-black/30 border border-white/10 rounded-full p-1 backdrop-blur-xl z-40 flex overflow-x-auto">
+          <nav className="absolute top-10 left-1/2 transform -translate-x-1/2 bg-black/30 border border-white/10 rounded-full p-1 backdrop-blur-xl z-40 flex">
             {[
               { id: 'protect-data', label: 'Protect Data' },
               { id: 'recover-businesses', label: 'Recover Businesses' },
@@ -235,7 +235,7 @@ const Arrosoft = () => {
               <button
                 key={item.id}
                 onClick={() => setActiveSection(item.id)}
-                className={`px-3 sm:px-4 md:px-6 lg:px-7 py-2 sm:py-3 border-none rounded-full cursor-pointer text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-300 ${
+                className={`px-6 md:px-7 py-3 border-none rounded-full cursor-pointer text-sm font-medium whitespace-nowrap transition-all duration-300 ${
                   activeSection === item.id
                     ? 'bg-blue-600 text-white'
                     : 'bg-transparent text-white/80 hover:text-white'
@@ -247,7 +247,7 @@ const Arrosoft = () => {
           </nav>
 
           {/* Hero Container */}
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 relative z-10 w-full mt-20 sm:mt-24">
+          <div className="max-w-6xl ml-4 md:ml-10 mr-auto px-4 md:px-10 relative z-10 w-full mt-24">
             {/* Content 1: Protect Data */}
             <div className={`max-w-4xl ${activeSection === 'protect-data' ? 'block' : 'hidden'}`}>
               <motion.div
@@ -255,15 +255,15 @@ const Arrosoft = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-4 sm:mb-6 text-white px-2 sm:px-0">
+                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
                   Managed security for total peace of mind
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8 sm:mb-10 px-2 sm:px-0">
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
                   Cyber threats are evolving—your security should be too. Our comprehensive managed security solutions provide 24/7 protection, threat detection, and rapid response to keep your data safe from emerging cyber threats.
                 </p>
                 <motion.a
                   href="/solutions/security"
-                  className="inline-flex items-center gap-2 px-4 sm:px-6 md:px-8 py-3 md:py-4 bg-blue-600 text-white rounded-full font-semibold text-sm sm:text-base transition-all duration-300 hover:bg-blue-700"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:bg-blue-700"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -279,15 +279,15 @@ const Arrosoft = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-4 sm:mb-6 text-white px-2 sm:px-0">
+                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
                   Managed data protection for unstoppable business continuity
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8 sm:mb-10 px-2 sm:px-0">
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
                   Data loss isn't an option—rapid recovery is. Our enterprise-grade backup and disaster recovery solutions ensure your business operations continue seamlessly, even in the face of unexpected disruptions.
                 </p>
                 <motion.a
                   href="/solutions/data-protection"
-                  className="inline-flex items-center gap-2 px-4 sm:px-6 md:px-8 py-3 md:py-4 bg-blue-600 text-white rounded-full font-semibold text-sm sm:text-base transition-all duration-300 hover:bg-blue-700"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:bg-blue-700"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -303,15 +303,15 @@ const Arrosoft = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-4 sm:mb-6 text-white px-2 sm:px-0">
+                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
                   Empowering partners with cutting-edge technology solutions
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mb-8 sm:mb-10 px-2 sm:px-0">
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
                   Success is a shared journey. We provide our partners with industry-leading tools, comprehensive training, and dedicated support to help them deliver exceptional results and grow their businesses.
                 </p>
                 <motion.a
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-4 sm:px-6 md:px-8 py-3 md:py-4 bg-blue-600 text-white rounded-full font-semibold text-sm sm:text-base transition-all duration-300 hover:bg-blue-700"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-full font-semibold transition-all duration-300 hover:bg-blue-700"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -323,8 +323,8 @@ const Arrosoft = () => {
         </section>
         
         {/* Contact Section */}
-        <section id="contact" className="py-12 sm:py-16 md:py-20 bg-muted/50">
-          <div className="container mx-auto px-4 sm:px-6 md:px-8 text-center">
+        <section id="contact" className="py-16 md:py-20 bg-muted/50">
+          <div className="container mx-auto px-4 text-center">
             <motion.div initial={{
             opacity: 0,
             y: 30
@@ -336,11 +336,11 @@ const Arrosoft = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">Ready to Secure Your Data?</h2>
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-2 sm:px-0">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Ready to Secure Your Data?</h2>
+              <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Get in touch with our experts to learn how Arrosoft can transform your data security strategy.
               </p>
-              <motion.a href="/contact" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 sm:px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-sm sm:text-base md:text-lg transition-all duration-300 hover:bg-primary/90" whileHover={{
+              <motion.a href="/contact" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-base md:text-lg transition-all duration-300 hover:bg-primary/90" whileHover={{
               scale: 1.05
             }} whileTap={{
               scale: 0.95
