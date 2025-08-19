@@ -1,325 +1,246 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import ContactForm from "@/components/ContactForm";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, ExternalLink, CheckCircle, ArrowRight, Workflow, Map, Eye, Search } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function TDSPage() {
   return (
     <>
       <SEOHead 
-        title="TDS TransitionManager - IT Orchestration & Migration | S2 Management"
-        description="Enterprise IT orchestration platform by TDS. Comprehensive migration planning, dependency mapping, DR orchestration, and IT discovery solutions."
-        keywords="TDS partner, TransitionManager, IT orchestration, migration planning, dependency mapping, DR orchestration, IT discovery"
+        title="TransitionManager® - IT Transformation Platform | S2 Management"
+        description="The platform built to provide clear insight into IT and let teams orchestrate, accelerate and de-risk migration, modernization, and other IT transformation initiatives."
+        keywords="TransitionManager, IT transformation, migration planning, dependency mapping, orchestration, TDS partner"
         canonicalUrl="https://s2mgt.com/vendors/tds"
       />
       <div className="min-h-screen bg-background">
         <Navigation />
-      <main>
-        {/* Hero Section */}
-        <section className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-700 via-cyan-600 to-teal-700 text-white flex items-center py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                {/* Hero Content */}
-                <div className="space-y-6 motion-preset-slide-right motion-delay-200">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight motion-preset-fade motion-delay-300">
-                    Enterprise Data Migration Made Simple
-                  </h1>
-                  <div className="text-xl md:text-2xl font-medium opacity-90 motion-preset-fade motion-delay-500">
-                    Transitional Data Services
-                  </div>
-                  <p className="text-lg md:text-xl opacity-80 leading-relaxed motion-preset-fade motion-delay-700">
-                    Transform your data infrastructure with our industry-leading platform for seamless cloud migration, data center modernization, and enterprise transformations.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 motion-preset-fade motion-delay-1000">
-                    <Button 
-                      size="lg" 
-                      className="bg-orange-500 hover:bg-orange-600 text-white border-none px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/30"
-                      asChild
-                    >
-                      <a href="#video" className="flex items-center gap-2">
-                        Watch Demo
-                        <ArrowRight className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="lg"
-                      className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1"
-                      asChild
-                    >
-                      <a href="/contact">
-                        Get Started
-                      </a>
-                    </Button>
-                  </div>
-                </div>
+        <main>
+          {/* Hero Section */}
+          <section className="pt-20 pb-20 text-center bg-muted/30">
+            <div className="container mx-auto px-4">
+              <h1 className="text-5xl font-bold mb-4 text-foreground">
+                TransitionManager®
+              </h1>
+              <div className="text-2xl font-semibold mb-4 text-primary">
+                One Platform. Three Core Capabilities.
+              </div>
+              <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                The platform built to provide clear insight into IT and let teams orchestrate, accelerate and de-risk migration, modernization, and other IT transformation initiatives.
+              </p>
+              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+                <a href="#contact">
+                  Get Started
+                </a>
+              </Button>
+            </div>
+          </section>
 
-                {/* Video Container */}
-                <div className="motion-preset-slide-left motion-delay-500" id="video">
-                  <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-6 lg:p-8">
-                    <div className="relative w-full pb-[56.25%] rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
-                      <iframe 
-                        className="absolute inset-0 w-full h-full border-none rounded-2xl"
-                        src="https://www.youtube.com/embed/FS_oklVl0Cw?si=3UrsVbzUD6qPUrIt" 
-                        title="TDS Platform Demo" 
-                        frameBorder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerPolicy="strict-origin-when-cross-origin" 
-                        allowFullScreen>
-                      </iframe>
-                    </div>
-                  </div>
-                </div>
+          {/* Three Core Capabilities */}
+          <section className="py-20 bg-background">
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
+                Three Core Capabilities
+              </h2>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+                {/* Insight */}
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <CardContent className="p-12">
+                    <img 
+                      src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Insight.png" 
+                      alt="TransitionManager Insight" 
+                      className="w-32 h-32 mx-auto mb-8 object-contain"
+                    />
+                    <h3 className="text-2xl font-semibold mb-6 text-foreground">
+                      Insight
+                    </h3>
+                    <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+                      Gain comprehensive visibility into your IT environment with enterprise-wide insight aggregation from multiple systems of record.
+                    </p>
+                    <ul className="text-left space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Integrate with data sources – CMDB, DCIM, ITSM, etc.
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Capture vital data; make it immediately actionable
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Consolidate data, gain a single pane of glass view
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Breakdown IT and business silos – no user count limits
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Track relevant IT and business data for all IT assets
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Visualize dependency connections between all assets
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Scenario-based analysis for faster tech adoption
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                {/* Orchestrator */}
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <CardContent className="p-12">
+                    <img 
+                      src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Orchestrate-Green.png" 
+                      alt="TransitionManager Orchestrator" 
+                      className="w-32 h-32 mx-auto mb-8 object-contain"
+                    />
+                    <h3 className="text-2xl font-semibold mb-6 text-foreground">
+                      Orchestrator
+                    </h3>
+                    <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+                      Leverage proven methodologies for repeatable, consistent results with intelligent workflow generation and task sequencing.
+                    </p>
+                    <ul className="text-left space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Proven methodologies – repeatable, consistent results
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Visualize apps, infrastructure, and their dependencies
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Analyze dependencies, identify gaps and conflicts
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Efficient event planning inherently mitigates risks
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Generate dynamic workflows that scale automatically
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Sequence automated and manual tasks precisely
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Understand and track against critical path
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                {/* Accelerate */}
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <CardContent className="p-12">
+                    <img 
+                      src="https://www.transitionaldata.com/uploads/2025/02/TransitionManager-Accelerate-Orange.png" 
+                      alt="TransitionManager Accelerate" 
+                      className="w-32 h-32 mx-auto mb-8 object-contain"
+                    />
+                    <h3 className="text-2xl font-semibold mb-6 text-foreground">
+                      Accelerate
+                    </h3>
+                    <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+                      Accelerate migration projects while virtually eliminating risk through optimized resources and real-time collaboration.
+                    </p>
+                    <ul className="text-left space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Accelerate migration projects – virtually eliminate risk
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Optimize resources, centralize data, collaborate real-time
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Enhance project experience and build team confidence
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Secure transformations with behind-firewall local app
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Meet security compliance benchmarks
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Integrated, end-to-end toolchain of disparate tools
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Easy credential management for third-party tools
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary font-bold mr-3 mt-0.5">•</span>
+                        Perform full audits for automated activities
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Core Platform */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <Badge variant="secondary" className="mb-4">Orchestration Platform</Badge>
-                <h2 className="text-3xl font-bold mb-4">TransitionManager Core Capabilities</h2>
-                <p className="text-lg text-muted-foreground">
-                  The industry's most comprehensive IT orchestration and visualization platform
+          {/* Overview Section */}
+          <section className="py-20 bg-muted/30 text-center">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-4xl font-semibold mb-8 text-foreground">
+                  Transform Your IT Infrastructure with Confidence
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  TransitionManager's three integrated modules address the unique challenges of complex migrations, modernizations, and transformations, providing enterprise-wide visibility and control over your IT transformation journey.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  As your trusted regional distributor in the UAE, we provide localized expertise, comprehensive training, and ongoing support to ensure your IT transformation success across the Middle East region.
                 </p>
               </div>
+            </div>
+          </section>
 
-              <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
-                <Card className="hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <Search className="h-12 w-12 text-green-600 mb-4" />
-                    <CardTitle>IT Discovery</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Comprehensive IT infrastructure discovery and asset identification
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Automated asset discovery</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Configuration tracking</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Inventory management</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <Eye className="h-12 w-12 text-green-600 mb-4" />
-                    <CardTitle>Dependency Mapping</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Complete IT infrastructure visualization with real-time dependency tracking
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Real-time discovery</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Visual dependency maps</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Impact analysis</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <Map className="h-12 w-12 text-green-600 mb-4" />
-                    <CardTitle>Migration Wave Planning</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Intelligent migration planning with dependency analysis and risk assessment
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Automated wave generation</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Risk-based sequencing</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Timeline optimization</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <Workflow className="h-12 w-12 text-green-600 mb-4" />
-                    <CardTitle>DR Orchestration</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Automated disaster recovery workflows with intelligent sequencing, validation, and reporting
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Automated failover sequences</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Intelligent dependency handling</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Validation and testing automation</span>
-                      </li>
-                      <li className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                        <span className="text-sm">Comprehensive reporting</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
+          {/* Contact Section */}
+          <section id="contact" className="py-20 bg-card text-card-foreground">
+            <div className="container mx-auto px-4">
+              <h2 className="text-4xl font-semibold text-center mb-12 text-foreground">
+                Ready to Transform Your IT?
+              </h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-6 text-primary">
+                    Connect with Our UAE Team
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    As your regional TransitionManager® distributor in the United Arab Emirates, we're committed to helping organizations across the Middle East achieve successful IT transformations.
+                  </p>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Our expert team understands the unique challenges facing businesses in the region and provides comprehensive support throughout your transformation journey.
+                  </p>
+                  <p className="font-semibold mb-4 text-foreground">Our Services:</p>
+                  <div className="text-muted-foreground space-y-2">
+                    <p>• Regional expertise and localized support</p>
+                    <p>• Proven track record in IT transformations</p>
+                    <p>• Comprehensive training and onboarding</p>
+                    <p>• Ongoing technical support</p>
+                    <p>• Customized implementation strategies</p>
+                  </div>
+                </div>
+                <ContactForm />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Technical Features */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Advanced Technical Features</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>IT Visualization & Dashboards</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-sm">Real-time infrastructure topology views</span>
-                    </div>
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-sm">Executive and technical dashboards</span>
-                    </div>
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-sm">Custom reporting and analytics</span>
-                    </div>
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-sm">Integration with monitoring tools</span>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Enterprise Integration</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-sm">CMDB and ITSM platform integration</span>
-                    </div>
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-sm">API-driven automation capabilities</span>
-                    </div>
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-sm">Multi-cloud environment support</span>
-                    </div>
-                    <div className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-sm">Role-based access control</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Enterprise Use Cases</h2>
-              <div className="space-y-6">
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2">Large-Scale Migrations</h3>
-                    <p className="text-muted-foreground">
-                      Data center consolidations, cloud migrations, and infrastructure modernization projects with hundreds or thousands of applications
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2">Disaster Recovery Automation</h3>
-                    <p className="text-muted-foreground">
-                      Automated DR testing, failover orchestration, and business continuity management for mission-critical environments
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2">IT Asset Management</h3>
-                    <p className="text-muted-foreground">
-                      Comprehensive infrastructure discovery, dependency mapping, and ongoing asset tracking for complex enterprise environments
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-16 bg-green-50">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Transform Your IT Operations with TDS</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let S2's TDS specialists show you how TransitionManager can revolutionize your 
-              infrastructure management and migration capabilities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="/contact">
-                  Schedule TDS Demonstration
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="https://www.tds.com" target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Visit TDS Website
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
+          </section>
         </main>
         <Footer />
       </div>
