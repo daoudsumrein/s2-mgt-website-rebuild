@@ -10,10 +10,11 @@ export default function TDSPage() {
   return (
     <>
       <SEOHead 
-        title="TransitionManager® - IT Transformation Platform | S2 Management"
-        description="The platform built to provide clear insight into IT and let teams orchestrate, accelerate and de-risk migration, modernization, and other IT transformation initiatives."
-        keywords="TransitionManager, IT transformation, migration planning, dependency mapping, orchestration, TDS partner"
+        title="TransitionManager® IT Transformation Platform UAE | TDS Partner"
+        description="Leading TransitionManager® distributor in UAE & MENA. Expert IT transformation, migration planning, dependency mapping & orchestration solutions. Insight, Orchestrate & Accelerate your digital transformation with proven methodologies."
+        keywords="TransitionManager UAE, IT transformation MENA, migration planning Middle East, dependency mapping UAE, IT orchestration Saudi Arabia, digital transformation Dubai, TDS partner UAE, enterprise migration tools, IT modernization platform, data center migration UAE"
         canonicalUrl="https://s2mgt.com/vendors/tds"
+        ogImage="https://s2mgt.com/src/assets/transitionmanager-insight.png"
       />
       <div className="min-h-screen bg-background">
         <Navigation />
