@@ -145,7 +145,7 @@ export default function NakivoPage() {
 
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-br from-background via-muted/30 to-background">
-          <div className="container mx-auto px-4 max-w-7xl">
+          <div className="container mx-auto px-4 max-w-8xl">
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
@@ -157,7 +157,7 @@ export default function NakivoPage() {
                 More Capabilities, Half the Price
               </h2>
             </motion.div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
               {[
                 {
                   icon: "/lovable-uploads/f148bb84-417a-4fb7-a214-c38e19f53a70.png",
