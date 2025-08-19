@@ -2,7 +2,7 @@ import { ArrowRight, Shield, Server, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "/lovable-uploads/d173256b-6eca-42b7-b9e1-49bda934ee52.png";
 import TypewriterText from "@/components/TypewriterText";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
