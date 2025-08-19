@@ -25,22 +25,22 @@ export default function TDSPage() {
             <div className="container mx-auto px-4 relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
                 <div className="lg:col-span-2">
-                  <h1 className="text-5xl font-light mb-2 leading-tight" style={{ color: '#00C6F8' }}>
+                  <h1 className="text-5xl font-light mb-2 leading-tight text-white">
                     TransitionManager®
                   </h1>
-                  <div className="text-4xl font-light mb-2 text-foreground leading-tight">
+                  <div className="text-4xl font-light mb-2 text-white leading-tight">
                     One Platform.
                   </div>
-                  <div className="text-4xl font-light mb-8 text-foreground leading-tight">
+                  <div className="text-4xl font-light mb-8 text-white leading-tight">
                     Three Core Capabilities.
                   </div>
                   
-                  <p className="text-base text-muted-foreground mb-4 leading-relaxed">
-                    The platform built to provide clear <span className="font-semibold" style={{ color: '#00C6F8' }}>insight</span> into IT and let teams <span className="font-semibold" style={{ color: '#9DCF65' }}>orchestrate</span>, <span className="font-semibold" style={{ color: '#F69B5F' }}>accelerate</span> and de-risk migration, modernization, and other IT transformation initiatives.
+                  <p className="text-base text-white/90 mb-4 leading-relaxed">
+                    The platform built to provide clear <span className="font-semibold text-cyan-300">insight</span> into IT and let teams <span className="font-semibold text-lime-300">orchestrate</span>, <span className="font-semibold text-orange-300">accelerate</span> and de-risk migration, modernization, and other IT transformation initiatives.
                   </p>
                   
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    <strong>TransitionManager's</strong> three modules address the unique challenges of complex migrations, modernizations, and transformations.
+                  <p className="text-base text-white/90 leading-relaxed">
+                    <strong className="text-white">TransitionManager's</strong> three modules address the unique challenges of complex migrations, modernizations, and transformations.
                   </p>
                 </div>
                 
