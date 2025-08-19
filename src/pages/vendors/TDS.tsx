@@ -80,11 +80,12 @@ export default function TDSPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {/* Insight */}
                 <div id="insight" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                  <div className="px-6 py-5 flex items-center gap-3" style={{ backgroundColor: '#00C6F8' }}>
-                    <div className="text-3xl">🔍</div>
-                    <h3 className="text-xl font-semibold text-white">
-                      TransitionManager Insight
-                    </h3>
+                  <div className="px-6 py-5 flex items-center justify-center" style={{ backgroundColor: '#00C6F8' }}>
+                    <img 
+                      src="/src/assets/transitionmanager-insight.png" 
+                      alt="TransitionManager Insight" 
+                      className="h-16 w-auto object-contain"
+                    />
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3">
