@@ -126,11 +126,12 @@ export default function TDSPage() {
 
                 {/* Orchestrate */}
                 <div id="orchestrate" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                  <div className="px-6 py-5 flex items-center gap-3" style={{ backgroundColor: '#9DCF65' }}>
-                    <div className="text-3xl">👥</div>
-                    <h3 className="text-xl font-semibold text-white">
-                      Orchestrate
-                    </h3>
+                  <div className="px-6 py-5 flex items-center justify-center" style={{ backgroundColor: '#9DCF65' }}>
+                    <img 
+                      src="/src/assets/transitionmanager-orchestrate-green.png" 
+                      alt="TransitionManager Orchestrate" 
+                      className="h-16 w-auto object-contain"
+                    />
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3">
