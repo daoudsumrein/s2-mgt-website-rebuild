@@ -19,7 +19,7 @@ export default function TDSPage() {
         <Navigation />
         <main>
           {/* Hero Section */}
-          <section className="pt-32 pb-20 bg-background">
+          <section className="pt-32 pb-20 bg-background relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/lovable-uploads/1f2a065f-da31-4139-963d-9275169e01e8.png)' }}>
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
                 <div className="lg:col-span-2">
