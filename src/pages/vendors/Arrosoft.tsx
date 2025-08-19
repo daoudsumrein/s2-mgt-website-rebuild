@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 const Arrosoft = () => {
   const [activeSection, setActiveSection] = useState('empower-partners');
+  console.log('Arrosoft component rendered, activeSection:', activeSection);
   
   return <>
       <SEOHead title="Arrosoft - Data Security Solutions | S2 Technical Solutions" description="Partner with Arrosoft for excellent data protection solutions and services. Redefining the standard in data security for your clients." keywords="Arrosoft, data security, data protection, cybersecurity solutions, S2 Technical Solutions" />
