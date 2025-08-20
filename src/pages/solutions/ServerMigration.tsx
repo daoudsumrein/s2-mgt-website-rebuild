@@ -144,163 +144,485 @@ export default function ServerMigration() {
           </div>
         </section>
 
-        {/* Overview Section */}
+        {/* OpenText Migrate Hero Section */}
+        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <div className="absolute inset-0 bg-[radial-gradient(2px_2px_at_20px_30px,rgba(74,144,226,0.1),transparent),radial-gradient(2px_2px_at_40px_70px,rgba(74,144,226,0.05),transparent),radial-gradient(1px_1px_at_90px_40px,rgba(74,144,226,0.1),transparent)]"></div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center text-white max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
+                OpenText Migrate
+              </h2>
+              <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
+                Simple and seamless hardware upgrades, virtualization, switching hypervisors, and moving to, from and between clouds
+              </p>
+              
+              {/* Statistics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="text-3xl font-bold text-[#024cbb] mb-2">Zero</div>
+                  <div className="text-sm text-slate-400">Downtime</div>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="text-3xl font-bold text-[#024cbb] mb-2">256-bit</div>
+                  <div className="text-sm text-slate-400">AES Encryption</div>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="text-3xl font-bold text-[#024cbb] mb-2">Any</div>
+                  <div className="text-sm text-slate-400">Platform</div>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="text-3xl font-bold text-[#024cbb] mb-2">Real-time</div>
+                  <div className="text-sm text-slate-400">Replication</div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] hover:shadow-lg hover:shadow-[#024cbb]/25 hover:-translate-y-1 transition-all duration-300"
+                >
+                  Get Started
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:-translate-y-1 transition-all duration-300"
+                >
+                  Learn More
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Benefits Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Simplified Migration Process</h2>
-              <Card>
-                <CardContent className="p-8">
-                  <p className="text-lg mb-6">
-                    The simplified process automates and combines many steps that would otherwise be done manually and could lead to human error, reducing them to just a few simple tasks. This significantly lessens the effort required to achieve migration objectives.
-                  </p>
-                  <h3 className="text-xl font-semibold mb-4">Challenges in Data and Workload Migrations:</h3>
-                  <p className="mb-4">
-                    Data and workload moving are frequently time consuming, risky, and resource intensive, often deterring organizations due to the potential for downtime and data loss. While often unavoidable, migrations are frequently driven by mergers, relocations, hardware, software, and application upgrades, or transitions to the cloud.
-                  </p>
-                  <p className="mb-4">Organizations often postpone or avoid these crucial changes because of:</p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="flex items-start space-x-3">
-                      <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-sm">The significant investment of time and money in IT resources</span>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-sm">The inherent complexity of such projects</span>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-sm">The associated downtime that can impact operations</span>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-sm">The risk of data loss or corruption</span>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-sm">Potential application performance issues after migration</span>
-                    </div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
+                Why Choose OpenText Migrate?
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Structured, repeatable migration with near-zero downtime and highly automated processes
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🚀</span>
                   </div>
+                  <h3 className="text-xl font-semibold mb-3">Near-Zero Downtime</h3>
+                  <p className="text-muted-foreground">Migrate workloads with minimal business disruption. Cutover takes just seconds or minutes.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🔄</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Highly Automated</h3>
+                  <p className="text-muted-foreground">Streamlined process eliminates manual steps and human error, reducing migration complexity.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🔓</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Freedom from Lock-in</h3>
+                  <p className="text-muted-foreground">Move freely between clouds, hypervisors, and hardware without vendor constraints.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🛡️</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Risk Elimination</h3>
+                  <p className="text-muted-foreground">Reduces common migration risks through proven, repeatable processes and testing.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🎯</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Universal Compatibility</h3>
+                  <p className="text-muted-foreground">Migrate any server workload to any target destination with comprehensive platform support.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🏆</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Award-winning Support</h3>
+                  <p className="text-muted-foreground">Industry-recognized customer support to ensure successful migration outcomes.</p>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-16 bg-muted/30">
+        {/* Migration Types Section */}
+        <section className="py-16 bg-gradient-to-br from-slate-50 to-slate-100">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <Card key={index}>
-                    <CardHeader>
-                      <div className="flex items-center space-x-3">
-                        <feature.icon className="h-8 w-8 text-primary" />
-                        <CardTitle className="text-xl">{feature.title}</CardTitle>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
+                Move Any Server Workload
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Flexible migration options for any source to any target destination
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+              {[
+                "Physical-to-Physical",
+                "Physical-to-Virtual", 
+                "Virtual-to-Virtual",
+                "Onsite-to-Cloud",
+                "Cloud-to-Cloud",
+                "Cloud-back-Onsite"
+              ].map((type, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-[#024cbb] to-[#006] text-white p-4 rounded-xl text-center font-semibold text-sm hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-[#024cbb]/25 transition-all duration-300 cursor-pointer"
+                >
+                  {type}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Platform Support Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
+                Comprehensive Platform Support
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Source and target platform compatibility across operating systems and environments
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-[#024cbb]">
+                <h4 className="font-semibold text-lg mb-4 text-slate-800">Source Operating Systems</h4>
+                <ul className="space-y-2">
+                  {[
+                    "Microsoft Windows Server",
+                    "Red Hat Enterprise Linux", 
+                    "Oracle Enterprise Linux",
+                    "CentOS",
+                    "SUSE Enterprise Linux",
+                    "Ubuntu"
+                  ].map((os, index) => (
+                    <li key={index} className="flex items-center text-sm text-slate-600">
+                      <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3"></div>
+                      {os}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-[#024cbb]">
+                <h4 className="font-semibold text-lg mb-4 text-slate-800">Target Environments</h4>
+                <ul className="space-y-2">
+                  {[
+                    "VMware vSphere",
+                    "VMware vCloud Director",
+                    "VMware ESXi", 
+                    "Microsoft Hyper-V",
+                    "Microsoft Azure Stack",
+                    "Microsoft Azure (Classic & ARM)"
+                  ].map((env, index) => (
+                    <li key={index} className="flex items-center text-sm text-slate-600">
+                      <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3"></div>
+                      {env}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-[#024cbb]">
+                <h4 className="font-semibold text-lg mb-4 text-slate-800">Cloud Platforms</h4>
+                <ul className="space-y-2">
+                  {[
+                    "Amazon Web Services (AWS)",
+                    "Microsoft Azure",
+                    "Google Cloud Platform",
+                    "Hybrid Cloud Architectures", 
+                    "Multi-Cloud Environments",
+                    "Private Cloud Solutions"
+                  ].map((cloud, index) => (
+                    <li key={index} className="flex items-center text-sm text-slate-600">
+                      <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3"></div>
+                      {cloud}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Migration Process Section */}
+        <section className="py-16 bg-gradient-to-br from-slate-50 to-slate-100">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
+                Migration Process Visualization
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                See how OpenText Migrate ensures seamless transitions with real-time replication and planned cutover
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+              <div>
+                <div className="bg-white border rounded-2xl p-8 shadow-lg hover:scale-105 transition-transform duration-300">
+                  <div className="w-full h-64 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center">
+                    <p className="text-slate-500 text-center">Migration Process Diagram<br/>
+                    <span className="text-sm">(Placeholder for migration visualization)</span></p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <Card className="hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mr-4">
+                        <span className="text-white font-bold text-xl">1</span>
                       </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{feature.description}</p>
-                    </CardContent>
-                  </Card>
+                      <h3 className="text-xl font-semibold">Real-time Replication</h3>
+                    </div>
+                    <p className="text-muted-foreground">Continuous byte-level replication from primary system to target system ensures data synchronization with minimal network impact.</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mr-4">
+                        <span className="text-white font-bold text-xl">2</span>
+                      </div>
+                      <h3 className="text-xl font-semibold">Planned Cutover</h3>
+                    </div>
+                    <p className="text-muted-foreground">Scheduled cutover seamlessly transitions users to the new primary system while decommissioning the old infrastructure with near-zero downtime.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+              {[
+                { icon: "🔄", title: "Continuous Sync", desc: "Real-time data replication keeps systems synchronized" },
+                { icon: "⏱️", title: "Planned Timing", desc: "Schedule cutover at optimal business windows" },
+                { icon: "✅", title: "Seamless Transition", desc: "Users automatically redirected to new system" },
+                { icon: "🗑️", title: "Clean Decommission", desc: "Safe removal of legacy infrastructure" }
+              ].map((item, index) => (
+                <Card key={index} className="text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="text-4xl mb-4">{item.icon}</div>
+                    <h4 className="font-semibold mb-2">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                How It Works
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Real-time, byte-level replication with automated orchestration from discovery to cutover
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+              {[
+                { step: "1", title: "Discovery & Setup", desc: "Console discovers your systems and provisions target VMs automatically." },
+                { step: "2", title: "Real-time Replication", desc: "Byte-level replication creates and maintains synchronized replica with compression." },
+                { step: "3", title: "Testing & Validation", desc: "Test cutovers anytime without disrupting production operations." },
+                { step: "4", title: "Automated Cutover", desc: "Final cutover automation with seconds of downtime and rollback capability." }
+              ].map((item, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 hover:scale-125 transition-transform duration-300">
+                    {item.step}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
+                  <p className="text-slate-300">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-8">
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-white">Key Features</h3>
+                  <ul className="space-y-3">
+                    {[
+                      "AES 256-bit encryption for security",
+                      "Bandwidth throttling and compression",
+                      "Non-disruptive testing capabilities", 
+                      "Predictable and repeatable process",
+                      "Unified console management",
+                      "Third-party tool integration"
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-center text-slate-300">
+                        <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                          <span className="text-white text-xs font-bold">✓</span>
+                        </div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-white">Business Benefits</h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Eliminates migration downtime and data loss",
+                      "Reduces human error through automation",
+                      "Enables platform agility and flexibility",
+                      "Streamlines complex migration projects", 
+                      "Provides straightforward rollback options",
+                      "Maximizes IT investment returns"
+                    ].map((benefit, index) => (
+                      <li key={index} className="flex items-center text-slate-300">
+                        <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                          <span className="text-white text-xs font-bold">✓</span>
+                        </div>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Official Distributor Section */}
+        <section className="py-16 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(2px_2px_at_20px_30px,rgba(255,255,255,0.05),transparent),radial-gradient(2px_2px_at_40px_70px,rgba(255,255,255,0.03),transparent)]"></div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                Official OpenText Distributor - Middle East
+              </h2>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                We are the only legal and authorized OpenText distributor in the Middle East, ensuring authentic licensing and professional support
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+              <div>
+                <div className="bg-white/10 border-2 border-white/20 rounded-2xl p-8 backdrop-blur-sm">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                      <span className="text-white font-bold text-2xl">✓</span>
+                    </div>
+                    <h3 className="text-2xl font-semibold text-white">Exclusively Authorized</h3>
+                  </div>
+                  <p className="text-white/90">
+                    Direct partnership with OpenText ensures you receive genuine OpenText Migrate licenses, official updates, and comprehensive warranty coverage throughout the Middle East region.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                {[
+                  { icon: "🏆", title: "Regional Exclusivity", desc: "Sole authorized distributor with exclusive rights to sell and support OpenText Migrate across the Middle East." },
+                  { icon: "🛡️", title: "Legal Compliance", desc: "Protect your organization from unauthorized software and ensure full legal compliance with official licensing." },
+                  { icon: "🌍", title: "Local Expertise", desc: "Regional support team with deep understanding of Middle East business requirements and technical needs." }
+                ].map((item, index) => (
+                  <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                        <span className="text-xl">{item.icon}</span>
+                      </div>
+                      <h4 className="text-lg font-semibold text-white">{item.title}</h4>
+                    </div>
+                    <p className="text-white/80 text-sm">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-8 mt-12 text-center backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-amber-400 mb-4">⚠️ Avoid Unauthorized Resellers</h3>
+              <p className="text-white/90 mb-6 max-w-4xl mx-auto">
+                Ensure your migration projects are protected with genuine OpenText Migrate licenses. 
+                Unauthorized sources may provide invalid software, void warranties, and compromise your migration success.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { title: "✓ Genuine Licenses", desc: "Official OpenText Authorization" },
+                  { title: "✓ Expert Support", desc: "Regional Technical Team" },
+                  { title: "✓ Full Warranty", desc: "Complete Protection Coverage" }
+                ].map((item, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-lg font-bold text-white mb-1">{item.title}</div>
+                    <div className="text-sm text-white/70">{item.desc}</div>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* What We Deliver Section */}
+        {/* Call to Action Section */}
         <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
-              <Card>
-                <CardContent className="p-8">
-                  <div className="space-y-6">
-                    {deliverables.map((deliverable, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
-                        <span className="text-sm">{deliverable}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Ideal For & Key Benefits */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
-                {/* Ideal For */}
-                <div>
-                  <Card className="border-blue-200 bg-blue-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-blue-700">
-                        <Target className="h-6 w-6" />
-                        <span>Ideal For</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>Organizations planning infrastructure migrations</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>Companies moving to cloud environments</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>Enterprises with mixed IT environments</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>Businesses requiring minimal downtime</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Key Benefits */}
-                <div>
-                  <Card className="border-teal-200 bg-teal-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-teal-700">
-                        <CheckCircle className="h-6 w-6" />
-                        <span>Key Benefits</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span>Planned migrations with minimal downtime</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span>Extensive automation reducing migration risks</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span>Lower infrastructure costs through optimization</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span>Cross-platform migration flexibility</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
+              Ready to Migrate with Confidence?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Experience seamless migrations with near-zero downtime and minimal risk
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] hover:shadow-lg hover:shadow-[#024cbb]/25 hover:-translate-y-1 transition-all duration-300"
+              >
+                Start Your Migration
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-[#024cbb] text-[#024cbb] hover:bg-[#024cbb] hover:text-white hover:-translate-y-1 transition-all duration-300"
+              >
+                Request Demo
+              </Button>
             </div>
           </div>
         </section>
