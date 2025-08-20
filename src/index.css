@@ -148,13 +148,20 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 
-  /* H2 gradient styling */
+  /* H2 styling - blue color, larger and bolder */
   h2 {
-    background: linear-gradient(135deg, #024cbb 12%, #006 47%, #006 63%, #024cbb 88%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
+    color: #0066FF;
+    font-size: 3rem; /* Larger than default */
+    font-weight: 900; /* Extra bold */
+    background: none;
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+  }
+  
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 4rem; /* Even larger on desktop */
+    }
   }
 }
 
