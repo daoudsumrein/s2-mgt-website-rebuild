@@ -129,13 +129,14 @@ export default function DisasterRecovery() {
                   <div className="order-first lg:order-last">
                     <div className="relative bg-gradient-to-br from-slate-800 to-slate-700 border border-blue-500/20 rounded-xl overflow-hidden min-h-[320px] lg:min-h-[400px] group/video hover:border-blue-500 transition-all duration-400 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20">
                       {/* Video Container */}
-                      <div className="absolute inset-0">
+                      <div className="absolute inset-0 p-0 m-0">
                         <iframe 
                           src="https://player.vimeo.com/video/724980545?badge=0&autopause=0&player_id=0&app_id=58479&controls=1&title=0&byline=0&portrait=0" 
-                          className="w-full h-full border-none rounded-xl"
+                          className="w-full h-full border-none rounded-xl object-cover"
                           allow="autoplay; fullscreen; picture-in-picture"
                           allowFullScreen
                           title="Disaster Recovery Solutions"
+                          style={{ margin: 0, padding: 0, display: 'block' }}
                         />
                       </div>
                       
