@@ -150,7 +150,7 @@ All colors MUST be HSL.
 
   /* H2 gradient styling */
   h2 {
-    background: linear-gradient(135deg, #024CBB, #101C2F);
+    background: linear-gradient(135deg, #024cbb 12%, #006 47%, #006 63%, #024cbb 88%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
