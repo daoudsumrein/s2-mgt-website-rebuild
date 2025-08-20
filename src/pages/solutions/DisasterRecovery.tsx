@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -56,6 +58,15 @@ const deliverables = [{
   description: "Comprehensive support for diverse IT environments"
 }];
 export default function DisasterRecovery() {
+  // Scroll animation hooks for different sections
+  const heroAnimation = useScrollAnimation({ threshold: 0.3 });
+  const problemAnimation = useScrollAnimation({ threshold: 0.2 });
+  const benefitsAnimation = useScrollAnimation({ threshold: 0.2 });
+  const workflowAnimation = useScrollAnimation({ threshold: 0.2 });
+  const platformAnimation = useScrollAnimation({ threshold: 0.2 });
+  const featuresAnimation = useScrollAnimation({ threshold: 0.2 });
+  const distributorAnimation = useScrollAnimation({ threshold: 0.2 });
+
   return <div className="min-h-screen flex flex-col">
       <SEOHead title="Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions" description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools." keywords="disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools" canonicalUrl="https://s2mgt.com/solutions/disaster-recovery" />
       <Navigation />
@@ -81,7 +92,13 @@ export default function DisasterRecovery() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-6xl mx-auto">
+            <motion.div 
+              ref={heroAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="max-w-6xl mx-auto"
+            >
               {/* Hero Container */}
               <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-2xl p-6 md:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
                 {/* Shine effect */}
@@ -145,7 +162,7 @@ export default function DisasterRecovery() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
         </section>
@@ -153,15 +170,27 @@ export default function DisasterRecovery() {
         {/* Problem & Solution Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              The Cost of Downtime is Rising
-            </h2>
-            <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
-              From natural disasters to user errors and cyber attacks, IT systems face constant threats. 
-              Every hour of downtime costs thousands in lost revenue and productivity.
-            </p>
+            <motion.div
+              ref={problemAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={problemAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+                The Cost of Downtime is Rising
+              </h2>
+              <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
+                From natural disasters to user errors and cyber attacks, IT systems face constant threats. 
+                Every hour of downtime costs thousands in lost revenue and productivity.
+              </p>
+            </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <motion.div 
+              className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={problemAnimation.isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            >
               <Card className="relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 <CardContent className="p-8">
@@ -187,22 +216,34 @@ export default function DisasterRecovery() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Key Benefits Section */}
         <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              Why Choose OpenText Availability?
-            </h2>
-            <p className="text-lg text-center text-slate-300 max-w-4xl mx-auto mb-12">
-              Proven technology that delivers enterprise-grade protection with minimal performance impact
-            </p>
+            <motion.div
+              ref={benefitsAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={benefitsAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+                Why Choose OpenText Availability?
+              </h2>
+              <p className="text-lg text-center text-slate-300 max-w-4xl mx-auto mb-12">
+                Proven technology that delivers enterprise-grade protection with minimal performance impact
+              </p>
+            </motion.div>
             
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto">
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={benefitsAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            >
               <div className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
                 <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">99.9%</div>
                 <div className="text-sm text-slate-300 font-medium">Uptime Achieved</div>
@@ -219,10 +260,15 @@ export default function DisasterRecovery() {
                 <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">256</div>
                 <div className="text-sm text-slate-300 font-medium">AES Encryption</div>
               </div>
-            </div>
+            </motion.div>
             
             {/* Benefits Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <motion.div 
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={benefitsAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            >
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
@@ -294,21 +340,33 @@ export default function DisasterRecovery() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* How It Works Section */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              How It Works
-            </h2>
-            <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
-              Patented replication technology that captures changes at the byte level and replicates them between any source and target environment
-            </p>
+            <motion.div
+              ref={workflowAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={workflowAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+                How It Works
+              </h2>
+              <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
+                Patented replication technology that captures changes at the byte level and replicates them between any source and target environment
+              </p>
+            </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <motion.div 
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={workflowAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            >
               <div className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/40">
                   1
@@ -348,7 +406,7 @@ export default function DisasterRecovery() {
                   In case of outage, automatic or manual failover redirects users to secondary systems in seconds with minimal disruption.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -435,14 +493,26 @@ export default function DisasterRecovery() {
         {/* Platform Support Section */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              Universal Platform Support
-            </h2>
-            <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
-              Protect all your critical systems regardless of underlying infrastructure
-            </p>
+            <motion.div
+              ref={platformAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={platformAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+                Universal Platform Support
+              </h2>
+              <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
+                Protect all your critical systems regardless of underlying infrastructure
+              </p>
+            </motion.div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <motion.div 
+              className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={platformAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            >
               <Card className="bg-white/70 backdrop-blur-md border-l-4 border-blue-500 transition-all duration-300 hover:translate-x-1 hover:shadow-lg group">
                 <CardContent className="p-6">
                   <h4 className="font-bold text-lg mb-4 text-gray-800">Operating Systems</h4>
@@ -483,21 +553,33 @@ export default function DisasterRecovery() {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Advanced Features Section */}
         <section className="py-16 text-foreground" style={{ backgroundColor: '#F4F5F8' }}>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              Advanced Features
-            </h2>
-            <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
-              Enterprise-grade capabilities designed for mission-critical environments
-            </p>
+            <motion.div
+              ref={featuresAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={featuresAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+                Advanced Features
+              </h2>
+              <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
+                Enterprise-grade capabilities designed for mission-critical environments
+              </p>
+            </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <motion.div 
+              className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={featuresAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            >
               <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-6">Security & Compliance</h3>
@@ -625,7 +707,7 @@ export default function DisasterRecovery() {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -642,14 +724,25 @@ export default function DisasterRecovery() {
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-12">
+            <motion.div
+              ref={distributorAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={distributorAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-center mb-12"
+            >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Official Authorized Distributor</h2>
               <p className="text-lg text-blue-100 max-w-4xl mx-auto">
                 We are the only legal official OpenText/Carbonite Availability distributor, ensuring authentic licensing and professional support
               </p>
-            </div>
+            </motion.div>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <motion.div 
+              className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={distributorAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            >
               <div>
                 <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
                   <CardContent className="p-8">
@@ -709,9 +802,14 @@ export default function DisasterRecovery() {
                   </CardContent>
                 </Card>
               </div>
-            </div>
+            </motion.div>
             
-            <Card className="bg-amber-400/10 border-amber-400/30 backdrop-blur-lg mt-12 max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={distributorAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            >
+              <Card className="bg-amber-400/10 border-amber-400/30 backdrop-blur-lg mt-12 max-w-4xl mx-auto">
               <CardContent className="p-8 text-center">
                 <h3 className="text-amber-400 font-bold text-xl mb-4 flex items-center justify-center">
                   <span className="mr-2">⚠️</span>
@@ -737,6 +835,7 @@ export default function DisasterRecovery() {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
           </div>
         </section>
 
