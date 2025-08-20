@@ -72,44 +72,62 @@ export default function ServerMigration() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
-          <div className="container mx-auto px-2 md:px-4">
-            <div className="mx-auto">
-              {/* Floating Background Container with Gradient Border */}
-              <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
-                <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
-                  <div className="max-w-6xl mx-auto pl-8">
-                    <div className="grid lg:grid-cols-2 gap-4 items-center justify-items-start">
-                    {/* Left Content */}
-                    <div>
-                      <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
-                        Migration Solutions
-                      </Badge>
-                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        Server Migration
-                      </h1>
-                      <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
-                        Seamless any-to-any server migrations with minimal downtime and maximum efficiency
-                      </p>
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <Button size="default" className="text-base px-6 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Consultation', '_blank')}>
-                          <span className="relative z-10">Schedule Consultation</span>
-                          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
-                        </Button>
-                      </div>
-                    </div>
+        <section className="relative overflow-hidden h-[75vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          {/* Animated background particles */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            <div className="absolute inset-0 bg-[radial-gradient(2px_2px_at_20px_30px,rgba(74,144,226,0.3),transparent),radial-gradient(2px_2px_at_40px_70px,rgba(74,144,226,0.2),transparent),radial-gradient(1px_1px_at_90px_40px,rgba(74,144,226,0.4),transparent),radial-gradient(1px_1px_at_130px_80px,rgba(74,144,226,0.3),transparent)] bg-[length:150px_150px] animate-[float_20s_infinite_linear]"></div>
+          </div>
+
+          <div className="container mx-auto px-8 relative z-10">
+            <div className="max-w-6xl mx-auto">
+              {/* Hero Container */}
+              <div className="bg-slate-900/90 border-2 border-blue-500 rounded-2xl p-12 backdrop-blur-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3),0_0_0_1px_rgba(74,144,226,0.1)] relative overflow-hidden transition-all duration-300 hover:shadow-[0_30px_60px_rgba(0,0,0,0.4),0_0_0_1px_rgba(74,144,226,0.3),0_0_30px_rgba(74,144,226,0.2)] hover:border-blue-400 hover:-translate-y-1 group">
+                
+                {/* Hover Effect Overlay */}
+                <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-blue-500/10 to-transparent transition-all duration-500 group-hover:left-full"></div>
+                
+                <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                  {/* Left Content */}
+                  <div className="space-y-6">
+                    <Badge variant="outline" className="bg-blue-500/20 text-blue-400 border-blue-500/30 px-4 py-2 text-sm font-medium w-fit hover:bg-blue-500/30 hover:border-blue-400 hover:scale-105 transition-all duration-300 relative overflow-hidden group/badge">
+                      <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-all duration-500 group-hover/badge:left-full"></div>
+                      <span className="relative z-10">Migration Solutions</span>
+                    </Badge>
                     
-                    {/* Right Video */}
-                    <div className="relative flex justify-center lg:justify-start lg:pl-8">
-                      <div className="w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-2xl">
+                    <h1 className="text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent animate-pulse hover:scale-[1.02] hover:drop-shadow-[0_0_10px_rgba(74,144,226,0.3)] transition-all duration-300 cursor-default">
+                      Server Migration
+                    </h1>
+                    
+                    <p className="text-xl text-slate-300 leading-relaxed max-w-lg">
+                      Seamless any-to-any server migrations with minimal downtime and maximum efficiency using advanced automation and continuous replication.
+                    </p>
+                    
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-[0_4px_15px_rgba(74,144,226,0.3)] hover:shadow-[0_10px_30px_rgba(74,144,226,0.5),0_0_20px_rgba(74,144,226,0.3)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-[1.02] transition-all duration-300 relative overflow-hidden group/btn"
+                      onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Consultation', '_blank')}
+                    >
+                      <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-500 group-hover/btn:left-full"></div>
+                      <span className="relative z-10">Schedule Consultation</span>
+                    </Button>
+                  </div>
+                  
+                  {/* Right Video */}
+                  <div className="relative">
+                    <div className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl min-h-[320px] border border-blue-500/30 relative overflow-hidden transition-all duration-400 hover:scale-[1.02] hover:border-blue-500 hover:shadow-[0_15px_35px_rgba(0,0,0,0.3),0_0_30px_rgba(74,144,226,0.2)] group/video cursor-pointer">
+                      
+                      {/* Video gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                      
+                      <div className="w-full h-full min-h-[320px] relative rounded-xl overflow-hidden">
                         <iframe
-                          src="https://player.vimeo.com/video/735940664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                          className="w-full h-full"
+                          src="https://player.vimeo.com/video/735940664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1&amp;title=0&amp;byline=0&amp;portrait=0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full border-none absolute inset-0"
                           title="Server Migration Solution"
                         />
                       </div>
-                    </div>
                     </div>
                   </div>
                 </div>
