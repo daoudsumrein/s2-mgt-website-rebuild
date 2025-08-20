@@ -252,14 +252,14 @@ export default function OpenTextPage() {
 
                 {/* MailStore */}
                 <motion.div
-                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-orange-400/50 hover:shadow-[0_20px_40px_rgba(255,107,53,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
+                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-orange-400/50 hover:shadow-[0_20px_40px_rgba(255,107,53,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                   viewport={{ once: true }}
                 >
                   <div className="absolute top-0 left-0 w-0 h-full bg-gradient-to-r from-white/10 to-transparent transition-all duration-600 group-hover:w-full"></div>
-                  <div className="relative z-10 flex flex-col items-center">
+                  <div className="relative z-10 flex flex-col items-center justify-center h-full py-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="120" viewBox="0 0 270 160" fill="none" className="mb-4">
                       <path d="M79.9825 78.4594C79.9825 84.2709 85.9328 84.1741 85.9328 86.4793C85.9328 87.1315 85.3854 87.9322 83.9816 87.9322C82.2815 87.9322 80.9807 87.6804 79.7313 87.1315L77.9282 94.9512C79.3256 95.2999 81.1803 95.5001 83.5759 95.5001C91.1232 95.5001 96.172 90.9865 96.172 85.0264C96.172 79.0664 90.022 78.8081 90.022 76.7547C90.022 75.9023 90.6209 75.3987 91.9733 75.3987C93.3256 75.3987 94.4719 75.5988 95.6761 75.9992L97.3762 68.4765C96.0754 68.2763 94.4783 68.1278 92.0763 68.1278C83.08 68.1278 79.9761 73.694 79.9761 78.4529L79.9825 78.4594Z" fill="white"/>
                       <path d="M109.122 94.8027L112.574 76.7546L116.985 76.7417C118.054 73.6035 119.941 70.8527 122.394 68.7347H99.4238L97.9233 76.7546H103.571L100.119 94.8027H109.122Z" fill="white"/>
