@@ -479,6 +479,7 @@ export default function DisasterRecovery() {
                     <li className="font-medium">Google Cloud Platform</li>
                     <li className="font-medium">VMware vCloud Director</li>
                     <li className="font-medium">Hybrid Cloud Architectures</li>
+                    <li className="font-medium">Any Cloud Platform</li>
                   </ul>
                 </CardContent>
               </Card>
