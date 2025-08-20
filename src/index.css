@@ -147,6 +147,15 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* H2 gradient styling */
+  h2 {
+    background: linear-gradient(135deg, #024CBB, #101C2F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+  }
 }
 
 /* Floating particle animations */
