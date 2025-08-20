@@ -364,17 +364,13 @@ export default function DisasterRecovery() {
             
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <div>
-                <Card className="overflow-hidden border-0 shadow-2xl">
-                  <CardContent className="p-8">
-                    <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center overflow-hidden">
-                      <img 
-                        src="/lovable-uploads/75dbbe95-acbf-4db9-8719-50b578aa327c.png" 
-                        alt="OpenText Availability Failover Process - Shows primary system replicating to target system, then automatic failover when primary fails"
-                        className="w-full h-full object-contain rounded-xl"
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/75dbbe95-acbf-4db9-8719-50b578aa327c.png" 
+                    alt="OpenText Availability Failover Process - Shows primary system replicating to target system, then automatic failover when primary fails"
+                    className="w-full h-auto object-contain rounded-xl transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
               </div>
               
               <div className="space-y-6">
