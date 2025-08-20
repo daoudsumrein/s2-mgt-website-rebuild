@@ -199,6 +199,16 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-150px, -150px); }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 /* Partner carousel styles */
 .partner-carousel-mask {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
