@@ -94,7 +94,7 @@ export default function ServerMigration() {
                       <span className="relative z-10">Migration Solutions</span>
                     </Badge>
                     
-                    <h1 className="text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent animate-pulse hover:scale-[1.02] hover:drop-shadow-[0_0_10px_rgba(74,144,226,0.3)] transition-all duration-300 cursor-default">
+                    <h1 className="text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent bg-[length:300%_300%] animate-[gradient-shift_6s_ease-in-out_infinite] hover:scale-[1.02] hover:drop-shadow-[0_0_10px_rgba(74,144,226,0.3)] transition-all duration-300 cursor-default">
                       Server Migration
                     </h1>
                     
