@@ -102,7 +102,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'gradient-shift': 'gradient-shift 6s ease-in-out infinite'
+				'gradient-shift': 'gradient-shift 8s ease-in-out infinite'
 			}
 		}
 	},
