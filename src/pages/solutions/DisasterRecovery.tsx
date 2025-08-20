@@ -127,21 +127,20 @@ export default function DisasterRecovery() {
                   
                   {/* Right Media Section */}
                   <div className="order-first lg:order-last">
-                    <div className="relative overflow-hidden sm:h-[320px] group/video hover:border-blue-500 transition-all duration-400 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20">
+                    <div className="relative overflow-hidden h-[280px] sm:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-xl">
                       {/* Video Container */}
-                      <div className="absolute inset-0 p-0 m-0">
+                      <div className="absolute inset-0">
                         <iframe 
                           src="https://player.vimeo.com/video/724980545?badge=0&autopause=0&player_id=0&app_id=58479&controls=1&title=0&byline=0&portrait=0" 
-                          className="w-full h-full border-none rounded-xl object-cover"
+                          className="w-full h-full border-none rounded-xl"
                           allow="autoplay; fullscreen; picture-in-picture"
                           allowFullScreen
                           title="Disaster Recovery Solutions"
-                          style={{ margin: 0, padding: 0, display: 'block' }}
                         />
                       </div>
                       
                       {/* Overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-45 from-blue-500/10 via-transparent to-blue-500/10 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
                     </div>
                   </div>
                 </div>
