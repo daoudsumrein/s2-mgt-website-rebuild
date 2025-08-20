@@ -642,7 +642,7 @@ export default function DisasterRecovery() {
           
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Official Authorized Distributor</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Official Authorized Distributor</h2>
               <p className="text-lg text-blue-100 max-w-4xl mx-auto">
                 We are the only legal official OpenText/Carbonite Availability distributor, ensuring authentic licensing and professional support
               </p>
@@ -742,7 +742,7 @@ export default function DisasterRecovery() {
         {/* Final Call to Action Section */}
         <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Eliminate Downtime?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Eliminate Downtime?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto font-normal">
               Protect your critical systems with proven high availability and disaster recovery technology
             </p>
