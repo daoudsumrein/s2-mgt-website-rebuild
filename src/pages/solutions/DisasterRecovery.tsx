@@ -740,27 +740,19 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Final Call to Action Section */}
-        <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <section className="py-16 bg-gradient-to-br from-gray-800 to-gray-900 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Eliminate Downtime?</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto font-normal">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto font-normal">
               Protect your critical systems with proven high availability and disaster recovery technology
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+            <div className="flex justify-center">
               <Button 
                 size="lg" 
-                className="bg-white text-blue-600 hover:bg-blue-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg font-semibold"
-                onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=DR%20Assessment%20Request', '_blank')}
+                className="bg-white text-gray-800 hover:bg-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg font-semibold px-8 py-4 text-lg"
+                onClick={() => window.location.href = '/contact'}
               >
-                Get Started Today
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300 hover:-translate-y-1 font-semibold"
-                onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=DR%20Demo%20Request', '_blank')}
-              >
-                Request Demo
+                Contact Us Today
               </Button>
             </div>
           </div>
