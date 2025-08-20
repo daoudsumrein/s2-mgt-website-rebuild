@@ -164,7 +164,7 @@ export default function OpenTextPage() {
         </section>
 
         {/* OpenText Products Showcase */}
-        <section className="relative min-h-screen flex items-center justify-center py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden" style={{backgroundColor: '#101C2F'}}>
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-6xl mx-auto text-center p-8 sm:p-16 bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 shadow-2xl">
               <motion.h2 
