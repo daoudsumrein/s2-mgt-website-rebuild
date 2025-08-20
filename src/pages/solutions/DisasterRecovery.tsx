@@ -487,39 +487,39 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Advanced Features Section */}
-        <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <section className="py-16 text-foreground" style={{ backgroundColor: '#F4F5F8' }}>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
               Advanced Features
             </h2>
-            <p className="text-lg text-center text-slate-300 max-w-4xl mx-auto mb-12">
+            <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
               Enterprise-grade capabilities designed for mission-critical environments
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+              <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-6">Security & Compliance</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-6">Security & Compliance</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-center text-slate-300 font-medium">
+                    <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       AES-256 encryption in transit
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Secure heartbeat monitoring
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Comprehensive audit trails
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
@@ -529,29 +529,29 @@ export default function DisasterRecovery() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+              <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-6">Performance Optimization</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-6">Performance Optimization</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Three-tier compression technology
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Bandwidth throttling options
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Byte-level change tracking
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
@@ -561,29 +561,29 @@ export default function DisasterRecovery() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+              <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-6">Management & Monitoring</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-6">Management & Monitoring</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Comprehensive REST API
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Integrated DNS management
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Real-time alerting system
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
@@ -593,29 +593,29 @@ export default function DisasterRecovery() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+              <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-6">Testing & Recovery</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-6">Testing & Recovery</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Non-disruptive testing capabilities
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Point-in-time recovery options
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                     <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
                       Automatic and manual failover
                     </li>
-                    <li className="flex items-center text-slate-300 font-medium">
+                    <li className="flex items-center text-muted-foreground font-medium">
                       <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-emerald-400 font-bold text-sm">✓</span>
                       </div>
