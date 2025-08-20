@@ -127,7 +127,7 @@ export default function DisasterRecovery() {
                   
                   {/* Right Media Section */}
                   <div className="order-first lg:order-last">
-                    <div className="relative bg-gradient-to-br from-slate-800 to-slate-700 border border-blue-500/20 rounded-xl overflow-hidden sm:h-[320px] group/video hover:border-blue-500 transition-all duration-400 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20">
+                    <div className="relative overflow-hidden sm:h-[320px] group/video hover:border-blue-500 transition-all duration-400 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20">
                       {/* Video Container */}
                       <div className="absolute inset-0 p-0 m-0">
                         <iframe 
