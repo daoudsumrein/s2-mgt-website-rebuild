@@ -153,7 +153,7 @@ export default function DisasterRecovery() {
         {/* Problem & Solution Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
               The Cost of Downtime is Rising
             </h2>
             <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
@@ -194,7 +194,7 @@ export default function DisasterRecovery() {
         {/* Key Benefits Section */}
         <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
               Why Choose OpenText Availability?
             </h2>
             <p className="text-lg text-center text-slate-300 max-w-4xl mx-auto mb-12">
@@ -301,7 +301,7 @@ export default function DisasterRecovery() {
         {/* How It Works Section */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
               How It Works
             </h2>
             <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
@@ -355,7 +355,7 @@ export default function DisasterRecovery() {
         {/* Failover Diagram Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
               Seamless Failover in Action
             </h2>
             <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
@@ -435,7 +435,7 @@ export default function DisasterRecovery() {
         {/* Platform Support Section */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
               Universal Platform Support
             </h2>
             <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
@@ -489,7 +489,7 @@ export default function DisasterRecovery() {
         {/* Advanced Features Section */}
         <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
               Advanced Features
             </h2>
             <p className="text-lg text-center text-slate-300 max-w-4xl mx-auto mb-12">
