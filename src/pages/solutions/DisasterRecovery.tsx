@@ -61,7 +61,7 @@ export default function DisasterRecovery() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8 relative overflow-hidden min-h-screen flex items-center justify-center">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[85vh] flex items-center justify-center">
           {/* Animated background particles */}
           <div className="fixed inset-0 pointer-events-none z-0">
             <div 
