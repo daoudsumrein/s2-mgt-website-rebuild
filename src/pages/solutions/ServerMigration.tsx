@@ -152,7 +152,10 @@ export default function ServerMigration() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent">
+                <span 
+                  className="bg-clip-text text-transparent"
+                  style={{ background: 'linear-gradient(135deg, #024cbb 12%, #006 47%, #006 63%, #024cbb 88%)' }}
+                >
                   OpenText Migrate
                 </span>
               </h2>
@@ -163,20 +166,20 @@ export default function ServerMigration() {
             
             {/* Stats Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mb-12">
-              <div className="bg-slate-900/90 border border-blue-500/30 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:border-blue-400/50 hover:scale-105 transition-all duration-300">
-                <div className="text-2xl lg:text-3xl font-bold text-blue-400 mb-2">Zero</div>
+              <div className="bg-slate-900/90 border-2 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:scale-105 transition-all duration-300" style={{ borderColor: '#024cbb' }}>
+                <div className="text-2xl lg:text-3xl font-bold mb-2" style={{ color: '#024cbb' }}>Zero</div>
                 <div className="text-sm lg:text-base text-slate-400">Downtime</div>
               </div>
-              <div className="bg-slate-900/90 border border-blue-500/30 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:border-blue-400/50 hover:scale-105 transition-all duration-300">
-                <div className="text-2xl lg:text-3xl font-bold text-blue-400 mb-2">256-bit</div>
+              <div className="bg-slate-900/90 border-2 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:scale-105 transition-all duration-300" style={{ borderColor: '#024cbb' }}>
+                <div className="text-2xl lg:text-3xl font-bold mb-2" style={{ color: '#024cbb' }}>256-bit</div>
                 <div className="text-sm lg:text-base text-slate-400">AES Encryption</div>
               </div>
-              <div className="bg-slate-900/90 border border-blue-500/30 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:border-blue-400/50 hover:scale-105 transition-all duration-300">
-                <div className="text-2xl lg:text-3xl font-bold text-blue-400 mb-2">Any</div>
+              <div className="bg-slate-900/90 border-2 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:scale-105 transition-all duration-300" style={{ borderColor: '#024cbb' }}>
+                <div className="text-2xl lg:text-3xl font-bold mb-2" style={{ color: '#024cbb' }}>Any</div>
                 <div className="text-sm lg:text-base text-slate-400">Platform</div>
               </div>
-              <div className="bg-slate-900/90 border border-blue-500/30 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:border-blue-400/50 hover:scale-105 transition-all duration-300">
-                <div className="text-2xl lg:text-3xl font-bold text-blue-400 mb-2">Real-time</div>
+              <div className="bg-slate-900/90 border-2 rounded-xl p-4 lg:p-6 text-center backdrop-blur-sm hover:scale-105 transition-all duration-300" style={{ borderColor: '#024cbb' }}>
+                <div className="text-2xl lg:text-3xl font-bold mb-2" style={{ color: '#024cbb' }}>Real-time</div>
                 <div className="text-sm lg:text-base text-slate-400">Replication</div>
               </div>
             </div>
@@ -185,7 +188,8 @@ export default function ServerMigration() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                className="text-white px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                style={{ background: 'linear-gradient(135deg, #024cbb 12%, #006 47%, #006 63%, #024cbb 88%)' }}
                 onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=OpenText%20Migrate%20Consultation', '_blank')}
               >
                 Get Started
@@ -212,9 +216,9 @@ export default function ServerMigration() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="group hover:shadow-lg hover:-translate-y-2 transition-all duration-300 border-t-4 border-t-blue-500">
+              <Card className="group hover:shadow-lg hover:-translate-y-2 transition-all duration-300 border-t-4" style={{ borderTopColor: '#024cbb' }}>
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, #024cbb 12%, #006 47%, #006 63%, #024cbb 88%)' }}>
                     <Zap className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">Near-Zero Downtime</h3>
@@ -296,7 +300,8 @@ export default function ServerMigration() {
               ].map((type, index) => (
                 <div 
                   key={index}
-                  className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-4 lg:p-6 rounded-lg text-center font-semibold text-sm lg:text-base hover:scale-105 hover:shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 cursor-pointer"
+                  className="text-white p-4 lg:p-6 rounded-lg text-center font-semibold text-sm lg:text-base hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  style={{ background: 'linear-gradient(135deg, #024cbb 12%, #006 47%, #006 63%, #024cbb 88%)' }}
                 >
                   {type}
                 </div>
@@ -316,9 +321,9 @@ export default function ServerMigration() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-all duration-300">
+              <Card className="border-l-4 hover:shadow-lg transition-all duration-300" style={{ borderLeftColor: '#024cbb' }}>
                 <CardHeader>
-                  <CardTitle className="text-blue-700">Source Operating Systems</CardTitle>
+                  <CardTitle style={{ color: '#024cbb' }}>Source Operating Systems</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
@@ -331,7 +336,7 @@ export default function ServerMigration() {
                       'Ubuntu'
                     ].map((os, index) => (
                       <li key={index} className="flex items-center text-sm">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#024cbb' }}></div>
                         {os}
                       </li>
                     ))}
@@ -554,7 +559,7 @@ export default function ServerMigration() {
         </section>
 
         {/* Official Distributor Section */}
-        <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 relative overflow-hidden">
+        <section className="py-16 lg:py-24 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #024cbb 12%, #006 47%, #006 63%, #024cbb 88%)' }}>
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-[radial-gradient(2px_2px_at_20px_30px,rgba(255,255,255,0.05),transparent),radial-gradient(2px_2px_at_40px_70px,rgba(255,255,255,0.03),transparent)] bg-[length:150px_150px] opacity-30"></div>
           
@@ -635,7 +640,8 @@ export default function ServerMigration() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                className="text-white px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                style={{ background: 'linear-gradient(135deg, #024cbb 12%, #006 47%, #006 63%, #024cbb 88%)' }}
                 onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Consultation', '_blank')}
               >
                 Start Your Migration
@@ -643,7 +649,8 @@ export default function ServerMigration() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                className="border-2 px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300 hover:bg-opacity-10"
+                style={{ borderColor: '#024cbb', color: '#024cbb' }}
               >
                 Request Demo
               </Button>
