@@ -190,14 +190,14 @@ export default function OpenTextPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                 {/* Carbonite */}
                 <motion.div
-                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-blue-400/50 hover:shadow-[0_20px_40px_rgba(74,158,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
+                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-blue-400/50 hover:shadow-[0_20px_40px_rgba(74,158,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                   viewport={{ once: true }}
                 >
                   <div className="absolute top-0 left-0 w-0 h-full bg-gradient-to-r from-white/10 to-transparent transition-all duration-600 group-hover:w-full"></div>
-                  <div className="relative z-10 flex flex-col items-center justify-center h-full py-4">
+                  <div className="relative z-10 flex flex-col items-center">
                     <svg width="200" height="40" viewBox="0 0 417 83" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-4">
                       <path d="M74.1199 22.84C74.1199 8.53 83.0199 2.59 95.8099 2.59C100.6 2.59 105.33 3.42 108.19 4.31L106.84 14.63C104.34 13.58 100.96 12.85 97.7299 12.85C91.0699 12.85 86.2799 15.96 86.2799 22.83C86.2799 29.7 90.9599 32.81 97.9899 32.81C102.05 32.81 105.79 31.76 108.76 30.48L108.81 41.3C106 42.19 100.54 43.08 95.6499 43.08C82.9599 43.08 74.1099 37.15 74.1099 22.83L74.1199 22.84Z" fill="white"/>
                       <path d="M123.72 3.42H138.7L151.5 42.25H139.32L137.14 35.09H125.28L123.15 42.25H110.92L123.72 3.42ZM134.59 27.27L131.21 16.06L127.83 27.27H134.59Z" fill="white"/>
@@ -218,14 +218,14 @@ export default function OpenTextPage() {
 
                 {/* Webroot */}
                 <motion.div
-                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-green-400/50 hover:shadow-[0_20px_40px_rgba(76,175,80,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
+                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-green-400/50 hover:shadow-[0_20px_40px_rgba(76,175,80,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                   viewport={{ once: true }}
                 >
                   <div className="absolute top-0 left-0 w-0 h-full bg-gradient-to-r from-white/10 to-transparent transition-all duration-600 group-hover:w-full"></div>
-                  <div className="relative z-10 flex flex-col items-center justify-center h-full py-4">
+                  <div className="relative z-10 flex flex-col items-center">
                     <svg width="200" height="37" viewBox="0 0 435 81" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-4">
                       <g clipPath="url(#clip0_550_38828)">
                         <path d="M143.15 4.86L131.01 41.28H118.87L111.79 20.03L104.71 41.28H92.5697L80.4297 4.86H92.5697L99.7997 26.56L107.04 4.86H116.55L123.79 26.56L131.03 4.86H143.17H143.15Z" fill="white"/>
@@ -315,14 +315,14 @@ export default function OpenTextPage() {
 
                 {/* Cloudally */}
                 <motion.div
-                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-cyan-400/50 hover:shadow-[0_20px_40px_rgba(0,212,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
+                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-cyan-400/50 hover:shadow-[0_20px_40px_rgba(0,212,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
                   viewport={{ once: true }}
                 >
                   <div className="absolute top-0 left-0 w-0 h-full bg-gradient-to-r from-white/10 to-transparent transition-all duration-600 group-hover:w-full"></div>
-                  <div className="relative z-10 flex flex-col items-center justify-center h-full py-4">
+                  <div className="relative z-10 flex flex-col items-center">
                     <svg width="200" height="52" viewBox="0 0 100 26" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-4">
                       <path d="M96.2712 12.5859L93.0419 6.86062L99.5004 6.86062L96.2712 12.5859Z" fill="url(#paint0_linear_7040_108)"/>
                       <path d="M85.2891 6.85742H89.1824L94.2863 16.0953L89.579 24.6155H85.6856L90.3929 16.0953L85.2891 6.85742Z" fill="#101C2F"/>
