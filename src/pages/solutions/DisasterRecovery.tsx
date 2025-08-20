@@ -629,7 +629,7 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Official Distributor Section */}
-        <section className="py-16 bg-gradient-to-br from-blue-700 to-purple-600 text-white relative overflow-hidden">
+        <section className="py-16 text-white relative overflow-hidden" style={{ backgroundColor: '#0B1328' }}>
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-30">
             <div 
