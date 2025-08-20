@@ -122,7 +122,7 @@ export default function ServerMigration() {
                   
                   {/* Right Video */}
                   <div className="relative">
-                    <div className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl min-h-[320px] border border-blue-500/30 relative overflow-hidden transition-all duration-400 hover:scale-[1.02] hover:border-blue-500 hover:shadow-[0_15px_35px_rgba(0,0,0,0.3),0_0_30px_rgba(74,144,226,0.2)] group/video cursor-pointer">
+                    <div className="relative overflow-hidden h-[280px] sm:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-xl">
                       
                       {/* Video gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
