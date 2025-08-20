@@ -198,7 +198,7 @@ export default function OpenTextPage() {
                 >
                   <div className="absolute top-0 left-0 w-0 h-full bg-gradient-to-r from-white/10 to-transparent transition-all duration-600 group-hover:w-full"></div>
                   <div className="relative z-10 flex flex-col items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="417" height="83" viewBox="0 0 417 83" fill="none" className="mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="40" viewBox="0 0 417 83" fill="none" className="mb-4">
 <path d="M74.1199 22.84C74.1199 8.53 83.0199 2.59 95.8099 2.59C100.6 2.59 105.33 3.42 108.19 4.31L106.84 14.63C104.34 13.58 100.96 12.85 97.7299 12.85C91.0699 12.85 86.2799 15.96 86.2799 22.83C86.2799 29.7 90.9599 32.81 97.9899 32.81C102.05 32.81 105.79 31.76 108.76 30.48L108.81 41.3C106 42.19 100.54 43.08 95.6499 43.08C82.9599 43.08 74.1099 37.15 74.1099 22.83L74.1199 22.84Z" fill="white"/>
 <path d="M123.72 3.42H138.7L151.5 42.25H139.32L137.14 35.09H125.28L123.15 42.25H110.92L123.72 3.42ZM134.59 27.27L131.21 16.06L127.83 27.27H134.59Z" fill="white"/>
 <path d="M154.3 3.42H173.81C183.9 3.42 189.63 8.3 189.63 16.57C189.63 22.45 186.77 26.17 182.66 28.16L190.31 42.25H176.73L170.85 30.55H166.48V42.25H154.3V3.42ZM172.3 22C175.16 22 177.35 20.72 177.35 17.56C177.35 14.23 175.22 13.12 172.36 13.12H166.48V22H172.31H172.3Z" fill="white"/>
