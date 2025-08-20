@@ -72,7 +72,7 @@ export default function ServerMigration() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 relative overflow-hidden md:py-[55px]">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           <div className="container mx-auto px-2 md:px-4">
             <div className="mx-auto">
               {/* Floating Background Container with Gradient Border */}
@@ -99,10 +99,15 @@ export default function ServerMigration() {
                       </div>
                     </div>
                     
-                    {/* Right Image Placeholder */}
+                    {/* Right Video */}
                     <div className="relative flex justify-center lg:justify-start lg:pl-8">
-                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10 px-[11px] mx-[60px]">
-                        
+                      <div className="w-full max-w-md aspect-video rounded-lg overflow-hidden shadow-2xl">
+                        <iframe
+                          src="https://player.vimeo.com/video/735940664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                          className="w-full h-full"
+                          title="Server Migration Solution"
+                        />
                       </div>
                     </div>
                     </div>
