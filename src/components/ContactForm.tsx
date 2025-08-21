@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -15,13 +16,50 @@ export default function ContactForm() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const { toast } = useToast();
+
+  const RECAPTCHA_SITE_KEY = "6LfBwa0rAAAAAOmCXCu2AQ2nMxM_Fog1mM5nqNYV";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!recaptchaValue) {
+      toast({
+        title: "Please complete the CAPTCHA",
+        description: "CAPTCHA verification is required to submit the form.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
+      // First, verify reCAPTCHA with your PHP script
+      const recaptchaVerification = await fetch('https://s2mgt.com/verify-recaptcha.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recaptcha_response: recaptchaValue })
+      });
+      
+      const verificationResult = await recaptchaVerification.json();
+      
+      if (!verificationResult.success) {
+        toast({
+          title: "reCAPTCHA verification failed",
+          description: "Please try again or refresh the page.",
+          variant: "destructive",
+        });
+        // Reset reCAPTCHA
+        setRecaptchaValue(null);
+        recaptchaRef.current?.reset();
+        setIsSubmitting(false);
+        return;
+      }
+      
+      // reCAPTCHA verified successfully, now send email via EmailJS
       const templateParams = {
         from_name: formData.name,
         company: formData.company,
@@ -49,7 +87,7 @@ export default function ContactForm() {
         description: "We will contact you within 24 hours to discuss your IT transformation needs.",
       });
 
-      // Reset form
+      // Reset form and reCAPTCHA
       setFormData({
         name: '',
         company: '',
@@ -57,13 +95,26 @@ export default function ContactForm() {
         phone: '',
         message: ''
       });
+      setRecaptchaValue(null);
+      recaptchaRef.current?.reset();
+
     } catch (error) {
-      console.error('EmailJS error:', error);
+      console.error('Form submission error:', error);
+      
+      // Check if it's a reCAPTCHA verification error or EmailJS error
+      const errorMessage = error instanceof Error && error.message.includes('fetch') 
+        ? "Failed to verify reCAPTCHA. Please check your internet connection and try again."
+        : "There was an error sending your message. Please try again or contact us directly.";
+      
       toast({
-        title: "Error",
-        description: "There was an error sending your message. Please try again or contact us directly.",
+        title: "Submission failed",
+        description: errorMessage,
         variant: "destructive",
       });
+      
+      // Reset reCAPTCHA on any error
+      setRecaptchaValue(null);
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -155,9 +206,19 @@ export default function ContactForm() {
             />
           </div>
           
+          {/* reCAPTCHA */}
+          <div className="flex justify-center">
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={RECAPTCHA_SITE_KEY}
+              onChange={(value) => setRecaptchaValue(value)}
+              theme="light"
+            />
+          </div>
+          
           <Button 
             type="submit" 
-            disabled={isSubmitting}
+            disabled={isSubmitting || !recaptchaValue}
             className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold disabled:opacity-50"
             size="lg"
           >
