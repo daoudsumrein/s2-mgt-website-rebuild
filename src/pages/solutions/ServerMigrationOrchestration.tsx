@@ -115,10 +115,17 @@ export default function ServerMigrationOrchestration() {
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/visual hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
                       {/* Migration Visual */}
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-xl flex items-center justify-center border border-white/10">
-                        <div className="text-center">
-                          <Server className="h-16 w-16 md:h-24 md:w-24 text-primary/60 mx-auto mb-4" />
-                          <div className="text-sm text-slate-400 font-medium">Migration Orchestration</div>
-                        </div>
+                        <iframe 
+                          width="100%" 
+                          height="100%" 
+                          src="https://www.youtube.com/embed/vJ5ry3rSW9M?si=poh2f0UqFTsi9gXa" 
+                          title="YouTube video player" 
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          referrerPolicy="strict-origin-when-cross-origin" 
+                          allowFullScreen
+                          className="rounded-xl"
+                        />
                       </div>
                       
                       {/* Overlay gradient */}
