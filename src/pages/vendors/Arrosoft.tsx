@@ -218,7 +218,7 @@ const Arrosoft = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('/lovable-uploads/767ecd89-f3d8-4ec4-9ac5-583be7021979.png')`
+              backgroundImage: `url('/lovable-uploads/16a0ea40-cf75-4e85-bae0-92937810cbd3.png')`
             }}
           />
           
