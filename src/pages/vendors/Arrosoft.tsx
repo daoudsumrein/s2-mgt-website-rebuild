@@ -16,7 +16,7 @@ const Arrosoft = () => {
         <section className="min-h-screen relative overflow-hidden flex items-center px-4 md:px-8 pt-20">
           {/* Background Image - Clear on Desktop */}
           <div className="absolute inset-0 z-0 hidden md:block" style={{
-          backgroundImage: `url('https://www.arrosoft.com/_next/image?url=%2Fhome%2Fhero-1.webp&w=3840&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr')`,
+          backgroundImage: `url('/lovable-uploads/9a3bb09d-af49-4293-ba68-f66dd17005e2.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
