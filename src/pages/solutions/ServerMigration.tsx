@@ -5,70 +5,47 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Server, Cloud, Zap, RefreshCw, CheckCircle, Target, Shield, Clock, Database, ArrowUpDown, Monitor, Gauge } from "lucide-react";
-
-const features = [
-  {
-    icon: Clock,
-    title: "Minimal Downtime",
-    description: "Planned and consistent migrations designed to maintain operations with minimal interruption"
-  },
-  {
-    icon: Zap,
-    title: "Extensive Automation",
-    description: "Extensive automation that reduces migration risks and simplifies complex processes"
-  },
-  {
-    icon: Database,
-    title: "Lower Costs",
-    description: "Lower infrastructure costs through optimized and efficient data management"
-  },
-  {
-    icon: Cloud,
-    title: "Platform Flexibility",
-    description: "Flexibility to operate across any cloud, hypervisor, or hardware, avoiding vendor lock in"
-  },
-  {
-    icon: ArrowUpDown,
-    title: "Cross Platform Migration",
-    description: "Cross platform migration across physical, virtual, or cloud environments regardless of location"
-  },
-  {
-    icon: RefreshCw,
-    title: "Continuous Replication",
-    description: "Continuous, scalable replication that preserves system performance and conserves bandwidth"
-  },
-  {
-    icon: CheckCircle,
-    title: "Non-Intrusive Testing",
-    description: "Non-intrusive testing capabilities that validate migrations without affecting production"
-  },
-  {
-    icon: Shield,
-    title: "Enterprise Grade Protection",
-    description: "Enterprise grade data protection using 256-bit AES encryption"
-  },
-  {
-    icon: Gauge,
-    title: "Scalability",
-    description: "Scalability and effortless from a single workload to thousands across distributed environments"
-  }
-];
-
-const deliverables = [
-  "All administrative tasks are handled from a single console",
-  "Real-time data synchronization is possible regardless of geographic boundaries between any source to any target",
-  "Cutover and switch to the new environment can be completed within minutes"
-];
-
+const features = [{
+  icon: Clock,
+  title: "Minimal Downtime",
+  description: "Planned and consistent migrations designed to maintain operations with minimal interruption"
+}, {
+  icon: Zap,
+  title: "Extensive Automation",
+  description: "Extensive automation that reduces migration risks and simplifies complex processes"
+}, {
+  icon: Database,
+  title: "Lower Costs",
+  description: "Lower infrastructure costs through optimized and efficient data management"
+}, {
+  icon: Cloud,
+  title: "Platform Flexibility",
+  description: "Flexibility to operate across any cloud, hypervisor, or hardware, avoiding vendor lock in"
+}, {
+  icon: ArrowUpDown,
+  title: "Cross Platform Migration",
+  description: "Cross platform migration across physical, virtual, or cloud environments regardless of location"
+}, {
+  icon: RefreshCw,
+  title: "Continuous Replication",
+  description: "Continuous, scalable replication that preserves system performance and conserves bandwidth"
+}, {
+  icon: CheckCircle,
+  title: "Non-Intrusive Testing",
+  description: "Non-intrusive testing capabilities that validate migrations without affecting production"
+}, {
+  icon: Shield,
+  title: "Enterprise Grade Protection",
+  description: "Enterprise grade data protection using 256-bit AES encryption"
+}, {
+  icon: Gauge,
+  title: "Scalability",
+  description: "Scalability and effortless from a single workload to thousands across distributed environments"
+}];
+const deliverables = ["All administrative tasks are handled from a single console", "Real-time data synchronization is possible regardless of geographic boundaries between any source to any target", "Cutover and switch to the new environment can be completed within minutes"];
 export default function ServerMigration() {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Server Migration Solutions MENA - Seamless Infrastructure Migration | S2 Solutions"
-        description="Professional server migration services for MENA enterprises. Any-to-any server migrations with zero downtime using OpenText Migrate technology. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="server migration MENA, infrastructure migration UAE, OpenText Migrate Middle East, zero downtime migration Saudi Arabia, cloud migration, data center migration"
-        canonicalUrl="https://s2mgt.com/solutions/server-migration"
-      />
+  return <div className="min-h-screen flex flex-col">
+      <SEOHead title="Server Migration Solutions MENA - Seamless Infrastructure Migration | S2 Solutions" description="Professional server migration services for MENA enterprises. Any-to-any server migrations with zero downtime using OpenText Migrate technology. Serving UAE, Saudi Arabia, and Middle East." keywords="server migration MENA, infrastructure migration UAE, OpenText Migrate Middle East, zero downtime migration Saudi Arabia, cloud migration, data center migration" canonicalUrl="https://s2mgt.com/solutions/server-migration" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
@@ -95,13 +72,10 @@ export default function ServerMigration() {
                     </Badge>
                     
                     <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                      <span 
-                        className="bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent hover:scale-[1.02] hover:drop-shadow-[0_0_10px_rgba(74,144,226,0.3)] transition-all duration-300 cursor-default inline-block"
-                        style={{
-                          backgroundSize: '300% 300%',
-                          animation: 'gradientShift 4s ease-in-out infinite'
-                        }}
-                      >
+                      <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent hover:scale-[1.02] hover:drop-shadow-[0_0_10px_rgba(74,144,226,0.3)] transition-all duration-300 cursor-default inline-block" style={{
+                      backgroundSize: '300% 300%',
+                      animation: 'gradientShift 4s ease-in-out infinite'
+                    }}>
                         Server Migration
                       </span>
                     </h1>
@@ -110,11 +84,7 @@ export default function ServerMigration() {
                       Seamless any-to-any server migrations with minimal downtime and maximum efficiency using advanced automation and continuous replication.
                     </p>
                     
-                    <Button 
-                      size="lg" 
-                      className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-[0_4px_15px_rgba(74,144,226,0.3)] hover:shadow-[0_10px_30px_rgba(74,144,226,0.5),0_0_20px_rgba(74,144,226,0.3)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-[1.02] transition-all duration-300 relative overflow-hidden group/btn"
-                      onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Consultation', '_blank')}
-                    >
+                    <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-[0_4px_15px_rgba(74,144,226,0.3)] hover:shadow-[0_10px_30px_rgba(74,144,226,0.5),0_0_20px_rgba(74,144,226,0.3)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-[1.02] transition-all duration-300 relative overflow-hidden group/btn" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Consultation', '_blank')}>
                       <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-500 group-hover/btn:left-full"></div>
                       <span className="relative z-10">Schedule Consultation</span>
                     </Button>
@@ -128,13 +98,7 @@ export default function ServerMigration() {
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                       
                       <div className="w-full h-full min-h-[320px] relative rounded-xl overflow-hidden">
-                        <iframe
-                          src="https://player.vimeo.com/video/735940664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1&amp;title=0&amp;byline=0&amp;portrait=0"
-                          allow="autoplay; fullscreen; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full border-none absolute inset-0"
-                          title="Server Migration Solution"
-                        />
+                        <iframe src="https://player.vimeo.com/video/735940664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen className="w-full h-full border-none absolute inset-0" title="Server Migration Solution" />
                       </div>
                     </div>
                   </div>
@@ -177,21 +141,7 @@ export default function ServerMigration() {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg"
-                  className="bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] hover:shadow-lg hover:shadow-[#024cbb]/25 hover:-translate-y-1 transition-all duration-300"
-                >
-                  Get Started
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:-translate-y-1 transition-all duration-300"
-                >
-                  Learn More
-                </Button>
-              </div>
+              
             </div>
           </div>
         </section>
@@ -291,21 +241,9 @@ export default function ServerMigration() {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-              {[
-                "Physical-to-Physical",
-                "Physical-to-Virtual", 
-                "Virtual-to-Virtual",
-                "Onsite-to-Cloud",
-                "Cloud-to-Cloud",
-                "Cloud-back-Onsite"
-              ].map((type, index) => (
-                <div 
-                  key={index}
-                  className="bg-gradient-to-br from-[#024cbb] to-[#006] text-white p-4 rounded-xl text-center font-semibold text-sm hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-[#024cbb]/25 transition-all duration-300 cursor-pointer"
-                >
+              {["Physical-to-Physical", "Physical-to-Virtual", "Virtual-to-Virtual", "Onsite-to-Cloud", "Cloud-to-Cloud", "Cloud-back-Onsite"].map((type, index) => <div key={index} className="bg-gradient-to-br from-[#024cbb] to-[#006] text-white p-4 rounded-xl text-center font-semibold text-sm hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-[#024cbb]/25 transition-all duration-300 cursor-pointer">
                   {type}
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -326,57 +264,30 @@ export default function ServerMigration() {
               <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-[#024cbb]">
                 <h4 className="font-semibold text-lg mb-4 text-slate-800">Source Operating Systems</h4>
                 <ul className="space-y-2">
-                  {[
-                    "Microsoft Windows Server",
-                    "Red Hat Enterprise Linux", 
-                    "Oracle Enterprise Linux",
-                    "CentOS",
-                    "SUSE Enterprise Linux",
-                    "Ubuntu"
-                  ].map((os, index) => (
-                    <li key={index} className="flex items-center text-sm text-slate-600">
+                  {["Microsoft Windows Server", "Red Hat Enterprise Linux", "Oracle Enterprise Linux", "CentOS", "SUSE Enterprise Linux", "Ubuntu"].map((os, index) => <li key={index} className="flex items-center text-sm text-slate-600">
                       <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3"></div>
                       {os}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
               <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-[#024cbb]">
                 <h4 className="font-semibold text-lg mb-4 text-slate-800">Target Environments</h4>
                 <ul className="space-y-2">
-                  {[
-                    "VMware vSphere",
-                    "VMware vCloud Director",
-                    "VMware ESXi", 
-                    "Microsoft Hyper-V",
-                    "Microsoft Azure Stack",
-                    "Microsoft Azure (Classic & ARM)"
-                  ].map((env, index) => (
-                    <li key={index} className="flex items-center text-sm text-slate-600">
+                  {["VMware vSphere", "VMware vCloud Director", "VMware ESXi", "Microsoft Hyper-V", "Microsoft Azure Stack", "Microsoft Azure (Classic & ARM)"].map((env, index) => <li key={index} className="flex items-center text-sm text-slate-600">
                       <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3"></div>
                       {env}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
               <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-[#024cbb]">
                 <h4 className="font-semibold text-lg mb-4 text-slate-800">Cloud Platforms</h4>
                 <ul className="space-y-2">
-                  {[
-                    "Amazon Web Services (AWS)",
-                    "Microsoft Azure",
-                    "Google Cloud Platform",
-                    "Hybrid Cloud Architectures", 
-                    "Multi-Cloud Environments",
-                    "Private Cloud Solutions"
-                  ].map((cloud, index) => (
-                    <li key={index} className="flex items-center text-sm text-slate-600">
+                  {["Amazon Web Services (AWS)", "Microsoft Azure", "Google Cloud Platform", "Hybrid Cloud Architectures", "Multi-Cloud Environments", "Private Cloud Solutions"].map((cloud, index) => <li key={index} className="flex items-center text-sm text-slate-600">
                       <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3"></div>
                       {cloud}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
             </div>
@@ -399,7 +310,7 @@ export default function ServerMigration() {
               <div>
                 <div className="bg-white border rounded-2xl p-8 shadow-lg hover:scale-105 transition-transform duration-300">
                   <div className="w-full h-64 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center">
-                    <p className="text-slate-500 text-center">Migration Process Diagram<br/>
+                    <p className="text-slate-500 text-center">Migration Process Diagram<br />
                     <span className="text-sm">(Placeholder for migration visualization)</span></p>
                   </div>
                 </div>
@@ -433,20 +344,29 @@ export default function ServerMigration() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-              {[
-                { icon: "🔄", title: "Continuous Sync", desc: "Real-time data replication keeps systems synchronized" },
-                { icon: "⏱️", title: "Planned Timing", desc: "Schedule cutover at optimal business windows" },
-                { icon: "✅", title: "Seamless Transition", desc: "Users automatically redirected to new system" },
-                { icon: "🗑️", title: "Clean Decommission", desc: "Safe removal of legacy infrastructure" }
-              ].map((item, index) => (
-                <Card key={index} className="text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+              {[{
+              icon: "🔄",
+              title: "Continuous Sync",
+              desc: "Real-time data replication keeps systems synchronized"
+            }, {
+              icon: "⏱️",
+              title: "Planned Timing",
+              desc: "Schedule cutover at optimal business windows"
+            }, {
+              icon: "✅",
+              title: "Seamless Transition",
+              desc: "Users automatically redirected to new system"
+            }, {
+              icon: "🗑️",
+              title: "Clean Decommission",
+              desc: "Safe removal of legacy infrastructure"
+            }].map((item, index) => <Card key={index} className="text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="text-4xl mb-4">{item.icon}</div>
                     <h4 className="font-semibold mb-2">{item.title}</h4>
                     <p className="text-sm text-muted-foreground">{item.desc}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -464,20 +384,29 @@ export default function ServerMigration() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              {[
-                { step: "1", title: "Discovery & Setup", desc: "Console discovers your systems and provisions target VMs automatically." },
-                { step: "2", title: "Real-time Replication", desc: "Byte-level replication creates and maintains synchronized replica with compression." },
-                { step: "3", title: "Testing & Validation", desc: "Test cutovers anytime without disrupting production operations." },
-                { step: "4", title: "Automated Cutover", desc: "Final cutover automation with seconds of downtime and rollback capability." }
-              ].map((item, index) => (
-                <div key={index} className="text-center">
+              {[{
+              step: "1",
+              title: "Discovery & Setup",
+              desc: "Console discovers your systems and provisions target VMs automatically."
+            }, {
+              step: "2",
+              title: "Real-time Replication",
+              desc: "Byte-level replication creates and maintains synchronized replica with compression."
+            }, {
+              step: "3",
+              title: "Testing & Validation",
+              desc: "Test cutovers anytime without disrupting production operations."
+            }, {
+              step: "4",
+              title: "Automated Cutover",
+              desc: "Final cutover automation with seconds of downtime and rollback capability."
+            }].map((item, index) => <div key={index} className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 hover:scale-125 transition-transform duration-300">
                     {item.step}
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
                   <p className="text-slate-300">{item.desc}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
             
             <div className="grid lg:grid-cols-2 gap-8">
@@ -485,21 +414,12 @@ export default function ServerMigration() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-4 text-white">Key Features</h3>
                   <ul className="space-y-3">
-                    {[
-                      "AES 256-bit encryption for security",
-                      "Bandwidth throttling and compression",
-                      "Non-disruptive testing capabilities", 
-                      "Predictable and repeatable process",
-                      "Unified console management",
-                      "Third-party tool integration"
-                    ].map((feature, index) => (
-                      <li key={index} className="flex items-center text-slate-300">
+                    {["AES 256-bit encryption for security", "Bandwidth throttling and compression", "Non-disruptive testing capabilities", "Predictable and repeatable process", "Unified console management", "Third-party tool integration"].map((feature, index) => <li key={index} className="flex items-center text-slate-300">
                         <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                           <span className="text-white text-xs font-bold">✓</span>
                         </div>
                         {feature}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
               </Card>
@@ -508,21 +428,12 @@ export default function ServerMigration() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-4 text-white">Business Benefits</h3>
                   <ul className="space-y-3">
-                    {[
-                      "Eliminates migration downtime and data loss",
-                      "Reduces human error through automation",
-                      "Enables platform agility and flexibility",
-                      "Streamlines complex migration projects", 
-                      "Provides straightforward rollback options",
-                      "Maximizes IT investment returns"
-                    ].map((benefit, index) => (
-                      <li key={index} className="flex items-center text-slate-300">
+                    {["Eliminates migration downtime and data loss", "Reduces human error through automation", "Enables platform agility and flexibility", "Streamlines complex migration projects", "Provides straightforward rollback options", "Maximizes IT investment returns"].map((benefit, index) => <li key={index} className="flex items-center text-slate-300">
                         <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                           <span className="text-white text-xs font-bold">✓</span>
                         </div>
                         {benefit}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
               </Card>
@@ -560,12 +471,19 @@ export default function ServerMigration() {
               </div>
               
               <div className="space-y-6">
-                {[
-                  { icon: "🏆", title: "Regional Exclusivity", desc: "Sole authorized distributor with exclusive rights to sell and support OpenText Migrate across the Middle East." },
-                  { icon: "🛡️", title: "Legal Compliance", desc: "Protect your organization from unauthorized software and ensure full legal compliance with official licensing." },
-                  { icon: "🌍", title: "Local Expertise", desc: "Regional support team with deep understanding of Middle East business requirements and technical needs." }
-                ].map((item, index) => (
-                  <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                {[{
+                icon: "🏆",
+                title: "Regional Exclusivity",
+                desc: "Sole authorized distributor with exclusive rights to sell and support OpenText Migrate across the Middle East."
+              }, {
+                icon: "🛡️",
+                title: "Legal Compliance",
+                desc: "Protect your organization from unauthorized software and ensure full legal compliance with official licensing."
+              }, {
+                icon: "🌍",
+                title: "Local Expertise",
+                desc: "Regional support team with deep understanding of Middle East business requirements and technical needs."
+              }].map((item, index) => <div key={index} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                     <div className="flex items-center mb-4">
                       <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4">
                         <span className="text-xl">{item.icon}</span>
@@ -573,8 +491,7 @@ export default function ServerMigration() {
                       <h4 className="text-lg font-semibold text-white">{item.title}</h4>
                     </div>
                     <p className="text-white/80 text-sm">{item.desc}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
             
@@ -585,16 +502,19 @@ export default function ServerMigration() {
                 Unauthorized sources may provide invalid software, void warranties, and compromise your migration success.
               </p>
               <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  { title: "✓ Genuine Licenses", desc: "Official OpenText Authorization" },
-                  { title: "✓ Expert Support", desc: "Regional Technical Team" },
-                  { title: "✓ Full Warranty", desc: "Complete Protection Coverage" }
-                ].map((item, index) => (
-                  <div key={index} className="text-center">
+                {[{
+                title: "✓ Genuine Licenses",
+                desc: "Official OpenText Authorization"
+              }, {
+                title: "✓ Expert Support",
+                desc: "Regional Technical Team"
+              }, {
+                title: "✓ Full Warranty",
+                desc: "Complete Protection Coverage"
+              }].map((item, index) => <div key={index} className="text-center">
                     <div className="text-lg font-bold text-white mb-1">{item.title}</div>
                     <div className="text-sm text-white/70">{item.desc}</div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -610,17 +530,10 @@ export default function ServerMigration() {
               Experience seamless migrations with near-zero downtime and minimal risk
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] hover:shadow-lg hover:shadow-[#024cbb]/25 hover:-translate-y-1 transition-all duration-300"
-              >
+              <Button size="lg" className="bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] hover:shadow-lg hover:shadow-[#024cbb]/25 hover:-translate-y-1 transition-all duration-300">
                 Start Your Migration
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-[#024cbb] text-[#024cbb] hover:bg-[#024cbb] hover:text-white hover:-translate-y-1 transition-all duration-300"
-              >
+              <Button size="lg" variant="outline" className="border-[#024cbb] text-[#024cbb] hover:bg-[#024cbb] hover:text-white hover:-translate-y-1 transition-all duration-300">
                 Request Demo
               </Button>
             </div>
@@ -628,6 +541,5 @@ export default function ServerMigration() {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 }
