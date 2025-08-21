@@ -514,22 +514,19 @@ export default function ServerMigrationOrchestration() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-gradient-to-br from-primary to-blue-600 text-white">
+        <section className="py-8 bg-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div {...useScrollAnimation()}>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-foreground">
                 Ready to Transform Your Data Center Migration?
               </h2>
-              <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl mb-12 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Don't let complex migrations paralyze your infrastructure transformation. Partner with TDS and experience the power of TransitionManager orchestration.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold w-full sm:w-auto" onClick={() => window.location.href = '#contact'}>
-                  Start Your Migration
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold w-full sm:w-auto" onClick={() => window.location.href = '#demo'}>
-                  Schedule Discovery Call
+              <div className="flex justify-center mb-12">
+                <Button size="lg" className="bg-primary text-white hover:bg-primary/90 px-8 py-4 text-lg font-semibold" onClick={() => window.location.href = '/contact'}>
+                  Contact Us
                 </Button>
               </div>
               
@@ -542,7 +539,23 @@ export default function ServerMigrationOrchestration() {
         
 
         {/* What We Deliver Section */}
-        
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Migration Orchestration Deliverables</h2>
+              <Card>
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    {deliverables.map((deliverable, index) => <div key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
+                        <span className="text-sm">{deliverable}</span>
+                      </div>)}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
 
         {/* Ideal For & Key Benefits */}
         
