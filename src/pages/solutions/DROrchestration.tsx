@@ -172,7 +172,7 @@ export default function DROrchestration() {
                       className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
-                      <span className="relative">Disaster Recovery Solution</span>
+                      <span className="relative">Disaster Recovery Orchestrator</span>
                     </Badge>
                     
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -183,7 +183,7 @@ export default function DROrchestration() {
                           animation: 'gradientShift 4s ease-in-out infinite'
                         }}
                       >
-                        TDS Disaster Recovery Orchestrator
+                        Transition Manager
                       </span>
                     </h1>
                     
