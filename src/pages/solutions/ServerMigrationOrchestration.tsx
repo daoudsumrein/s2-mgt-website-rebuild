@@ -514,7 +514,7 @@ export default function ServerMigrationOrchestration() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-white">
+        <section className="py-8 bg-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div {...useScrollAnimation()}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-foreground">
