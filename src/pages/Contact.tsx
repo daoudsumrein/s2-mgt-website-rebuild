@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 import { 
   Mail, 
   Phone, 
@@ -22,6 +23,8 @@ import {
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -32,6 +35,9 @@ export default function Contact() {
     message: ""
   });
   const { toast } = useToast();
+  
+  // Replace with your actual site key
+  const RECAPTCHA_SITE_KEY = "YOUR_RECAPTCHA_SITE_KEY_HERE";
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -43,6 +49,17 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check if reCAPTCHA is completed
+    if (!recaptchaValue) {
+      toast({
+        title: "Please complete reCAPTCHA",
+        description: "Please verify that you are not a robot before submitting the form.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsLoading(true);
 
     try {
@@ -56,7 +73,8 @@ export default function Contact() {
         interest: formData.interest,
         message: formData.message,
         send_date: new Date().toLocaleString(),
-        submission_id: Math.random().toString(36).substr(2, 9)
+        submission_id: Math.random().toString(36).substr(2, 9),
+        recaptcha_response: recaptchaValue
       };
 
       await emailjs.send(
@@ -81,6 +99,10 @@ export default function Contact() {
         interest: "",
         message: ""
       });
+      
+      // Reset reCAPTCHA
+      setRecaptchaValue(null);
+      recaptchaRef.current?.reset();
 
     } catch (error) {
       console.error('EmailJS error:', error);
@@ -230,11 +252,22 @@ export default function Contact() {
                       />
                     </div>
                     
+                    {/* Google reCAPTCHA */}
+                    <div className="flex justify-center">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={RECAPTCHA_SITE_KEY}
+                        onChange={(value) => setRecaptchaValue(value)}
+                        onExpired={() => setRecaptchaValue(null)}
+                        theme="light"
+                      />
+                    </div>
+                    
                     <Button 
                       type="submit" 
                       className="w-full" 
                       size="lg" 
-                      disabled={isLoading}
+                      disabled={isLoading || !recaptchaValue}
                     >
                       {isLoading ? "Sending..." : "Send Message"}
                       <Send className="ml-2 h-4 w-4" />
