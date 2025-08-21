@@ -308,11 +308,12 @@ export default function ServerMigration() {
             
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
               <div>
-                <div className="bg-white border rounded-2xl p-8 shadow-lg hover:scale-105 transition-transform duration-300">
-                  <div className="w-full h-64 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center">
-                    <p className="text-slate-500 text-center">Migration Process Diagram<br />
-                    <span className="text-sm">(Placeholder for migration visualization)</span></p>
-                  </div>
+                <div className="bg-white rounded-2xl p-4 md:p-8 shadow-lg hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="/lovable-uploads/3b568986-ceac-4168-b49c-ab14b2f2efd8.png" 
+                    alt="Migration Process Diagram showing real-time replication from primary system to target system and planned cutover with near zero downtime" 
+                    className="w-full h-auto object-contain rounded-xl"
+                  />
                 </div>
               </div>
               
