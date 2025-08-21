@@ -334,14 +334,12 @@ export default function EndpointBackup() {
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <Card className="p-12 min-h-[400px] flex items-center justify-center bg-gradient-to-br from-primary/5 to-primary/10">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Laptop className="h-10 w-10 text-primary" />
-                  </div>
-                  <p className="text-lg text-muted-foreground">Deployment Architecture Diagram</p>
-                  <p className="text-sm text-muted-foreground/70 mt-2">(Interactive diagram placeholder)</p>
-                </div>
+              <Card className="p-8 min-h-[400px] flex items-center justify-center bg-gradient-to-br from-primary/5 to-primary/10">
+                <img 
+                  src="/lovable-uploads/272ca275-0347-49eb-9c18-c071208dc276.png" 
+                  alt="Endpoint Backup Deployment Architecture - Shows devices connecting through QuickCache to secure vault"
+                  className="max-w-full max-h-full object-contain rounded-lg"
+                />
               </Card>
               
               <div className="space-y-6">
