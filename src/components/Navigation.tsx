@@ -25,9 +25,14 @@ const dataProtectionSolutions = [
     description: "Seamless any-to-any server migrations"
   },
   {
-    title: "DR & Migration Orchestration",
-    href: "/solutions/dr-orchestration",
-    description: "Automated workflow orchestration"
+    title: "Disaster Recovery Orchestration",
+    href: "/solutions/disaster-recovery-orchestration",
+    description: "Automated DR workflow orchestration"
+  },
+  {
+    title: "Server Migration Orchestration",
+    href: "/solutions/server-migration-orchestration", 
+    description: "Automated migration workflow management"
   },
   {
     title: "Endpoint Cloud Backup",
