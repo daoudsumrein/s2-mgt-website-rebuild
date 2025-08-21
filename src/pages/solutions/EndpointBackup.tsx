@@ -207,19 +207,26 @@ export default function EndpointBackup() {
           </div>
         </section>
 
-        {/* Overview Section */}
-        <section className="py-16">
+        {/* Stats Section */}
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Overview</h2>
-              <Card>
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <Card className="text-center border border-border hover:border-primary/30 transition-colors duration-300 group">
                 <CardContent className="p-8">
-                  <p className="text-lg leading-relaxed mb-6">
-                    Endpoint Backup offers a <strong>complete and automated backup solution</strong> for all endpoint devices and their resident data. Safeguarding data from accidental deletion, malicious software, and theft becomes increasingly complex when protection spans vast geographical areas and intricate network configurations.
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    Endpoint Backup <strong>streamlines the management efforts</strong> involved in implementing data protection throughout an organization, regardless of its scale, dispersion, or environmental complexity.
-                  </p>
+                  <div className="text-4xl font-bold text-primary mb-3 group-hover:scale-110 transition-transform duration-300">75%</div>
+                  <p className="text-muted-foreground">of IT professionals say organizations are more vulnerable with remote work</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center border border-border hover:border-primary/30 transition-colors duration-300 group">
+                <CardContent className="p-8">
+                  <div className="text-4xl font-bold text-primary mb-3 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                  <p className="text-muted-foreground">Award-winning support availability with global coverage</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center border border-border hover:border-primary/30 transition-colors duration-300 group">
+                <CardContent className="p-8">
+                  <div className="text-4xl font-bold text-primary mb-3 group-hover:scale-110 transition-transform duration-300">100%</div>
+                  <p className="text-muted-foreground">Automated IT-controlled backups across all endpoints</p>
                 </CardContent>
               </Card>
             </div>
@@ -227,130 +234,324 @@ export default function EndpointBackup() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16">
+        <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Key Features</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {features.map((feature, index) => (
-                  <Card key={index} className="h-full">
-                    <CardHeader>
-                      <div className="flex items-center space-x-3">
-                        <feature.icon className="h-8 w-8 text-blue-500" />
-                        <CardTitle className="text-lg">{feature.title}</CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">{feature.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Protect Your Most Vulnerable Data
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Advanced endpoint data protection as part of your comprehensive cyber resilience strategy
+              </p>
             </div>
-          </div>
-        </section>
-
-        {/* What We Deliver Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {deliverables.map((item, index) => (
-                  <Card key={index}>
-                    <CardHeader>
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="h-8 w-8 text-teal-500" />
-                        <CardTitle className="text-xl">{item.title}</CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2">
-                        {item.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start space-x-2">
-                            <CheckCircle className="h-4 w-4 text-teal-500 mt-1 flex-shrink-0" />
-                            <span className="text-sm">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Ideal For & Key Benefits */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
-                {/* Ideal For */}
-                <div>
-                  <Card className="border-blue-200 bg-blue-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-blue-700">
-                        <Target className="h-6 w-6" />
-                        <span>Ideal For</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {idealFor.map((item, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Key Benefits */}
-                <div>
-                  <Card className="border-teal-200 bg-teal-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-teal-700">
-                        <CheckCircle className="h-6 w-6" />
-                        <span>Key Benefits</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {keyBenefits.map((benefit, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                            <span>{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Card>
-                <CardContent className="p-12">
-                  <h2 className="text-3xl font-bold mb-4">Ready to Secure Your Endpoints?</h2>
-                  <p className="text-xl text-muted-foreground mb-8">
-                    Protect your distributed workforce with comprehensive endpoint backup solutions designed for modern enterprises.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg">Schedule Endpoint Assessment</Button>
-                    <Button variant="outline" size="lg">Download Solution Brief</Button>
+            
+            <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+              <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8 flex gap-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <Settings className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Provides easy deployment and management</h3>
+                    <p className="text-muted-foreground">Automated, silent, centralized installation and operation across your entire organization.</p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8 flex gap-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <Globe className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Intelligently manages global bandwidth usage</h3>
+                    <p className="text-muted-foreground">Minimal disruption to network performance with intelligent optimization algorithms.</p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8 flex gap-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <Cloud className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Reduces backup-related WAN traffic by up to 98%</h3>
+                    <p className="text-muted-foreground">During business hours for global deduplication and efficient data transfer.</p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8 flex gap-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <Shield className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Offers advanced administrative control</h3>
+                    <p className="text-muted-foreground">Including legal hold which is invisible to end users, as well as admin-driven restore functionality.</p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8 flex gap-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <CheckCircle className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Delivers secure protection with 256-bit AES encryption</h3>
+                    <p className="text-muted-foreground">In motion and at rest, and mitigation features, like global location tracking and remote data wipe.</p>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8 flex gap-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <Target className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Lets you easily create and deploy policy-controlled backups</h3>
+                    <p className="text-muted-foreground">As often as every minute with flexible scheduling and automated policies.</p>
                   </div>
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* Deployment Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Simple Deployment Process
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Deploy across thousands of endpoints with our proven silent deployment technology
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <Card className="p-12 min-h-[400px] flex items-center justify-center bg-gradient-to-br from-primary/5 to-primary/10">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Laptop className="h-10 w-10 text-primary" />
+                  </div>
+                  <p className="text-lg text-muted-foreground">Deployment Architecture Diagram</p>
+                  <p className="text-sm text-muted-foreground/70 mt-2">(Interactive diagram placeholder)</p>
+                </div>
+              </Card>
+              
+              <div className="space-y-6">
+                <Card className="group hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6 flex gap-4">
+                    <div className="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center font-semibold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                      1
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Establish Secure Vault</h3>
+                      <p className="text-muted-foreground">Set up a centrally managed vault in OpenText's Microsoft Azure-hosted environment with enterprise-grade security protocols.</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card className="group hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6 flex gap-4">
+                    <div className="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center font-semibold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Silent Software Deployment</h3>
+                      <p className="text-muted-foreground">Deploy backup software across computers and laptops without user intervention using our advanced deployment technology.</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card className="group hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6 flex gap-4">
+                    <div className="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center font-semibold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Automated Backup Sync</h3>
+                      <p className="text-muted-foreground">Automatically back up distributed devices using intelligent local cache or direct-to-vault synchronization.</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card className="group hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6 flex gap-4">
+                    <div className="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center font-semibold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                      4
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Recovery & Protection</h3>
+                      <p className="text-muted-foreground">Instantly recover critical data or remotely wipe devices when lost or stolen to maintain data security.</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Enterprise-Grade Compliance
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                SOC 2 Type 2 control framework with comprehensive support for industry-standard regulations
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
+              {['SOC 2 Type 2', 'HIPAA', 'FERPA', 'GLBA', 'GDPR'].map((badge, index) => (
+                <Badge 
+                  key={index}
+                  variant="outline" 
+                  className="px-6 py-3 text-base hover:bg-primary hover:text-white border-primary/30 hover:border-primary transition-all duration-300 hover:scale-105"
+                >
+                  {badge}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <Card className="max-w-4xl mx-auto">
+              <CardContent className="p-12 text-center">
+                <div className="text-6xl text-primary/20 mb-6">"</div>
+                <blockquote className="text-2xl font-medium text-foreground mb-8 italic leading-relaxed">
+                  Having a centralized copy of our remote employees' endpoint data reduces our fears of lost and stolen endpoints impacting our business operations.
+                </blockquote>
+                <div className="space-y-2">
+                  <div className="font-semibold text-lg">Martin Polaszewski</div>
+                  <div className="text-muted-foreground">Sr. Network Engineer, Viskase</div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Platforms Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Supported Platforms
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive compatibility with modern operating systems and enterprise infrastructure
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
+                    <Laptop className="h-6 w-6 text-primary" />
+                    Endpoint Clients
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      'Windows 10 and later versions',
+                      'Windows 11 on ARM-based devices', 
+                      'macOS 12 Monterey and later',
+                      'Linux distributions (Enterprise)'
+                    ].map((platform, index) => (
+                      <div key={index} className="flex items-center gap-3 p-3 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                        <span>{platform}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
+                    <Cloud className="h-6 w-6 text-primary" />
+                    Endpoint Vault Infrastructure
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      'Microsoft Azure Cloud Platform',
+                      'Windows Server 2022, 2019, 2016, 2012 R2',
+                      'SQL Server 2022, 2019, 2016, 2014, 2012 R2',
+                      'Hybrid cloud deployments'
+                    ].map((platform, index) => (
+                      <div key={index} className="flex items-center gap-3 p-3 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors">
+                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                        <span>{platform}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <Card className="p-12 flex items-center justify-center bg-gradient-to-br from-primary/5 to-primary/10">
+                <div className="grid grid-cols-3 gap-6 max-w-xs">
+                  <div className="w-16 h-16 bg-card border border-border rounded-xl flex items-center justify-center hover:border-primary/30 hover:bg-primary/5 transition-colors group">
+                    <Laptop className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                  </div>
+                  <div className="w-16 h-16 bg-card border border-border rounded-xl flex items-center justify-center hover:border-primary/30 hover:bg-primary/5 transition-colors group">
+                    <Cloud className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                  </div>
+                  <div className="w-16 h-16 bg-card border border-border rounded-xl flex items-center justify-center hover:border-primary/30 hover:bg-primary/5 transition-colors group">
+                    <Settings className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                  </div>
+                  <div className="w-16 h-16 bg-card border border-border rounded-xl flex items-center justify-center hover:border-primary/30 hover:bg-primary/5 transition-colors group">
+                    <Shield className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                  </div>
+                  <div className="w-16 h-16 bg-card border border-border rounded-xl flex items-center justify-center hover:border-primary/30 hover:bg-primary/5 transition-colors group">
+                    <Globe className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                  </div>
+                  <div className="w-16 h-16 bg-card border border-border rounded-xl flex items-center justify-center hover:border-primary/30 hover:bg-primary/5 transition-colors group">
+                    <Target className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced CTA Section */}
+        <section className="py-20 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
+          <div className="container mx-auto px-4">
+            <Card className="max-w-4xl mx-auto border-primary/20 bg-gradient-to-br from-card to-card/80">
+              <CardContent className="p-12 text-center">
+                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                  Ready to Secure Your Endpoints?
+                </h2>
+                <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+                  Experience enterprise-grade endpoint protection with OpenText Core Endpoint Backup
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    className="px-8 py-4 text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Endpoint%20Backup%20Trial', '_blank')}
+                  >
+                    Start Free Trial
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="px-8 py-4 text-lg hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:bg-primary/5"
+                    onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Endpoint%20Backup%20Demo', '_blank')}
+                  >
+                    Request Demo
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
       </main>
