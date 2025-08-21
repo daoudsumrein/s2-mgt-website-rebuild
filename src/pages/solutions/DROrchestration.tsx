@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
-import "../../../styles/tds-dr-content.css";
+import "../../styles/tds-dr-content.css";
 
 export default function DROrchestration() {
   const observerRef = useRef<IntersectionObserver | null>(null);
