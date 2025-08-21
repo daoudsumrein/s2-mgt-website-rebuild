@@ -127,7 +127,7 @@ export default function ServerMigrationOrchestration() {
                     </h1>
                     
                     <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                      Orchestrate and automate server migration workflows from discovery to completion with intelligent dependency mapping and risk mitigation.
+                      Transforming complex data center migrations from overwhelming challenges into streamlined, successful projects with 19 years of proven expertise and methodology.
                     </p>
                     
                     <Button 
