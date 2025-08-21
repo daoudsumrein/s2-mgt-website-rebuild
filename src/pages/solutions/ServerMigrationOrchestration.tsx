@@ -565,98 +565,10 @@ export default function ServerMigrationOrchestration() {
         </section>
 
         {/* Ideal For & Key Benefits */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
-                {/* Ideal For */}
-                <div>
-                  <Card className="border-blue-200 bg-blue-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-blue-700">
-                        <Target className="h-6 w-6" />
-                        <span>Ideal For</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>Organizations planning data center migrations</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>Companies migrating to cloud platforms</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>Enterprises with complex server dependencies</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                          <span>Businesses requiring minimal migration downtime</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Key Benefits */}
-                <div>
-                  <Card className="border-teal-200 bg-teal-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-teal-700">
-                        <CheckCircle className="h-6 w-6" />
-                        <span>Key Benefits</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span>Automated migration workflow orchestration</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span>Comprehensive dependency analysis and mapping</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span>Risk mitigation through intelligent planning</span>
-                        </div>
-                        <div className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span>Real-time migration progress monitoring</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Call to Action Section */}
-        <section className="py-16 bg-gradient-to-r from-primary to-secondary">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Orchestrate Your Server Migrations?</h2>
-              <p className="text-xl text-blue-100 mb-8">
-                Experience intelligent server migration orchestration with automated workflows and comprehensive dependency mapping
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 px-8 py-3" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Orchestration%20Demo', '_blank')}>
-                  Schedule Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-3" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Orchestration%20Consultation', '_blank')}>
-                  Get Consultation
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        
       </main>
       <Footer />
     </div>;
