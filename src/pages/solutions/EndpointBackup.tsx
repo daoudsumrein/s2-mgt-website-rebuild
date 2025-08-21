@@ -531,21 +531,13 @@ export default function EndpointBackup() {
                 <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
                   Experience enterprise-grade endpoint protection with OpenText Core Endpoint Backup
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex justify-center">
                   <Button 
                     size="lg" 
                     className="px-8 py-4 text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Endpoint%20Backup%20Trial', '_blank')}
+                    onClick={() => window.location.href = '/contact'}
                   >
-                    Start Free Trial
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="px-8 py-4 text-lg hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:bg-primary/5"
-                    onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Endpoint%20Backup%20Demo', '_blank')}
-                  >
-                    Request Demo
+                    Contact Us
                   </Button>
                 </div>
               </CardContent>
