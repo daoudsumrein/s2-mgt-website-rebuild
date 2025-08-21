@@ -533,11 +533,7 @@ export default function ServerMigrationOrchestration() {
                 </Button>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl inline-block">
-                <p className="font-semibold text-lg">
-                  ✓ 19 Years Migration Expertise &nbsp;&nbsp;|&nbsp;&nbsp; ✓ 50% Faster Execution &nbsp;&nbsp;|&nbsp;&nbsp; ✓ 100% Project Success Rate
-                </p>
-              </div>
+              
             </motion.div>
           </div>
         </section>
