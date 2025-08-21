@@ -375,7 +375,7 @@ export default function ServerMigrationOrchestration() {
               </p>
             </motion.div>
             
-            <div className="max-w-6xl mx-auto space-y-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {[
                 {
                   number: "1",
@@ -388,7 +388,7 @@ export default function ServerMigrationOrchestration() {
                     "Accurate and up-to-date infrastructure inventory"
                   ],
                   color: "bg-primary",
-                  reverse: false
+                  textColor: "text-primary"
                 },
                 {
                   number: "2",
@@ -402,7 +402,7 @@ export default function ServerMigrationOrchestration() {
                     "Real-time progress monitoring and dashboards"
                   ],
                   color: "bg-green-500",
-                  reverse: true
+                  textColor: "text-green-500"
                 },
                 {
                   number: "3",
@@ -415,49 +415,44 @@ export default function ServerMigrationOrchestration() {
                     "Full visibility and quick response to changes",
                     "Maintained command and control throughout execution"
                   ],
-                  color: "bg-orange-500", 
-                  reverse: false
+                  color: "bg-orange-500",
+                  textColor: "text-orange-500"
                 }
               ].map((phase, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.3 }}
-                  className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center"
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="relative"
                 >
-                  <div className={phase.reverse ? 'lg:col-start-3' : 'lg:col-start-1'}>
-                    <Card className="p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card">
-                      <h3 className={`text-2xl lg:text-3xl font-semibold mb-4 ${phase.color === 'bg-primary' ? 'text-primary' : phase.color === 'bg-green-500' ? 'text-green-500' : 'text-orange-500'}`}>
-                        {phase.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {phase.description}
-                      </p>
-                      <ul className="space-y-2">
-                        {phase.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
-                            <span className="text-green-600 dark:text-green-400 font-medium">
-                              {benefit}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </Card>
-                  </div>
-                  
-                  <div className="flex justify-center lg:col-start-2 lg:col-end-3">
+                  <Card className="p-8 h-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card">
+                    {/* Number Badge */}
                     <motion.div 
-                      className={`w-20 h-20 ${phase.color} text-white rounded-full flex items-center justify-center text-3xl font-black shadow-2xl z-10`}
+                      className={`w-16 h-16 ${phase.color} text-white rounded-full flex items-center justify-center text-2xl font-black shadow-lg mb-6 mx-auto`}
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.3 }}
                     >
                       {phase.number}
                     </motion.div>
-                  </div>
-                  
-                  <div className={!phase.reverse ? 'lg:col-start-3 lg:col-end-4' : 'lg:col-start-1 lg:col-end-2'}></div>
+                    
+                    <h3 className={`text-xl lg:text-2xl font-semibold mb-4 text-center ${phase.textColor}`}>
+                      {phase.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      {phase.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {phase.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-green-600 dark:text-green-400 font-medium text-sm">
+                            {benefit}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
                 </motion.div>
               ))}
             </div>
