@@ -115,17 +115,10 @@ export default function ServerMigrationOrchestration() {
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/visual hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
                       {/* Migration Visual */}
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-xl flex items-center justify-center border border-white/10">
-                        <iframe 
-                          width="100%" 
-                          height="100%" 
-                          src="https://www.youtube.com/embed/vJ5ry3rSW9M?si=poh2f0UqFTsi9gXa" 
-                          title="YouTube video player" 
-                          frameBorder="0" 
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                          referrerPolicy="strict-origin-when-cross-origin" 
-                          allowFullScreen
-                          className="rounded-xl"
-                        />
+                        <div className="text-center">
+                          <Server className="h-16 w-16 md:h-24 md:w-24 text-primary/60 mx-auto mb-4" />
+                          <div className="text-sm text-slate-400 font-medium">Migration Orchestration</div>
+                        </div>
                       </div>
                       
                       {/* Overlay gradient */}
@@ -521,19 +514,22 @@ export default function ServerMigrationOrchestration() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-8 bg-white">
+        <section className="py-16 bg-gradient-to-br from-primary to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div {...useScrollAnimation()}>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-foreground">
+              <h2 className="text-3xl lg:text-5xl font-bold mb-6">
                 Ready to Transform Your Data Center Migration?
               </h2>
-              <p className="text-xl mb-12 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
                 Don't let complex migrations paralyze your infrastructure transformation. Partner with TDS and experience the power of TransitionManager orchestration.
               </p>
               
-              <div className="flex justify-center mb-12">
-                <Button size="lg" className="bg-primary text-white hover:bg-primary/90 px-8 py-4 text-lg font-semibold" onClick={() => window.location.href = '/contact'}>
-                  Contact Us
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold w-full sm:w-auto" onClick={() => window.location.href = '#contact'}>
+                  Start Your Migration
+                </Button>
+                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold w-full sm:w-auto" onClick={() => window.location.href = '#demo'}>
+                  Schedule Discovery Call
                 </Button>
               </div>
               
@@ -546,23 +542,7 @@ export default function ServerMigrationOrchestration() {
         
 
         {/* What We Deliver Section */}
-        <section className="py-8">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">Migration Orchestration Deliverables</h2>
-              <Card>
-                <CardContent className="p-8">
-                  <div className="space-y-6">
-                    {deliverables.map((deliverable, index) => <div key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
-                        <span className="text-sm">{deliverable}</span>
-                      </div>)}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Ideal For & Key Benefits */}
         
