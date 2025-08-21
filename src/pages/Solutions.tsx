@@ -21,9 +21,14 @@ const dataProtectionSolutions = [{
   link: "/solutions/server-migration"
 }, {
   icon: Search,
-  title: "DR & Migration Orchestration",
-  description: "Automated workflow orchestration",
-  link: "/solutions/dr-orchestration"
+  title: "Disaster Recovery Orchestration",
+  description: "Automated DR workflow orchestration",
+  link: "/solutions/disaster-recovery-orchestration"
+}, {
+  icon: Workflow,
+  title: "Server Migration Orchestration", 
+  description: "Automated server migration workflows",
+  link: "/solutions/server-migration-orchestration"
 }, {
   icon: Database,
   title: "Endpoint Cloud Backup",

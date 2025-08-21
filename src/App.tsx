@@ -28,6 +28,7 @@ import ServerBackup from "./pages/solutions/ServerBackup";
 import OnPremBackup from "./pages/solutions/OnPremBackup";
 import ServerMigration from "./pages/solutions/ServerMigration";
 import DROrchestration from "./pages/solutions/DROrchestration";
+import ServerMigrationOrchestration from "./pages/solutions/ServerMigrationOrchestration";
 import EndpointProtection from "./pages/solutions/EndpointProtection";
 import EDR from "./pages/solutions/EDR";
 import MDR from "./pages/solutions/MDR";
@@ -75,7 +76,8 @@ const App = () => (
           <Route path="/solutions/server-backup" element={<ServerBackup />} />
           <Route path="/solutions/onprem-backup" element={<OnPremBackup />} />
           <Route path="/solutions/server-migration" element={<ServerMigration />} />
-          <Route path="/solutions/dr-orchestration" element={<DROrchestration />} />
+          <Route path="/solutions/disaster-recovery-orchestration" element={<DROrchestration />} />
+          <Route path="/solutions/server-migration-orchestration" element={<ServerMigrationOrchestration />} />
           <Route path="/solutions/endpoint-protection" element={<EndpointProtection />} />
           <Route path="/solutions/edr" element={<EDR />} />
           <Route path="/solutions/mdr" element={<MDR />} />
