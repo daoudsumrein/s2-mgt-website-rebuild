@@ -150,7 +150,7 @@ export default function ServerMigration() {
           
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center text-white max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
                 OpenText Migrate
               </h2>
               <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
