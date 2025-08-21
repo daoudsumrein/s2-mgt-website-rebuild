@@ -424,7 +424,7 @@ export default function ServerMigrationOrchestration() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.3 }}
-                  className={`grid grid-cols-1 lg:grid-cols-3 gap-8 items-center ${phase.reverse ? 'lg:dir-rtl' : ''}`}
+                  className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center"
                 >
                   <div className={phase.reverse ? 'lg:col-start-3' : 'lg:col-start-1'}>
                     <Card className="p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card">
@@ -447,7 +447,7 @@ export default function ServerMigrationOrchestration() {
                     </Card>
                   </div>
                   
-                  <div className="flex justify-center lg:col-start-2">
+                  <div className="flex justify-center lg:col-start-2 lg:col-end-3">
                     <motion.div 
                       className={`w-20 h-20 ${phase.color} text-white rounded-full flex items-center justify-center text-3xl font-black shadow-2xl z-10`}
                       whileHover={{ scale: 1.1 }}
@@ -457,8 +457,7 @@ export default function ServerMigrationOrchestration() {
                     </motion.div>
                   </div>
                   
-                  {!phase.reverse && <div className="lg:col-start-3" />}
-                  {phase.reverse && <div className="lg:col-start-1" />}
+                  <div className={!phase.reverse ? 'lg:col-start-3 lg:col-end-4' : 'lg:col-start-1 lg:col-end-2'}></div>
                 </motion.div>
               ))}
             </div>
