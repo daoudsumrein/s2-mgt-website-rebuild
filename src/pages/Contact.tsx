@@ -63,6 +63,29 @@ export default function Contact() {
     setIsLoading(true);
 
     try {
+      // First, verify reCAPTCHA with your PHP script
+      const recaptchaVerification = await fetch('https://s2mgt.com/verify-recaptcha.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ recaptcha_response: recaptchaValue })
+      });
+      
+      const verificationResult = await recaptchaVerification.json();
+      
+      if (!verificationResult.success) {
+        toast({
+          title: "reCAPTCHA verification failed",
+          description: "Please try again or refresh the page.",
+          variant: "destructive",
+        });
+        // Reset reCAPTCHA
+        setRecaptchaValue(null);
+        recaptchaRef.current?.reset();
+        setIsLoading(false);
+        return;
+      }
+      
+      // reCAPTCHA verified successfully, now send email via EmailJS
       // Prepare template parameters matching your EmailJS template
       const templateParams = {
         firstName: formData.firstName,
@@ -105,12 +128,22 @@ export default function Contact() {
       recaptchaRef.current?.reset();
 
     } catch (error) {
-      console.error('EmailJS error:', error);
+      console.error('Form submission error:', error);
+      
+      // Check if it's a reCAPTCHA verification error or EmailJS error
+      const errorMessage = error instanceof Error && error.message.includes('fetch') 
+        ? "Failed to verify reCAPTCHA. Please check your internet connection and try again."
+        : "Failed to send message. Please try again or contact us directly.";
+      
       toast({
-        title: "Failed to send message",
-        description: "Please try again or contact us directly.",
+        title: "Submission failed",
+        description: errorMessage,
         variant: "destructive",
       });
+      
+      // Reset reCAPTCHA on any error
+      setRecaptchaValue(null);
+      recaptchaRef.current?.reset();
     } finally {
       setIsLoading(false);
     }
