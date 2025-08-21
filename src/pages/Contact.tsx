@@ -36,8 +36,8 @@ export default function Contact() {
   });
   const { toast } = useToast();
   
-  // Replace with your actual site key
-  const RECAPTCHA_SITE_KEY = "YOUR_RECAPTCHA_SITE_KEY_HERE";
+  // Your reCAPTCHA site key (public key)
+  const RECAPTCHA_SITE_KEY = "6LfBwa0rAAAAAOmCXCu2AQ2nMxM_Fog1mM5nqNYV";
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
