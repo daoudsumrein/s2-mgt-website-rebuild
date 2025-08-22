@@ -7,7 +7,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const solutions = [
   { name: "All Services", href: "/services" },
-  { name: "Disaster Recovery", href: "/solutions/disaster-recovery" },
+  { name: "Disaster Recovery", href: "/solutions/opentext-carbonite-availability" },
   { name: "Data Protection", href: "/solutions/data-protection" },
   { name: "Application Modernization", href: "/solutions/app-modernization" },
   { name: "IT Discovery", href: "/solutions/it-discovery" },

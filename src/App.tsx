@@ -65,7 +65,7 @@ const App = () => (
             <Route path="/vendors/sangfor" element={<SangforPage />} />
             <Route path="/vendors/arrosoft" element={<ArrosoftPage />} />
             <Route path="/vendors/nakivo" element={<NakivoPage />} />
-          <Route path="/solutions/disaster-recovery" element={<DisasterRecovery />} />
+          <Route path="/solutions/opentext-carbonite-availability" element={<DisasterRecovery />} />
           <Route path="/solutions/data-protection" element={<DataProtection />} />
           <Route path="/solutions/it-discovery" element={<ITDiscovery />} />
           <Route path="/solutions/secure-cloud" element={<SecureCloud />} />

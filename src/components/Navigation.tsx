@@ -16,7 +16,7 @@ import s2Logo from "@/assets/s2-logo-new.png";
 const dataProtectionSolutions = [
   {
     title: "Disaster Recovery",
-    href: "/solutions/disaster-recovery",
+    href: "/solutions/opentext-carbonite-availability",
     description: "Comprehensive DR planning and orchestration"
   },
   {

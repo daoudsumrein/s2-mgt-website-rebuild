@@ -13,7 +13,7 @@ const dataProtectionSolutions = [{
   icon: Server,
   title: "Disaster Recovery",
   description: "Comprehensive DR planning and orchestration",
-  link: "/solutions/disaster-recovery"
+  link: "/solutions/opentext-carbonite-availability"
 }, {
   icon: Workflow,
   title: "Server Migration",
