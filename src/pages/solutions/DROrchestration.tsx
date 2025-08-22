@@ -123,10 +123,11 @@ export default function DROrchestration() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="Disaster Recovery Orchestration Solutions MENA - Automated DR Management | S2 Solutions"
-        description="Advanced disaster recovery orchestration for MENA enterprises. Automated failover, dependency mapping, and DR workflow automation. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="disaster recovery orchestration MENA, automated DR UAE, failover automation Middle East, DR workflow Saudi Arabia, business continuity automation"
+        title="TDS TransitionManager DR Orchestration | MENA"
+        description="S2 Management delivers TDS TransitionManager across MENA—automated disaster recovery orchestration with runbooks, dependency mapping, and failover testing. Serving enterprises in UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and the wider Gulf."
+        keywords="TDS TransitionManager MENA, disaster recovery orchestration UAE, automated DR Saudi Arabia, business continuity Qatar, failover testing Kuwait, DR runbooks Bahrain, recovery automation Gulf, BC/DR orchestration Middle East"
         canonicalUrl="https://s2mgt.com/solutions/disaster-recovery-orchestration"
+        author="S2 Management Solutions"
       />
       <Navigation />
       <main className="flex-1">
@@ -183,7 +184,7 @@ export default function DROrchestration() {
                           animation: 'gradientShift 4s ease-in-out infinite'
                         }}
                       >
-                        TDS Disaster Recovery Orchestrator
+                        Transition Manager
                       </span>
                     </h1>
                     
@@ -231,7 +232,7 @@ export default function DROrchestration() {
           {/* Introduction */}
           <section className="intro-section tds-section">
             <div className="tds-container">
-              <h2 className="tds-section-title">TransitionManager <span className="highlight-blue">Disaster Recovery Orchestrator</span></h2>
+              <h1 className="tds-section-title">TransitionManager <span className="highlight-blue">Disaster Recovery Orchestrator</span></h1>
               <p className="intro-text">Simplify disaster recovery by identifying gaps, mapping dependencies, and orchestrating failover plans. Respond confidently to any disruption with comprehensive features that ensure your organization is prepared, resilient, and ready to maintain continuity when it matters most.</p>
               
               <div className="tds-grid tds-grid-auto" style={{marginTop: '50px'}}>
