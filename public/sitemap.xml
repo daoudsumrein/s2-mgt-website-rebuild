@@ -46,6 +46,13 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    
+    <url>
+        <loc>https://s2mgt.com/clients</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 
     <!-- Solutions Pages -->
     <url>
@@ -98,7 +105,7 @@
     </url>
 
     <url>
-        <loc>https://s2mgt.com/solutions/dr-orchestration</loc>
+        <loc>https://s2mgt.com/solutions/disaster-recovery-orchestration</loc>
         <lastmod>2025-01-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -147,7 +154,7 @@
     </url>
 
     <url>
-        <loc>https://s2mgt.com/solutions/on-prem-backup</loc>
+        <loc>https://s2mgt.com/solutions/onprem-backup</loc>
         <lastmod>2025-01-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -183,6 +190,13 @@
 
     <url>
         <loc>https://s2mgt.com/solutions/opentext-carbonite-migrate</loc>
+        <lastmod>2025-01-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://s2mgt.com/solutions/server-migration-orchestration</loc>
         <lastmod>2025-01-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
