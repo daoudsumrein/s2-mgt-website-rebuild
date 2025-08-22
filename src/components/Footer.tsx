@@ -19,6 +19,8 @@ const vendors = [
   { name: "OpenText", href: "/vendors/opentext" },
   { name: "TDS", href: "/vendors/tds" },
   { name: "AppCURE", href: "/vendors/appcure" },
+  { name: "Arrosoft", href: "/vendors/arrosoft" },
+  { name: "Nakivo", href: "/vendors/nakivo" },
   { name: "Sangfor", href: "/vendors/sangfor" }
 ];
 
