@@ -45,7 +45,7 @@ export default function ServerMigrationOrchestration() {
   return <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="TDS TransitionManager Migration Orchestration | MENA" 
-        description="S2 Management delivers TDS TransitionManager across MENA-automated migration orchestration with runbooks, dependency mapping & workflow automation. Serving UAE, Saudi Arabia, Qatar, Kuwait, Bahrain & the wider Gulf" 
+        descriptionS2 Management delivers TDS TransitionManager in MENA, enabling automated migration orchestration with runbooks, dependency mapping & workflow automation" 
         keywords="TDS TransitionManager MENA, migration orchestration UAE, automated server migration Saudi Arabia, migration workflow Qatar, workload transition Kuwait, dependency mapping Bahrain, migration automation Gulf, BC/DR orchestration Middle East, server migration MENA, infrastructure migration UAE, orchestrated cutover Saudi Arabia, cloud migration Qatar, migration runbooks Kuwait, data center transition Bahrain, enterprise migration automation Gulf" 
         canonicalUrl="https://s2mgt.com/solutions/server-migration-orchestration" 
       />
