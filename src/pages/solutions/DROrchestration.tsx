@@ -448,23 +448,15 @@ export default function DROrchestration() {
           {/* CTA */}
           <section className="cta-section tds-section-small">
             <div className="tds-container">
-              <h2 className="cta-title">Ready to Transform Your <span className="highlight-blue">Disaster Recovery?</span></h2>
+              <h2 className="cta-title">Ready to Transform Your <span style={{color: '#00C6F8'}}>Disaster Recovery?</span></h2>
               <p className="cta-subtitle">Don't wait for a disaster to test your recovery capabilities. Start building resilience today with TransitionManager.</p>
               <div className="cta-buttons">
                 <Button 
                   size="lg" 
                   className="tds-btn tds-btn-primary"
-                  onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=DR%20Orchestration%20Consultation', '_blank')}
+                  onClick={() => window.location.href = '/contact'}
                 >
-                  Get Started Today
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="tds-btn tds-btn-secondary"
-                  onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=DR%20Orchestration%20Demo', '_blank')}
-                >
-                  Schedule a Demo
+                  Contact Us
                 </Button>
               </div>
             </div>
