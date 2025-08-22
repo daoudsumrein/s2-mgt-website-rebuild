@@ -129,7 +129,7 @@ export default function DisasterRecovery() {
                           animation: 'gradientShift 4s ease-in-out infinite'
                         }}
                       >
-                        Carbonite Availability
+                        OpenText Availability
                       </span>
                     </h1>
                     
