@@ -17,10 +17,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Trusted Cybersecurity & Data Protection Distributor UAE, KSA"
-        description="S2 Management delivers backup & replication, data protection, DR orchestration, business continuity & resilience. Official MENA distributor for OpenText, TDS, appCURE, NAKIVO & Arrosoft."
-        keywords="TDS TransitionManager MENA, disaster recovery orchestration UAE, automated DR Saudi Arabia, business continuity Qatar, failover testing Kuwait, DR runbooks Bahrain, recovery automation Gulf, BC/DR orchestration Middle East"
-        canonicalUrl="https://s2mgt.com/solutions/disaster-recovery-orchestration"
+        title="Trusted Solutions Distributor | Backup, DR, Cybersecurity & Modernization"
+        description="S2 Management delivers Disaster Recovery & Backup, data protection, DR orchestration, business continuity & resilience. Official MENA distributor for OpenText, TDS, appCURE, NAKIVO & Arrosoft."
+        keywords="Disaster recovery solutions UAE, KSA, MENA, OpenText distributor Middle East, Enterprise data protection KSA, application modernization MENA, Carbonite solutions, IT orchestration, data protection MENA, Migration Orchestration Dubai & KSA, DR Orchestration Dubai & Riyadh"
+        canonicalUrl="https://s2mgt.com/"
         author="S2 Management Solutions"
       />
       <LocalBusinessSchema />
