@@ -6,6 +6,7 @@ interface SEOHeadProps {
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
+  author?: string;
 }
 
 export default function SEOHead({
@@ -13,7 +14,8 @@ export default function SEOHead({
   description = "Premier IT transformation and digital modernization services in MENA. Expert disaster recovery, cybersecurity, data protection, and IT orchestration solutions for enterprises across UAE, Saudi Arabia, and Middle East.",
   keywords = "disaster recovery MENA, cybersecurity UAE, IT transformation Middle East, digital transformation Saudi Arabia, Carbonite solutions, IT orchestration, data protection MENA, enterprise cybersecurity, business continuity",
   canonicalUrl = "https://s2mgt.com",
-  ogImage = "https://s2mgt.com/assets/s2-logo.png"
+  ogImage = "https://s2mgt.com/assets/s2-logo.png",
+  author
 }: SEOHeadProps) {
   useEffect(() => {
     // Update document title
@@ -71,7 +73,18 @@ export default function SEOHead({
     updateTwitterMeta('twitter:description', description);
     updateTwitterMeta('twitter:image', ogImage);
     
-  }, [title, description, keywords, canonicalUrl, ogImage]);
+    // Update author meta tag if provided
+    if (author) {
+      let authorMeta = document.querySelector('meta[name="author"]');
+      if (!authorMeta) {
+        authorMeta = document.createElement('meta');
+        authorMeta.setAttribute('name', 'author');
+        document.head.appendChild(authorMeta);
+      }
+      authorMeta.setAttribute('content', author);
+    }
+    
+  }, [title, description, keywords, canonicalUrl, ogImage, author]);
 
   return null;
 }
