@@ -75,7 +75,7 @@ const App = () => (
           <Route path="/solutions/endpoint-backup" element={<EndpointBackup />} />
           <Route path="/solutions/server-backup" element={<ServerBackup />} />
           <Route path="/solutions/onprem-backup" element={<OnPremBackup />} />
-          <Route path="/solutions/server-migration" element={<ServerMigration />} />
+          <Route path="/solutions/opentext-carbonite-migrate" element={<ServerMigration />} />
           <Route path="/solutions/disaster-recovery-orchestration" element={<DROrchestration />} />
           <Route path="/solutions/server-migration-orchestration" element={<ServerMigrationOrchestration />} />
           <Route path="/solutions/endpoint-protection" element={<EndpointProtection />} />

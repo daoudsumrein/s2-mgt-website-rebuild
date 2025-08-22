@@ -21,7 +21,7 @@ const dataProtectionSolutions = [
   },
   {
     title: "Server Migration",
-    href: "/solutions/server-migration",
+    href: "/solutions/opentext-carbonite-migrate",
     description: "Seamless any-to-any server migrations"
   },
   {

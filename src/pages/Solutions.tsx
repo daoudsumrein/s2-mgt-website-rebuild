@@ -18,7 +18,7 @@ const dataProtectionSolutions = [{
   icon: Workflow,
   title: "Server Migration",
   description: "Seamless any-to-any server migrations",
-  link: "/solutions/server-migration"
+  link: "/solutions/opentext-carbonite-migrate"
 }, {
   icon: Search,
   title: "Disaster Recovery Orchestration",

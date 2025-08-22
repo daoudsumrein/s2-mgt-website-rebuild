@@ -45,7 +45,7 @@ const features = [{
 const deliverables = ["All administrative tasks are handled from a single console", "Real-time data synchronization is possible regardless of geographic boundaries between any source to any target", "Cutover and switch to the new environment can be completed within minutes"];
 export default function ServerMigration() {
   return <div className="min-h-screen flex flex-col">
-      <SEOHead title="Server Migration Solutions MENA - Seamless Infrastructure Migration | S2 Solutions" description="Professional server migration services for MENA enterprises. Any-to-any server migrations with zero downtime using OpenText Migrate technology. Serving UAE, Saudi Arabia, and Middle East." keywords="server migration MENA, infrastructure migration UAE, OpenText Migrate Middle East, zero downtime migration Saudi Arabia, cloud migration, data center migration" canonicalUrl="https://s2mgt.com/solutions/server-migration" />
+      <SEOHead title="Server Migration Solutions MENA - Seamless Infrastructure Migration | S2 Solutions" description="Professional server migration services for MENA enterprises. Any-to-any server migrations with zero downtime using OpenText Migrate technology. Serving UAE, Saudi Arabia, and Middle East." keywords="server migration MENA, infrastructure migration UAE, OpenText Migrate Middle East, zero downtime migration Saudi Arabia, cloud migration, data center migration" canonicalUrl="https://s2mgt.com/solutions/opentext-carbonite-migrate" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
