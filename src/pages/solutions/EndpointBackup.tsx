@@ -111,8 +111,8 @@ export default function EndpointBackup() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="Official Distributor of OpenText Core Endpoint Backup Solutions"
-        description="S2, the official MENA distributor for OpenText Core Endpoint Backup, delivers automated device & data protection against human error, malware & theft."
+        title="Endpoint Cloud Backup Solutions MENA - Automated Device Protection | S2 Solutions"
+        description="Complete endpoint cloud backup solutions for MENA enterprises. Automated protection for all endpoint devices with advanced security, global tracking, and 24/7 support. Serving UAE, Saudi Arabia, and Middle East."
         keywords="endpoint backup MENA, cloud backup UAE, device protection Middle East, automated backup Saudi Arabia, endpoint security, remote device backup, enterprise endpoint protection"
         canonicalUrl="https://s2mgt.com/solutions/endpoint-backup"
       />
