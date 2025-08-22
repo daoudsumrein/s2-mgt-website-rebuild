@@ -231,7 +231,7 @@ export default function DROrchestration() {
           {/* Introduction */}
           <section className="intro-section tds-section">
             <div className="tds-container">
-              <h1 className="tds-section-title">TransitionManager <span className="highlight-blue">Disaster Recovery Orchestrator</span></h1>
+              <h2 className="tds-section-title">TransitionManager <span className="highlight-blue">Disaster Recovery Orchestrator</span></h2>
               <p className="intro-text">Simplify disaster recovery by identifying gaps, mapping dependencies, and orchestrating failover plans. Respond confidently to any disruption with comprehensive features that ensure your organization is prepared, resilient, and ready to maintain continuity when it matters most.</p>
               
               <div className="tds-grid tds-grid-auto" style={{marginTop: '50px'}}>
