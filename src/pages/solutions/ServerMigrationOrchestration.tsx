@@ -43,7 +43,12 @@ export default function ServerMigrationOrchestration() {
     threshold: 0.3
   });
   return <div className="min-h-screen flex flex-col">
-      <SEOHead title="Server Migration Orchestration Solutions MENA - Automated Migration Management | S2 Solutions" description="Advanced server migration orchestration for MENA enterprises. Automated server moves, dependency mapping, and migration workflow automation. Serving UAE, Saudi Arabia, and Middle East." keywords="server migration orchestration MENA, automated server migration UAE, migration workflow Middle East, server move automation Saudi Arabia, infrastructure migration orchestration" canonicalUrl="https://s2mgt.com/solutions/server-migration-orchestration" />
+      <SEOHead 
+        title="TDS TransitionManager Migration Orchestration | MENA" 
+        description="S2 Management delivers TDS TransitionManager across MENA—automated migration orchestration with runbooks, dependency mapping & workflow automation. Serving UAE, Saudi Arabia, Qatar, Kuwait, Bahrain & the wider Gulf" 
+        keywords="TDS TransitionManager MENA, migration orchestration UAE, automated server migration Saudi Arabia, migration workflow Qatar, workload transition Kuwait, dependency mapping Bahrain, migration automation Gulf, BC/DR orchestration Middle East, server migration MENA, infrastructure migration UAE, orchestrated cutover Saudi Arabia, cloud migration Qatar, migration runbooks Kuwait, data center transition Bahrain, enterprise migration automation Gulf" 
+        canonicalUrl="https://s2mgt.com/solutions/server-migration-orchestration" 
+      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
