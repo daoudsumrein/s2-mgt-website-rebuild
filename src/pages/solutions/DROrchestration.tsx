@@ -189,7 +189,7 @@ export default function DROrchestration() {
                     </h1>
                     
                     <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                      Ensure maximum uptime for your Windows and Linux servers with comprehensive DR solutions featuring continuous replication and automated failover.
+                     S2 Management delivers TDS TransitionManager DR Orchestrator in MENA. Automate disaster recovery runbooks, failover testing & business continuity.
                     </p>
                     
                     <Button 
