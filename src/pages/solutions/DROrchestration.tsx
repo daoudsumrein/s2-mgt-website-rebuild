@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import "../../styles/tds-dr-content.css";
+import { Link } from "react-router-dom";
 
 export default function DROrchestration() {
   // Scroll animation hooks for different sections
@@ -448,23 +448,17 @@ export default function DROrchestration() {
           {/* CTA */}
           <section className="cta-section tds-section-small">
             <div className="tds-container">
-              <h2 className="cta-title">Ready to Transform Your <span className="highlight-blue">Disaster Recovery?</span></h2>
+              <h2 className="cta-title">Ready to Transform Your <span style={{ color: '#00C6F8' }}>Disaster Recovery?</span></h2>
               <p className="cta-subtitle">Don't wait for a disaster to test your recovery capabilities. Start building resilience today with TransitionManager.</p>
               <div className="cta-buttons">
                 <Button 
                   size="lg" 
                   className="tds-btn tds-btn-primary"
-                  onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=DR%20Orchestration%20Consultation', '_blank')}
+                  asChild
                 >
-                  Get Started Today
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="tds-btn tds-btn-secondary"
-                  onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=DR%20Orchestration%20Demo', '_blank')}
-                >
-                  Schedule a Demo
+                  <Link to="/contact">
+                    Contact Us
+                  </Link>
                 </Button>
               </div>
             </div>
