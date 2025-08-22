@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -58,67 +58,6 @@ const deliverables = [{
   description: "Comprehensive support for diverse IT environments"
 }];
 export default function DisasterRecovery() {
-  // SEO Meta Tags
-  useEffect(() => {
-    // Update document title
-    document.title = "Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions";
-    
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]') || document.createElement('meta');
-    metaDescription.setAttribute('name', 'description');
-    metaDescription.setAttribute('content', 'Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools.');
-    if (!document.querySelector('meta[name="description"]')) {
-      document.head.appendChild(metaDescription);
-    }
-    
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]') || document.createElement('meta');
-    metaKeywords.setAttribute('name', 'keywords');
-    metaKeywords.setAttribute('content', 'disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools');
-    if (!document.querySelector('meta[name="keywords"]')) {
-      document.head.appendChild(metaKeywords);
-    }
-    
-    // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]') || document.createElement('link');
-    canonicalLink.setAttribute('rel', 'canonical');
-    canonicalLink.setAttribute('href', 'https://s2mgt.com/solutions/disaster-recovery');
-    if (!document.querySelector('link[rel="canonical"]')) {
-      document.head.appendChild(canonicalLink);
-    }
-    
-    // Update Open Graph meta tags
-    const updateOGMeta = (property: string, content: string) => {
-      let metaTag = document.querySelector(`meta[property="${property}"]`) || document.createElement('meta');
-      metaTag.setAttribute('property', property);
-      metaTag.setAttribute('content', content);
-      if (!document.querySelector(`meta[property="${property}"]`)) {
-        document.head.appendChild(metaTag);
-      }
-    };
-    
-    updateOGMeta('og:title', 'Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions');
-    updateOGMeta('og:description', 'Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools.');
-    updateOGMeta('og:url', 'https://s2mgt.com/solutions/disaster-recovery');
-    updateOGMeta('og:image', 'https://s2mgt.com/assets/s2-logo.png');
-    updateOGMeta('og:type', 'website');
-    
-    // Update Twitter meta tags
-    const updateTwitterMeta = (name: string, content: string) => {
-      let metaTag = document.querySelector(`meta[name="${name}"]`) || document.createElement('meta');
-      metaTag.setAttribute('name', name);
-      metaTag.setAttribute('content', content);
-      if (!document.querySelector(`meta[name="${name}"]`)) {
-        document.head.appendChild(metaTag);
-      }
-    };
-    
-    updateTwitterMeta('twitter:card', 'summary_large_image');
-    updateTwitterMeta('twitter:title', 'Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions');
-    updateTwitterMeta('twitter:description', 'Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools.');
-    updateTwitterMeta('twitter:image', 'https://s2mgt.com/assets/s2-logo.png');
-  }, []);
-
   // Scroll animation hooks for different sections
   const heroAnimation = useScrollAnimation({ threshold: 0.3 });
   const problemAnimation = useScrollAnimation({ threshold: 0.2 });
@@ -129,6 +68,12 @@ export default function DisasterRecovery() {
   const distributorAnimation = useScrollAnimation({ threshold: 0.2 });
 
   return <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions"
+        description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools."
+        keywords="disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools"
+        canonicalUrl="https://s2mgt.com/solutions/disaster-recovery"
+      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
