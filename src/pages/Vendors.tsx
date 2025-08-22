@@ -70,7 +70,7 @@ const vendors = [
   {
     name: "Arrosoft",
     logo: "https://www.arrosoft.com/favicon.svg",
-    description: "Endpoint & Data Protection",
+    description: "Advanced Cybersecurity & Threat Protection",
     tagline: "Protecting against insider threats and ransomware attacks",
     solutions: [
       "Arrosoft Stealth - Kernel-Level Protection & Data Hiding",
