@@ -76,7 +76,7 @@ export default function ServerMigration() {
                       backgroundSize: '300% 300%',
                       animation: 'gradientShift 4s ease-in-out infinite'
                     }}>
-                        Server Migration
+                        OpenText Migrate
                       </span>
                     </h1>
                     
