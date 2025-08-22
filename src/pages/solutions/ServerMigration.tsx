@@ -47,7 +47,7 @@ export default function ServerMigration() {
   return <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="OpenText (Carbonite) Migrate Distributor MENA | UAE, KSA, Qatar"
-        description="S2 Management is the official MENA distributor of OpenText Carbonite Migrate. Simplify server & cloud migrations with zero downtime and seamless any-to-any infrastructure transfer."
+        description="S2 Management Official MENA distributor of OpenText Carbonite Migrate. Real-time replication, automated failover & 24/7 protection."
         keywords="Carbonite Migrate MENA, OpenText Migrate distributor, server migration UAE, zero downtime migration Saudi Arabia, data center migration Middle East, cloud migration Qatar, Carbonite partner Oman, Carbonite distributor Bahrain, OpenText Migrate Kuwait, infrastructure migration UAE, enterprise server migration, Carbonite Migrate solutions, OpenText partner MENA"
         canonicalUrl="https://s2mgt.com/solutions/opentext-carbonite-migrate"
       />
