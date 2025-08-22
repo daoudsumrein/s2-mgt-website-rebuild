@@ -69,7 +69,7 @@ export default function DisasterRecovery() {
 
   return <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title="Disaster Recovery Solutions MENA - Business Continuity & Data Protection | S2 Solutions"
+        title="Carbonite (OpenText) Distributor MENA | UAE, KSA, Qatar"
         description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools."
         keywords="disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools"
         canonicalUrl="https://s2mgt.com/solutions/disaster-recovery"
