@@ -70,9 +70,10 @@ export default function DisasterRecovery() {
   return <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="Carbonite (OpenText) Distributor MENA | UAE, KSA, Qatar"
-        description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools."
-        keywords="disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools"
+        description="S2 Management Official MENA distributor of OpenText Carbonite Availability. Real-time replication, automated failover & 24/7 protection."
+        keywords="Carbonite MENA, OpenText Availability, Carbonite distributor UAE, Carbonite distributor Saudi Arabia, Carbonite Qatar, Carbonite Oman, Carbonite Bahrain, Carbonite Kuwait, disaster recovery MENA, business continuity UAE, real-time replication, automated failover, enterprise data protection, RPO RTO solutions, OpenText partner Middle East"
         canonicalUrl="https://s2mgt.com/solutions/disaster-recovery"
+        author="S2 Management Solutions"
       />
       <Navigation />
       <main className="flex-1">
