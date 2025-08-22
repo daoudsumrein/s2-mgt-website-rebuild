@@ -18,7 +18,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title="Trusted Solutions Distributor | Backup, DR, Cybersecurity & Orchestator"
-        description="S2 Management delivers Disaster Recovery & Backup, Data protection, DR orchestration, business continuity & resilience."
+        description="S2 Management delivers Disaster Recovery & Backup, Data protection, DR orchestration,Application Modernazation, business continuity & resilience."
         keywords="Disaster recovery solutions UAE, KSA, MENA, OpenText distributor Middle East, Enterprise data protection KSA, application modernization MENA, Carbonite solutions, IT orchestration, data protection MENA, Migration Orchestration Dubai & KSA, DR Orchestration Dubai & Riyadh"
         canonicalUrl="https://s2mgt.com/"
         author="S2 Management Solutions"
