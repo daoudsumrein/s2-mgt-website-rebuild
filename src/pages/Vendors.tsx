@@ -73,10 +73,10 @@ const vendors = [
     description: "Endpoint & Data Protection",
     tagline: "Advanced endpoint backup and data protection solutions",
     solutions: [
-      "Endpoint Backup & Recovery",
-      "Centralized Management",
-      "Continuous Data Protection",
-      "Bare Metal Recovery"
+      "Arrosoft Stealth - Kernel-Level Protection & Data Hiding",
+      "Arrosoft AirGap - Immutable Backup Vault Protection",
+      "Driver-Layer Isolation - Advanced Threat Containment",
+      "Multi-Factor Authentication - Zero-Trust Security"
     ],
     href: "/vendors/arrosoft",
     color: "bg-cyan-50 text-cyan-700 border-cyan-200"
