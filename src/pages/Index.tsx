@@ -17,7 +17,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="TDS TransitionManager DR Orchestration | MENA"
+        title="Trusted Cybersecurity & Data Protection Distributor UAE, KSA"
         description="S2 Management delivers backup & replication, data protection, DR orchestration, business continuity & resilience. Official MENA distributor for OpenText, TDS, appCURE, NAKIVO & Arrosoft."
         keywords="TDS TransitionManager MENA, disaster recovery orchestration UAE, automated DR Saudi Arabia, business continuity Qatar, failover testing Kuwait, DR runbooks Bahrain, recovery automation Gulf, BC/DR orchestration Middle East"
         canonicalUrl="https://s2mgt.com/solutions/disaster-recovery-orchestration"
