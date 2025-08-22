@@ -73,6 +73,38 @@ export default function DisasterRecovery() {
         description="Comprehensive disaster recovery solutions for MENA region. Ensure maximum uptime for Windows and Linux servers with continuous replication, automated failover, and comprehensive DR tools."
         keywords="disaster recovery MENA, business continuity UAE, DR solutions Middle East, server replication, automated failover, data protection Saudi Arabia, enterprise DR tools"
         canonicalUrl="https://s2mgt.com/solutions/disaster-recovery"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Who is the exclusive distributor of OpenText Availability (Carbonite Availability) in MENA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "S2 Management Solutions is the official MENA distributor for OpenText Availability (formerly Carbonite Availability), supporting customers and partners across the Middle East and North Africa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which countries in MENA does S2 Management support for OpenText Availability?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We cover the entire MENA region, including the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, Egypt, Jordan, Lebanon, Iraq, Morocco, Tunisia, Algeria, Libya, Sudan, Mauritania, Palestine, Syria and Yemen."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does OpenText Availability provide for disaster recovery?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Enterprise-grade DR with real-time replication, automated failover/failback, runbook-driven orchestration, and low RPO/RTO to keep mission-critical workloads online."
+                }
+              }
+            ]
+          }
+        ]}
       />
       <Navigation />
       <main className="flex-1">
