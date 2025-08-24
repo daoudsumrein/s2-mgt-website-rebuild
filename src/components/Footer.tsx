@@ -4,37 +4,64 @@ import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
-const solutions = [
-  { name: "All Services", href: "/services" },
-  { name: "Disaster Recovery", href: "/solutions/opentext-carbonite-availability" },
-  { name: "Data Protection", href: "/solutions/data-protection" },
-  { name: "Application Modernization", href: "/solutions/app-modernization" },
-  { name: "IT Discovery", href: "/solutions/it-discovery" },
-  { name: "Secure Cloud", href: "/solutions/secure-cloud" },
-  { name: "Security", href: "/solutions/security" }
-];
-
-const vendors = [
-  { name: "OpenText", href: "/vendors/opentext" },
-  { name: "TDS", href: "/vendors/tds" },
-  { name: "AppCURE", href: "/vendors/appcure" },
-  { name: "Arrosoft", href: "/vendors/arrosoft" },
-  { name: "Nakivo", href: "/vendors/nakivo" },
-  { name: "Sangfor", href: "/vendors/sangfor" }
-];
-
+const solutions = [{
+  name: "All Services",
+  href: "/services"
+}, {
+  name: "Disaster Recovery",
+  href: "/solutions/opentext-carbonite-availability"
+}, {
+  name: "Data Protection",
+  href: "/solutions/data-protection"
+}, {
+  name: "Application Modernization",
+  href: "/solutions/app-modernization"
+}, {
+  name: "IT Discovery",
+  href: "/solutions/it-discovery"
+}, {
+  name: "Secure Cloud",
+  href: "/solutions/secure-cloud"
+}, {
+  name: "Security",
+  href: "/solutions/security"
+}];
+const vendors = [{
+  name: "OpenText",
+  href: "/vendors/opentext"
+}, {
+  name: "TDS",
+  href: "/vendors/tds"
+}, {
+  name: "AppCURE",
+  href: "/vendors/appcure"
+}, {
+  name: "Arrosoft",
+  href: "/vendors/arrosoft"
+}, {
+  name: "Nakivo",
+  href: "/vendors/nakivo"
+}, {
+  name: "Sangfor",
+  href: "/vendors/sangfor"
+}];
 export default function Footer() {
-  const { ref: footerRef, isInView: footerInView } = useScrollAnimation();
-  
-  return (
-    <motion.footer 
-      ref={footerRef}
-      initial={{ opacity: 0, y: 30 }}
-      animate={footerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6 }}
-      className="bg-muted border-t"
-    >
+  const {
+    ref: footerRef,
+    isInView: footerInView
+  } = useScrollAnimation();
+  return <motion.footer ref={footerRef} initial={{
+    opacity: 0,
+    y: 30
+  }} animate={footerInView ? {
+    opacity: 1,
+    y: 0
+  } : {
+    opacity: 0,
+    y: 30
+  }} transition={{
+    duration: 0.6
+  }} className="bg-muted border-t">
       <div className="container mx-auto px-5 pt-10 pb-4">
         {/* Mobile View */}
         <div className="lg:hidden space-y-6">
@@ -86,16 +113,11 @@ export default function Footer() {
                 <span className="text-sm">+</span>
               </CollapsibleTrigger>
               <CollapsibleContent className="space-y-2 pt-2">
-                {solutions.map((solution) => (
-                  <div key={solution.href}>
-                    <Link 
-                      to={solution.href} 
-                      className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
-                    >
+                {solutions.map(solution => <div key={solution.href}>
+                    <Link to={solution.href} className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                       {solution.name}
                     </Link>
-                  </div>
-                ))}
+                  </div>)}
               </CollapsibleContent>
             </Collapsible>
 
@@ -106,16 +128,11 @@ export default function Footer() {
                 <span className="text-sm">+</span>
               </CollapsibleTrigger>
               <CollapsibleContent className="space-y-2 pt-2">
-                {vendors.map((vendor) => (
-                  <div key={vendor.href}>
-                    <Link 
-                      to={vendor.href} 
-                      className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
-                    >
+                {vendors.map(vendor => <div key={vendor.href}>
+                    <Link to={vendor.href} className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                       {vendor.name}
                     </Link>
-                  </div>
-                ))}
+                  </div>)}
               </CollapsibleContent>
             </Collapsible>
 
@@ -132,12 +149,7 @@ export default function Footer() {
                 
                 <div>
                   <div className="font-semibold text-sm text-foreground mb-2">Partners</div>
-                  <a 
-                    href="https://preview--pipeline-pro-portal.lovable.app" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a href="https://preview--pipeline-pro-portal.lovable.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors">
                     Partner Portal 
                     <span className="text-xs">↗</span>
                   </a>
@@ -192,16 +204,11 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="text-base font-semibold text-foreground">Solutions & Services</div>
             <ul className="space-y-2">
-              {solutions.map((solution) => (
-                <li key={solution.href}>
-                  <Link 
-                    to={solution.href} 
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+              {solutions.map(solution => <li key={solution.href}>
+                  <Link to={solution.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {solution.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -209,16 +216,11 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="text-base font-semibold text-foreground">Our Vendors</div>
             <ul className="space-y-2">
-              {vendors.map((vendor) => (
-                <li key={vendor.href}>
-                  <Link 
-                    to={vendor.href} 
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+              {vendors.map(vendor => <li key={vendor.href}>
+                  <Link to={vendor.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {vendor.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -237,12 +239,7 @@ export default function Footer() {
               <div className="text-base font-semibold text-foreground mb-2">Partners</div>
               <ul className="space-y-2">
                 <li>
-                  <a 
-                    href="https://preview--pipeline-pro-portal.lovable.app" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a href="https://preview--pipeline-pro-portal.lovable.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors">
                     Partner Portal 
                     <span className="text-xs">↗</span>
                   </a>
@@ -255,13 +252,8 @@ export default function Footer() {
         {/* Social Media & Copyright */}
         <div className="border-t border-border mt-8 pt-4 flex flex-col lg:flex-row justify-between items-center lg:space-y-0">
           <div className="flex items-center space-x-4">
-            <a 
-              href="https://linkedin.com/company/s2-management-solutions" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 transition-colors"
-            >
-              <Linkedin className="h-6 w-6" />
+            <a href="https://linkedin.com/company/s2-management-solutions" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
+              <Linkedin className="h-6 w-6 my-[6px]" />
             </a>
           </div>
           <p className="text-sm text-muted-foreground">
@@ -269,6 +261,5 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </motion.footer>
-  );
+    </motion.footer>;
 }
