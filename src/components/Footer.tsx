@@ -41,9 +41,6 @@ const vendors = [{
 }, {
   name: "Nakivo",
   href: "/vendors/nakivo"
-}, {
-  name: "Sangfor",
-  href: "/vendors/sangfor"
 }];
 export default function Footer() {
   const {
