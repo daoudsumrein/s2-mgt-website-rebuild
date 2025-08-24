@@ -170,9 +170,13 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
+
+          {/* Mobile Navigation Arrows at Bottom */}
+          <div className="flex justify-center items-center gap-4 mt-6">
+            <CarouselPrevious className="relative left-0 translate-y-0" />
+            <CarouselNext className="relative right-0 translate-y-0" />
+          </div>
 
           <div className="text-center mt-8">
             <Button size="lg" className="group">
