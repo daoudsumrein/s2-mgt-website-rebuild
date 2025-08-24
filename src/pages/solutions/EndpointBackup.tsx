@@ -368,8 +368,8 @@ export default function EndpointBackup() {
               </p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              <div className="space-y-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
                     <Laptop className="h-6 w-6 text-primary" />
@@ -396,8 +396,6 @@ export default function EndpointBackup() {
                   </div>
                 </div>
               </div>
-              
-              
             </div>
           </div>
         </section>
