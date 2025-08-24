@@ -143,6 +143,9 @@ export default function Footer() {
                 <Link to="/about" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   About S2
                 </Link>
+                <Link to="/contact" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                  Contact Us
+                </Link>
                 
                 <div>
                   <div className="font-semibold text-sm text-foreground mb-2">Partners</div>
@@ -228,6 +231,11 @@ export default function Footer() {
               <li>
                 <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   About S2
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
