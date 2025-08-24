@@ -369,7 +369,7 @@ export default function EndpointBackup() {
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
-              <div className="space-y-8">
+              <div className="space-y-8 text-center lg:text-left">
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
                     <Laptop className="h-6 w-6 text-primary" />
