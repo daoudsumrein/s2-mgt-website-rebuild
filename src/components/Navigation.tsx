@@ -317,12 +317,12 @@ export default function Navigation() {
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <Button variant="outline" size="sm" asChild className="hidden md:inline-flex">
               <a 
-                href="https://preview--pipeline-pro-portal.lovable.app" 
+                href="https://odoo.s2mgt.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
-                Partner Portal
+                Employee Login
                 <ExternalLink className="h-3 w-3" />
               </a>
             </Button>
@@ -451,13 +451,13 @@ function MobileNav({ setIsOpen }: { setIsOpen: (open: boolean) => void }) {
           Contact Us
         </Link>
         <a 
-          href="https://preview--pipeline-pro-portal.lovable.app" 
+          href="https://odoo.s2mgt.com/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-sm font-medium flex items-center gap-2 hover:text-primary transition-colors"
           onClick={() => setIsOpen(false)}
         >
-          Partner Portal
+          Employee Login
           <ExternalLink className="h-3 w-3" />
         </a>
       </div>
