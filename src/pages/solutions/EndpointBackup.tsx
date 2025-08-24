@@ -188,13 +188,13 @@ export default function EndpointBackup() {
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
                       {/* Video Container */}
                       <div className="absolute inset-0">
-                        <div className="w-full h-full bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-green-500/20 rounded-xl flex items-center justify-center border border-blue-500/20">
-                          <div className="text-center text-white/80">
-                            <Laptop className="h-16 w-16 mx-auto mb-4 text-blue-400" />
-                            <p className="text-lg font-semibold">Endpoint Protection Demo</p>
-                            <p className="text-sm text-white/60 mt-2">Coming Soon</p>
-                          </div>
-                        </div>
+                        <iframe 
+                          src="https://player.vimeo.com/video/367102586?badge=0&autopause=0&player_id=0&app_id=58479&controls=1&title=0&byline=0&portrait=0" 
+                          className="w-full h-full border-none rounded-xl"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title="Endpoint Backup Solutions"
+                        />
                       </div>
                       
                       {/* Overlay gradient */}
