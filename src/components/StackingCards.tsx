@@ -177,12 +177,6 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
             </div>
           </Carousel>
 
-          <div className="text-center mt-8">
-            <Button size="lg" className="group">
-              View All Services
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
         </div>
       </section>
     );
