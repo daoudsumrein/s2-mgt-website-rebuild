@@ -50,7 +50,7 @@ const vendors = [
       "Runtime - Secure Environments",
       "DMT - Desktop Modernization"
     ],
-    href: "/vendors/appcure",
+    href: "https://appcure.io/",
     color: "bg-purple-50 text-purple-700 border-purple-200"
   },
   {
