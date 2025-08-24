@@ -54,29 +54,29 @@ export default function ServerMigration() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden h-[75vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Animated background particles */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-            <div className="absolute inset-0 bg-[radial-gradient(2px_2px_at_20px_30px,rgba(74,144,226,0.3),transparent),radial-gradient(2px_2px_at_40px_70px,rgba(74,144,226,0.2),transparent),radial-gradient(1px_1px_at_90px_40px,rgba(74,144,226,0.4),transparent),radial-gradient(1px_1px_at_130px_80px,rgba(74,144,226,0.3),transparent)] bg-[length:150px_150px] animate-[float_20s_infinite_linear]"></div>
+          <div className="fixed inset-0 pointer-events-none z-0">
+            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(2px_2px_at_20px_30px,rgba(74,144,226,0.3),transparent),radial-gradient(2px_2px_at_40px_70px,rgba(74,144,226,0.2),transparent),radial-gradient(1px_1px_at_90px_40px,rgba(74,144,226,0.4),transparent),radial-gradient(1px_1px_at_130px_80px,rgba(74,144,226,0.3),transparent)] bg-[length:150px_150px] animate-[float_20s_infinite_linear]"></div>
           </div>
 
-          <div className="container mx-auto px-8 relative z-10">
-            <div className="max-w-6xl mx-auto">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto">
               {/* Hero Container */}
               <div className="bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3),0_0_0_1px_rgba(74,144,226,0.1)] relative overflow-hidden transition-all duration-300 hover:shadow-[0_30px_60px_rgba(0,0,0,0.4),0_0_0_1px_rgba(74,144,226,0.3),0_0_30px_rgba(74,144,226,0.2)] hover:border-blue-400 hover:-translate-y-1 group">
                 
                 {/* Hover Effect Overlay */}
                 <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-blue-500/10 to-transparent transition-all duration-500 group-hover:left-full"></div>
                 
-                <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
                   {/* Left Content */}
-                  <div className="space-y-6">
-                    <Badge variant="outline" className="bg-blue-500/20 text-blue-400 border-blue-500/30 px-4 py-2 text-sm font-medium w-fit hover:bg-blue-500/30 hover:border-blue-400 hover:scale-105 transition-all duration-300 relative overflow-hidden group/badge">
+                  <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
+                    <Badge variant="outline" className="bg-blue-500/20 text-blue-400 border-blue-500/30 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium w-fit hover:bg-blue-500/30 hover:border-blue-400 hover:scale-105 transition-all duration-300 relative overflow-hidden group/badge">
                       <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-all duration-500 group-hover/badge:left-full"></div>
                       <span className="relative z-10">Migration Solutions</span>
                     </Badge>
                     
-                    <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                       <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent hover:scale-[1.02] hover:drop-shadow-[0_0_10px_rgba(74,144,226,0.3)] transition-all duration-300 cursor-default inline-block" style={{
                       backgroundSize: '300% 300%',
                       animation: 'gradientShift 4s ease-in-out infinite'
@@ -85,7 +85,7 @@ export default function ServerMigration() {
                       </span>
                     </h1>
                     
-                    <p className="text-xl text-slate-300 leading-relaxed max-w-lg">
+                    <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
                       Seamless any-to-any server migrations with minimal downtime and maximum efficiency using advanced automation and continuous replication.
                     </p>
                     
