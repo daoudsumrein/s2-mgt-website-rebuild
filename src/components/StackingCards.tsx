@@ -140,7 +140,7 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
             </p>
           </div>
 
-          <Carousel className="w-full max-w-sm mx-auto">
+          <Carousel className="w-full max-w-sm mx-auto relative">
             <CarouselContent>
               {cards.map((service, index) => {
                 const IconComponent = service.icon;
@@ -170,13 +170,12 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
                 );
               })}
             </CarouselContent>
+            {/* Mobile Navigation Arrows at Bottom */}
+            <div className="flex justify-center items-center gap-4 mt-6">
+              <CarouselPrevious className="relative left-0 translate-y-0 translate-x-0" />
+              <CarouselNext className="relative right-0 translate-y-0 translate-x-0" />
+            </div>
           </Carousel>
-
-          {/* Mobile Navigation Arrows at Bottom */}
-          <div className="flex justify-center items-center gap-4 mt-6">
-            <CarouselPrevious className="relative left-0 translate-y-0" />
-            <CarouselNext className="relative right-0 translate-y-0" />
-          </div>
 
           <div className="text-center mt-8">
             <Button size="lg" className="group">
