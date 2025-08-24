@@ -263,12 +263,12 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
          }
          .navigation-arrows {
            position: fixed;
-           right: 2rem;
-           top: 50%;
-           transform: translateY(-50%);
+           bottom: 2rem;
+           left: 50%;
+           transform: translateX(-50%);
            display: flex;
-           flex-direction: column;
-           gap: 0.5rem;
+           flex-direction: row;
+           gap: 1rem;
            z-index: 1000;
          }
          .arrow-button {
