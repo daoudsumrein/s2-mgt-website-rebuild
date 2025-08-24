@@ -338,7 +338,7 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
               >
                 <div className="sub">
                   <IconComponent className="h-8 w-8 mb-2 text-white" />
-                  {service.title.split(' ')[0]}
+                  {service.title.startsWith('Application') ? 'Application Modernization' : service.title.split(' ')[0]}
                 </div>
                 <div className="content">
                   {service.description}
