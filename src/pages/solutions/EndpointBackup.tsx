@@ -368,7 +368,7 @@ export default function EndpointBackup() {
               </p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
               <div className="space-y-8">
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
