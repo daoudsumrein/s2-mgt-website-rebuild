@@ -20,55 +20,55 @@ export default function TDSPage() {
         <Navigation />
         <main>
           {/* Hero Section */}
-          <section className="pt-32 pb-20 bg-background relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/lovable-uploads/1f2a065f-da31-4139-963d-9275169e01e8.png)' }}>
+          <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 bg-background relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/lovable-uploads/1f2a065f-da31-4139-963d-9275169e01e8.png)' }}>
             {/* Dark overlay for better text readability */}
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="container mx-auto px-4 relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 items-center">
                 <div className="lg:col-span-2">
-                  <h1 className="text-5xl font-bold mb-2 leading-tight text-cyan-300">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 leading-tight text-cyan-300">
                     TransitionManager®
                   </h1>
-                  <div className="text-4xl font-semibold mb-2 text-white leading-tight">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2 text-white leading-tight">
                     One Platform.
                   </div>
-                  <div className="text-4xl font-semibold mb-8 text-white leading-tight">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 sm:mb-8 text-white leading-tight">
                     Three Core Capabilities.
                   </div>
                   
-                  <p className="text-base text-white/90 mb-4 leading-relaxed font-medium">
+                  <p className="text-sm sm:text-base text-white/90 mb-4 leading-relaxed font-medium">
                     The platform built to provide clear <span className="font-semibold text-cyan-300">insight</span> into IT and let teams <span className="font-semibold text-lime-300">orchestrate</span>, <span className="font-semibold text-orange-300">accelerate</span> and de-risk migration, modernization, and other IT transformation initiatives.
                   </p>
                   
-                  <p className="text-base text-white/90 leading-relaxed font-medium">
+                  <p className="text-sm sm:text-base text-white/90 leading-relaxed font-medium">
                     <strong className="text-white">TransitionManager's</strong> three modules address the unique challenges of complex migrations, modernizations, and transformations.
                   </p>
                 </div>
                 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-3 sm:gap-4 mt-6 lg:mt-0">
                   <Button 
-                    className="h-16 text-left justify-start text-white font-semibold text-base relative"
+                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6"
                     style={{ backgroundColor: '#00C6F8' }}
                     onClick={() => document.getElementById('insight')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
                   >
                     INSIGHT
-                    <span className="absolute right-5 text-xl">↓</span>
+                    <span className="absolute right-3 sm:right-5 text-lg sm:text-xl">↓</span>
                   </Button>
                   <Button 
-                    className="h-16 text-left justify-start text-white font-semibold text-base relative"
+                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6"
                     style={{ backgroundColor: '#9DCF65' }}
                     onClick={() => document.getElementById('orchestrate')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
                   >
                     ORCHESTRATE
-                    <span className="absolute right-5 text-xl">↓</span>
+                    <span className="absolute right-3 sm:right-5 text-lg sm:text-xl">↓</span>
                   </Button>
                   <Button 
-                    className="h-16 text-left justify-start text-white font-semibold text-base relative"
+                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6"
                     style={{ backgroundColor: '#F69B5F' }}
                     onClick={() => document.getElementById('accelerate')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
                   >
                     ACCELERATE
-                    <span className="absolute right-5 text-xl">↓</span>
+                    <span className="absolute right-3 sm:right-5 text-lg sm:text-xl">↓</span>
                   </Button>
                 </div>
               </div>
@@ -76,9 +76,9 @@ export default function TDSPage() {
           </section>
 
           {/* Three Core Capabilities */}
-          <section className="py-20 bg-gray-50">
+          <section className="py-16 sm:py-20 bg-gray-50">
             <div className="container mx-auto px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
                 {/* Insight */}
                 <div id="insight" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <div className="px-6 py-5 flex items-center justify-center" style={{ backgroundColor: '#00C6F8' }}>
@@ -224,10 +224,10 @@ export default function TDSPage() {
           </section>
 
           {/* Overview Section */}
-          <section className="py-20 bg-background text-center">
+          <section className="py-16 sm:py-20 bg-background text-center">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-4xl font-semibold mb-8 text-foreground">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 sm:mb-8 text-foreground">
                   Transform Your IT Infrastructure with Confidence
                 </h2>
                 <div className="relative w-full aspect-video max-w-3xl mx-auto">
@@ -248,24 +248,24 @@ export default function TDSPage() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="py-20 bg-card text-card-foreground">
+          <section id="contact" className="py-16 sm:py-20 bg-card text-card-foreground">
             <div className="container mx-auto px-4">
-              <h2 className="text-4xl font-semibold text-center mb-12 text-foreground">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center mb-8 sm:mb-12 text-foreground">
                 Ready to Transform Your IT?
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 max-w-6xl mx-auto">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-6 text-primary">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-primary">
                     Connect with Our UAE Team
                   </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                     As your regional TransitionManager® distributor in the United Arab Emirates, we're committed to helping organizations across the Middle East achieve successful IT transformations.
                   </p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                     Our expert team understands the unique challenges facing businesses in the region and provides comprehensive support throughout your transformation journey.
                   </p>
-                  <p className="font-semibold mb-4 text-foreground">Our Services:</p>
-                  <div className="text-muted-foreground space-y-2">
+                  <p className="font-semibold mb-3 sm:mb-4 text-foreground text-sm sm:text-base">Our Services:</p>
+                  <div className="text-sm sm:text-base text-muted-foreground space-y-1 sm:space-y-2">
                     <p>• Regional expertise and localized support</p>
                     <p>• Proven track record in IT transformations</p>
                     <p>• Comprehensive training and onboarding</p>
