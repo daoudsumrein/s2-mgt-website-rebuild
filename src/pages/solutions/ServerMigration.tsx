@@ -96,7 +96,7 @@ export default function ServerMigration() {
                   </div>
                   
                   {/* Right Video */}
-                  <div className="relative">
+                  <div className="relative order-first lg:order-last">
                     <div className="relative overflow-hidden h-[280px] sm:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-xl">
                       
                       {/* Video gradient overlay */}
