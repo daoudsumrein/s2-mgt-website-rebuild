@@ -931,9 +931,8 @@ export default function ServerBackup() {
                   <p className="text-xl text-muted-foreground mb-8">
                     Ensure business continuity with enterprise-grade server backup and recovery solutions designed for critical environments.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg">Schedule Infrastructure Assessment</Button>
-                    <Button variant="outline" size="lg">Download Technical Guide</Button>
+                  <div className="flex justify-center">
+                    <Button size="lg" onClick={() => window.location.href = '/contact'}>Contact Us</Button>
                   </div>
                 </CardContent>
               </Card>
