@@ -905,47 +905,7 @@ export default function ServerBackup() {
                 </motion.div>)}
             </div>
             
-            <motion.div initial={{
-            opacity: 0,
-            y: 40
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.8,
-            delay: 0.6
-          }} viewport={{
-            once: true
-          }} className="text-center p-8 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl border border-slate-200 relative overflow-hidden">
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-4 text-blue-700">Partner Program Benefits</h3>
-                <p className="mb-6 text-slate-600 max-w-2xl mx-auto">
-                  Join our global network of MSPs, system integrators, and technology partners
-                </p>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {["White-label solutions", "Partner portal access", "Technical training", "Marketing support"].map((benefit, index) => <motion.div key={index} initial={{
-                  opacity: 0,
-                  x: -20
-                }} whileInView={{
-                  opacity: 1,
-                  x: 0
-                }} transition={{
-                  duration: 0.5,
-                  delay: 0.8 + index * 0.1
-                }} whileHover={{
-                  scale: 1.05
-                }} viewport={{
-                  once: true
-                }} className="flex items-center justify-center gap-2 text-sm bg-white/70 rounded-lg p-3 hover:bg-white/90 transition-all duration-300">
-                      <motion.i whileHover={{
-                    scale: 1.2
-                  }} className="fas fa-check text-green-500" />
-                      <span className="font-medium">{benefit}</span>
-                    </motion.div>)}
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-slate-100/30" />
-            </motion.div>
+            
           </div>
         </motion.section>
 
