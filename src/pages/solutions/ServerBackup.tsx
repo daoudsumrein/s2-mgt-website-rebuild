@@ -216,687 +216,807 @@ export default function ServerBackup() {
           </div>
         </section>
 
-        {/* CloudAlly Content Sections */}
-        <style>{`
-          .cloudally-section {
-            padding: 3rem 0;
-          }
-          
-          .cloudally-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          
-          .cloudally-section-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 1rem;
-          }
-          
-          .cloudally-section-subtitle {
-            font-size: 1rem;
-            text-align: center;
-            color: #64748b;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          
-          .cloudally-cta-button {
-            background: #f97316;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s;
-          }
-          
-          .cloudally-cta-button:hover {
-            background: #ea580c;
-          }
-          
-          .cloudally-cta-secondary {
-            background: #00008b;
-            color: white;
-          }
-          
-          .cloudally-cta-secondary:hover {
-            background: #0000cd;
-          }
-          
-          .cloudally-benefits-grid {
-            display: grid;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-          }
-          
-          .cloudally-benefit-card {
-            background: white;
-            padding: 2rem 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s;
-          }
-          
-          .cloudally-benefit-card:hover {
-            transform: translateY(-5px);
-          }
-          
-          .cloudally-benefit-icon {
-            font-size: 2.5rem;
-            color: #1a6aff;
-            margin-bottom: 1rem;
-          }
-          
-          .cloudally-distributor-highlights {
-            display: grid;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-          }
-          
-          .cloudally-distributor-card {
-            background: #f5f5f5;
-            padding: 2rem 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s;
-          }
-          
-          .cloudally-distributor-card:hover {
-            border: 2px solid #1a6aff;
-            background: white;
-          }
-          
-          .cloudally-distributor-icon {
-            font-size: 2.5rem;
-            color: #1a6aff;
-            margin-bottom: 1.5rem;
-          }
-          
-          .cloudally-regional-benefits {
-            background: #1a6aff;
-            color: white;
-            padding: 2rem;
-            border-radius: 16px;
-            margin-bottom: 2rem;
-          }
-          
-          .cloudally-benefits-columns {
-            display: grid;
-            gap: 1rem;
-          }
-          
-          .cloudally-benefit-row {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-          }
-          
-          .cloudally-distributor-cta {
-            background: #f5f5f5;
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            border: 2px solid #1a6aff;
-          }
-          
-          .cloudally-platform-grid {
-            display: grid;
-            gap: 1.5rem;
-          }
-          
-          .cloudally-platform-card {
-            background: white;
-            padding: 2rem 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border-top: 4px solid #1a6aff;
-          }
-          
-          .cloudally-features-grid {
-            display: grid;
-            gap: 1rem;
-          }
-          
-          .cloudally-feature-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            display: flex;
-            gap: 1rem;
-          }
-          
-          .cloudally-feature-icon {
-            font-size: 1.5rem;
-            color: #059669;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(5, 150, 105, 0.1);
-            flex-shrink: 0;
-          }
-          
-          .cloudally-security-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-          }
-          
-          .cloudally-security-badge {
-            text-align: center;
-            padding: 1.5rem 1rem;
-            background: #f5f5f5;
-            border-radius: 12px;
-            transition: all 0.3s;
-          }
-          
-          .cloudally-security-badge:hover {
-            background: #1a6aff;
-            color: white;
-          }
-          
-          .cloudally-comparison-grid {
-            display: grid;
-            gap: 1rem;
-            margin-top: 2rem;
-          }
-          
-          .cloudally-comparison-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid #059669;
-          }
-          
-          .cloudally-industry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-          }
-          
-          .cloudally-industry-card {
-            padding: 1.5rem;
-            text-align: center;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            transition: all 0.3s;
-          }
-          
-          .cloudally-industry-card:hover {
-            border-color: #1a6aff;
-            background: #f5f5f5;
-          }
-          
-          @media (min-width: 640px) {
-            .cloudally-benefits-grid {
-              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
-            .cloudally-platform-grid {
-              grid-template-columns: repeat(2, 1fr);
-            }
-            .cloudally-features-grid {
-              grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            }
-            .cloudally-comparison-grid {
-              grid-template-columns: repeat(2, 1fr);
-            }
-            .cloudally-distributor-cta > div {
-              flex-direction: row;
-              justify-content: center;
-            }
-            .cloudally-benefits-columns {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-          
-          @media (min-width: 768px) {
-            .cloudally-section {
-              padding: 4rem 0;
-            }
-            .cloudally-section-title {
-              font-size: 2.25rem;
-            }
-            .cloudally-benefits-grid {
-              grid-template-columns: repeat(3, 1fr);
-            }
-            .cloudally-platform-grid {
-              grid-template-columns: repeat(4, 1fr);
-            }
-            .cloudally-distributor-highlights {
-              grid-template-columns: repeat(3, 1fr);
-            }
-            .cloudally-comparison-grid {
-              grid-template-columns: repeat(3, 1fr);
-            }
-          }
-        `}</style>
-
         {/* Main Value Proposition */}
-        <section className="cloudally-section" style={{background: '#f5f5f5'}}>
-          <div className="cloudally-container">
-            <h2 className="cloudally-section-title">Why Enterprise SaaS Data Protection Is Critical for Business Success</h2>
-            <p className="cloudally-section-subtitle">Native cloud storage isn't backup. Protect your business-critical data from accidental deletion, ransomware attacks, and compliance violations with CloudAlly's enterprise-grade SaaS backup solutions trusted by 16,000+ organizations.</p>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-gradient-to-br from-slate-50 to-blue-50"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Why Enterprise SaaS Data Protection Is Critical for Business Success
+              </h2>
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                Native cloud storage isn't backup. Protect your business-critical data from accidental deletion, ransomware attacks, and compliance violations with CloudAlly's enterprise-grade SaaS backup solutions trusted by 16,000+ organizations.
+              </p>
+            </motion.div>
             
-            <div className="cloudally-benefits-grid">
-              <div className="cloudally-benefit-card">
-                <div className="cloudally-benefit-icon">
-                  <i className="fas fa-cloud-upload-alt"></i>
-                </div>
-                <h3 style={{fontSize: '1.125rem', fontWeight: 600, marginBottom: '1rem'}}>Unlimited AWS Backup</h3>
-                <p>Secure your data with unlimited storage on Amazon Web Services infrastructure, with immutable snapshots that protect against ransomware and accidental deletion.</p>
-              </div>
-              <div className="cloudally-benefit-card">
-                <div className="cloudally-benefit-icon">
-                  <i className="fas fa-undo-alt"></i>
-                </div>
-                <h3 style={{fontSize: '1.125rem', fontWeight: 600, marginBottom: '1rem'}}>One-Click Restore</h3>
-                <p>Restore individual files, entire folders, or complete user accounts with granular point-in-time recovery. Cross-platform restore capabilities ensure maximum flexibility.</p>
-              </div>
-              <div className="cloudally-benefit-card">
-                <div className="cloudally-benefit-icon">
-                  <i className="fas fa-lock"></i>
-                </div>
-                <h3 style={{fontSize: '1.125rem', fontWeight: 600, marginBottom: '1rem'}}>Stringent Security</h3>
-                <p>Bank-grade AES-256 encryption, OAuth authentication, and compliance with HIPAA, GDPR, and SOC 2 standards ensure your data remains secure and compliant.</p>
-              </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: "fas fa-cloud-upload-alt",
+                  title: "Unlimited AWS Backup",
+                  description: "Secure your data with unlimited storage on Amazon Web Services infrastructure, with immutable snapshots that protect against ransomware and accidental deletion.",
+                  color: "blue"
+                },
+                {
+                  icon: "fas fa-undo-alt", 
+                  title: "One-Click Restore",
+                  description: "Restore individual files, entire folders, or complete user accounts with granular point-in-time recovery. Cross-platform restore capabilities ensure maximum flexibility.",
+                  color: "green"
+                },
+                {
+                  icon: "fas fa-lock",
+                  title: "Stringent Security", 
+                  description: "Bank-grade AES-256 encryption, OAuth authentication, and compliance with HIPAA, GDPR, and SOC 2 standards ensure your data remains secure and compliant.",
+                  color: "purple"
+                }
+              ].map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ 
+                    y: -10, 
+                    scale: 1.02,
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <motion.div 
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                    className={`text-4xl mb-6 relative z-10 ${
+                      benefit.color === 'blue' ? 'text-blue-500' :
+                      benefit.color === 'green' ? 'text-green-500' : 'text-purple-500'
+                    }`}
+                  >
+                    <i className={benefit.icon}></i>
+                  </motion.div>
+                  <h3 className="text-xl font-semibold mb-4 relative z-10">{benefit.title}</h3>
+                  <p className="text-slate-600 relative z-10">{benefit.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Official Distributor Section */}
-        <section className="cloudally-section" style={{background: 'white', borderTop: '4px solid #1a6aff'}}>
-          <div className="cloudally-container">
-            <h2 className="cloudally-section-title">Official OpenText CloudAlly Distributor for Middle East & North Africa</h2>
-            <p className="cloudally-section-subtitle">We are the authorized OpenText partner providing CloudAlly enterprise SaaS backup solutions across the MENA region with dedicated local support, training, and implementation services.</p>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-white border-t-4 border-blue-600"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Official OpenText CloudAlly Distributor for Middle East & North Africa
+              </h2>
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                We are the authorized OpenText partner providing CloudAlly enterprise SaaS backup solutions across the MENA region with dedicated local support, training, and implementation services.
+              </p>
+            </motion.div>
             
-            <div className="cloudally-distributor-highlights">
-              <div className="cloudally-distributor-card">
-                <div className="cloudally-distributor-icon">
-                  <i className="fas fa-certificate"></i>
-                </div>
-                <h3 style={{fontSize: '1.25rem', fontWeight: 700, marginBottom: '1rem'}}>Authorized OpenText Partner</h3>
-                <p>Official distributor status with direct access to OpenText engineering support and latest product updates for the Middle East & North Africa region.</p>
-              </div>
-              <div className="cloudally-distributor-card">
-                <div className="cloudally-distributor-icon">
-                  <i className="fas fa-globe-americas"></i>
-                </div>
-                <h3 style={{fontSize: '1.25rem', fontWeight: 700, marginBottom: '1rem'}}>Regional MENA Expertise</h3>
-                <p>Deep understanding of Middle East & North Africa compliance requirements including data residency, local regulations, and Arabic language support.</p>
-              </div>
-              <div className="cloudally-distributor-card">
-                <div className="cloudally-distributor-icon">
-                  <i className="fas fa-users-cog"></i>
-                </div>
-                <h3 style={{fontSize: '1.25rem', fontWeight: 700, marginBottom: '1rem'}}>Dedicated Local Support</h3>
-                <p>Arabic and English speaking technical experts providing implementation, training, and ongoing support across Dubai, Saudi Arabia, Egypt, and the entire MENA region.</p>
-              </div>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  icon: "fas fa-certificate",
+                  title: "Authorized OpenText Partner",
+                  description: "Official distributor status with direct access to OpenText engineering support and latest product updates for the Middle East & North Africa region.",
+                  color: "blue"
+                },
+                {
+                  icon: "fas fa-globe-americas",
+                  title: "Regional MENA Expertise", 
+                  description: "Deep understanding of Middle East & North Africa compliance requirements including data residency, local regulations, and Arabic language support.",
+                  color: "green"
+                },
+                {
+                  icon: "fas fa-users-cog",
+                  title: "Dedicated Local Support",
+                  description: "Arabic and English speaking technical experts providing implementation, training, and ongoing support across Dubai, Saudi Arabia, Egypt, and the entire MENA region.",
+                  color: "purple"
+                }
+              ].map((card, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-slate-50 hover:bg-white rounded-xl p-8 text-center transition-all duration-300 border-2 border-transparent hover:border-blue-200 cursor-pointer relative overflow-hidden group"
+                >
+                  <motion.div 
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ duration: 0.3 }}
+                    className={`text-5xl mb-6 ${
+                      card.color === 'blue' ? 'text-blue-500' :
+                      card.color === 'green' ? 'text-green-500' : 'text-purple-500'
+                    }`}
+                  >
+                    <i className={card.icon}></i>
+                  </motion.div>
+                  <h3 className="text-xl font-bold mb-4">{card.title}</h3>
+                  <p className="text-slate-600">{card.description}</p>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                </motion.div>
+              ))}
             </div>
             
-            <div className="cloudally-regional-benefits">
-              <h3 style={{textAlign: 'center', fontSize: '1.25rem', marginBottom: '1.5rem'}}>Why Choose Our MENA Regional Partnership</h3>
-              <div className="cloudally-benefits-columns">
-                <div>
-                  <div className="cloudally-benefit-row">
-                    <i className="fas fa-check-circle" style={{color: '#f97316'}}></i>
-                    <span>Local data center selection (Dubai, Bahrain)</span>
-                  </div>
-                  <div className="cloudally-benefit-row">
-                    <i className="fas fa-check-circle" style={{color: '#f97316'}}></i>
-                    <span>Arabic language interface available</span>
-                  </div>
-                  <div className="cloudally-benefit-row">
-                    <i className="fas fa-check-circle" style={{color: '#f97316'}}></i>
-                    <span>MENA timezone support coverage</span>
-                  </div>
-                </div>
-                <div>
-                  <div className="cloudally-benefit-row">
-                    <i className="fas fa-check-circle" style={{color: '#f97316'}}></i>
-                    <span>Regional compliance expertise</span>
-                  </div>
-                  <div className="cloudally-benefit-row">
-                    <i className="fas fa-check-circle" style={{color: '#f97316'}}></i>
-                    <span>Local currency pricing options</span>
-                  </div>
-                  <div className="cloudally-benefit-row">
-                    <i className="fas fa-check-circle" style={{color: '#f97316'}}></i>
-                    <span>On-site implementation services</span>
-                  </div>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 rounded-2xl mb-8 relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20" />
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-center mb-8">Why Choose Our MENA Regional Partnership</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    "Local data center selection (Dubai, Bahrain)",
+                    "Arabic language interface available", 
+                    "MENA timezone support coverage",
+                    "Regional compliance expertise",
+                    "Local currency pricing options",
+                    "On-site implementation services"
+                  ].map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="flex items-center gap-4 p-3 bg-white/10 rounded-lg backdrop-blur-sm"
+                    >
+                      <motion.i 
+                        whileHover={{ scale: 1.2 }}
+                        className="fas fa-check-circle text-orange-400 text-xl"
+                      />
+                      <span className="text-sm">{benefit}</span>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="cloudally-distributor-cta">
-              <div>
-                <h3 style={{fontSize: '1.25rem', marginBottom: '1rem'}}>Ready to Secure Your MENA Organization's Data?</h3>
-                <p>Contact our regional CloudAlly experts for a personalized consultation and implementation plan tailored to your Middle East business requirements.</p>
-                <div style={{display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem'}}>
-                  <a href="mailto:support@cloudally.com?subject=MENA%20CloudAlly%20Consultation" className="cloudally-cta-button">Schedule MENA Consultation</a>
-                  <a href="tel:+14243041959" className="cloudally-cta-button cloudally-cta-secondary">Call Our Regional Team</a>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-slate-50 p-8 rounded-2xl text-center border-2 border-blue-200 relative overflow-hidden group"
+            >
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-4">Ready to Secure Your MENA Organization's Data?</h3>
+                <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+                  Contact our regional CloudAlly experts for a personalized consultation and implementation plan tailored to your Middle East business requirements.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a 
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="mailto:support@cloudally.com?subject=MENA%20CloudAlly%20Consultation" 
+                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    Schedule MENA Consultation
+                  </motion.a>
+                  <motion.a 
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="tel:+14243041959" 
+                    className="bg-gradient-to-r from-blue-800 to-blue-900 hover:from-blue-900 hover:to-blue-950 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    Call Our Regional Team
+                  </motion.a>
                 </div>
               </div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-orange-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Platform Coverage Section */}
-        <section className="cloudally-section" style={{background: 'white'}}>
-          <div className="cloudally-container">
-            <h2 className="cloudally-section-title">Complete Microsoft 365, Google Workspace & Salesforce Backup Coverage</h2>
-            <p className="cloudally-section-subtitle">Manage all your enterprise cloud backup needs from a single dashboard with comprehensive coverage across major SaaS platforms including Microsoft 365, Google Workspace, Salesforce, and Dropbox Business.</p>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-white"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Complete Microsoft 365, Google Workspace & Salesforce Backup Coverage
+              </h2>
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                Manage all your enterprise cloud backup needs from a single dashboard with comprehensive coverage across major SaaS platforms including Microsoft 365, Google Workspace, Salesforce, and Dropbox Business.
+              </p>
+            </motion.div>
             
-            <div className="cloudally-platform-grid">
-              <div className="cloudally-platform-card">
-                <div style={{fontSize: '2.5rem', marginBottom: '1rem', color: '#0078d4'}}>
-                  <i className="fab fa-microsoft"></i>
-                </div>
-                <h3>Microsoft 365</h3>
-                <p><strong>Complete Coverage:</strong></p>
-                <ul style={{listStyle: 'none', textAlign: 'left', marginTop: '1rem'}}>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Exchange Online (Emails, Calendars)</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• SharePoint Online (Sites, Lists)</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• OneDrive for Business</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Microsoft Teams & Groups</li>
-                </ul>
-              </div>
-              <div className="cloudally-platform-card">
-                <div style={{fontSize: '2.5rem', marginBottom: '1rem', color: '#4285f4'}}>
-                  <i className="fab fa-google"></i>
-                </div>
-                <h3>Google Workspace</h3>
-                <p><strong>Full Protection:</strong></p>
-                <ul style={{listStyle: 'none', textAlign: 'left', marginTop: '1rem'}}>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Gmail (Messages, Labels)</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Google Drive (Files, Folders)</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Calendar & Contacts</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Tasks & Shared Drives</li>
-                </ul>
-              </div>
-              <div className="cloudally-platform-card">
-                <div style={{fontSize: '2.5rem', marginBottom: '1rem', color: '#00a1e0'}}>
-                  <i className="fab fa-salesforce"></i>
-                </div>
-                <h3>Salesforce</h3>
-                <p><strong>Comprehensive Backup:</strong></p>
-                <ul style={{listStyle: 'none', textAlign: 'left', marginTop: '1rem'}}>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• CRM Data & Metadata</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Custom Objects & Fields</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Chatter Feeds & Files</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Configuration Settings</li>
-                </ul>
-              </div>
-              <div className="cloudally-platform-card">
-                <div style={{fontSize: '2.5rem', marginBottom: '1rem', color: '#1a6aff'}}>
-                  <i className="fab fa-dropbox"></i>
-                </div>
-                <h3>Dropbox Business</h3>
-                <p><strong>Complete Coverage:</strong></p>
-                <ul style={{listStyle: 'none', textAlign: 'left', marginTop: '1rem'}}>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Files & Folders</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Shared Links & Permissions</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Version History</li>
-                  <li style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '0.25rem'}}>• Team Folders & Metadata</li>
-                </ul>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  icon: "fab fa-microsoft",
+                  title: "Microsoft 365",
+                  subtitle: "Complete Coverage:",
+                  features: [
+                    "Exchange Online (Emails, Calendars)",
+                    "SharePoint Online (Sites, Lists)", 
+                    "OneDrive for Business",
+                    "Microsoft Teams & Groups"
+                  ],
+                  color: "#0078d4"
+                },
+                {
+                  icon: "fab fa-google",
+                  title: "Google Workspace", 
+                  subtitle: "Full Protection:",
+                  features: [
+                    "Gmail (Messages, Labels)",
+                    "Google Drive (Files, Folders)",
+                    "Calendar & Contacts", 
+                    "Tasks & Shared Drives"
+                  ],
+                  color: "#4285f4"
+                },
+                {
+                  icon: "fab fa-salesforce",
+                  title: "Salesforce",
+                  subtitle: "Comprehensive Backup:",
+                  features: [
+                    "CRM Data & Metadata",
+                    "Custom Objects & Fields",
+                    "Chatter Feeds & Files",
+                    "Configuration Settings"
+                  ],
+                  color: "#00a1e0"
+                },
+                {
+                  icon: "fab fa-dropbox", 
+                  title: "Dropbox Business",
+                  subtitle: "Complete Coverage:",
+                  features: [
+                    "Files & Folders",
+                    "Shared Links & Permissions",
+                    "Version History",
+                    "Team Folders & Metadata"
+                  ],
+                  color: "#1a6aff"
+                }
+              ].map((platform, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, rotateY: -15 }}
+                  whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ 
+                    y: -10, 
+                    scale: 1.02,
+                    rotateY: 5,
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 text-center relative overflow-hidden group"
+                  style={{ borderTopColor: platform.color }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-slate-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <motion.div 
+                    whileHover={{ scale: 1.1, rotate: 10 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-5xl mb-4 relative z-10"
+                    style={{ color: platform.color }}
+                  >
+                    <i className={platform.icon}></i>
+                  </motion.div>
+                  <h3 className="text-xl font-bold mb-2 relative z-10">{platform.title}</h3>
+                  <p className="font-semibold mb-4 relative z-10">{platform.subtitle}</p>
+                  <ul className="text-left space-y-1 relative z-10">
+                    {platform.features.map((feature, featureIndex) => (
+                      <motion.li 
+                        key={featureIndex}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: 0.5 + featureIndex * 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-sm text-slate-600 flex items-center gap-2"
+                      >
+                        <motion.span 
+                          whileHover={{ scale: 1.2 }}
+                          className="w-1 h-1 bg-current rounded-full flex-shrink-0"
+                        />
+                        {feature}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Key Features Section */}
-        <section className="cloudally-section" style={{background: '#f5f5f5'}}>
-          <div className="cloudally-container">
-            <h2 className="cloudally-section-title">Advanced Enterprise Backup Features & Compliance Capabilities</h2>
-            <p className="cloudally-section-subtitle">CloudAlly's advanced backup capabilities are designed for enterprise requirements with automated daily backups, unlimited retention, cross-platform restore, and the simplicity your IT team needs.</p>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-gradient-to-br from-slate-50 to-green-50"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Advanced Enterprise Backup Features & Compliance Capabilities
+              </h2>
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                CloudAlly's advanced backup capabilities are designed for enterprise requirements with automated daily backups, unlimited retention, cross-platform restore, and the simplicity your IT team needs.
+              </p>
+            </motion.div>
             
-            <div className="cloudally-features-grid">
-              <div className="cloudally-feature-item">
-                <div className="cloudally-feature-icon">
-                  <i className="fas fa-sync-alt"></i>
-                </div>
-                <div>
-                  <h4 style={{fontWeight: 600, marginBottom: '0.5rem'}}>Automated Daily Backups</h4>
-                  <p>Configurable backup frequency up to 3x daily with incremental backups to minimize storage and bandwidth usage.</p>
-                </div>
-              </div>
-              <div className="cloudally-feature-item">
-                <div className="cloudally-feature-icon">
-                  <i className="fas fa-history"></i>
-                </div>
-                <div>
-                  <h4 style={{fontWeight: 600, marginBottom: '0.5rem'}}>Point-in-Time Restore</h4>
-                  <p>Access historical snapshots and restore data from any point in time with unlimited retention periods.</p>
-                </div>
-              </div>
-              <div className="cloudally-feature-item">
-                <div className="cloudally-feature-icon">
-                  <i className="fas fa-server"></i>
-                </div>
-                <div>
-                  <h4 style={{fontWeight: 600, marginBottom: '0.5rem'}}>BYOS (Bring Your Own Storage)</h4>
-                  <p>Use your own AWS, Azure, or Google Cloud storage for complete data sovereignty and compliance control.</p>
-                </div>
-              </div>
-              <div className="cloudally-feature-item">
-                <div className="cloudally-feature-icon">
-                  <i className="fas fa-exchange-alt"></i>
-                </div>
-                <div>
-                  <h4 style={{fontWeight: 600, marginBottom: '0.5rem'}}>Cross-Platform Restore</h4>
-                  <p>Restore data across different platforms and users - migrate from Google to Microsoft or vice versa seamlessly.</p>
-                </div>
-              </div>
-              <div className="cloudally-feature-item">
-                <div className="cloudally-feature-icon">
-                  <i className="fas fa-search"></i>
-                </div>
-                <div>
-                  <h4 style={{fontWeight: 600, marginBottom: '0.5rem'}}>Granular Search & Restore</h4>
-                  <p>Advanced search capabilities to find specific files, emails, or data points quickly and restore them individually.</p>
-                </div>
-              </div>
-              <div className="cloudally-feature-item">
-                <div className="cloudally-feature-icon">
-                  <i className="fas fa-download"></i>
-                </div>
-                <div>
-                  <h4 style={{fontWeight: 600, marginBottom: '0.5rem'}}>Export Flexibility</h4>
-                  <p>Export data in multiple formats (PST, EML, PDF, native formats) for compliance, legal discovery, or migration purposes.</p>
-                </div>
-              </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: "fas fa-sync-alt",
+                  title: "Automated Daily Backups",
+                  description: "Configurable backup frequency up to 3x daily with incremental backups to minimize storage and bandwidth usage.",
+                  color: "green"
+                },
+                {
+                  icon: "fas fa-history", 
+                  title: "Point-in-Time Restore",
+                  description: "Access historical snapshots and restore data from any point in time with unlimited retention periods.",
+                  color: "blue"
+                },
+                {
+                  icon: "fas fa-server",
+                  title: "BYOS (Bring Your Own Storage)",
+                  description: "Use your own AWS, Azure, or Google Cloud storage for complete data sovereignty and compliance control.",
+                  color: "purple"
+                },
+                {
+                  icon: "fas fa-exchange-alt",
+                  title: "Cross-Platform Restore", 
+                  description: "Restore data across different platforms and users - migrate from Google to Microsoft or vice versa seamlessly.",
+                  color: "orange"
+                },
+                {
+                  icon: "fas fa-search",
+                  title: "Granular Search & Restore",
+                  description: "Advanced search capabilities to find specific files, emails, or data points quickly and restore them individually.",
+                  color: "teal"
+                },
+                {
+                  icon: "fas fa-download",
+                  title: "Export Flexibility",
+                  description: "Export data in multiple formats (PST, EML, PDF, native formats) for compliance, legal discovery, or migration purposes.",
+                  color: "indigo"
+                }
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ 
+                    scale: 1.02,
+                    y: -5,
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 flex gap-4 relative overflow-hidden group"
+                >
+                  <motion.div 
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                    className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xl ${
+                      feature.color === 'green' ? 'bg-green-500' :
+                      feature.color === 'blue' ? 'bg-blue-500' :
+                      feature.color === 'purple' ? 'bg-purple-500' :
+                      feature.color === 'orange' ? 'bg-orange-500' :
+                      feature.color === 'teal' ? 'bg-teal-500' : 'bg-indigo-500'
+                    }`}
+                  >
+                    <i className={feature.icon}></i>
+                  </motion.div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold mb-2">{feature.title}</h4>
+                    <p className="text-slate-600">{feature.description}</p>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-transparent to-slate-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                </motion.div>
+              ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Security & Compliance Section */}
-        <section className="cloudally-section" style={{background: 'white'}}>
-          <div className="cloudally-container">
-            <h2 className="cloudally-section-title">ISO 27001, HIPAA & GDPR Compliant Security Standards</h2>
-            <p className="cloudally-section-subtitle">Enterprise-level security controls and regulatory compliance certifications including ISO 27001, HIPAA, GDPR, and SOC 2 Type II to protect your most sensitive business data and meet strict regulatory requirements.</p>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-white"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                ISO 27001, HIPAA & GDPR Compliant Security Standards
+              </h2>
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                Enterprise-level security controls and regulatory compliance certifications including ISO 27001, HIPAA, GDPR, and SOC 2 Type II to protect your most sensitive business data and meet strict regulatory requirements.
+              </p>
+            </motion.div>
             
-            <div className="cloudally-security-features">
-              <div className="cloudally-security-badge">
-                <i className="fas fa-certificate" style={{fontSize: '2rem', marginBottom: '1rem', color: '#1a6aff'}}></i>
-                <h4>ISO 27001</h4>
-                <p>Information Security Management</p>
-              </div>
-              <div className="cloudally-security-badge">
-                <i className="fas fa-user-shield" style={{fontSize: '2rem', marginBottom: '1rem', color: '#1a6aff'}}></i>
-                <h4>HIPAA Compliant</h4>
-                <p>Healthcare Data Protection</p>
-              </div>
-              <div className="cloudally-security-badge">
-                <i className="fas fa-balance-scale" style={{fontSize: '2rem', marginBottom: '1rem', color: '#1a6aff'}}></i>
-                <h4>GDPR Ready</h4>
-                <p>EU Data Protection Regulation</p>
-              </div>
-              <div className="cloudally-security-badge">
-                <i className="fas fa-shield-virus" style={{fontSize: '2rem', marginBottom: '1rem', color: '#1a6aff'}}></i>
-                <h4>SOC 2 Type II</h4>
-                <p>Security & Availability Controls</p>
-              </div>
-              <div className="cloudally-security-badge">
-                <i className="fas fa-key" style={{fontSize: '2rem', marginBottom: '1rem', color: '#1a6aff'}}></i>
-                <h4>AES-256 Encryption</h4>
-                <p>Data at Rest & in Transit</p>
-              </div>
-              <div className="cloudally-security-badge">
-                <i className="fas fa-lock" style={{fontSize: '2rem', marginBottom: '1rem', color: '#1a6aff'}}></i>
-                <h4>Immutable Storage</h4>
-                <p>Ransomware Protection</p>
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+              {[
+                { icon: "fas fa-certificate", title: "ISO 27001", desc: "Information Security Management", color: "blue" },
+                { icon: "fas fa-user-shield", title: "HIPAA Compliant", desc: "Healthcare Data Protection", color: "green" },
+                { icon: "fas fa-balance-scale", title: "GDPR Ready", desc: "EU Data Protection Regulation", color: "purple" },
+                { icon: "fas fa-shield-virus", title: "SOC 2 Type II", desc: "Security & Availability Controls", color: "red" },
+                { icon: "fas fa-key", title: "AES-256 Encryption", desc: "Data at Rest & in Transit", color: "orange" },
+                { icon: "fas fa-lock", title: "Immutable Storage", desc: "Ransomware Protection", color: "teal" }
+              ].map((badge, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    y: -10,
+                    rotateY: 10,
+                    backgroundColor: "#1a6aff",
+                    color: "white",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-slate-50 hover:bg-blue-600 hover:text-white rounded-xl p-6 text-center transition-all duration-300 cursor-pointer group"
+                >
+                  <motion.i 
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ duration: 0.3 }}
+                    className={`${badge.icon} text-4xl mb-4 ${
+                      badge.color === 'blue' ? 'text-blue-500' :
+                      badge.color === 'green' ? 'text-green-500' :
+                      badge.color === 'purple' ? 'text-purple-500' :
+                      badge.color === 'red' ? 'text-red-500' :
+                      badge.color === 'orange' ? 'text-orange-500' : 'text-teal-500'
+                    } group-hover:text-white`}
+                  />
+                  <h4 className="font-bold mb-2">{badge.title}</h4>
+                  <p className="text-sm opacity-80">{badge.desc}</p>
+                </motion.div>
+              ))}
             </div>
             
-            <div style={{marginTop: '3rem', textAlign: 'center'}}>
-              <h3 style={{marginBottom: '2rem'}}>Additional Security Features</h3>
-              <div style={{display: 'grid', gap: '1rem', marginTop: '2rem'}}>
-                <div style={{padding: '1.5rem', background: '#f5f5f5', borderRadius: '12px', textAlign: 'center'}}>
-                  <h4>OAuth & MFA Authentication</h4>
-                  <p>Secure access with multi-factor authentication and OAuth 2.0 protocols</p>
-                </div>
-                <div style={{padding: '1.5rem', background: '#f5f5f5', borderRadius: '12px', textAlign: 'center'}}>
-                  <h4>IP Address Restrictions</h4>
-                  <p>Control access with IP allowlisting and geographic restrictions</p>
-                </div>
-                <div style={{padding: '1.5rem', background: '#f5f5f5', borderRadius: '12px', textAlign: 'center'}}>
-                  <h4>Global Data Centers</h4>
-                  <p>Choose your data location with AWS regions worldwide for data residency compliance</p>
-                </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <h3 className="text-2xl font-bold mb-8">Additional Security Features</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  {
+                    title: "OAuth & MFA Authentication",
+                    description: "Secure access with multi-factor authentication and OAuth 2.0 protocols",
+                    icon: "fas fa-fingerprint"
+                  },
+                  {
+                    title: "IP Address Restrictions", 
+                    description: "Control access with IP allowlisting and geographic restrictions",
+                    icon: "fas fa-map-marker-alt"
+                  },
+                  {
+                    title: "Global Data Centers",
+                    description: "Choose your data location with AWS regions worldwide for data residency compliance",
+                    icon: "fas fa-globe"
+                  }
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+                    whileHover={{ 
+                      scale: 1.02,
+                      y: -5,
+                      transition: { duration: 0.3 }
+                    }}
+                    viewport={{ once: true }}
+                    className="bg-slate-50 hover:bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group"
+                  >
+                    <motion.i 
+                      whileHover={{ scale: 1.1 }}
+                      className={`${feature.icon} text-3xl text-blue-500 mb-4`}
+                    />
+                    <h4 className="font-semibold mb-2">{feature.title}</h4>
+                    <p className="text-slate-600 text-sm">{feature.description}</p>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </motion.div>
+                ))}
               </div>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Why Choose CloudAlly Section */}
-        <section className="cloudally-section" style={{background: '#f5f5f5'}}>
-          <div className="cloudally-container">
-            <h2 className="cloudally-section-title">Why 16,000+ Organizations Trust CloudAlly</h2>
-            <p className="cloudally-section-subtitle">CloudAlly goes beyond basic data protection to provide enterprise-grade features that native cloud storage simply cannot match.</p>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-gradient-to-br from-slate-50 to-blue-50"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Why 16,000+ Organizations Trust CloudAlly
+              </h2>
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                CloudAlly goes beyond basic data protection to provide enterprise-grade features that native cloud storage simply cannot match.
+              </p>
+            </motion.div>
             
-            <div className="cloudally-comparison-grid">
-              <div className="cloudally-comparison-item">
-                <h4 style={{fontWeight: 600, marginBottom: '0.5rem', display: 'flex', alignItems: 'center'}}>
-                  <i className="fas fa-rocket" style={{color: '#059669', marginRight: '0.5rem'}}></i>
-                  5-Minute Setup
-                </h4>
-                <p>Deploy enterprise backup in minutes, not months. Zero maintenance required after initial configuration.</p>
-              </div>
-              <div className="cloudally-comparison-item">
-                <h4 style={{fontWeight: 600, marginBottom: '0.5rem', display: 'flex', alignItems: 'center'}}>
-                  <i className="fas fa-headset" style={{color: '#059669', marginRight: '0.5rem'}}></i>
-                  24/7 Tier-1 Support
-                </h4>
-                <p>Direct access to backup experts, not chatbots. Average response time under 4 hours for critical issues.</p>
-              </div>
-              <div className="cloudally-comparison-item">
-                <h4 style={{fontWeight: 600, marginBottom: '0.5rem', display: 'flex', alignItems: 'center'}}>
-                  <i className="fas fa-infinity" style={{color: '#059669', marginRight: '0.5rem'}}></i>
-                  Unlimited Retention
-                </h4>
-                <p>Keep backups as long as you need. No forced deletion policies or hidden storage limits.</p>
-              </div>
-              <div className="cloudally-comparison-item">
-                <h4 style={{fontWeight: 600, marginBottom: '0.5rem', display: 'flex', alignItems: 'center'}}>
-                  <i className="fas fa-chart-line" style={{color: '#059669', marginRight: '0.5rem'}}></i>
-                  99.9% Uptime SLA
-                </h4>
-                <p>Guaranteed availability backed by service level agreements and financial penalties for downtime.</p>
-              </div>
-              <div className="cloudally-comparison-item">
-                <h4 style={{fontWeight: 600, marginBottom: '0.5rem', display: 'flex', alignItems: 'center'}}>
-                  <i className="fas fa-tags" style={{color: '#059669', marginRight: '0.5rem'}}></i>
-                  White-Label Options
-                </h4>
-                <p>MSPs and partners can rebrand CloudAlly with custom logos, domains, and support channels.</p>
-              </div>
-              <div className="cloudally-comparison-item">
-                <h4 style={{fontWeight: 600, marginBottom: '0.5rem', display: 'flex', alignItems: 'center'}}>
-                  <i className="fas fa-building" style={{color: '#059669', marginRight: '0.5rem'}}></i>
-                  Enterprise Ready
-                </h4>
-                <p>SSO integration, custom contracts, and dedicated customer success managers for enterprise accounts.</p>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: "fas fa-rocket",
+                  title: "5-Minute Setup",
+                  description: "Deploy enterprise backup in minutes, not months. Zero maintenance required after initial configuration.",
+                  color: "green"
+                },
+                {
+                  icon: "fas fa-headset",
+                  title: "24/7 Tier-1 Support", 
+                  description: "Direct access to backup experts, not chatbots. Average response time under 4 hours for critical issues.",
+                  color: "blue"
+                },
+                {
+                  icon: "fas fa-infinity",
+                  title: "Unlimited Retention",
+                  description: "Keep backups as long as you need. No forced deletion policies or hidden storage limits.",
+                  color: "purple"
+                },
+                {
+                  icon: "fas fa-chart-line",
+                  title: "99.9% Uptime SLA",
+                  description: "Guaranteed availability backed by service level agreements and financial penalties for downtime.",
+                  color: "orange"
+                },
+                {
+                  icon: "fas fa-tags",
+                  title: "White-Label Options", 
+                  description: "MSPs and partners can rebrand CloudAlly with custom logos, domains, and support channels.",
+                  color: "teal"
+                },
+                {
+                  icon: "fas fa-building",
+                  title: "Enterprise Ready",
+                  description: "SSO integration, custom contracts, and dedicated customer success managers for enterprise accounts.",
+                  color: "indigo"
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, rotateX: -15 }}
+                  whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ 
+                    y: -10, 
+                    scale: 1.02,
+                    rotateX: 5,
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-500 relative overflow-hidden group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="flex items-start gap-4 relative z-10">
+                    <motion.div 
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className={`w-12 h-12 rounded-full flex items-center justify-center text-white text-xl ${
+                        item.color === 'green' ? 'bg-green-500' :
+                        item.color === 'blue' ? 'bg-blue-500' :
+                        item.color === 'purple' ? 'bg-purple-500' :
+                        item.color === 'orange' ? 'bg-orange-500' :
+                        item.color === 'teal' ? 'bg-teal-500' : 'bg-indigo-500'
+                      }`}
+                    >
+                      <i className={item.icon}></i>
+                    </motion.div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        {item.title}
+                      </h4>
+                      <p className="text-slate-600">{item.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Industry Solutions Section */}
-        <section className="cloudally-section" style={{background: 'white'}}>
-          <div className="cloudally-container">
-            <h2 className="cloudally-section-title">Trusted by Industries That Demand the Highest Standards</h2>
-            <p className="cloudally-section-subtitle">CloudAlly serves organizations across regulated industries where data protection, compliance, and security are mission-critical requirements.</p>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-white"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Trusted by Industries That Demand the Highest Standards
+              </h2>
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                CloudAlly serves organizations across regulated industries where data protection, compliance, and security are mission-critical requirements.
+              </p>
+            </motion.div>
             
-            <div className="cloudally-industry-grid">
-              <div className="cloudally-industry-card">
-                <i className="fas fa-heartbeat" style={{fontSize: '2rem', color: '#dc2626', marginBottom: '1rem'}}></i>
-                <h4>Healthcare</h4>
-                <p>HIPAA-compliant backup for patient data protection and medical records retention requirements.</p>
-              </div>
-              <div className="cloudally-industry-card">
-                <i className="fas fa-university" style={{fontSize: '2rem', color: '#1a6aff', marginBottom: '1rem'}}></i>
-                <h4>Financial Services</h4>
-                <p>SEC and FINRA compliant data archiving with immutable storage for regulatory examinations.</p>
-              </div>
-              <div className="cloudally-industry-card">
-                <i className="fas fa-graduation-cap" style={{fontSize: '2rem', color: '#059669', marginBottom: '1rem'}}></i>
-                <h4>Education</h4>
-                <p>FERPA-compliant student data protection with special pricing for educational institutions.</p>
-              </div>
-              <div className="cloudally-industry-card">
-                <i className="fas fa-gavel" style={{fontSize: '2rem', color: '#7c3aed', marginBottom: '1rem'}}></i>
-                <h4>Legal</h4>
-                <p>eDiscovery-ready backups with legal hold capabilities and chain of custody documentation.</p>
-              </div>
-              <div className="cloudally-industry-card">
-                <i className="fas fa-industry" style={{fontSize: '2rem', color: '#ea580c', marginBottom: '1rem'}}></i>
-                <h4>Manufacturing</h4>
-                <p>Protect intellectual property and supply chain data with enterprise-grade security controls.</p>
-              </div>
-              <div className="cloudally-industry-card">
-                <i className="fas fa-hand-holding-heart" style={{fontSize: '2rem', color: '#f59e0b', marginBottom: '1rem'}}></i>
-                <h4>Non-Profit</h4>
-                <p>Special pricing for non-profit organizations with the same enterprise-level features and support.</p>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  icon: "fas fa-heartbeat",
+                  title: "Healthcare", 
+                  description: "HIPAA-compliant backup for patient data protection and medical records retention requirements.",
+                  color: "#dc2626"
+                },
+                {
+                  icon: "fas fa-university",
+                  title: "Financial Services",
+                  description: "SEC and FINRA compliant data archiving with immutable storage for regulatory examinations.",
+                  color: "#1a6aff"
+                },
+                {
+                  icon: "fas fa-graduation-cap",
+                  title: "Education",
+                  description: "FERPA-compliant student data protection with special pricing for educational institutions.",
+                  color: "#059669"
+                },
+                {
+                  icon: "fas fa-gavel",
+                  title: "Legal", 
+                  description: "eDiscovery-ready backups with legal hold capabilities and chain of custody documentation.",
+                  color: "#7c3aed"
+                },
+                {
+                  icon: "fas fa-industry",
+                  title: "Manufacturing",
+                  description: "Protect intellectual property and supply chain data with enterprise-grade security controls.",
+                  color: "#ea580c"
+                },
+                {
+                  icon: "fas fa-hand-holding-heart",
+                  title: "Non-Profit",
+                  description: "Special pricing for non-profit organizations with the same enterprise-level features and support.",
+                  color: "#f59e0b"
+                }
+              ].map((industry, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    y: -10,
+                    borderColor: "#1a6aff",
+                    backgroundColor: "#f8fafc",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="p-6 text-center border-2 border-slate-200 hover:border-blue-500 rounded-xl transition-all duration-300 cursor-pointer relative overflow-hidden group"
+                >
+                  <motion.i 
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ duration: 0.3 }}
+                    className={`${industry.icon} text-5xl mb-4`}
+                    style={{ color: industry.color }}
+                  />
+                  <h4 className="text-xl font-bold mb-3">{industry.title}</h4>
+                  <p className="text-slate-600">{industry.description}</p>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-slate-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                </motion.div>
+              ))}
             </div>
             
-            <div style={{textAlign: 'center', marginTop: '2rem', padding: '2rem', background: '#f5f5f5', borderRadius: '16px'}}>
-              <h3 style={{marginBottom: '1rem', color: '#1a6aff'}}>Partner Program Benefits</h3>
-              <p style={{marginBottom: '1.5rem'}}>Join our global network of MSPs, system integrators, and technology partners</p>
-              <div style={{display: 'grid', gap: '0.5rem', marginTop: '1rem'}}>
-                <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontSize: '0.875rem'}}>
-                  <i className="fas fa-check" style={{color: '#059669'}}></i> White-label solutions
-                </span>
-                <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontSize: '0.875rem'}}>
-                  <i className="fas fa-check" style={{color: '#059669'}}></i> Partner portal access
-                </span>
-                <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontSize: '0.875rem'}}>
-                  <i className="fas fa-check" style={{color: '#059669'}}></i> Technical training
-                </span>
-                <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontSize: '0.875rem'}}>
-                  <i className="fas fa-check" style={{color: '#059669'}}></i> Marketing support
-                </span>
+            <motion.div 
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center p-8 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl border border-slate-200 relative overflow-hidden"
+            >
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-4 text-blue-700">Partner Program Benefits</h3>
+                <p className="mb-6 text-slate-600 max-w-2xl mx-auto">
+                  Join our global network of MSPs, system integrators, and technology partners
+                </p>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {[
+                    "White-label solutions",
+                    "Partner portal access", 
+                    "Technical training",
+                    "Marketing support"
+                  ].map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                      whileHover={{ scale: 1.05 }}
+                      viewport={{ once: true }}
+                      className="flex items-center justify-center gap-2 text-sm bg-white/70 rounded-lg p-3 hover:bg-white/90 transition-all duration-300"
+                    >
+                      <motion.i 
+                        whileHover={{ scale: 1.2 }}
+                        className="fas fa-check text-green-500"
+                      />
+                      <span className="font-medium">{benefit}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-slate-100/30" />
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Overview Section */}
         <section className="py-16">
