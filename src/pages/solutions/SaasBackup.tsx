@@ -117,7 +117,7 @@ export default function ServerBackup() {
                       backgroundSize: '300% 300%',
                       animation: 'gradientShift 4s ease-in-out infinite'
                     }}>
-                        Server Cloud Backup
+                        OpenText CloudAlly
                       </span>
                     </h1>
                     
