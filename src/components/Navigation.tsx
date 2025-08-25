@@ -41,8 +41,8 @@ const dataProtectionSolutions = [
   },
   {
     title: "SaaS Backup",
-    href: "/solutions/server-backup",
-    description: "Server backup and replication"
+    href: "/solutions/saas-backup",
+    description: "SaaS backup and protection"
   },
   {
     title: "On Prem Backup",
