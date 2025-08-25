@@ -40,7 +40,7 @@ const dataProtectionSolutions = [
     description: "Cloud-based endpoint protection"
   },
   {
-    title: "Servers Cloud Backup",
+    title: "SaaS Backup",
     href: "/solutions/server-backup",
     description: "Server backup and replication"
   },
