@@ -134,13 +134,15 @@ export default function ServerBackup() {
                   {/* Right Media Section */}
                   <div className="order-first lg:order-last">
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      {/* Placeholder for Server Backup Visual */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-slate-700/30 to-green-500/20 rounded-xl border border-blue-500/30 flex items-center justify-center">
-                        <div className="text-center text-slate-300">
-                          <CloudDownload className="h-16 w-16 mx-auto mb-4 text-blue-400" />
-                          <h3 className="text-lg font-semibold mb-2">Server Backup Demo</h3>
-                          <p className="text-sm opacity-80">Interactive demo coming soon</p>
-                        </div>
+                       {/* Vimeo Video */}
+                      <div className="absolute inset-0 rounded-xl overflow-hidden">
+                        <iframe
+                          src="https://player.vimeo.com/video/837585391?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                          className="w-full h-full"
+                          title="CloudAlly Demo"
+                        />
                       </div>
                       
                       {/* Overlay gradient */}
