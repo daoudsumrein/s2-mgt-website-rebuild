@@ -122,7 +122,7 @@ export default function ServerBackup() {
                     </h1>
                     
                     <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                      Enterprise-grade server backup solutions with cloud replication, immutable storage, and rapid recovery capabilities for Windows and Linux environments.
+                      CloudAlly secures data for Microsoft 365, Google Workspace, Salesforce, and Dropbox with daily backups, point-in-time recovery, and trusted enterprise-grade protection.
                     </p>
                     
                     <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Backup%20Consultation', '_blank')}>
