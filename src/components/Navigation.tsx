@@ -50,9 +50,9 @@ const dataProtectionSolutions = [
     description: "Local backup solutions"
   },
   {
-    title: "Cloud-to-Cloud Backup",
+    title: "Server Cloud Backup",
     href: "/solutions/cloud-to-cloud-backup",
-    description: "SaaS data protection and backup"
+    description: "Server backup and replication"
   },
   {
     title: "Email Archiving",
