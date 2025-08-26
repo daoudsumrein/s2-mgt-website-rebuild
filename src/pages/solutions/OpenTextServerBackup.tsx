@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react';
+import { useScrollAnimation, useCounterAnimation, useScrollProgress } from "@/hooks/useScrollAnimation";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -124,9 +126,153 @@ const idealFor = [
   "IT departments seeking centralized backup management"
 ];
 
+// Component definitions for the new sections
+const FeatureCard = ({ icon, title, description, delay }: { 
+  icon: string; 
+  title: string; 
+  description: string; 
+  delay: number; 
+}) => {
+  const { ref, isInView } = useScrollAnimation({ threshold: 0.1 });
+  
+  return (
+    <div 
+      ref={ref}
+      className={`glass-card p-8 text-center transition-all duration-700 hover:-translate-y-2 hover:shadow-xl ${
+        isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+      style={{ transitionDelay: `${delay}s` }}
+    >
+      <div className="text-5xl mb-6 animate-float">{icon}</div>
+      <h3 className="text-xl font-semibold text-blue-900 mb-4">{title}</h3>
+      <p className="text-slate-700 leading-relaxed">{description}</p>
+    </div>
+  );
+};
+
+const BenefitCard = ({ title, description, side, delay }: { 
+  title: string; 
+  description: string; 
+  side: 'left' | 'right'; 
+  delay: number; 
+}) => {
+  const { ref, isInView } = useScrollAnimation({ threshold: 0.1 });
+  
+  return (
+    <div 
+      ref={ref}
+      className={`glass-card p-8 border-l-4 border-blue-500 transition-all duration-700 hover:translate-x-2 ${
+        isInView ? 'opacity-100 translate-x-0' : `opacity-0 ${side === 'left' ? '-translate-x-8' : 'translate-x-8'}`
+      }`}
+      style={{ transitionDelay: `${delay}s` }}
+    >
+      <h3 className="text-xl font-semibold text-blue-900 mb-4">{title}</h3>
+      <p className="text-slate-700 leading-relaxed">{description}</p>
+    </div>
+  );
+};
+
+const PlatformCard = ({ title, items, delay }: { 
+  title: string; 
+  items: string[]; 
+  delay: number; 
+}) => {
+  const { ref, isInView } = useScrollAnimation({ threshold: 0.1 });
+  
+  return (
+    <div 
+      ref={ref}
+      className={`glass-dark-card p-6 text-center transition-all duration-700 hover:-translate-y-1 ${
+        isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+      }`}
+      style={{ transitionDelay: `${delay}s` }}
+    >
+      <h3 className="text-lg font-semibold text-blue-900 mb-4">{title}</h3>
+      <div className="space-y-2">
+        {items.map((item, index) => (
+          <div key={index} className="text-sm text-slate-700">• {item}</div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const StatCard = ({ number, label, suffix = '', special }: { 
+  number: number; 
+  label: string; 
+  suffix?: string; 
+  special?: string; 
+}) => {
+  const { ref, isInView } = useScrollAnimation({ threshold: 0.3 });
+  const count = useCounterAnimation(number, isInView);
+  
+  return (
+    <div 
+      ref={ref}
+      className={`glass-card p-8 text-center transition-all duration-700 ${
+        isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
+      <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+        {special || `${count}${suffix}`}
+      </div>
+      <div className="text-lg text-slate-700 font-medium">{label}</div>
+    </div>
+  );
+};
+
+// Add custom CSS styles to index.css for glass morphism effects
+const customStyles = `
+  .glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+
+  .glass-dark-card {
+    background: rgba(26, 106, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(26, 106, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px 0 rgba(26, 106, 255, 0.15);
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+`;
+
 export default function OpenTextServerBackup() {
+  // Add custom styles to head
+  useEffect(() => {
+    const styleSheet = document.createElement("style");
+    styleSheet.innerText = customStyles;
+    document.head.appendChild(styleSheet);
+    
+    return () => {
+      document.head.removeChild(styleSheet);
+    };
+  }, []);
+
+  const progress = useScrollProgress();
+
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Scroll Progress Bar */}
+      <div 
+        className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-700 z-50 origin-left transition-transform duration-100"
+        style={{ transform: `scaleX(${progress})` }}
+      />
+      
       <SEOHead 
         title="OpenText Server Backup Solutions MENA - Enterprise Server Protection | S2 Solutions"
         description="Enterprise OpenText server backup solutions for MENA region. Complete server backup and replication with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East."
@@ -214,182 +360,226 @@ export default function OpenTextServerBackup() {
           </div>
         </section>
 
-        {/* Overview Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Cloud className="h-6 w-6 text-primary" />
-                    <span>Complete Server Data Protection</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Your server infrastructure contains critical business data that requires comprehensive protection. 
-                    S2's OpenText server backup solutions provide enterprise-grade backup and replication for Windows and Linux servers 
-                    with automated backups, unlimited storage, and instant recovery capabilities. 
-                    <strong> Protect against hardware failures, data corruption, ransomware attacks, and ensure compliance 
-                    with data retention requirements.</strong>
-                  </p>
-                </CardContent>
-              </Card>
+        {/* Overview Section - Keep existing as placeholder */}
+        <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 font-inter">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6 leading-tight">
+                Enterprise Server Backup & Recovery Solutions
+              </h2>
+              <p className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed font-light">
+                Protect your critical business data with OpenText Server Backup - the comprehensive, all-in-one solution that secures over 200 operating systems, platforms, and applications with enterprise-grade reliability.
+              </p>
+              <Button 
+                size="lg" 
+                className="mt-8 text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+              >
+                Explore Features
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </div>
         </section>
 
-        {/* Key Features */}
-        <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {features.map((feature, index) => {
-                  const IconComponent = feature.icon;
-                  return (
-                    <Card key={index}>
-                      <CardContent className="p-6">
-                        <div className="flex items-start space-x-4">
-                          <IconComponent className="h-8 w-8 text-primary mt-1" />
-                          <div>
-                            <h3 className="font-semibold mb-2">{feature.title}</h3>
-                            <p className="text-muted-foreground">{feature.description}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
+        {/* Key Features Section */}
+        <section className="py-20 font-inter">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+                Comprehensive Data Protection Features
+              </h2>
+              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-light">
+                Advanced backup capabilities designed for modern enterprise environments with flexible deployment options and rapid recovery.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+              <FeatureCard
+                icon="⚡"
+                title="Rapid VM Recovery"
+                description="Restore virtual machines to full functionality in as little as 2 minutes, regardless of VM size. Continuous backup protection ensures zero data loss."
+                delay={0.1}
+              />
+              
+              <FeatureCard
+                icon="🛡️"
+                title="Ransomware Protection"
+                description="Immutable backup 'safe-sets' with automatic ransomware threat detection for Windows systems. Comprehensive recovery options from uncompromised backups."
+                delay={0.2}
+              />
+              
+              <FeatureCard
+                icon="☁️"
+                title="Cloud Failover"
+                description="Seamless cloud failover for critical systems ensuring near-zero downtime. Simple failback to primary environment with point-in-time recovery options."
+                delay={0.3}
+              />
+              
+              <FeatureCard
+                icon="🔄"
+                title="Forever Incremental Backups"
+                description="Efficient backup strategy with hourly incremental backups and flexible retention from 1-7 years. Significantly reduces backup times and storage requirements."
+                delay={0.4}
+              />
+              
+              <FeatureCard
+                icon="🎯"
+                title="Bare Metal Restore"
+                description="Complete system recovery including OS, data, and applications. Granular recovery options for files, folders, databases, and application data."
+                delay={0.5}
+              />
+              
+              <FeatureCard
+                icon="🌐"
+                title="Universal Platform Support"
+                description="Protect over 200 operating systems, platforms, and applications including physical, virtual, and legacy systems with comprehensive coverage."
+                delay={0.6}
+              />
             </div>
           </div>
         </section>
 
-        {/* What We Deliver */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">What We Deliver</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {deliverables.map((deliverable, index) => {
-                  const IconComponent = deliverable.icon;
-                  return (
-                    <Card key={index}>
-                      <CardHeader>
-                        <CardTitle className="flex items-center space-x-3">
-                          <IconComponent className="h-6 w-6 text-teal-500" />
-                          <span>{deliverable.title}</span>
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2">
-                          {deliverable.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start space-x-2">
-                              <CheckCircle className="h-4 w-4 text-teal-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
+        {/* Benefits Section */}
+        <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 font-inter">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+                Why Choose OpenText Server Backup
+              </h2>
+              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-light">
+                Enterprise-grade backup solution trusted by organizations worldwide for critical data protection and business continuity.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              <BenefitCard
+                title="Simplified Management"
+                description="Unified management portal with tag-based backup job creation, automatic verification reports, and comprehensive scheduling to minimize operational costs."
+                side="left"
+                delay={0.1}
+              />
+              
+              <BenefitCard
+                title="Compliance Ready"
+                description="SOC 2 Type 2 compliant with support for HIPAA, FERPA, GDPR, and GLBA regulations. Immutable backups ensure data integrity and regulatory compliance."
+                side="right"
+                delay={0.2}
+              />
+              
+              <BenefitCard
+                title="Flexible Deployment"
+                description="Direct-to-cloud, on-site, and hybrid deployment options. Keep up to three copies of backup data with integrated software and optional onsite hardware."
+                side="left"
+                delay={0.3}
+              />
+              
+              <BenefitCard
+                title="Advanced Compression"
+                description="Dynamic bandwidth throttling and advanced compression minimize network utilization while preserving performance during peak hours."
+                side="right"
+                delay={0.4}
+              />
             </div>
           </div>
         </section>
 
-        {/* Built-in Protection Features */}
-        <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Built-in Protection Features</h2>
-              <Card>
-                <CardContent className="p-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {protectionFeatures.map((feature, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <Lock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+        {/* Platform Support Section */}
+        <section className="py-20 font-inter">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+                Comprehensive Platform Coverage
+              </h2>
+              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-light">
+                Extensive support for diverse IT environments ensuring complete data protection across your entire infrastructure.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+              <PlatformCard
+                title="Operating Systems"
+                items={[
+                  "Microsoft Windows",
+                  "Linux Distributions", 
+                  "IBM AIX & iSeries",
+                  "VMware & Hyper-V"
+                ]}
+                delay={0.1}
+              />
+              
+              <PlatformCard
+                title="Application Support"
+                items={[
+                  "Microsoft SQL Server",
+                  "Microsoft Exchange",
+                  "Microsoft SharePoint", 
+                  "Oracle Database"
+                ]}
+                delay={0.2}
+              />
+              
+              <PlatformCard
+                title="Granular Recovery"
+                items={[
+                  "Files & Folders",
+                  "Exchange Mailboxes",
+                  "SQL Databases & Tables",
+                  "SharePoint & Active Directory"
+                ]}
+                delay={0.3}
+              />
+              
+              <PlatformCard
+                title="Virtualization"
+                items={[
+                  "VMware vSphere",
+                  "Microsoft Hyper-V",
+                  "Physical Servers",
+                  "Legacy Systems"
+                ]}
+                delay={0.4}
+              />
             </div>
           </div>
         </section>
 
-        {/* Ideal For & Expected Outcomes */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
-                {/* Ideal For */}
-                <div>
-                  <Card className="border-blue-200 bg-blue-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-blue-700">
-                        <Users className="h-6 w-6" />
-                        <span>Ideal For</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {idealFor.map((item, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Expected Outcomes */}
-                <div>
-                  <Card className="border-teal-200 bg-teal-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-teal-700">
-                        <CheckCircle className="h-6 w-6" />
-                        <span>Expected Outcomes</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {outcomes.map((outcome, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                            <span>{outcome}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+        {/* Statistics Section */}
+        <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 font-inter">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+                Proven Performance
+              </h2>
+              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-light">
+                Industry-leading backup and recovery performance metrics that ensure your business stays protected and operational.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <StatCard number={200} label="Supported Platforms" suffix="+" />
+              <StatCard number={2} label="Minutes VM Recovery" />
+              <StatCard number={7} label="Years Retention" />
+              <StatCard number={24} label="24/7 Expert Support" special="24/7" />
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-primary/5">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Protect Your Server Data Today</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Don't leave your critical server infrastructure vulnerable. Let S2 implement comprehensive OpenText server backup protection for your organization.
+        <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white font-inter">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Secure Your Business Data?
+            </h2>
+            <p className="text-xl mb-10 max-w-3xl mx-auto opacity-90 font-light">
+              Join thousands of organizations worldwide who trust OpenText Server Backup for their critical data protection needs. Start your journey to cyber resilience today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
-                Schedule Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/contact">Contact Specialist</Link>
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 font-semibold"
+            >
+              Get Started Now
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </section>
       </main>
