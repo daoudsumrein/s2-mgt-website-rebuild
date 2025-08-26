@@ -23,8 +23,8 @@ import { Link } from "react-router-dom";
 const features = [
   {
     icon: Cloud,
-    title: "Microsoft 365 & Google Workspace",
-    description: "Complete protection for all SaaS applications including email, OneDrive, SharePoint, Teams, and Google Drive"
+    title: "Windows & Linux Server Support",
+    description: "Complete protection for Windows and Linux servers with automated backup and replication capabilities"
   },
   {
     icon: Shield,
@@ -39,68 +39,68 @@ const features = [
   {
     icon: Database,
     title: "Unlimited Storage",
-    description: "No storage limits or per-user restrictions - backup everything without worrying about costs"
+    description: "No storage limits or per-server restrictions - backup everything without worrying about costs"
   }
 ];
 
 const deliverables = [
   {
     icon: Mail,
-    title: "Email & Calendar Backup",
+    title: "Server & Application Backup",
     features: [
-      "Complete Exchange Online protection",
-      "Gmail and Google Calendar backup",
-      "Individual email item recovery",
-      "Advanced search and filtering",
-      "Legal hold capabilities"
+      "Complete Windows Server protection",
+      "Linux server backup and recovery",
+      "Application-consistent backups",
+      "Database protection (SQL, Oracle, MySQL)",
+      "Active Directory and Exchange Server backup"
     ]
   },
   {
     icon: FileText,
-    title: "Document & File Protection",
+    title: "File System & Data Protection",
     features: [
-      "OneDrive and SharePoint backup",
-      "Google Drive protection",
+      "Full file system backup",
+      "Incremental and differential backups",
       "Version history preservation",
-      "Folder-level recovery",
-      "Cross-tenant migrations"
+      "File-level recovery",
+      "Cross-platform data migrations"
     ]
   },
   {
     icon: Users,
-    title: "Teams & Collaboration",
+    title: "Enterprise Management",
     features: [
-      "Microsoft Teams backup",
-      "Google Chat protection",
-      "Channel and conversation recovery",
-      "File attachment preservation",
-      "User and group management"
+      "Centralized backup management",
+      "Multi-site server protection",
+      "Automated backup scheduling",
+      "Real-time monitoring and alerts",
+      "Role-based access control"
     ]
   }
 ];
 
 const protectionFeatures = [
   "Automated daily backups with customizable schedules",
-  "Zero infrastructure requirements - fully cloud-based",
+  "Agent-based and agentless backup options",
   "Regulatory compliance (GDPR, HIPAA, SOX)",
-  "Multi-geo backup locations for data sovereignty",
+  "Multi-site backup replication for data sovereignty",
   "Enterprise-grade encryption in transit and at rest",
-  "Single sign-on (SSO) integration",
+  "Role-based access control and authentication",
   "Comprehensive audit trails and reporting"
 ];
 
 const technologies = [
   {
-    name: "OpenText Secure Cloud Backup",
-    purpose: "Primary cloud-to-cloud backup platform"
+    name: "OpenText Server Backup",
+    purpose: "Primary server backup and replication platform"
   },
   {
-    name: "Microsoft Graph API",
-    purpose: "Native Microsoft 365 integration"
+    name: "Windows VSS Integration",
+    purpose: "Application-consistent Windows server backups"
   },
   {
-    name: "Google Workspace APIs",
-    purpose: "Complete Google Workspace protection"
+    name: "Linux LVM Snapshots",
+    purpose: "Complete Linux server protection"
   },
   {
     name: "AES-256 Encryption",
@@ -109,29 +109,29 @@ const technologies = [
 ];
 
 const outcomes = [
-  "100% protection of SaaS data with no gaps",
-  "Instant recovery from accidental deletions",
+  "100% protection of server data with no gaps",
+  "Instant recovery from hardware failures",
   "Compliance-ready data retention policies",
   "Reduced IT overhead with automated protection",
-  "Protection against insider threats and ransomware"
+  "Protection against data corruption and ransomware"
 ];
 
 const idealFor = [
-  "Organizations using Microsoft 365 or Google Workspace",
+  "Organizations with critical Windows and Linux servers",
   "Companies requiring compliance and data governance",
-  "Businesses migrating between cloud platforms",
-  "Remote and hybrid workforce environments",
-  "Enterprises needing unlimited backup storage"
+  "Businesses with on-premises server infrastructure",
+  "Enterprises needing reliable disaster recovery",
+  "IT departments seeking centralized backup management"
 ];
 
-export default function CloudToCloudBackup() {
+export default function OpenTextServerBackup() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title="Cloud-to-Cloud Backup Solutions MENA - SaaS Data Protection | S2 Solutions"
-        description="Enterprise cloud-to-cloud backup solutions for MENA region. Complete Microsoft 365 and Google Workspace protection with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="cloud backup MENA, Microsoft 365 backup UAE, Google Workspace backup Middle East, SaaS backup Saudi Arabia, cloud data protection, email backup, SharePoint backup, OneDrive backup"
-        canonicalUrl="https://s2mgt.com/solutions/cloud-to-cloud-backup"
+        title="OpenText Server Backup Solutions MENA - Enterprise Server Protection | S2 Solutions"
+        description="Enterprise OpenText server backup solutions for MENA region. Complete server backup and replication with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East."
+        keywords="server backup MENA, OpenText server backup UAE, server backup Middle East, server replication Saudi Arabia, server data protection, enterprise backup, server disaster recovery"
+        canonicalUrl="https://s2mgt.com/solutions/OpenText-Server-Backup"
       />
       
       <Navigation />
@@ -173,7 +173,7 @@ export default function CloudToCloudBackup() {
                       className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
-                      <span className="relative">Cloud Backup Solution</span>
+                      <span className="relative">Server Backup Solution</span>
                     </Badge>
                     
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -184,18 +184,18 @@ export default function CloudToCloudBackup() {
                           animation: 'gradientShift 4s ease-in-out infinite'
                         }}
                       >
-                        Cloud-to-Cloud Backup
+                        OpenText Server Backup
                       </span>
                     </h1>
                     
                     <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                      Protect your SaaS applications and cloud data with comprehensive backup solutions for Microsoft 365, Google Workspace, and other cloud platforms.
+                      Comprehensive OpenText server backup and replication solutions for Windows and Linux servers with automated protection and instant recovery capabilities.
                     </p>
                     
                     <Button 
                       size="lg" 
                       className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto"
-                      onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Cloud%20to%20Cloud%20Backup%20Consultation', '_blank')}
+                      onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=OpenText%20Server%20Backup%20Consultation', '_blank')}
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
                       <span className="relative">Schedule Consultation</span>
@@ -222,15 +222,15 @@ export default function CloudToCloudBackup() {
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Cloud className="h-6 w-6 text-primary" />
-                    <span>Complete SaaS Data Protection</span>
+                    <span>Complete Server Data Protection</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Your cloud applications contain critical business data that traditional backup solutions can't protect. 
-                    S2's cloud-to-cloud backup solutions provide comprehensive protection for Microsoft 365, Google Workspace, 
-                    and other SaaS platforms with automated backups, unlimited storage, and instant recovery capabilities. 
-                    <strong> Protect against accidental deletions, insider threats, ransomware attacks, and ensure compliance 
+                    Your server infrastructure contains critical business data that requires comprehensive protection. 
+                    S2's OpenText server backup solutions provide enterprise-grade backup and replication for Windows and Linux servers 
+                    with automated backups, unlimited storage, and instant recovery capabilities. 
+                    <strong> Protect against hardware failures, data corruption, ransomware attacks, and ensure compliance 
                     with data retention requirements.</strong>
                   </p>
                 </CardContent>
@@ -377,9 +377,9 @@ export default function CloudToCloudBackup() {
         {/* CTA Section */}
         <section className="py-16 bg-primary/5">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Protect Your SaaS Data Today</h2>
+            <h2 className="text-3xl font-bold mb-4">Protect Your Server Data Today</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Don't leave your critical business data vulnerable. Let S2 implement comprehensive cloud-to-cloud backup protection for your organization.
+              Don't leave your critical server infrastructure vulnerable. Let S2 implement comprehensive OpenText server backup protection for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg">

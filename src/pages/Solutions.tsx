@@ -46,9 +46,9 @@ const dataProtectionSolutions = [{
   link: "/solutions/onprem-backup"
 }, {
   icon: Cloud,
-  title: "Cloud-to-Cloud Backup",
-  description: "SaaS data protection and backup",
-  link: "/solutions/cloud-to-cloud-backup"
+  title: "OpenText Server Backup",
+  description: "Server backup and replication",
+  link: "/solutions/OpenText-Server-Backup"
 }, {
   icon: Mail,
   title: "Email Archiving",

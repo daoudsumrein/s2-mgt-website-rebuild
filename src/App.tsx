@@ -36,7 +36,7 @@ import SecurityAwareness from "./pages/solutions/SecurityAwareness";
 import EmailProtection from "./pages/solutions/EmailProtection";
 import EmailEncryption from "./pages/solutions/EmailEncryption";
 import RansomwareProtection from "./pages/solutions/RansomwareProtection";
-import CloudToCloudBackup from "./pages/solutions/CloudToCloudBackup";
+import OpenTextServerBackup from "./pages/solutions/OpenTextServerBackup";
 import ServersDataProtection from "./pages/solutions/ServersDataProtection";
 import NotFound from "./pages/NotFound";
 import Clients from "./pages/Clients";
@@ -85,7 +85,7 @@ const App = () => (
           <Route path="/solutions/email-protection" element={<EmailProtection />} />
           <Route path="/solutions/email-encryption" element={<EmailEncryption />} />
           <Route path="/solutions/ransomware-protection" element={<RansomwareProtection />} />
-          <Route path="/solutions/cloud-to-cloud-backup" element={<CloudToCloudBackup />} />
+          <Route path="/solutions/OpenText-Server-Backup" element={<OpenTextServerBackup />} />
           <Route path="/solutions/servers-data-protection" element={<ServersDataProtection />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
