@@ -50,7 +50,7 @@ const dataProtectionSolutions = [
     description: "Local backup solutions"
   },
   {
-    title: "OpenText Server Backup",
+    title: "Server Backup",
     href: "/solutions/OpenText-Server-Backup",
     description: "Server backup and replication"
   },

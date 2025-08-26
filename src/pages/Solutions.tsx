@@ -46,7 +46,7 @@ const dataProtectionSolutions = [{
   link: "/solutions/onprem-backup"
 }, {
   icon: Cloud,
-  title: "OpenText Server Backup",
+  title: "Server Backup",
   description: "Server backup and replication",
   link: "/solutions/OpenText-Server-Backup"
 }, {
