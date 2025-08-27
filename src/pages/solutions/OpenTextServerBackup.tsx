@@ -349,9 +349,21 @@ export default function OpenTextServerBackup() {
                   </div>
                   
                   {/* Right Media Section */}
-                  <div className="relative flex justify-center lg:justify-start lg:pl-8">
-                    <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                  <div className="order-first lg:order-last">
+                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
+                      {/* Video Container */}
+                      <div className="absolute inset-0">
+                        <iframe 
+                          src="https://player.vimeo.com/video/724980545?badge=0&autopause=0&player_id=0&app_id=58479&controls=1&title=0&byline=0&portrait=0" 
+                          className="w-full h-full border-none rounded-xl"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                          title="Server Backup Solutions"
+                        />
+                      </div>
                       
+                      {/* Overlay gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
                     </div>
                   </div>
                 </div>
