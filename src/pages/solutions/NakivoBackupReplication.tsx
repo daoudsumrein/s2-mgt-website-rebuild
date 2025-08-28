@@ -613,22 +613,14 @@ export default function NakivoBackupReplication() {
               <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
                 Join thousands of IT professionals who trust NAKIVO to protect their most critical business data. With 2X faster backups, 49% lower costs, and 5-minute deployment, there's never been a better time to upgrade your data protection strategy.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <div className="flex justify-center">
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto relative overflow-hidden group"
-                  onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=NAKIVO%20Backup%20Free%20Trial', '_blank')}
+                  onClick={() => window.location.href = '/contact'}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
-                  <span className="relative">Start Free Trial</span>
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur-sm w-full sm:w-auto transition-all duration-300 hover:-translate-y-1"
-                  onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=NAKIVO%20Backup%20Demo%20Request', '_blank')}
-                >
-                  Schedule Demo
+                  <span className="relative">Contact Us</span>
                 </Button>
               </div>
             </div>
