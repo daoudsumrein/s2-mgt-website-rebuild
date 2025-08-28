@@ -25,7 +25,7 @@ import Security from "./pages/solutions/Security";
 import EmailArchiving from "./pages/solutions/EmailArchiving";
 import EndpointBackup from "./pages/solutions/EndpointBackup";
 import SaasBackup from "./pages/solutions/SaasBackup";
-import NakivoBackupReplication from "./pages/solutions/NakivoBackupReplication";
+import OnPremBackup from "./pages/solutions/OnPremBackup";
 import ServerMigration from "./pages/solutions/ServerMigration";
 import DROrchestration from "./pages/solutions/DROrchestration";
 import ServerMigrationOrchestration from "./pages/solutions/ServerMigrationOrchestration";
@@ -74,7 +74,7 @@ const App = () => (
           <Route path="/solutions/email-archiving" element={<EmailArchiving />} />
           <Route path="/solutions/endpoint-backup" element={<EndpointBackup />} />
           <Route path="/solutions/saas-backup" element={<SaasBackup />} />
-          <Route path="/solutions/Nakivo-Backup&Replication" element={<NakivoBackupReplication />} />
+          <Route path="/solutions/onprem-backup" element={<OnPremBackup />} />
           <Route path="/solutions/opentext-carbonite-migrate" element={<ServerMigration />} />
           <Route path="/solutions/disaster-recovery-orchestration" element={<DROrchestration />} />
           <Route path="/solutions/server-migration-orchestration" element={<ServerMigrationOrchestration />} />

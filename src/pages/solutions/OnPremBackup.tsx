@@ -115,14 +115,14 @@ const idealFor = [
   "Businesses needing compliance adherence"
 ];
 
-export default function NakivoBackupReplication() {
+export default function OnPremBackup() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="NAKIVO Backup & Replication - Complete Data Protection Platform | S2 Solutions"
-        description="NAKIVO Backup & Replication v11.0.1 delivers enterprise-grade backup, replication, instant restore, and disaster recovery in one unified solution. 2X faster backups, 49% lower costs, 5-minute setup."
-        keywords="NAKIVO backup, backup replication, data protection, disaster recovery, VMware backup, Hyper-V backup, cloud backup, ransomware protection"
-        canonicalUrl="https://s2mgt.com/solutions/Nakivo-Backup&Replication"
+        title="On-Premises Backup Solutions MENA - Local Data Protection | S2 Solutions"
+        description="Enterprise on-premises backup solutions for MENA region. Local data protection with high-performance platforms offering fast recovery, deduplication, and secure storage. Serving UAE, Saudi Arabia, and Middle East."
+        keywords="on-premises backup MENA, local backup UAE, enterprise backup Middle East, data protection Saudi Arabia, backup appliance, deduplication, fast recovery"
+        canonicalUrl="https://s2mgt.com/solutions/onprem-backup"
       />
       <Navigation />
       <main className="flex-1">
@@ -216,32 +216,31 @@ export default function NakivoBackupReplication() {
         </section>
 
         {/* Value Proposition Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="glass-panel p-8 md:p-16 text-center mb-10 fade-in">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+        <section className="py-20 bg-gradient-to-br from-slate-900/90 to-slate-800/90">
+          <div className="container mx-auto px-4">
+            <div className="glass-panel p-8 lg:p-16 text-center backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl hover:bg-white/10 transition-all duration-500">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 The Complete Data Protection Platform Your Business Deserves
-              </h2>
-              <p className="text-xl md:text-2xl text-text-light font-semibold mb-6">
+              </h1>
+              <p className="text-xl lg:text-2xl text-blue-200 mb-6 font-semibold">
                 Protect everything. Recover instantly. Scale endlessly.
               </p>
-              <p className="text-base md:text-lg text-text-muted mb-10 max-w-4xl mx-auto">
+              <p className="text-lg text-slate-300 mb-10 max-w-4xl mx-auto leading-relaxed">
                 NAKIVO Backup & Replication v11.0.1 delivers enterprise-grade backup, replication, instant restore, and disaster recovery in one unified solution. Trusted by thousands of organizations worldwide, we make data protection simple, fast, and affordable.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
-                {[
-                  "2X Faster Backups",
-                  "49% Lower Costs", 
-                  "5-Minute Setup",
-                  "4.8/5 Star Rating"
-                ].map((metric, index) => (
-                  <div
-                    key={index}
-                    className="bg-glass-hover backdrop-blur-lg border border-glass-border rounded-2xl p-4 md:p-6 text-white font-semibold text-sm md:text-base transition-all duration-300 hover:bg-glass-border-hover hover:-translate-y-1 hover:shadow-glass-hover"
-                  >
-                    {metric}
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+                  <span className="text-white font-semibold">2X Faster Backups</span>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+                  <span className="text-white font-semibold">49% Lower Costs</span>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+                  <span className="text-white font-semibold">5-Minute Setup</span>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+                  <span className="text-white font-semibold">4.8/5 Star Rating</span>
+                </div>
               </div>
             </div>
           </div>
@@ -249,91 +248,69 @@ export default function NakivoBackupReplication() {
 
         {/* Platform Overview */}
         <section className="py-20">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-16 text-white">Why Choose NAKIVO Backup & Replication?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
-              <div className="glass-panel p-8 text-center">
-                <h4 className="text-highlight-blue text-lg mb-4 font-semibold">ALL-IN-ONE SOLUTION</h4>
-                <ul className="space-y-1 text-sm text-text-muted text-left">
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Backup
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Replication
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Instant Restore
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Ransomware Protection
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    IT Monitoring
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Site Recovery
-                  </li>
-                </ul>
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+              <Card className="glass-panel backdrop-blur-xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition-all duration-500">
+                <CardHeader>
+                  <CardTitle className="text-blue-400 text-lg mb-4">ALL-IN-ONE SOLUTION</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-slate-300">
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Backup</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Replication</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Instant Restore</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Ransomware Protection</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />IT Monitoring</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Site Recovery</li>
+                  </ul>
+                </CardContent>
+              </Card>
               
-              <div className="glass-panel p-8 text-center">
-                <h4 className="text-highlight-blue text-lg mb-4 font-semibold">MULTI-PLATFORM SUPPORT</h4>
-                <ul className="space-y-1 text-sm text-text-muted text-left">
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    VMware vSphere
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Microsoft Hyper-V
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Nutanix AHV
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Proxmox VE
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Amazon EC2
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Windows, Linux
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    NAS, Microsoft 365
-                  </li>
-                  <li className="relative pl-4">
-                    <span className="absolute left-0 text-green-400">•</span>
-                    Oracle Database (via RMAN)
-                  </li>
-                </ul>
-              </div>
+              <Card className="glass-panel backdrop-blur-xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition-all duration-500">
+                <CardHeader>
+                  <CardTitle className="text-blue-400 text-lg mb-4">MULTI-PLATFORM SUPPORT</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-slate-300">
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />VMware vSphere</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Microsoft Hyper-V</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Nutanix AHV</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Proxmox VE</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Amazon EC2</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Windows, Linux</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />NAS, Microsoft 365</li>
+                    <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-400 mr-2" />Oracle Database (via RMAN)</li>
+                  </ul>
+                </CardContent>
+              </Card>
               
-              <div className="glass-panel p-8 text-center">
-                <h4 className="text-highlight-blue text-lg mb-4 font-semibold">FLEXIBLE RECOVERY</h4>
-                <p className="text-sm text-text-muted">Instantly restore VMs, physical machines, files, folders, and application objects from backups to original or custom locations.</p>
-              </div>
+              <Card className="glass-panel backdrop-blur-xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition-all duration-500">
+                <CardHeader>
+                  <CardTitle className="text-blue-400 text-lg mb-4">FLEXIBLE RECOVERY</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-slate-300">Instantly restore VMs, physical machines, files, folders, and application objects from backups to original or custom locations.</p>
+                </CardContent>
+              </Card>
               
-              <div className="glass-panel p-8 text-center">
-                <h4 className="text-highlight-blue text-lg mb-4 font-semibold">VERSATILE DEPLOYMENT</h4>
-                <p className="text-sm text-text-muted">Install on NAS devices for a complete backup appliance or deploy on Windows/Linux or as a VMware/Nutanix VA or AMI in Amazon EC2.</p>
-              </div>
+              <Card className="glass-panel backdrop-blur-xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition-all duration-500">
+                <CardHeader>
+                  <CardTitle className="text-blue-400 text-lg mb-4">VERSATILE DEPLOYMENT</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-slate-300">Install on NAS devices for a complete backup appliance or deploy on Windows/Linux or as a VMware/Nutanix VA or AMI in Amazon EC2.</p>
+                </CardContent>
+              </Card>
               
-              <div className="glass-panel p-8 text-center">
-                <h4 className="text-highlight-blue text-lg mb-4 font-semibold">LIMITLESS SCALABILITY</h4>
-                <p className="text-sm text-text-muted">Supports single or multi-tenant needs. Efficiently scales for ROBO and edge environments. One instance protects over 8,000 VMs across 300+ locations for our biggest clients.</p>
-              </div>
+              <Card className="glass-panel backdrop-blur-xl bg-white/5 border border-white/10 p-6 hover:bg-white/10 transition-all duration-500">
+                <CardHeader>
+                  <CardTitle className="text-blue-400 text-lg mb-4">LIMITLESS SCALABILITY</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-slate-300">Supports single or multi-tenant needs. Efficiently scales for ROBO and edge environments. One instance protects over 8,000 VMs across 300+ locations for our biggest clients.</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>

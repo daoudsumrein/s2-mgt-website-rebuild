@@ -18,20 +18,14 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 12% 16%;
 
-    /* NAKIVO Glassmorphism Brand Colors */
-    --brand-blue: 214 80% 29%; /* #09438D */
-    --highlight-blue: 218 100% 49%; /* #0072FA */
-    --secondary-blue: 213 37% 52%; /* #476E9A */
-    --light-blue: 213 20% 62%; /* #7F9AB9 */
-    --orange-accent: 22 98% 59%; /* #FD7E2E */
-    
-    /* Primary system colors based on NAKIVO brand */
-    --primary: 218 100% 49%; /* Highlight Blue #0072FA */
+    /* S2 Brand Colors - Logo Color Palette */
+    --primary: 206 80% 54%; /* Main Logo Color #27A3E8 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 218 100% 95%;
-    --primary-muted: 218 50% 85%;
+    --primary-light: 204 69% 95%;
+    --primary-muted: 204 40% 85%;
 
-    --secondary: 213 37% 52%; /* Secondary Blue #476E9A */
+    
+    --secondary: 220 4% 51%; /* Secondary Logo Color #7B8083 */
     --secondary-foreground: 0 0% 100%;
     
     /* Legacy secondary for backwards compatibility */
@@ -39,9 +33,9 @@ All colors MUST be HSL.
     --secondary-legacy-foreground: 210 12% 16%;
 
     --muted: 210 16% 97%;
-    --muted-foreground: 210 12% 16%;
+    --muted-foreground: 210 12% 16%; /* Changed from gray to black for better readability */
 
-    --accent: 22 98% 94%; /* Light Orange */
+    --accent: 204 50% 94%;
     --accent-foreground: 210 12% 16%;
 
     --destructive: 0 84.2% 60.2%;
@@ -49,30 +43,17 @@ All colors MUST be HSL.
 
     --border: 220 8% 88%;
     --input: 220 8% 90%;
-    --ring: 218 100% 49%;
+    --ring: 204 69% 50%;
 
-    /* Glassmorphism Design System */
-    --glass-bg: 0 0% 100% / 0.08;
-    --glass-border: 0 0% 100% / 0.15;
-    --glass-shadow: 0 8px 32px 0 rgba(0, 29, 64, 0.25);
-    --glass-hover-bg: 0 0% 100% / 0.12;
-    --glass-hover-border: 0 0% 100% / 0.25;
-    --glass-hover-shadow: 0 16px 48px 0 rgba(0, 29, 64, 0.35);
-    
-    /* Complex background gradients */
-    --bg-gradient-primary: radial-gradient(ellipse at top left, hsl(217 72% 38%) 0%, hsl(var(--brand-blue)) 25%), radial-gradient(ellipse at bottom right, hsl(226 100% 56%) 0%, hsl(216 100% 45%) 35%), linear-gradient(135deg, hsl(0 0% 21%) 0%, hsl(0 0% 13%) 20%, hsl(var(--brand-blue)) 50%, hsl(216 100% 45%) 70%, hsl(0 0% 100%) 90%, hsl(192 26% 93%) 100%);
-    --bg-gradient-overlay: radial-gradient(circle at 20% 20%, hsl(217 72% 38% / 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, hsl(226 100% 56% / 0.2) 0%, transparent 50%), radial-gradient(circle at 40% 70%, hsl(216 100% 45% / 0.15) 0%, transparent 50%);
-    
-    /* Design System Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(226 100% 70%));
-    --gradient-glass: linear-gradient(135deg, hsl(var(--glass-bg)), hsl(var(--glass-hover-bg)));
+    /* S2 Design System Tokens - Logo Color Palette */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(204 69% 65%));
     --gradient-light: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-    --gradient-metallic-blue: linear-gradient(135deg, hsl(218 100% 70%), hsl(218 100% 49%), hsl(220 15% 35%));
-    --shadow-soft: var(--glass-shadow);
+    --gradient-metallic-blue: linear-gradient(135deg, hsl(204 80% 70%), hsl(204 69% 50%), hsl(220 15% 35%));
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
     --shadow-card: 0 2px 8px -2px hsl(220 4% 51% / 0.08);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -165,22 +146,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background: var(--bg-gradient-primary);
-    background-attachment: fixed;
-    min-height: 100vh;
-    position: relative;
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-gradient-overlay);
-    pointer-events: none;
-    z-index: -1;
   }
 
   /* H2 styling - blue color, larger and bolder */
@@ -273,63 +238,4 @@ All colors MUST be HSL.
 
 .animate-partner-slide {
   animation: partner-slide 30s linear infinite;
-}
-
-/* Glassmorphism utilities */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius);
-  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transition: var(--transition-smooth);
-  position: relative;
-  overflow: hidden;
-}
-
-.glass-panel::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.4) 80%, transparent 100%);
-}
-
-.glass-panel:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 16px 48px 0 rgba(0, 29, 64, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-/* Scroll reveal animation */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.scroll-reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Fade in animations */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.fade-in:nth-child(2) { animation-delay: 0.1s; }
-.fade-in:nth-child(3) { animation-delay: 0.2s; }
-.fade-in:nth-child(4) { animation-delay: 0.3s; }
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

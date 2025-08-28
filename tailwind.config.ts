@@ -66,37 +66,10 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				/* NAKIVO Glassmorphism Colors */
-				'brand-blue': 'hsl(var(--brand-blue))',
-				'highlight-blue': 'hsl(var(--highlight-blue))',
-				'secondary-blue': 'hsl(var(--secondary-blue))',
-				'light-blue': 'hsl(var(--light-blue))',
-				'orange-accent': 'hsl(var(--orange-accent))',
-				'glass': {
-					DEFAULT: 'rgba(255, 255, 255, 0.08)',
-					hover: 'rgba(255, 255, 255, 0.12)',
-					border: 'rgba(255, 255, 255, 0.15)',
-					'border-hover': 'rgba(255, 255, 255, 0.25)'
-				},
-				'text-light': 'rgba(255, 255, 255, 0.9)',
-				'text-muted': 'rgba(255, 255, 255, 0.8)'
+				}
 			},
 			backgroundImage: {
 				'gradient-metallic-blue': 'var(--gradient-metallic-blue)',
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-glass': 'var(--gradient-glass)',
-				'gradient-nakivo': 'var(--bg-gradient-primary)',
-				'gradient-nakivo-overlay': 'var(--bg-gradient-overlay)',
-			},
-			backdropFilter: {
-				'glass': 'blur(20px) saturate(180%)',
-				'glass-light': 'blur(15px) saturate(150%)',
-			},
-			boxShadow: {
-				'glass': 'var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
-				'glass-hover': 'var(--glass-hover-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
-				'glass-soft': '0 4px 16px 0 rgba(0, 29, 64, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
