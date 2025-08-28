@@ -173,7 +173,7 @@ export default function NakivoBackupReplication() {
                           animation: 'gradientShift 4s ease-in-out infinite'
                         }}
                       >
-                        On Prem Backup
+                        Nakivo Backup & Replication
                       </span>
                     </h1>
                     
