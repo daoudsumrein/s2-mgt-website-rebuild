@@ -115,14 +115,14 @@ const idealFor = [
   "Businesses needing compliance adherence"
 ];
 
-export default function OnPremBackup() {
+export default function NakivoBackupReplication() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="On-Premises Backup Solutions MENA - Local Data Protection | S2 Solutions"
-        description="Enterprise on-premises backup solutions for MENA region. Local data protection with high-performance platforms offering fast recovery, deduplication, and secure storage. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="on-premises backup MENA, local backup UAE, enterprise backup Middle East, data protection Saudi Arabia, backup appliance, deduplication, fast recovery"
-        canonicalUrl="https://s2mgt.com/solutions/onprem-backup"
+        title="NAKIVO Backup & Replication - Complete Data Protection Platform | S2 Solutions"
+        description="NAKIVO Backup & Replication v11.0.1 delivers enterprise-grade backup, replication, instant restore, and disaster recovery in one unified solution. 2X faster backups, 49% lower costs, 5-minute setup."
+        keywords="NAKIVO backup, backup replication, data protection, disaster recovery, VMware backup, Hyper-V backup, cloud backup, ransomware protection"
+        canonicalUrl="https://s2mgt.com/solutions/Nakivo-Backup&Replication"
       />
       <Navigation />
       <main className="flex-1">
@@ -219,9 +219,9 @@ export default function OnPremBackup() {
         <section className="py-20">
           <div className="container mx-auto px-6">
             <div className="glass-panel p-8 md:p-16 text-center mb-10 fade-in">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 The Complete Data Protection Platform Your Business Deserves
-              </h1>
+              </h2>
               <p className="text-xl md:text-2xl text-text-light font-semibold mb-6">
                 Protect everything. Recover instantly. Scale endlessly.
               </p>
