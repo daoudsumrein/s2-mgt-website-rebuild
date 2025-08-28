@@ -41,7 +41,7 @@ const dataProtectionSolutions = [{
   link: "/solutions/server-backup"
 }, {
   icon: Database,
-  title: "On-premise Backup",
+  title: "NAKIVO Backup & Replication",
   description: "Complete data protection platform",
   link: "/solutions/Nakivo-Backup&Replication"
 }, {

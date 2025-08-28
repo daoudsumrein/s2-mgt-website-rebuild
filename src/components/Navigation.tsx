@@ -45,7 +45,7 @@ const dataProtectionSolutions = [
     description: "SaaS backup and protection"
   },
   {
-    title: "On-premise Backup",
+    title: "NAKIVO Backup & Replication",
     href: "/solutions/Nakivo-Backup&Replication",
     description: "Complete data protection platform"
   },
