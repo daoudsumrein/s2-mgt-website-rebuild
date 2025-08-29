@@ -20,29 +20,11 @@ import {
   Clock
 } from "lucide-react";
 
-// Client-side only ReCAPTCHA component
-const ClientOnlyReCAPTCHA = ({ recaptchaRef, sitekey, onChange, onExpired, isMounted }: any) => {
-  if (!isMounted) {
-    return <div className="h-20 flex items-center justify-center text-muted-foreground">Loading captcha...</div>;
-  }
-
-  const ReCAPTCHA = require('react-google-recaptcha').default;
-  
-  return (
-    <ReCAPTCHA
-      ref={recaptchaRef}
-      sitekey={sitekey}
-      onChange={onChange}
-      onExpired={onExpired}
-      theme="light"
-    />
-  );
-};
-
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const [ReCAPTCHA, setReCAPTCHA] = useState<any>(null);
   const recaptchaRef = useRef<any>(null);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -60,6 +42,11 @@ export default function Contact() {
 
   useEffect(() => {
     setIsMounted(true);
+    
+    // Dynamically import ReCAPTCHA only on client side
+    import('react-google-recaptcha').then((module) => {
+      setReCAPTCHA(() => module.default);
+    });
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -310,13 +297,19 @@ export default function Contact() {
                     
                     {/* Google reCAPTCHA */}
                     <div className="flex justify-center">
-                      <ClientOnlyReCAPTCHA
-                        recaptchaRef={recaptchaRef}
-                        sitekey={RECAPTCHA_SITE_KEY}
-                        onChange={(value: string) => setRecaptchaValue(value)}
-                        onExpired={() => setRecaptchaValue(null)}
-                        isMounted={isMounted}
-                      />
+                      {isMounted && ReCAPTCHA ? (
+                        <ReCAPTCHA
+                          ref={recaptchaRef}
+                          sitekey={RECAPTCHA_SITE_KEY}
+                          onChange={(value: string) => setRecaptchaValue(value)}
+                          onExpired={() => setRecaptchaValue(null)}
+                          theme="light"
+                        />
+                      ) : (
+                        <div className="h-20 flex items-center justify-center text-muted-foreground">
+                          Loading captcha...
+                        </div>
+                      )}
                     </div>
                     
                     <Button 
