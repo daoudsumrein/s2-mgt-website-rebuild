@@ -815,7 +815,7 @@ export default function DisasterRecovery() {
             ease: "easeOut"
           }} className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Official Authorized Distributor</h2>
-              <p className="text-lg text-blue-100 max-w-4xl mx-auto">We are the official OpenText/Carbonite Availability distributor, ensuring authentic licensing and professional support</p>
+              <p className="text-lg text-blue-100 max-w-4xl mx-auto">We are the preferred Official OpenText/Carbonite Availability distributor, ensuring authentic licensing and professional support</p>
             </motion.div>
             
             <motion.div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto" initial={{
