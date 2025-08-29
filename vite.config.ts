@@ -28,5 +28,9 @@ export default defineConfig(({ mode, command }) => ({
   },
   ssr: {
     noExternal: ['react-router-dom'],
+    external: ['@fortawesome/fontawesome-free'],
+  },
+  define: {
+    global: 'globalThis',
   },
 }));
