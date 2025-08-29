@@ -59,10 +59,10 @@ const vendors = [
     description: "Backup & Recovery",
     tagline: "Fast, affordable data protection for virtual, cloud, and hybrid environments with comprehensive backup, replication, and disaster recovery capabilities.",
     solutions: [
-      "VM Backup & Recovery",
-      "Cloud Data Protection",
-      "Microsoft 365 Backup",
-      "Disaster Recovery Orchestration"
+      "VM Backup & Recovery - Agentless backup for VMware, Hyper-V, Nutanix AHV, and Proxmox VE",
+      "Cloud Data Protection - Direct backup to Amazon S3, Azure, Wasabi, and S3-compatible storage",
+      "Microsoft 365 Backup - Protection for Exchange Online, Teams, OneDrive, and SharePoint",
+      "Physical & File Share Backup - Image-based backup for servers and incremental file share protection"
     ],
     href: "/vendors/nakivo",
     color: "bg-blue-50 text-blue-700 border-blue-200"
