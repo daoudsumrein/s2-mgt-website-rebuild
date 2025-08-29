@@ -1,39 +1,4 @@
 Options -MultiViews
 RewriteEngine On
-
-# Serve prerendered HTML files for specific routes
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/vendors/opentext/?$
-RewriteRule ^ vendors/opentext.html [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/vendors/tds/?$
-RewriteRule ^ vendors/tds.html [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/vendors/appcure/?$
-RewriteRule ^ vendors/appcure.html [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/vendors/sangfor/?$
-RewriteRule ^ vendors/sangfor.html [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/vendors/arrosoft/?$
-RewriteRule ^ vendors/arrosoft.html [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/vendors/nakivo/?$
-RewriteRule ^ vendors/nakivo.html [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/(about|services|solutions|contact|vendors|clients)/?$
-RewriteRule ^([^/]+)/?$ $1.html [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} ^/solutions/(.+)/?$
-RewriteRule ^solutions/(.+)/?$ solutions/%1.html [L]
-
-# SPA fallback for all other routes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [QSA,L]

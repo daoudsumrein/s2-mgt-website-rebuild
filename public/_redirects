@@ -1,16 +1,2 @@
-# Serve prerendered pages first, then fallback to SPA
-/vendors/opentext    /vendors/opentext.html    200
-/vendors/tds    /vendors/tds.html    200
-/vendors/appcure    /vendors/appcure.html    200
-/vendors/sangfor    /vendors/sangfor.html    200
-/vendors/arrosoft    /vendors/arrosoft.html    200
-/vendors/nakivo    /vendors/nakivo.html    200
-/about    /about.html    200
-/services    /services.html    200
-/solutions    /solutions.html    200
-/contact    /contact.html    200
-/vendors    /vendors.html    200
-/clients    /clients.html    200
-/solutions/*    /solutions/:splat.html    200
-# SPA fallback for all other routes
+# SPA Redirect for all routes to index.html
 /*    /index.html   200
