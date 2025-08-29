@@ -9,20 +9,27 @@ const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
 // Define routes exactly as they appear in App.tsx
+// IMPORTANT: When adding new pages/blogs/vendors/solutions, 
+// make sure to add them here to ensure they are pre-rendered
 const routesToPrerender = [
+  // Main pages
   '/',
   '/about',
-  '/services',
+  '/services', 
   '/solutions',
   '/contact',
   '/vendors',
   '/clients',
+  
+  // Vendor pages
   '/vendors/opentext',
   '/vendors/tds',
   '/vendors/appcure',
   '/vendors/sangfor',
   '/vendors/arrosoft',
   '/vendors/nakivo',
+  
+  // Solution pages
   '/solutions/opentext-carbonite-availability',
   '/solutions/data-protection',
   '/solutions/it-discovery',
