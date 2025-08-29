@@ -57,7 +57,7 @@ const vendors = [
     name: "NAKIVO",
     logo: nakivoLogo,
     description: "Backup & Recovery",
-    tagline: "Comprehensive data protection solutions for virtual and cloud environments",
+    tagline: "Fast, affordable data protection for virtual, cloud, and hybrid environments with comprehensive backup, replication, and disaster recovery capabilities.",
     solutions: [
       "VM Backup & Recovery",
       "Cloud Data Protection",
