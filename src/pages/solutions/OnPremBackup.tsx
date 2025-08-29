@@ -216,13 +216,13 @@ export default function OnPremBackup() {
         </section>
 
         {/* Value Proposition Section */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-deep)' }}>
+        <section className="py-16 md:py-24 bg-background relative overflow-hidden">
           {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-30">
             <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%), 
-                               radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0%, transparent 50%)`,
-              backgroundSize: '120px 120px'
+              backgroundImage: `radial-gradient(circle at 25% 25%, hsl(var(--primary)) 0%, transparent 50%), 
+                               radial-gradient(circle at 75% 75%, hsl(var(--secondary)) 0%, transparent 50%)`,
+              backgroundSize: '100px 100px'
             }} />
           </div>
           
@@ -270,7 +270,7 @@ export default function OnPremBackup() {
         </section>
 
         {/* Platform Overview */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-light-custom)' }}>
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose NAKIVO Backup & Replication?</h2>
@@ -387,7 +387,7 @@ export default function OnPremBackup() {
         </section>
 
         {/* Universal Platform Support */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-bright)' }}>
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Universal Platform Support</h2>
@@ -506,7 +506,7 @@ export default function OnPremBackup() {
         </section>
 
         {/* Fast and Efficient Backup */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-orange-section)' }}>
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Fast and Efficient Backup</h2>
@@ -677,7 +677,7 @@ export default function OnPremBackup() {
         </section>
 
         {/* Performance Section */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-vibrant)' }}>
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Performance</h2>
@@ -726,7 +726,7 @@ export default function OnPremBackup() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-dark)' }}>
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Customers Say</h2>
@@ -811,8 +811,7 @@ export default function OnPremBackup() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
                   <Button 
                     size="lg" 
-                    className="px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 w-full sm:w-auto relative overflow-hidden group text-white"
-                    style={{ background: 'var(--gradient-orange-button)' }}
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 w-full sm:w-auto relative overflow-hidden group"
                     onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=NAKIVO%20Backup%20Free%20Trial', '_blank')}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
