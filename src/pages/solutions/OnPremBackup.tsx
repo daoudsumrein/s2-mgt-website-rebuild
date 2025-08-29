@@ -218,7 +218,7 @@ export default function OnPremBackup() {
         {/* Value Proposition Section */}
         <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-deep)' }}>
           {/* Background Pattern */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0" style={{
               background: 'linear-gradient(135deg, #194BFA 0%, #006AE8 100%)',
               backgroundSize: '100% 100%'
