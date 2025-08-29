@@ -807,23 +807,15 @@ export default function OnPremBackup() {
                   </p>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+                <div className="flex justify-center items-center pt-4">
                   <Button 
                     size="lg" 
                     className="px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 w-full sm:w-auto relative overflow-hidden group text-white"
                     style={{ background: 'var(--gradient-orange-button)' }}
-                    onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=NAKIVO%20Backup%20Free%20Trial', '_blank')}
+                    onClick={() => window.location.href = '/contact'}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
-                    <span className="relative">Start Free Trial</span>
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-border/50 text-foreground hover:bg-primary/10 hover:border-primary/50 px-8 py-4 text-lg font-semibold backdrop-blur-sm w-full sm:w-auto transition-all duration-300 hover:-translate-y-1"
-                    onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=NAKIVO%20Backup%20Demo%20Request', '_blank')}
-                  >
-                    Schedule Demo
+                    <span className="relative">Contact Us</span>
                   </Button>
                 </div>
               </div>
