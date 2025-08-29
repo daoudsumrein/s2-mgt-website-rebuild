@@ -8,20 +8,64 @@ const toAbsolute = (p) => path.resolve(__dirname, p)
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
-const routesToPrerender = fs
-  .readdirSync(toAbsolute('src/pages'))
-  .map((file) => {
-    const name = file.replace(/\.tsx$/, '').toLowerCase()
-    return name === 'index' ? `/` : `/${name}`
-  })
+// Routes extracted from App.tsx - update this list when adding new routes
+const routesToPrerender = [
+  '/',
+  '/about',
+  '/services', 
+  '/solutions',
+  '/contact',
+  '/vendors',
+  '/clients',
+  '/vendors/opentext',
+  '/vendors/tds',
+  '/vendors/appcure',
+  '/vendors/sangfor',
+  '/vendors/arrosoft',
+  '/vendors/nakivo',
+  '/solutions/opentext-carbonite-availability',
+  '/solutions/data-protection',
+  '/solutions/it-discovery',
+  '/solutions/secure-cloud',
+  '/solutions/app-modernization',
+  '/solutions/security',
+  '/solutions/email-archiving',
+  '/solutions/endpoint-backup',
+  '/solutions/saas-backup',
+  '/solutions/onprem-backup',
+  '/solutions/opentext-carbonite-migrate',
+  '/solutions/disaster-recovery-orchestration',
+  '/solutions/server-migration-orchestration',
+  '/solutions/endpoint-protection',
+  '/solutions/edr',
+  '/solutions/mdr',
+  '/solutions/security-awareness',
+  '/solutions/email-protection',
+  '/solutions/email-encryption',
+  '/solutions/ransomware-protection',
+  '/solutions/OpenText-Server-Backup',
+  '/solutions/servers-data-protection'
+]
+
+// Function to ensure directory exists
+const ensureDirectoryExists = (filePath) => {
+  const dir = path.dirname(filePath)
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
+}
 
 ;(async () => {
   for (const url of routesToPrerender) {
     const appHtml = render(url);
     const html = template.replace(`<!--app-html-->`, appHtml)
 
-    const filePath = `dist${url === '/' ? '/index' : url}.html`
-    fs.writeFileSync(toAbsolute(filePath), html)
-    console.log('pre-rendered:', filePath)
+    const filePath = toAbsolute(`dist${url === '/' ? '/index' : url}.html`)
+    
+    // Ensure the directory exists before writing
+    ensureDirectoryExists(filePath)
+    
+    fs.writeFileSync(filePath, html)
+    console.log('pre-rendered:', `dist${url === '/' ? '/index' : url}.html`)
   }
 })()
