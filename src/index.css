@@ -49,6 +49,16 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(204 69% 65%));
     --gradient-light: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
     --gradient-metallic-blue: linear-gradient(135deg, hsl(204 80% 70%), hsl(204 69% 50%), hsl(220 15% 35%));
+    
+    /* Custom gradient backgrounds */
+    --gradient-blue-deep: linear-gradient(135deg, hsl(210, 15%, 97%), hsl(210, 20%, 94%));
+    --gradient-dark: linear-gradient(135deg, hsl(210, 15%, 97%), hsl(210, 20%, 94%));
+    --gradient-blue-bright: linear-gradient(135deg, hsl(210, 25%, 96%), hsl(210, 30%, 92%));
+    --gradient-light-custom: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(210, 16%, 98%));
+    --gradient-orange-section: linear-gradient(135deg, hsl(210, 20%, 96%), hsl(210, 25%, 93%));
+    --gradient-blue-vibrant: linear-gradient(135deg, hsl(210, 30%, 95%), hsl(210, 35%, 91%));
+    --gradient-orange-button: linear-gradient(135deg, hsl(20, 97%, 59%), hsl(20, 95%, 42%));
+    
     --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
     --shadow-card: 0 2px 8px -2px hsl(220 4% 51% / 0.08);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
