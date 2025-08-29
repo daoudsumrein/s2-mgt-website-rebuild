@@ -146,6 +146,9 @@ export default function Footer() {
                 <Link to="/contact" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   Contact Us
                 </Link>
+                <a href="https://preview--pipeline-pro-portal.lovable.app" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                  Employee Login
+                </a>
                 
                 <div>
                   <div className="font-semibold text-sm text-foreground mb-2">Partners</div>
@@ -237,6 +240,11 @@ export default function Footer() {
                 <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Contact Us
                 </Link>
+              </li>
+              <li>
+                <a href="https://preview--pipeline-pro-portal.lovable.app" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Employee Login
+                </a>
               </li>
             </ul>
             
