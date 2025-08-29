@@ -232,35 +232,35 @@ export default function OnPremBackup() {
               <div className="backdrop-blur-xl bg-card/80 border border-border/50 rounded-3xl p-8 md:p-12 lg:p-16 shadow-lg hover:shadow-xl transition-all duration-500 group">
                 <div className="text-center space-y-8">
                   <div className="space-y-6">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                       The Complete Data Protection Platform Your Business Deserves
                     </h2>
-                    <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-500 mx-auto rounded-full" />
-                    <p className="text-xl md:text-2xl text-orange-300 font-semibold">
+                    <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+                    <p className="text-xl md:text-2xl text-primary font-semibold">
                       Protect everything. Recover instantly. Scale endlessly.
                     </p>
-                    <p className="text-base md:text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
+                    <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                       NAKIVO Backup & Replication v11.0.1 delivers enterprise-grade backup, replication, instant restore, and disaster recovery in one unified solution. Trusted by thousands of organizations worldwide, we make data protection simple, fast, and affordable.
                     </p>
                   </div>
                   
                   {/* Stats Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-12">
-                    <div className="backdrop-blur-sm bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                      <div className="text-2xl font-bold text-orange-300 mb-2">2X</div>
-                      <div className="text-sm font-medium text-white">Faster Backups</div>
+                    <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
+                      <div className="text-2xl font-bold text-primary mb-2">2X</div>
+                      <div className="text-sm font-medium text-foreground">Faster Backups</div>
                     </div>
-                    <div className="backdrop-blur-sm bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                      <div className="text-2xl font-bold text-orange-300 mb-2">49%</div>
-                      <div className="text-sm font-medium text-white">Lower Costs</div>
+                    <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
+                      <div className="text-2xl font-bold text-primary mb-2">49%</div>
+                      <div className="text-sm font-medium text-foreground">Lower Costs</div>
                     </div>
-                    <div className="backdrop-blur-sm bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                      <div className="text-2xl font-bold text-orange-300 mb-2">5 Min</div>
-                      <div className="text-sm font-medium text-white">Setup Time</div>
+                    <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
+                      <div className="text-2xl font-bold text-primary mb-2">5 Min</div>
+                      <div className="text-sm font-medium text-foreground">Setup Time</div>
                     </div>
-                    <div className="backdrop-blur-sm bg-white/10 border border-white/20 p-6 rounded-2xl hover:bg-white/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                      <div className="text-2xl font-bold text-orange-300 mb-2">4.8★</div>
-                      <div className="text-sm font-medium text-white">Star Rating</div>
+                    <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
+                      <div className="text-2xl font-bold text-primary mb-2">4.8★</div>
+                      <div className="text-sm font-medium text-foreground">Star Rating</div>
                     </div>
                   </div>
                 </div>
@@ -390,9 +390,9 @@ export default function OnPremBackup() {
         <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-bright)' }}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Universal Platform Support</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-500 mx-auto rounded-full mb-6" />
-              <p className="text-lg md:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Universal Platform Support</h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6" />
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 NAKIVO Backup & Replication can protect the following platforms across your entire infrastructure
               </p>
             </div>
@@ -506,12 +506,12 @@ export default function OnPremBackup() {
         </section>
 
         {/* Fast and Efficient Backup */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-orange)' }}>
+        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-orange-section)' }}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Fast and Efficient Backup</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-500 mx-auto rounded-full mb-6" />
-              <p className="text-lg md:text-xl text-orange-100 max-w-4xl mx-auto leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Fast and Efficient Backup</h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6" />
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 With NAKIVO Backup & Replication, you can reliably protect your virtual, cloud, physical, SaaS and hybrid environments.
               </p>
             </div>
@@ -680,9 +680,9 @@ export default function OnPremBackup() {
         <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-vibrant)' }}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Performance</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-500 mx-auto rounded-full mb-6" />
-              <p className="text-lg md:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Performance</h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6" />
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 Boost backup, replication, and recovery speeds by up to 2 times and reduce network load by as much as 50%.
               </p>
             </div>
@@ -729,8 +729,8 @@ export default function OnPremBackup() {
         <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-dark)' }}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What Our Customers Say</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-500 mx-auto rounded-full" />
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Customers Say</h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -811,7 +811,8 @@ export default function OnPremBackup() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
                   <Button 
                     size="lg" 
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 w-full sm:w-auto relative overflow-hidden group"
+                    className="px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 w-full sm:w-auto relative overflow-hidden group text-white"
+                    style={{ background: 'var(--gradient-orange-button)' }}
                     onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=NAKIVO%20Backup%20Free%20Trial', '_blank')}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
