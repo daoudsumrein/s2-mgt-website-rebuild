@@ -59,51 +59,62 @@ const deliverables = [{
 }];
 export default function DisasterRecovery() {
   // Scroll animation hooks for different sections
-  const heroAnimation = useScrollAnimation({ threshold: 0.3 });
-  const problemAnimation = useScrollAnimation({ threshold: 0.2 });
-  const benefitsAnimation = useScrollAnimation({ threshold: 0.2 });
-  const workflowAnimation = useScrollAnimation({ threshold: 0.2 });
-  const platformAnimation = useScrollAnimation({ threshold: 0.2 });
-  const featuresAnimation = useScrollAnimation({ threshold: 0.2 });
-  const distributorAnimation = useScrollAnimation({ threshold: 0.2 });
-
+  const heroAnimation = useScrollAnimation({
+    threshold: 0.3
+  });
+  const problemAnimation = useScrollAnimation({
+    threshold: 0.2
+  });
+  const benefitsAnimation = useScrollAnimation({
+    threshold: 0.2
+  });
+  const workflowAnimation = useScrollAnimation({
+    threshold: 0.2
+  });
+  const platformAnimation = useScrollAnimation({
+    threshold: 0.2
+  });
+  const featuresAnimation = useScrollAnimation({
+    threshold: 0.2
+  });
+  const distributorAnimation = useScrollAnimation({
+    threshold: 0.2
+  });
   return <div className="min-h-screen flex flex-col">
-      <SEOHead 
-        title="OpenText (Carbonite) Distributor MENA | UAE, KSA, Qatar"
-        description="S2 Management Official MENA distributor of OpenText Carbonite Availability. Real-time replication, automated failover & 24/7 protection."
-        keywords="Carbonite MENA, OpenText Availability, Carbonite distributor UAE, Carbonite distributor Saudi Arabia, Carbonite Qatar, Carbonite Oman, Carbonite Bahrain, Carbonite Kuwait, disaster recovery MENA, business continuity UAE, real-time replication, automated failover, enterprise data protection, RPO RTO solutions, OpenText partner Middle East"
-        canonicalUrl="https://s2mgt.com/solutions/opentext-carbonite-availability"
-      />
+      <SEOHead title="OpenText (Carbonite) Distributor MENA | UAE, KSA, Qatar" description="S2 Management Official MENA distributor of OpenText Carbonite Availability. Real-time replication, automated failover & 24/7 protection." keywords="Carbonite MENA, OpenText Availability, Carbonite distributor UAE, Carbonite distributor Saudi Arabia, Carbonite Qatar, Carbonite Oman, Carbonite Bahrain, Carbonite Kuwait, disaster recovery MENA, business continuity UAE, real-time replication, automated failover, enterprise data protection, RPO RTO solutions, OpenText partner Middle East" canonicalUrl="https://s2mgt.com/solutions/opentext-carbonite-availability" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Animated background particles */}
           <div className="fixed inset-0 pointer-events-none z-0">
-            <div 
-              className="absolute inset-0 opacity-30"
-              style={{
-                backgroundImage: `
+            <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: `
                   radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
                   radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
                   radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
                   radial-gradient(1px 1px at 130px 80px, rgba(74, 144, 226, 0.3), transparent)
                 `,
-                backgroundRepeat: 'repeat',
-                backgroundSize: '150px 150px',
-                animation: 'float 20s infinite linear'
-              }}
-            />
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+            animation: 'float 20s infinite linear'
+          }} />
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div 
-              ref={heroAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="max-w-7xl mx-auto"
-            >
+            <motion.div ref={heroAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={heroAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }} className="max-w-7xl mx-auto">
               {/* Hero Container */}
               <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
                 {/* Shine effect */}
@@ -113,22 +124,16 @@ export default function DisasterRecovery() {
                 <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
                   {/* Left Content */}
                   <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
-                    <Badge 
-                      variant="outline" 
-                      className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm"
-                    >
+                    <Badge variant="outline" className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm">
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
                       <span className="relative">Disaster Recovery Solution</span>
                     </Badge>
                     
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                      <span 
-                        className="bg-gradient-to-r from-blue-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block"
-                        style={{
-                          backgroundSize: '300% 300%',
-                          animation: 'gradientShift 4s ease-in-out infinite'
-                        }}
-                      >
+                      <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
+                      backgroundSize: '300% 300%',
+                      animation: 'gradientShift 4s ease-in-out infinite'
+                    }}>
                         OpenText Availability
                       </span>
                     </h1>
@@ -137,11 +142,7 @@ export default function DisasterRecovery() {
                       Ensure maximum uptime for your Windows and Linux servers with comprehensive DR solutions featuring continuous replication and automated failover.
                     </p>
                     
-                    <Button 
-                      size="lg" 
-                      className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto"
-                      onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Disaster%20Recovery%20Consultation', '_blank')}
-                    >
+                    <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Disaster%20Recovery%20Consultation', '_blank')}>
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
                       <span className="relative">Schedule Consultation</span>
                     </Button>
@@ -152,13 +153,7 @@ export default function DisasterRecovery() {
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
                       {/* Video Container */}
                       <div className="absolute inset-0">
-                        <iframe 
-                          src="https://player.vimeo.com/video/724980545?badge=0&autopause=0&player_id=0&app_id=58479&controls=1&title=0&byline=0&portrait=0" 
-                          className="w-full h-full border-none rounded-xl"
-                          allow="autoplay; fullscreen; picture-in-picture"
-                          allowFullScreen
-                          title="Disaster Recovery Solutions"
-                        />
+                        <iframe src="https://player.vimeo.com/video/724980545?badge=0&autopause=0&player_id=0&app_id=58479&controls=1&title=0&byline=0&portrait=0" className="w-full h-full border-none rounded-xl" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen title="Disaster Recovery Solutions" />
                       </div>
                       
                       {/* Overlay gradient */}
@@ -175,12 +170,19 @@ export default function DisasterRecovery() {
         {/* Problem & Solution Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              ref={problemAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={problemAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <motion.div ref={problemAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={problemAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                 The Cost of Downtime is Rising
               </h2>
@@ -190,12 +192,17 @@ export default function DisasterRecovery() {
               </p>
             </motion.div>
             
-            <motion.div 
-              className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={problemAnimation.isInView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            >
+            <motion.div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto" initial={{
+            opacity: 0
+          }} animate={problemAnimation.isInView ? {
+            opacity: 1
+          } : {
+            opacity: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: "easeOut"
+          }}>
               <Card className="relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 <CardContent className="p-8">
@@ -228,12 +235,19 @@ export default function DisasterRecovery() {
         {/* Key Benefits Section */}
         <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              ref={benefitsAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={benefitsAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <motion.div ref={benefitsAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={benefitsAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                 Why Choose OpenText Availability?
               </h2>
@@ -243,12 +257,20 @@ export default function DisasterRecovery() {
             </motion.div>
             
             {/* Stats Grid */}
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={benefitsAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            >
+            <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" initial={{
+            opacity: 0,
+            scale: 0.9
+          }} animate={benefitsAnimation.isInView ? {
+            opacity: 1,
+            scale: 1
+          } : {
+            opacity: 0,
+            scale: 0.9
+          }} transition={{
+            duration: 0.6,
+            delay: 0.2,
+            ease: "easeOut"
+          }}>
               <div className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
                 <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">99.9%</div>
                 <div className="text-sm text-slate-300 font-medium">Uptime Achieved</div>
@@ -268,12 +290,20 @@ export default function DisasterRecovery() {
             </motion.div>
             
             {/* Benefits Grid */}
-            <motion.div 
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={benefitsAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            >
+            <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" initial={{
+            opacity: 0,
+            y: 30
+          }} animate={benefitsAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 30
+          }} transition={{
+            duration: 0.8,
+            delay: 0.4,
+            ease: "easeOut"
+          }}>
               <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
@@ -352,12 +382,19 @@ export default function DisasterRecovery() {
         {/* How It Works Section */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="container mx-auto px-4">
-            <motion.div
-              ref={workflowAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={workflowAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <motion.div ref={workflowAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={workflowAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                 How It Works
               </h2>
@@ -366,12 +403,20 @@ export default function DisasterRecovery() {
               </p>
             </motion.div>
             
-            <motion.div 
-              className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={workflowAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            >
+            <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto" initial={{
+            opacity: 0,
+            scale: 0.9
+          }} animate={workflowAnimation.isInView ? {
+            opacity: 1,
+            scale: 1
+          } : {
+            opacity: 0,
+            scale: 0.9
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: "easeOut"
+          }}>
               <div className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/40">
                   1
@@ -428,11 +473,7 @@ export default function DisasterRecovery() {
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <div>
                 <div className="overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/75dbbe95-acbf-4db9-8719-50b578aa327c.png" 
-                    alt="OpenText Availability Failover Process - Shows primary system replicating to target system, then automatic failover when primary fails"
-                    className="w-full h-auto object-contain rounded-xl transition-transform duration-300 hover:scale-105"
-                  />
+                  <img src="/lovable-uploads/75dbbe95-acbf-4db9-8719-50b578aa327c.png" alt="OpenText Availability Failover Process - Shows primary system replicating to target system, then automatic failover when primary fails" className="w-full h-auto object-contain rounded-xl transition-transform duration-300 hover:scale-105" />
                 </div>
               </div>
               
@@ -498,12 +539,19 @@ export default function DisasterRecovery() {
         {/* Platform Support Section */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="container mx-auto px-4">
-            <motion.div
-              ref={platformAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={platformAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <motion.div ref={platformAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={platformAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                 Universal Platform Support
               </h2>
@@ -512,12 +560,20 @@ export default function DisasterRecovery() {
               </p>
             </motion.div>
             
-            <motion.div 
-              className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={platformAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            >
+            <motion.div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto" initial={{
+            opacity: 0,
+            y: 30
+          }} animate={platformAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 30
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: "easeOut"
+          }}>
               <Card className="bg-white/70 backdrop-blur-md border-l-4 border-blue-500 transition-all duration-300 hover:translate-x-1 hover:shadow-lg group">
                 <CardContent className="p-6">
                   <h4 className="font-bold text-lg mb-4 text-gray-800">Operating Systems</h4>
@@ -563,14 +619,23 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Advanced Features Section */}
-        <section className="py-16 text-foreground" style={{ backgroundColor: '#F4F5F8' }}>
+        <section className="py-16 text-foreground" style={{
+        backgroundColor: '#F4F5F8'
+      }}>
           <div className="container mx-auto px-4">
-            <motion.div
-              ref={featuresAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={featuresAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <motion.div ref={featuresAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={featuresAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                 Advanced Features
               </h2>
@@ -579,12 +644,20 @@ export default function DisasterRecovery() {
               </p>
             </motion.div>
             
-            <motion.div 
-              className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={featuresAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            >
+            <motion.div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto" initial={{
+            opacity: 0,
+            scale: 0.95
+          }} animate={featuresAnimation.isInView ? {
+            opacity: 1,
+            scale: 1
+          } : {
+            opacity: 0,
+            scale: 0.95
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: "easeOut"
+          }}>
               <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-6">Security & Compliance</h3>
@@ -717,37 +790,48 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Official Distributor Section */}
-        <section className="py-16 text-white relative overflow-hidden" style={{ backgroundColor: '#0B1328' }}>
+        <section className="py-16 text-white relative overflow-hidden" style={{
+        backgroundColor: '#0B1328'
+      }}>
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-30">
-            <div 
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='grid' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grid)'/%3E%3C/svg%3E")`,
-              }}
-            />
+            <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='grid' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grid)'/%3E%3C/svg%3E")`
+          }} />
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              ref={distributorAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={distributorAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center mb-12"
-            >
+            <motion.div ref={distributorAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={distributorAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }} className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Official Authorized Distributor</h2>
-              <p className="text-lg text-blue-100 max-w-4xl mx-auto">
-                We are the only legal official OpenText/Carbonite Availability distributor, ensuring authentic licensing and professional support
-              </p>
+              <p className="text-lg text-blue-100 max-w-4xl mx-auto">We are the official OpenText/Carbonite Availability distributor, ensuring authentic licensing and professional support</p>
             </motion.div>
             
-            <motion.div 
-              className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={distributorAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            >
+            <motion.div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto" initial={{
+            opacity: 0,
+            scale: 0.95
+          }} animate={distributorAnimation.isInView ? {
+            opacity: 1,
+            scale: 1
+          } : {
+            opacity: 0,
+            scale: 0.95
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: "easeOut"
+          }}>
               <div>
                 <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
                   <CardContent className="p-8">
@@ -809,11 +893,20 @@ export default function DisasterRecovery() {
               </div>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={distributorAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={distributorAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 30
+          }} transition={{
+            duration: 0.8,
+            delay: 0.6,
+            ease: "easeOut"
+          }}>
               <Card className="bg-amber-400/10 border-amber-400/30 backdrop-blur-lg mt-12 max-w-4xl mx-auto">
               <CardContent className="p-8 text-center">
                 <h3 className="text-amber-400 font-bold text-xl mb-4 flex items-center justify-center">
@@ -852,11 +945,7 @@ export default function DisasterRecovery() {
               Protect your critical systems with proven high availability and disaster recovery technology
             </p>
             <div className="flex justify-center">
-              <Button 
-                size="lg" 
-                className="bg-white text-gray-800 hover:bg-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg font-semibold px-8 py-4 text-lg"
-                onClick={() => window.location.href = '/contact'}
-              >
+              <Button size="lg" className="bg-white text-gray-800 hover:bg-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg font-semibold px-8 py-4 text-lg" onClick={() => window.location.href = '/contact'}>
                 Contact Us Today
               </Button>
             </div>
