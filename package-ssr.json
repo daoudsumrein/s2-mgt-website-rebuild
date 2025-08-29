@@ -1,0 +1,12 @@
+{
+  "name": "hostinger-ssr-deploy",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build-ssr.js && node prerender.js",
+    "deploy": "npm run build"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
