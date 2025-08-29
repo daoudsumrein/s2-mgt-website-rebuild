@@ -525,11 +525,12 @@ export default function ServerMigration() {
               Experience seamless migrations with near-zero downtime and minimal risk
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] hover:shadow-lg hover:shadow-[#024cbb]/25 hover:-translate-y-1 transition-all duration-300">
-                Start Your Migration
-              </Button>
-              <Button size="lg" variant="outline" className="border-[#024cbb] text-[#024cbb] hover:bg-[#024cbb] hover:text-white hover:-translate-y-1 transition-all duration-300">
-                Request Demo
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] hover:shadow-lg hover:shadow-[#024cbb]/25 hover:-translate-y-1 transition-all duration-300"
+                onClick={() => window.location.href = '/contact'}
+              >
+                Contact Us
               </Button>
             </div>
           </div>
