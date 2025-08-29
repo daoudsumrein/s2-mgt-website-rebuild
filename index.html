@@ -211,45 +211,6 @@
 
   <body>
     <div id="root"><!--app-html--></div>
-    
-    <!-- SEO content injection for crawlers -->
-    <script>
-      // Check if this is a crawler/bot
-      var userAgent = navigator.userAgent.toLowerCase();
-      var isBot = /bot|crawler|spider|crawling/i.test(userAgent) || 
-                 /googlebot|bingbot|facebookexternalhit|twitterbot|linkedinbot/i.test(userAgent);
-      
-      if (isBot) {
-        var path = window.location.pathname;
-        var seoContent = '';
-        var pageTitle = '';
-        var pageDescription = '';
-        
-        // Define SEO content for different pages
-        if (path === '/vendors/opentext') {
-          pageTitle = 'OpenText Official Distributor MENA | S2 Management Solutions';
-          pageDescription = 'S2 Management - Official OpenText distributor in MENA. Carbonite Availability, Migrate, Cloud Backup, Email Archiving & Secure Cloud solutions.';
-          seoContent = '<h1>OpenText Official Distributor MENA | S2 Management Solutions</h1><p>S2 Management is the official OpenText distributor in MENA region, providing Carbonite Availability, Carbonite Migrate, Cloud Backup, Email Archiving and Secure Cloud solutions for businesses in UAE, Saudi Arabia, Qatar, Oman, Bahrain, and Kuwait.</p>';
-        } else if (path === '/solutions/opentext-carbonite-availability') {
-          pageTitle = 'OpenText Carbonite Availability - Official MENA Distributor';
-          pageDescription = 'S2 Management Official MENA distributor of OpenText Carbonite Availability. Real-time replication, automated failover & 24/7 protection.';
-          seoContent = '<h1>OpenText Carbonite Availability - Official MENA Distributor</h1><p>S2 Management is the official distributor of OpenText Carbonite Availability in MENA region. Our disaster recovery solution provides real-time replication, automated failover, and 24/7 protection for businesses across UAE, Saudi Arabia, Qatar, Oman, Bahrain, and Kuwait.</p>';
-        }
-        
-        // Update page title and meta description
-        if (pageTitle) {
-          document.title = pageTitle;
-          var metaDesc = document.querySelector('meta[name="description"]');
-          if (metaDesc) metaDesc.content = pageDescription;
-        }
-        
-        // Inject SEO content for crawlers
-        if (seoContent) {
-          document.getElementById('root').innerHTML = seoContent;
-        }
-      }
-    </script>
-    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
