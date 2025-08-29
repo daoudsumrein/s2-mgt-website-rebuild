@@ -447,7 +447,7 @@ export default function ServerMigration() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Official OpenText Distributor - Middle East
               </h2>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">We are the authorized OpenText distributor in the Middle East, ensuring authentic licensing and professional support</p>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">We are the preferred Official OpenText distributor in the Middle East, ensuring authentic licensing and professional support</p>
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
