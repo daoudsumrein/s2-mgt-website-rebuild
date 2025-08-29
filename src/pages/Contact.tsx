@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -10,7 +10,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
 import { 
   Mail, 
   Phone, 
@@ -21,10 +20,30 @@ import {
   Clock
 } from "lucide-react";
 
+// Client-side only ReCAPTCHA component
+const ClientOnlyReCAPTCHA = ({ recaptchaRef, sitekey, onChange, onExpired, isMounted }: any) => {
+  if (!isMounted) {
+    return <div className="h-20 flex items-center justify-center text-muted-foreground">Loading captcha...</div>;
+  }
+
+  const ReCAPTCHA = require('react-google-recaptcha').default;
+  
+  return (
+    <ReCAPTCHA
+      ref={recaptchaRef}
+      sitekey={sitekey}
+      onChange={onChange}
+      onExpired={onExpired}
+      theme="light"
+    />
+  );
+};
+
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [isMounted, setIsMounted] = useState(false);
+  const recaptchaRef = useRef<any>(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -38,6 +57,10 @@ export default function Contact() {
   
   // Your reCAPTCHA site key (public key)
   const RECAPTCHA_SITE_KEY = "6LfBwa0rAAAAAOmCXCu2AQ2nMxM_Fog1mM5nqNYV";
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -287,12 +310,12 @@ export default function Contact() {
                     
                     {/* Google reCAPTCHA */}
                     <div className="flex justify-center">
-                      <ReCAPTCHA
-                        ref={recaptchaRef}
+                      <ClientOnlyReCAPTCHA
+                        recaptchaRef={recaptchaRef}
                         sitekey={RECAPTCHA_SITE_KEY}
-                        onChange={(value) => setRecaptchaValue(value)}
+                        onChange={(value: string) => setRecaptchaValue(value)}
                         onExpired={() => setRecaptchaValue(null)}
-                        theme="light"
+                        isMounted={isMounted}
                       />
                     </div>
                     
