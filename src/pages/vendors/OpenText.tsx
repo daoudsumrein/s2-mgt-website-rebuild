@@ -115,8 +115,8 @@ export default function OpenTextPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 >
-                  OpenText Data Protection Solutions
-                  <span className="block text-blue-200 text-sm sm:text-base lg:text-lg mt-2"> Official Distributor for the Middle East & North Africa</span>
+                  Middle East and North Africa OpenText Official Distributor
+                  <span className="block text-blue-200 text-sm sm:text-base lg:text-lg mt-2">Saudi Arabia, United Arab Emirates, Kuwait, Qatar, Bahrain, Oman</span>
                 </motion.h1>
                 
                 <motion.p 
