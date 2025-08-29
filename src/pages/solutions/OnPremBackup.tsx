@@ -220,8 +220,7 @@ export default function OnPremBackup() {
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%), 
-                               radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0%, transparent 50%)`,
+              backgroundImage: 'linear-gradient(135deg, #194BFA 0%, #006AE8 100%)',
               backgroundSize: '120px 120px'
             }} />
           </div>
