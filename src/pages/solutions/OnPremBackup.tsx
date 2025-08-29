@@ -276,152 +276,109 @@ export default function OnPremBackup() {
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-              {/* ALL-IN-ONE SOLUTION Card */}
-              <Card className="backdrop-blur-xl bg-gradient-to-br from-card/90 to-card/70 border-2 border-primary/20 p-8 hover:shadow-2xl hover:shadow-primary/20 hover:scale-[1.02] hover:border-primary/40 transition-all duration-700 group relative overflow-hidden animate-fade-in">
-                {/* Animated background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/5 to-primary/20 rounded-xl blur opacity-0 group-hover:opacity-70 transition duration-500" />
-                
-                <CardHeader className="pb-6 relative z-10">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                      <Settings className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <div className="h-8 w-1 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
-                  </div>
-                  <CardTitle className="text-primary text-xl mb-2 font-bold group-hover:text-primary/90 transition-colors">ALL-IN-ONE SOLUTION</CardTitle>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-primary text-lg mb-4 font-semibold">ALL-IN-ONE SOLUTION</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 relative z-10">
-                  {[
-                    { icon: CheckCircle, text: "Backup" },
-                    { icon: CheckCircle, text: "Replication" },
-                    { icon: CheckCircle, text: "Instant Restore" },
-                    { icon: CheckCircle, text: "Ransomware Protection" },
-                    { icon: CheckCircle, text: "IT Monitoring" },
-                    { icon: CheckCircle, text: "Site Recovery" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-all duration-300 hover:translate-x-1">
-                      <item.icon className="h-4 w-4 text-primary mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
-                      <span className="font-medium">{item.text}</span>
-                    </div>
-                  ))}
+                <CardContent className="space-y-3">
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Backup</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Replication</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Instant Restore</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Ransomware Protection</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>IT Monitoring</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Site Recovery</span>
+                  </div>
                 </CardContent>
               </Card>
               
-              {/* MULTI-PLATFORM SUPPORT Card */}
-              <Card className="backdrop-blur-xl bg-gradient-to-br from-card/90 to-card/70 border-2 border-secondary/20 p-8 hover:shadow-2xl hover:shadow-secondary/20 hover:scale-[1.02] hover:border-secondary/40 transition-all duration-700 group relative overflow-hidden animate-fade-in [animation-delay:100ms]">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-secondary/20 via-secondary/5 to-secondary/20 rounded-xl blur opacity-0 group-hover:opacity-70 transition duration-500" />
-                
-                <CardHeader className="pb-6 relative z-10">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-3 rounded-xl bg-secondary/10 group-hover:bg-secondary/20 transition-colors duration-300">
-                      <Cloud className="h-6 w-6 text-secondary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <div className="h-8 w-1 bg-gradient-to-b from-secondary to-secondary/50 rounded-full" />
-                  </div>
-                  <CardTitle className="text-secondary text-xl mb-2 font-bold group-hover:text-secondary/90 transition-colors">MULTI-PLATFORM SUPPORT</CardTitle>
+              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-primary text-lg mb-4 font-semibold">MULTI-PLATFORM SUPPORT</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 relative z-10">
-                  {[
-                    "VMware vSphere",
-                    "Microsoft Hyper-V", 
-                    "Nutanix AHV",
-                    "Proxmox VE",
-                    "Amazon EC2",
-                    "Windows, Linux",
-                    "NAS, Microsoft 365",
-                    "Oracle Database (via RMAN)"
-                  ].map((platform, index) => (
-                    <div key={index} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-all duration-300 hover:translate-x-1">
-                      <CheckCircle className="h-4 w-4 text-secondary mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
-                      <span className="font-medium">{platform}</span>
-                    </div>
-                  ))}
+                <CardContent className="space-y-3">
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>VMware vSphere</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Microsoft Hyper-V</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Nutanix AHV</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Proxmox VE</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Amazon EC2</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Windows, Linux</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>NAS, Microsoft 365</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span>Oracle Database (via RMAN)</span>
+                  </div>
                 </CardContent>
               </Card>
               
-              {/* FLEXIBLE RECOVERY Card */}
-              <Card className="backdrop-blur-xl bg-gradient-to-br from-card/90 to-card/70 border-2 border-primary/20 p-8 hover:shadow-2xl hover:shadow-primary/20 hover:scale-[1.02] hover:border-primary/40 transition-all duration-700 group relative overflow-hidden animate-fade-in [animation-delay:200ms]">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/5 to-primary/20 rounded-xl blur opacity-0 group-hover:opacity-70 transition duration-500" />
-                
-                <CardHeader className="pb-6 relative z-10">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                      <RotateCcw className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <div className="h-8 w-1 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
-                  </div>
-                  <CardTitle className="text-primary text-xl mb-2 font-bold group-hover:text-primary/90 transition-colors">FLEXIBLE RECOVERY</CardTitle>
+              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-primary text-lg mb-4 font-semibold">FLEXIBLE RECOVERY</CardTitle>
                 </CardHeader>
-                <CardContent className="relative z-10">
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed font-medium">
+                <CardContent>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
                     Instantly restore VMs, physical machines, files, folders, and application objects from backups to original or custom locations.
                   </p>
-                  <div className="mt-4 p-3 rounded-lg bg-primary/5 border border-primary/10 group-hover:bg-primary/10 transition-colors duration-300">
-                    <div className="flex items-center text-primary text-sm font-semibold">
-                      <Target className="h-4 w-4 mr-2" />
-                      <span>Precision Recovery</span>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
               
-              {/* VERSATILE DEPLOYMENT Card */}
-              <Card className="backdrop-blur-xl bg-gradient-to-br from-card/90 to-card/70 border-2 border-secondary/20 p-8 hover:shadow-2xl hover:shadow-secondary/20 hover:scale-[1.02] hover:border-secondary/40 transition-all duration-700 group relative overflow-hidden animate-fade-in [animation-delay:300ms]">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-secondary/20 via-secondary/5 to-secondary/20 rounded-xl blur opacity-0 group-hover:opacity-70 transition duration-500" />
-                
-                <CardHeader className="pb-6 relative z-10">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-3 rounded-xl bg-secondary/10 group-hover:bg-secondary/20 transition-colors duration-300">
-                      <HardDrive className="h-6 w-6 text-secondary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <div className="h-8 w-1 bg-gradient-to-b from-secondary to-secondary/50 rounded-full" />
-                  </div>
-                  <CardTitle className="text-secondary text-xl mb-2 font-bold group-hover:text-secondary/90 transition-colors">VERSATILE DEPLOYMENT</CardTitle>
+              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-primary text-lg mb-4 font-semibold">VERSATILE DEPLOYMENT</CardTitle>
                 </CardHeader>
-                <CardContent className="relative z-10">
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed font-medium">
+                <CardContent>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
                     Install on NAS devices for a complete backup appliance or deploy on Windows/Linux or as a VMware/Nutanix VA or AMI in Amazon EC2.
                   </p>
-                  <div className="mt-4 p-3 rounded-lg bg-secondary/5 border border-secondary/10 group-hover:bg-secondary/10 transition-colors duration-300">
-                    <div className="flex items-center text-secondary text-sm font-semibold">
-                      <Server className="h-4 w-4 mr-2" />
-                      <span>Multiple Options</span>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
               
-              {/* LIMITLESS SCALABILITY Card */}
-              <Card className="backdrop-blur-xl bg-gradient-to-br from-card/90 to-card/70 border-2 border-primary/20 p-8 hover:shadow-2xl hover:shadow-primary/20 hover:scale-[1.02] hover:border-primary/40 transition-all duration-700 group relative overflow-hidden animate-fade-in [animation-delay:400ms]">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/5 to-primary/20 rounded-xl blur opacity-0 group-hover:opacity-70 transition duration-500" />
-                
-                <CardHeader className="pb-6 relative z-10">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                      <Zap className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <div className="h-8 w-1 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
-                  </div>
-                  <CardTitle className="text-primary text-xl mb-2 font-bold group-hover:text-primary/90 transition-colors">LIMITLESS SCALABILITY</CardTitle>
+              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-primary text-lg mb-4 font-semibold">LIMITLESS SCALABILITY</CardTitle>
                 </CardHeader>
-                <CardContent className="relative z-10">
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed font-medium">
+                <CardContent>
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
                     Supports single or multi-tenant needs. Efficiently scales for ROBO and edge environments. One instance protects over 8,000 VMs across 300+ locations for our biggest clients.
                   </p>
-                  <div className="mt-4 p-3 rounded-lg bg-primary/5 border border-primary/10 group-hover:bg-primary/10 transition-colors duration-300">
-                    <div className="flex items-center text-primary text-sm font-semibold">
-                      <Monitor className="h-4 w-4 mr-2" />
-                      <span>8,000+ VMs Supported</span>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             </div>
