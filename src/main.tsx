@@ -10,9 +10,5 @@ const app = (
   </BrowserRouter>
 );
 
-// Use hydration for SSR in production
-if (import.meta.env.PROD) {
-  hydrateRoot(root, app);
-} else {
-  createRoot(root).render(app);
-}
+// Use createRoot for both dev and production
+createRoot(root).render(app);
