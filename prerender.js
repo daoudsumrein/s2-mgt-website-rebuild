@@ -12,7 +12,7 @@ const { render } = await import('./dist/server/entry-server.js')
 // IMPORTANT: When adding new pages/blogs/vendors/solutions, 
 // make sure to add them here to ensure they are pre-rendered
 const routesToPrerender = [
-  // Main pages
+  // Main pages - matches App.tsx Routes exactly
   '/',
   '/about',
   '/services', 
@@ -21,7 +21,7 @@ const routesToPrerender = [
   '/vendors',
   '/clients',
   
-  // Vendor pages
+  // Vendor pages - matches App.tsx /vendors/* Routes exactly
   '/vendors/opentext',
   '/vendors/tds',
   '/vendors/appcure',
@@ -29,7 +29,7 @@ const routesToPrerender = [
   '/vendors/arrosoft',
   '/vendors/nakivo',
   
-  // Solution pages
+  // Solution pages - matches App.tsx /solutions/* Routes exactly
   '/solutions/opentext-carbonite-availability',
   '/solutions/data-protection',
   '/solutions/it-discovery',
