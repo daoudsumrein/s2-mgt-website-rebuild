@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, lazy, Suspense } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -20,11 +20,13 @@ import {
   Clock
 } from "lucide-react";
 
+// Lazy load ReCAPTCHA to avoid SSR issues
+const LazyReCAPTCHA = lazy(() => import('react-google-recaptcha'));
+
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [isMounted, setIsMounted] = useState(false);
-  const [ReCAPTCHA, setReCAPTCHA] = useState<any>(null);
   const recaptchaRef = useRef<any>(null);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -42,11 +44,6 @@ export default function Contact() {
 
   useEffect(() => {
     setIsMounted(true);
-    
-    // Dynamically import ReCAPTCHA only on client side
-    import('react-google-recaptcha').then((module) => {
-      setReCAPTCHA(() => module.default);
-    });
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -297,14 +294,16 @@ export default function Contact() {
                     
                     {/* Google reCAPTCHA */}
                     <div className="flex justify-center">
-                      {isMounted && ReCAPTCHA ? (
-                        <ReCAPTCHA
-                          ref={recaptchaRef}
-                          sitekey={RECAPTCHA_SITE_KEY}
-                          onChange={(value: string) => setRecaptchaValue(value)}
-                          onExpired={() => setRecaptchaValue(null)}
-                          theme="light"
-                        />
+                      {isMounted ? (
+                        <Suspense fallback={<div className="h-20 flex items-center justify-center text-muted-foreground">Loading captcha...</div>}>
+                          <LazyReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey={RECAPTCHA_SITE_KEY}
+                            onChange={(value: string) => setRecaptchaValue(value)}
+                            onExpired={() => setRecaptchaValue(null)}
+                            theme="light"
+                          />
+                        </Suspense>
                       ) : (
                         <div className="h-20 flex items-center justify-center text-muted-foreground">
                           Loading captcha...
