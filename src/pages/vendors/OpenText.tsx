@@ -115,7 +115,7 @@ export default function OpenTextPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 >
-                  Middle East & North Africa OpenText Official Distributor
+                  OpenText Official Distributor
                 </motion.h1>
                 
                 <motion.p 
