@@ -140,7 +140,7 @@ export default function ServerMigrationOrchestration() {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }} />
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div ref={useScrollAnimation().ref} className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <motion.div {...useScrollAnimation()} className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="p-8">
                 <motion.div className="text-5xl lg:text-6xl font-black mb-3 bg-gradient-to-b from-white to-blue-100 bg-clip-text text-transparent" initial={{
                 scale: 0.5,
@@ -193,13 +193,13 @@ export default function ServerMigrationOrchestration() {
         {/* Problem Introduction */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <motion.div ref={useScrollAnimation().ref}>
+            <motion.div {...useScrollAnimation()}>
               <h2 className="text-3xl lg:text-5xl font-bold text-center mb-6 text-foreground">
                 The Reality of Data Center Migrations
               </h2>
             </motion.div>
             
-            <motion.div ref={useScrollAnimation().ref} className="max-w-4xl mx-auto">
+            <motion.div {...useScrollAnimation()} className="max-w-4xl mx-auto">
               <Card className="p-8 lg:p-12 border-l-4 border-l-orange-500 bg-card shadow-lg">
                 <div className="space-y-6">
                   <p className="text-lg text-muted-foreground leading-relaxed">
@@ -224,7 +224,7 @@ export default function ServerMigrationOrchestration() {
         {/* Three Critical Challenges */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div ref={useScrollAnimation().ref} className="text-center mb-16">
+            <motion.div {...useScrollAnimation()} className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-foreground">
                 Three Critical Challenges Organizations Face
               </h2>
@@ -280,7 +280,7 @@ export default function ServerMigrationOrchestration() {
         {/* Solution Overview */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <motion.div ref={useScrollAnimation().ref} className="text-center mb-16">
+            <motion.div {...useScrollAnimation()} className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-foreground">
                 The TransitionManager Solution
               </h2>
@@ -341,7 +341,7 @@ export default function ServerMigrationOrchestration() {
         {/* Three-Phase Process */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div ref={useScrollAnimation().ref} className="text-center mb-16">
+            <motion.div {...useScrollAnimation()} className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-foreground">
                 Proven Three-Phase Migration Process
               </h2>
@@ -415,7 +415,7 @@ export default function ServerMigrationOrchestration() {
         {/* Platform Capabilities */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <motion.div ref={useScrollAnimation().ref} className="text-center mb-16">
+            <motion.div {...useScrollAnimation()} className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-foreground">
                 Complete Platform Capabilities
               </h2>
@@ -478,12 +478,12 @@ export default function ServerMigrationOrchestration() {
         <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent bg-[length:20px_20px] bg-[linear-gradient(45deg,transparent_49%,rgba(0,181,241,0.1)_50%,transparent_51%)]" />
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div ref={useScrollAnimation().ref} className="text-center">
+            <motion.div {...useScrollAnimation()} className="text-center">
               <h2 className="text-3xl lg:text-5xl font-bold mb-12 text-white">
                 Proven Results That Transform Your Business
               </h2>
               
-              <motion.div ref={useScrollAnimation().ref} className="bg-primary/10 p-12 lg:p-16 rounded-3xl border border-primary/20 backdrop-blur-sm max-w-4xl mx-auto mb-12">
+              <motion.div {...useScrollAnimation()} className="bg-primary/10 p-12 lg:p-16 rounded-3xl border border-primary/20 backdrop-blur-sm max-w-4xl mx-auto mb-12">
                 <motion.div className="text-6xl lg:text-8xl font-black text-primary mb-4" initial={{
                 scale: 0.5,
                 opacity: 0
@@ -503,7 +503,7 @@ export default function ServerMigrationOrchestration() {
                 </p>
               </motion.div>
               
-              <motion.div ref={useScrollAnimation().ref} className="bg-white/10 p-8 lg:p-12 rounded-2xl max-w-4xl mx-auto backdrop-blur-sm">
+              <motion.div {...useScrollAnimation()} className="bg-white/10 p-8 lg:p-12 rounded-2xl max-w-4xl mx-auto backdrop-blur-sm">
                 <h3 className="text-green-400 text-2xl lg:text-3xl font-semibold mb-6">
                   Complete Command & Control
                 </h3>
@@ -518,7 +518,7 @@ export default function ServerMigrationOrchestration() {
         {/* Call to Action */}
         <section className="py-8 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div ref={useScrollAnimation().ref}>
+            <motion.div {...useScrollAnimation()}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-foreground">
                 Ready to Transform Your Data Center Migration?
               </h2>

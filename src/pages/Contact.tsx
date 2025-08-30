@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, lazy, Suspense } from "react";
+import { useState, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 import { 
   Mail, 
   Phone, 
@@ -20,14 +21,10 @@ import {
   Clock
 } from "lucide-react";
 
-// Lazy load ReCAPTCHA to avoid SSR issues
-const LazyReCAPTCHA = lazy(() => import('react-google-recaptcha'));
-
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
-  const recaptchaRef = useRef<any>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -41,10 +38,6 @@ export default function Contact() {
   
   // Your reCAPTCHA site key (public key)
   const RECAPTCHA_SITE_KEY = "6LfBwa0rAAAAAOmCXCu2AQ2nMxM_Fog1mM5nqNYV";
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -294,21 +287,13 @@ export default function Contact() {
                     
                     {/* Google reCAPTCHA */}
                     <div className="flex justify-center">
-                      {isMounted ? (
-                        <Suspense fallback={<div className="h-20 flex items-center justify-center text-muted-foreground">Loading captcha...</div>}>
-                          <LazyReCAPTCHA
-                            ref={recaptchaRef}
-                            sitekey={RECAPTCHA_SITE_KEY}
-                            onChange={(value: string) => setRecaptchaValue(value)}
-                            onExpired={() => setRecaptchaValue(null)}
-                            theme="light"
-                          />
-                        </Suspense>
-                      ) : (
-                        <div className="h-20 flex items-center justify-center text-muted-foreground">
-                          Loading captcha...
-                        </div>
-                      )}
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={RECAPTCHA_SITE_KEY}
+                        onChange={(value) => setRecaptchaValue(value)}
+                        onExpired={() => setRecaptchaValue(null)}
+                        theme="light"
+                      />
                     </div>
                     
                     <Button 

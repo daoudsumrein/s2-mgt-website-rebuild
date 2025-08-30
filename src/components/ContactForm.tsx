@@ -1,13 +1,11 @@
-import { useState, useRef, useEffect, lazy, Suspense } from 'react';
+import { useState, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
-
-// Lazy load ReCAPTCHA to avoid SSR issues
-const LazyReCAPTCHA = lazy(() => import('react-google-recaptcha'));
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -19,13 +17,8 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
-  const recaptchaRef = useRef<any>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const { toast } = useToast();
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const RECAPTCHA_SITE_KEY = "6LfBwa0rAAAAAOmCXCu2AQ2nMxM_Fog1mM5nqNYV";
 
@@ -215,20 +208,12 @@ export default function ContactForm() {
           
           {/* reCAPTCHA */}
           <div className="flex justify-center">
-            {isMounted ? (
-              <Suspense fallback={<div className="h-20 flex items-center justify-center text-muted-foreground">Loading captcha...</div>}>
-                <LazyReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={RECAPTCHA_SITE_KEY}
-                  onChange={(value) => setRecaptchaValue(value)}
-                  theme="light"
-                />
-              </Suspense>
-            ) : (
-              <div className="h-20 flex items-center justify-center text-muted-foreground">
-                Loading captcha...
-              </div>
-            )}
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={RECAPTCHA_SITE_KEY}
+              onChange={(value) => setRecaptchaValue(value)}
+              theme="light"
+            />
           </div>
           
           <Button 
