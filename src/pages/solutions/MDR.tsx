@@ -121,22 +121,23 @@ export default function MDR() {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
+              <div className="grid lg:grid-cols-2 gap-12 items-stretch">
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
+                  className="h-full"
                 >
-                  <Card className="border-l-4 border-l-blue-800 relative group overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-blue-800/20">
+                  <Card className="border-l-4 border-l-blue-800 relative group overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-blue-800/20 h-full flex flex-col">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-800/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-700 transform skew-x-12"></div>
                     <CardHeader className="relative z-10">
                       <CardTitle className="text-2xl text-blue-800">MSP Security Challenges</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4 relative z-10">
+                    <CardContent className="space-y-4 relative z-10 flex-1 flex flex-col">
                       <p className="text-muted-foreground">MSPs face numerous challenges when it comes to managing cybersecurity for their clients:</p>
-                      <ul className="space-y-2 text-muted-foreground">
+                      <ul className="space-y-2 text-muted-foreground flex-1">
                         {[
                           "Limited resources and complex security tools",
                           "Overwhelming volume of sophisticated threats", 
@@ -166,16 +167,17 @@ export default function MDR() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
+                  className="h-full"
                 >
-                  <Card className="border-l-4 border-l-blue-600 relative group overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-blue-600/20">
+                  <Card className="border-l-4 border-l-blue-600 relative group overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-blue-600/20 h-full flex flex-col">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-700 transform skew-x-12"></div>
                     <CardHeader className="relative z-10">
                       <CardTitle className="text-2xl text-blue-600">OpenText Core MDR Solution</CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4 relative z-10">
+                    <CardContent className="space-y-4 relative z-10 flex-1 flex flex-col">
                       <p className="text-muted-foreground">Our comprehensive platform addresses these challenges by combining:</p>
-                      <ul className="space-y-2 text-muted-foreground">
+                      <ul className="space-y-2 text-muted-foreground flex-1">
                         {[
                           "Advanced threat detection with 24/7/365 monitoring",
                           "Expert SOC analysts and threat hunters",
