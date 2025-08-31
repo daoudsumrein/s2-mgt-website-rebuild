@@ -486,7 +486,7 @@ export default function MDR() {
                 Top 5 Reasons MSPs Choose OpenText Core MDR
               </motion.h2>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
                 {[
                   {
                     number: "1",
@@ -521,29 +521,89 @@ export default function MDR() {
                 ].map((reason, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 60, scale: 0.8 }}
+                    className="relative mt-8"
+                    initial={{ opacity: 0, y: 80, scale: 0.7 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.3 + index * 0.15 }}
-                    whileHover={{ y: -20, scale: 1.05 }}
+                    transition={{ duration: 1.0, delay: 0.3 + index * 0.15, type: "spring", bounce: 0.4 }}
+                    whileHover={{ y: -25, scale: 1.08, rotateY: 5 }}
                   >
-                    <Card className="relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-500 hover:shadow-blue-500/25">
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
+                    <Card className="relative group overflow-visible border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-700 hover:shadow-blue-500/30 pt-8">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:left-full transition-all duration-1200 transform skew-x-12"></div>
+                      
+                      {/* Enhanced Number Badge */}
                       <motion.div 
-                        className={`absolute -top-4 left-6 w-12 h-12 bg-gradient-to-br ${reason.color} text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg`}
+                        className={`absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br ${reason.color} text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl border-4 border-white z-10`}
+                        initial={{ scale: 0, rotate: -180 }}
+                        whileInView={{ scale: 1, rotate: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.5 + index * 0.1, type: "spring", bounce: 0.6 }}
                         whileHover={{ 
-                          rotate: [0, -15, 15, -15, 0],
-                          scale: 1.2
+                          rotate: [0, -20, 20, -20, 0],
+                          scale: 1.3,
+                          boxShadow: "0 20px 40px rgba(0,0,0,0.3)"
                         }}
-                        transition={{ duration: 0.6 }}
+                        style={{
+                          background: `linear-gradient(135deg, ${reason.color.includes('blue') ? '#3b82f6, #1d4ed8' : 
+                                                                  reason.color.includes('green') ? '#10b981, #059669' :
+                                                                  reason.color.includes('purple') ? '#8b5cf6, #7c3aed' :
+                                                                  reason.color.includes('orange') ? '#f97316, #ea580c' :
+                                                                  '#ef4444, #dc2626'})`
+                        }}
                       >
-                        {reason.number}
+                        <motion.span
+                          whileHover={{ scale: 1.2 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {reason.number}
+                        </motion.span>
                       </motion.div>
-                      <CardContent className="pt-12 p-6 relative z-10">
-                        <h3 className="text-lg font-semibold mb-3 group-hover:text-blue-700 transition-colors duration-300">{reason.title}</h3>
-                        <p className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-300">{reason.description}</p>
+                      
+                      <CardContent className="pt-12 p-8 relative z-10">
+                        <motion.h3 
+                          className="text-xl font-semibold mb-4 group-hover:text-blue-700 transition-colors duration-500 text-center"
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                        >
+                          {reason.title}
+                        </motion.h3>
+                        <motion.p 
+                          className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-500 leading-relaxed text-center"
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                        >
+                          {reason.description}
+                        </motion.p>
                       </CardContent>
+                      
+                      {/* Floating particles effect */}
+                      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                        {[...Array(3)].map((_, i) => (
+                          <motion.div
+                            key={i}
+                            className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-0 group-hover:opacity-30"
+                            style={{
+                              left: `${20 + i * 30}%`,
+                              top: `${30 + i * 20}%`,
+                            }}
+                            animate={{
+                              y: [-10, -30, -10],
+                              opacity: [0, 0.3, 0],
+                            }}
+                            transition={{
+                              duration: 2,
+                              delay: i * 0.5,
+                              repeat: Infinity,
+                              repeatType: "loop",
+                            }}
+                          />
+                        ))}
+                      </div>
                     </Card>
                   </motion.div>
                 ))}
