@@ -247,8 +247,8 @@ export default function EmailArchiving() {
               #product-content {
                 --accent: #E65F1E;
                 --bg: #fafbfc;
-                --card: rgba(30, 41, 59, 0.8);
-                --border: rgba(230, 95, 30, 0.25);
+                --card: rgba(30, 41, 59, 0.9);
+                --border: rgba(230, 95, 30, 0.3);
                 --text: #1a1a1a;
                 --text-muted: #6b7280;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
