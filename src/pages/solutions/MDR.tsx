@@ -534,7 +534,7 @@ export default function MDR() {
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
                       <motion.div 
-                        className={`absolute -top-2 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br ${reason.color} text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-20`}
+                        className={`absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br ${reason.color} text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-30`}
                         whileHover={{ 
                           rotate: [0, -15, 15, -15, 0],
                           scale: 1.2
@@ -543,7 +543,7 @@ export default function MDR() {
                       >
                         {reason.number}
                       </motion.div>
-                      <CardContent className="pt-16 p-6 relative z-10 h-full flex flex-col">
+                      <CardContent className="pt-10 p-6 relative z-10 h-full flex flex-col">
                         <h3 className="text-lg font-semibold mb-3 group-hover:text-blue-700 transition-colors duration-300">{reason.title}</h3>
                         <p className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-300 flex-1">{reason.description}</p>
                       </CardContent>
