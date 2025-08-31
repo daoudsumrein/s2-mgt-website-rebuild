@@ -251,12 +251,7 @@ export default function EndpointProtection() {
             .hero-title {
               font-size: clamp(2.5rem, 5vw, 4rem);
               font-weight: 700;
-              background: linear-gradient(135deg, var(--accent), #4dd0e1, var(--accent));
-              background-size: 200% 200%;
-              -webkit-background-clip: text;
-              background-clip: text;
-              -webkit-text-fill-color: transparent;
-              animation: gradientShift 3s ease-in-out infinite;
+              color: var(--text-primary);
               margin-bottom: 1.5rem;
             }
 
