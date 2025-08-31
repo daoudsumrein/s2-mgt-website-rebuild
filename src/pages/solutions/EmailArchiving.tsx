@@ -453,62 +453,64 @@ export default function EmailArchiving() {
           className="py-16 bg-white"
         >
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                  <i className="fas fa-check-circle text-green-500 text-3xl"></i>
-                  Key Benefits
-                </h3>
-                <div className="space-y-3">
-                  {keyBenefits.map((benefit, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                      whileHover={{ x: 10, transition: { duration: 0.2 } }}
-                      viewport={{ once: true }}
-                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-green-50 transition-all duration-300"
-                    >
-                      <CheckCircle size={20} className="text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700">{benefit}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-12">
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <i className="fas fa-check-circle text-green-500 text-3xl"></i>
+                    Key Benefits
+                  </h3>
+                  <div className="space-y-3">
+                    {keyBenefits.map((benefit, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                        whileHover={{ x: 10, transition: { duration: 0.2 } }}
+                        viewport={{ once: true }}
+                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-green-50 transition-all duration-300"
+                      >
+                        <CheckCircle size={20} className="text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-700">{benefit}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                  <i className="fas fa-bullseye text-blue-500 text-3xl"></i>
-                  Ideal For
-                </h3>
-                <div className="space-y-3">
-                  {idealFor.map((item, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: 30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                      whileHover={{ x: -10, transition: { duration: 0.2 } }}
-                      viewport={{ once: true }}
-                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all duration-300"
-                    >
-                      <Target size={20} className="text-blue-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700">{item}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <i className="fas fa-bullseye text-blue-500 text-3xl"></i>
+                    Ideal For
+                  </h3>
+                  <div className="space-y-3">
+                    {idealFor.map((item, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                        whileHover={{ x: -10, transition: { duration: 0.2 } }}
+                        viewport={{ once: true }}
+                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-blue-50 transition-all duration-300"
+                      >
+                        <Target size={20} className="text-blue-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-700">{item}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </div>
         </motion.section>
