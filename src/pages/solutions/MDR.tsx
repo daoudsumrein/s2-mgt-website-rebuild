@@ -534,7 +534,7 @@ export default function MDR() {
                       
                       {/* Enhanced Number Badge */}
                       <motion.div 
-                        className={`absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br ${reason.color} text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl border-4 border-white z-10`}
+                        className={`absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-br ${reason.color} text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl border-4 border-white z-10`}
                         initial={{ scale: 0, rotate: -180 }}
                         whileInView={{ scale: 1, rotate: 0 }}
                         viewport={{ once: true }}
