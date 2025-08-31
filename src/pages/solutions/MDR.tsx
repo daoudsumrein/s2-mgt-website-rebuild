@@ -596,11 +596,12 @@ export default function MDR() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.2 }}
                     whileHover={{ y: -10, scale: 1.05 }}
+                    className="h-full"
                   >
-                    <Card className="text-center relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-500 hover:shadow-blue-500/25">
+                    <Card className="text-center relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-500 hover:shadow-blue-500/25 h-full">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
-                      <CardContent className="p-8 relative z-10">
+                      <CardContent className="p-8 relative z-10 h-full flex flex-col">
                         <motion.div 
                           className={`w-12 h-12 mx-auto mb-4 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center shadow-lg`}
                           whileHover={{ 
@@ -612,7 +613,7 @@ export default function MDR() {
                           <item.icon className="w-6 h-6 text-white" />
                         </motion.div>
                         <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-700 transition-colors duration-300">{item.title}</h3>
-                        <p className="text-muted-foreground group-hover:text-gray-700 transition-colors duration-300">{item.description}</p>
+                        <p className="text-muted-foreground group-hover:text-gray-700 transition-colors duration-300 flex-1">{item.description}</p>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -665,13 +666,14 @@ export default function MDR() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
                     whileHover={{ y: -10, scale: 1.05 }}
+                    className="h-full"
                   >
-                    <Card className={`text-center border-l-4 ${item.color} relative group overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-xl transition-all duration-500`}>
+                    <Card className={`text-center border-l-4 ${item.color} relative group overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-xl transition-all duration-500 h-full`}>
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-700 transform skew-x-12"></div>
-                      <CardContent className="p-6 relative z-10">
+                      <CardContent className="p-6 relative z-10 h-full flex flex-col">
                         <h3 className="text-lg font-semibold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300">{item.title}</h3>
-                        <p className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-300">{item.description}</p>
+                        <p className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-300 flex-1">{item.description}</p>
                       </CardContent>
                     </Card>
                   </motion.div>
