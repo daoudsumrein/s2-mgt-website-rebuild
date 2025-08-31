@@ -268,26 +268,39 @@ export default function EndpointProtection() {
               {benefitCards.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  variants={itemVariants}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.3 + index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
                 >
-                  <Card className="h-full hover:shadow-xl transition-all duration-300 group">
-                    <CardHeader>
-                      <motion.div
-                        whileHover={{ rotate: 10 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <benefit.icon className="h-12 w-12 text-primary mb-4" />
-                      </motion.div>
-                      <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base leading-relaxed">
-                        {benefit.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="mb-6"
+                    >
+                      <benefit.icon className="h-12 w-12 text-primary" />
+                    </motion.div>
+                    <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -326,33 +339,47 @@ export default function EndpointProtection() {
               {securityFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
-                  variants={itemVariants}
-                  whileHover={{ y: -5, scale: 1.02 }}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
-                    duration: 0.3,
-                    delay: index * 0.1 
+                    duration: 0.6,
+                    delay: 0.3 + index * 0.1,
+                    ease: "easeOut"
                   }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-slate-50 hover:bg-white rounded-xl p-6 transition-all duration-300 border-2 border-transparent hover:border-blue-200 cursor-pointer relative overflow-hidden group"
                 >
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 group hover:border-primary/20">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <motion.div
-                          whileHover={{ rotate: 5 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <feature.icon className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-                        </motion.div>
-                        <div>
-                          <h4 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">
-                            {feature.title}
-                          </h4>
-                          <p className="text-muted-foreground text-sm leading-relaxed">
-                            {feature.description}
-                          </p>
-                        </div>
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-start gap-4">
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-blue-500"
+                      >
+                        <feature.icon className="h-10 w-10 flex-shrink-0 mt-1" />
+                      </motion.div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-3 group-hover:text-blue-600 transition-colors">
+                          {feature.title}
+                        </h4>
+                        <p className="text-slate-600 leading-relaxed">
+                          {feature.description}
+                        </p>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -391,33 +418,47 @@ export default function EndpointProtection() {
               {resilienceFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
-                  variants={itemVariants}
-                  whileHover={{ y: -5, scale: 1.02 }}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
-                    duration: 0.3,
-                    delay: index * 0.1 
+                    duration: 0.6,
+                    delay: 0.3 + index * 0.1,
+                    ease: "easeOut"
                   }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
                 >
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 group hover:border-primary/20">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <motion.div
-                          whileHover={{ rotate: 5 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <feature.icon className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-                        </motion.div>
-                        <div>
-                          <h4 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">
-                            {feature.title}
-                          </h4>
-                          <p className="text-muted-foreground text-sm leading-relaxed">
-                            {feature.description}
-                          </p>
-                        </div>
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-start gap-4">
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-purple-500"
+                      >
+                        <feature.icon className="h-10 w-10 flex-shrink-0 mt-1" />
+                      </motion.div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-3 group-hover:text-purple-600 transition-colors">
+                          {feature.title}
+                        </h4>
+                        <p className="text-slate-600 leading-relaxed">
+                          {feature.description}
+                        </p>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
