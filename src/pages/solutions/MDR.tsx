@@ -739,67 +739,148 @@ export default function MDR() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16">
+        <section className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <Card className="max-w-4xl mx-auto text-center bg-muted/50 backdrop-blur-sm shadow-xl relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
-                <CardContent className="p-12 relative z-10">
-                  <motion.h2 
-                    className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                  >
-                    Ready to Enhance Your Security Operations?
-                  </motion.h2>
-                  <motion.p 
-                    className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                  >
-                    Discover how OpenText Core MDR can transform your cybersecurity services with scalable, co-managed protection. By combining automation with expert human oversight, OpenText Core MDR reduces operational burdens, improves incident response times, and provides comprehensive security for your business.
-                  </motion.p>
-                  <motion.div 
-                    className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                  >
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=OpenText%20Core%20MDR%20Demo', '_blank')}>
-                        Book a Demo
-                      </Button>
+            <div className="flex justify-center">
+              <motion.div
+                className="w-full max-w-5xl"
+                initial={{ opacity: 0, y: 80, scale: 0.9, rotateX: 15 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, delay: 0.2, type: "spring", bounce: 0.3 }}
+                whileHover={{ scale: 1.02, y: -10, rotateY: 2 }}
+              >
+                <Card className="text-center relative group overflow-hidden border-0 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/20 shadow-2xl hover:shadow-3xl transition-all duration-700">
+                  {/* Animated Background Layers */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/5 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                  
+                  {/* Enhanced Shine Effect */}
+                  <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:left-full transition-all duration-1500 transform skew-x-12"></div>
+                  <div className="absolute top-0 -right-full h-full w-1/3 bg-gradient-to-l from-transparent via-blue-200/20 to-transparent group-hover:right-full transition-all duration-2000 transform -skew-x-12"></div>
+                  
+                  {/* Floating Orbs */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    {[...Array(5)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        className="absolute w-4 h-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-20"
+                        style={{
+                          left: `${15 + i * 20}%`,
+                          top: `${20 + (i % 2) * 60}%`,
+                        }}
+                        animate={{
+                          y: [-20, -60, -20],
+                          x: [-10, 10, -10],
+                          scale: [0.8, 1.2, 0.8],
+                          opacity: [0, 0.3, 0],
+                        }}
+                        transition={{
+                          duration: 3,
+                          delay: i * 0.5,
+                          repeat: Infinity,
+                          repeatType: "reverse",
+                        }}
+                      />
+                    ))}
+                  </div>
+
+                  <CardContent className="p-12 md:p-16 relative z-10">
+                    <motion.h2 
+                      className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+                      initial={{ opacity: 0, y: 40, scale: 0.9 }}
+                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      Ready to Enhance Your Security Operations?
+                    </motion.h2>
+                    
+                    <motion.p 
+                      className="text-lg md:text-xl text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.6 }}
+                    >
+                      Discover how OpenText Core MDR can transform your cybersecurity services with scalable, co-managed protection. By combining automation with expert human oversight, OpenText Core MDR reduces operational burdens, improves incident response times, and provides comprehensive security for your business.
+                    </motion.p>
+                    
+                    <motion.div 
+                      className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.8 }}
+                    >
+                      <motion.div 
+                        whileHover={{ scale: 1.1, y: -5 }} 
+                        whileTap={{ scale: 0.95 }}
+                        className="relative group/btn"
+                      >
+                        <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover/btn:opacity-75 transition duration-1000 group-hover/btn:duration-200"></div>
+                        <Button 
+                          size="lg" 
+                          className="relative bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 text-lg font-semibold shadow-2xl hover:shadow-blue-500/40 transition-all duration-500 border-0"
+                          onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=OpenText%20Core%20MDR%20Demo', '_blank')}
+                        >
+                          <motion.span
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            Book a Demo
+                          </motion.span>
+                        </Button>
+                      </motion.div>
+                      
+                      <motion.div 
+                        whileHover={{ scale: 1.1, y: -5 }} 
+                        whileTap={{ scale: 0.95 }}
+                        className="relative group/btn"
+                      >
+                        <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-25 group-hover/btn:opacity-75 transition duration-1000 group-hover/btn:duration-200"></div>
+                        <Button 
+                          size="lg" 
+                          variant="outline" 
+                          className="relative border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-blue-500/30 transition-all duration-500 bg-white/80 backdrop-blur-sm"
+                        >
+                          <motion.span
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            Learn More
+                          </motion.span>
+                        </Button>
+                      </motion.div>
                     </motion.div>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg hover:border-blue-700 transition-all duration-300">
-                        Learn More
-                      </Button>
+                    
+                    <motion.div
+                      className="flex justify-center"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 1.0 }}
+                    >
+                      <div className="bg-gradient-to-r from-blue-100 via-purple-50 to-blue-100 rounded-2xl p-6 max-w-3xl border border-blue-200/50 backdrop-blur-sm">
+                        <motion.p 
+                          className="text-sm md:text-base text-muted-foreground text-center leading-relaxed"
+                          whileHover={{ scale: 1.02 }}
+                        >
+                          To learn more about OpenText Core Managed Detection and Response or to schedule a demo, contact your OpenText account representative.
+                        </motion.p>
+                      </div>
                     </motion.div>
-                  </motion.div>
-                  <motion.p 
-                    className="text-sm text-muted-foreground"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 1.0 }}
-                  >
-                    To learn more about OpenText Core Managed Detection and Response or to schedule a demo, contact your OpenText account representative.
-                  </motion.p>
-                </CardContent>
-              </Card>
-            </motion.div>
+                  </CardContent>
+                  
+                  {/* Pulsing Border Effect */}
+                  <div className="absolute inset-0 rounded-lg">
+                    <div className="absolute inset-0 rounded-lg border-2 border-blue-300/20 group-hover:border-blue-400/40 transition-colors duration-700"></div>
+                    <div className="absolute inset-0 rounded-lg border border-purple-300/10 group-hover:border-purple-400/30 transition-colors duration-700 animate-pulse"></div>
+                  </div>
+                </Card>
+              </motion.div>
+            </div>
           </div>
         </section>
       </main>
