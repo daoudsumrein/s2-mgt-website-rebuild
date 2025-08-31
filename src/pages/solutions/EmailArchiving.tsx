@@ -265,7 +265,7 @@ export default function EmailArchiving() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#E65F1E' }}>
                 Why Enterprise Email Archiving Is Critical for Your Business
               </h2>
               <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
@@ -342,7 +342,7 @@ export default function EmailArchiving() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#E65F1E' }}>
                 Comprehensive Email Archiving Features
               </h2>
               <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
@@ -369,7 +369,7 @@ export default function EmailArchiving() {
                   <motion.div
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     transition={{ duration: 0.3 }}
-                    className="text-blue-500 text-4xl mb-4"
+                    className="text-4xl mb-4" style={{ color: '#E65F1E' }}
                   >
                     <feature.icon size={48} />
                   </motion.div>
@@ -397,7 +397,7 @@ export default function EmailArchiving() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#E65F1E' }}>
                 What You Get With Our Email Archiving Solution
               </h2>
               <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
@@ -424,7 +424,7 @@ export default function EmailArchiving() {
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className="text-blue-500 text-3xl mb-4"
+                    className="text-3xl mb-4" style={{ color: '#E65F1E' }}
                   >
                     <deliverable.icon size={36} />
                   </motion.div>
@@ -528,7 +528,7 @@ export default function EmailArchiving() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#E65F1E' }}>
                 Ready to Implement Email Archiving?
               </h2>
               <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
