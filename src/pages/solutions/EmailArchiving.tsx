@@ -390,6 +390,7 @@ export default function EmailArchiving() {
 
             .features-section {
               margin: 4rem 0;
+              background: #F8F7F4;
             }
 
             .storage-info {
