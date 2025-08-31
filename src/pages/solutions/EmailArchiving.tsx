@@ -246,11 +246,11 @@ export default function EmailArchiving() {
             __html: `
               #product-content {
                 --accent: #E65F1E;
-                --bg: #fafbfc;
-                --card: rgba(30, 41, 59, 0.9);
-                --border: rgba(230, 95, 30, 0.3);
-                --text: #1a1a1a;
-                --text-muted: #6b7280;
+                --bg: #1a202c;
+                --card: rgba(45, 55, 72, 0.95);
+                --border: rgba(230, 95, 30, 0.4);
+                --text: #ffffff;
+                --text-muted: #cbd5e0;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
                 color: var(--text);
                 line-height: 1.6;
