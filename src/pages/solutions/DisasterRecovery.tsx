@@ -271,111 +271,150 @@ export default function DisasterRecovery() {
             delay: 0.2,
             ease: "easeOut"
           }}>
-              <div className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">99.9%</div>
-                <div className="text-sm text-slate-300 font-medium">Uptime Achieved</div>
-              </div>
-              <div className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">&lt;30s</div>
-                <div className="text-sm text-slate-300 font-medium">Failover Time</div>
-              </div>
-              <div className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">0</div>
-                <div className="text-sm text-slate-300 font-medium">Performance Impact</div>
-              </div>
-              <div className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">256</div>
-                <div className="text-sm text-slate-300 font-medium">AES Encryption</div>
-              </div>
+              <motion.div 
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                whileHover={{ 
+                  y: -15, 
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  transition: { duration: 0.3 }
+                }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 relative overflow-hidden group cursor-pointer"
+              >
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">99.9%</div>
+                  <div className="text-sm text-slate-300 font-medium">Uptime Achieved</div>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                whileHover={{ 
+                  y: -15, 
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  transition: { duration: 0.3 }
+                }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 relative overflow-hidden group cursor-pointer"
+              >
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">&lt;30s</div>
+                  <div className="text-sm text-slate-300 font-medium">Failover Time</div>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+                whileHover={{ 
+                  y: -15, 
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  transition: { duration: 0.3 }
+                }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 relative overflow-hidden group cursor-pointer"
+              >
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">0</div>
+                  <div className="text-sm text-slate-300 font-medium">Performance Impact</div>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+                whileHover={{ 
+                  y: -15, 
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  transition: { duration: 0.3 }
+                }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 relative overflow-hidden group cursor-pointer"
+              >
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">256</div>
+                  <div className="text-sm text-slate-300 font-medium">AES Encryption</div>
+                </div>
+              </motion.div>
             </motion.div>
             
             {/* Benefits Grid */}
-            <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" initial={{
-            opacity: 0,
-            y: 30
-          }} animate={benefitsAnimation.isInView ? {
-            opacity: 1,
-            y: 0
-          } : {
-            opacity: 0,
-            y: 30
-          }} transition={{
-            duration: 0.8,
-            delay: 0.4,
-            ease: "easeOut"
-          }}>
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    ⚡
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {deliverables.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.3 + index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white/5 border-white/10 backdrop-blur-sm rounded-xl p-6 relative overflow-hidden group cursor-pointer"
+                >
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="mb-6"
+                    >
+                      <benefit.icon className="h-12 w-12 text-blue-400" />
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                    <p className="text-slate-300 leading-relaxed">
+                      {benefit.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Continuous Replication</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    Real-time, byte-level replication ensures your secondary systems are always in sync with virtually no data loss.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    🚀
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Rapid Failover</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    Automatic or manual failover in seconds or minutes, not hours. Get your business back online fast.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    🔒
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Secure & Encrypted</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    All data transmission uses AES-256 encryption with three-tier compression to optimize bandwidth.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    ☁️
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Any Platform</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    Support for physical, virtual, and cloud environments. Replicate from anywhere to anywhere.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    📊
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Zero Performance Impact</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    Your production systems maintain full performance with negligible network bandwidth usage.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 group">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                    🔧
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>
-                  <p className="text-slate-300 leading-relaxed">
-                    Comprehensive API, integrated DNS management, and non-disruptive testing capabilities.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -619,175 +658,70 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Advanced Features Section */}
-        <section className="py-16 text-foreground" style={{
-        backgroundColor: '#F4F5F8'
-      }}>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-gradient-to-br from-slate-50 to-blue-50"
+        >
           <div className="container mx-auto px-4">
-            <motion.div ref={featuresAnimation.ref} initial={{
-            opacity: 0,
-            y: 50
-          }} animate={featuresAnimation.isInView ? {
-            opacity: 1,
-            y: 0
-          } : {
-            opacity: 0,
-            y: 50
-          }} transition={{
-            duration: 0.8,
-            ease: "easeOut"
-          }}>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
                 Advanced Features
               </h2>
-              <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
                 Enterprise-grade capabilities designed for mission-critical environments
               </p>
             </motion.div>
             
-            <motion.div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto" initial={{
-            opacity: 0,
-            scale: 0.95
-          }} animate={featuresAnimation.isInView ? {
-            opacity: 1,
-            scale: 1
-          } : {
-            opacity: 0,
-            scale: 0.95
-          }} transition={{
-            duration: 0.8,
-            delay: 0.3,
-            ease: "easeOut"
-          }}>
-              <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-6">Security & Compliance</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      AES-256 encryption in transit
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Secure heartbeat monitoring
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Comprehensive audit trails
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Role-based access controls
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-6">Performance Optimization</h3>
-                  <ul className="space-y-3">
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Three-tier compression technology
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Bandwidth throttling options
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Byte-level change tracking
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Network impact minimization
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-6">Management & Monitoring</h3>
-                  <ul className="space-y-3">
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Comprehensive REST API
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Integrated DNS management
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Real-time alerting system
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Detailed reporting dashboard
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/80 border border-gray-200 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:-translate-y-2 shadow-md hover:shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-6">Testing & Recovery</h3>
-                  <ul className="space-y-3">
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Non-disruptive testing capabilities
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Point-in-time recovery options
-                    </li>
-                     <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Automatic and manual failover
-                    </li>
-                    <li className="flex items-center text-muted-foreground font-medium">
-                      <div className="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                        <span className="text-emerald-400 font-bold text-sm">✓</span>
-                      </div>
-                      Granular recovery controls
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.3 + index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
+                >
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10 text-center">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="mb-6"
+                    >
+                      <feature.icon className="h-12 w-12 text-blue-500 mx-auto" />
+                    </motion.div>
+                    <h3 className="text-lg font-bold mb-3">{feature.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Official Distributor Section */}
         <section className="py-16 text-white relative overflow-hidden" style={{
