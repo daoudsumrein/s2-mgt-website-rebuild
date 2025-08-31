@@ -684,52 +684,151 @@ export default function MDR() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <motion.h2 
-                className="text-3xl font-bold text-center mb-12"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                className="text-3xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 1.0, delay: 0.2, type: "spring", bounce: 0.4 }}
               >
                 Cost-Effective Security Operations
               </motion.h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   {
                     title: "No CapEx Investment",
                     description: "Eliminate upfront capital expenditure with our subscription-based model",
-                    color: "border-l-blue-600"
+                    color: "border-l-blue-600",
+                    gradient: "from-blue-500 to-blue-600",
+                    icon: "💰"
                   },
                   {
                     title: "No Hardware Costs",
                     description: "Cloud-based solution requires no physical infrastructure or maintenance",
-                    color: "border-l-green-600"
+                    color: "border-l-green-600",
+                    gradient: "from-green-500 to-green-600",
+                    icon: "☁️"
                   },
                   {
                     title: "No Long-term Commitments",
                     description: "Flexible month-to-month scaling without binding contracts or hidden fees",
-                    color: "border-l-purple-600"
+                    color: "border-l-purple-600",
+                    gradient: "from-purple-500 to-purple-600",
+                    icon: "🔄"
                   },
                   {
                     title: "Reduced Operational Overhead",
                     description: "Automation and expert oversight reduce the need for internal security staff",
-                    color: "border-l-orange-600"
+                    color: "border-l-orange-600",
+                    gradient: "from-orange-500 to-orange-600",
+                    icon: "⚡"
                   }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    className="relative"
+                    initial={{ opacity: 0, y: 100, scale: 0.7, rotateY: -45 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1, rotateY: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
-                    whileHover={{ y: -10, scale: 1.05 }}
+                    transition={{ 
+                      duration: 1.2, 
+                      delay: 0.3 + index * 0.15,
+                      type: "spring", 
+                      bounce: 0.5,
+                      stiffness: 100
+                    }}
+                    whileHover={{ 
+                      y: -20, 
+                      scale: 1.08, 
+                      rotateY: 10,
+                      rotateX: 5,
+                      transition: { duration: 0.3, type: "spring", stiffness: 300 }
+                    }}
                   >
-                    <Card className={`text-center border-l-4 ${item.color} relative group overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-xl transition-all duration-500`}>
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-700 transform skew-x-12"></div>
-                      <CardContent className="p-6 relative z-10">
-                        <h3 className="text-lg font-semibold text-blue-600 mb-3 group-hover:text-blue-700 transition-colors duration-300">{item.title}</h3>
-                        <p className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-300">{item.description}</p>
+                    <Card className={`h-full text-center border-l-4 ${item.color} relative group overflow-visible bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-700 hover:shadow-blue-500/30 min-h-[280px] flex flex-col`}>
+                      {/* Enhanced Background Effects */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                      
+                      {/* Multiple Shine Effects */}
+                      <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:left-full transition-all duration-1200 transform skew-x-12"></div>
+                      <div className="absolute bottom-0 -right-full h-full w-1/3 bg-gradient-to-l from-transparent via-blue-200/20 to-transparent group-hover:right-full transition-all duration-1500 transform -skew-x-12"></div>
+                      
+                      {/* Animated Icon Badge */}
+                      <motion.div 
+                        className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br ${item.gradient} text-white rounded-full flex items-center justify-center text-xl shadow-xl border-2 border-white z-10`}
+                        initial={{ scale: 0, rotate: -180 }}
+                        whileInView={{ scale: 1, rotate: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.5 + index * 0.1, type: "spring", bounce: 0.7 }}
+                        whileHover={{ 
+                          rotate: [0, -15, 15, -15, 0],
+                          scale: 1.3,
+                          boxShadow: "0 15px 30px rgba(0,0,0,0.3)"
+                        }}
+                      >
+                        <motion.span
+                          whileHover={{ scale: 1.2, rotate: 360 }}
+                          transition={{ duration: 0.5 }}
+                        >
+                          {item.icon}
+                        </motion.span>
+                      </motion.div>
+                      
+                      {/* Floating Particles */}
+                      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                        {[...Array(4)].map((_, i) => (
+                          <motion.div
+                            key={i}
+                            className="absolute w-1.5 h-1.5 bg-blue-400 rounded-full opacity-0 group-hover:opacity-40"
+                            style={{
+                              left: `${15 + i * 25}%`,
+                              top: `${20 + (i % 2) * 50}%`,
+                            }}
+                            animate={{
+                              y: [-15, -40, -15],
+                              x: [-8, 8, -8],
+                              scale: [0.8, 1.4, 0.8],
+                              opacity: [0, 0.4, 0],
+                            }}
+                            transition={{
+                              duration: 2.5,
+                              delay: i * 0.4,
+                              repeat: Infinity,
+                              repeatType: "reverse",
+                            }}
+                          />
+                        ))}
+                      </div>
+                      
+                      <CardContent className="p-8 pt-12 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                          <motion.h3 
+                            className="text-lg font-semibold text-blue-600 mb-4 group-hover:text-blue-700 transition-colors duration-500 min-h-[3rem] flex items-center justify-center"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            {item.title}
+                          </motion.h3>
+                          <motion.p 
+                            className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-500 leading-relaxed flex-1"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                          >
+                            {item.description}
+                          </motion.p>
+                        </div>
                       </CardContent>
+                      
+                      {/* Enhanced Border Effects */}
+                      <div className="absolute inset-0 rounded-lg">
+                        <div className="absolute inset-0 rounded-lg border border-blue-200/30 group-hover:border-blue-400/50 transition-colors duration-700"></div>
+                        <div className="absolute inset-0 rounded-lg border border-purple-200/20 group-hover:border-purple-400/40 transition-colors duration-700 animate-pulse"></div>
+                      </div>
                     </Card>
                   </motion.div>
                 ))}
