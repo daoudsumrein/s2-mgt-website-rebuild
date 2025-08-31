@@ -591,7 +591,7 @@ export default function EmailArchiving() {
             }
 
             .cta-section {
-              background: F8F7F4;
+              background: white;
               text-align: center;
               margin: 4rem 0 2rem;
               animation: fadeSlideUp 0.8s ease-out 0.4s both;
