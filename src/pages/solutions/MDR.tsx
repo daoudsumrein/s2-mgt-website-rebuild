@@ -63,7 +63,7 @@ export default function MDR() {
         {/* Intro Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-20 opacity-0 animate-fade-in [animation-delay:0.2s]">
+            <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                 OpenText Core MDR: Enterprise-Grade Security for MSPs
               </h2>
@@ -79,7 +79,7 @@ export default function MDR() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12">
-                <Card className="border-l-4 border-l-blue-800 opacity-0 animate-fade-in [animation-delay:0.4s] hover:transform hover:scale-[1.02] transition-all duration-300 hover:shadow-xl">
+                <Card className="border-l-4 border-l-blue-800 hover:transform hover:scale-[1.02] transition-all duration-300 hover:shadow-xl">
                   <CardHeader>
                     <CardTitle className="text-2xl text-blue-800">MSP Security Challenges</CardTitle>
                   </CardHeader>
@@ -110,7 +110,7 @@ export default function MDR() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-blue-600 opacity-0 animate-fade-in [animation-delay:0.6s] hover:transform hover:scale-[1.02] transition-all duration-300 hover:shadow-xl">
+                <Card className="border-l-4 border-l-blue-600 hover:transform hover:scale-[1.02] transition-all duration-300 hover:shadow-xl">
                   <CardHeader>
                     <CardTitle className="text-2xl text-blue-600">OpenText Core MDR Solution</CardTitle>
                   </CardHeader>
@@ -149,9 +149,7 @@ export default function MDR() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12 opacity-0 animate-fade-in [animation-delay:0.8s]">
-                Comprehensive Security Benefits
-              </h2>
+              <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Security Benefits</h2>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
@@ -186,9 +184,9 @@ export default function MDR() {
                     description: "Stay compliant with industry standards like NIST, PCI, and SOC 2 with built-in compliance features and automated reporting."
                   }
                 ].map((benefit, index) => (
-                  <Card key={index} className={`text-center opacity-0 animate-fade-in [animation-delay:${1 + index * 0.1}s] hover:transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:border-blue-600`}>
+                  <Card key={index} className="text-center hover:transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:border-blue-600">
                     <CardContent className="p-8">
-                      <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center group-hover:animate-pulse">
+                      <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center">
                         <benefit.icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
@@ -205,7 +203,7 @@ export default function MDR() {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent opacity-0 animate-fade-in [animation-delay:1.6s]">
+              <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                 Advanced Security Capabilities
               </h2>
               
@@ -242,7 +240,7 @@ export default function MDR() {
                     description: "Deploy seamlessly with a lightweight, non-intrusive agent-based monitoring solution that requires minimal setup and maintenance overhead."
                   }
                 ].map((feature, index) => (
-                  <Card key={index} className={`opacity-0 animate-fade-in [animation-delay:${1.8 + index * 0.1}s] hover:transform hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-blue-600`}>
+                  <Card key={index} className="hover:transform hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:border-blue-600">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -264,7 +262,7 @@ export default function MDR() {
         {/* Dashboard Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto opacity-0 animate-fade-in [animation-delay:2.4s]">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Security Dashboard</h2>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -327,7 +325,7 @@ export default function MDR() {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent opacity-0 animate-fade-in [animation-delay:2.6s]">
+              <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                 Top 5 Reasons MSPs Choose OpenText Core MDR
               </h2>
               
@@ -359,7 +357,7 @@ export default function MDR() {
                     description: "Provides MSPs with rapid incident response paths for urgent threats, plus continuous threat hunting for proactive risk management and prevention."
                   }
                 ].map((reason, index) => (
-                  <Card key={index} className={`relative opacity-0 animate-fade-in [animation-delay:${2.8 + index * 0.1}s] hover:transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:border-blue-600`}>
+                  <Card key={index} className="relative hover:transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:border-blue-600">
                     <div className="absolute -top-4 left-6 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                       {reason.number}
                     </div>
@@ -377,7 +375,7 @@ export default function MDR() {
         {/* Deployment & Support Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto opacity-0 animate-fade-in [animation-delay:3.3s]">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Effortless Deployment & Ongoing Support</h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {[
@@ -415,7 +413,7 @@ export default function MDR() {
         {/* Cost Benefits Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto opacity-0 animate-fade-in [animation-delay:3.5s]">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Cost-Effective Security Operations</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
@@ -451,7 +449,7 @@ export default function MDR() {
         {/* CTA Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <Card className="max-w-4xl mx-auto text-center bg-muted/50 backdrop-blur-sm shadow-xl opacity-0 animate-fade-in [animation-delay:3.7s]">
+            <Card className="max-w-4xl mx-auto text-center bg-muted/50 backdrop-blur-sm shadow-xl">
               <CardContent className="p-12">
                 <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                   Ready to Enhance Your Security Operations?
