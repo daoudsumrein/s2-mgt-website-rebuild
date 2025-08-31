@@ -1,5 +1,5 @@
 import SEOHead from "@/components/SEOHead";
-import { ServiceSchema as EmailArchivingSchema } from "@/components/ServiceSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 
 export default function EmailArchiving() {
   return (
@@ -9,7 +9,11 @@ export default function EmailArchiving() {
         description="Comprehensive email archiving with GDPR compliance, up to 70% storage savings, and seamless integration for all email systems."
         keywords="email archiving, GDPR compliance, email retention, secure email storage, business email management, automated archiving"
       />
-      <EmailArchivingSchema />
+      <ServiceSchema 
+        name="MailStore Server"
+        description="Comprehensive email archiving with GDPR compliance, up to 70% storage savings, and seamless integration for all email systems."
+        serviceType="Email Archiving"
+      />
       
       <div className="min-h-screen">
         <div 
