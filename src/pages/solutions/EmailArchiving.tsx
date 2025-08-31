@@ -356,7 +356,11 @@ export default function EmailArchiving() {
                   key={index}
                   initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.3 + index * 0.1,
+                    ease: "easeOut"
+                  }}
                   whileHover={{ 
                     y: -15, 
                     scale: 1.05,
@@ -366,16 +370,23 @@ export default function EmailArchiving() {
                   viewport={{ once: true }}
                   className="bg-slate-50 hover:bg-white rounded-xl p-6 text-center transition-all duration-300 border-2 border-transparent hover:border-blue-200 cursor-pointer relative overflow-hidden group"
                 >
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ duration: 0.3 }}
-                    className="text-4xl mb-4" style={{ color: '#E65F1E' }}
-                  >
-                    <feature.icon size={48} />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3">{feature.title}</h3>
-                  <p className="text-slate-600 text-sm">{feature.description}</p>
+                  {/* Background gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-4xl mb-4" style={{ color: '#E65F1E' }}
+                    >
+                      <feature.icon size={48} />
+                    </motion.div>
+                    <h3 className="text-lg font-bold mb-3">{feature.title}</h3>
+                    <p className="text-slate-600 text-sm">{feature.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -411,33 +422,44 @@ export default function EmailArchiving() {
                   key={index}
                   initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.1 + index * 0.1,
+                    ease: "easeOut"
+                  }}
                   whileHover={{ 
-                    y: -10, 
-                    scale: 1.02,
-                    boxShadow: "0 15px 30px rgba(0,0,0,0.1)",
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
                     transition: { duration: 0.3 }
                   }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-slate-100 relative overflow-hidden group"
+                  className="bg-white rounded-xl p-6 shadow-lg border border-slate-100 relative overflow-hidden group cursor-pointer"
                 >
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="text-3xl mb-4" style={{ color: '#E65F1E' }}
-                  >
-                    <deliverable.icon size={36} />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-4">{deliverable.title}</h3>
-                  <ul className="space-y-2">
-                    {deliverable.features.map((item, idx) => (
-                      <li key={idx} className="text-slate-600 text-sm flex items-start gap-2">
-                        <CheckCircle size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-3xl mb-4" style={{ color: '#E65F1E' }}
+                    >
+                      <deliverable.icon size={36} />
+                    </motion.div>
+                    <h3 className="text-lg font-bold mb-4">{deliverable.title}</h3>
+                    <ul className="space-y-2">
+                      {deliverable.features.map((item, idx) => (
+                        <li key={idx} className="text-slate-600 text-sm flex items-start gap-2">
+                          <CheckCircle size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
               ))}
             </div>
