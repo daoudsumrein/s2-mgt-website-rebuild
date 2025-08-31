@@ -246,11 +246,11 @@ export default function EmailArchiving() {
             __html: `
               #product-content {
                 --accent: #E65F1E;
-                --bg: #1a202c;
-                --card: rgba(45, 55, 72, 0.95);
-                --border: rgba(230, 95, 30, 0.4);
-                --text: #ffffff;
-                --text-muted: #cbd5e0;
+                --bg: #fafbfc;
+                --card: rgba(255,255,255,0.7);
+                --border: rgba(230, 95, 30, 0.15);
+                --text: #1a1a1a;
+                --text-muted: #6b7280;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
                 color: var(--text);
                 line-height: 1.6;
@@ -922,6 +922,31 @@ export default function EmailArchiving() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 0v10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
                   </svg>
                   <span>Elimination of mailbox quotas - no longer need to limit email server storage capacity</span>
+                </div>
+                <div className="feature-item" data-i="5">
+                  <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                  </svg>
+                  <span>Special auditor user access for external auditors and eDiscovery scenarios</span>
+                </div>
+                <div className="feature-item" data-i="6">
+                  <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                  </svg>
+                  <span>Secure HTML preview with whitelist-based HTML sanitizer</span>
+                </div>
+                <div className="feature-item" data-i="7">
+                  <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                  </svg>
+                  <span>Cryptographic signatures can be added to exported emails for tamper protection</span>
+                </div>
+                <div className="feature-item" data-i="8">
+                  <svg className="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                  </svg>
+                  <span>Fast storage hardware balancing - frequently accessed data on SSD, less frequent on HDD</span>
                 </div>
               </div>
             </div>
