@@ -1,5 +1,5 @@
 import SEOHead from "@/components/SEOHead";
-import ServiceSchema from "@/components/ServiceSchema";
+import ServiceSchema from "@/components/ServiceSchema"; // Fixed import
 
 export default function EmailArchiving() {
   return (
