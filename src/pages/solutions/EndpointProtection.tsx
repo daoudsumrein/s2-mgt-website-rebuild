@@ -206,11 +206,11 @@ export default function EndpointProtection() {
           <style dangerouslySetInnerHTML={{__html: `
             #product-content {
               --accent: #1a6aff;
-              --bg: #0b1020;
-              --card: rgba(255,255,255,0.08);
-              --border: rgba(255,255,255,0.18);
-              --text-primary: #ffffff;
-              --text-secondary: #a0a8b8;
+              --bg: #ffffff;
+              --card: rgba(0,0,0,0.08);
+              --border: rgba(0,0,0,0.18);
+              --text-primary: #000000;
+              --text-secondary: #4a5568;
               background: var(--bg);
               color: var(--text-primary);
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
