@@ -482,28 +482,30 @@ export default function EmailArchiving() {
 
             .features-list {
               display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-              gap: 1.5rem;
-              margin: 2rem 0;
+              grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+              gap: 2rem;
+              margin: 3rem 0;
             }
 
             .feature-item {
               display: flex;
-              align-items: center;
-              gap: 1rem;
-              padding: 1rem;
+              align-items: flex-start;
+              gap: 1.5rem;
+              padding: 2rem;
               background: var(--card);
               backdrop-filter: blur(8px);
               border: 1px solid var(--border);
-              border-radius: 12px;
+              border-radius: 16px;
               transition: all 0.3s ease;
               animation: fadeSlideUp 0.8s ease-out both;
-              box-shadow: 0 2px 10px rgba(230, 95, 30, 0.05);
+              box-shadow: 0 4px 20px rgba(230, 95, 30, 0.05);
+              line-height: 1.7;
             }
 
             .feature-item:hover {
-              transform: translateX(10px);
+              transform: translateY(-5px);
               border-color: var(--accent);
+              box-shadow: 0 8px 30px rgba(230, 95, 30, 0.1);
             }
 
             .feature-item[data-i="0"] { animation-delay: calc(0.4s + 0 * 0.1s); }
@@ -513,10 +515,18 @@ export default function EmailArchiving() {
             .feature-item[data-i="4"] { animation-delay: calc(0.4s + 4 * 0.1s); }
 
             .feature-icon {
-              width: 24px;
-              height: 24px;
+              width: 32px;
+              height: 32px;
               color: var(--accent);
               flex-shrink: 0;
+              margin-top: 0.25rem;
+            }
+
+            .feature-item span {
+              font-size: 1.1rem;
+              font-weight: 500;
+              color: var(--text);
+              line-height: 1.6;
             }
 
             .compliance-section {
