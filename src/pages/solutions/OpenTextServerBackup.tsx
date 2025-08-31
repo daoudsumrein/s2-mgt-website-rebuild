@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import { useScrollAnimation, useCounterAnimation, useScrollProgress } from "@/hooks/useScrollAnimation";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -394,166 +395,212 @@ export default function OpenTextServerBackup() {
         </section>
 
         {/* Key Features Section */}
-        <section className="py-20 font-inter">
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
+        >
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
                 Comprehensive Data Protection Features
               </h2>
-              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-light">
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
                 Advanced backup capabilities designed for modern enterprise environments with flexible deployment options and rapid recovery.
               </p>
-            </div>
+            </motion.div>
             
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-              <FeatureCard
-                icon="⚡"
-                title="Rapid VM Recovery"
-                description="Restore virtual machines to full functionality in as little as 2 minutes, regardless of VM size. Continuous backup protection ensures zero data loss."
-                delay={0.1}
-              />
-              
-              <FeatureCard
-                icon="🛡️"
-                title="Ransomware Protection"
-                description="Immutable backup 'safe-sets' with automatic ransomware threat detection for Windows systems. Comprehensive recovery options from uncompromised backups."
-                delay={0.2}
-              />
-              
-              <FeatureCard
-                icon="☁️"
-                title="Cloud Failover"
-                description="Seamless cloud failover for critical systems ensuring near-zero downtime. Simple failback to primary environment with point-in-time recovery options."
-                delay={0.3}
-              />
-              
-              <FeatureCard
-                icon="🔄"
-                title="Forever Incremental Backups"
-                description="Efficient backup strategy with hourly incremental backups and flexible retention from 1-7 years. Significantly reduces backup times and storage requirements."
-                delay={0.4}
-              />
-              
-              <FeatureCard
-                icon="🎯"
-                title="Bare Metal Restore"
-                description="Complete system recovery including OS, data, and applications. Granular recovery options for files, folders, databases, and application data."
-                delay={0.5}
-              />
-              
-              <FeatureCard
-                icon="🌐"
-                title="Universal Platform Support"
-                description="Protect over 200 operating systems, platforms, and applications including physical, virtual, and legacy systems with comprehensive coverage."
-                delay={0.6}
-              />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.3 + index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
+                >
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10 text-center">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="mb-6"
+                    >
+                      <feature.icon className="h-12 w-12 text-blue-500 mx-auto" />
+                    </motion.div>
+                    <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 font-inter">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-                Why Choose OpenText Server Backup
+        {/* Deliverables Section */}
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-white"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                What You Get With Our Server Backup Solution
               </h2>
-              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-light">
-                Enterprise-grade backup solution trusted by organizations worldwide for critical data protection and business continuity.
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                Complete server backup implementation with training, support, and ongoing maintenance to ensure your success.
               </p>
-            </div>
+            </motion.div>
             
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              <BenefitCard
-                title="Simplified Management"
-                description="Unified management portal with tag-based backup job creation, automatic verification reports, and comprehensive scheduling to minimize operational costs."
-                side="left"
-                delay={0.1}
-              />
-              
-              <BenefitCard
-                title="Compliance Ready"
-                description="SOC 2 Type 2 compliant with support for HIPAA, FERPA, GDPR, and GLBA regulations. Immutable backups ensure data integrity and regulatory compliance."
-                side="right"
-                delay={0.2}
-              />
-              
-              <BenefitCard
-                title="Flexible Deployment"
-                description="Direct-to-cloud, on-site, and hybrid deployment options. Keep up to three copies of backup data with integrated software and optional onsite hardware."
-                side="left"
-                delay={0.3}
-              />
-              
-              <BenefitCard
-                title="Advanced Compression"
-                description="Dynamic bandwidth throttling and advanced compression minimize network utilization while preserving performance during peak hours."
-                side="right"
-                delay={0.4}
-              />
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+              {deliverables.map((deliverable, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.1 + index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-slate-50 hover:bg-white rounded-xl p-6 transition-all duration-300 border-2 border-transparent hover:border-blue-200 cursor-pointer relative overflow-hidden group"
+                >
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-blue-500 mb-4"
+                    >
+                      <deliverable.icon className="h-10 w-10" />
+                    </motion.div>
+                    <h3 className="text-lg font-bold mb-4">{deliverable.title}</h3>
+                    <ul className="space-y-2">
+                      {deliverable.features.map((item, idx) => (
+                        <li key={idx} className="text-slate-600 text-sm flex items-start gap-2">
+                          <CheckCircle size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        {/* Platform Support Section */}
-        <section className="py-20 font-inter">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-                Comprehensive Platform Coverage
+        {/* Protection Features Section */}
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-gradient-to-br from-slate-50 to-blue-50"
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                Enterprise Protection Features
               </h2>
-              <p className="text-xl text-slate-700 max-w-3xl mx-auto font-light">
-                Extensive support for diverse IT environments ensuring complete data protection across your entire infrastructure.
+              <p className="text-lg text-center text-slate-600 mb-12 max-w-4xl mx-auto">
+                Advanced security and compliance features designed for mission-critical business environments.
               </p>
-            </div>
+            </motion.div>
             
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-              <PlatformCard
-                title="Operating Systems"
-                items={[
-                  "Microsoft Windows",
-                  "Linux Distributions", 
-                  "IBM AIX & iSeries",
-                  "VMware & Hyper-V"
-                ]}
-                delay={0.1}
-              />
-              
-              <PlatformCard
-                title="Application Support"
-                items={[
-                  "Microsoft SQL Server",
-                  "Microsoft Exchange",
-                  "Microsoft SharePoint", 
-                  "Oracle Database"
-                ]}
-                delay={0.2}
-              />
-              
-              <PlatformCard
-                title="Granular Recovery"
-                items={[
-                  "Files & Folders",
-                  "Exchange Mailboxes",
-                  "SQL Databases & Tables",
-                  "SharePoint & Active Directory"
-                ]}
-                delay={0.3}
-              />
-              
-              <PlatformCard
-                title="Virtualization"
-                items={[
-                  "VMware vSphere",
-                  "Microsoft Hyper-V",
-                  "Physical Servers",
-                  "Legacy Systems"
-                ]}
-                delay={0.4}
-              />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {protectionFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6,
+                    delay: 0.3 + index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
+                >
+                  {/* Background gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  <div className="relative z-10 flex items-start gap-4">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-green-500"
+                    >
+                      <CheckCircle className="h-8 w-8 flex-shrink-0 mt-1" />
+                    </motion.div>
+                    <div>
+                      <p className="text-slate-700 font-medium leading-relaxed">
+                        {feature}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Statistics Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 font-inter">
