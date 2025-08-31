@@ -222,7 +222,7 @@ export default function MDR() {
                 Comprehensive Security Benefits
               </motion.h2>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
                   {
                     icon: Shield,
@@ -268,11 +268,12 @@ export default function MDR() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
                     whileHover={{ y: -15, scale: 1.05 }}
+                    className="h-full"
                   >
-                    <Card className="text-center relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-500 hover:shadow-blue-500/25">
+                    <Card className="text-center relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-500 hover:shadow-blue-500/25 h-full">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
-                      <CardContent className="p-8 relative z-10">
+                      <CardContent className="p-8 relative z-10 h-full flex flex-col">
                         <motion.div 
                           className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${benefit.color} rounded-xl flex items-center justify-center shadow-lg`}
                           whileHover={{ 
@@ -284,7 +285,7 @@ export default function MDR() {
                           <benefit.icon className="w-8 h-8 text-white" />
                         </motion.div>
                         <h3 className="text-xl font-semibold mb-4 group-hover:text-blue-700 transition-colors duration-300">{benefit.title}</h3>
-                        <p className="text-muted-foreground group-hover:text-gray-700 transition-colors duration-300">{benefit.description}</p>
+                        <p className="text-muted-foreground group-hover:text-gray-700 transition-colors duration-300 flex-1">{benefit.description}</p>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -353,12 +354,13 @@ export default function MDR() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
                     whileHover={{ y: -10, scale: 1.02 }}
+                    className="h-full"
                   >
-                    <Card className="relative group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:shadow-blue-600/20 border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100">
+                    <Card className="relative group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:shadow-blue-600/20 border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 h-full">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
-                      <CardContent className="p-6 relative z-10">
-                        <div className="flex items-start space-x-4">
+                      <CardContent className="p-6 relative z-10 h-full flex flex-col">
+                        <div className="flex items-start space-x-4 h-full">
                           <motion.div 
                             className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg`}
                             whileHover={{ 
@@ -369,9 +371,9 @@ export default function MDR() {
                           >
                             <feature.icon className="w-6 h-6 text-white" />
                           </motion.div>
-                          <div>
+                          <div className="flex flex-col h-full">
                             <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-700 transition-colors duration-300">{feature.title}</h3>
-                            <p className="text-muted-foreground group-hover:text-gray-700 transition-colors duration-300">{feature.description}</p>
+                            <p className="text-muted-foreground group-hover:text-gray-700 transition-colors duration-300 flex-1">{feature.description}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -526,12 +528,13 @@ export default function MDR() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.15 }}
                     whileHover={{ y: -20, scale: 1.05 }}
+                    className="h-full"
                   >
-                    <Card className="relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-500 hover:shadow-blue-500/25">
+                    <Card className="relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:shadow-2xl transition-all duration-500 hover:shadow-blue-500/25 h-full">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
                       <motion.div 
-                        className={`absolute -top-4 left-6 w-12 h-12 bg-gradient-to-br ${reason.color} text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg`}
+                        className={`absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br ${reason.color} text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg`}
                         whileHover={{ 
                           rotate: [0, -15, 15, -15, 0],
                           scale: 1.2
@@ -540,9 +543,9 @@ export default function MDR() {
                       >
                         {reason.number}
                       </motion.div>
-                      <CardContent className="pt-12 p-6 relative z-10">
+                      <CardContent className="pt-12 p-6 relative z-10 h-full flex flex-col">
                         <h3 className="text-lg font-semibold mb-3 group-hover:text-blue-700 transition-colors duration-300">{reason.title}</h3>
-                        <p className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-300">{reason.description}</p>
+                        <p className="text-muted-foreground text-sm group-hover:text-gray-700 transition-colors duration-300 flex-1">{reason.description}</p>
                       </CardContent>
                     </Card>
                   </motion.div>
