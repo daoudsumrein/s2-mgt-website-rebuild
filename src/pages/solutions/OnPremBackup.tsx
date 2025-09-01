@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -116,6 +118,10 @@ const idealFor = [
 ];
 
 export default function OnPremBackup() {
+  const heroAnimation = useScrollAnimation({ threshold: 0.3 });
+  const featuresAnimation = useScrollAnimation({ threshold: 0.2 });
+  const deliverableAnimation = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
@@ -147,9 +153,19 @@ export default function OnPremBackup() {
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-7xl mx-auto">
+            <motion.div 
+              ref={heroAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="max-w-7xl mx-auto"
+            >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+              <motion.div 
+                className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden"
+                whileHover={{ y: -8, scale: 1.01 }}
+                transition={{ duration: 0.3 }}
+              >
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
@@ -214,13 +230,20 @@ export default function OnPremBackup() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
         {/* Value Proposition Section */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-deep)' }}>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 md:py-24 relative overflow-hidden" 
+          style={{ background: 'var(--gradient-blue-deep)' }}
+        >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0" style={{
@@ -249,36 +272,64 @@ export default function OnPremBackup() {
                   
                   {/* Stats Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-12">
-                    <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                      <div className="text-2xl font-bold text-primary mb-2">2X</div>
-                      <div className="text-sm font-medium text-foreground">Faster Backups</div>
-                    </div>
-                    <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                      <div className="text-2xl font-bold text-primary mb-2">49%</div>
-                      <div className="text-sm font-medium text-foreground">Lower Costs</div>
-                    </div>
-                    <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                      <div className="text-2xl font-bold text-primary mb-2">5 Min</div>
-                      <div className="text-sm font-medium text-foreground">Setup Time</div>
-                    </div>
-                    <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                      <div className="text-2xl font-bold text-primary mb-2">4.8★</div>
-                      <div className="text-sm font-medium text-foreground">Star Rating</div>
-                    </div>
+                    {[
+                      { value: "2X", label: "Faster Backups", icon: "fas fa-rocket" },
+                      { value: "49%", label: "Lower Costs", icon: "fas fa-dollar-sign" },
+                      { value: "5 Min", label: "Setup Time", icon: "fas fa-clock" },
+                      { value: "4.8★", label: "Star Rating", icon: "fas fa-star" }
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                        whileHover={{ 
+                          y: -8, 
+                          scale: 1.05,
+                          transition: { duration: 0.3 }
+                        }}
+                        viewport={{ once: true }}
+                        className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 transition-all duration-300 group cursor-pointer relative overflow-hidden"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <motion.div
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          transition={{ duration: 0.3 }}
+                          className="text-xl text-primary mb-3 relative z-10"
+                        >
+                          <i className={stat.icon}></i>
+                        </motion.div>
+                        <div className="text-2xl font-bold text-primary mb-2 relative z-10">{stat.value}</div>
+                        <div className="text-sm font-medium text-foreground relative z-10">{stat.label}</div>
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Platform Overview */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-light-custom)' }}>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 md:py-24 relative overflow-hidden" 
+          style={{ background: 'var(--gradient-light-custom)' }}
+        >
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose NAKIVO Backup & Replication?</h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
@@ -387,10 +438,17 @@ export default function OnPremBackup() {
               </Card>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Universal Platform Support */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-bright)' }}>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 md:py-24 relative overflow-hidden" 
+          style={{ background: 'var(--gradient-blue-bright)' }}
+        >
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Universal Platform Support</h2>
@@ -506,7 +564,7 @@ export default function OnPremBackup() {
               </Card>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Fast and Efficient Backup */}
         <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-orange-section)' }}>
@@ -680,7 +738,14 @@ export default function OnPremBackup() {
         </section>
 
         {/* Performance Section */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-blue-vibrant)' }}>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 md:py-24 relative overflow-hidden" 
+          style={{ background: 'var(--gradient-blue-vibrant)' }}
+        >
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Performance</h2>
@@ -726,10 +791,17 @@ export default function OnPremBackup() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Testimonials */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-dark)' }}>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 md:py-24 relative overflow-hidden" 
+          style={{ background: 'var(--gradient-dark)' }}
+        >
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Customers Say</h2>
@@ -784,7 +856,7 @@ export default function OnPremBackup() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Call to Action */}
         <section className="py-16 md:py-24 bg-background relative overflow-hidden">
