@@ -169,7 +169,7 @@ export default function Footer() {
                 <Link to="/contact" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   Contact Us
                 </Link>
-                <a href="https://preview--pipeline-pro-portal.lovable.app" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                <a href="https://odoo.s2mgt.com/" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                   Employee Login
                 </a>
                 
@@ -288,7 +288,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://preview--pipeline-pro-portal.lovable.app" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://odoo.s2mgt.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Employee Login
                 </a>
               </li>
