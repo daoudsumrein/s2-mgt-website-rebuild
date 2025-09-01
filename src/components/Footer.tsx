@@ -86,8 +86,8 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-primary">📞</span>
-                  <a href="tel:+97141234567" className="text-muted-foreground hover:text-primary transition-colors">
-                    +971 4 123 4567
+                  <a href="tel:+97144342221" className="text-muted-foreground hover:text-primary transition-colors">
+                    +971 4 434 2221
                   </a>
                 </div>
               </div>
@@ -211,8 +211,8 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-primary">📞</span>
-                  <a href="tel:+97141234567" className="text-muted-foreground hover:text-primary transition-colors">
-                    +971 4 123 4567
+                  <a href="tel:+97144342221" className="text-muted-foreground hover:text-primary transition-colors">
+                    +971 4 434 2221
                   </a>
                 </div>
               </div>
