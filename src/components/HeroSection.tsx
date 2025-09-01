@@ -96,7 +96,7 @@ export default function HeroSection() {
                 animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
+                <Card className="group hover:shadow-[0_4px_2px_0px_#3EB9FA] transition-all duration-300 border-border/50">
                   <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
@@ -118,7 +118,7 @@ export default function HeroSection() {
                 animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
+                <Card className="group hover:shadow-[0_4px_2px_0px_#3EB9FA] transition-all duration-300 border-border/50">
                   <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
@@ -140,7 +140,7 @@ export default function HeroSection() {
                 animate={cardsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <Card className="group hover:shadow-[0_10px_5px_0px_#3EB9FA] transition-all duration-300 border-border/50">
+                <Card className="group hover:shadow-[0_4px_2px_0px_#3EB9FA] transition-all duration-300 border-border/50">
                   <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-2 sm:p-3 rounded-lg bg-primary-light flex-shrink-0">
