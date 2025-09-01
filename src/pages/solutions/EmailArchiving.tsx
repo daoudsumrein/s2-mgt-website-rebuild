@@ -232,11 +232,12 @@ export default function EmailArchiving() {
                       {/* Video Container */}
                       <div className="absolute inset-0">
                         <iframe 
-                          src="https://player.vimeo.com/video/724980545?badge=0&autopause=0&player_id=0&app_id=58479&controls=1&title=0&byline=0&portrait=0" 
+                          src="https://www.youtube.com/embed/zP8x4HFmJ-I?si=EhhBeYBwh4OOUJmE" 
                           className="w-full h-full border-none rounded-xl"
-                          allow="autoplay; fullscreen; picture-in-picture"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          referrerPolicy="strict-origin-when-cross-origin"
                           allowFullScreen
-                          title="Email Archiving Solutions"
+                          title="YouTube video player"
                         />
                       </div>
                       
