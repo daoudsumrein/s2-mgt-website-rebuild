@@ -8,119 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Server, HardDrive, Zap, Cloud, Shield, Monitor, Settings, CheckCircle, Target, Award, DollarSign, Clock, RotateCcw } from "lucide-react";
 
-const features = [
-  {
-    icon: Settings,
-    title: "All-in-One Platform",
-    description: "Comprehensive, all-in-one platform covering all data protection needs"
-  },
-  {
-    icon: Cloud,
-    title: "Diverse Environment Support",
-    description: "Support for diverse environments, including physical, virtual, cloud, hybrid, and SaaS"
-  },
-  {
-    icon: RotateCcw,
-    title: "Adaptive Recovery",
-    description: "Adaptive recovery options tailored to meet varying business continuity requirements"
-  },
-  {
-    icon: HardDrive,
-    title: "Flexible Deployment",
-    description: "Flexible deployment models to fit on-premises, cloud, or hybrid infrastructures"
-  },
-  {
-    icon: Server,
-    title: "Storage Integration",
-    description: "Seamless integration with leading storage technologies for optimized performance"
-  },
-  {
-    icon: Zap,
-    title: "Infinite Scalability",
-    description: "Infinite scalability to grow with your business across locations, workloads, and users"
-  },
-  {
-    icon: Shield,
-    title: "High-Speed Backups",
-    description: "High-speed, reliable backups that safeguard workloads across virtual machines, cloud platforms, physical servers, SaaS applications, and hybrid systems"
-  },
-  {
-    icon: RotateCcw,
-    title: "Instant Restore",
-    description: "Instant restore capabilities to recover VMs, servers, files, folders, or application data directly to original or alternative locations"
-  },
-  {
-    icon: Shield,
-    title: "Ransomware Defense",
-    description: "Built-in ransomware defense to enhance cyber resilience and data integrity"
-  },
-  {
-    icon: CheckCircle,
-    title: "Compliance Standards",
-    description: "Meets key cybersecurity and data protection compliance standards"
-  },
-  {
-    icon: Monitor,
-    title: "Infrastructure Monitoring",
-    description: "Real-time IT infrastructure monitoring, including VMware environments"
-  },
-  {
-    icon: Cloud,
-    title: "BaaS for MSPs",
-    description: "Backup-as-a-Service (BaaS) offerings tailored for Managed Service Providers (MSPs)"
-  }
-];
-
-const deliverables = [
-  {
-    icon: Zap,
-    title: "2X Faster Performance",
-    description: "2X faster with native change tracking technology for enhanced backup speed"
-  },
-  {
-    icon: DollarSign,
-    title: "Lower TCO",
-    description: "49% lower TCO than other market vendors, providing significant cost savings"
-  },
-  {
-    icon: Award,
-    title: "High Customer Rating",
-    description: "4.8/5 average rating for saving time and money from satisfied customers"
-  },
-  {
-    icon: RotateCcw,
-    title: "Multiple Recovery Options",
-    description: "12+ Recovery options to restore lost/deleted data with precision and flexibility"
-  },
-  {
-    icon: Clock,
-    title: "Quick Deployment",
-    description: "5 minutes to deploy, configure and run the backup job for immediate protection"
-  }
-];
-
-const keyBenefits = [
-  "Award-winning platform with proven track record",
-  "Unified dashboard for simplified management",
-  "Cost-effective solution with lower TCO",
-  "Fast deployment and configuration",
-  "Comprehensive protection for all environments",
-  "Built-in cyber resilience features"
-];
-
-const idealFor = [
-  "Small and medium businesses (SMBs)",
-  "Large enterprises with complex infrastructures",
-  "Managed Service Providers (MSPs)",
-  "Organizations requiring on-premises data control",
-  "Companies with hybrid IT environments",
-  "Businesses needing compliance adherence"
-];
-
 export default function OnPremBackup() {
   const heroAnimation = useScrollAnimation({ threshold: 0.3 });
-  const featuresAnimation = useScrollAnimation({ threshold: 0.2 });
-  const deliverableAnimation = useScrollAnimation({ threshold: 0.2 });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -332,110 +221,63 @@ export default function OnPremBackup() {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-primary text-lg mb-4 font-semibold">ALL-IN-ONE SOLUTION</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Backup</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Replication</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Instant Restore</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Ransomware Protection</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>IT Monitoring</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Site Recovery</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-primary text-lg mb-4 font-semibold">MULTI-PLATFORM SUPPORT</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>VMware vSphere</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Microsoft Hyper-V</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Nutanix AHV</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Proxmox VE</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Amazon EC2</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Windows, Linux</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>NAS, Microsoft 365</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
-                    <span>Oracle Database (via RMAN)</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-primary text-lg mb-4 font-semibold">FLEXIBLE RECOVERY</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
-                    Instantly restore VMs, physical machines, files, folders, and application objects from backups to original or custom locations.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-primary text-lg mb-4 font-semibold">VERSATILE DEPLOYMENT</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
-                    Install on NAS devices for a complete backup appliance or deploy on Windows/Linux or as a VMware/Nutanix VA or AMI in Amazon EC2.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-primary text-lg mb-4 font-semibold">LIMITLESS SCALABILITY</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
-                    Supports single or multi-tenant needs. Efficiently scales for ROBO and edge environments. One instance protects over 8,000 VMs across 300+ locations for our biggest clients.
-                  </p>
-                </CardContent>
-              </Card>
+              {[
+                {
+                  title: "ALL-IN-ONE SOLUTION",
+                  items: ["Backup", "Replication", "Instant Restore", "Ransomware Protection", "IT Monitoring", "Site Recovery"]
+                },
+                {
+                  title: "MULTI-PLATFORM SUPPORT", 
+                  items: ["VMware vSphere", "Microsoft Hyper-V", "Nutanix AHV", "Proxmox VE", "Amazon EC2", "Windows, Linux", "NAS, Microsoft 365", "Oracle Database (via RMAN)"]
+                },
+                {
+                  title: "FLEXIBLE RECOVERY",
+                  description: "Instantly restore VMs, physical machines, files, folders, and application objects from backups to original or custom locations."
+                },
+                {
+                  title: "VERSATILE DEPLOYMENT",
+                  description: "Install on NAS devices for a complete backup appliance or deploy on Windows/Linux or as a VMware/Nutanix VA or AMI in Amazon EC2."
+                },
+                {
+                  title: "LIMITLESS SCALABILITY",
+                  description: "Supports single or multi-tenant needs. Efficiently scales for ROBO and edge environments. One instance protects over 8,000 VMs across 300+ locations for our biggest clients."
+                }
+              ].map((card, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg transition-all duration-500 group relative overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                    <CardHeader className="pb-4 relative z-10">
+                      <CardTitle className="text-primary text-lg mb-4 font-semibold">{card.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3 relative z-10">
+                      {card.items ? (
+                        card.items.map((item, itemIndex) => (
+                          <div key={itemIndex} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                            <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                            <span>{item}</span>
+                          </div>
+                        ))
+                      ) : (
+                        <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
+                          {card.description}
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </motion.section>
@@ -450,416 +292,200 @@ export default function OnPremBackup() {
           style={{ background: 'var(--gradient-blue-bright)' }}
         >
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Universal Platform Support</h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6" />
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 NAKIVO Backup & Replication can protect the following platforms across your entire infrastructure
               </p>
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="backdrop-blur-xl bg-card/80 border-l-4 border-l-primary border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-foreground text-xl font-bold">Virtual Environments</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>VMware vSphere 5.5–8.0U3b</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Microsoft Hyper-V 2012–2022</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Nutanix AHV v6.5–v6.10 (LTS)</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Proxmox VE 8.x</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>VMware Cloud Director 10.2.1–10.6</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border-l-4 border-l-primary border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-foreground text-xl font-bold">Cloud Platforms</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Amazon EC2 (all regions)</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>All instance types</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>VPC and Classic networks</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Microsoft 365 complete suite</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border-l-4 border-l-primary border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-foreground text-xl font-bold">Physical Systems</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Windows Server 2012–2025</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Windows 11/10/8 Professional</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Ubuntu Server/Desktop 16.04–24.04</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>RHEL, SUSE, CentOS, Debian</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>AlmaLinux, Oracle Linux, Rocky Linux</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border-l-4 border-l-primary border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 group">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-foreground text-xl font-bold">Applications & Databases</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Oracle Database 11g R2–23c Free</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Microsoft SQL Server</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Exchange & Active Directory</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Application-consistent backups</span>
-                  </div>
-                </CardContent>
-              </Card>
+              {[
+                {
+                  title: "Virtual Environments",
+                  items: [
+                    "VMware vSphere 5.5–8.0U3b",
+                    "Microsoft Hyper-V 2012–2022", 
+                    "Nutanix AHV v6.5–v6.10 (LTS)",
+                    "Proxmox VE 8.x",
+                    "VMware Cloud Director 10.2.1–10.6"
+                  ]
+                },
+                {
+                  title: "Cloud Platforms",
+                  items: [
+                    "Amazon EC2 (all regions)",
+                    "All instance types",
+                    "VPC and Classic networks",
+                    "Microsoft 365 complete suite"
+                  ]
+                },
+                {
+                  title: "Physical Systems",
+                  items: [
+                    "Windows Server 2012–2025",
+                    "Windows 11/10/8 Professional",
+                    "Ubuntu Server/Desktop 16.04–24.04",
+                    "RHEL, SUSE, CentOS, Debian",
+                    "AlmaLinux, Oracle Linux, Rocky Linux"
+                  ]
+                },
+                {
+                  title: "Applications & Databases",
+                  items: [
+                    "Oracle Database 11g R2–23c Free",
+                    "Microsoft SQL Server",
+                    "Exchange & Active Directory",
+                    "Application-consistent backups"
+                  ]
+                }
+              ].map((platform, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="backdrop-blur-xl bg-card/80 border-l-4 border-l-primary border border-border/50 p-6 hover:shadow-lg transition-all duration-500 group relative overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                    <CardHeader className="pb-4 relative z-10">
+                      <CardTitle className="text-foreground text-xl font-bold">{platform.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3 relative z-10">
+                      {platform.items.map((item, itemIndex) => (
+                        <div key={itemIndex} className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                          <span className="text-primary mr-3 font-bold">•</span>
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </motion.section>
 
         {/* Fast and Efficient Backup */}
-        <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'var(--gradient-orange-section)' }}>
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 md:py-24 relative overflow-hidden" 
+          style={{ background: 'var(--gradient-orange-section)' }}
+        >
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Fast and Efficient Backup</h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6" />
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 With NAKIVO Backup & Replication, you can reliably protect your virtual, cloud, physical, SaaS and hybrid environments.
               </p>
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 text-center group">
-                <CardHeader className="pb-4">
-                  <div className="text-4xl mb-4">💻</div>
-                  <CardTitle className="text-foreground text-xl mb-2 font-bold">VM Backup</CardTitle>
-                  <p className="text-primary text-sm font-medium mb-4">Image-based, agentless backup for VMware vSphere, Microsoft Hyper-V, Nutanix AHV VMs and Proxmox VE VMs</p>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Complete VM protection without agents</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Application-consistent backups</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Native change tracking efficiency</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Support for all major hypervisors</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 text-center group">
-                <CardHeader className="pb-4">
-                  <div className="text-4xl mb-4">📧</div>
-                  <CardTitle className="text-foreground text-xl mb-2 font-bold">Microsoft 365 Backup</CardTitle>
-                  <p className="text-primary text-sm font-medium mb-4">Full and incremental backups for Exchange Online, Microsoft Teams, OneDrive for Business and SharePoint Online data</p>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>MFA-enabled Microsoft 365 accounts</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Exchange Online protection</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Teams, OneDrive, SharePoint coverage</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Complete SaaS data protection</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 text-center group">
-                <CardHeader className="pb-4">
-                  <div className="text-4xl mb-4">🖥️</div>
-                  <CardTitle className="text-foreground text-xl mb-2 font-bold">Physical Machine Backup</CardTitle>
-                  <p className="text-primary text-sm font-medium mb-4">Image-based, incremental backup for Windows- and Linux-based servers and workstations</p>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Complete server protection</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Workstation backup support</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Incremental backup efficiency</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Cross-platform compatibility</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 text-center group">
-                <CardHeader className="pb-4">
-                  <div className="text-4xl mb-4">📂</div>
-                  <CardTitle className="text-foreground text-xl mb-2 font-bold">File Share Backup</CardTitle>
-                  <p className="text-primary text-sm font-medium mb-4">Fast incremental backups of unstructured data in SMB/NFS file shares</p>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>NAS devices protection</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Windows and Linux machines</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>SMB/NFS protocol support</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Incremental efficiency</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 text-center group">
-                <CardHeader className="pb-4">
-                  <div className="text-4xl mb-4">☁️</div>
-                  <CardTitle className="text-foreground text-xl mb-2 font-bold">Amazon EC2 Backup</CardTitle>
-                  <p className="text-primary text-sm font-medium mb-4">Image-based, incremental backup for Amazon EC2 instances</p>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>All AWS regions support</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>All instance types</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Incremental backup technology</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Cloud-native protection</span>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg hover:scale-105 transition-all duration-500 text-center group">
-                <CardHeader className="pb-4">
-                  <div className="text-4xl mb-4">🗃️</div>
-                  <CardTitle className="text-foreground text-xl mb-2 font-bold">Application Support</CardTitle>
-                  <p className="text-primary text-sm font-medium mb-4">Application-aware consistent backup for applications and databases</p>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Microsoft SQL Server support</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Exchange Server protection</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Active Directory backup</span>
-                  </div>
-                  <div className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span className="text-primary mr-3 font-bold">•</span>
-                    <span>Oracle Database via RMAN</span>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Performance Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-16 md:py-24 relative overflow-hidden" 
-          style={{ background: 'var(--gradient-blue-vibrant)' }}
-        >
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Performance</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6" />
-              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                Boost backup, replication, and recovery speeds by up to 2 times and reduce network load by as much as 50%.
-              </p>
-            </div>
-            
-            <div className="overflow-x-auto">
-              <div className="backdrop-blur-xl bg-card/80 border border-border/50 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-primary/10 border-b border-border/50">
-                      <th className="text-foreground font-bold p-6 text-left text-lg">Performance Feature</th>
-                      <th className="text-foreground font-bold p-6 text-left text-lg">Improvement</th>
-                      <th className="text-foreground font-bold p-6 text-left text-lg">Business Impact</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-border/30 hover:bg-primary/5 transition-colors">
-                      <td className="p-6 text-foreground font-semibold">Native Change Tracking</td>
-                      <td className="p-6 text-primary font-medium">2X faster backups</td>
-                      <td className="p-6 text-muted-foreground">VMware CBT, Hyper-V RCT, Nutanix AHV CRT for faster incremental backups</td>
-                    </tr>
-                    <tr className="border-b border-border/30 hover:bg-primary/5 transition-colors">
-                      <td className="p-6 text-foreground font-semibold">LAN-Free Data Transfer</td>
-                      <td className="p-6 text-primary font-medium">50% network load reduction</td>
-                      <td className="p-6 text-muted-foreground">HotAdd or Direct SAN Access modes offload production networks</td>
-                    </tr>
-                    <tr className="border-b border-border/30 hover:bg-primary/5 transition-colors">
-                      <td className="p-6 text-foreground font-semibold">Network Acceleration</td>
-                      <td className="p-6 text-primary font-medium">Enhanced performance</td>
-                      <td className="p-6 text-muted-foreground">Built-in acceleration for busy LAN and WAN environments</td>
-                    </tr>
-                    <tr className="hover:bg-primary/5 transition-colors">
-                      <td className="p-6 text-foreground font-semibold">Bandwidth Throttling</td>
-                      <td className="p-6 text-primary font-medium">Controlled impact</td>
-                      <td className="p-6 text-muted-foreground">Global or per-job bandwidth rules for working hours</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Testimonials */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-16 md:py-24 relative overflow-hidden" 
-          style={{ background: 'var(--gradient-dark)' }}
-        >
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Customers Say</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-8 hover:shadow-lg hover:scale-105 transition-all duration-500 relative group">
-                <div className="absolute top-6 left-8 text-6xl text-primary/20 font-serif">"</div>
-                <CardContent className="pt-12 space-y-6">
-                  <p className="text-muted-foreground group-hover:text-foreground transition-colors text-lg italic leading-relaxed">
-                    75% lower backup costs. We save more than 50% on VMware backup and additionally 25% in storage space costs with better deduplication, lowering our backup expenses by 75% overall.
-                  </p>
-                  <div className="space-y-1">
-                    <div className="text-foreground font-bold">Rick Braddy</div>
-                    <div className="text-primary text-sm font-medium">CEO/CTO at SoftNAS</div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-8 hover:shadow-lg hover:scale-105 transition-all duration-500 relative group">
-                <div className="absolute top-6 left-8 text-6xl text-primary/20 font-serif">"</div>
-                <CardContent className="pt-12 space-y-6">
-                  <p className="text-muted-foreground group-hover:text-foreground transition-colors text-lg italic leading-relaxed">
-                    7X faster backups. The solution is faster than other products I have used and supports many different configurations.
-                  </p>
-                  <div className="space-y-1">
-                    <div className="text-foreground font-bold">Praful Soni</div>
-                    <div className="text-primary text-sm font-medium">Senior IT Manager at Transpek</div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-8 hover:shadow-lg hover:scale-105 transition-all duration-500 relative group">
-                <div className="absolute top-6 left-8 text-6xl text-primary/20 font-serif">"</div>
-                <CardContent className="pt-12 space-y-6">
-                  <p className="text-muted-foreground group-hover:text-foreground transition-colors text-lg italic leading-relaxed">
-                    99% faster recovery. With granular recovery, we can restore files in just a few minutes, while previously it would have taken us hours to restore the entire VM that held it.
-                  </p>
-                  <div className="space-y-1">
-                    <div className="text-foreground font-bold">Krister Laag</div>
-                    <div className="text-primary text-sm font-medium">CIO at Stendahls</div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <div className="text-center mt-16">
-              <div className="backdrop-blur-xl bg-card/60 border border-border/50 p-8 rounded-2xl hover:shadow-lg transition-all duration-500">
-                <p className="text-foreground text-lg mb-2 font-bold">Industry Recognition</p>
-                <p className="text-muted-foreground">4.8/5 stars with 96% willing to recommend | Named in Gartner® Magic Quadrant™ 2024 | Top rated on Capterra, TrustRadius, and Spiceworks</p>
-              </div>
+              {[
+                {
+                  icon: "💻",
+                  title: "VM Backup",
+                  description: "Image-based, agentless backup for VMware vSphere, Microsoft Hyper-V, Nutanix AHV VMs and Proxmox VE VMs",
+                  features: ["Complete VM protection without agents", "Application-consistent backups", "Native change tracking efficiency", "Support for all major hypervisors"]
+                },
+                {
+                  icon: "📧",
+                  title: "Microsoft 365 Backup",
+                  description: "Full and incremental backups for Exchange Online, Microsoft Teams, OneDrive for Business and SharePoint Online data",
+                  features: ["MFA-enabled Microsoft 365 accounts", "Exchange Online protection", "Teams, OneDrive, SharePoint coverage", "Complete SaaS data protection"]
+                },
+                {
+                  icon: "🖥️",
+                  title: "Physical Machine Backup",
+                  description: "Image-based, incremental backup for Windows- and Linux-based servers and workstations",
+                  features: ["Complete server protection", "Workstation backup support", "Incremental backup efficiency", "Cross-platform compatibility"]
+                },
+                {
+                  icon: "📂",
+                  title: "File Share Backup",
+                  description: "Fast incremental backups of unstructured data in SMB/NFS file shares",
+                  features: ["NAS devices protection", "Windows and Linux machines", "SMB/NFS protocol support", "Incremental efficiency"]
+                },
+                {
+                  icon: "☁️",
+                  title: "Amazon EC2 Backup",
+                  description: "Image-based, incremental backup for Amazon EC2 instances",
+                  features: ["All AWS regions support", "All instance types", "Incremental backup technology", "Cloud-native protection"]
+                },
+                {
+                  icon: "🗃️",
+                  title: "Application Support",
+                  description: "Application-aware consistent backup for applications and databases",
+                  features: ["Microsoft SQL Server support", "Exchange Server protection", "Active Directory backup", "Oracle Database via RMAN"]
+                }
+              ].map((backup, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                  whileHover={{ 
+                    y: -15, 
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="backdrop-blur-xl bg-card/80 border border-border/50 p-6 hover:shadow-lg transition-all duration-500 text-center group relative overflow-hidden h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                    <CardHeader className="pb-4 relative z-10">
+                      <div className="text-4xl mb-4">{backup.icon}</div>
+                      <CardTitle className="text-foreground text-xl mb-2 font-bold">{backup.title}</CardTitle>
+                      <p className="text-primary text-sm font-medium mb-4">{backup.description}</p>
+                    </CardHeader>
+                    <CardContent className="space-y-3 relative z-10">
+                      {backup.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                          <span className="text-primary mr-3 font-bold">•</span>
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </motion.section>
 
         {/* Call to Action */}
-        <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 md:py-24 bg-background relative overflow-hidden"
+        >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0" style={{
@@ -870,7 +496,13 @@ export default function OnPremBackup() {
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <div className="backdrop-blur-xl bg-card/90 border border-border/50 p-12 lg:p-16 text-center rounded-3xl shadow-2xl hover:shadow-xl transition-all duration-500 relative overflow-hidden group">
+            <motion.div 
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="backdrop-blur-xl bg-card/90 border border-border/50 p-12 lg:p-16 text-center rounded-3xl shadow-2xl hover:shadow-xl transition-all duration-500 relative overflow-hidden group"
+            >
               {/* Gradient border */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20 rounded-3xl pointer-events-none" />
               
@@ -895,9 +527,9 @@ export default function OnPremBackup() {
                   </Button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
       </main>
       <Footer />
     </div>
