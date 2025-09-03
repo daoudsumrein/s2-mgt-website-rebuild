@@ -63,7 +63,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-4xl"
         >
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
