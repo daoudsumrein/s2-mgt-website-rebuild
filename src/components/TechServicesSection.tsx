@@ -22,7 +22,7 @@ const TechServicesSection = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 z-[1]" />
+      <div className="absolute inset-0 z-[1]" />
       
       {/* Navigation Toggle - Mobile First */}
       <nav className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black/40 border border-white/20 rounded-[25px] p-1 backdrop-blur-[15px] z-10 flex w-[calc(100vw-2rem)] max-w-[320px] md:top-8 md:max-w-[400px]">
