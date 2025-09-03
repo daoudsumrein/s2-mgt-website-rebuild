@@ -48,30 +48,30 @@ const TechServicesSection = () => {
       </nav>
 
       {/* Container */}
-      <div className="w-full px-4 relative z-[5] mt-20 md:px-8 md:mt-24 lg:px-16 max-w-[1200px] lg:ml-0 lg:mr-auto">
+      <div className="w-full px-4 relative z-[5] mt-20 md:px-8 md:mt-24 lg:px-16 max-w-[1200px] mx-auto">
         {/* Content Sections Container */}
-        <div className="relative min-h-[600px]">
+        <div className="relative min-h-[500px] md:min-h-[600px]">
           {/* Data Protection Section */}
           <div className={`absolute inset-0 transition-all duration-[600ms] ease-out ${
             activeSection === 'data-protection' 
               ? 'opacity-100 pointer-events-auto translate-x-0 z-10' 
               : 'opacity-0 pointer-events-none translate-x-[-50px] z-0'
           }`}>
-            <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl xl:text-[3.25rem] font-light leading-[1.3] mb-8 md:mb-10 lg:mb-12 xl:mb-14 text-white max-w-[700px] md:max-w-[800px]">
+            <h1 className="text-[1.5rem] sm:text-[1.75rem] md:text-4xl lg:text-5xl xl:text-[3.25rem] font-light leading-[1.3] mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 text-white max-w-full sm:max-w-[700px] md:max-w-[800px]">
               Ensure business continuity with rapid recovery from disruptions.
             </h1>
             
-            <div className="flex flex-col gap-6 mb-8 md:grid md:grid-cols-2 md:gap-8 md:mb-10 lg:gap-10 lg:mb-12 xl:gap-12 max-w-[800px]">
-              <div className="flex flex-col gap-3 p-4 md:p-6 lg:p-8 rounded-lg bg-white/5">
+            <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8 md:grid md:grid-cols-2 md:gap-8 md:mb-10 lg:gap-10 lg:mb-12 xl:gap-12 max-w-full sm:max-w-[800px]">
+              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
                 {dataProtectionServices[0].map((service, index) => (
-                  <div key={index} className="text-white text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-2 md:py-2.5 lg:py-3 xl:py-3.5">
+                  <div key={index} className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5">
                     {service}
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col gap-3 p-4 md:p-6 lg:p-8 rounded-lg bg-white/5">
+              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
                 {dataProtectionServices[1].map((service, index) => (
-                  <div key={index} className="text-white text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-2 md:py-2.5 lg:py-3 xl:py-3.5">
+                  <div key={index} className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5">
                     {service}
                   </div>
                 ))}
@@ -80,7 +80,7 @@ const TechServicesSection = () => {
 
             <a 
               href="/solutions" 
-              className="inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 text-sm md:text-base font-medium transition-all duration-300 hover:translate-x-1 py-2"
+              className="inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 text-xs sm:text-sm md:text-base font-medium transition-all duration-300 hover:translate-x-1 py-2"
             >
               Learn more about Data Protection
               <span className="transition-transform duration-300">→</span>
