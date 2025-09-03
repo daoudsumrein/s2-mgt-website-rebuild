@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#1a2547] to-[#0a1628]" />
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(/lovable-uploads/056d5ea9-8864-4541-9b47-a56718ba3b48.png)` }}
+      />
       
       {/* Flowing Background Elements */}
       <div className="absolute top-0 right-0 w-[60%] h-full">
