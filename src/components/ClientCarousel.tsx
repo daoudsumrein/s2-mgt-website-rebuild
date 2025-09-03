@@ -100,16 +100,16 @@ export default function ClientCarousel() {
           100% { transform: translateX(0%); }
         }
         .client-scroll-left {
-          animation: clientScrollLeft 60s linear infinite;
+          animation: clientScrollLeft 30s linear infinite;
         }
         .client-scroll-right {
-          animation: clientScrollRight 70s linear infinite;
+          animation: clientScrollRight 35s linear infinite;
         }
         .client-scroll-left-slow {
-          animation: clientScrollLeft 80s linear infinite;
+          animation: clientScrollLeft 40s linear infinite;
         }
         .client-scroll-right-fast {
-          animation: clientScrollRight 50s linear infinite;
+          animation: clientScrollRight 25s linear infinite;
         }
         @media (max-width: 780px) {
           .client-scroll-left img, .client-scroll-right img,
