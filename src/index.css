@@ -264,7 +264,7 @@ All colors MUST be HSL.
 }
 
 .animate-trusted-scroll {
-  animation: trusted-scroll 80s linear infinite;
+  animation: trusted-scroll 30s linear infinite;
 }
 
 .animate-trusted-scroll-paused {
@@ -273,18 +273,18 @@ All colors MUST be HSL.
 
 @media (max-width: 1024px) {
   .animate-trusted-scroll {
-    animation-duration: 60s;
+    animation-duration: 25s;
   }
 }
 
 @media (max-width: 768px) {
   .animate-trusted-scroll {
-    animation-duration: 50s;
+    animation-duration: 20s;
   }
 }
 
 @media (max-width: 480px) {
   .animate-trusted-scroll {
-    animation-duration: 40s;
+    animation-duration: 15s;
   }
 }
