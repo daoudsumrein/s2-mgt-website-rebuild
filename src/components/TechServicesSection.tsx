@@ -93,7 +93,7 @@ const TechServicesSection = () => {
               ? 'opacity-100 pointer-events-auto translate-x-0 z-10' 
               : 'opacity-0 pointer-events-none translate-x-[-50px] z-0'
           }`}>
-            <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl xl:text-[3.25rem] font-light leading-[1.3] mb-8 md:mb-10 lg:mb-12 xl:mb-14 text-white max-w-[700px] md:max-w-[800px]">
+            <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl xl:text-[3.25rem] font-light leading-[1.3] mb-8 md:mb-10 lg:mb-12 xl:mb-14 text-white max-w-[900px] md:max-w-[1000px]">
               From endpoint to enterprise - secure everything, compromise nothing.
             </h1>
             
