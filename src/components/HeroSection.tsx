@@ -98,6 +98,35 @@ export default function HeroSection() {
               </Link>
             </Button>
           </motion.div>
+          
+          {/* Trusted by enterprises section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20"
+          >
+            <h3 className="text-white/90 text-center text-lg sm:text-xl font-medium mb-4">
+              Trusted by enterprises across
+            </h3>
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-white/80 text-sm sm:text-base">
+              <span>Government</span>
+              <span className="text-white/40">•</span>
+              <span>Banking & Financial Services</span>
+              <span className="text-white/40">•</span>
+              <span>Healthcare</span>
+              <span className="text-white/40">•</span>
+              <span>Oil & Gas</span>
+              <span className="text-white/40">•</span>
+              <span>Telecommunications</span>
+              <span className="text-white/40">•</span>
+              <span>Education</span>
+              <span className="text-white/40">•</span>
+              <span>Manufacturing</span>
+              <span className="text-white/40">•</span>
+              <span>Critical Infrastructure</span>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
