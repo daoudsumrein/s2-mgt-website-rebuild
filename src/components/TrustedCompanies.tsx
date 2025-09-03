@@ -78,83 +78,66 @@ const companies = [
 export default function TrustedCompanies() {
   const { ref, isInView } = useScrollAnimation();
 
-  const CompanyLogo = ({ company, index }: { company: { name: string; url: string }, index: number }) => (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-      transition={{ 
-        duration: 0.5, 
-        delay: Math.min(index * 0.05, 1) // Cap delay at 1 second
-      }}
-      className="flex-shrink-0 w-[130px] h-[65px] sm:w-[160px] sm:h-[80px] lg:w-[200px] lg:h-[100px] 
-                 mx-2 sm:mx-3 lg:mx-6 flex items-center justify-center 
-                 bg-card rounded-xl sm:rounded-2xl lg:rounded-3xl 
-                 p-3 sm:p-4 lg:p-5 
-                 shadow-sm hover:shadow-lg transition-all duration-300 
-                 border border-border/50 hover:border-primary/30 
-                 hover:scale-105 hover:-translate-y-2 group"
-    >
-      <img
-        src={company.url}
-        alt={`${company.name} logo`}
-        className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 
-                   transition-opacity duration-300"
-        loading="lazy"
-        onError={(e) => {
-          const target = e.target as HTMLImageElement;
-          target.style.display = 'none';
-        }}
-      />
-    </motion.div>
-  );
+  // Duplicate companies for seamless infinite loop
+  const duplicatedCompanies = [...companies, ...companies];
 
   return (
-    <section className="py-8 sm:py-12 lg:py-16 overflow-hidden relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-muted/10 to-background/80 
-                       sm:bg-gradient-to-b sm:from-background/90 sm:via-muted/15 sm:to-background/90
-                       lg:bg-gradient-to-b lg:from-background lg:via-muted/20 lg:to-background" />
+    <>
+      <style>{`
+        @keyframes trustedScroll {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .trusted-scroll {
+          animation: trustedScroll 20s linear infinite;
+        }
+        @media (max-width: 768px) {
+          .trusted-scroll {
+            animation-duration: 15s;
+          }
+        }
+        @media (max-width: 480px) {
+          .trusted-scroll {
+            animation-duration: 12s;
+          }
+        }
+      `}</style>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-8 sm:mb-12 lg:mb-16"
-        >
-          <h2 className="font-inter font-bold text-heading-blue mb-4 sm:mb-6
-                         text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[60px]">
-            Trusted by Organizations Nationwide
-          </h2>
-        </motion.div>
+      <section className="py-8 sm:py-12 lg:py-16 overflow-hidden bg-card">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-8 sm:mb-12 lg:mb-16"
+          >
+            <h2 className="font-inter font-bold text-heading-blue mb-4 sm:mb-6
+                           text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[60px]">
+              Trusted by Organizations Nationwide
+            </h2>
+          </motion.div>
 
-        <div className="relative">
-          {/* Gradient overlays for fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 lg:w-24 
-                          bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 lg:w-24 
-                          bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
-          {/* Carousel wrapper */}
-          <div className="overflow-hidden bg-gradient-to-r from-muted/30 via-muted/20 to-muted/30 
-                          rounded-xl sm:rounded-2xl lg:rounded-3xl 
-                          py-6 sm:py-8 lg:py-12 
-                          border border-border/20 relative">
-            
-            {/* Infinite scrolling track */}
-            <div className="flex animate-trusted-scroll group-hover:animate-trusted-scroll-paused">
-              {/* First set of logos */}
-              {companies.map((company, index) => (
-                <CompanyLogo key={`first-${company.name}`} company={company} index={index} />
-              ))}
-              {/* Duplicate set for seamless loop */}
-              {companies.map((company, index) => (
-                <CompanyLogo key={`second-${company.name}`} company={company} index={index} />
+          <div className="w-full overflow-hidden">
+            <div className="flex items-center trusted-scroll w-max">
+              {duplicatedCompanies.map((company, index) => (
+                <div key={`trusted-${index}`} className="flex-shrink-0 mx-3 sm:mx-4 lg:mx-6">
+                  <img 
+                    src={company.url} 
+                    alt={`${company.name} logo`}
+                    className="h-16 w-auto max-w-32 sm:h-20 sm:max-w-40 lg:h-24 lg:max-w-48 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                </div>
               ))}
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
