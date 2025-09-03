@@ -491,7 +491,7 @@ export default function OpenTextPage() {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="transition-all duration-300 hover:scale-105">
-                  <a href="https://www.opentext.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://cybersecurity.opentext.com/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                     Visit OpenText
                   </a>
