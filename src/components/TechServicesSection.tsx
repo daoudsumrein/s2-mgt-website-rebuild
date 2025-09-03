@@ -94,7 +94,8 @@ const TechServicesSection = () => {
               : 'opacity-0 pointer-events-none translate-x-[-50px] z-0'
           }`}>
             <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl xl:text-[3.25rem] font-light leading-[1.3] mb-8 md:mb-10 lg:mb-12 xl:mb-14 text-white max-w-[700px] md:max-w-[800px]">
-              From endpoint to enterprise - secure everything, compromise nothing.
+              From endpoint to enterprise - secure everything, compromise nothing.<br />
+              Advanced threat detection and response for complete cyber resilience.
             </h1>
             
             <div className="flex flex-col gap-6 mb-8 md:grid md:grid-cols-2 md:gap-8 md:mb-10 lg:gap-10 lg:mb-12 xl:gap-12 max-w-[800px]">
