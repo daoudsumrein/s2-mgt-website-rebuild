@@ -110,7 +110,9 @@ export default function TrustedCompanies() {
 
   return (
     <section className="py-8 sm:py-12 lg:py-16 overflow-hidden relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-muted/10 to-background/80 
+                       sm:bg-gradient-to-b sm:from-background/90 sm:via-muted/15 sm:to-background/90
+                       lg:bg-gradient-to-b lg:from-background lg:via-muted/20 lg:to-background" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
