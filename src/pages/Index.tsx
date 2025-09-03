@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
+import TrustedCompanies from "@/components/TrustedCompanies";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
@@ -34,6 +35,7 @@ const Index = () => {
       </motion.div>
       <main>
         <HeroSection />
+        <TrustedCompanies />
         
         {/* Company Overview Section */}
         {/* <section className="py-16 bg-muted/30">

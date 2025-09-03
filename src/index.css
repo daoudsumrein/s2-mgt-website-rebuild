@@ -249,3 +249,39 @@ All colors MUST be HSL.
 .animate-partner-slide {
   animation: partner-slide 30s linear infinite;
 }
+
+/* Trusted Companies Carousel Animations */
+@keyframes trusted-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-trusted-scroll {
+  animation: trusted-scroll 80s linear infinite;
+}
+
+.animate-trusted-scroll-paused {
+  animation-play-state: paused;
+}
+
+@media (max-width: 1024px) {
+  .animate-trusted-scroll {
+    animation-duration: 60s;
+  }
+}
+
+@media (max-width: 768px) {
+  .animate-trusted-scroll {
+    animation-duration: 50s;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-trusted-scroll {
+    animation-duration: 40s;
+  }
+}
