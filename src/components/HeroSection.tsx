@@ -78,7 +78,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-white/90 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-2xl font-normal"
+            className="text-white/90 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 font-normal"
           >
             S2 drives digital transformation with consultancy-led IT modernization and trusted security solutions for global enterprises.
           </motion.p>
