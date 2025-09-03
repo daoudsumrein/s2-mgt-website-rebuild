@@ -50,12 +50,12 @@ const TechServicesSection = () => {
       {/* Container */}
       <div className="w-full px-4 relative z-[5] mt-20 md:px-8 md:mt-24 lg:px-16 max-w-[1200px] lg:ml-0 lg:mr-auto">
         {/* Content Sections Container */}
-        <div className="relative">
+        <div className="relative min-h-[600px]">
           {/* Data Protection Section */}
-          <div className={`transition-all duration-[400ms] ease-in-out ${
+          <div className={`absolute inset-0 transition-all duration-[600ms] ease-out ${
             activeSection === 'data-protection' 
-              ? 'opacity-100 pointer-events-auto translate-x-0 relative' 
-              : 'opacity-0 pointer-events-none -translate-x-[100px] absolute'
+              ? 'opacity-100 pointer-events-auto translate-x-0 z-10' 
+              : 'opacity-0 pointer-events-none translate-x-[-50px] z-0'
           }`}>
             <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl xl:text-[3.25rem] font-light leading-[1.3] mb-8 md:mb-10 lg:mb-12 xl:mb-14 text-white max-w-[700px] md:max-w-[800px]">
               Ensure business continuity with rapid recovery from disruptions.
@@ -88,10 +88,10 @@ const TechServicesSection = () => {
           </div>
 
           {/* Cybersecurity Section */}
-          <div className={`transition-all duration-[400ms] ease-in-out ${
+          <div className={`absolute inset-0 transition-all duration-[600ms] ease-out ${
             activeSection === 'cybersecurity' 
-              ? 'opacity-100 pointer-events-auto translate-x-0 relative' 
-              : 'opacity-0 pointer-events-none -translate-x-[100px] absolute'
+              ? 'opacity-100 pointer-events-auto translate-x-0 z-10' 
+              : 'opacity-0 pointer-events-none translate-x-[-50px] z-0'
           }`}>
             <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl xl:text-[3.25rem] font-light leading-[1.3] mb-8 md:mb-10 lg:mb-12 xl:mb-14 text-white max-w-[700px] md:max-w-[800px]">
               From endpoint to enterprise - secure everything, compromise nothing.
