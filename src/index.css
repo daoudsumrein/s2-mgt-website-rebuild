@@ -65,6 +65,9 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
+    /* Custom heading color */
+    --heading-blue: 199 89% 48%; /* #0EA5E9 */
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;

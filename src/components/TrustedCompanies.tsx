@@ -120,9 +120,8 @@ export default function TrustedCompanies() {
           transition={{ duration: 0.8 }}
           className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold 
-                         bg-gradient-to-r from-primary via-primary-gradient to-accent 
-                         bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h2 className="font-inter font-bold text-heading-blue mb-4 sm:mb-6"
+              style={{ fontSize: '60px' }}>
             Trusted by Organizations Nationwide
           </h2>
         </motion.div>
