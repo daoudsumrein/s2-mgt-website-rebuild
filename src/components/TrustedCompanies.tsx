@@ -113,7 +113,7 @@ export default function TrustedCompanies() {
             className="text-center mb-8 sm:mb-12 lg:mb-16"
           >
             <h2 className="font-inter font-bold text-heading-blue mb-4 sm:mb-6
-                           text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[60px]">
+                           text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[40px]">
               Trusted by Organizations Nationwide
             </h2>
           </motion.div>
