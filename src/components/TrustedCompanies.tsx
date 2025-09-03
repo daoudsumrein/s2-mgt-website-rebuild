@@ -122,8 +122,8 @@ export default function TrustedCompanies() {
           transition={{ duration: 0.8 }}
           className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <h2 className="font-inter font-bold text-heading-blue mb-4 sm:mb-6"
-              style={{ fontSize: '60px' }}>
+          <h2 className="font-inter font-bold text-heading-blue mb-4 sm:mb-6
+                         text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[60px]">
             Trusted by Organizations Nationwide
           </h2>
         </motion.div>
