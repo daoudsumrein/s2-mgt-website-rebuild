@@ -89,16 +89,16 @@ export default function TrustedCompanies() {
           100% { transform: translateX(-50%); }
         }
         .trusted-scroll {
-          animation: trustedScroll 20s linear infinite;
+          animation: trustedScroll 60s linear infinite;
         }
         @media (max-width: 768px) {
           .trusted-scroll {
-            animation-duration: 15s;
+            animation-duration: 50s;
           }
         }
         @media (max-width: 480px) {
           .trusted-scroll {
-            animation-duration: 12s;
+            animation-duration: 40s;
           }
         }
       `}</style>
