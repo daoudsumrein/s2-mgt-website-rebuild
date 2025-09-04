@@ -104,12 +104,12 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20"
+            className="mt-8 sm:mt-12 lg:mt-16 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20"
           >
-            <h3 className="text-white/90 text-center text-lg sm:text-xl font-medium mb-4">
+            <h3 className="text-white/90 text-center text-base sm:text-lg lg:text-xl font-medium mb-3 sm:mb-4">
               Trusted by enterprises across
             </h3>
-            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-white/80 text-sm sm:text-base">
+            <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 sm:gap-x-4 sm:gap-y-2 lg:gap-x-6 text-white/80 text-xs sm:text-sm lg:text-base">
               <span>Government</span>
               <span className="text-white/40">•</span>
               <span>Banking & Financial Services</span>
