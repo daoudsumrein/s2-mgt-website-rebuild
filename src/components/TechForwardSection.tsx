@@ -61,7 +61,7 @@ const TechForwardSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-cyan-50 text-gray-900 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-50 via-white to-cyan-50 text-gray-900 overflow-hidden py-12">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div 
