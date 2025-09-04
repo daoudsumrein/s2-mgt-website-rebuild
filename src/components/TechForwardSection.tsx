@@ -68,7 +68,7 @@ const TechForwardSection = () => {
           className="absolute inset-0 bg-gradient-to-r from-transparent via-[#2392CF]/30 to-transparent animate-pulse"
         />
         <div 
-          className="absolute inset-0 bg-gradient-to-bl from-teal-400/10 via-transparent to-purple-400/10"
+          className="absolute inset-0 bg-white"
         />
       </div>
       
