@@ -116,7 +116,7 @@ const TechServicesSection = () => {
 
             <a 
               href="/solutions/security" 
-              className="inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 text-xs sm:text-sm md:text-base font-medium transition-all duration-300 hover:translate-x-1 py-2"
+              className="inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 text-xs sm:text-sm md:text-base font-medium transition-all duration-300 hover:translate-x-1 py-2 mt-2 sm:mt-0"
             >
               Learn more about Cybersecurity
               <span className="transition-transform duration-300">→</span>
