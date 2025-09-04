@@ -63,9 +63,9 @@ const TechForwardSection = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-cyan-50 text-gray-900 overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0">
         <div 
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-[#2392CF]/30 to-transparent animate-pulse"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-[#2392CF]/30 to-transparent animate-pulse opacity-20"
         />
         <div 
           className="absolute inset-0 bg-white"
