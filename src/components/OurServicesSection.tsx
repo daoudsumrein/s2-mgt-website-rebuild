@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const OurServicesSection = () => {
   return (
     <motion.section 
-      className="bg-background py-12 px-4 sm:py-15 sm:px-5 md:py-20 text-center min-h-auto"
+      className="bg-background py-6 px-4 sm:py-8 sm:px-5 md:py-12 text-center min-h-auto"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
