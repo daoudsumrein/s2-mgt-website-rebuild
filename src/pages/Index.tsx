@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import TrustedCompanies from "@/components/TrustedCompanies";
 import TechServicesSection from "@/components/TechServicesSection";
 import OurServicesSection from "@/components/OurServicesSection";
+import TechForwardSection from "@/components/TechForwardSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
@@ -40,6 +41,7 @@ const Index = () => {
         <TrustedCompanies />
         <TechServicesSection />
         <OurServicesSection />
+        <TechForwardSection />
         
         {/* Company Overview Section */}
         {/* <section className="py-16 bg-muted/30">
