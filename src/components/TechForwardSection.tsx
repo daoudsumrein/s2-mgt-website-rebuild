@@ -75,7 +75,7 @@ const TechForwardSection = () => {
           {serviceCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              className="group relative bg-gray-50/80 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-500 hover:bg-blue-50/80 hover:border-blue-500/60 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)]"
+              className="group relative bg-gray-50/80 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-500 hover:bg-blue-50/80 hover:border-blue-500/60 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
