@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
+import { Target, Building2, Briefcase, Shield, Rocket } from 'lucide-react';
 
 const TechForwardSection = () => {
   const serviceCategories = [
     {
       title: "Strategic Consulting",
+      icon: Target,
       services: [
         "Strategic technology planning & roadmapping",
         "Vendor-neutral assessments & recommendations", 
@@ -14,6 +16,7 @@ const TechForwardSection = () => {
     },
     {
       title: "Solutions Architecture", 
+      icon: Building2,
       services: [
         "Cloud transformation design & strategy",
         "Enterprise cybersecurity architecture",
@@ -24,6 +27,7 @@ const TechForwardSection = () => {
     },
     {
       title: "Professional Services",
+      icon: Briefcase,
       services: [
         "Full project management & delivery",
         "Milestone-driven project execution", 
@@ -34,6 +38,7 @@ const TechForwardSection = () => {
     },
     {
       title: "Service Level Agreements",
+      icon: Shield,
       services: [
         "Customizable service level tiers",
         "Guaranteed recovery time objectives",
@@ -44,6 +49,7 @@ const TechForwardSection = () => {
     },
     {
       title: "App Modernization",
+      icon: Rocket,
       services: [
         "Legacy system assessment & planning",
         "Detailed dependency mapping",
@@ -85,7 +91,7 @@ const TechForwardSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
               
               <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-3" style={{ color: '#2C96E8' }}>
-                <div className="w-2 h-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.6)]" />
+                <category.icon size={20} style={{ color: '#2C96E8' }} />
                 {category.title}
               </h3>
               
