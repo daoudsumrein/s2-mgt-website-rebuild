@@ -61,11 +61,14 @@ const TechForwardSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-white text-gray-900 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-cyan-50 text-gray-900 overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-20">
         <div 
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/20 to-transparent animate-pulse"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-[#2392CF]/30 to-transparent animate-pulse"
+        />
+        <div 
+          className="absolute inset-0 bg-gradient-to-bl from-teal-400/10 via-transparent to-purple-400/10"
         />
       </div>
       
@@ -81,17 +84,17 @@ const TechForwardSection = () => {
           {serviceCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              className="group relative bg-gray-50/80 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-500 hover:bg-blue-50/80 hover:border-blue-500/60 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] overflow-hidden"
+              className="group relative bg-gradient-to-br from-white/90 via-white/80 to-cyan-50/60 backdrop-blur-sm border border-[#2392CF]/20 rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-500 hover:bg-gradient-to-br hover:from-[#2392CF]/5 hover:via-teal-50/80 hover:to-purple-50/40 hover:border-[#2392CF]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(35,146,207,0.15),0_0_20px_rgba(20,184,166,0.1)] overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#2392CF]/8 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
               
-              <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-3" style={{ color: '#2C96E8' }}>
-                <category.icon size={20} style={{ color: '#2C96E8' }} />
+              <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-3" style={{ color: '#2392CF' }}>
+                <category.icon size={20} style={{ color: '#2392CF' }} />
                 {category.title}
               </h3>
               
@@ -99,9 +102,9 @@ const TechForwardSection = () => {
                 {category.services.map((service, serviceIndex) => (
                   <li 
                     key={serviceIndex}
-                    className="text-gray-700 text-xs sm:text-sm lg:text-base leading-relaxed pl-6 relative group-hover:text-gray-900 transition-colors duration-300"
+                    className="text-gray-700 text-xs sm:text-sm lg:text-base leading-relaxed pl-6 relative group-hover:text-gray-800 transition-colors duration-300"
                   >
-                    <span className="absolute left-0 text-blue-600 font-bold group-hover:translate-x-1 transition-transform duration-300">
+                    <span className="absolute left-0 text-[#2392CF] font-bold group-hover:translate-x-1 group-hover:text-teal-600 transition-all duration-300">
                       →
                     </span>
                     {service}
