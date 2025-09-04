@@ -9,15 +9,15 @@ const OurServicesSection = () => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <motion.h1 
-        className="text-primary text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight m-0"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        Our Services
-      </motion.h1>
+        <motion.h2 
+          className="text-primary text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[40px] font-semibold tracking-tight m-0"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Our Services
+        </motion.h2>
     </motion.section>
   );
 };
