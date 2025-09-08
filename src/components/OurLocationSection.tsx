@@ -38,8 +38,8 @@ const OurLocationSection = () => {
             <iframe 
               src="https://www.google.com/maps/d/u/0/embed?mid=1wXbC_xoJqUfvjc9WIXbZK3bMcTp7nSA&ehbc=2E312F&noprof=1"
               width="640" 
-              height="600"
-              className="w-full h-[500px] lg:h-[600px] border-0 rounded-2xl"
+              height="480"
+              className="w-full h-96 lg:h-[480px] border-0 rounded-2xl"
               title="Our Office Locations"
               loading="lazy"
             />
