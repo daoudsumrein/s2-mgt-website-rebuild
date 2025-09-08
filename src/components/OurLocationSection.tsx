@@ -4,7 +4,7 @@ const OurLocationSection = () => {
   return (
     <section 
       className="relative text-white py-8 sm:py-12 md:py-16 lg:py-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url(/lovable-uploads/c9b2b3aa-fac0-44bd-989b-9647411e7456.png)' }}
+      style={{ backgroundImage: 'url(/lovable-uploads/877d6d8a-b597-4939-a15f-a1e228853466.png)' }}
     >
       {/* Background overlay for better text readability */}
       <motion.div 
