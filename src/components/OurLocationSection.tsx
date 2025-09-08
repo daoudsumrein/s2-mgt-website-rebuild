@@ -5,7 +5,7 @@ const OurLocationSection = () => {
     <section className="bg-gray-900 text-white py-20 min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto px-5">
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-15 items-center w-full"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center w-full"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
