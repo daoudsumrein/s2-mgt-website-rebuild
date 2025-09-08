@@ -19,7 +19,7 @@ const OurLocationSection = () => {
         >
           {/* Content Section */}
           <motion.div 
-            className="lg:pr-5 text-center lg:text-left bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl"
+            className="lg:pr-5 text-center lg:text-left bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl ml-8"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
