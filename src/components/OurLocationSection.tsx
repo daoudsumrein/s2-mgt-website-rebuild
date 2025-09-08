@@ -35,7 +35,7 @@ const OurLocationSection = () => {
 
           {/* Map Section */}
           <motion.div 
-            className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-md border border-white/20 p-2"
+            className="relative rounded-2xl overflow-hidden shadow-2xl"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
