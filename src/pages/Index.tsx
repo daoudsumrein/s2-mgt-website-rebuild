@@ -4,6 +4,7 @@ import TrustedCompanies from "@/components/TrustedCompanies";
 import TechServicesSection from "@/components/TechServicesSection";
 import OurServicesSection from "@/components/OurServicesSection";
 import TechForwardSection from "@/components/TechForwardSection";
+import OurLocationSection from "@/components/OurLocationSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
@@ -41,6 +42,7 @@ const Index = () => {
         <TrustedCompanies />
         <TechServicesSection />
         <OurServicesSection />
+        <OurLocationSection />
         <TechForwardSection />
         
         {/* Company Overview Section */}
