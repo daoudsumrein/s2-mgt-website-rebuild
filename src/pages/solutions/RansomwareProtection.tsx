@@ -157,7 +157,7 @@ export default function RansomwareProtection() {
           </section>
 
           {/* Hero Content */}
-          <section className="py-6 bg-white">
+          <section className="pt-6 pb-2 bg-white">
             <div className="max-w-4xl mx-auto px-6">
               <div className="text-center mb-24">
                 <h1 className="text-5xl font-light text-gray-900 mb-6">
