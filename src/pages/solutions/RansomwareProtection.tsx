@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Lock, Eye, Database, Settings, CheckCircle, AlertTriangle, Server, FileX, Target, ArrowRight } from "lucide-react";
+import { Shield, Lock, Eye, Database, Settings, CheckCircle, AlertTriangle, Server, FileX, Target } from "lucide-react";
 
 const features = [
   {
@@ -129,11 +129,8 @@ export default function RansomwareProtection() {
                           Cybersecurity Solutions
                         </Badge>
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                          AirGap Ransomware Protection
+                          Ransomware Protection
                         </h1>
-                        <p className="text-base md:text-lg text-slate-200 mb-2 leading-relaxed font-medium">
-                          Your Last Line of Defence Against Ransomware
-                        </p>
                         <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
                           Advanced ransomware defense systems with isolated backup vaults as your last line of defense against cyber threats.
                         </p>
@@ -159,263 +156,149 @@ export default function RansomwareProtection() {
             </div>
           </section>
 
-          {/* Problem Statement */}
-          <section className="py-12 md:py-16">
+          {/* Overview Section */}
+          <section className="py-16 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="bg-red-50 border-l-4 border-red-400 p-4 md:p-8 max-w-4xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-medium text-gray-900 mb-4">Your Backups Are At Risk</h2>
-                <p className="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
-                  For a long time, data backups have been the mainstay of ransomware recovery. Organizations rely on 
-                  backups as the primary approach for their cyber resiliency strategy.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
-                  Cyber criminals know this and have set their sights on your backup and data protection infrastructure, 
-                  with the aim of corrupting, encrypting, or deleting them. This makes it very challenging to execute a 
-                  reliable and timely recovery and allows attackers to ask for more extreme ransoms.
-                </p>
-                <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                  For many organizations, the challenge now is to protect that backup infrastructure. Backups should 
-                  provide the isolation needed from cyber-attacks, immutability from destructive threats, and, most 
-                  importantly, the intelligence to know if that data has already been compromised.
-                </p>
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                    The Evolution of Ransomware Defense
+                  </h2>
+                </div>
+                <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                  <p className="mb-6">
+                    For years, data backups have played a critical role in defending against ransomware attacks. Organizations have long depended on backup systems as the foundation of their cyber resilience strategies.
+                  </p>
+                  <p className="mb-6">
+                    However, cybercriminals are aware of this reliance and now frequently target backup and data protection systems directly. Their goal is to encrypt, tamper with, or delete backup data, making recovery far more difficult and giving them leverage to demand higher ransom payments.
+                  </p>
+                  <p>
+                    Today, organizations face the urgent challenge of safeguarding their backup infrastructure. Effective backup solutions must offer isolation from cyber threats, immutability to resist tampering or destruction, and most importantly, intelligent monitoring to detect if data has been compromised even before it's needed for recovery.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* Solution Overview */}
-          <section className="py-12 md:py-16">
+          {/* Features Section */}
+          <section className="py-16 md:py-24 bg-muted/30">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-2xl md:text-3xl font-light text-gray-900 text-center mb-8 md:mb-12">
-                  The Arrosoft AirGap Advantage
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Advanced Protection Features
                 </h2>
-                <div className="text-center mb-12 md:mb-16">
-                  <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-6">
-                    Arrosoft AirGap Ransomware Protection is designed to be the last line of defense against ransomware attacks. 
-                    It is used when all other methods have become powerless and cannot be recovered.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                    Arrosoft AirGap is a vendor-agnostic offline data protection solution that backs up your data and stores 
-                    it in a secure offline data vault with multiple layers of defence. These layers include isolation, 
-                    intelligence and immutability.
-                  </p>
-                </div>
-
-                {/* Three Pillars */}
-                <div className="grid gap-8 md:gap-12 md:grid-cols-3">
-                  <div className="text-center">
-                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-blue-600 rounded-full text-white font-bold">
-                      1
-                    </div>
-                    <h3 className="text-base md:text-lg font-medium text-gray-900 mb-4">ISOLATION</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Cybercriminals cannot corrupt data they do not know exists. AirGap isolates your backups using randomized port opening times to prevent the data from being discovered by attackers. Multi-factor authentication further isolates the AirGap vault from compromised network credentials.
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-blue-600 rounded-full text-white font-bold">
-                      2
-                    </div>
-                    <h3 className="text-base md:text-lg font-medium text-gray-900 mb-4">INTELLIGENCE</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Arrosoft AirGap deploys specially designed intelligent sensors to monitor and alert if the source data has been compromised. If suspicious behaviour is detected, AirGap isolates the infected server to prevent the corrupted data from being backed up. This ensures that the data in the AirGap vault is always clean.
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-blue-600 rounded-full text-white font-bold">
-                      3
-                    </div>
-                    <h3 className="text-base md:text-lg font-medium text-gray-900 mb-4">IMMUTABILITY</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Arrosoft AirGap deploys advanced technology to lock down the protected data and ensures that it cannot be tampered with, corrupted or destroyed. This includes protecting the backup database and catalogs to ensure that the data is recoverable even if the backup infrastructure has been damaged.
-                    </p>
-                  </div>
-                </div>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Comprehensive ransomware protection with cutting-edge security features
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                {features.map((feature, index) => (
+                  <Card key={index} className="h-full">
+                    <CardHeader>
+                      <feature.icon className="h-8 w-8 text-primary mb-2" />
+                      <CardTitle className="text-lg">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base">
+                        {feature.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </section>
 
-          {/* Architecture Diagram */}
-          <section className="py-12 md:py-16 bg-muted/30">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h3 className="text-xl md:text-2xl font-light text-gray-900 text-center mb-6 md:mb-8">
-                  Example Architecture
-                </h3>
-                <div className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-8 md:p-16 text-center">
-                  <div className="text-gray-400 mb-4">
-                    <svg className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <p className="text-gray-500 font-medium text-sm md:text-base">Primary Site → AirGap → Secondary Site</p>
-                  <p className="text-gray-400 text-xs md:text-sm mt-2">Insert your AirGap architecture diagram here</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Technical Details */}
-          <section className="py-12 md:py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 md:p-8">
-                  <h3 className="text-lg md:text-xl font-medium text-gray-900 mb-4">Built on NIST Cybersecurity Framework</h3>
-                  <p className="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
-                    Arrosoft AirGap is built based on the NIST Cybersecurity Framework to provide the highest level of data protection. 
-                    Working hand-in-hand with your existing backup software, AirGap introduces new and unique capabilities which will 
-                    supercharge your backup's ability to defend against and recover from a ransomware attack.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
-                    These capabilities include the ability to connect the AirGap vault to the backup server based on a randomized schedule 
-                    to make it more difficult for attackers to locate the vault. AirGap also deploys sensors throughout your environment to 
-                    monitor the production data in your servers. These sensors report any abnormal activities and will lock down the vault if 
-                    suspicious behaviour is detected.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                    Once the vault has been locked, it can only be unlocked using the built-in multi-factor authentication system. Arrosoft 
-                    AirGap utilizes the world's latest enterprise zero-trust concept and permissionless design to create the cleanest and 
-                    purest backup space for your precious data.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Packages */}
-          <section className="py-12 md:py-16 bg-muted/30">
+          {/* What We Deliver Section */}
+          <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <h2 className="text-2xl md:text-3xl font-light text-gray-900 text-center mb-8 md:mb-12">
-                  Packages
-                </h2>
-                <div className="grid gap-6 md:gap-8 md:grid-cols-3">
-                  {/* Bronze Package */}
-                  <div className="border border-orange-300 rounded-lg p-4 md:p-6 bg-orange-50">
-                    <div className="text-center mb-6">
-                      <div className="w-12 h-12 mx-auto mb-3 bg-orange-500 rounded text-white flex items-center justify-center font-bold">
-                        B
-                      </div>
-                      <h3 className="text-lg md:text-xl font-medium text-gray-900">Bronze</h3>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">AirGap Subscription License</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Support Coverage</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">8x5</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">New Features & Upgrades</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Executive Reporting</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Quarterly</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">AirGap Recovery Testing</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                    </div>
+                <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {[
+                    "Last line of defense against ransomware",
+                    "Secure offline data vault",
+                    "Clean, verified backup sets",
+                    "Resilient backup infrastructure",
+                    "Enhanced backup security layer",
+                    "Compliance-ready backup environment"
+                  ].map((deliverable, index) => (
+                    <Card key={index}>
+                      <CardContent className="p-6">
+                        <div className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
+                          <span className="text-sm font-medium">{deliverable}</span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Ideal For & Key Benefits */}
+          <section className="py-16 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <div className="grid lg:grid-cols-2 gap-12">
+                  {/* Ideal For */}
+                  <div>
+                    <Card className="border-blue-200 bg-blue-50/50">
+                      <CardHeader>
+                        <CardTitle className="flex items-center space-x-3 text-blue-700">
+                          <Target className="h-6 w-6" />
+                          <span>Ideal For</span>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-3">
+                          {[
+                            "Organizations with critical data assets",
+                            "Companies in high-risk industries",
+                            "Businesses with remote workforce",
+                            "Enterprises requiring compliance",
+                            "Organizations with legacy systems",
+                            "Companies needing rapid recovery"
+                          ].map((item, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                              <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
 
-                  {/* Silver Package */}
-                  <div className="border border-gray-300 rounded-lg p-4 md:p-6 bg-gray-50">
-                    <div className="text-center mb-6">
-                      <div className="w-12 h-12 mx-auto mb-3 bg-gray-500 rounded text-white flex items-center justify-center font-bold">
-                        S
-                      </div>
-                      <h3 className="text-lg md:text-xl font-medium text-gray-900">Silver</h3>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">AirGap Subscription License</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Support Coverage</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">24x7</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">New Features & Upgrades</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Executive Reporting</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Quarterly</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">AirGap Recovery Testing</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Health Check Analysis</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Gold Package */}
-                  <div className="border border-yellow-400 rounded-lg p-4 md:p-6 bg-yellow-50">
-                    <div className="text-center mb-6">
-                      <div className="w-12 h-12 mx-auto mb-3 bg-yellow-500 rounded text-white flex items-center justify-center font-bold">
-                        G
-                      </div>
-                      <h3 className="text-lg md:text-xl font-medium text-gray-900">Gold</h3>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">AirGap Subscription License</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Support Coverage</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">24x7</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">New Features & Upgrades</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Executive Reporting</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Monthly</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">AirGap Recovery Testing</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Twice a year</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Health Check Analysis</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Quarterly</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Disaster Recovery Testing</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Audit Reports</span>
-                        <span className="text-xs md:text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Remote Monitoring</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Remote Remediation</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Remote Management</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs md:text-sm text-gray-700">Remote Operations</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                    </div>
+                  {/* Key Benefits */}
+                  <div>
+                    <Card className="border-teal-200 bg-teal-50/50">
+                      <CardHeader>
+                        <CardTitle className="flex items-center space-x-3 text-teal-700">
+                          <Shield className="h-6 w-6" />
+                          <span>Key Benefits</span>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-3">
+                          {[
+                            "Proactive ransomware prevention",
+                            "Rapid recovery capabilities",
+                            "Minimal business disruption",
+                            "Enhanced security posture",
+                            "Reduced financial risk",
+                            "Improved business continuity"
+                          ].map((item, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                              <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
                 </div>
               </div>
@@ -423,20 +306,22 @@ export default function RansomwareProtection() {
           </section>
 
           {/* CTA Section */}
-          <section className="py-12 md:py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-xl md:text-2xl font-light text-gray-900 mb-6">
-                  Contact us today to find out how Arrosoft AirGap can be your last line of defense against ransomware attacks.
+          <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-secondary/10">
+            <div className="container mx-auto px-4 text-center">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Ready to Strengthen Your Ransomware Defenses?
                 </h2>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                  <Button className="bg-blue-600 text-white px-6 md:px-8 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-blue-700 transition-colors">
-                    Contact Sales <ArrowRight className="w-4 h-4" />
+                <p className="text-xl text-muted-foreground mb-8">
+                  Contact us to learn how our advanced ransomware protection can safeguard your critical data and ensure business continuity.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="text-lg px-8">
+                    Schedule Consultation
                   </Button>
-                  <div className="text-gray-600 text-center sm:text-left">
-                    <p className="mb-1">sales@arrosoft.com</p>
-                    <p className="text-xs md:text-sm">530 Union Ave. Suite 1 Middlesex, NJ 08846</p>
-                  </div>
+                  <Button variant="outline" size="lg" className="text-lg px-8">
+                    Download Datasheet
+                  </Button>
                 </div>
               </div>
             </div>
