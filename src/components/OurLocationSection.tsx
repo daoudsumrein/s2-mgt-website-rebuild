@@ -48,7 +48,13 @@ const OurLocationSection = () => {
               Our Office Locations
             </motion.h2>
             <h3 className="sr-only">
-              United Arab Emirates and Kingdom of Saudi Arabia Office Locations - UAE and KSA
+              United Arab Emirates Office Location - Dubai UAE
+            </h3>
+            <h3 className="sr-only">
+              Kingdom of Saudi Arabia Office Location - Riyadh KSA
+            </h3>
+            <h3 className="sr-only">
+              UAE and KSA Office Locations - Middle East Operations
             </h3>
             <motion.p 
               className="text-sm sm:text-base md:text-lg leading-relaxed text-white/90"
