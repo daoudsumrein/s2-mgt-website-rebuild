@@ -286,129 +286,13 @@ export default function EmailProtection() {
               <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
                 Our advanced filtering engine delivers extraordinary accuracy, reducing false negatives and false positives to keep everyone productive.
               </p>
-              <div className="backdrop-blur-lg bg-white/25 border border-white/25 rounded-2xl p-8 shadow-lg">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-search text-xl text-blue-600"></i>
-                    </div>
-                    <p className="text-sm text-gray-700 font-medium">Proprietary & multi-engine malware scanning</p>
-                  </motion.div>
-
-                  <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-list text-xl text-blue-600"></i>
-                    </div>
-                    <p className="text-sm text-gray-700 font-medium">Allow and block lists</p>
-                  </motion.div>
-
-                  <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-user-check text-xl text-blue-600"></i>
-                    </div>
-                    <p className="text-sm text-gray-700 font-medium">Sender verification and impersonation tests</p>
-                  </motion.div>
-
-                  <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-file-alt text-xl text-blue-600"></i>
-                    </div>
-                    <p className="text-sm text-gray-700 font-medium">Content and origin tests</p>
-                  </motion.div>
-
-                  <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-cogs text-xl text-blue-600"></i>
-                    </div>
-                    <p className="text-sm text-gray-700 font-medium">Admin and custom mail rules</p>
-                  </motion.div>
-
-                  <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-microscope text-xl text-blue-600"></i>
-                    </div>
-                    <p className="text-sm text-gray-700 font-medium">Deep analysis</p>
-                  </motion.div>
-
-                  <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.9 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-link text-xl text-blue-600"></i>
-                    </div>
-                    <p className="text-sm text-gray-700 font-medium">Link protection</p>
-                  </motion.div>
-
-                  <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.0 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-shield-alt text-xl text-blue-600"></i>
-                    </div>
-                    <p className="text-sm text-gray-700 font-medium">Attachment disarming/sandboxing</p>
-                  </motion.div>
-                </div>
-                <div className="mt-8 grid md:grid-cols-4 gap-4 text-center text-sm text-gray-600">
-                  <div className="flex items-center justify-center gap-2">
-                    <Lock className="w-4 h-4" />
-                    <span>Block/Quarantine</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <BarChart3 className="w-4 h-4" />
-                    <span>Reporting</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <AlertTriangle className="w-4 h-4" />
-                    <span>Alerts</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <RefreshCw className="w-4 h-4" />
-                    <span>Remediation</span>
-                  </div>
+              <div className="backdrop-blur-lg bg-white/25 border border-white/25 rounded-2xl p-4 md:p-8 shadow-lg">
+                <div className="flex justify-center">
+                  <img 
+                    src="/lovable-uploads/b2c56539-3c6d-4d5b-a80c-b6316cdabc6d.png" 
+                    alt="Multi-layer email filtering process diagram showing steps from automated traffic analysis through final delivery"
+                    className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl h-auto object-contain"
+                  />
                 </div>
               </div>
             </motion.div>
