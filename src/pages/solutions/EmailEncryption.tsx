@@ -4,7 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lock, Key, Shield, FileText, Users, Settings, Mail, Monitor, CheckCircle, Target } from "lucide-react";
+import { motion } from "framer-motion";
+import { Shield, Lock, Mail, Users, CheckCircle, BarChart3, Globe, Server, Settings, Zap, Eye, ArrowRight, Building, FileText, UserCheck, ArrowLeftRight, Monitor, Target } from "lucide-react";
 
 const features = [
   {
@@ -96,139 +97,305 @@ export default function EmailEncryption() {
           </div>
         </section>
 
-        {/* Overview Section */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Secure Email Communications
-                </h2>
-              </div>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
-                <p>
-                  Our email encryption solution allows for secure bidirectional email communication, protecting against impersonation risks and cyberattacks when sending sensitive information via email.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-16 md:py-24 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Advanced Protection Features
+        {/* SEO Meta Tags as Comments */}
+        {/* <title>OpenText Core Email Encryption - Secure Email Solutions</title> */}
+        {/* <meta name="description" content="Advanced email encryption with DLP filters, multiple delivery options, and regulatory compliance for healthcare, finance, and government." /> */}
+        
+        <section id="product-content" className="relative bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 py-20">
+          
+          {/* Product Hero */}
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div 
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                OpenText™ Core Email Encryption
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Comprehensive email encryption with cutting-edge security features
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Give your teams peace of mind with advanced email encryption that automatically scans and secures sensitive data. 
+                Increase threat defense while empowering safe communication outside your network.
               </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              {features.map((feature, index) => (
-                <Card key={index} className="h-full">
-                  <CardHeader>
-                    <feature.icon className="h-8 w-8 text-primary mb-2" />
-                    <CardTitle className="text-lg">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+            </motion.div>
 
-        {/* What We Deliver Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold mb-12 text-center">What We Deliver</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {deliverables.map((deliverable, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" />
-                        <span className="text-sm font-medium">{deliverable}</span>
+            {/* Remote Work Challenge */}
+            <motion.div 
+              className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-2xl p-8 mb-20 shadow-xl"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              whileHover={{ y: -10, scale: 1.02 }}
+            >
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Remote Work Security Challenges</h3>
+                  <div className="space-y-3 text-gray-700">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <span>Cyber threats increasing across all industries</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <span>Increased data leakage via email communications</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <span>Lack of visibility is a top concern for IT leaders</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-blue-600 mb-2">84%</div>
+                  <p className="text-gray-600">of IT leaders say remote work makes DLP more challenging</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Key Features Grid */}
+            <motion.div 
+              className="mb-20"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features & Differentiators</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    icon: Shield,
+                    title: "Default DLP Filters Included",
+                    description: "Advanced content filters included at no additional cost with customizable email DLP capabilities"
+                  },
+                  {
+                    icon: Zap,
+                    title: "Automatic & On-Demand Encryption", 
+                    description: "Seamless encryption for both sender and recipient with intelligent policy-based triggers"
+                  },
+                  {
+                    icon: Globe,
+                    title: "Multiple Secure Delivery Options",
+                    description: "Three delivery methods to fit any encryption need - from transparent to portal-based"
+                  },
+                  {
+                    icon: Users,
+                    title: "External Collaboration Portal",
+                    description: "Empower secure communication with external partners via Secure Compose portal"
+                  },
+                  {
+                    icon: BarChart3,
+                    title: "Comprehensive Reporting",
+                    description: "Graphical reporting for compliance, delivery methods, and security analytics"
+                  },
+                  {
+                    icon: Eye,
+                    title: "Transparent User Experience",
+                    description: "Secured by Zix™ with seamless integration that doesn't disrupt workflow"
+                  }
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-6 shadow-lg"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                    whileHover={{ y: -10, scale: 1.02 }}
+                  >
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <feature.icon className="w-6 h-6 text-blue-600" />
                       </div>
-                    </CardContent>
-                  </Card>
+                      <h4 className="font-semibold text-gray-900">{feature.title}</h4>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  </motion.div>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
+            </motion.div>
 
-        {/* Ideal For & Key Benefits */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12">
-                {/* Ideal For */}
-                <div>
-                  <Card className="border-blue-200 bg-blue-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-blue-700">
-                        <Target className="h-6 w-6" />
-                        <span>Ideal For</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {[
-                          "Organizations handling confidential data",
-                          "Companies in regulated industries",
-                          "Financial services institutions",
-                          "Healthcare organizations",
-                          "Legal and professional services",
-                          "Government agencies"
-                        ].map((item, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                {/* Key Benefits */}
-                <div>
-                  <Card className="border-teal-200 bg-teal-50/50">
-                    <CardHeader>
-                      <CardTitle className="flex items-center space-x-3 text-teal-700">
-                        <Shield className="h-6 w-6" />
-                        <span>Key Benefits</span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {[
-                          "Enhanced data confidentiality",
-                          "Regulatory compliance assurance",
-                          "Protection against data breaches",
-                          "Secure external communications",
-                          "Simplified encryption management",
-                          "Improved customer trust"
-                        ].map((item, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
+            {/* Delivery Options */}
+            <motion.div 
+              className="mb-20"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Multiple Secure Delivery Options</h3>
+              <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Best Method of Delivery (BMOD) automatically selects the optimal encryption approach for each recipient
+              </p>
+              <div className="grid lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: "Bi-directional Secure Delivery",
+                    description: "Message level encryption (S/MIME) between customers for seamless secure communication",
+                    icon: ArrowLeftRight
+                  },
+                  {
+                    title: "Policy-based TLS Delivery", 
+                    description: "Automatic TLS encryption based on configurable policies and recipient verification",
+                    icon: Shield
+                  },
+                  {
+                    title: "Secure Message Portal",
+                    description: "Web-based portal delivery accessible from any device, anywhere, anytime",
+                    icon: Monitor
+                  }
+                ].map((option, index) => (
+                  <motion.div
+                    key={index}
+                    className="backdrop-blur-lg bg-white/25 border border-white/25 rounded-xl p-8 shadow-lg text-center"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                    whileHover={{ y: -10, scale: 1.02 }}
+                  >
+                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <option.icon className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900 mb-4">{option.title}</h4>
+                    <p className="text-gray-600 leading-relaxed">{option.description}</p>
+                  </motion.div>
+                ))}
               </div>
-            </div>
+            </motion.div>
+
+            {/* Trust Indicators */}
+            <motion.div 
+              className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-2xl p-8 mb-20 shadow-xl"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Trusted by Industry Leaders</h3>
+              <div className="grid md:grid-cols-4 gap-8">
+                {[
+                  { label: "Customers", value: "100,000+", icon: Users },
+                  { label: "Messages Daily", value: "Millions", icon: Mail },
+                  { label: "U.S. Banks", value: "30%", icon: Building },
+                  { label: "Healthcare Orgs", value: "40%", icon: UserCheck }
+                ].map((indicator, index) => (
+                  <motion.div
+                    key={index}
+                    className="text-center"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  >
+                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <indicator.icon className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">{indicator.value}</div>
+                    <div className="text-gray-600 font-medium">{indicator.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="mt-12 text-center text-gray-600">
+                <p className="mb-2">Trusted by 24 state financial regulators • 100% of U.S. FFIEC regulators • U.S. SEC</p>
+                <p>7 divisions of the U.S. Treasury • 1,200+ U.S. hospitals</p>
+              </div>
+            </motion.div>
+
+            {/* Business Benefits */}
+            <motion.div 
+              className="mb-20"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Business Benefits</h3>
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                {[
+                  "Choose encryption methods that fit your specific business needs",
+                  "Single management console for multiple email security products", 
+                  "Deal with one trusted vendor for comprehensive cyber resilience",
+                  "Potential cyber insurance benefits and premium cost reduction"
+                ].map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start gap-4 backdrop-blur-lg bg-white/25 border border-white/25 rounded-lg p-6"
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                    whileHover={{ x: 10 }}
+                  >
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <p className="text-gray-700 leading-relaxed">{benefit}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Case Studies */}
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Customer Success Stories</h3>
+              <div className="grid lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    quote: "We are fully committed to securing every member's personal information.",
+                    author: "Mike Burnsides",
+                    title: "Executive Director",
+                    company: "Kentucky Retirement Systems"
+                  },
+                  {
+                    quote: "With the alarming rate of identity theft in the United States, email encryption was crucial for the protection of our members' information.",
+                    author: "Rifat Ikram", 
+                    title: "Vice President Electronic Delivery",
+                    company: "Justice Federal Credit Union"
+                  },
+                  {
+                    quote: "Email encryption and policies are a way for us to meet our HIPAA requirements and automatically prevent spillage for everyone in our organization.",
+                    author: "Patrick Santiamo",
+                    title: "Cyber Security Analyst", 
+                    company: "Memorial Hermann Health System"
+                  }
+                ].map((study, index) => (
+                  <motion.div
+                    key={index}
+                    className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                    whileHover={{ y: -10, scale: 1.02 }}
+                  >
+                    <div className="mb-6">
+                      <div className="text-4xl text-blue-600 mb-4">"</div>
+                      <p className="text-gray-700 leading-relaxed italic">{study.quote}</p>
+                    </div>
+                    <div className="border-t border-gray-200 pt-4">
+                      <p className="font-semibold text-gray-900">{study.author}</p>
+                      <p className="text-sm text-gray-600">{study.title}</p>
+                      <p className="text-sm text-blue-600 font-medium">{study.company}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Regulatory Compliance */}
+            <motion.div 
+              className="mt-20 text-center backdrop-blur-lg bg-white/20 border border-white/20 rounded-2xl p-12 shadow-xl"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">Regulatory Compliance Made Simple</h3>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Meet requirements for HIPAA, GDPR, GLBA, and other regulations while protecting personal information and reducing reputational risk.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+                <span className="bg-blue-100 px-4 py-2 rounded-full">Financial Services</span>
+                <span className="bg-green-100 px-4 py-2 rounded-full">Healthcare & Medical</span>
+                <span className="bg-purple-100 px-4 py-2 rounded-full">Government</span>
+                <span className="bg-orange-100 px-4 py-2 rounded-full">HIPAA Compliant</span>
+                <span className="bg-red-100 px-4 py-2 rounded-full">GDPR Ready</span>
+              </div>
+            </motion.div>
           </div>
         </section>
 
