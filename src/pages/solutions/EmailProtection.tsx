@@ -291,7 +291,7 @@ export default function EmailProtection() {
                   <img 
                     src="/lovable-uploads/b2c56539-3c6d-4d5b-a80c-b6316cdabc6d.png" 
                     alt="Multi-layer email filtering process diagram showing steps from automated traffic analysis through final delivery"
-                    className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl h-auto object-contain"
+                    className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto object-contain"
                   />
                 </div>
               </div>
