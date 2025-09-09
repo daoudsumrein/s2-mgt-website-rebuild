@@ -129,10 +129,10 @@ export default function RansomwareProtection() {
                           Cybersecurity Solutions
                         </Badge>
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                          Ransomware Protection
+                          AirGap Ransomware Protection
                         </h1>
                         <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
-                          Advanced ransomware defense systems with isolated backup vaults as your last line of defense against cyber threats.
+                          Your Last Line of Defence Against Ransomware
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3">
                           <Button size="default" className="text-base px-6 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Ransomware%20Protection%20Consultation', '_blank')}>
