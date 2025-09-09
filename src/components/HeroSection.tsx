@@ -71,6 +71,13 @@ export default function HeroSection() {
             Data Protection and Cybersecurity
           </h1>
           
+          {/* SEO H2s - Hidden but accessible */}
+          <h2 className="sr-only">DR Orchestration & Automation</h2>
+          <h2 className="sr-only">High Availability</h2>
+          <h2 className="sr-only">Disaster Recovery</h2>
+          <h2 className="sr-only">Backup & Recovery</h2>
+          <h2 className="sr-only">Server Migration</h2>
+          
           {/* Visible H2 with Typewriter Effect */}
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
