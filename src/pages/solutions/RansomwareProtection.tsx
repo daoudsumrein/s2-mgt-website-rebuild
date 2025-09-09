@@ -5,111 +5,83 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Lock, Eye, Database, Settings, CheckCircle, AlertTriangle, Server, FileX, Target, ArrowRight } from "lucide-react";
-
-const features = [
-  {
-    icon: Database,
-    title: "Isolation backup data in an offline, undiscoverable vault",
-    description: "Secure offline storage that remains invisible to potential attackers"
-  },
-  {
-    icon: Lock,
-    title: "Secured with multi-factor authentication (MFA)",
-    description: "Prevents credential-based attacks with robust authentication"
-  },
-  {
-    icon: Eye,
-    title: "Intelligence equipped with smart sensors",
-    description: "Monitor and source data integrity with advanced detection capabilities"
-  },
-  {
-    icon: CheckCircle,
-    title: "Ensures only clean data enters the vault",
-    description: "Verifies data integrity before storage to prevent contamination"
-  },
-  {
-    icon: Shield,
-    title: "Immutability ensures data cannot be modified, deleted, or corrupted",
-    description: "Protected data remains unchanged and secure from tampering"
-  },
-  {
-    icon: Settings,
-    title: "NIST cybersecurity framework compliance",
-    description: "Meets industry standards for comprehensive security"
-  },
-  {
-    icon: Server,
-    title: "Zero Trust Architecture",
-    description: "Never trust, always verify approach to security"
-  },
-  {
-    icon: Database,
-    title: "Randomized vault connectivity",
-    description: "Unpredictable connection patterns enhance security"
-  },
-  {
-    icon: AlertTriangle,
-    title: "Real-time threat detection",
-    description: "Immediate identification and response to security threats"
-  },
-  {
-    icon: FileX,
-    title: "Tamper-Resistant Vault",
-    description: "Protected storage that resists unauthorized modifications"
-  }
-];
-
-const deliverables = [
-  {
-    icon: Shield,
-    title: "Last Line of Defense Against Ransomware",
-    description: "Ultimate protection when all other security measures fail"
-  },
-  {
-    icon: Database,
-    title: "Secure Offline Data Vault",
-    description: "Isolated storage environment protected from online threats"
-  },
-  {
-    icon: CheckCircle,
-    title: "Clean, Verified Backup Sets",
-    description: "Guaranteed integrity of backup data for reliable recovery"
-  },
-  {
-    icon: Server,
-    title: "Resilient Backup Infrastructure",
-    description: "Robust system designed to withstand cyber attacks"
-  },
-  {
-    icon: Lock,
-    title: "Enhanced Backup Security Layer",
-    description: "Additional protection for critical backup systems"
-  },
-  {
-    icon: Settings,
-    title: "Compliance-Ready Backup Environment",
-    description: "Meeting regulatory requirements for data protection"
-  },
-  {
-    icon: AlertTriangle,
-    title: "Reduced Risk of Data Tampering",
-    description: "Minimized exposure to data manipulation threats"
-  },
-  {
-    icon: Eye,
-    title: "Operational Continuity in Crisis",
-    description: "Maintained business operations during security incidents"
-  }
-];
-
+const features = [{
+  icon: Database,
+  title: "Isolation backup data in an offline, undiscoverable vault",
+  description: "Secure offline storage that remains invisible to potential attackers"
+}, {
+  icon: Lock,
+  title: "Secured with multi-factor authentication (MFA)",
+  description: "Prevents credential-based attacks with robust authentication"
+}, {
+  icon: Eye,
+  title: "Intelligence equipped with smart sensors",
+  description: "Monitor and source data integrity with advanced detection capabilities"
+}, {
+  icon: CheckCircle,
+  title: "Ensures only clean data enters the vault",
+  description: "Verifies data integrity before storage to prevent contamination"
+}, {
+  icon: Shield,
+  title: "Immutability ensures data cannot be modified, deleted, or corrupted",
+  description: "Protected data remains unchanged and secure from tampering"
+}, {
+  icon: Settings,
+  title: "NIST cybersecurity framework compliance",
+  description: "Meets industry standards for comprehensive security"
+}, {
+  icon: Server,
+  title: "Zero Trust Architecture",
+  description: "Never trust, always verify approach to security"
+}, {
+  icon: Database,
+  title: "Randomized vault connectivity",
+  description: "Unpredictable connection patterns enhance security"
+}, {
+  icon: AlertTriangle,
+  title: "Real-time threat detection",
+  description: "Immediate identification and response to security threats"
+}, {
+  icon: FileX,
+  title: "Tamper-Resistant Vault",
+  description: "Protected storage that resists unauthorized modifications"
+}];
+const deliverables = [{
+  icon: Shield,
+  title: "Last Line of Defense Against Ransomware",
+  description: "Ultimate protection when all other security measures fail"
+}, {
+  icon: Database,
+  title: "Secure Offline Data Vault",
+  description: "Isolated storage environment protected from online threats"
+}, {
+  icon: CheckCircle,
+  title: "Clean, Verified Backup Sets",
+  description: "Guaranteed integrity of backup data for reliable recovery"
+}, {
+  icon: Server,
+  title: "Resilient Backup Infrastructure",
+  description: "Robust system designed to withstand cyber attacks"
+}, {
+  icon: Lock,
+  title: "Enhanced Backup Security Layer",
+  description: "Additional protection for critical backup systems"
+}, {
+  icon: Settings,
+  title: "Compliance-Ready Backup Environment",
+  description: "Meeting regulatory requirements for data protection"
+}, {
+  icon: AlertTriangle,
+  title: "Reduced Risk of Data Tampering",
+  description: "Minimized exposure to data manipulation threats"
+}, {
+  icon: Eye,
+  title: "Operational Continuity in Crisis",
+  description: "Maintained business operations during security incidents"
+}];
 export default function RansomwareProtection() {
-  return (
-    <>
-      <SEOHead 
-        title="Ransomware Protection Solutions | S2 Management Solutions"
-        description="Advanced ransomware protection with isolated backup vaults, smart monitoring, and tamper-resistant storage. Your last line of defense against cyber threats."
-        keywords="ransomware protection, backup security, cyber resilience, data vault, immutable backups, threat detection"
-      />
+  return <>
+      <SEOHead title="Ransomware Protection Solutions | S2 Management Solutions" description="Advanced ransomware protection with isolated backup vaults, smart monitoring, and tamper-resistant storage. Your last line of defense against cyber threats." keywords="ransomware protection, backup security, cyber resilience, data vault, immutable backups, threat detection" />
       <div className="min-h-screen flex flex-col">
         <Navigation />
         
@@ -255,11 +227,7 @@ export default function RansomwareProtection() {
                   Example Architecture
                 </h3>
                 <div className="bg-white rounded-lg p-4 shadow-sm border">
-                  <img 
-                    src="/lovable-uploads/254b6e8a-1f01-4f1f-842c-1e5098b969c3.png" 
-                    alt="AirGap Ransomware Protection Architecture Diagram showing Primary Site, Secondary Site, Software Integration, Backup Data flow, and AirGap Vault with security features"
-                    className="w-full h-auto rounded"
-                  />
+                  <img src="/lovable-uploads/254b6e8a-1f01-4f1f-842c-1e5098b969c3.png" alt="AirGap Ransomware Protection Architecture Diagram showing Primary Site, Secondary Site, Software Integration, Backup Data flow, and AirGap Vault with security features" className="w-full h-auto rounded" />
                 </div>
               </div>
             </div>
@@ -293,144 +261,7 @@ export default function RansomwareProtection() {
           </section>
 
           {/* Packages */}
-          <section className="py-12 md:py-16 bg-muted/30">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-light text-gray-900 text-center mb-12">
-                  Packages
-                </h2>
-                <div className="grid md:grid-cols-3 gap-8">
-                  {/* Bronze Package */}
-                  <div className="border border-orange-300 rounded-lg p-6 bg-orange-50">
-                    <div className="text-center mb-6">
-                      <div className="w-12 h-12 mx-auto mb-3 bg-orange-500 rounded text-white flex items-center justify-center font-bold">
-                        B
-                      </div>
-                      <h3 className="text-xl font-medium text-gray-900">Bronze</h3>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">AirGap Subscription License</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Support Coverage</span>
-                        <span className="text-sm font-medium text-gray-900">8x5</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">New Features & Upgrades</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Executive Reporting</span>
-                        <span className="text-sm font-medium text-gray-900">Quarterly</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">AirGap Recovery Testing</span>
-                        <span className="text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Silver Package */}
-                  <div className="border border-gray-300 rounded-lg p-6 bg-gray-50">
-                    <div className="text-center mb-6">
-                      <div className="w-12 h-12 mx-auto mb-3 bg-gray-500 rounded text-white flex items-center justify-center font-bold">
-                        S
-                      </div>
-                      <h3 className="text-xl font-medium text-gray-900">Silver</h3>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">AirGap Subscription License</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Support Coverage</span>
-                        <span className="text-sm font-medium text-gray-900">24x7</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">New Features & Upgrades</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Executive Reporting</span>
-                        <span className="text-sm font-medium text-gray-900">Quarterly</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">AirGap Recovery Testing</span>
-                        <span className="text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Health Check Analysis</span>
-                        <span className="text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Gold Package */}
-                  <div className="border border-yellow-400 rounded-lg p-6 bg-yellow-50">
-                    <div className="text-center mb-6">
-                      <div className="w-12 h-12 mx-auto mb-3 bg-yellow-500 rounded text-white flex items-center justify-center font-bold">
-                        G
-                      </div>
-                      <h3 className="text-xl font-medium text-gray-900">Gold</h3>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">AirGap Subscription License</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Support Coverage</span>
-                        <span className="text-sm font-medium text-gray-900">24x7</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">New Features & Upgrades</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Executive Reporting</span>
-                        <span className="text-sm font-medium text-gray-900">Monthly</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">AirGap Recovery Testing</span>
-                        <span className="text-sm font-medium text-gray-900">Twice a year</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Health Check Analysis</span>
-                        <span className="text-sm font-medium text-gray-900">Quarterly</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Disaster Recovery Testing</span>
-                        <span className="text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Audit Reports</span>
-                        <span className="text-sm font-medium text-gray-900">Annually</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Remote Monitoring</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Remote Remediation</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Remote Management</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Remote Operations</span>
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          
 
           {/* CTA Section */}
           <section className="py-12 md:py-16">
@@ -455,6 +286,5 @@ export default function RansomwareProtection() {
 
         <Footer />
       </div>
-    </>
-  );
+    </>;
 }
