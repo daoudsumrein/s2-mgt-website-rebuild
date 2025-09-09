@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import TypewriterText from "@/components/TypewriterText";
 
 export default function HeroSection() {
   return (
@@ -65,14 +66,31 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <motion.h1 
+          {/* SEO H1 - Hidden but accessible */}
+          <h1 className="sr-only">
+            Data Protection and Cybersecurity
+          </h1>
+          
+          {/* Visible H2 with Typewriter Effect */}
+          <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 tracking-tight"
           >
-            Data Protection and Cybersecurity
-          </motion.h1>
+            <TypewriterText 
+              texts={[
+                "DR Orchestration & Automation",
+                "High Availability", 
+                "Disaster Recovery",
+                "Backup & Recovery",
+                "Server Migration"
+              ]}
+              typingSpeed={100}
+              deletingSpeed={75}
+              delayBetweenTexts={2000}
+            />
+          </motion.h2>
           
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
