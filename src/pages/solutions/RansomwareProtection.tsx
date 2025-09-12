@@ -275,7 +275,7 @@ export default function RansomwareProtection() {
                     Contact Sales <ArrowRight className="w-4 h-4" />
                   </Button>
                   <div className="text-gray-600 text-center sm:text-left">
-                    <p className="mb-1">sales@arrosoft.com</p>
+                    <p className="mb-1">info@s2mgt.com</p>
                     <p className="text-sm">530 Union Ave. Suite 1 Middlesex, NJ 08846</p>
                   </div>
                 </div>
