@@ -271,7 +271,10 @@ export default function RansomwareProtection() {
                   Contact us today to find out how Arrosoft AirGap can be your last line of defense against ransomware attacks.
                 </h2>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                  <Button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-blue-700 transition-colors">
+                  <Button 
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-blue-700 transition-colors"
+                    onClick={() => window.location.href = '/contact'}
+                  >
                     Contact Sales <ArrowRight className="w-4 h-4" />
                   </Button>
                   <div className="text-gray-600 text-center sm:text-left">
