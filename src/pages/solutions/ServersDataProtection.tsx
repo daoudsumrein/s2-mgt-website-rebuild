@@ -557,7 +557,7 @@ export default function ServersDataProtection() {
               <div className="bg-gradient-to-r from-[#D13742] to-[#4D207C] rounded-2xl p-6 sm:p-8 text-white mx-2 sm:mx-0 relative overflow-hidden group hover:shadow-2xl hover:shadow-[#D13742]/25 transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 <div className="relative z-10">
-                  <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Ready to Make Your Assets Invisible?</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">Ready to Make Your Assets Invisible?</h2>
                   <p className="text-sm sm:text-base text-blue-100 mb-6 leading-relaxed">
                     Experience the power of stealth technology and protect what matters most to your organization.
                   </p>
