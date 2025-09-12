@@ -449,7 +449,7 @@ export default function ServersDataProtection() {
               </div>
               <div className="text-center">
                 <p className="text-blue-100 text-sm">Learn more</p>
-                <p className="text-white font-medium">https://www.arrosoft.com/en/services/protect/stealth-defense</p>
+                <a href="https://www.arrosoft.com/en/services/protect/stealth-defense" target="_blank" rel="noopener noreferrer" className="text-white font-medium hover:text-blue-200 transition-colors">www.arrosoft.com</a>
               </div>
             </div>
               </div>
