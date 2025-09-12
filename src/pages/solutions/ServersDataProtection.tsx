@@ -71,11 +71,6 @@ export default function ServersDataProtection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 bg-blue-50 rounded-full mb-4 sm:mb-6">
-                <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
-                <span className="text-xs sm:text-sm font-medium text-blue-600">Stealth Cybersecurity</span>
-              </div>
-              
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                 You Can't Hack What
                 <span className="block text-blue-600 mt-1">You Can't See</span>
