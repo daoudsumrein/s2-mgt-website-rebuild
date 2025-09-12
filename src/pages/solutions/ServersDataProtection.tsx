@@ -280,15 +280,17 @@ export default function ServersDataProtection() {
                 ].map((feature, index) => {
                   const Icon = feature.icon;
                   return (
-                    <div key={index} className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
-                      <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                      <p className="text-sm text-gray-600 mb-3 leading-relaxed">{feature.description}</p>
-                      <div className="bg-white rounded-lg px-3 py-2 border border-gray-200">
-                        <p className="text-xs text-green-600 font-semibold">{feature.benefit}</p>
-                      </div>
+                    <div key={index} className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors flex flex-col h-full">
+                  <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                    <p className="text-sm text-gray-600 mb-3 leading-relaxed">{feature.description}</p>
+                  </div>
+                  <div className="bg-white rounded-lg px-3 py-2 border border-gray-200 mt-auto">
+                    <p className="text-xs text-green-600 font-semibold">{feature.benefit}</p>
+                  </div>
                     </div>
                   );
                 })}
