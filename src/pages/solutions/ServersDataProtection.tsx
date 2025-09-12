@@ -421,12 +421,11 @@ export default function ServersDataProtection() {
               
               {/* Mobile-optimized diagram container */}
               <div className="bg-black rounded-2xl p-4 sm:p-8 min-h-[300px] sm:min-h-[400px] flex items-center justify-center mx-2 sm:mx-0">
-                {/* Insert your architecture diagram image here */}
-                <div className="text-center">
-                  <Layers className="w-12 h-12 text-white/40 mx-auto mb-4" />
-                  <p className="text-white/60 text-sm">Architecture Diagram Placeholder</p>
-                  <p className="text-white/40 text-xs mt-2">Replace with your system architecture image</p>
-                </div>
+                <img 
+                  src="/lovable-uploads/7c739278-4362-4df9-98e6-9890d08a4303.png" 
+                  alt="Stealth Defense System Architecture - Shows how Stealth Defense protects Active Directory, Web Server, Oracle DB, Backup Server, and vCenter Server with Security Broker access controls"
+                  className="w-full h-full object-contain max-w-full max-h-full rounded-lg"
+                />
               </div>
             </motion.div>
 
