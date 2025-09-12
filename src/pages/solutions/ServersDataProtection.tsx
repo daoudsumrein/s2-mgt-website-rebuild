@@ -442,16 +442,16 @@ export default function ServersDataProtection() {
                 <p className="text-sm sm:text-base text-blue-100 mb-6 leading-relaxed">
                   Experience the power of stealth technology and protect what matters most to your organization.
                 </p>
-                <div className="space-y-3 sm:flex sm:items-center sm:justify-center sm:gap-4 sm:space-y-0">
-                  <div className="text-center">
-                    <p className="text-blue-100 text-sm">Contact us today</p>
-                    <p className="text-white font-medium">contact@arrosoft.com</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-blue-100 text-sm">Learn more</p>
-                    <p className="text-white font-medium">www.arrosoft.com</p>
-                  </div>
-                </div>
+            <div className="space-y-3 sm:flex sm:items-center sm:justify-center sm:gap-4 sm:space-y-0">
+              <div className="text-center">
+                <p className="text-blue-100 text-sm">Contact us today</p>
+                <p className="text-white font-medium">info@s2mgt.com</p>
+              </div>
+              <div className="text-center">
+                <p className="text-blue-100 text-sm">Learn more</p>
+                <p className="text-white font-medium">arrosoft.com</p>
+              </div>
+            </div>
               </div>
             </motion.div>
           </div>
