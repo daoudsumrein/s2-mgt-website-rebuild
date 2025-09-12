@@ -288,3 +288,26 @@ All colors MUST be HSL.
     animation-duration: 8s;
   }
 }
+
+/* Gradient shift animation for text */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Float animation for background particles */
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(15px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
