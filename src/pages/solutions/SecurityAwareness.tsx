@@ -4,11 +4,9 @@ import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Shield, Zap, Clock, Target, BarChart, CheckCircle, BookOpen, Users, RefreshCw, TrendingDown, Server, Settings, Monitor, Award, Cloud, Globe, ShieldCheck, UserCog } from "lucide-react";
 
 export default function SecurityAwareness() {
-  const { ref, isInView } = useScrollAnimation();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -65,7 +63,6 @@ export default function SecurityAwareness() {
 
         {/* Enhanced Hero Statistics with Advanced Animations */}
         <motion.section 
-          ref={ref}
           className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative overflow-hidden"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
