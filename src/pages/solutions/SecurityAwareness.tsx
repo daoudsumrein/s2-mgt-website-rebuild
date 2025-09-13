@@ -805,11 +805,15 @@ export default function SecurityAwareness() {
                         damping: 15
                       }}
                     >
-                      {/* Card background with enhanced mobile touch response */}
+                      {/* Card background with enhanced gradient and no white bleed */}
                       <motion.div
-                        className="absolute inset-0 bg-white/8 hover:bg-white/12 rounded-lg sm:rounded-xl lg:rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/20"
-                        whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.15)" }}
-                        transition={{ duration: 0.3 }}
+                        className="absolute inset-0 bg-gradient-to-br from-slate-800/30 via-slate-700/20 to-slate-800/30 hover:from-slate-700/40 hover:via-slate-600/30 hover:to-slate-700/40 rounded-lg sm:rounded-xl lg:rounded-2xl backdrop-blur-md border border-slate-600/20 hover:border-slate-500/30 shadow-lg hover:shadow-xl"
+                        whileHover={{ 
+                          backgroundColor: "rgba(51, 65, 85, 0.25)",
+                          scale: 1.01,
+                          boxShadow: "0 10px 30px -10px rgba(0, 0, 0, 0.3)"
+                        }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
                       />
                       
                       {/* Icon container - Mobile optimized sizing */}
