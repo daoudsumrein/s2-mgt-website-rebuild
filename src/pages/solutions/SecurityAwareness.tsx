@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { Shield, Zap, Clock, Target, BarChart, CheckCircle, BookOpen, Users, RefreshCw, TrendingDown, Server, Settings, Monitor, Award } from "lucide-react";
+import { Shield, Zap, Clock, Target, BarChart, CheckCircle, BookOpen, Users, RefreshCw, TrendingDown, Server, Settings, Monitor, Award, Cloud, Globe, ShieldCheck, UserCog } from "lucide-react";
 
 export default function SecurityAwareness() {
   return (
@@ -553,62 +553,65 @@ export default function SecurityAwareness() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
                 {[
                   {
-                    icon: "fas fa-cloud-upload-alt",
+                    icon: Cloud,
                     title: "Fully Cloud-Based SaaS",
                     description: "No infrastructure required with automatic updates and 99.9% uptime guarantee",
                     color: "text-blue-400",
                     stat: "SaaS"
                   },
                   {
-                    icon: "fas fa-users-cog",
+                    icon: UserCog,
                     title: "Multi-Tenant Management",
                     description: "MSPs can manage training across multiple clients from a single global console",
                     color: "text-green-400",
                     stat: "MSP Ready"
                   },
                   {
-                    icon: "fas fa-certificate",
+                    icon: ShieldCheck,
                     title: "Compliance Automation",
                     description: "Automated reporting for cyber insurance and regulatory requirements",
                     color: "text-purple-400",
                     stat: "Auto Reports"
                   },
                   {
-                    icon: "fas fa-globe-americas",
+                    icon: Globe,
                     title: "Global Localization",
                     description: "Multiple languages with regionalized content for worldwide deployment",
                     color: "text-orange-400",
                     stat: "Multi-Language"
                   }
-                ].map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    variants={{
-                      hidden: { opacity: 0, y: 30 },
-                      visible: { 
-                        opacity: 1, 
-                        y: 0,
-                        transition: { duration: 0.6, delay: 0.1 }
-                      }
-                    }}
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    className="text-center p-4 sm:p-6"
-                    style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
-                  >
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 backdrop-blur-sm hover:bg-white/20 transition-colors">
-                      <i className={`${feature.icon} text-xl sm:text-2xl ${feature.color}`}></i>
-                    </div>
-                    <div className="text-xs sm:text-sm font-bold text-white/60 mb-1">
-                      {feature.stat}
-                    </div>
-                    <h3 className="text-base sm:text-lg font-semibold mb-2 leading-tight">
-                      {feature.title}
-                    </h3>
-                    <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </motion.div>
-                ))}
+                ].map((feature, index) => {
+                  const IconComponent = feature.icon;
+                  return (
+                    <motion.div
+                      key={index}
+                      variants={{
+                        hidden: { opacity: 0, y: 30 },
+                        visible: { 
+                          opacity: 1, 
+                          y: 0,
+                          transition: { duration: 0.6, delay: 0.1 }
+                        }
+                      }}
+                      whileHover={{ y: -5, scale: 1.02 }}
+                      className="text-center p-4 sm:p-6"
+                      style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
+                    >
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 backdrop-blur-sm hover:bg-white/20 transition-colors">
+                        <IconComponent className={`w-6 h-6 sm:w-8 sm:h-8 ${feature.color}`} />
+                      </div>
+                      <div className="text-xs sm:text-sm font-bold text-white/60 mb-1">
+                        {feature.stat}
+                      </div>
+                      <h3 className="text-base sm:text-lg font-semibold mb-2 leading-tight">
+                        {feature.title}
+                      </h3>
+                      <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </motion.div>
+                  );
+                })}
               </div>
 
               {/* Mobile-friendly CTA */}
