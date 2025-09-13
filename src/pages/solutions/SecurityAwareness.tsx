@@ -796,7 +796,7 @@ export default function SecurityAwareness() {
                       }}
                       whileTap={{ scale: 0.98 }}
                       viewport={{ once: true }}
-                      className="text-center p-3 sm:p-4 lg:p-6 relative group cursor-pointer transform-gpu touch-manipulation"
+                      className="text-center p-3 sm:p-4 lg:p-6 relative group cursor-pointer transform-gpu touch-manipulation rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden"
                       transition={{
                         delay: index * 0.08,
                         duration: 0.6,
@@ -807,13 +807,8 @@ export default function SecurityAwareness() {
                     >
                       {/* Card background with enhanced gradient and no white bleed */}
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-br from-slate-800/30 via-slate-700/20 to-slate-800/30 hover:from-slate-700/40 hover:via-slate-600/30 hover:to-slate-700/40 rounded-lg sm:rounded-xl lg:rounded-2xl backdrop-blur-md border border-slate-600/20 hover:border-slate-500/30 shadow-lg hover:shadow-xl"
-                        whileHover={{ 
-                          backgroundColor: "rgba(51, 65, 85, 0.25)",
-                          scale: 1.01,
-                          boxShadow: "0 10px 30px -10px rgba(0, 0, 0, 0.3)"
-                        }}
-                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="absolute inset-0 pointer-events-none bg-gradient-to-br from-slate-800/30 via-slate-700/20 to-slate-800/30 hover:from-slate-700/40 hover:via-slate-600/30 hover:to-slate-700/40 rounded-lg sm:rounded-xl lg:rounded-2xl backdrop-blur-md border border-slate-600/20 hover:border-slate-500/30 shadow-lg hover:shadow-xl"
+                        style={{ boxShadow: "0 0 0 0 rgba(0,0,0,0)" }}
                       />
                       
                       {/* Icon container - Mobile optimized sizing */}
@@ -846,7 +841,7 @@ export default function SecurityAwareness() {
                       
                       {/* Enhanced shine effect for mobile */}
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full rounded-lg sm:rounded-xl lg:rounded-2xl"
+                        className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full rounded-lg sm:rounded-xl lg:rounded-2xl"
                         transition={{ duration: 0.6, ease: "easeInOut" }}
                       />
                     </motion.div>
