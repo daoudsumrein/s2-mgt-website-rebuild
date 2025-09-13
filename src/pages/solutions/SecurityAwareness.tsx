@@ -714,43 +714,44 @@ export default function SecurityAwareness() {
         >
           <div className="max-w-7xl mx-auto">
             <motion.div 
-              className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white relative overflow-hidden"
-              whileHover={{ scale: 1.01 }}
-              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl sm:rounded-2xl lg:rounded-3xl p-3 sm:p-6 lg:p-8 xl:p-12 text-white relative overflow-hidden shadow-2xl"
+              whileHover={{ scale: 1.005 }}
+              transition={{ duration: 0.4 }}
             >
-              {/* Animated background pattern */}
+              {/* Animated background pattern - Mobile optimized */}
               <motion.div
-                className="absolute inset-0 opacity-5"
+                className="absolute inset-0 opacity-3 sm:opacity-5"
                 animate={{
                   backgroundPosition: ["0% 0%", "100% 100%"],
                 }}
                 transition={{
-                  duration: 20,
+                  duration: 25,
                   repeat: Infinity,
                   ease: "linear"
                 }}
                 style={{
-                  backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"4\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                  backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.08\"%3E%3Ccircle cx=\"20\" cy=\"20\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                  backgroundSize: "40px 40px",
                 }}
               />
               
               <motion.div 
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-8 sm:mb-12 relative z-10"
+                className="text-center mb-6 sm:mb-8 lg:mb-12 relative z-10 px-2"
               >
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
                   Perfect for MSPs and Enterprises
                 </h2>
-                <p className="text-lg sm:text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed px-2">
                   Multi-client management, automated delivery, and proven ROI make this the ideal security awareness solution for managed service providers and large organizations.
                 </p>
               </motion.div>
 
-              {/* Enhanced platform features with 3D hover effects */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+              {/* Enhanced platform features - Mobile-first responsive grid */}
+              <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-4 lg:gap-6 xl:gap-8 mb-6 sm:mb-8 lg:mb-12 px-2 sm:px-0">
                 {[
                   {
                     icon: Cloud,
@@ -761,7 +762,7 @@ export default function SecurityAwareness() {
                   },
                   {
                     icon: UserCog,
-                    title: "Multi-Tenant Management",
+                    title: "Multi-Tenant Management", 
                     description: "MSPs can manage training across multiple clients from a single global console",
                     color: "text-green-400",
                     stat: "MSP Ready"
@@ -769,7 +770,7 @@ export default function SecurityAwareness() {
                   {
                     icon: ShieldCheck,
                     title: "Compliance Automation",
-                    description: "Automated reporting for cyber insurance and regulatory requirements",
+                    description: "Automated reporting for cyber insurance and regulatory requirements", 
                     color: "text-purple-400",
                     stat: "Auto Reports"
                   },
@@ -785,56 +786,64 @@ export default function SecurityAwareness() {
                   return (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 50, rotateX: -20 }}
+                      initial={{ opacity: 0, y: 30, rotateX: -10 }}
                       whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                       whileHover={{ 
-                        y: -10, 
-                        scale: 1.05,
-                        rotateY: 10,
-                        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
+                        y: -8, 
+                        scale: 1.03,
+                        rotateY: 5,
+                        boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.4)"
                       }}
+                      whileTap={{ scale: 0.98 }}
                       viewport={{ once: true }}
-                      className="text-center p-4 sm:p-6 relative group cursor-pointer transform-gpu"
+                      className="text-center p-3 sm:p-4 lg:p-6 relative group cursor-pointer transform-gpu touch-manipulation"
                       transition={{
-                        delay: index * 0.1,
-                        duration: 0.8,
+                        delay: index * 0.08,
+                        duration: 0.6,
                         type: "spring",
-                        stiffness: 100
+                        stiffness: 120,
+                        damping: 15
                       }}
                     >
-                      {/* Card background with hover effect */}
+                      {/* Card background with enhanced mobile touch response */}
                       <motion.div
-                        className="absolute inset-0 bg-white/5 rounded-xl sm:rounded-2xl backdrop-blur-sm border border-white/10"
-                        whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                        className="absolute inset-0 bg-white/8 hover:bg-white/12 rounded-lg sm:rounded-xl lg:rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/20"
+                        whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.15)" }}
                         transition={{ duration: 0.3 }}
                       />
                       
+                      {/* Icon container - Mobile optimized sizing */}
                       <motion.div 
-                        className="w-14 h-14 sm:w-16 sm:h-16 bg-white/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 backdrop-blur-sm hover:bg-white/20 transition-colors relative z-10"
-                        whileHover={{ rotate: 360, scale: 1.1 }}
-                        transition={{ duration: 0.6 }}
+                        className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/10 hover:bg-white/20 rounded-lg sm:rounded-xl lg:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3 lg:mb-4 backdrop-blur-sm transition-colors relative z-10"
+                        whileHover={{ rotate: 15, scale: 1.1 }}
+                        whileTap={{ rotate: 0, scale: 0.95 }}
+                        transition={{ duration: 0.4 }}
                       >
-                        <IconComponent className={`w-6 h-6 sm:w-8 sm:h-8 ${feature.color}`} />
+                        <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 ${feature.color} drop-shadow-sm`} />
                       </motion.div>
                       
+                      {/* Stat badge - Mobile responsive */}
                       <motion.div 
-                        className="text-xs sm:text-sm font-bold text-white/60 mb-1 relative z-10"
-                        whileHover={{ color: feature.color.replace('text-', '#') }}
+                        className="text-xs sm:text-sm font-bold text-white/70 mb-1 sm:mb-2 relative z-10 uppercase tracking-wide"
+                        whileHover={{ scale: 1.05 }}
                       >
                         {feature.stat}
                       </motion.div>
                       
-                      <h3 className="text-base sm:text-lg font-semibold mb-2 leading-tight relative z-10">
+                      {/* Title - Responsive typography */}
+                      <h3 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 sm:mb-3 leading-tight relative z-10 text-white">
                         {feature.title}
                       </h3>
-                      <p className="text-slate-400 text-sm sm:text-base leading-relaxed relative z-10">
+                      
+                      {/* Description - Mobile optimized line height and spacing */}
+                      <p className="text-slate-400 text-xs sm:text-sm lg:text-base leading-relaxed sm:leading-relaxed lg:leading-relaxed relative z-10 px-1 sm:px-0">
                         {feature.description}
                       </p>
                       
-                      {/* Shine effect */}
+                      {/* Enhanced shine effect for mobile */}
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full rounded-xl sm:rounded-2xl"
-                        transition={{ duration: 0.8, ease: "easeInOut" }}
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full rounded-lg sm:rounded-xl lg:rounded-2xl"
+                        transition={{ duration: 0.6, ease: "easeInOut" }}
                       />
                     </motion.div>
                   );
