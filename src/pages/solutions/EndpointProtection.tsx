@@ -193,7 +193,7 @@ export default function EndpointProtection() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center particle-container">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[75vh] flex items-center justify-center particle-container">
           {/* Animated background particles */}
           <div className="absolute inset-0 pointer-events-none z-0 particle-field">
             {/* CSS Background particles */}
@@ -258,7 +258,7 @@ export default function EndpointProtection() {
             })}
           </div>
 
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
             <motion.div 
               ref={heroRef}
               initial={{ opacity: 0, y: 50 }}
@@ -267,7 +267,7 @@ export default function EndpointProtection() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }}>
+              <div className="relative bg-slate-900/90 border-2 rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 xl:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }}>
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
