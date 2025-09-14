@@ -259,13 +259,9 @@ export default function EndpointProtection() {
           </div>
 
           <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
-            <motion.div 
-              ref={heroRef}
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="max-w-7xl mx-auto"
-            >
+              <motion.div 
+                className="max-w-7xl mx-auto"
+              >
               {/* Hero Container */}
               <div className="relative bg-slate-900/90 border-2 rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 xl:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }}>
                 {/* Shine effect */}
