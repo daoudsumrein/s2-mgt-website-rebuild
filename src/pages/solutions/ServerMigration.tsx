@@ -119,7 +119,7 @@ export default function ServerMigration() {
         </section>
 
         {/* Statistics Section */}
-        <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <section className="relative overflow-hidden py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
           <div className="absolute inset-0" style={{
             backgroundImage: `
               radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.1), transparent),
@@ -163,7 +163,7 @@ export default function ServerMigration() {
         </section>
 
         {/* Key Benefits Section */}
-        <section className="py-12 sm:py-16 lg:py-20">
+        <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
@@ -245,7 +245,7 @@ export default function ServerMigration() {
         </section>
 
         {/* Migration Types Section */}
-        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-slate-100">
+        <section className="py-16 bg-gradient-to-br from-slate-50 to-slate-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
