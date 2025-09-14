@@ -56,44 +56,134 @@ export default function EmailEncryption() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 relative overflow-hidden md:py-[55px]">
-          <div className="container mx-auto px-2 md:px-4">
-            <div className="mx-auto">
-              {/* Floating Background Container with Gradient Border */}
-              <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
-                <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
-                  <div className="max-w-6xl mx-auto pl-8">
-                    <div className="grid lg:grid-cols-2 gap-4 items-center justify-items-start">
-                    {/* Left Content */}
-                    <div>
-                      <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
-                        Cybersecurity Solutions
-                      </Badge>
-                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        Email Encryption
-                      </h1>
-                      <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
-                        Secure email communications with encryption to eliminate impersonation risks and protect sensitive information.
-                      </p>
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <Button size="default" className="text-base px-6 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Email%20Encryption%20Consultation', '_blank')}>
-                          <span className="relative z-10">Schedule Consultation</span>
-                          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
-                        </Button>
-                      </div>
-                    </div>
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center particle-container">
+          {/* Animated background particles */}
+          <div className="absolute inset-0 pointer-events-none z-0 particle-field">
+            {/* CSS Background particles */}
+            <div className="absolute inset-0 opacity-20 particles-bg" style={{
+              backgroundImage: `
+                radial-gradient(2px 2px at 20px 30px, rgba(147, 51, 234, 0.4), transparent),
+                radial-gradient(1px 1px at 40px 70px, rgba(147, 51, 234, 0.3), transparent),
+                radial-gradient(3px 3px at 90px 40px, rgba(147, 51, 234, 0.5), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(147, 51, 234, 0.2), transparent)
+              `,
+              backgroundRepeat: 'repeat',
+              backgroundSize: '200px 200px',
+              animation: 'float 25s infinite linear'
+            }} />
+            
+            {/* Individual floating particles */}
+            {[...Array(25)].map((_, i) => {
+              const size = Math.random() * 6 + 2;
+              return (
+                <div
+                  key={i}
+                  className="absolute particle-dot transition-all duration-300"
+                  style={{
+                    '--particle-size': `${size}px`,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    backgroundColor: '#9333EA',
+                    opacity: Math.random() * 0.6 + 0.2,
+                    animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
+                    animationDelay: `${Math.random() * 10}s`,
+                    boxShadow: '0 0 10px rgba(147, 51, 234, 0.3)'
+                  } as React.CSSProperties}
+                />
+              );
+            })}
+            
+            {/* Orbiting particles */}
+            {[...Array(8)].map((_, i) => {
+              const size = Math.random() * 4 + 2;
+              return (
+                <div
+                  key={`orbit-${i}`}
+                  className="absolute transition-all duration-300 particle-orbit"
+                  style={{
+                    left: `${30 + Math.random() * 40}%`,
+                    top: `${30 + Math.random() * 40}%`,
+                    animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
+                    animationDelay: `${Math.random() * 8}s`
+                  }}
+                >
+                  <div
+                    className="particle-dot"
+                    style={{
+                      '--particle-size': `${size}px`,
+                      backgroundColor: '#9333EA',
+                      opacity: Math.random() * 0.7 + 0.3,
+                      boxShadow: '0 0 8px rgba(147, 51, 234, 0.4)'
+                    } as React.CSSProperties}
+                  />
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="max-w-7xl mx-auto"
+            >
+              {/* Hero Container */}
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#9333EA" }}>
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                
+                {/* Content Grid */}
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
+                  {/* Left Content */}
+                  <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
+                    <Badge variant="outline" className="border-purple-500/50 text-purple-400 bg-purple-500/10 hover:bg-purple-500/20 hover:border-purple-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
+                      <span className="relative">Cybersecurity Solutions</span>
+                    </Badge>
                     
-                    {/* Right Image Placeholder */}
-                    <div className="relative flex justify-center lg:justify-start lg:pl-8">
-                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10 px-[11px] mx-[60px]">
-                        
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                      <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-violet-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
+                        backgroundSize: '300% 300%',
+                        animation: 'gradientShift 4s ease-in-out infinite'
+                      }}>
+                        Email Encryption
+                      </span>
+                    </h1>
+                    
+                    <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                      Secure email communications with encryption to eliminate impersonation risks and protect sensitive information.
+                    </p>
+                    
+                    <Button size="lg" className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Email%20Encryption%20Consultation', '_blank')}>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
+                      <span className="relative">Schedule Consultation</span>
+                    </Button>
+                  </div>
+                  
+                  {/* Right Image */}
+                  <div className="order-first lg:order-last">
+                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-purple-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                        <div className="text-center">
+                          <motion.div
+                            whileHover={{ scale: 1.1, rotate: 5 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <Lock className="w-16 h-16 text-purple-400 mx-auto mb-4" />
+                          </motion.div>
+                          <p className="text-purple-300 text-lg font-semibold">Email Encryption</p>
+                          <p className="text-purple-200/80 text-sm mt-2">Secure Communications</p>
+                        </div>
                       </div>
-                    </div>
+                      
+                      {/* Overlay gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-purple-500/5 opacity-0 group-hover/media:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
