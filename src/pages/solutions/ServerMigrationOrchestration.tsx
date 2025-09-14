@@ -6,6 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Workflow, Settings, Monitor, Zap, CheckCircle, Target, Search, Network, Database, FileText, Clock, Users, Shield, Server, ArrowRight } from "lucide-react";
 const features = [{
   icon: Network,
@@ -54,7 +55,7 @@ export default function ServerMigrationOrchestration() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 relative overflow-hidden">
           {/* Animated background particles */}
-          <div className="fixed inset-0 pointer-events-none z-0">
+          <div className="absolute inset-0 pointer-events-none z-0">
             <div className="absolute inset-0 opacity-30" style={{
             backgroundImage: `
                   radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
@@ -103,13 +104,21 @@ export default function ServerMigrationOrchestration() {
               
               {/* Video Container */}
               <div className="w-full max-w-2xl mx-auto">
-                <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/visual hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-xl flex items-center justify-center border border-white/10">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vJ5ry3rSW9M?si=poh2f0UqFTsi9gXa" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="rounded-xl" />
+                <div className="relative group/visual hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
+                  <div className="absolute -inset-px rounded-xl pointer-events-none bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20" aria-hidden="true" />
+                  <div className="relative border border-white/10 rounded-xl overflow-hidden">
+                    <AspectRatio ratio={16 / 9}>
+                      <iframe
+                        src="https://www.youtube.com/embed/vJ5ry3rSW9M?si=poh2f0UqFTsi9gXa"
+                        title="TDS Migration Orchestration overview video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    </AspectRatio>
                   </div>
-                  
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/visual:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/visual:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" aria-hidden="true" />
                 </div>
               </div>
               
