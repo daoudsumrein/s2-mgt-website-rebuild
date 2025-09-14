@@ -128,17 +128,15 @@ export default function SecurityAwareness() {
                   {/* Right Image */}
                   <div className="order-first lg:order-last">
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-orange-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
-                        <div className="text-center">
-                          <motion.div
-                            whileHover={{ scale: 1.1, rotate: 5 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <ShieldCheck className="w-16 h-16 text-orange-400 mx-auto mb-4" />
-                          </motion.div>
-                          <p className="text-orange-300 text-lg font-semibold">Human Firewall</p>
-                          <p className="text-orange-200/80 text-sm mt-2">Security Education</p>
-                        </div>
+                      <div className="w-full h-full rounded-lg overflow-hidden bg-slate-900/50 backdrop-blur-sm border border-orange-500/20">
+                        <iframe
+                          src="https://player.vimeo.com/video/386842077?badge=0&autopause=0&player_id=0&app_id=58479"
+                          title="Vimeo video player"
+                          className="w-full h-full object-cover"
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                        />
                       </div>
                       
                       {/* Overlay gradient */}
