@@ -52,30 +52,40 @@ export default function ServerMigration() {
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Animated background particles */}
           <div className="fixed inset-0 pointer-events-none z-0">
-            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(2px_2px_at_20px_30px,rgba(74,144,226,0.3),transparent),radial-gradient(2px_2px_at_40px_70px,rgba(74,144,226,0.2),transparent),radial-gradient(1px_1px_at_90px_40px,rgba(74,144,226,0.4),transparent),radial-gradient(1px_1px_at_130px_80px,rgba(74,144,226,0.3),transparent)] bg-[length:150px_150px] animate-[float_20s_infinite_linear]"></div>
+            <div className="absolute inset-0 opacity-30" style={{
+              backgroundImage: `
+                radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(74, 144, 226, 0.3), transparent)
+              `,
+              backgroundRepeat: 'repeat',
+              backgroundSize: '150px 150px',
+              animation: 'float 20s infinite linear'
+            }} />
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-7xl mx-auto">
               {/* Hero Container */}
-              <div className="bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3),0_0_0_1px_rgba(74,144,226,0.1)] relative overflow-hidden transition-all duration-300 hover:shadow-[0_30px_60px_rgba(0,0,0,0.4),0_0_0_1px_rgba(74,144,226,0.3),0_0_30px_rgba(74,144,226,0.2)] hover:border-blue-400 hover:-translate-y-1 group">
+              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
-                {/* Hover Effect Overlay */}
-                <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-blue-500/10 to-transparent transition-all duration-500 group-hover:left-full"></div>
-                
+                {/* Content Grid */}
                 <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
                   {/* Left Content */}
                   <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
-                    <Badge variant="outline" className="bg-blue-500/20 text-blue-400 border-blue-500/30 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium w-fit hover:bg-blue-500/30 hover:border-blue-400 hover:scale-105 transition-all duration-300 relative overflow-hidden group/badge">
-                      <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-all duration-500 group-hover/badge:left-full"></div>
-                      <span className="relative z-10">Migration Solutions</span>
+                    <Badge variant="outline" className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
+                      <span className="relative">Migration Solutions</span>
                     </Badge>
                     
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                      <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent hover:scale-[1.02] hover:drop-shadow-[0_0_10px_rgba(74,144,226,0.3)] transition-all duration-300 cursor-default inline-block" style={{
-                      backgroundSize: '300% 300%',
-                      animation: 'gradientShift 4s ease-in-out infinite'
-                    }}>
+                      <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-teal-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
+                        backgroundSize: '300% 300%',
+                        animation: 'gradientShift 4s ease-in-out infinite'
+                      }}>
                         OpenText Migrate
                       </span>
                     </h1>
@@ -84,9 +94,9 @@ export default function ServerMigration() {
                       Seamless any-to-any server migrations with minimal downtime and maximum efficiency using advanced automation and continuous replication.
                     </p>
                     
-                    <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-[0_4px_15px_rgba(74,144,226,0.3)] hover:shadow-[0_10px_30px_rgba(74,144,226,0.5),0_0_20px_rgba(74,144,226,0.3)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-[1.02] transition-all duration-300 relative overflow-hidden group/btn" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Consultation', '_blank')}>
-                      <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-500 group-hover/btn:left-full"></div>
-                      <span className="relative z-10">Schedule Consultation</span>
+                    <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Server%20Migration%20Consultation', '_blank')}>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
+                      <span className="relative">Schedule Consultation</span>
                     </Button>
                   </div>
                   
@@ -97,7 +107,7 @@ export default function ServerMigration() {
                       {/* Video gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                       
-                      <div className="w-full h-full min-h-[320px] relative rounded-xl overflow-hidden">
+                      <div className="w-full h-full min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] relative rounded-xl overflow-hidden">
                         <iframe src="https://player.vimeo.com/video/735940664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen className="w-full h-full border-none absolute inset-0" title="Server Migration Solution" />
                       </div>
                     </div>
@@ -108,57 +118,63 @@ export default function ServerMigration() {
           </div>
         </section>
 
-        {/* OpenText Migrate Hero Section */}
-        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-          <div className="absolute inset-0 bg-[radial-gradient(2px_2px_at_20px_30px,rgba(74,144,226,0.1),transparent),radial-gradient(2px_2px_at_40px_70px,rgba(74,144,226,0.05),transparent),radial-gradient(1px_1px_at_90px_40px,rgba(74,144,226,0.1),transparent)]"></div>
+        {/* Statistics Section */}
+        <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.1), transparent),
+              radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.05), transparent),
+              radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.1), transparent)
+            `,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px'
+          }} />
           
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center text-white max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white">
                 OpenText Migrate
               </h2>
-              <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
                 Simple and seamless hardware upgrades, virtualization, switching hypervisors, and moving to, from and between clouds
               </p>
               
               {/* Statistics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-transform duration-300">
-                  <div className="text-3xl font-bold text-[#024cbb] mb-2">Zero</div>
-                  <div className="text-sm text-slate-400">Downtime</div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+                <div className="bg-white/5 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#024cbb] mb-1 sm:mb-2">Zero</div>
+                  <div className="text-xs sm:text-sm text-slate-400">Downtime</div>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-transform duration-300">
-                  <div className="text-3xl font-bold text-[#024cbb] mb-2">256-bit</div>
-                  <div className="text-sm text-slate-400">AES Encryption</div>
+                <div className="bg-white/5 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#024cbb] mb-1 sm:mb-2">256-bit</div>
+                  <div className="text-xs sm:text-sm text-slate-400">AES Encryption</div>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-transform duration-300">
-                  <div className="text-3xl font-bold text-[#024cbb] mb-2">Any</div>
-                  <div className="text-sm text-slate-400">Platform</div>
+                <div className="bg-white/5 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#024cbb] mb-1 sm:mb-2">Any</div>
+                  <div className="text-xs sm:text-sm text-slate-400">Platform</div>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:-translate-y-1 transition-transform duration-300">
-                  <div className="text-3xl font-bold text-[#024cbb] mb-2">Real-time</div>
-                  <div className="text-sm text-slate-400">Replication</div>
+                <div className="bg-white/5 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#024cbb] mb-1 sm:mb-2">Real-time</div>
+                  <div className="text-xs sm:text-sm text-slate-400">Replication</div>
                 </div>
               </div>
-              
-              
             </div>
           </div>
         </section>
 
         {/* Key Benefits Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
                 Why Choose OpenText Migrate?
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
                 Structured, repeatable migration with near-zero downtime and highly automated processes
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
               <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 <CardContent className="p-6">
