@@ -193,7 +193,7 @@ export default function EndpointProtection() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[75vh] flex items-center justify-center particle-container">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden min-h-screen sm:min-h-[70vh] md:min-h-[75vh] flex items-center justify-center particle-container">
           {/* Animated background particles */}
           <div className="absolute inset-0 pointer-events-none z-0 particle-field">
             {/* CSS Background particles */}
