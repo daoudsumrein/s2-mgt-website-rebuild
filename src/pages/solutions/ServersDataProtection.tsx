@@ -24,17 +24,17 @@ export default function ServersDataProtection() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-[#14B8A6] via-[#0D9488] to-[#14B8A6] py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Animated background particles */}
           <div className="absolute inset-0 pointer-events-none z-0">
             <div className="absolute inset-0 opacity-40" style={{
               backgroundImage: `
-                radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.4), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.3), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.25), transparent),
-                radial-gradient(3px 3px at 60px 20px, rgba(20, 184, 166, 0.6), transparent),
-                radial-gradient(2px 2px at 100px 60px, rgba(20, 184, 166, 0.4), transparent)
+                radial-gradient(2px 2px at 20px 30px, rgba(20, 184, 166, 0.4), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(20, 184, 166, 0.2), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(20, 184, 166, 0.3), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(20, 184, 166, 0.25), transparent),
+                radial-gradient(3px 3px at 60px 20px, rgba(20, 184, 166, 0.5), transparent),
+                radial-gradient(2px 2px at 100px 60px, rgba(20, 184, 166, 0.3), transparent)
               `,
               backgroundRepeat: 'repeat',
               backgroundSize: '150px 150px',
