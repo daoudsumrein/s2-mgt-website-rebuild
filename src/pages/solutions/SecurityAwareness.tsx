@@ -125,14 +125,14 @@ export default function SecurityAwareness() {
                     </Button>
                   </div>
                   
-                  {/* Right Image */}
+                  {/* Right Video */}
                   <div className="order-first lg:order-last">
-                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
+                    <div className="relative overflow-hidden aspect-video w-full max-w-lg mx-auto lg:mx-0 group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
                       <div className="w-full h-full rounded-lg overflow-hidden bg-slate-900/50 backdrop-blur-sm border border-orange-500/20">
                         <iframe
                           src="https://player.vimeo.com/video/386842077?badge=0&autopause=0&player_id=0&app_id=58479"
                           title="Vimeo video player"
-                          className="w-full h-full object-cover"
+                          className="w-full h-full"
                           frameBorder="0"
                           allow="autoplay; fullscreen; picture-in-picture"
                           allowFullScreen
