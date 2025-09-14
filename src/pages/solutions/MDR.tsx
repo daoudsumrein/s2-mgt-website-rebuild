@@ -87,44 +87,6 @@ export default function MDR() {
             </div>
           </div>
         </section>
-                      </span>
-                    </h1>
-                    
-                    <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                      Professional 24/7 security monitoring, threat hunting, and incident response by expert security analysts.
-                    </p>
-                    
-                    <Button size="lg" className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white shadow-lg hover:shadow-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=MDR%20Service%20Consultation', '_blank')}>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
-                      <span className="relative">Schedule Consultation</span>
-                    </Button>
-                  </div>
-                  
-                  {/* Right Image */}
-                  <div className="order-first lg:order-last">
-                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-teal-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-teal-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
-                        <div className="text-center">
-                          <motion.div
-                            whileHover={{ scale: 1.1, rotate: 5 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <Monitor className="w-16 h-16 text-teal-400 mx-auto mb-4" />
-                          </motion.div>
-                          <p className="text-teal-300 text-lg font-semibold">24/7 Monitoring</p>
-                          <p className="text-teal-200/80 text-sm mt-2">Expert Response</p>
-                        </div>
-                      </div>
-                      
-                      {/* Overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 via-transparent to-teal-500/5 opacity-0 group-hover/media:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Intro Section */}
         <section className="py-16" ref={introRef}>
