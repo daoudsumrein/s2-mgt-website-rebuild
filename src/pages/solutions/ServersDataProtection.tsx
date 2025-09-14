@@ -27,18 +27,30 @@ export default function ServersDataProtection() {
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Animated background particles */}
           <div className="absolute inset-0 pointer-events-none z-0">
-            <div className="absolute inset-0 opacity-40" style={{
+            <div className="absolute inset-0 opacity-60" style={{
               backgroundImage: `
-                radial-gradient(2px 2px at 20px 30px, rgba(20, 184, 166, 0.4), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(20, 184, 166, 0.2), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(20, 184, 166, 0.3), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(20, 184, 166, 0.25), transparent),
-                radial-gradient(3px 3px at 60px 20px, rgba(20, 184, 166, 0.5), transparent),
-                radial-gradient(2px 2px at 100px 60px, rgba(20, 184, 166, 0.3), transparent)
+                radial-gradient(3px 3px at 20px 30px, rgba(20, 184, 166, 0.8), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(20, 184, 166, 0.6), transparent),
+                radial-gradient(4px 4px at 90px 40px, rgba(20, 184, 166, 0.7), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(20, 184, 166, 0.5), transparent),
+                radial-gradient(5px 5px at 60px 20px, rgba(20, 184, 166, 0.9), transparent),
+                radial-gradient(3px 3px at 100px 60px, rgba(20, 184, 166, 0.6), transparent),
+                radial-gradient(2px 2px at 70px 90px, rgba(20, 184, 166, 0.4), transparent),
+                radial-gradient(4px 4px at 110px 10px, rgba(20, 184, 166, 0.8), transparent)
               `,
               backgroundRepeat: 'repeat',
-              backgroundSize: '150px 150px',
-              animation: 'float 20s infinite linear'
+              backgroundSize: '120px 120px',
+              animation: 'float 15s infinite linear'
+            }} />
+            <div className="absolute inset-0 opacity-40" style={{
+              backgroundImage: `
+                radial-gradient(2px 2px at 30px 50px, rgba(20, 184, 166, 0.6), transparent),
+                radial-gradient(3px 3px at 80px 20px, rgba(20, 184, 166, 0.5), transparent),
+                radial-gradient(1px 1px at 50px 80px, rgba(20, 184, 166, 0.7), transparent)
+              `,
+              backgroundRepeat: 'repeat',
+              backgroundSize: '100px 100px',
+              animation: 'float 25s infinite linear reverse'
             }} />
           </div>
 
