@@ -311,3 +311,59 @@ All colors MUST be HSL.
     transform: translate(0px, 0px);
   }
 }
+
+/* Particle animations for individual floating particles */
+@keyframes particleFloat0 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, -15px) rotate(90deg); }
+  50% { transform: translate(-5px, -25px) rotate(180deg); }
+  75% { transform: translate(-15px, -10px) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes particleFloat1 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-12px, 8px) rotate(120deg); }
+  66% { transform: translate(8px, -18px) rotate(240deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes particleFloat2 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(15px, 10px) rotate(72deg); }
+  40% { transform: translate(-8px, 20px) rotate(144deg); }
+  60% { transform: translate(-18px, -5px) rotate(216deg); }
+  80% { transform: translate(5px, -22px) rotate(288deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Orbiting particle animations */
+@keyframes orbit0 {
+  0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+}
+
+@keyframes orbit1 {
+  0% { transform: rotate(0deg) translateX(45px) rotate(0deg); }
+  100% { transform: rotate(-360deg) translateX(45px) rotate(360deg); }
+}
+
+/* Particle brightness effect on hover */
+.particle-container:hover .particle-dot {
+  opacity: 1 !important;
+  filter: brightness(1.8) saturate(1.4);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.9) !important;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.particle-container:hover .particles-bg {
+  opacity: 0.5 !important;
+  filter: brightness(1.6) saturate(1.2);
+  transition: all 0.3s ease;
+}
+
+.particle-container:hover .particle-orbit {
+  filter: brightness(1.5);
+  transition: all 0.3s ease;
+}
