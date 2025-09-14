@@ -62,10 +62,10 @@ export default function EmailEncryption() {
             {/* CSS Background particles */}
             <div className="absolute inset-0 opacity-20 particles-bg" style={{
               backgroundImage: `
-                radial-gradient(2px 2px at 20px 30px, rgba(147, 51, 234, 0.4), transparent),
-                radial-gradient(1px 1px at 40px 70px, rgba(147, 51, 234, 0.3), transparent),
-                radial-gradient(3px 3px at 90px 40px, rgba(147, 51, 234, 0.5), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(147, 51, 234, 0.2), transparent)
+                radial-gradient(2px 2px at 20px 30px, rgba(20, 184, 166, 0.4), transparent),
+                radial-gradient(1px 1px at 40px 70px, rgba(20, 184, 166, 0.3), transparent),
+                radial-gradient(3px 3px at 90px 40px, rgba(20, 184, 166, 0.5), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(20, 184, 166, 0.2), transparent)
               `,
               backgroundRepeat: 'repeat',
               backgroundSize: '200px 200px',
@@ -83,11 +83,11 @@ export default function EmailEncryption() {
                     '--particle-size': `${size}px`,
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-                    backgroundColor: '#9333EA',
+                    backgroundColor: '#14B8A6',
                     opacity: Math.random() * 0.6 + 0.2,
                     animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
                     animationDelay: `${Math.random() * 10}s`,
-                    boxShadow: '0 0 10px rgba(147, 51, 234, 0.3)'
+                    boxShadow: '0 0 10px rgba(20, 184, 166, 0.3)'
                   } as React.CSSProperties}
                 />
               );
@@ -111,9 +111,9 @@ export default function EmailEncryption() {
                     className="particle-dot"
                     style={{
                       '--particle-size': `${size}px`,
-                      backgroundColor: '#9333EA',
+                      backgroundColor: '#14B8A6',
                       opacity: Math.random() * 0.7 + 0.3,
-                      boxShadow: '0 0 8px rgba(147, 51, 234, 0.4)'
+                      boxShadow: '0 0 8px rgba(20, 184, 166, 0.4)'
                     } as React.CSSProperties}
                   />
                 </div>
@@ -129,21 +129,21 @@ export default function EmailEncryption() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#9333EA" }}>
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-teal-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }}>
                 {/* Shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-teal-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
                 {/* Content Grid */}
                 <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
                   {/* Left Content */}
                   <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
-                    <Badge variant="outline" className="border-purple-500/50 text-purple-400 bg-purple-500/10 hover:bg-purple-500/20 hover:border-purple-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm">
+                    <Badge variant="outline" className="border-teal-500/50 text-teal-400 bg-teal-500/10 hover:bg-teal-500/20 hover:border-teal-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm">
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
                       <span className="relative">Cybersecurity Solutions</span>
                     </Badge>
                     
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                      <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-violet-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block px-4 py-2" style={{
+                      <span className="bg-gradient-to-r from-teal-400 via-teal-500 to-emerald-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block px-4 py-2" style={{
                         backgroundSize: '300% 300%',
                         animation: 'gradientShift 4s ease-in-out infinite'
                       }}>
@@ -155,7 +155,7 @@ export default function EmailEncryption() {
                       Secure email communications with encryption to eliminate impersonation risks and protect sensitive information.
                     </p>
                     
-                    <Button size="lg" className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Email%20Encryption%20Consultation', '_blank')}>
+                    <Button size="lg" className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white shadow-lg hover:shadow-teal-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Email%20Encryption%20Consultation', '_blank')}>
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
                       <span className="relative">Schedule Consultation</span>
                     </Button>
@@ -163,29 +163,29 @@ export default function EmailEncryption() {
                   
                   {/* Right Image */}
                   <div className="order-first lg:order-last">
-                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-purple-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-teal-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-teal-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
                         <div className="text-center">
                           <motion.div
                             whileHover={{ scale: 1.1, rotate: 5 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <Lock className="w-16 h-16 text-purple-400 mx-auto mb-4" />
+                            <Lock className="w-16 h-16 text-teal-400 mx-auto mb-4" />
                           </motion.div>
-                          <p className="text-purple-300 text-lg font-semibold">Email Encryption</p>
-                          <p className="text-purple-200/80 text-sm mt-2">Secure Communications</p>
+                          <p className="text-teal-300 text-lg font-semibold">Email Encryption</p>
+                          <p className="text-teal-200/80 text-sm mt-2">Secure Communications</p>
                         </div>
                       </div>
                       
-                      {/* Overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-purple-500/5 opacity-0 group-hover/media:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+                       {/* Overlay gradient */}
+                       <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 via-transparent to-teal-500/5 opacity-0 group-hover/media:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </motion.div>
+           </div>
+         </section>
 
         {/* SEO Meta Tags as Comments */}
         {/* <title>OpenText Core Email Encryption - Secure Email Solutions</title> */}
