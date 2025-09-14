@@ -75,7 +75,7 @@ export default function ServerMigration() {
                 {/* Content Grid */}
                 <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
                   {/* Left Content */}
-                  <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
+                  <div className="space-y-4 sm:space-y-6 text-center lg:text-left order-last lg:order-first">
                     <Badge variant="outline" className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm">
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
                       <span className="relative">Migration Solutions</span>
@@ -101,13 +101,13 @@ export default function ServerMigration() {
                   </div>
                   
                   {/* Right Video */}
-                  <div className="relative">
-                    <div className="relative overflow-hidden h-[280px] sm:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-xl">
+                  <div className="relative order-first lg:order-last">
+                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-xl">
                       
                       {/* Video gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-blue-500/10 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                       
-                      <div className="w-full h-full min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] relative rounded-xl overflow-hidden">
+                      <div className="w-full h-full min-h-[200px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[360px] relative rounded-xl overflow-hidden">
                         <iframe src="https://player.vimeo.com/video/735940664?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1&amp;title=0&amp;byline=0&amp;portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen className="w-full h-full border-none absolute inset-0" title="Server Migration Solution" />
                       </div>
                     </div>
