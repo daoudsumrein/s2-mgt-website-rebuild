@@ -91,20 +91,20 @@ export default function EmailProtection() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 relative overflow-hidden md:py-[55px]">
-          {/* Particle Container */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none particle-container">
-            {/* Background overlay with subtle gradient */}
-            <div className="absolute inset-0 opacity-30" style={{
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center particle-container">
+          {/* Animated background particles */}
+          <div className="absolute inset-0 pointer-events-none z-0 particle-field">
+            {/* CSS Background particles */}
+            <div className="absolute inset-0 opacity-20 particles-bg" style={{
               backgroundImage: `
-                radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.3), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(59, 130, 246, 0.2), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.4), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(59, 130, 246, 0.3), transparent)
+                radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.4), transparent),
+                radial-gradient(1px 1px at 40px 70px, rgba(59, 130, 246, 0.3), transparent),
+                radial-gradient(3px 3px at 90px 40px, rgba(59, 130, 246, 0.5), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(59, 130, 246, 0.2), transparent)
               `,
               backgroundRepeat: 'repeat',
-              backgroundSize: '150px 150px',
-              animation: 'float 20s infinite linear'
+              backgroundSize: '200px 200px',
+              animation: 'float 25s infinite linear'
             }} />
             
             {/* Individual floating particles */}
@@ -156,43 +156,69 @@ export default function EmailProtection() {
             })}
           </div>
 
-          <div className="container mx-auto px-2 md:px-4 relative z-10">
-            <div className="mx-auto">
-              {/* Floating Background Container with Gradient Border */}
-              <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
-                <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
-                  <div className="max-w-6xl mx-auto pl-8">
-                    <div className="grid lg:grid-cols-2 gap-4 items-center justify-items-start">
-                    {/* Left Content */}
-                    <div>
-                      <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
-                        Cybersecurity Solutions
-                      </Badge>
-                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        Email Threat Protection
-                      </h1>
-                      <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
-                        Advanced email protection with multi-layered filtering to block phishing, ransomware, and business email compromise.
-                      </p>
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <Button size="default" className="text-base px-6 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Email%20Protection%20Consultation', '_blank')}>
-                          <span className="relative z-10">Schedule Consultation</span>
-                          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
-                        </Button>
-                      </div>
-                    </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="max-w-7xl mx-auto"
+            >
+              {/* Hero Container */}
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#3B82F6" }}>
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                
+                {/* Content Grid */}
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
+                  {/* Left Content */}
+                  <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
+                    <Badge variant="outline" className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
+                      <span className="relative">Cybersecurity Solutions</span>
+                    </Badge>
                     
-                    {/* Right Image Placeholder */}
-                    <div className="relative flex justify-center lg:justify-start lg:pl-8">
-                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10 px-[11px] mx-[60px]">
-                        
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                      <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
+                        backgroundSize: '300% 300%',
+                        animation: 'gradientShift 4s ease-in-out infinite'
+                      }}>
+                        Email Threat Protection
+                      </span>
+                    </h1>
+                    
+                    <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                      Advanced email protection with multi-layered filtering to block phishing, ransomware, and business email compromise.
+                    </p>
+                    
+                    <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Email%20Protection%20Consultation', '_blank')}>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
+                      <span className="relative">Schedule Consultation</span>
+                    </Button>
+                  </div>
+                  
+                  {/* Right Image */}
+                  <div className="order-first lg:order-last">
+                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                        <div className="text-center">
+                          <motion.div
+                            whileHover={{ scale: 1.1, rotate: 5 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <Shield className="w-16 h-16 text-blue-400 mx-auto mb-4" />
+                          </motion.div>
+                          <p className="text-blue-300 text-lg font-semibold">Email Shield</p>
+                          <p className="text-blue-200/80 text-sm mt-2">99.9% Protection</p>
+                        </div>
                       </div>
-                    </div>
+                      
+                      {/* Overlay gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/media:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
