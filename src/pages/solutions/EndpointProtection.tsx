@@ -174,7 +174,7 @@ const itemVariants = {
 };
 
 export default function EndpointProtection() {
-  const { ref: heroRef, isInView: heroInView } = useScrollAnimation();
+  const { ref: heroContentRef, isInView: heroContentInView } = useScrollAnimation();
   const { ref: benefitsRef, isInView: benefitsInView } = useScrollAnimation();
   const { ref: featuresRef, isInView: featuresInView } = useScrollAnimation();
   const { ref: resilienceRef, isInView: resilienceInView } = useScrollAnimation();
@@ -260,10 +260,9 @@ export default function EndpointProtection() {
 
           <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
             <motion.div 
-              ref={heroRef}
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 }}
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
@@ -327,17 +326,17 @@ export default function EndpointProtection() {
 
         {/* Hero Content Section */}
         <motion.section
-          ref={heroRef}
+          ref={heroContentRef}
           className="py-16 md:py-24 bg-background"
           initial={{ opacity: 0 }}
-          animate={heroInView ? { opacity: 1 } : {}}
+          animate={heroContentInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
         >
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 50 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : {}}
+              animate={heroContentInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
