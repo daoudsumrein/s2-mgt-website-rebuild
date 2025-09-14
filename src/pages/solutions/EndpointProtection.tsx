@@ -195,18 +195,67 @@ export default function EndpointProtection() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Animated background particles */}
-          <div className="fixed inset-0 pointer-events-none z-0">
-            <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: `
-                  radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
-                  radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
-                  radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
-                  radial-gradient(1px 1px at 130px 80px, rgba(74, 144, 226, 0.3), transparent)
-                `,
-            backgroundRepeat: 'repeat',
-            backgroundSize: '150px 150px',
-            animation: 'float 20s infinite linear'
-          }} />
+          <div className="absolute inset-0 pointer-events-none z-0">
+            {/* CSS Background particles */}
+            <div className="absolute inset-0 opacity-20" style={{
+              backgroundImage: `
+                radial-gradient(2px 2px at 20px 30px, rgba(20, 184, 166, 0.4), transparent),
+                radial-gradient(1px 1px at 40px 70px, rgba(20, 184, 166, 0.3), transparent),
+                radial-gradient(3px 3px at 90px 40px, rgba(20, 184, 166, 0.5), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(20, 184, 166, 0.2), transparent)
+              `,
+              backgroundRepeat: 'repeat',
+              backgroundSize: '200px 200px',
+              animation: 'float 25s infinite linear'
+            }} />
+            
+            {/* Individual floating particles */}
+            {[...Array(25)].map((_, i) => {
+              const size = Math.random() * 6 + 2;
+              return (
+                <div
+                  key={i}
+                  className="absolute particle-dot transition-all duration-300"
+                  style={{
+                    '--particle-size': `${size}px`,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    backgroundColor: '#14B8A6',
+                    opacity: Math.random() * 0.6 + 0.2,
+                    animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
+                    animationDelay: `${Math.random() * 10}s`,
+                    boxShadow: '0 0 10px rgba(20, 184, 166, 0.3)'
+                  } as React.CSSProperties}
+                />
+              );
+            })}
+            
+            {/* Orbiting particles */}
+            {[...Array(8)].map((_, i) => {
+              const size = Math.random() * 4 + 2;
+              return (
+                <div
+                  key={`orbit-${i}`}
+                  className="absolute transition-all duration-300"
+                  style={{
+                    left: `${30 + Math.random() * 40}%`,
+                    top: `${30 + Math.random() * 40}%`,
+                    animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
+                    animationDelay: `${Math.random() * 8}s`
+                  }}
+                >
+                  <div
+                    className="particle-dot"
+                    style={{
+                      '--particle-size': `${size}px`,
+                      backgroundColor: '#14B8A6',
+                      opacity: Math.random() * 0.7 + 0.3,
+                      boxShadow: '0 0 8px rgba(20, 184, 166, 0.4)'
+                    } as React.CSSProperties}
+                  />
+                </div>
+              );
+            })}
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -216,8 +265,8 @@ export default function EndpointProtection() {
               transition={{ duration: 0 }}
               className="max-w-7xl mx-auto"
             >
-              {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+                {/* Hero Container */}
+                <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden" style={{ borderColor: "#14B8A6" }}>
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
