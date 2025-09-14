@@ -41,48 +41,52 @@ export default function ServersDataProtection() {
             }} />
             
             {/* Individual floating particles */}
-            {[...Array(25)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute rounded-full transition-all duration-300 particle-dot"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  width: `${Math.random() * 6 + 2}px`,
-                  height: `${Math.random() * 6 + 2}px`,
-                  backgroundColor: '#14B8A6',
-                  opacity: Math.random() * 0.6 + 0.2,
-                  animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
-                  animationDelay: `${Math.random() * 10}s`,
-                  boxShadow: '0 0 10px rgba(20, 184, 166, 0.3)'
-                }}
-              />
-            ))}
+            {[...Array(25)].map((_, i) => {
+              const size = Math.random() * 6 + 2;
+              return (
+                <div
+                  key={i}
+                  className="absolute particle-dot transition-all duration-300"
+                  style={{
+                    '--particle-size': `${size}px`,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    backgroundColor: '#14B8A6',
+                    opacity: Math.random() * 0.6 + 0.2,
+                    animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
+                    animationDelay: `${Math.random() * 10}s`,
+                    boxShadow: '0 0 10px rgba(20, 184, 166, 0.3)'
+                  } as React.CSSProperties}
+                />
+              );
+            })}
             
             {/* Orbiting particles */}
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={`orbit-${i}`}
-                className="absolute transition-all duration-300 particle-orbit"
-                style={{
-                  left: `${30 + Math.random() * 40}%`,
-                  top: `${30 + Math.random() * 40}%`,
-                  animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
-                  animationDelay: `${Math.random() * 8}s`
-                }}
-              >
+            {[...Array(8)].map((_, i) => {
+              const size = Math.random() * 4 + 2;
+              return (
                 <div
-                  className="rounded-full particle-dot"
+                  key={`orbit-${i}`}
+                  className="absolute transition-all duration-300 particle-orbit"
                   style={{
-                    width: `${Math.random() * 4 + 2}px`,
-                    height: `${Math.random() * 4 + 2}px`,
-                    backgroundColor: '#14B8A6',
-                    opacity: Math.random() * 0.7 + 0.3,
-                    boxShadow: '0 0 8px rgba(20, 184, 166, 0.4)'
+                    left: `${30 + Math.random() * 40}%`,
+                    top: `${30 + Math.random() * 40}%`,
+                    animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
+                    animationDelay: `${Math.random() * 8}s`
                   }}
-                />
-              </div>
-            ))}
+                >
+                  <div
+                    className="particle-dot"
+                    style={{
+                      '--particle-size': `${size}px`,
+                      backgroundColor: '#14B8A6',
+                      opacity: Math.random() * 0.7 + 0.3,
+                      boxShadow: '0 0 8px rgba(20, 184, 166, 0.4)'
+                    } as React.CSSProperties}
+                  />
+                </div>
+              );
+            })}
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

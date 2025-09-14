@@ -348,6 +348,16 @@ All colors MUST be HSL.
   100% { transform: rotate(-360deg) translateX(45px) rotate(360deg); }
 }
 
+/* Perfect circle particles */
+.particle-dot {
+  border-radius: 50% !important;
+  aspect-ratio: 1 / 1;
+  width: var(--particle-size) !important;
+  height: var(--particle-size) !important;
+  display: block;
+  overflow: hidden;
+}
+
 /* Particle brightness effect on hover */
 .particle-container:hover .particle-dot {
   opacity: 1 !important;
