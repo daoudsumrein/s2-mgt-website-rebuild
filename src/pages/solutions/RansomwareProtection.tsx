@@ -91,32 +91,82 @@ export default function RansomwareProtection() {
         <Navigation />
         
         <main className="flex-1">
-          <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center particle-container">
             {/* Animated background particles */}
-            <div className="fixed inset-0 pointer-events-none z-0">
-              <div className="absolute inset-0 opacity-30" style={{
+            <div className="absolute inset-0 pointer-events-none z-0 particle-field">
+              {/* CSS Background particles */}
+              <div className="absolute inset-0 opacity-20 particles-bg" style={{
                 backgroundImage: `
-                  radial-gradient(2px 2px at 20px 30px, rgba(239, 68, 68, 0.3), transparent),
-                  radial-gradient(2px 2px at 40px 70px, rgba(239, 68, 68, 0.2), transparent),
-                  radial-gradient(1px 1px at 90px 40px, rgba(239, 68, 68, 0.4), transparent),
-                  radial-gradient(1px 1px at 130px 80px, rgba(239, 68, 68, 0.3), transparent)
+                  radial-gradient(2px 2px at 20px 30px, rgba(239, 68, 68, 0.4), transparent),
+                  radial-gradient(1px 1px at 40px 70px, rgba(239, 68, 68, 0.3), transparent),
+                  radial-gradient(3px 3px at 90px 40px, rgba(239, 68, 68, 0.5), transparent),
+                  radial-gradient(1px 1px at 130px 80px, rgba(239, 68, 68, 0.2), transparent)
                 `,
                 backgroundRepeat: 'repeat',
-                backgroundSize: '150px 150px',
-                animation: 'float 20s infinite linear'
+                backgroundSize: '200px 200px',
+                animation: 'float 25s infinite linear'
               }} />
+              
+              {/* Individual floating particles */}
+              {[...Array(25)].map((_, i) => {
+                const size = Math.random() * 6 + 2;
+                return (
+                  <div
+                    key={i}
+                    className="absolute particle-dot transition-all duration-300"
+                    style={{
+                      '--particle-size': `${size}px`,
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      backgroundColor: '#EF4444',
+                      opacity: Math.random() * 0.6 + 0.2,
+                      animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
+                      animationDelay: `${Math.random() * 10}s`,
+                      boxShadow: '0 0 10px rgba(239, 68, 68, 0.3)'
+                    } as React.CSSProperties}
+                  />
+                );
+              })}
+              
+              {/* Orbiting particles */}
+              {[...Array(8)].map((_, i) => {
+                const size = Math.random() * 4 + 2;
+                return (
+                  <div
+                    key={`orbit-${i}`}
+                    className="absolute transition-all duration-300 particle-orbit"
+                    style={{
+                      left: `${30 + Math.random() * 40}%`,
+                      top: `${30 + Math.random() * 40}%`,
+                      animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
+                      animationDelay: `${Math.random() * 8}s`
+                    }}
+                  >
+                    <div
+                      className="particle-dot"
+                      style={{
+                        '--particle-size': `${size}px`,
+                        backgroundColor: '#EF4444',
+                        opacity: Math.random() * 0.7 + 0.3,
+                        boxShadow: '0 0 8px rgba(239, 68, 68, 0.4)'
+                      } as React.CSSProperties}
+                    />
+                  </div>
+                );
+              })}
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <motion.div 
-                ref={heroAnimation.ref} 
-                initial={{ opacity: 0, y: 50 }} 
-                animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} 
-                transition={{ duration: 0.8, ease: "easeOut" }} 
+                ref={heroAnimation.ref}
+                initial={{ opacity: 0, y: 50 }}
+                animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className="max-w-7xl mx-auto"
               >
                 {/* Hero Container */}
-                <div className="relative bg-slate-900/90 border-2 border-red-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-red-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+                <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-red-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#EF4444" }}>
                   {/* Shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                   
@@ -130,7 +180,7 @@ export default function RansomwareProtection() {
                       </Badge>
                       
                       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                        <span className="bg-gradient-to-r from-red-400 via-orange-500 to-red-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
+                        <span className="bg-gradient-to-r from-red-400 via-orange-500 to-red-600 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
                           backgroundSize: '300% 300%',
                           animation: 'gradientShift 4s ease-in-out infinite'
                         }}>
@@ -142,27 +192,26 @@ export default function RansomwareProtection() {
                         Advanced ransomware defense systems with isolated backup vaults as your last line of defense against cyber threats.
                       </p>
                       
-                      <Button 
-                        size="lg" 
-                        className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg hover:shadow-red-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" 
-                        onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Ransomware%20Protection%20Consultation', '_blank')}
-                      >
+                      <Button size="lg" className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg hover:shadow-red-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Ransomware%20Protection%20Consultation', '_blank')}>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
                         <span className="relative">Schedule Consultation</span>
                       </Button>
                     </div>
                     
-                    {/* Right Media Section */}
+                    {/* Right Image */}
                     <div className="order-first lg:order-last">
                       <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-red-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                        <div className="w-full h-full bg-gradient-to-br from-red-500/20 via-orange-500/20 to-red-600/20 rounded-lg flex items-center justify-center border border-white/10 relative overflow-hidden">
-                          <motion.div 
-                            whileHover={{ scale: 1.1, rotate: 5 }}
-                            transition={{ duration: 0.3 }}
-                            className="text-red-400 text-6xl"
-                          >
-                            <Shield />
-                          </motion.div>
+                        <div className="w-full h-full bg-gradient-to-br from-primary/20 via-red-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
+                          <div className="text-center">
+                            <motion.div
+                              whileHover={{ scale: 1.1, rotate: 5 }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <Shield className="w-16 h-16 text-red-400 mx-auto mb-4" />
+                            </motion.div>
+                            <p className="text-red-300 text-lg font-semibold">AirGap Protection</p>
+                            <p className="text-red-200/80 text-sm mt-2">Isolated Defense</p>
+                          </div>
                         </div>
                         
                         {/* Overlay gradient */}
