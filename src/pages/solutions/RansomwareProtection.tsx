@@ -92,8 +92,9 @@ export default function RansomwareProtection() {
         
         <main className="flex-1">
           <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
-            {/* Animated background particles */}
-            <div className="fixed inset-0 pointer-events-none z-0">
+            {/* Particle Container */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none particle-container">
+              {/* Background overlay with subtle gradient */}
               <div className="absolute inset-0 opacity-30" style={{
                 backgroundImage: `
                   radial-gradient(2px 2px at 20px 30px, rgba(239, 68, 68, 0.3), transparent),
@@ -105,6 +106,54 @@ export default function RansomwareProtection() {
                 backgroundSize: '150px 150px',
                 animation: 'float 20s infinite linear'
               }} />
+              
+              {/* Individual floating particles */}
+              {[...Array(25)].map((_, i) => {
+                const size = Math.random() * 6 + 2;
+                return (
+                  <div
+                    key={i}
+                    className="absolute particle-dot transition-all duration-300"
+                    style={{
+                      '--particle-size': `${size}px`,
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      backgroundColor: '#EF4444',
+                      opacity: Math.random() * 0.6 + 0.2,
+                      animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
+                      animationDelay: `${Math.random() * 10}s`,
+                      boxShadow: '0 0 10px rgba(239, 68, 68, 0.3)'
+                    } as React.CSSProperties}
+                  />
+                );
+              })}
+              
+              {/* Orbiting particles */}
+              {[...Array(8)].map((_, i) => {
+                const size = Math.random() * 4 + 2;
+                return (
+                  <div
+                    key={`orbit-${i}`}
+                    className="absolute transition-all duration-300 particle-orbit"
+                    style={{
+                      left: `${30 + Math.random() * 40}%`,
+                      top: `${30 + Math.random() * 40}%`,
+                      animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
+                      animationDelay: `${Math.random() * 8}s`
+                    }}
+                  >
+                    <div
+                      className="particle-dot"
+                      style={{
+                        '--particle-size': `${size}px`,
+                        backgroundColor: '#EF4444',
+                        opacity: Math.random() * 0.7 + 0.3,
+                        boxShadow: '0 0 8px rgba(239, 68, 68, 0.4)'
+                      } as React.CSSProperties}
+                    />
+                  </div>
+                );
+              })}
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

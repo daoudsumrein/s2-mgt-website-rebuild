@@ -92,7 +92,71 @@ export default function EmailProtection() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 relative overflow-hidden md:py-[55px]">
-          <div className="container mx-auto px-2 md:px-4">
+          {/* Particle Container */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none particle-container">
+            {/* Background overlay with subtle gradient */}
+            <div className="absolute inset-0 opacity-30" style={{
+              backgroundImage: `
+                radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(59, 130, 246, 0.2), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(59, 130, 246, 0.4), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(59, 130, 246, 0.3), transparent)
+              `,
+              backgroundRepeat: 'repeat',
+              backgroundSize: '150px 150px',
+              animation: 'float 20s infinite linear'
+            }} />
+            
+            {/* Individual floating particles */}
+            {[...Array(25)].map((_, i) => {
+              const size = Math.random() * 6 + 2;
+              return (
+                <div
+                  key={i}
+                  className="absolute particle-dot transition-all duration-300"
+                  style={{
+                    '--particle-size': `${size}px`,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    backgroundColor: '#3B82F6',
+                    opacity: Math.random() * 0.6 + 0.2,
+                    animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
+                    animationDelay: `${Math.random() * 10}s`,
+                    boxShadow: '0 0 10px rgba(59, 130, 246, 0.3)'
+                  } as React.CSSProperties}
+                />
+              );
+            })}
+            
+            {/* Orbiting particles */}
+            {[...Array(8)].map((_, i) => {
+              const size = Math.random() * 4 + 2;
+              return (
+                <div
+                  key={`orbit-${i}`}
+                  className="absolute transition-all duration-300 particle-orbit"
+                  style={{
+                    left: `${30 + Math.random() * 40}%`,
+                    top: `${30 + Math.random() * 40}%`,
+                    animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
+                    animationDelay: `${Math.random() * 8}s`
+                  }}
+                >
+                  <div
+                    className="particle-dot"
+                    style={{
+                      '--particle-size': `${size}px`,
+                      backgroundColor: '#3B82F6',
+                      opacity: Math.random() * 0.7 + 0.3,
+                      boxShadow: '0 0 8px rgba(59, 130, 246, 0.4)'
+                    } as React.CSSProperties}
+                  />
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="container mx-auto px-2 md:px-4 relative z-10">
             <div className="mx-auto">
               {/* Floating Background Container with Gradient Border */}
               <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
