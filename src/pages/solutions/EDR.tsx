@@ -52,60 +52,40 @@ export default function EDR() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
-          {/* Animated background particles */}
-          <div className="fixed inset-0 pointer-events-none z-0">
-            <div className="absolute inset-0 opacity-30" style={{
-              backgroundImage: `
-                radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(74, 144, 226, 0.3), transparent)
-              `,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '150px 150px',
-              animation: 'float 20s infinite linear'
-            }} />
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-7xl mx-auto">
-              {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
-                {/* Shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
-                
-                {/* Content Grid */}
-                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
-                  {/* Left Content */}
-                  <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
-                    <Badge variant="outline" className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
-                      <span className="relative">Cybersecurity Solutions</span>
-                    </Badge>
-                    
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                      <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
-                        backgroundSize: '300% 300%',
-                        animation: 'gradientShift 4s ease-in-out infinite'
-                      }}>
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-4 relative overflow-hidden md:py-[55px]">
+          <div className="container mx-auto px-2 md:px-4">
+            <div className="mx-auto">
+              {/* Floating Background Container with Gradient Border */}
+              <div className="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary via-blue-500 to-secondary">
+                <div className="bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 md:p-6">
+                  <div className="max-w-6xl mx-auto pl-8">
+                    <div className="grid lg:grid-cols-2 gap-4 items-center justify-items-start">
+                    {/* Left Content */}
+                    <div>
+                      <Badge variant="outline" className="mb-3 border-primary/40 text-primary bg-primary/10">
+                        Cybersecurity Solutions
+                      </Badge>
+                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                         Endpoint Detection & Response
-                      </span>
-                    </h1>
+                      </h1>
+                      <p className="text-base md:text-lg text-slate-200 mb-4 leading-relaxed">
+                        Advanced threat detection and response capabilities with real-time behavioral analytics for sophisticated cyber threats.
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button size="default" className="text-base px-6 relative border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=EDR%20Solution%20Consultation', '_blank')}>
+                          <span className="relative z-10">Schedule Consultation</span>
+                          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
+                        </Button>
+                      </div>
+                    </div>
                     
-                    <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                      Advanced threat detection and response capabilities with real-time behavioral analytics for sophisticated cyber threats.
-                    </p>
-                    
-                    <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto" onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=EDR%20Solution%20Consultation', '_blank')}>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
-                      <span className="relative">Schedule Consultation</span>
-                    </Button>
-                  </div>
-                  
-                  {/* Right Content - Can be added later if needed */}
-                  <div className="hidden lg:block">
-                    {/* Placeholder for future content */}
+                    {/* Right Image Placeholder */}
+                    <div className="relative flex justify-center lg:justify-start lg:pl-8">
+                      <div className="w-96 h-72 bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10 px-[11px] mx-[60px]">
+                        
+                      </div>
+                    </div>
+                    </div>
                   </div>
                 </div>
               </div>
