@@ -134,14 +134,13 @@ export default function ServerBackup() {
                   {/* Right Media Section */}
                   <div className="order-first lg:order-last">
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                       {/* Vimeo Video */}
-                      <div className="absolute inset-0 rounded-xl overflow-hidden">
+                      {/* Vimeo Video */}
+                      <div className="absolute inset-0">
                         <iframe
                           src="https://player.vimeo.com/video/799559127?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                          frameBorder="0"
                           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                          className="w-full h-full"
                           title="CloudAlly Demo"
+                          className="w-full h-full border-none rounded-xl"
                         />
                       </div>
                       
