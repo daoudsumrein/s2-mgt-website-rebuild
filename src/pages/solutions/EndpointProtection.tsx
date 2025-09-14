@@ -261,9 +261,9 @@ export default function EndpointProtection() {
           <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
             <motion.div 
               ref={heroRef}
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
