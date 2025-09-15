@@ -58,10 +58,10 @@ export default function ServerMigrationOrchestration() {
           <div className="absolute inset-0 pointer-events-none z-0">
             <div className="absolute inset-0 opacity-30" style={{
             backgroundImage: `
-                  radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
-                  radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
-                  radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
-                  radial-gradient(1px 1px at 130px 80px, rgba(74, 144, 226, 0.3), transparent)
+                  radial-gradient(2px 2px at 20px 30px, rgba(20, 184, 166, 0.4), transparent),
+                  radial-gradient(2px 2px at 40px 70px, rgba(20, 184, 166, 0.3), transparent),
+                  radial-gradient(1px 1px at 90px 40px, rgba(20, 184, 166, 0.45), transparent),
+                  radial-gradient(1px 1px at 130px 80px, rgba(20, 184, 166, 0.35), transparent)
                 `,
             backgroundRepeat: 'repeat',
             backgroundSize: '150px 150px',
@@ -85,7 +85,7 @@ export default function ServerMigrationOrchestration() {
               ease: "easeOut"
             }}>
                 {/* Hero Container */}
-                <div className="bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+                <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
                   {/* Shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                   
@@ -119,7 +119,7 @@ export default function ServerMigrationOrchestration() {
                     
                     {/* Right Media Section */}
                     <div className="order-first lg:order-last">
-                      <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/visual hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
+                      <div className="relative w-full overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/visual hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 rounded-lg sm:rounded-xl">
                         {/* Video Container */}
                         <div className="absolute inset-0">
                           <iframe
@@ -128,12 +128,12 @@ export default function ServerMigrationOrchestration() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin"
                             allowFullScreen
-                            className="w-full h-full border-none rounded-xl"
+                            className="w-full h-full border-none rounded-lg sm:rounded-xl"
                           />
                         </div>
                         
                         {/* Overlay gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/visual:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/visual:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg sm:rounded-xl" />
                       </div>
                     </div>
                   </div>
