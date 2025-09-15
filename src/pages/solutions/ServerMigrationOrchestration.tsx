@@ -53,9 +53,9 @@ export default function ServerMigrationOrchestration() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen flex items-center justify-center relative overflow-hidden py-16 md:py-24 lg:py-32">
           {/* Animated background particles */}
-          <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="fixed inset-0 pointer-events-none z-0">
             <div className="absolute inset-0 opacity-30" style={{
             backgroundImage: `
                   radial-gradient(2px 2px at 20px 30px, rgba(20, 184, 166, 0.4), transparent),
