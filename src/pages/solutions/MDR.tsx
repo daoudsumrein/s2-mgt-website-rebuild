@@ -135,17 +135,16 @@ export default function MDR() {
                   {/* Right Image */}
                   <div className="order-first lg:order-last">
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-blue-500/20 to-secondary/20 rounded-lg flex items-center justify-center border border-white/10">
-                        <div className="text-center">
-                          <motion.div
-                            whileHover={{ scale: 1.1, rotate: 5 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <Monitor className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-                          </motion.div>
-                          <p className="text-blue-300 text-lg font-semibold">24/7 Monitoring</p>
-                          <p className="text-blue-200/80 text-sm mt-2">Expert Response</p>
-                        </div>
+                      <div className="w-full h-full rounded-lg overflow-hidden border border-white/10">
+                        <iframe 
+                          className="w-full h-full" 
+                          src="https://www.youtube.com/embed/p_sfBn5ADzM?si=k3uC9XoegUGk3JnX" 
+                          title="YouTube video player" 
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          referrerPolicy="strict-origin-when-cross-origin" 
+                          allowFullScreen
+                        />
                       </div>
                       
                       {/* Overlay gradient */}
