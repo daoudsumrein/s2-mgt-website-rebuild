@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -165,240 +163,160 @@ export default function ServerMigration() {
         </section>
 
         {/* Key Benefits Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-12 sm:py-16 lg:py-20"
-        >
+        <section className="py-12 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center mb-8 sm:mb-12"
-            >
+            <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
                 Why Choose OpenText Migrate?
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
                 Structured, repeatable migration with near-zero downtime and highly automated processes
               </p>
-            </motion.div>
+            </div>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
-              {[
-                {
-                  icon: "fas fa-rocket",
-                  title: "Near-Zero Downtime",
-                  description: "Migrate workloads with minimal business disruption. Cutover takes just seconds or minutes.",
-                  color: "blue"
-                },
-                {
-                  icon: "fas fa-cogs",
-                  title: "Highly Automated",
-                  description: "Streamlined process eliminates manual steps and human error, reducing migration complexity.",
-                  color: "green"
-                },
-                {
-                  icon: "fas fa-unlock-alt",
-                  title: "Freedom from Lock-in",
-                  description: "Move freely between clouds, hypervisors, and hardware without vendor constraints.",
-                  color: "purple"
-                },
-                {
-                  icon: "fas fa-shield-alt",
-                  title: "Risk Elimination",
-                  description: "Reduces common migration risks through proven, repeatable processes and testing.",
-                  color: "blue"
-                },
-                {
-                  icon: "fas fa-bullseye",
-                  title: "Universal Compatibility",
-                  description: "Migrate any server workload to any target destination with comprehensive platform support.",
-                  color: "green"
-                },
-                {
-                  icon: "fas fa-trophy",
-                  title: "Award-winning Support",
-                  description: "Industry-recognized customer support to ensure successful migration outcomes.",
-                  color: "purple"
-                }
-              ].map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  whileHover={{ 
-                    y: -15, 
-                    scale: 1.05,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                    transition: { duration: 0.3 }
-                  }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
-                  
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ duration: 0.3 }}
-                    className={`text-5xl mb-6 relative z-10 ${
-                      benefit.color === 'blue' ? 'text-blue-500' : 
-                      benefit.color === 'green' ? 'text-green-500' : 
-                      'text-purple-500'
-                    }`}
-                  >
-                    <i className={benefit.icon}></i>
-                  </motion.div>
-                  <h3 className="text-xl font-semibold mb-4 relative z-10">{benefit.title}</h3>
-                  <p className="text-slate-600 relative z-10">{benefit.description}</p>
-                </motion.div>
-              ))}
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🚀</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Near-Zero Downtime</h3>
+                  <p className="text-muted-foreground">Migrate workloads with minimal business disruption. Cutover takes just seconds or minutes.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🔄</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Highly Automated</h3>
+                  <p className="text-muted-foreground">Streamlined process eliminates manual steps and human error, reducing migration complexity.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🔓</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Freedom from Lock-in</h3>
+                  <p className="text-muted-foreground">Move freely between clouds, hypervisors, and hardware without vendor constraints.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🛡️</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Risk Elimination</h3>
+                  <p className="text-muted-foreground">Reduces common migration risks through proven, repeatable processes and testing.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🎯</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Universal Compatibility</h3>
+                  <p className="text-muted-foreground">Migrate any server workload to any target destination with comprehensive platform support.</p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                    <span className="text-2xl">🏆</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">Award-winning Support</h3>
+                  <p className="text-muted-foreground">Industry-recognized customer support to ensure successful migration outcomes.</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Migration Types Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-slate-100"
-        >
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-slate-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center mb-8 sm:mb-12"
-            >
+            <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
                 Move Any Server Workload
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
                 Flexible migration options for any source to any target destination
               </p>
-            </motion.div>
+            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 max-w-6xl mx-auto">
               {["Physical-to-Physical", "Physical-to-Virtual", "Virtual-to-Virtual", "Onsite-to-Cloud", "Cloud-to-Cloud", "Cloud-back-Onsite"].map((type, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
-                  whileHover={{ 
-                    y: -8, 
-                    scale: 1.05,
-                    boxShadow: "0 15px 30px rgba(2, 76, 187, 0.3)",
-                    transition: { duration: 0.3 }
-                  }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-[#024cbb] to-[#006] text-white p-3 sm:p-4 rounded-lg sm:rounded-xl text-center font-semibold text-xs sm:text-sm cursor-pointer relative overflow-hidden group"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500 pointer-events-none" />
-                  <span className="relative">{type}</span>
-                </motion.div>
+                <div key={index} className="bg-gradient-to-br from-[#024cbb] to-[#006] text-white p-3 sm:p-4 rounded-lg sm:rounded-xl text-center font-semibold text-xs sm:text-sm hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-[#024cbb]/25 transition-all duration-300 cursor-pointer">
+                  {type}
+                </div>
               ))}
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Platform Support Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-12 sm:py-16 lg:py-20"
-        >
+        <section className="py-12 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center mb-8 sm:mb-12"
-            >
+            <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#024cbb] via-[#006] to-[#024cbb] bg-clip-text text-transparent">
                 Comprehensive Platform Support
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
                 Source and target platform compatibility across operating systems and environments
               </p>
-            </motion.div>
+            </div>
             
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-              {[
-                {
-                  title: "Source Operating Systems",
-                  icon: "fas fa-server",
-                  items: ["Microsoft Windows Server", "Red Hat Enterprise Linux", "Oracle Enterprise Linux", "CentOS", "SUSE Enterprise Linux", "Ubuntu"]
-                },
-                {
-                  title: "Target Environments",
-                  icon: "fas fa-cloud",
-                  items: ["VMware vSphere", "VMware vCloud Director", "VMware ESXi", "Microsoft Hyper-V", "Microsoft Azure Stack", "Microsoft Azure (Classic & ARM)"]
-                },
-                {
-                  title: "Cloud Platforms",
-                  icon: "fas fa-globe",
-                  items: ["Amazon Web Services (AWS)", "Microsoft Azure", "Google Cloud Platform", "Hybrid Cloud Architectures", "Multi-Cloud Environments", "Private Cloud Solutions"]
-                }
-              ].map((platform, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  whileHover={{ 
-                    y: -10, 
-                    scale: 1.02,
-                    transition: { duration: 0.3 }
-                  }}
-                  viewport={{ once: true }}
-                  className="bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl border-l-4 border-[#024cbb] shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group cursor-pointer"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
-                  
-                  <div className="flex items-center mb-4">
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-2xl text-[#024cbb] mr-3"
-                    >
-                      <i className={platform.icon}></i>
-                    </motion.div>
-                    <h4 className="font-semibold text-base sm:text-lg text-slate-800">{platform.title}</h4>
-                  </div>
-                  
-                  <ul className="space-y-2">
-                    {platform.items.map((item, itemIndex) => (
-                      <motion.li
-                        key={itemIndex}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: 0.5 + itemIndex * 0.1 }}
-                        viewport={{ once: true }}
-                        className="flex items-center text-xs sm:text-sm text-slate-600"
-                      >
-                        <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3 flex-shrink-0"></div>
-                        {item}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
+              <div className="bg-slate-50 p-4 sm:p-6 rounded-lg sm:rounded-xl border-l-4 border-[#024cbb]">
+                <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-slate-800">Source Operating Systems</h4>
+                <ul className="space-y-2">
+                  {["Microsoft Windows Server", "Red Hat Enterprise Linux", "Oracle Enterprise Linux", "CentOS", "SUSE Enterprise Linux", "Ubuntu"].map((os, index) => (
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-slate-600">
+                      <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3 flex-shrink-0"></div>
+                      {os}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-4 sm:p-6 rounded-lg sm:rounded-xl border-l-4 border-[#024cbb]">
+                <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-slate-800">Target Environments</h4>
+                <ul className="space-y-2">
+                  {["VMware vSphere", "VMware vCloud Director", "VMware ESXi", "Microsoft Hyper-V", "Microsoft Azure Stack", "Microsoft Azure (Classic & ARM)"].map((env, index) => (
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-slate-600">
+                      <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3 flex-shrink-0"></div>
+                      {env}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-4 sm:p-6 rounded-lg sm:rounded-xl border-l-4 border-[#024cbb]">
+                <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-slate-800">Cloud Platforms</h4>
+                <ul className="space-y-2">
+                  {["Amazon Web Services (AWS)", "Microsoft Azure", "Google Cloud Platform", "Hybrid Cloud Architectures", "Multi-Cloud Environments", "Private Cloud Solutions"].map((cloud, index) => (
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-slate-600">
+                      <div className="w-2 h-2 bg-[#024cbb] rounded-full mr-3 flex-shrink-0"></div>
+                      {cloud}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Migration Process Section */}
         <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-slate-100">
