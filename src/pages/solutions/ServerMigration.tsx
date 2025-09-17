@@ -332,8 +332,16 @@ export default function ServerMigration() {
             
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center max-w-7xl mx-auto">
               <div className="order-last lg:order-first">
-                <div className="bg-white rounded-lg sm:rounded-2xl p-3 sm:p-4 md:p-8 shadow-lg hover:scale-105 transition-transform duration-300">
-                  <img src="/lovable-uploads/3b568986-ceac-4168-b49c-ab14b2f2efd8.png" alt="Migration Process Diagram showing real-time replication from primary system to target system and planned cutover with near zero downtime" className="w-full h-auto object-contain rounded-lg sm:rounded-xl" />
+                <div className="bg-gradient-to-br from-primary/10 via-blue-500/10 to-secondary/10 rounded-lg sm:rounded-2xl p-8 md:p-12 shadow-lg hover:scale-105 transition-transform duration-300 border border-white/10">
+                  <div className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-primary to-primary/60 rounded-full flex items-center justify-center">
+                      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3">Real-Time Migration Process</h3>
+                    <p className="text-muted-foreground">Seamless transition from primary to target system with near-zero downtime</p>
+                  </div>
                 </div>
               </div>
               
