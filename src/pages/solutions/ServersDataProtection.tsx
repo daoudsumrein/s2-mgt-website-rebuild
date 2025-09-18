@@ -40,17 +40,16 @@ export default function ServersDataProtection() {
               animation: 'float 30s infinite linear'
             }} />
             
-            {/* Reduced floating particles */}
-            {[...Array(8)].map((_, i) => (
+            {/* Minimal floating particles */}
+            {[...Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-teal-400 rounded-full opacity-40"
+                className="absolute w-1 h-1 bg-teal-400 rounded-full opacity-30"
                 style={{
-                  left: `${20 + (i * 10)}%`,
-                  top: `${30 + (i * 5)}%`,
-                  animation: `particleFloat${i % 3} ${20 + (i * 2)}s infinite linear`,
-                  animationDelay: `${i * 2}s`,
-                  boxShadow: '0 0 6px rgba(20, 184, 166, 0.3)'
+                  left: `${25 + (i * 25)}%`,
+                  top: `${40 + (i * 10)}%`,
+                  animation: `particleFloat${i % 2} ${25 + (i * 5)}s infinite linear`,
+                  animationDelay: `${i * 3}s`
                 }}
               />
             ))}
