@@ -77,12 +77,14 @@ export default function ServersDataProtection() {
                  const particles = document.querySelectorAll('.particle');
                  particles.forEach(particle => {
                    (particle as HTMLElement).style.opacity = '1';
+                   (particle as HTMLElement).style.transition = 'opacity 0.3s ease';
                  });
                }} onMouseLeave={() => {
                  const particles = document.querySelectorAll('.particle');
                  particles.forEach(particle => {
                    const originalOpacity = particle.getAttribute('data-original-opacity') || '0.2';
                    (particle as HTMLElement).style.opacity = originalOpacity;
+                   (particle as HTMLElement).style.transition = 'opacity 0.3s ease';
                  });
                }}>
                 {/* Shine effect */}
