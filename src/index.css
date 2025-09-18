@@ -380,3 +380,37 @@ All colors MUST be HSL.
   filter: brightness(1.5);
   transition: all 0.3s ease;
 }
+
+/* Particle animations for hero sections */
+@keyframes particleFloat {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px); 
+  }
+  25% { 
+    transform: translateY(-20px) translateX(10px); 
+  }
+  50% { 
+    transform: translateY(-10px) translateX(-15px); 
+  }
+  75% { 
+    transform: translateY(-30px) translateX(5px); 
+  }
+}
+
+@keyframes particleGlow {
+  0%, 100% { 
+    opacity: 0.3; 
+  }
+  50% { 
+    opacity: 0.8; 
+  }
+}
+
+@keyframes float {
+  0% { 
+    background-position: 0% 0%, 0% 0%, 0% 0%; 
+  }
+  100% { 
+    background-position: 100% 100%, -100% -100%, 50% -50%; 
+  }
+}

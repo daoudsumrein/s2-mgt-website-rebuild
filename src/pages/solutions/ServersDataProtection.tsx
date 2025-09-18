@@ -26,9 +26,9 @@ export default function ServersDataProtection() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Green particle effects */}
-          <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="absolute inset-0 pointer-events-none z-0 group-hover:opacity-100 opacity-20 transition-opacity duration-500">
             {/* CSS-based background particles for smooth performance */}
-            <div className="absolute inset-0 opacity-20 peer-hover:opacity-100 transition-opacity duration-500" style={{
+            <div className="absolute inset-0" style={{
               backgroundImage: `
                 radial-gradient(2px 2px at 25% 35%, rgba(34, 197, 94, 0.4), transparent),
                 radial-gradient(1px 1px at 75% 65%, rgba(34, 197, 94, 0.3), transparent),
@@ -46,17 +46,19 @@ export default function ServersDataProtection() {
             {[...Array(12)].map((_, i) => (
               <div
                 key={i}
-                className="absolute rounded-full opacity-30"
+                className="absolute rounded-full animate-pulse"
                 style={{
                   width: `${1 + (i % 3)}px`,
                   height: `${1 + (i % 3)}px`,
                   backgroundColor: 'rgb(34, 197, 94)',
                   left: `${15 + (i * 7)}%`,
                   top: `${20 + (i * 6)}%`,
-                  animation: `particleFloat${i % 4} ${25 + (i * 3)}s infinite linear`,
-                  animationDelay: `${i * 1.5}s`,
-                  boxShadow: '0 0 8px rgba(34, 197, 94, 0.4)',
-                  filter: 'blur(0.5px)'
+                  animation: `
+                    particleFloat 8s infinite ease-in-out ${i * 0.5}s,
+                    particleGlow 3s infinite ease-in-out ${i * 0.3}s
+                  `,
+                  boxShadow: '0 0 8px rgba(34, 197, 94, 0.6)',
+                  transform: `translate(${Math.sin(i) * 20}px, ${Math.cos(i) * 20}px)`
                 }}
               />
             ))}
@@ -71,7 +73,7 @@ export default function ServersDataProtection() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card peer" style={{ borderColor: "#14B8A6" }}>
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }}>
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
