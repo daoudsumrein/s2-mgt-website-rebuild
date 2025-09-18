@@ -27,17 +27,19 @@ export default function ServersDataProtection() {
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Optimized background particles */}
           <div className="absolute inset-0 pointer-events-none z-0">
-            {/* Simple CSS background particles */}
-            <div className="absolute inset-0 opacity-30" style={{
+            {/* Bright moving CSS background particles */}
+            <div className="absolute inset-0 opacity-70" style={{
               backgroundImage: `
-                radial-gradient(2px 2px at 25% 35%, rgba(20, 184, 166, 0.4), transparent),
-                radial-gradient(1px 1px at 75% 65%, rgba(20, 184, 166, 0.3), transparent),
-                radial-gradient(3px 3px at 45% 25%, rgba(20, 184, 166, 0.5), transparent),
-                radial-gradient(1px 1px at 85% 85%, rgba(20, 184, 166, 0.2), transparent)
+                radial-gradient(4px 4px at 25% 35%, rgba(20, 184, 166, 0.8), transparent),
+                radial-gradient(3px 3px at 75% 65%, rgba(20, 184, 166, 0.6), transparent),
+                radial-gradient(5px 5px at 45% 25%, rgba(20, 184, 166, 0.9), transparent),
+                radial-gradient(2px 2px at 85% 85%, rgba(20, 184, 166, 0.5), transparent),
+                radial-gradient(3px 3px at 15% 75%, rgba(20, 184, 166, 0.7), transparent)
               `,
               backgroundRepeat: 'repeat',
-              backgroundSize: '300px 300px',
-              animation: 'float 30s infinite linear'
+              backgroundSize: '200px 200px',
+              animation: 'float 15s infinite linear',
+              filter: 'brightness(2)'
             }} />
             
             {/* Bright floating particles with hover effects */}
