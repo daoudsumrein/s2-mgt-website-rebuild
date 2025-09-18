@@ -25,6 +25,42 @@ export default function ServersDataProtection() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
+          {/* Green particle effects */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            {/* CSS-based background particles for smooth performance */}
+            <div className="absolute inset-0 opacity-20" style={{
+              backgroundImage: `
+                radial-gradient(2px 2px at 25% 35%, rgba(34, 197, 94, 0.4), transparent),
+                radial-gradient(1px 1px at 75% 65%, rgba(34, 197, 94, 0.3), transparent),
+                radial-gradient(3px 3px at 45% 25%, rgba(34, 197, 94, 0.5), transparent),
+                radial-gradient(1px 1px at 85% 85%, rgba(34, 197, 94, 0.2), transparent),
+                radial-gradient(2px 2px at 65% 15%, rgba(34, 197, 94, 0.3), transparent),
+                radial-gradient(1px 1px at 15% 75%, rgba(34, 197, 94, 0.4), transparent)
+              `,
+              backgroundRepeat: 'repeat',
+              backgroundSize: '400px 400px, 300px 300px, 500px 500px',
+              animation: 'float 40s infinite linear'
+            }} />
+            
+            {/* Floating green particles */}
+            {[...Array(12)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute rounded-full opacity-30"
+                style={{
+                  width: `${1 + (i % 3)}px`,
+                  height: `${1 + (i % 3)}px`,
+                  backgroundColor: 'rgb(34, 197, 94)',
+                  left: `${15 + (i * 7)}%`,
+                  top: `${20 + (i * 6)}%`,
+                  animation: `particleFloat${i % 4} ${25 + (i * 3)}s infinite linear`,
+                  animationDelay: `${i * 1.5}s`,
+                  boxShadow: '0 0 8px rgba(34, 197, 94, 0.4)',
+                  filter: 'blur(0.5px)'
+                }}
+              />
+            ))}
+          </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
