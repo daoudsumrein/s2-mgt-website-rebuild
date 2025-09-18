@@ -28,7 +28,7 @@ export default function ServersDataProtection() {
           {/* Green particle effects */}
           <div className="absolute inset-0 pointer-events-none z-0">
             {/* CSS-based background particles for smooth performance */}
-            <div className="absolute inset-0 opacity-20" style={{
+            <div className="absolute inset-0 opacity-20 peer-hover:opacity-100 transition-opacity duration-500" style={{
               backgroundImage: `
                 radial-gradient(2px 2px at 25% 35%, rgba(34, 197, 94, 0.4), transparent),
                 radial-gradient(1px 1px at 75% 65%, rgba(34, 197, 94, 0.3), transparent),
@@ -71,7 +71,7 @@ export default function ServersDataProtection() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }}>
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card peer" style={{ borderColor: "#14B8A6" }}>
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
