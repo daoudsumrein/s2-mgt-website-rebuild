@@ -91,69 +91,44 @@ export default function EmailProtection() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center particle-container">
-          {/* Animated background particles */}
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
+          {/* Green particle effects */}
           <div className="absolute inset-0 pointer-events-none z-0">
-            {/* CSS Background particles */}
-            <div className="absolute inset-0 opacity-20" style={{
-              backgroundImage: `
-                radial-gradient(2px 2px at 20px 30px, rgba(20, 184, 166, 0.4), transparent),
-                radial-gradient(1px 1px at 40px 70px, rgba(20, 184, 166, 0.3), transparent),
-                radial-gradient(3px 3px at 90px 40px, rgba(20, 184, 166, 0.5), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(20, 184, 166, 0.2), transparent)
-              `,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '200px 200px',
-              animation: 'float 25s infinite linear'
-            }} />
-            
-            {/* Individual floating particles */}
-            {[...Array(25)].map((_, i) => {
-              const size = Math.random() * 6 + 2;
-              return (
-                <div
-                  key={i}
-                  className="absolute particle-dot transition-all duration-300"
-                  style={{
-                    '--particle-size': `${size}px`,
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    backgroundColor: '#14B8A6',
-                    opacity: Math.random() * 0.6 + 0.2,
-                    animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
-                    animationDelay: `${Math.random() * 10}s`,
-                    boxShadow: '0 0 10px rgba(20, 184, 166, 0.3)'
-                  } as React.CSSProperties}
-                />
-              );
-            })}
-            
-            {/* Orbiting particles */}
-            {[...Array(8)].map((_, i) => {
-              const size = Math.random() * 4 + 2;
-              return (
-                <div
-                  key={`orbit-${i}`}
-                  className="absolute transition-all duration-300"
-                  style={{
-                    left: `${30 + Math.random() * 40}%`,
-                    top: `${30 + Math.random() * 40}%`,
-                    animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
-                    animationDelay: `${Math.random() * 8}s`
-                  }}
-                >
-                  <div
-                    className="particle-dot"
-                    style={{
-                      '--particle-size': `${size}px`,
-                      backgroundColor: '#14B8A6',
-                      opacity: Math.random() * 0.7 + 0.3,
-                      boxShadow: '0 0 8px rgba(20, 184, 166, 0.4)'
-                    } as React.CSSProperties}
-                  />
-                </div>
-              );
-            })}
+            {[...Array(15)].map((_, i) => (
+              <div
+                key={i}
+                className="particle absolute rounded-full"
+                data-original-opacity={[0.46, 0.08, 0.41, 0.33, 0.4, 0.41, 0.74, 0.09, 0.89, 0.23, 0.96, 0.52, 0.95, 0.98, 0.69][i]}
+                style={{
+                  backgroundColor: '#14B8A6',
+                  boxShadow: '0 0 3px #14B8A6',
+                  animationDuration: '60s',
+                  animationIterationCount: 'infinite',
+                  height: i % 2 === 0 ? '9px' : '7px',
+                  width: i % 2 === 0 ? '9px' : '7px',
+                  opacity: [0.46, 0.08, 0.41, 0.33, 0.4, 0.41, 0.74, 0.09, 0.89, 0.23, 0.96, 0.52, 0.95, 0.98, 0.69][i],
+                  animationName: `particle${i + 1}`,
+                  animationDelay: `${-0.2 * (i + 1)}s`,
+                  transform: [
+                    'translate3d(55vw, 79vh, 22px)',
+                    'translate3d(4vw, 21vh, 14px)', 
+                    'translate3d(78vw, 63vh, 52px)',
+                    'translate3d(56vw, 32vh, 88px)',
+                    'translate3d(79vw, 74vh, 14px)',
+                    'translate3d(92vw, 27vh, 61px)',
+                    'translate3d(55vw, 60vh, 75px)',
+                    'translate3d(10vw, 10vh, 55px)',
+                    'translate3d(3vw, 53vh, 98px)',
+                    'translate3d(64vw, 77vh, 95px)',
+                    'translate3d(35vw, 6vh, 101px)',
+                    'translate3d(55vw, 12vh, 33px)',
+                    'translate3d(90vw, 27vh, 70px)',
+                    'translate3d(3vw, 73vh, 11px)',
+                    'translate3d(86vw, 82vh, 49px)'
+                  ][i]
+                }}
+              />
+            ))}
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -164,7 +139,20 @@ export default function EmailProtection() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden" style={{ borderColor: "#14B8A6" }}>
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
+                const particles = document.querySelectorAll('.particle');
+                particles.forEach(particle => {
+                  (particle as HTMLElement).style.opacity = '1';
+                  (particle as HTMLElement).style.transition = 'opacity 0.3s ease';
+                });
+              }} onMouseLeave={() => {
+                const particles = document.querySelectorAll('.particle');
+                particles.forEach(particle => {
+                  const originalOpacity = particle.getAttribute('data-original-opacity') || '0.2';
+                  (particle as HTMLElement).style.opacity = originalOpacity;
+                  (particle as HTMLElement).style.transition = 'opacity 0.3s ease';
+                });
+              }}>
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
