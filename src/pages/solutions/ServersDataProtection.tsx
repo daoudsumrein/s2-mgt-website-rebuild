@@ -24,69 +24,36 @@ export default function ServersDataProtection() {
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center particle-container">
-          {/* Animated background particles */}
-          <div className="absolute inset-0 pointer-events-none z-0 particle-field">
-            {/* CSS Background particles */}
-            <div className="absolute inset-0 opacity-20 particles-bg" style={{
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
+          {/* Optimized background particles */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            {/* Simple CSS background particles */}
+            <div className="absolute inset-0 opacity-30" style={{
               backgroundImage: `
-                radial-gradient(2px 2px at 20px 30px, rgba(20, 184, 166, 0.4), transparent),
-                radial-gradient(1px 1px at 40px 70px, rgba(20, 184, 166, 0.3), transparent),
-                radial-gradient(3px 3px at 90px 40px, rgba(20, 184, 166, 0.5), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(20, 184, 166, 0.2), transparent)
+                radial-gradient(2px 2px at 25% 35%, rgba(20, 184, 166, 0.4), transparent),
+                radial-gradient(1px 1px at 75% 65%, rgba(20, 184, 166, 0.3), transparent),
+                radial-gradient(3px 3px at 45% 25%, rgba(20, 184, 166, 0.5), transparent),
+                radial-gradient(1px 1px at 85% 85%, rgba(20, 184, 166, 0.2), transparent)
               `,
               backgroundRepeat: 'repeat',
-              backgroundSize: '200px 200px',
-              animation: 'float 25s infinite linear'
+              backgroundSize: '300px 300px',
+              animation: 'float 30s infinite linear'
             }} />
             
-            {/* Individual floating particles */}
-            {[...Array(25)].map((_, i) => {
-              const size = Math.random() * 6 + 2;
-              return (
-                <div
-                  key={i}
-                  className="absolute particle-dot transition-all duration-300"
-                  style={{
-                    '--particle-size': `${size}px`,
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    backgroundColor: '#14B8A6',
-                    opacity: Math.random() * 0.6 + 0.2,
-                    animation: `particleFloat${i % 3} ${Math.random() * 15 + 10}s infinite linear`,
-                    animationDelay: `${Math.random() * 10}s`,
-                    boxShadow: '0 0 10px rgba(20, 184, 166, 0.3)'
-                  } as React.CSSProperties}
-                />
-              );
-            })}
-            
-            {/* Orbiting particles */}
-            {[...Array(8)].map((_, i) => {
-              const size = Math.random() * 4 + 2;
-              return (
-                <div
-                  key={`orbit-${i}`}
-                  className="absolute transition-all duration-300 particle-orbit"
-                  style={{
-                    left: `${30 + Math.random() * 40}%`,
-                    top: `${30 + Math.random() * 40}%`,
-                    animation: `orbit${i % 2} ${Math.random() * 20 + 15}s infinite linear`,
-                    animationDelay: `${Math.random() * 8}s`
-                  }}
-                >
-                  <div
-                    className="particle-dot"
-                    style={{
-                      '--particle-size': `${size}px`,
-                      backgroundColor: '#14B8A6',
-                      opacity: Math.random() * 0.7 + 0.3,
-                      boxShadow: '0 0 8px rgba(20, 184, 166, 0.4)'
-                    } as React.CSSProperties}
-                  />
-                </div>
-              );
-            })}
+            {/* Reduced floating particles */}
+            {[...Array(8)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-teal-400 rounded-full opacity-40"
+                style={{
+                  left: `${20 + (i * 10)}%`,
+                  top: `${30 + (i * 5)}%`,
+                  animation: `particleFloat${i % 3} ${20 + (i * 2)}s infinite linear`,
+                  animationDelay: `${i * 2}s`,
+                  boxShadow: '0 0 6px rgba(20, 184, 166, 0.3)'
+                }}
+              />
+            ))}
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
