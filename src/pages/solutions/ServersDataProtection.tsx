@@ -26,14 +26,15 @@ export default function ServersDataProtection() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Green particle effects */}
-          <div className="absolute inset-0 pointer-events-none z-0 group-hover:opacity-100 opacity-20 transition-opacity duration-500">
+          <div className="absolute inset-0 pointer-events-none z-0 opacity-20 transition-opacity duration-500">
             {[...Array(15)].map((_, i) => (
               <div
                 key={i}
                 className="particle absolute rounded-full"
+                data-original-opacity={[0.46, 0.08, 0.41, 0.33, 0.4, 0.41, 0.74, 0.09, 0.89, 0.23, 0.96, 0.52, 0.95, 0.98, 0.69][i]}
                 style={{
-                  backgroundColor: 'rgb(34, 197, 94)',
-                  boxShadow: '0 0 3px rgb(34, 197, 94)',
+                  backgroundColor: '#14B8A6',
+                  boxShadow: '0 0 3px #14B8A6',
                   animationDuration: '60s',
                   animationIterationCount: 'infinite',
                   height: i % 2 === 0 ? '9px' : '7px',
@@ -72,7 +73,18 @@ export default function ServersDataProtection() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }}>
+               <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
+                 const particles = document.querySelectorAll('.particle');
+                 particles.forEach(particle => {
+                   (particle as HTMLElement).style.opacity = '1';
+                 });
+               }} onMouseLeave={() => {
+                 const particles = document.querySelectorAll('.particle');
+                 particles.forEach(particle => {
+                   const originalOpacity = particle.getAttribute('data-original-opacity') || '0.2';
+                   (particle as HTMLElement).style.opacity = originalOpacity;
+                 });
+               }}>
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
