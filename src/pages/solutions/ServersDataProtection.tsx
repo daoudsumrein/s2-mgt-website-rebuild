@@ -40,16 +40,18 @@ export default function ServersDataProtection() {
               animation: 'float 30s infinite linear'
             }} />
             
-            {/* Minimal floating particles */}
+            {/* Bright floating particles with hover effects */}
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-teal-400 rounded-full opacity-30"
+                className="absolute w-2 h-2 bg-teal-400 rounded-full opacity-60 hover:opacity-100 hover:scale-150 hover:shadow-lg hover:shadow-teal-400/50 transition-all duration-300 cursor-pointer"
                 style={{
                   left: `${25 + (i * 25)}%`,
                   top: `${40 + (i * 10)}%`,
                   animation: `particleFloat${i % 2} ${25 + (i * 5)}s infinite linear`,
-                  animationDelay: `${i * 3}s`
+                  animationDelay: `${i * 3}s`,
+                  boxShadow: '0 0 12px rgba(20, 184, 166, 0.6)',
+                  filter: 'brightness(1.5)'
                 }}
               />
             ))}
