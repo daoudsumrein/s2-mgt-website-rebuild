@@ -26,7 +26,7 @@ export default function ServersDataProtection() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Green particle effects */}
-          <div className="absolute inset-0 pointer-events-none z-0 opacity-20 transition-opacity duration-500">
+          <div className="absolute inset-0 pointer-events-none z-0">
             {[...Array(15)].map((_, i) => (
               <div
                 key={i}
