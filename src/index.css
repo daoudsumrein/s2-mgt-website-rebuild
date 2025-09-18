@@ -381,36 +381,49 @@ All colors MUST be HSL.
   transition: all 0.3s ease;
 }
 
-/* Particle animations for hero sections */
-@keyframes particleFloat {
-  0%, 100% { 
-    transform: translateY(0px) translateX(0px); 
-  }
-  25% { 
-    transform: translateY(-20px) translateX(10px); 
-  }
-  50% { 
-    transform: translateY(-10px) translateX(-15px); 
-  }
-  75% { 
-    transform: translateY(-30px) translateX(5px); 
-  }
+/* Smooth particle animations for hero sections */
+@keyframes particle1 {
+  100% { transform: translate3d(80vw, 51vh, 9px); }
 }
-
-@keyframes particleGlow {
-  0%, 100% { 
-    opacity: 0.3; 
-  }
-  50% { 
-    opacity: 0.8; 
-  }
+@keyframes particle2 {
+  100% { transform: translate3d(31vw, 35vh, 87px); }
 }
-
-@keyframes float {
-  0% { 
-    background-position: 0% 0%, 0% 0%, 0% 0%; 
-  }
-  100% { 
-    background-position: 100% 100%, -100% -100%, 50% -50%; 
-  }
+@keyframes particle3 {
+  100% { transform: translate3d(42vw, 66vh, 40px); }
+}
+@keyframes particle4 {
+  100% { transform: translate3d(78vw, 4vh, 55px); }
+}
+@keyframes particle5 {
+  100% { transform: translate3d(2vw, 47vh, 68px); }
+}
+@keyframes particle6 {
+  100% { transform: translate3d(80vw, 35vh, 11px); }
+}
+@keyframes particle7 {
+  100% { transform: translate3d(63vw, 15vh, 59px); }
+}
+@keyframes particle8 {
+  100% { transform: translate3d(30vw, 64vh, 91px); }
+}
+@keyframes particle9 {
+  100% { transform: translate3d(60vw, 80vh, 97px); }
+}
+@keyframes particle10 {
+  100% { transform: translate3d(18vw, 5vh, 7px); }
+}
+@keyframes particle11 {
+  100% { transform: translate3d(88vw, 14vh, 71px); }
+}
+@keyframes particle12 {
+  100% { transform: translate3d(46vw, 5vh, 3px); }
+}
+@keyframes particle13 {
+  100% { transform: translate3d(51vw, 75vh, 18px); }
+}
+@keyframes particle14 {
+  100% { transform: translate3d(45vw, 46vh, 28px); }
+}
+@keyframes particle15 {
+  100% { transform: translate3d(16vw, 31vh, 36px); }
 }

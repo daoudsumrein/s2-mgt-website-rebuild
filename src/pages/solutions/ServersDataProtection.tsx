@@ -27,38 +27,37 @@ export default function ServersDataProtection() {
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Green particle effects */}
           <div className="absolute inset-0 pointer-events-none z-0 group-hover:opacity-100 opacity-20 transition-opacity duration-500">
-            {/* CSS-based background particles for smooth performance */}
-            <div className="absolute inset-0" style={{
-              backgroundImage: `
-                radial-gradient(2px 2px at 25% 35%, rgba(34, 197, 94, 0.4), transparent),
-                radial-gradient(1px 1px at 75% 65%, rgba(34, 197, 94, 0.3), transparent),
-                radial-gradient(3px 3px at 45% 25%, rgba(34, 197, 94, 0.5), transparent),
-                radial-gradient(1px 1px at 85% 85%, rgba(34, 197, 94, 0.2), transparent),
-                radial-gradient(2px 2px at 65% 15%, rgba(34, 197, 94, 0.3), transparent),
-                radial-gradient(1px 1px at 15% 75%, rgba(34, 197, 94, 0.4), transparent)
-              `,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '400px 400px, 300px 300px, 500px 500px',
-              animation: 'float 40s infinite linear'
-            }} />
-            
-            {/* Floating green particles */}
-            {[...Array(12)].map((_, i) => (
+            {[...Array(15)].map((_, i) => (
               <div
                 key={i}
-                className="absolute rounded-full animate-pulse"
+                className="particle absolute rounded-full"
                 style={{
-                  width: `${1 + (i % 3)}px`,
-                  height: `${1 + (i % 3)}px`,
                   backgroundColor: 'rgb(34, 197, 94)',
-                  left: `${15 + (i * 7)}%`,
-                  top: `${20 + (i * 6)}%`,
-                  animation: `
-                    particleFloat 8s infinite ease-in-out ${i * 0.5}s,
-                    particleGlow 3s infinite ease-in-out ${i * 0.3}s
-                  `,
-                  boxShadow: '0 0 8px rgba(34, 197, 94, 0.6)',
-                  transform: `translate(${Math.sin(i) * 20}px, ${Math.cos(i) * 20}px)`
+                  boxShadow: '0 0 3px rgb(34, 197, 94)',
+                  animationDuration: '60s',
+                  animationIterationCount: 'infinite',
+                  height: i % 2 === 0 ? '9px' : '7px',
+                  width: i % 2 === 0 ? '9px' : '7px',
+                  opacity: [0.46, 0.08, 0.41, 0.33, 0.4, 0.41, 0.74, 0.09, 0.89, 0.23, 0.96, 0.52, 0.95, 0.98, 0.69][i],
+                  animationName: `particle${i + 1}`,
+                  animationDelay: `${-0.2 * (i + 1)}s`,
+                  transform: [
+                    'translate3d(55vw, 79vh, 22px)',
+                    'translate3d(4vw, 21vh, 14px)', 
+                    'translate3d(78vw, 63vh, 52px)',
+                    'translate3d(56vw, 32vh, 88px)',
+                    'translate3d(79vw, 74vh, 14px)',
+                    'translate3d(92vw, 27vh, 61px)',
+                    'translate3d(55vw, 60vh, 75px)',
+                    'translate3d(10vw, 10vh, 55px)',
+                    'translate3d(3vw, 53vh, 98px)',
+                    'translate3d(64vw, 77vh, 95px)',
+                    'translate3d(35vw, 6vh, 101px)',
+                    'translate3d(55vw, 12vh, 33px)',
+                    'translate3d(90vw, 27vh, 70px)',
+                    'translate3d(3vw, 73vh, 11px)',
+                    'translate3d(86vw, 82vh, 49px)'
+                  ][i]
                 }}
               />
             ))}
