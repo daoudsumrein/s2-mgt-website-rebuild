@@ -25,36 +25,6 @@ export default function ServersDataProtection() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
-          {/* Optimized background particles */}
-          <div className="absolute inset-0 pointer-events-none z-0">
-            {/* Simple CSS background particles */}
-            <div className="absolute inset-0 opacity-30" style={{
-              backgroundImage: `
-                radial-gradient(2px 2px at 25% 35%, rgba(20, 184, 166, 0.4), transparent),
-                radial-gradient(1px 1px at 75% 65%, rgba(20, 184, 166, 0.3), transparent),
-                radial-gradient(3px 3px at 45% 25%, rgba(20, 184, 166, 0.5), transparent),
-                radial-gradient(1px 1px at 85% 85%, rgba(20, 184, 166, 0.2), transparent)
-              `,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '300px 300px',
-              animation: 'float 30s infinite linear'
-            }} />
-            
-            {/* Reduced floating particles */}
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-1 h-1 bg-teal-400 rounded-full opacity-40"
-                style={{
-                  left: `${20 + (i * 10)}%`,
-                  top: `${30 + (i * 5)}%`,
-                  animation: `particleFloat${i % 3} ${20 + (i * 2)}s infinite linear`,
-                  animationDelay: `${i * 2}s`,
-                  boxShadow: '0 0 6px rgba(20, 184, 166, 0.3)'
-                }}
-              />
-            ))}
-          </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
