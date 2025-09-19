@@ -490,8 +490,19 @@ export default function EmailEncryption() {
                 <Button size="lg" className="text-lg px-8">
                   Schedule Consultation
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8">
-                  Download Datasheet
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="text-lg px-8"
+                  asChild
+                >
+                  <a 
+                    href="https://www.opentext.com/en/media/data-sheet/opentext-core-email-encryption-ds-en.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download Datasheet
+                  </a>
                 </Button>
               </div>
             </div>
