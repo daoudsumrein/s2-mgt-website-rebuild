@@ -7,14 +7,14 @@ const TechServicesSection = () => {
   // Function to convert service names to URLs
   const getServiceUrl = (service: string) => {
     const urlMap: { [key: string]: string } = {
-      "Disaster Recovery": "/solutions/disaster-recovery",
-      "Server Migration": "/solutions/server-migration",
+      "Disaster Recovery": "/solutions/opentext-carbonite-availability",
+      "Server Migration": "/solutions/opentext-carbonite-migrate",
       "Disaster Recovery Orchestration": "/solutions/disaster-recovery-orchestration",
       "Server Migration Orchestration": "/solutions/server-migration-orchestration",
       "Endpoint Cloud Backup": "/solutions/endpoint-backup",
-      "Servers Cloud Backup": "/solutions/server-backup",
+      "Servers Cloud Backup": "/solutions/saas-backup",
       "On Prem Backup": "/solutions/onprem-backup",
-      "Server Backup": "/solutions/server-backup",
+      "Server Backup": "/solutions/OpenText-Server-Backup",
       "Email Archiving": "/solutions/email-archiving",
       "Application Modernization": "/solutions/app-modernization",
       "Servers and Data Protection": "/solutions/servers-data-protection",
