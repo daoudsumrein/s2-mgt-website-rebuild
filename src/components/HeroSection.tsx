@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(/lovable-uploads/056d5ea9-8864-4541-9b47-a56718ba3b48.png)` }}
+        style={{ backgroundImage: `url(/lovable-uploads/hero-bg-compressed.png)` }}
       />
       
       {/* Flowing Background Elements */}
