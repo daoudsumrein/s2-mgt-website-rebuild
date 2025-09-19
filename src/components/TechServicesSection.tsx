@@ -17,7 +17,7 @@ const TechServicesSection = () => {
     <section 
       className="min-h-screen relative flex items-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/8d27f21f-0e90-44b2-a462-bae5390e8f22.png'), linear-gradient(135deg, #0a1229 0%, #1e3a5f 50%, #2a4d7a 100%)`
+        backgroundImage: `url('/lovable-uploads/tech-services-bg-compressed.png'), linear-gradient(135deg, #0a1229 0%, #1e3a5f 50%, #2a4d7a 100%)`
       }}
     >
       {/* Overlay */}
