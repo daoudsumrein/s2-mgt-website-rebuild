@@ -16,7 +16,7 @@ const TechServicesSection = () => {
       "On Prem Backup": "/solutions/onprem-backup",
       "Server Backup": "/solutions/OpenText-Server-Backup",
       "Email Archiving": "/solutions/email-archiving",
-      "Application Modernization": "/solutions/app-modernization",
+      "Application Modernization": "https://appcure.io/legacy-apps/",
       "Servers and Data Protection": "/solutions/servers-data-protection",
       "Endpoint Protection with EDR": "/solutions/endpoint-protection",
       "Ransomware Protection": "/solutions/ransomware-protection",
