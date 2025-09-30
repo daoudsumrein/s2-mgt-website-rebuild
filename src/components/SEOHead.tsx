@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
 
 interface SEOHeadProps {
   title?: string;
@@ -17,27 +17,74 @@ export default function SEOHead({
   ogImage = "https://s2mgt.com/assets/s2-logo.png",
   author
 }: SEOHeadProps) {
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {author && <meta name="author" content={author} />}
-      
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content="website" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-    </Helmet>
-  );
+  useEffect(() => {
+    // Update document title
+    document.title = title;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    }
+    
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords);
+    }
+    
+    // Update canonical URL
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', canonicalUrl);
+    
+    // Update Open Graph meta tags
+    const updateOGMeta = (property: string, content: string) => {
+      let metaTag = document.querySelector(`meta[property="${property}"]`);
+      if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute('property', property);
+        document.head.appendChild(metaTag);
+      }
+      metaTag.setAttribute('content', content);
+    };
+    
+    updateOGMeta('og:title', title);
+    updateOGMeta('og:description', description);
+    updateOGMeta('og:url', canonicalUrl);
+    updateOGMeta('og:image', ogImage);
+    
+    // Update Twitter meta tags
+    const updateTwitterMeta = (name: string, content: string) => {
+      let metaTag = document.querySelector(`meta[name="${name}"]`);
+      if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute('name', name);
+        document.head.appendChild(metaTag);
+      }
+      metaTag.setAttribute('content', content);
+    };
+    
+    updateTwitterMeta('twitter:title', title);
+    updateTwitterMeta('twitter:description', description);
+    updateTwitterMeta('twitter:image', ogImage);
+    
+    // Update author meta tag if provided
+    if (author) {
+      let authorMeta = document.querySelector('meta[name="author"]');
+      if (!authorMeta) {
+        authorMeta = document.createElement('meta');
+        authorMeta.setAttribute('name', 'author');
+        document.head.appendChild(authorMeta);
+      }
+      authorMeta.setAttribute('content', author);
+    }
+    
+  }, [title, description, keywords, canonicalUrl, ogImage, author]);
+
+  return null;
 }
