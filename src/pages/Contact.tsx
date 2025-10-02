@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
+import NoSSRReCAPTCHA from "@/components/NoSSRReCAPTCHA";
 import { 
   Mail, 
   Phone, 
@@ -24,7 +24,7 @@ import {
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const recaptchaRef = useRef<any>(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -287,7 +287,7 @@ export default function Contact() {
                     
                     {/* Google reCAPTCHA */}
                     <div className="flex justify-center">
-                      <ReCAPTCHA
+                      <NoSSRReCAPTCHA
                         ref={recaptchaRef}
                         sitekey={RECAPTCHA_SITE_KEY}
                         onChange={(value) => setRecaptchaValue(value)}
