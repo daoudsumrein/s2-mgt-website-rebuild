@@ -52,7 +52,7 @@ const routesToPrerender = [
     const appHtml = render(url);
     const html = template.replace(`<!--app-html-->`, appHtml)
 
-    const filePath = `dist${url === '/' ? '/index' : url}.html`
+    const filePath = `dist${url === '/' ? '/index.html' : `${url}/index.html`}`
     const fileDir = path.dirname(toAbsolute(filePath))
     
     // Create directory if it doesn't exist
