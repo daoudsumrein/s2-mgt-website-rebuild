@@ -8,32 +8,44 @@ const toAbsolute = (p) => path.resolve(__dirname, p)
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
-// Recursively get all routes from src/pages
-function getAllRoutes(dir, baseRoute = '') {
-  const routes = []
-  const files = fs.readdirSync(toAbsolute(dir))
-  
-  for (const file of files) {
-    const fullPath = path.join(dir, file)
-    const stat = fs.statSync(toAbsolute(fullPath))
-    
-    if (stat.isDirectory()) {
-      // Recursively process subdirectories
-      routes.push(...getAllRoutes(fullPath, `${baseRoute}/${file}`))
-    } else if (file.endsWith('.tsx')) {
-      const name = file.replace(/\.tsx$/, '')
-      if (name === 'Index') {
-        routes.push(baseRoute === '' ? '/' : baseRoute)
-      } else {
-        routes.push(`${baseRoute}/${name.toLowerCase()}`)
-      }
-    }
-  }
-  
-  return routes
-}
-
-const routesToPrerender = getAllRoutes('src/pages')
+// Define all routes exactly as they appear in App.tsx
+const routesToPrerender = [
+  '/',
+  '/about',
+  '/services',
+  '/solutions',
+  '/contact',
+  '/vendors',
+  '/clients',
+  '/vendors/opentext',
+  '/vendors/tds',
+  '/vendors/appcure',
+  '/vendors/sangfor',
+  '/vendors/arrosoft',
+  '/vendors/nakivo',
+  '/solutions/opentext-carbonite-availability',
+  '/solutions/data-protection',
+  '/solutions/it-discovery',
+  '/solutions/secure-cloud',
+  '/solutions/app-modernization',
+  '/solutions/security',
+  '/solutions/email-archiving',
+  '/solutions/endpoint-backup',
+  '/solutions/saas-backup',
+  '/solutions/onprem-backup',
+  '/solutions/opentext-carbonite-migrate',
+  '/solutions/disaster-recovery-orchestration',
+  '/solutions/server-migration-orchestration',
+  '/solutions/endpoint-protection',
+  '/solutions/edr',
+  '/solutions/mdr',
+  '/solutions/security-awareness',
+  '/solutions/email-protection',
+  '/solutions/email-encryption',
+  '/solutions/ransomware-protection',
+  '/solutions/OpenText-Server-Backup',
+  '/solutions/servers-data-protection'
+]
 
 ;(async () => {
   for (const url of routesToPrerender) {
