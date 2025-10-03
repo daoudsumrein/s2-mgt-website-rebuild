@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    vike({ prerender: true }),
+    vike(),
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
