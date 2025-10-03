@@ -49,8 +49,29 @@ const routesToPrerender = [
 
 ;(async () => {
   for (const url of routesToPrerender) {
-    const appHtml = render(url);
-    const html = template.replace(`<!--app-html-->`, appHtml)
+    const { html: appHtml, helmetContext } = render(url);
+    const { helmet } = helmetContext;
+    
+    // Inject app HTML
+    let html = template.replace(`<!--app-html-->`, appHtml);
+    
+    // Inject helmet data into head
+    if (helmet) {
+      // Replace title
+      if (helmet.title) {
+        html = html.replace(/<title>.*?<\/title>/, helmet.title.toString());
+      }
+      
+      // Inject meta tags before </head>
+      const metaTags = [
+        helmet.meta?.toString() || '',
+        helmet.link?.toString() || '',
+      ].filter(Boolean).join('\n    ');
+      
+      if (metaTags) {
+        html = html.replace('</head>', `    ${metaTags}\n  </head>`);
+      }
+    }
 
     const filePath = `dist${url === '/' ? '/index.html' : `${url}/index.html`}`
     const fileDir = path.dirname(toAbsolute(filePath))
