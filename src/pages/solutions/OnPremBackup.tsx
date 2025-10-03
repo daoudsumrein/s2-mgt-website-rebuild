@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,26 +13,12 @@ export default function OnPremBackup() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>On-Premises Backup Solutions MENA - Local Data Protection | S2 Solutions</title>
-        <meta name="description" content="Enterprise on-premises backup solutions for MENA region. Local data protection with high-performance platforms offering fast recovery, deduplication, and secure storage. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta name="keywords" content="on-premises backup MENA, local backup UAE, enterprise backup Middle East, data protection Saudi Arabia, backup appliance, deduplication, fast recovery" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/onprem-backup" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="On-Premises Backup Solutions MENA - Local Data Protection | S2 Solutions" />
-        <meta property="og:description" content="Enterprise on-premises backup solutions for MENA region. Local data protection with high-performance platforms offering fast recovery, deduplication, and secure storage. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta property="og:url" content="https://s2mgt.com/solutions/onprem-backup" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="On-Premises Backup Solutions MENA - Local Data Protection | S2 Solutions" />
-        <meta name="twitter:description" content="Enterprise on-premises backup solutions for MENA region. Local data protection with high-performance platforms offering fast recovery, deduplication, and secure storage. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
+      <SEOHead
+        title="On-Premises Backup Solutions MENA - Local Data Protection | S2 Solutions"
+        description="Enterprise on-premises backup solutions for MENA region. Local data protection with high-performance platforms offering fast recovery, deduplication, and secure storage. Serving UAE, Saudi Arabia, and Middle East."
+        keywords="on-premises backup MENA, local backup UAE, enterprise backup Middle East, data protection Saudi Arabia, backup appliance, deduplication, fast recovery"
+        canonicalUrl="https://s2mgt.com/solutions/onprem-backup"
+      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

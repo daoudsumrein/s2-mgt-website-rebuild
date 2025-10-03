@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation, useCounterAnimation, useScrollProgress } from "@/hooks/useScrollAnimation";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -274,26 +274,12 @@ export default function OpenTextServerBackup() {
         style={{ transform: `scaleX(${progress})` }}
       />
       
-      <Helmet>
-        <title>OpenText Server Backup Solutions MENA - Enterprise Server Protection | S2 Solutions</title>
-        <meta name="description" content="Enterprise OpenText server backup solutions for MENA region. Complete server backup and replication with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta name="keywords" content="server backup MENA, OpenText server backup UAE, server backup Middle East, server replication Saudi Arabia, server data protection, enterprise backup, server disaster recovery" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/OpenText-Server-Backup" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="OpenText Server Backup Solutions MENA - Enterprise Server Protection | S2 Solutions" />
-        <meta property="og:description" content="Enterprise OpenText server backup solutions for MENA region. Complete server backup and replication with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta property="og:url" content="https://s2mgt.com/solutions/OpenText-Server-Backup" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="OpenText Server Backup Solutions MENA - Enterprise Server Protection | S2 Solutions" />
-        <meta name="twitter:description" content="Enterprise OpenText server backup solutions for MENA region. Complete server backup and replication with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
+      <SEOHead 
+        title="OpenText Server Backup Solutions MENA - Enterprise Server Protection | S2 Solutions"
+        description="Enterprise OpenText server backup solutions for MENA region. Complete server backup and replication with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East."
+        keywords="server backup MENA, OpenText server backup UAE, server backup Middle East, server replication Saudi Arabia, server data protection, enterprise backup, server disaster recovery"
+        canonicalUrl="https://s2mgt.com/solutions/OpenText-Server-Backup"
+      />
       
       <Navigation />
       

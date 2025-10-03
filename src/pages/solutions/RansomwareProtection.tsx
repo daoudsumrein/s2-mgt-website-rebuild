@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -86,26 +86,7 @@ export default function RansomwareProtection() {
     threshold: 0.3
   });
   return <>
-      <Helmet>
-        <title>Ransomware Protection Solutions | S2 Management Solutions</title>
-        <meta name="description" content="Advanced ransomware protection with isolated backup vaults, smart monitoring, and tamper-resistant storage. Your last line of defense against cyber threats." />
-        <meta name="keywords" content="ransomware protection, backup security, cyber resilience, data vault, immutable backups, threat detection" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/ransomware-protection" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ransomware Protection Solutions | S2 Management Solutions" />
-        <meta property="og:description" content="Advanced ransomware protection with isolated backup vaults, smart monitoring, and tamper-resistant storage. Your last line of defense against cyber threats." />
-        <meta property="og:url" content="https://s2mgt.com/solutions/ransomware-protection" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ransomware Protection Solutions | S2 Management Solutions" />
-        <meta name="twitter:description" content="Advanced ransomware protection with isolated backup vaults, smart monitoring, and tamper-resistant storage. Your last line of defense against cyber threats." />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
+      <SEOHead title="Ransomware Protection Solutions | S2 Management Solutions" description="Advanced ransomware protection with isolated backup vaults, smart monitoring, and tamper-resistant storage. Your last line of defense against cyber threats." keywords="ransomware protection, backup security, cyber resilience, data vault, immutable backups, threat detection" />
       <div className="min-h-screen flex flex-col">
         <Navigation />
         

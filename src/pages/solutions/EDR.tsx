@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -42,26 +42,12 @@ const capabilities = [
 export default function EDR() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>Endpoint Detection and Response (EDR) Solutions | MENA Cybersecurity</title>
-        <meta name="description" content="Advanced EDR solutions for MENA enterprises. Real-time threat detection, behavioral analytics, and automated incident response for comprehensive endpoint security." />
-        <meta name="keywords" content="EDR solutions MENA, endpoint detection response UAE, cybersecurity Middle East, threat hunting Saudi Arabia, incident response" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/edr" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Endpoint Detection and Response (EDR) Solutions | MENA Cybersecurity" />
-        <meta property="og:description" content="Advanced EDR solutions for MENA enterprises. Real-time threat detection, behavioral analytics, and automated incident response for comprehensive endpoint security." />
-        <meta property="og:url" content="https://s2mgt.com/solutions/edr" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Endpoint Detection and Response (EDR) Solutions | MENA Cybersecurity" />
-        <meta name="twitter:description" content="Advanced EDR solutions for MENA enterprises. Real-time threat detection, behavioral analytics, and automated incident response for comprehensive endpoint security." />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
+      <SEOHead
+        title="Endpoint Detection and Response (EDR) Solutions | MENA Cybersecurity"
+        description="Advanced EDR solutions for MENA enterprises. Real-time threat detection, behavioral analytics, and automated incident response for comprehensive endpoint security."
+        keywords="EDR solutions MENA, endpoint detection response UAE, cybersecurity Middle East, threat hunting Saudi Arabia, incident response"
+        canonicalUrl="https://s2mgt.com/solutions/edr"
+      />
       <Navigation />
       
       <main className="flex-1">

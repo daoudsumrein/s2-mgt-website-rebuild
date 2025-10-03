@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
@@ -122,27 +122,13 @@ export default function DROrchestration() {
   };
   return (
     <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>TDS TransitionManager DR Orchestration | MENA</title>
-        <meta name="description" content="S2 Management delivers TDS TransitionManager in MENA, providing automated DR orchestration, runbooks, dependency mapping & failover testing for enterprises" />
-        <meta name="keywords" content="TDS TransitionManager MENA, disaster recovery orchestration UAE, automated DR Saudi Arabia, business continuity Qatar, failover testing Kuwait, DR runbooks Bahrain, recovery automation Gulf, BC/DR orchestration Middle East" />
-        <meta name="author" content="S2 Management Solutions" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/disaster-recovery-orchestration" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="TDS TransitionManager DR Orchestration | MENA" />
-        <meta property="og:description" content="S2 Management delivers TDS TransitionManager in MENA, providing automated DR orchestration, runbooks, dependency mapping & failover testing for enterprises" />
-        <meta property="og:url" content="https://s2mgt.com/solutions/disaster-recovery-orchestration" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="TDS TransitionManager DR Orchestration | MENA" />
-        <meta name="twitter:description" content="S2 Management delivers TDS TransitionManager in MENA, providing automated DR orchestration, runbooks, dependency mapping & failover testing for enterprises" />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
+      <SEOHead
+        title="TDS TransitionManager DR Orchestration | MENA"
+        description="S2 Management delivers TDS TransitionManager in MENA, providing automated DR orchestration, runbooks, dependency mapping & failover testing for enterprises"
+        keywords="TDS TransitionManager MENA, disaster recovery orchestration UAE, automated DR Saudi Arabia, business continuity Qatar, failover testing Kuwait, DR runbooks Bahrain, recovery automation Gulf, BC/DR orchestration Middle East"
+        canonicalUrl="https://s2mgt.com/solutions/disaster-recovery-orchestration"
+        author="S2 Management Solutions"
+      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

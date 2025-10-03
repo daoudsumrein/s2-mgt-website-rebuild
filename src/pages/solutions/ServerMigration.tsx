@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -47,26 +47,7 @@ const features = [{
 const deliverables = ["All administrative tasks are handled from a single console", "Real-time data synchronization is possible regardless of geographic boundaries between any source to any target", "Cutover and switch to the new environment can be completed within minutes"];
 export default function ServerMigration() {
   return <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>OpenText (Carbonite) Migrate Distributor MENA | UAE, KSA, Qatar</title>
-        <meta name="description" content="S2 Management Official MENA distributor of OpenText Carbonite Migrate. Real-time replication, automated failover & 24/7 protection." />
-        <meta name="keywords" content="Carbonite Migrate MENA, OpenText Migrate distributor, server migration UAE, zero downtime migration Saudi Arabia, data center migration Middle East, cloud migration Qatar, Carbonite partner Oman, Carbonite distributor Bahrain, OpenText Migrate Kuwait, infrastructure migration UAE, enterprise server migration, Carbonite Migrate solutions, OpenText partner MENA" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/opentext-carbonite-migrate" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="OpenText (Carbonite) Migrate Distributor MENA | UAE, KSA, Qatar" />
-        <meta property="og:description" content="S2 Management Official MENA distributor of OpenText Carbonite Migrate. Real-time replication, automated failover & 24/7 protection." />
-        <meta property="og:url" content="https://s2mgt.com/solutions/opentext-carbonite-migrate" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="OpenText (Carbonite) Migrate Distributor MENA | UAE, KSA, Qatar" />
-        <meta name="twitter:description" content="S2 Management Official MENA distributor of OpenText Carbonite Migrate. Real-time replication, automated failover & 24/7 protection." />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
+      <SEOHead title="OpenText (Carbonite) Migrate Distributor MENA | UAE, KSA, Qatar" description="S2 Management Official MENA distributor of OpenText Carbonite Migrate. Real-time replication, automated failover & 24/7 protection." keywords="Carbonite Migrate MENA, OpenText Migrate distributor, server migration UAE, zero downtime migration Saudi Arabia, data center migration Middle East, cloud migration Qatar, Carbonite partner Oman, Carbonite distributor Bahrain, OpenText Migrate Kuwait, infrastructure migration UAE, enterprise server migration, Carbonite Migrate solutions, OpenText partner MENA" canonicalUrl="https://s2mgt.com/solutions/opentext-carbonite-migrate" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

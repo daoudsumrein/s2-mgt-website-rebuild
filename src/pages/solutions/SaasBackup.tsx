@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -64,26 +64,7 @@ export default function ServerBackup() {
     threshold: 0.3
   });
   return <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>Server Cloud Backup Solutions MENA - Enterprise Server Protection | S2 Solutions</title>
-        <meta name="description" content="Professional server cloud backup solutions for MENA enterprises. Secure Windows and Linux server protection with ransomware recovery and enterprise-grade security. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta name="keywords" content="server backup MENA, cloud server backup UAE, enterprise backup Middle East, Windows server backup Saudi Arabia, Linux backup, virtual machine backup, database backup" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/server-backup" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Server Cloud Backup Solutions MENA - Enterprise Server Protection | S2 Solutions" />
-        <meta property="og:description" content="Professional server cloud backup solutions for MENA enterprises. Secure Windows and Linux server protection with ransomware recovery and enterprise-grade security. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta property="og:url" content="https://s2mgt.com/solutions/server-backup" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Server Cloud Backup Solutions MENA - Enterprise Server Protection | S2 Solutions" />
-        <meta name="twitter:description" content="Professional server cloud backup solutions for MENA enterprises. Secure Windows and Linux server protection with ransomware recovery and enterprise-grade security. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
+      <SEOHead title="Server Cloud Backup Solutions MENA - Enterprise Server Protection | S2 Solutions" description="Professional server cloud backup solutions for MENA enterprises. Secure Windows and Linux server protection with ransomware recovery and enterprise-grade security. Serving UAE, Saudi Arabia, and Middle East." keywords="server backup MENA, cloud server backup UAE, enterprise backup Middle East, Windows server backup Saudi Arabia, Linux backup, virtual machine backup, database backup" canonicalUrl="https://s2mgt.com/solutions/server-backup" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

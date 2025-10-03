@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -111,26 +110,6 @@ const idealFor = [
 export default function SecureCloud() {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Secure Cloud Solutions MENA - SaaS & Endpoint Protection | S2 Solutions</title>
-        <meta name="description" content="Complete SaaS and endpoint protection for MENA enterprises. Cloud-to-cloud backup, email security, endpoint protection, and MDR services. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta name="keywords" content="secure cloud MENA, SaaS backup UAE, endpoint protection Middle East, cloud security Saudi Arabia, MDR services, email protection" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/secure-cloud" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Secure Cloud Solutions MENA - SaaS & Endpoint Protection | S2 Solutions" />
-        <meta property="og:description" content="Complete SaaS and endpoint protection for MENA enterprises. Cloud-to-cloud backup, email security, endpoint protection, and MDR services. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta property="og:url" content="https://s2mgt.com/solutions/secure-cloud" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Secure Cloud Solutions MENA - SaaS & Endpoint Protection | S2 Solutions" />
-        <meta name="twitter:description" content="Complete SaaS and endpoint protection for MENA enterprises. Cloud-to-cloud backup, email security, endpoint protection, and MDR services. Serving UAE, Saudi Arabia, and Middle East." />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
       <Navigation />
       
       <main>

@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -183,26 +183,12 @@ export default function EndpointProtection() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>Endpoint Protection with EDR Solutions | Advanced Security for MENA Enterprises</title>
-        <meta name="description" content="Comprehensive endpoint protection with EDR functionality for MENA region. Real-time threat detection, automated remediation, and cloud-based management for enterprise endpoints." />
-        <meta name="keywords" content="endpoint protection EDR MENA, endpoint security UAE, cybersecurity Middle East, threat protection Saudi Arabia, automated remediation" />
-        <link rel="canonical" href="https://s2mgt.com/solutions/endpoint-protection" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Endpoint Protection with EDR Solutions | Advanced Security for MENA Enterprises" />
-        <meta property="og:description" content="Comprehensive endpoint protection with EDR functionality for MENA region. Real-time threat detection, automated remediation, and cloud-based management for enterprise endpoints." />
-        <meta property="og:url" content="https://s2mgt.com/solutions/endpoint-protection" />
-        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
-        <meta property="og:site_name" content="S2 Management Solutions" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Endpoint Protection with EDR Solutions | Advanced Security for MENA Enterprises" />
-        <meta name="twitter:description" content="Comprehensive endpoint protection with EDR functionality for MENA region. Real-time threat detection, automated remediation, and cloud-based management for enterprise endpoints." />
-        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
-      </Helmet>
+      <SEOHead
+        title="Endpoint Protection with EDR Solutions | Advanced Security for MENA Enterprises"
+        description="Comprehensive endpoint protection with EDR functionality for MENA region. Real-time threat detection, automated remediation, and cloud-based management for enterprise endpoints."
+        keywords="endpoint protection EDR MENA, endpoint security UAE, cybersecurity Middle East, threat protection Saudi Arabia, automated remediation"
+        canonicalUrl="https://s2mgt.com/solutions/endpoint-protection"
+      />
       <Navigation />
       
       <main className="flex-1">
