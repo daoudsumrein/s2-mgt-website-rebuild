@@ -11,7 +11,7 @@ export default defineConfig(({ command, mode }) => ({
     port: 8080,
   },
   plugins: [
-    vike(),
+    command === 'serve' && vike(),
     react(),
     command === 'serve' && componentTagger(),
   ].filter(Boolean),
