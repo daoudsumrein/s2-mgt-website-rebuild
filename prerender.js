@@ -54,6 +54,15 @@ const routesToPrerender = [
     
     // Inject app HTML
     let html = template.replace(`<!--app-html-->`, appHtml);
+
+    // Strip generic static SEO tags to prevent duplicates; Helmet will add page-specific tags
+    html = html
+      .replace(/<link rel=\"canonical\"[\s\S]*?>/gi, '')
+      .replace(/<meta name=\"description\"[\s\S]*?>/gi, '')
+      .replace(/<meta name=\"keywords\"[\s\S]*?>/gi, '')
+      .replace(/<meta name=\"author\"[\s\S]*?>/gi, '')
+      .replace(/<meta property=\"og:[^\"]+\"[\s\S]*?>/gi, '')
+      .replace(/<meta property=\"twitter:[^\"]+\"[\s\S]*?>/gi, '');
     
     // Inject helmet data into head
     if (helmet) {
@@ -67,7 +76,7 @@ const routesToPrerender = [
         helmet.meta?.toString() || '',
         helmet.link?.toString() || '',
       ].filter(Boolean).join('\n    ');
-      
+
       if (metaTags) {
         html = html.replace('</head>', `    ${metaTags}\n  </head>`);
       }

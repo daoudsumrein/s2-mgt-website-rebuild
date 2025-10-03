@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+import { getSEOForPath, BASE_URL } from '@/seo/seoConfig';
 
 interface SEOHeadProps {
   title?: string;
@@ -9,33 +11,39 @@ interface SEOHeadProps {
   author?: string;
 }
 
-export default function SEOHead({
-  title = "S2 Management Solutions - Leading IT Transformation, Disaster Recovery & Cybersecurity in MENA",
-  description = "Premier IT transformation and digital modernization services in MENA. Expert disaster recovery, cybersecurity, data protection, and IT orchestration solutions for enterprises across UAE, Saudi Arabia, and Middle East.",
-  keywords = "disaster recovery MENA, cybersecurity UAE, IT transformation Middle East, digital transformation Saudi Arabia, Carbonite solutions, IT orchestration, data protection MENA, enterprise cybersecurity, business continuity",
-  canonicalUrl = "https://s2mgt.com",
-  ogImage = "https://s2mgt.com/assets/s2-logo.png",
-  author
-}: SEOHeadProps) {
+export default function SEOHead({ title, description, keywords, canonicalUrl, ogImage, author }: SEOHeadProps) {
+  const { pathname } = useLocation();
+  const routeSEO = getSEOForPath(pathname);
+
+  const defaultTitle = 'S2 Management Solutions - Leading IT Transformation, Disaster Recovery & Cybersecurity in MENA';
+  const defaultDescription = 'Premier IT transformation and digital modernization services in MENA. Expert disaster recovery, cybersecurity, data protection, and IT orchestration solutions for enterprises across UAE, Saudi Arabia, and Middle East.';
+  const defaultKeywords = 'disaster recovery MENA, cybersecurity UAE, IT transformation Middle East, digital transformation Saudi Arabia, Carbonite solutions, IT orchestration, data protection MENA, enterprise cybersecurity, business continuity';
+
+  const finalTitle = title || routeSEO.title || defaultTitle;
+  const finalDescription = description || routeSEO.description || defaultDescription;
+  const finalKeywords = keywords || routeSEO.keywords || defaultKeywords;
+  const finalOgImage = ogImage || routeSEO.ogImage || 'https://s2mgt.com/assets/s2-logo.png';
+  const finalCanonical = canonicalUrl || (routeSEO.canonicalPath ? `${BASE_URL}${routeSEO.canonicalPath}` : `${BASE_URL}${pathname}`);
+
   return (
     <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
-      
+      <title>{finalTitle}</title>
+      <meta name="description" content={finalDescription} />
+      <meta name="keywords" content={finalKeywords} />
+      <link rel="canonical" href={finalCanonical} />
+
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      
+      <meta property="og:title" content={finalTitle} />
+      <meta property="og:description" content={finalDescription} />
+      <meta property="og:url" content={finalCanonical} />
+      <meta property="og:image" content={finalOgImage} />
+
       {/* Twitter */}
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {author && <meta name="author" content={author} />}
+      <meta name="twitter:title" content={finalTitle} />
+      <meta name="twitter:description" content={finalDescription} />
+      <meta name="twitter:image" content={finalOgImage} />
+
+      {author && <meta name="author" content={author} />} 
     </Helmet>
   );
 }
