@@ -265,9 +265,20 @@ export default function AppCUREVendorPage() {
           }} viewport={{
             once: true
           }}>
-              <motion.img src="/lovable-uploads/75204d0b-a5d7-45c6-a0c0-e2cc1622b43e.png" alt="appCURE Application Transformation Workflow" className="w-full max-w-6xl h-auto mt-10 rounded-3xl shadow-2xl transition-transform duration-300" loading="lazy" whileHover={{
-              scale: 1.02
-            }} />
+              <motion.div 
+                className="w-full max-w-6xl h-80 mt-10 rounded-3xl shadow-2xl bg-gradient-to-br from-purple-900/20 via-pink-800/20 to-blue-900/20 border border-white/10 flex items-center justify-center"
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Application Transformation Workflow</h3>
+                  <p className="text-gray-300">Complete modernization process from legacy to cloud-ready applications</p>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>

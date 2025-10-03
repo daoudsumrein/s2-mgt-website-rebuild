@@ -1,7 +1,32 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const TechServicesSection = () => {
   const [activeSection, setActiveSection] = useState<'data-protection' | 'cybersecurity'>('data-protection');
+
+  // Function to convert service names to URLs
+  const getServiceUrl = (service: string) => {
+    const urlMap: { [key: string]: string } = {
+      "Disaster Recovery": "/solutions/opentext-carbonite-availability",
+      "Server Migration": "/solutions/opentext-carbonite-migrate",
+      "Disaster Recovery Orchestration": "/solutions/disaster-recovery-orchestration",
+      "Server Migration Orchestration": "/solutions/server-migration-orchestration",
+      "Endpoint Cloud Backup": "/solutions/endpoint-backup",
+      "Servers Cloud Backup": "/solutions/saas-backup",
+      "On Prem Backup": "/solutions/onprem-backup",
+      "Server Backup": "/solutions/OpenText-Server-Backup",
+      "Email Archiving": "/solutions/email-archiving",
+      "Application Modernization": "https://appcure.io/legacy-apps/",
+      "Servers and Data Protection": "/solutions/servers-data-protection",
+      "Endpoint Protection with EDR": "/solutions/endpoint-protection",
+      "Ransomware Protection": "/solutions/ransomware-protection",
+      "MDR": "/solutions/mdr",
+      "Security Awareness": "/solutions/security-awareness",
+      "Email Protection": "/solutions/email-protection",
+      "Email Encryption": "/solutions/email-encryption"
+    };
+    return urlMap[service] || "/solutions";
+  };
 
   const dataProtectionServices = [
     ["Disaster Recovery", "Server Migration", "Disaster Recovery Orchestration", "Server Migration Orchestration", "Endpoint Cloud Backup"],
@@ -17,7 +42,7 @@ const TechServicesSection = () => {
     <section 
       className="min-h-screen relative flex items-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/lovable-uploads/8d27f21f-0e90-44b2-a462-bae5390e8f22.png'), linear-gradient(135deg, #0a1229 0%, #1e3a5f 50%, #2a4d7a 100%)`
+        backgroundImage: `url('/lovable-uploads/tech-services-bg-compressed.png'), linear-gradient(135deg, #0a1229 0%, #1e3a5f 50%, #2a4d7a 100%)`
       }}
     >
       {/* Overlay */}
@@ -64,16 +89,24 @@ const TechServicesSection = () => {
             <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8 md:grid md:grid-cols-2 md:gap-8 md:mb-10 lg:gap-10 lg:mb-12 xl:gap-12 max-w-full sm:max-w-[800px]">
               <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
                 {dataProtectionServices[0].map((service, index) => (
-                  <div key={index} className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5">
+                  <Link 
+                    key={index} 
+                    to={getServiceUrl(service)}
+                    className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5 hover:text-blue-300 transition-all duration-300 hover:translate-x-1 cursor-pointer rounded-md hover:bg-white/5 px-2"
+                  >
                     {service}
-                  </div>
+                  </Link>
                 ))}
               </div>
               <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
                 {dataProtectionServices[1].map((service, index) => (
-                  <div key={index} className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5">
+                  <Link 
+                    key={index} 
+                    to={getServiceUrl(service)}
+                    className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5 hover:text-blue-300 transition-all duration-300 hover:translate-x-1 cursor-pointer rounded-md hover:bg-white/5 px-2"
+                  >
                     {service}
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -100,16 +133,24 @@ const TechServicesSection = () => {
             <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8 md:grid md:grid-cols-2 md:gap-8 md:mb-10 lg:gap-10 lg:mb-12 xl:gap-12 max-w-full sm:max-w-[800px]">
               <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
                 {cybersecurityServices[0].map((service, index) => (
-                  <div key={index} className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5">
+                  <Link 
+                    key={index} 
+                    to={getServiceUrl(service)}
+                    className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5 hover:text-blue-300 transition-all duration-300 hover:translate-x-1 cursor-pointer rounded-md hover:bg-white/5 px-2"
+                  >
                     {service}
-                  </div>
+                  </Link>
                 ))}
               </div>
               <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
                 {cybersecurityServices[1].map((service, index) => (
-                  <div key={index} className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5">
+                  <Link 
+                    key={index} 
+                    to={getServiceUrl(service)}
+                    className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal leading-[1.4] py-1.5 sm:py-2 md:py-2.5 lg:py-3 xl:py-3.5 hover:text-blue-300 transition-all duration-300 hover:translate-x-1 cursor-pointer rounded-md hover:bg-white/5 px-2"
+                  >
                     {service}
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
