@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 import vike from "vike/plugin";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ command, mode }) => ({
   server: {
     host: "::",
     port: 8080,
@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     vike(),
     react(),
-    mode === 'development' && componentTagger(),
+    command === 'serve' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
