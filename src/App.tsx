@@ -41,9 +41,6 @@ import ServersDataProtection from "./pages/solutions/ServersDataProtection";
 import NotFound from "./pages/NotFound";
 import Clients from "./pages/Clients";
 import ScrollToTop from "./components/ScrollToTop";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import "./index.css";
 
 const queryClient = new QueryClient();
 
@@ -54,7 +51,6 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -65,10 +61,10 @@ const App = () => (
           <Route path="/clients" element={<Clients />} />
           <Route path="/vendors/opentext" element={<OpenTextPage />} />
           <Route path="/vendors/tds" element={<TDSPage />} />
-          <Route path="/vendors/appcure" element={<AppCUREVendorPage />} />
-          <Route path="/vendors/sangfor" element={<SangforPage />} />
-          <Route path="/vendors/arrosoft" element={<ArrosoftPage />} />
-          <Route path="/vendors/nakivo" element={<NakivoPage />} />
+           <Route path="/vendors/appcure" element={<AppCUREVendorPage />} />
+            <Route path="/vendors/sangfor" element={<SangforPage />} />
+            <Route path="/vendors/arrosoft" element={<ArrosoftPage />} />
+            <Route path="/vendors/nakivo" element={<NakivoPage />} />
           <Route path="/solutions/opentext-carbonite-availability" element={<DisasterRecovery />} />
           <Route path="/solutions/data-protection" element={<DataProtection />} />
           <Route path="/solutions/it-discovery" element={<ITDiscovery />} />
@@ -93,7 +89,6 @@ const App = () => (
           <Route path="/solutions/servers-data-protection" element={<ServersDataProtection />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
