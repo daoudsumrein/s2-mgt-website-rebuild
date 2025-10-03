@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -92,12 +92,26 @@ const idealFor = [
 export default function DataProtection() {
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Data Protection & Backup Solutions MENA - Enterprise Data Security | S2 Solutions"
-        description="Comprehensive data protection and backup solutions for MENA enterprises. Carbonite partner offering endpoint, server, cloud-to-cloud backup with advanced cybersecurity features across UAE and Middle East."
-        keywords="data protection MENA, backup solutions UAE, Carbonite backup Middle East, endpoint backup Saudi Arabia, cloud backup solutions, data security MENA, enterprise backup, ransomware protection"
-        canonicalUrl="https://s2mgt.com/solutions/data-protection"
-      />
+      <Helmet>
+        <title>Data Protection & Backup Solutions MENA - Enterprise Data Security | S2 Solutions</title>
+        <meta name="description" content="Comprehensive data protection and backup solutions for MENA enterprises. Carbonite partner offering endpoint, server, cloud-to-cloud backup with advanced cybersecurity features across UAE and Middle East." />
+        <meta name="keywords" content="data protection MENA, backup solutions UAE, Carbonite backup Middle East, endpoint backup Saudi Arabia, cloud backup solutions, data security MENA, enterprise backup, ransomware protection" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/data-protection" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Data Protection & Backup Solutions MENA - Enterprise Data Security | S2 Solutions" />
+        <meta property="og:description" content="Comprehensive data protection and backup solutions for MENA enterprises. Carbonite partner offering endpoint, server, cloud-to-cloud backup with advanced cybersecurity features across UAE and Middle East." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/data-protection" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Data Protection & Backup Solutions MENA - Enterprise Data Security | S2 Solutions" />
+        <meta name="twitter:description" content="Comprehensive data protection and backup solutions for MENA enterprises. Carbonite partner offering endpoint, server, cloud-to-cloud backup with advanced cybersecurity features across UAE and Middle East." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

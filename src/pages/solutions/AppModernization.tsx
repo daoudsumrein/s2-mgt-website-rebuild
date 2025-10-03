@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -93,12 +93,26 @@ const idealFor = [
 export default function AppModernization() {
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead
-        title="Application Modernization & Digital Transformation MENA | S2 Solutions"
-        description="Legacy application modernization and digital transformation services for MENA enterprises. Expert IT transformation, cloud migration, and application orchestration across UAE, Saudi Arabia, and Middle East."
-        keywords="application modernization MENA, digital transformation UAE, IT transformation Middle East, legacy modernization Saudi Arabia, cloud migration, app modernization, digital transformation services"
-        canonicalUrl="https://s2mgt.com/solutions/app-modernization"
-      />
+      <Helmet>
+        <title>Application Modernization & Digital Transformation MENA | S2 Solutions</title>
+        <meta name="description" content="Legacy application modernization and digital transformation services for MENA enterprises. Expert IT transformation, cloud migration, and application orchestration across UAE, Saudi Arabia, and Middle East." />
+        <meta name="keywords" content="application modernization MENA, digital transformation UAE, IT transformation Middle East, legacy modernization Saudi Arabia, cloud migration, app modernization, digital transformation services" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/app-modernization" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Application Modernization & Digital Transformation MENA | S2 Solutions" />
+        <meta property="og:description" content="Legacy application modernization and digital transformation services for MENA enterprises. Expert IT transformation, cloud migration, and application orchestration across UAE, Saudi Arabia, and Middle East." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/app-modernization" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Application Modernization & Digital Transformation MENA | S2 Solutions" />
+        <meta name="twitter:description" content="Legacy application modernization and digital transformation services for MENA enterprises. Expert IT transformation, cloud migration, and application orchestration across UAE, Saudi Arabia, and Middle East." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       
       <main>

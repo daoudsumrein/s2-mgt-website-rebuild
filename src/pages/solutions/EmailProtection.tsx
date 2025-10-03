@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -81,12 +81,26 @@ const deliverables = [
 export default function EmailProtection() {
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Email Protection Solutions | Advanced Email Security MENA"
-        description="Comprehensive email protection for MENA enterprises. Advanced threat protection, anti-phishing, and email security solutions for business communication."
-        keywords="email protection MENA, email security UAE, anti-phishing Middle East, email threat protection Saudi Arabia"
-        canonicalUrl="https://s2mgt.com/solutions/email-protection"
-      />
+      <Helmet>
+        <title>Email Protection Solutions | Advanced Email Security MENA</title>
+        <meta name="description" content="Comprehensive email protection for MENA enterprises. Advanced threat protection, anti-phishing, and email security solutions for business communication." />
+        <meta name="keywords" content="email protection MENA, email security UAE, anti-phishing Middle East, email threat protection Saudi Arabia" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/email-protection" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Email Protection Solutions | Advanced Email Security MENA" />
+        <meta property="og:description" content="Comprehensive email protection for MENA enterprises. Advanced threat protection, anti-phishing, and email security solutions for business communication." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/email-protection" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Email Protection Solutions | Advanced Email Security MENA" />
+        <meta name="twitter:description" content="Comprehensive email protection for MENA enterprises. Advanced threat protection, anti-phishing, and email security solutions for business communication." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       
       <main className="flex-1">

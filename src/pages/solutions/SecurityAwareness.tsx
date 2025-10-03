@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
@@ -10,12 +10,26 @@ export default function SecurityAwareness() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Security Awareness Training | Human Firewall Development MENA"
-        description="Comprehensive security awareness training programs for MENA enterprises. Phishing simulations, interactive training, and human risk management solutions."
-        keywords="security awareness training MENA, cybersecurity training UAE, phishing simulation Middle East, security education Saudi Arabia"
-        canonicalUrl="https://s2mgt.com/solutions/security-awareness"
-      />
+      <Helmet>
+        <title>Security Awareness Training | Human Firewall Development MENA</title>
+        <meta name="description" content="Comprehensive security awareness training programs for MENA enterprises. Phishing simulations, interactive training, and human risk management solutions." />
+        <meta name="keywords" content="security awareness training MENA, cybersecurity training UAE, phishing simulation Middle East, security education Saudi Arabia" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/security-awareness" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Security Awareness Training | Human Firewall Development MENA" />
+        <meta property="og:description" content="Comprehensive security awareness training programs for MENA enterprises. Phishing simulations, interactive training, and human risk management solutions." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/security-awareness" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Security Awareness Training | Human Firewall Development MENA" />
+        <meta name="twitter:description" content="Comprehensive security awareness training programs for MENA enterprises. Phishing simulations, interactive training, and human risk management solutions." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       
       <main className="flex-1">

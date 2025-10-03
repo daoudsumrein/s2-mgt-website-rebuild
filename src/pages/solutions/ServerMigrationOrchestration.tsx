@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -44,12 +44,26 @@ export default function ServerMigrationOrchestration() {
     threshold: 0.3
   });
   return <div className="min-h-screen flex flex-col">
-      <SEOHead 
-        title="TDS TransitionManager Migration Orchestration | MENA" 
-        description="S2 Management delivers TDS TransitionManager in MENA, enabling automated migration orchestration with runbooks, dependency mapping & workflow automation" 
-        keywords="TDS TransitionManager MENA, migration orchestration UAE, automated server migration Saudi Arabia, migration workflow Qatar, workload transition Kuwait, dependency mapping Bahrain, migration automation Gulf, BC/DR orchestration Middle East, server migration MENA, infrastructure migration UAE, orchestrated cutover Saudi Arabia, cloud migration Qatar, migration runbooks Kuwait, data center transition Bahrain, enterprise migration automation Gulf" 
-        canonicalUrl="https://s2mgt.com/solutions/server-migration-orchestration" 
-      />
+      <Helmet>
+        <title>TDS TransitionManager Migration Orchestration | MENA</title>
+        <meta name="description" content="S2 Management delivers TDS TransitionManager in MENA, enabling automated migration orchestration with runbooks, dependency mapping & workflow automation" />
+        <meta name="keywords" content="TDS TransitionManager MENA, migration orchestration UAE, automated server migration Saudi Arabia, migration workflow Qatar, workload transition Kuwait, dependency mapping Bahrain, migration automation Gulf, BC/DR orchestration Middle East, server migration MENA, infrastructure migration UAE, orchestrated cutover Saudi Arabia, cloud migration Qatar, migration runbooks Kuwait, data center transition Bahrain, enterprise migration automation Gulf" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/server-migration-orchestration" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="TDS TransitionManager Migration Orchestration | MENA" />
+        <meta property="og:description" content="S2 Management delivers TDS TransitionManager in MENA, enabling automated migration orchestration with runbooks, dependency mapping & workflow automation" />
+        <meta property="og:url" content="https://s2mgt.com/solutions/server-migration-orchestration" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TDS TransitionManager Migration Orchestration | MENA" />
+        <meta name="twitter:description" content="S2 Management delivers TDS TransitionManager in MENA, enabling automated migration orchestration with runbooks, dependency mapping & workflow automation" />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

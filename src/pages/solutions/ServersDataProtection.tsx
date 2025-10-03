@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -15,12 +15,26 @@ export default function ServersDataProtection() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Servers and Data Protection Solutions MENA - Insider Threat Protection | S2 Solutions"
-        description="Advanced servers and data protection solutions for MENA region. Protect against insider threats with invisibility technology and access controls. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="server protection MENA, data protection UAE, insider threats Middle East, cybersecurity Saudi Arabia, access control, data security"
-        canonicalUrl="https://s2mgt.com/solutions/servers-data-protection"
-      />
+      <Helmet>
+        <title>Servers and Data Protection Solutions MENA - Insider Threat Protection | S2 Solutions</title>
+        <meta name="description" content="Advanced servers and data protection solutions for MENA region. Protect against insider threats with invisibility technology and access controls. Serving UAE, Saudi Arabia, and Middle East." />
+        <meta name="keywords" content="server protection MENA, data protection UAE, insider threats Middle East, cybersecurity Saudi Arabia, access control, data security" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/servers-data-protection" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Servers and Data Protection Solutions MENA - Insider Threat Protection | S2 Solutions" />
+        <meta property="og:description" content="Advanced servers and data protection solutions for MENA region. Protect against insider threats with invisibility technology and access controls. Serving UAE, Saudi Arabia, and Middle East." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/servers-data-protection" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Servers and Data Protection Solutions MENA - Insider Threat Protection | S2 Solutions" />
+        <meta name="twitter:description" content="Advanced servers and data protection solutions for MENA region. Protect against insider threats with invisibility technology and access controls. Serving UAE, Saudi Arabia, and Middle East." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -147,12 +147,26 @@ export default function EmailArchiving() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Email Archiving Solutions MENA - Compliance & Data Retention | S2 Solutions"
-        description="Professional email archiving solutions for MENA enterprises. Complete email archiving with compliance features, data retention policies, and secure storage. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="email archiving MENA, email compliance UAE, data retention Middle East, email storage Saudi Arabia, archiving solutions, compliance archiving"
-        canonicalUrl="https://s2mgt.com/solutions/email-archiving"
-      />
+      <Helmet>
+        <title>Email Archiving Solutions MENA - Compliance & Data Retention | S2 Solutions</title>
+        <meta name="description" content="Professional email archiving solutions for MENA enterprises. Complete email archiving with compliance features, data retention policies, and secure storage. Serving UAE, Saudi Arabia, and Middle East." />
+        <meta name="keywords" content="email archiving MENA, email compliance UAE, data retention Middle East, email storage Saudi Arabia, archiving solutions, compliance archiving" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/email-archiving" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Email Archiving Solutions MENA - Compliance & Data Retention | S2 Solutions" />
+        <meta property="og:description" content="Professional email archiving solutions for MENA enterprises. Complete email archiving with compliance features, data retention policies, and secure storage. Serving UAE, Saudi Arabia, and Middle East." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/email-archiving" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Email Archiving Solutions MENA - Compliance & Data Retention | S2 Solutions" />
+        <meta name="twitter:description" content="Professional email archiving solutions for MENA enterprises. Complete email archiving with compliance features, data retention policies, and secure storage. Serving UAE, Saudi Arabia, and Middle East." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

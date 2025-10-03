@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -46,12 +46,26 @@ const deliverables = [
 export default function EmailEncryption() {
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Email Encryption Solutions | Secure Communications MENA"
-        description="Enterprise email encryption solutions for MENA region. End-to-end encryption, digital signatures, and secure document exchange for business communications."
-        keywords="email encryption MENA, secure email UAE, encrypted communications Middle East, email security Saudi Arabia"
-        canonicalUrl="https://s2mgt.com/solutions/email-encryption"
-      />
+      <Helmet>
+        <title>Email Encryption Solutions | Secure Communications MENA</title>
+        <meta name="description" content="Enterprise email encryption solutions for MENA region. End-to-end encryption, digital signatures, and secure document exchange for business communications." />
+        <meta name="keywords" content="email encryption MENA, secure email UAE, encrypted communications Middle East, email security Saudi Arabia" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/email-encryption" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Email Encryption Solutions | Secure Communications MENA" />
+        <meta property="og:description" content="Enterprise email encryption solutions for MENA region. End-to-end encryption, digital signatures, and secure document exchange for business communications." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/email-encryption" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Email Encryption Solutions | Secure Communications MENA" />
+        <meta name="twitter:description" content="Enterprise email encryption solutions for MENA region. End-to-end encryption, digital signatures, and secure document exchange for business communications." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       
       <main className="flex-1">

@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -55,7 +55,26 @@ const keyBenefits = ["Automated backup for all endpoint devices", "Protection ac
 const idealFor = ["Organizations with distributed workforce", "Companies with remote employees", "Enterprises with BYOD policies", "Businesses requiring compliance with data regulations", "Organizations seeking to reduce data loss risks"];
 export default function EndpointBackup() {
   return <div className="min-h-screen flex flex-col">
-      <SEOHead title="Official Distributor of OpenText Core Endpoint Backup Solutions" description="S2, the official MENA distributor for OpenText Core Endpoint Backup, delivers automated device & data protection against human error, malware & theft." keywords="endpoint backup MENA, cloud backup UAE, device protection Middle East, automated backup Saudi Arabia, endpoint security, remote device backup, enterprise endpoint protection" canonicalUrl="https://s2mgt.com/solutions/endpoint-backup" />
+      <Helmet>
+        <title>Official Distributor of OpenText Core Endpoint Backup Solutions</title>
+        <meta name="description" content="S2, the official MENA distributor for OpenText Core Endpoint Backup, delivers automated device & data protection against human error, malware & theft." />
+        <meta name="keywords" content="endpoint backup MENA, cloud backup UAE, device protection Middle East, automated backup Saudi Arabia, endpoint security, remote device backup, enterprise endpoint protection" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/endpoint-backup" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Official Distributor of OpenText Core Endpoint Backup Solutions" />
+        <meta property="og:description" content="S2, the official MENA distributor for OpenText Core Endpoint Backup, delivers automated device & data protection against human error, malware & theft." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/endpoint-backup" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Official Distributor of OpenText Core Endpoint Backup Solutions" />
+        <meta name="twitter:description" content="S2, the official MENA distributor for OpenText Core Endpoint Backup, delivers automated device & data protection against human error, malware & theft." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

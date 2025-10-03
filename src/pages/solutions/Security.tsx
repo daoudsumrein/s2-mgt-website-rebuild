@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -106,12 +106,26 @@ const idealFor = [
 export default function Security() {
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead
-        title="Cybersecurity & Ransomware Protection MENA - Enterprise Security Solutions | S2"
-        description="Advanced cybersecurity and ransomware protection for MENA enterprises. Multi-layered threat defense, endpoint security, email protection, and managed detection & response (MDR) services across UAE and Middle East."
-        keywords="cybersecurity MENA, ransomware protection UAE, enterprise security Middle East, endpoint protection Saudi Arabia, email security, MDR services, threat detection MENA, cyber defense solutions"
-        canonicalUrl="https://s2mgt.com/solutions/security"
-      />
+      <Helmet>
+        <title>Cybersecurity & Ransomware Protection MENA - Enterprise Security Solutions | S2</title>
+        <meta name="description" content="Advanced cybersecurity and ransomware protection for MENA enterprises. Multi-layered threat defense, endpoint security, email protection, and managed detection & response (MDR) services across UAE and Middle East." />
+        <meta name="keywords" content="cybersecurity MENA, ransomware protection UAE, enterprise security Middle East, endpoint protection Saudi Arabia, email security, MDR services, threat detection MENA, cyber defense solutions" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/security" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Cybersecurity & Ransomware Protection MENA - Enterprise Security Solutions | S2" />
+        <meta property="og:description" content="Advanced cybersecurity and ransomware protection for MENA enterprises. Multi-layered threat defense, endpoint security, email protection, and managed detection & response (MDR) services across UAE and Middle East." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/security" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cybersecurity & Ransomware Protection MENA - Enterprise Security Solutions | S2" />
+        <meta name="twitter:description" content="Advanced cybersecurity and ransomware protection for MENA enterprises. Multi-layered threat defense, endpoint security, email protection, and managed detection & response (MDR) services across UAE and Middle East." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       
       <main>

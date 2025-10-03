@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import { Helmet } from 'react-helmet-async';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,12 +17,26 @@ export default function MDR() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Managed Detection and Response (MDR) Services | MENA Cybersecurity"
-        description="Professional MDR services for MENA enterprises. 24/7 security monitoring, threat hunting, and incident response by expert security analysts."
-        keywords="MDR services MENA, managed detection response UAE, cybersecurity monitoring Middle East, security operations Saudi Arabia"
-        canonicalUrl="https://s2mgt.com/solutions/mdr"
-      />
+      <Helmet>
+        <title>Managed Detection and Response (MDR) Services | MENA Cybersecurity</title>
+        <meta name="description" content="Professional MDR services for MENA enterprises. 24/7 security monitoring, threat hunting, and incident response by expert security analysts." />
+        <meta name="keywords" content="MDR services MENA, managed detection response UAE, cybersecurity monitoring Middle East, security operations Saudi Arabia" />
+        <link rel="canonical" href="https://s2mgt.com/solutions/mdr" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Managed Detection and Response (MDR) Services | MENA Cybersecurity" />
+        <meta property="og:description" content="Professional MDR services for MENA enterprises. 24/7 security monitoring, threat hunting, and incident response by expert security analysts." />
+        <meta property="og:url" content="https://s2mgt.com/solutions/mdr" />
+        <meta property="og:image" content="https://s2mgt.com/assets/s2-logo.png" />
+        <meta property="og:site_name" content="S2 Management Solutions" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Managed Detection and Response (MDR) Services | MENA Cybersecurity" />
+        <meta name="twitter:description" content="Professional MDR services for MENA enterprises. 24/7 security monitoring, threat hunting, and incident response by expert security analysts." />
+        <meta name="twitter:image" content="https://s2mgt.com/assets/s2-logo.png" />
+      </Helmet>
       <Navigation />
       
       <main className="flex-1">
