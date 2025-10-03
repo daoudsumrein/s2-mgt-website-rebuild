@@ -184,7 +184,7 @@ export default function DROrchestration() {
                           animation: 'gradientShift 4s ease-in-out infinite'
                         }}
                       >
-                        TDS DR Orchestrator 
+                        TDS Disaster Recovery Orchestrator 
                       </span>
                     </h1>
                     

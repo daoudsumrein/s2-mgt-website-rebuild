@@ -325,7 +325,7 @@ export default function OpenTextServerBackup() {
                     
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                       <span 
-                        className="bg-gradient-to-r from-blue-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block pb-4"
+                        className="bg-gradient-to-r from-blue-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block"
                         style={{
                           backgroundSize: '300% 300%',
                           animation: 'gradientShift 4s ease-in-out infinite'

@@ -112,7 +112,7 @@ export default function Footer() {
               <div className="space-y-2">
                 <div className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-primary">📍</span>
-                  <span>4794 Saud Ibn Faisal, Al Sahafah Dist, Riyadh 13321, KSA</span>
+                  <span>Building No. 7036, Saiyda st., Riyadh Saudi Arabia | P.O. Box: 12796, Riyadh, KSA</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-primary">📞</span>
@@ -237,7 +237,7 @@ export default function Footer() {
               <div className="space-y-2">
                 <div className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-primary mt-0.5">📍</span>
-                  <span>4794 Saud Ibn Faisal, Al Sahafah Dist, Riyadh 13321, KSA</span>
+                  <span>Building No. 7036, Saiyda st., Riyadh Saudi Arabia | P.O. Box: 12796, Riyadh, KSA</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-primary">📞</span>

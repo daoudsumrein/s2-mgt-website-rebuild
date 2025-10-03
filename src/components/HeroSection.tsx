@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(/lovable-uploads/hero-bg-compressed.png)` }}
+        style={{ backgroundImage: `url(/lovable-uploads/056d5ea9-8864-4541-9b47-a56718ba3b48.png)` }}
       />
       
       {/* Flowing Background Elements */}
@@ -115,7 +115,7 @@ export default function HeroSection() {
           >
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#3b82f6] hover:to-[#2563eb] text-white px-10 py-5 text-xl font-semibold rounded-full shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_25px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-0"
+              className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#3b82f6] hover:to-[#2563eb] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_25px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-0"
               asChild
             >
               <Link to="/contact">

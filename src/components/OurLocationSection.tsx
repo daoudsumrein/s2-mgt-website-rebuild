@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const OurLocationSection = () => {
   return (
     <section 
-      className="relative text-white py-8 sm:py-12 md:py-16 lg:py-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat overflow-x-hidden"
+      className="relative text-white py-8 sm:py-12 md:py-16 lg:py-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: 'url(/lovable-uploads/877d6d8a-b597-4939-a15f-a1e228853466.png)' }}
     >
       {/* Background overlay for better text readability */}
@@ -14,9 +14,9 @@ const OurLocationSection = () => {
         transition={{ duration: 1 }}
       ></motion.div>
       
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-5 md:px-6 overflow-x-hidden">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-5 md:px-6">
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center w-full max-w-full"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-15 items-center w-full"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -86,9 +86,9 @@ const OurLocationSection = () => {
           >
             <motion.iframe 
               src="https://www.google.com/maps/d/u/0/embed?mid=1wXbC_xoJqUfvjc9WIXbZK3bMcTp7nSA&ehbc=2E312F&noprof=1"
-              width="100%" 
-              height="100%"
-              className="w-full h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[480px] border-0 rounded-lg sm:rounded-xl md:rounded-xl max-w-full"
+              width="640" 
+              height="480"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[480px] border-0 rounded-lg sm:rounded-xl md:rounded-xl"
               title="Our Office Locations"
               loading="lazy"
               initial={{ scale: 0.8 }}

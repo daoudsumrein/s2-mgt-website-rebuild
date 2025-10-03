@@ -168,104 +168,69 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Problem & Solution Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-16 bg-gradient-to-br from-slate-50 to-blue-50"
-        >
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+            <motion.div ref={problemAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={problemAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                 The Cost of Downtime is Rising
               </h2>
-              <p className="text-lg text-center text-slate-600 max-w-4xl mx-auto mb-12">
+              <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
                 From natural disasters to user errors and cyber attacks, IT systems face constant threats. 
                 Every hour of downtime costs thousands in lost revenue and productivity.
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                whileHover={{ 
-                  y: -15, 
-                  scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                  transition: { duration: 0.3 }
-                }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
-              >
-                {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
-                
-                <div className="relative z-10">
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ duration: 0.3 }}
-                    className="mb-6"
-                  >
-                    <div className="text-5xl text-red-500">
-                      <i className="fas fa-exclamation-triangle"></i>
-                    </div>
-                  </motion.div>
+            <motion.div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto" initial={{
+            opacity: 0
+          }} animate={problemAnimation.isInView ? {
+            opacity: 1
+          } : {
+            opacity: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: "easeOut"
+          }}>
+              <Card className="relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    ⚠️
+                  </div>
                   <h3 className="text-xl font-bold mb-4">The Challenge</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     Organizations face multiple downtime risks daily - hardware failures, human errors, cyber attacks, and natural disasters. Traditional backup solutions often result in significant data loss and extended recovery times.
                   </p>
-                </div>
-              </motion.div>
+                </CardContent>
+              </Card>
               
-              <motion.div
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                whileHover={{ 
-                  y: -15, 
-                  scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                  transition: { duration: 0.3 }
-                }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
-              >
-                {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
-                
-                <div className="relative z-10">
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ duration: 0.3 }}
-                    className="mb-6"
-                  >
-                    <div className="text-5xl text-blue-500">
-                      <i className="fas fa-shield-alt"></i>
-                    </div>
-                  </motion.div>
+              <Card className="relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    🛡️
+                  </div>
                   <h3 className="text-xl font-bold mb-4">The Solution</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     OpenText Availability provides continuous real-time replication with byte-level precision, ensuring minimal data loss and near-instantaneous failover capabilities across any environment.
                   </p>
-                </div>
-              </motion.div>
-            </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Key Benefits Section */}
         <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -454,364 +419,243 @@ export default function DisasterRecovery() {
         </section>
 
         {/* How It Works Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-16 bg-white"
-        >
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+            <motion.div ref={workflowAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={workflowAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                 How It Works
               </h2>
-              <p className="text-lg text-center text-slate-600 max-w-4xl mx-auto mb-12">
+              <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
                 Patented replication technology that captures changes at the byte level and replicates them between any source and target environment
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {[
-                {
-                  icon: "fas fa-cogs",
-                  title: "Deploy & Configure",
-                  description: "Install the technology on all servers being protected and configure target secondary environments through the management console.",
-                  color: "blue"
-                },
-                {
-                  icon: "fas fa-seedling",
-                  title: "Initial Seeding", 
-                  description: "Complete initial data replication with encrypted transmission and three-tier compression to minimize network impact.",
-                  color: "green"
-                },
-                {
-                  icon: "fas fa-sync-alt",
-                  title: "Real-Time Sync",
-                  description: "Continuous byte-level change capture and real-time replication keeps your secondary systems perfectly synchronized.",
-                  color: "purple"
-                },
-                {
-                  icon: "fas fa-rocket",
-                  title: "Instant Failover",
-                  description: "In case of outage, automatic or manual failover redirects users to secondary systems in seconds with minimal disruption.",
-                  color: "orange"
-                }
-              ].map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ 
-                    duration: 0.6, 
-                    delay: 0.3 + index * 0.1,
-                    ease: "easeOut"
-                  }}
-                  whileHover={{ 
-                    y: -15, 
-                    scale: 1.05,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                    transition: { duration: 0.3 }
-                  }}
-                  viewport={{ once: true }}
-                  className="text-center bg-slate-50 hover:bg-white rounded-xl p-8 transition-all duration-300 border-2 border-transparent hover:border-blue-200 cursor-pointer relative overflow-hidden group"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ duration: 0.3 }}
-                    className={`text-5xl mb-6 ${
-                      step.color === 'blue' ? 'text-blue-500' : 
-                      step.color === 'green' ? 'text-green-500' : 
-                      step.color === 'purple' ? 'text-purple-500' : 'text-orange-500'
-                    }`}
-                  >
-                    <i className={step.icon}></i>
-                  </motion.div>
-                  <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{step.description}</p>
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-                </motion.div>
-              ))}
-            </div>
+            <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto" initial={{
+            opacity: 0,
+            scale: 0.9
+          }} animate={workflowAnimation.isInView ? {
+            opacity: 1,
+            scale: 1
+          } : {
+            opacity: 0,
+            scale: 0.9
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: "easeOut"
+          }}>
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/40">
+                  1
+                </div>
+                <h3 className="text-xl font-bold mb-4">Deploy & Configure</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Install the technology on all servers being protected and configure target secondary environments through the management console.
+                </p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/40">
+                  2
+                </div>
+                <h3 className="text-xl font-bold mb-4">Initial Seeding</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Complete initial data replication with encrypted transmission and three-tier compression to minimize network impact.
+                </p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/40">
+                  3
+                </div>
+                <h3 className="text-xl font-bold mb-4">Real-Time Sync</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Continuous byte-level change capture and real-time replication keeps your secondary systems perfectly synchronized.
+                </p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/40">
+                  4
+                </div>
+                <h3 className="text-xl font-bold mb-4">Instant Failover</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  In case of outage, automatic or manual failover redirects users to secondary systems in seconds with minimal disruption.
+                </p>
+              </div>
+            </motion.div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Failover Diagram Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-16 bg-gradient-to-br from-gray-50 to-gray-100"
-        >
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-                Seamless Failover in Action
-              </h2>
-              <p className="text-lg text-center text-slate-600 max-w-4xl mx-auto mb-12">
-                See how OpenText Availability ensures business continuity with continuous replication and instant failover
-              </p>
-            </motion.div>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+              Seamless Failover in Action
+            </h2>
+            <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
+              See how OpenText Availability ensures business continuity with continuous replication and instant failover
+            </p>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <div className="overflow-hidden relative group">
-                  <img src="/lovable-uploads/75dbbe95-acbf-4db9-8719-50b578aa327c.png" alt="OpenText Availability Failover Process - Shows primary system replicating to target system, then automatic failover when primary fails" className="w-full h-auto object-contain rounded-xl transition-transform duration-300 hover:scale-105 group-hover:shadow-lg" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
+              <div>
+                <div className="overflow-hidden">
+                  <img src="/lovable-uploads/75dbbe95-acbf-4db9-8719-50b578aa327c.png" alt="OpenText Availability Failover Process - Shows primary system replicating to target system, then automatic failover when primary fails" className="w-full h-auto object-contain rounded-xl transition-transform duration-300 hover:scale-105" />
                 </div>
-              </motion.div>
+              </div>
               
               <div className="space-y-6">
-                {[
-                  {
-                    icon: "fas fa-play-circle",
-                    title: "Normal Operations",
-                    description: "Primary system operates normally while changes are continuously replicated to the target system in real-time, ensuring virtually no data loss.",
-                    color: "green"
-                  },
-                  {
-                    icon: "fas fa-exchange-alt",
-                    title: "Automatic Failover",
-                    description: "When primary system failure is detected, automatic or manual failover activates the target system, ensuring near-zero downtime and seamless user experience.",
-                    color: "blue"
-                  }
-                ].map((step, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ 
-                      duration: 0.6, 
-                      delay: 0.4 + index * 0.2,
-                      ease: "easeOut"
-                    }}
-                    whileHover={{ 
-                      y: -10, 
-                      scale: 1.02,
-                      boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
-                      transition: { duration: 0.3 }
-                    }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
-                  >
-                    {/* Background gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br from-transparent via-transparent ${
-                      step.color === 'green' ? 'to-green-50' : 'to-blue-50'
-                    } opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                    
-                    {/* Shine effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-r from-transparent ${
-                      step.color === 'green' ? 'via-green-500/10' : 'via-blue-500/10'
-                    } to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none`} />
-                    
-                    <div className="relative z-10">
-                      <div className="flex items-center mb-4">
-                        <motion.div
-                          whileHover={{ scale: 1.1, rotate: 5 }}
-                          transition={{ duration: 0.3 }}
-                          className={`w-12 h-12 ${
-                            step.color === 'green' ? 'bg-gradient-to-br from-green-500 to-green-600' : 'bg-gradient-to-br from-blue-500 to-purple-500'
-                          } rounded-lg flex items-center justify-center text-white mr-4`}
-                        >
-                          <i className={`${step.icon} text-lg`}></i>
-                        </motion.div>
-                        <h3 className="text-xl font-bold">{step.title}</h3>
+                <Card className="transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-4 transition-transform duration-300 group-hover:scale-110">
+                        1
                       </div>
-                      <p className="text-slate-600 leading-relaxed">
-                        {step.description}
-                      </p>
+                      <h3 className="text-xl font-bold">Normal Operations</h3>
                     </div>
-                  </motion.div>
-                ))}
+                    <p className="text-muted-foreground leading-relaxed">
+                      Primary system operates normally while changes are continuously replicated to the target system in real-time, ensuring virtually no data loss.
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-4 transition-transform duration-300 group-hover:scale-110">
+                        2
+                      </div>
+                      <h3 className="text-xl font-bold">Automatic Failover</h3>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      When primary system failure is detected, automatic or manual failover activates the target system, ensuring near-zero downtime and seamless user experience.
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
-              {[
-                {
-                  icon: "fas fa-sync",
-                  title: "Continuous Sync",
-                  description: "Real-time replication ensures target system is always current",
-                  color: "blue"
-                },
-                {
-                  icon: "fas fa-bolt",
-                  title: "Instant Detection",
-                  description: "Heartbeat monitoring detects failures within seconds",
-                  color: "purple"
-                },
-                {
-                  icon: "fas fa-rocket",
-                  title: "Zero Downtime",
-                  description: "Users seamlessly redirected to target system",
-                  color: "green"
-                }
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ 
-                    duration: 0.6, 
-                    delay: 0.6 + index * 0.1,
-                    ease: "easeOut"
-                  }}
-                  whileHover={{ 
-                    y: -12, 
-                    scale: 1.05,
-                    boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
-                    transition: { duration: 0.3 }
-                  }}
-                  viewport={{ once: true }}
-                  className="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 relative overflow-hidden group cursor-pointer"
-                >
-                  {/* Background gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br from-transparent via-transparent ${
-                    feature.color === 'blue' ? 'to-blue-50' : 
-                    feature.color === 'purple' ? 'to-purple-50' : 'to-green-50'
-                  } opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                  
-                  {/* Shine effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r from-transparent ${
-                    feature.color === 'blue' ? 'via-blue-500/10' : 
-                    feature.color === 'purple' ? 'via-purple-500/10' : 'via-green-500/10'
-                  } to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none`} />
-                  
-                  <div className="relative z-10">
-                    <motion.div
-                      whileHover={{ scale: 1.2, rotate: 10 }}
-                      transition={{ duration: 0.3 }}
-                      className={`text-4xl mb-4 ${
-                        feature.color === 'blue' ? 'text-blue-500' : 
-                        feature.color === 'purple' ? 'text-purple-500' : 'text-green-500'
-                      }`}
-                    >
-                      <i className={feature.icon}></i>
-                    </motion.div>
-                    <h4 className="font-bold mb-2">{feature.title}</h4>
-                    <p className="text-sm text-slate-600">{feature.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+              <Card className="text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <div className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">🔄</div>
+                  <h4 className="font-bold mb-2">Continuous Sync</h4>
+                  <p className="text-sm text-muted-foreground">Real-time replication ensures target system is always current</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <div className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">⚡</div>
+                  <h4 className="font-bold mb-2">Instant Detection</h4>
+                  <p className="text-sm text-muted-foreground">Heartbeat monitoring detects failures within seconds</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <div className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">🚀</div>
+                  <h4 className="font-bold mb-2">Zero Downtime</h4>
+                  <p className="text-sm text-muted-foreground">Users seamlessly redirected to target system</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Platform Support Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="py-16 bg-white"
-        >
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+            <motion.div ref={platformAnimation.ref} initial={{
+            opacity: 0,
+            y: 50
+          }} animate={platformAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 50
+          }} transition={{
+            duration: 0.8,
+            ease: "easeOut"
+          }}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                 Universal Platform Support
               </h2>
-              <p className="text-lg text-center text-slate-600 max-w-4xl mx-auto mb-12">
+              <p className="text-lg text-center text-muted-foreground max-w-4xl mx-auto mb-12">
                 Protect all your critical systems regardless of underlying infrastructure
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {[
-                {
-                  icon: "fas fa-desktop",
-                  title: "Operating Systems",
-                  items: ["Windows Server", "Red Hat Enterprise Linux", "Oracle Enterprise Linux", "SUSE Linux Enterprise", "CentOS", "Ubuntu"],
-                  color: "blue"
-                },
-                {
-                  icon: "fas fa-cube",
-                  title: "Virtualization", 
-                  items: ["VMware ESXi (Native Integration)", "Microsoft Hyper-V (Native Integration)", "Any Hypervisor Platform", "Physical to Virtual Migration", "Virtual to Physical Migration"],
-                  color: "purple"
-                },
-                {
-                  icon: "fas fa-cloud",
-                  title: "Cloud Platforms",
-                  items: ["Amazon Web Services (AWS)", "Microsoft Azure", "Google Cloud Platform", "VMware vCloud Director", "Hybrid Cloud Architectures", "Any Cloud Platform"],
-                  color: "green"
-                }
-              ].map((platform, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ 
-                    duration: 0.6, 
-                    delay: 0.3 + index * 0.1,
-                    ease: "easeOut"
-                  }}
-                  whileHover={{ 
-                    y: -15, 
-                    scale: 1.02,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                    transition: { duration: 0.3 }
-                  }}
-                  viewport={{ once: true }}
-                  className="bg-slate-50 hover:bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-blue-200 cursor-pointer relative overflow-hidden group"
-                >
-                  {/* Background gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br from-transparent via-transparent ${
-                    platform.color === 'blue' ? 'to-blue-50' : 
-                    platform.color === 'purple' ? 'to-purple-50' : 'to-green-50'
-                  } opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                  
-                  {/* Shine effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r from-transparent ${
-                    platform.color === 'blue' ? 'via-blue-500/10' : 
-                    platform.color === 'purple' ? 'via-purple-500/10' : 'via-green-500/10'
-                  } to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none`} />
-                  
-                  <div className="relative z-10">
-                    <motion.div
-                      whileHover={{ scale: 1.2, rotate: 10 }}
-                      transition={{ duration: 0.3 }}
-                      className={`text-4xl mb-6 ${
-                        platform.color === 'blue' ? 'text-blue-500' : 
-                        platform.color === 'purple' ? 'text-purple-500' : 'text-green-500'
-                      }`}
-                    >
-                      <i className={platform.icon}></i>
-                    </motion.div>
-                    <h4 className="font-bold text-lg mb-4 text-gray-800">{platform.title}</h4>
-                    <ul className="space-y-2 text-slate-600">
-                      {platform.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="font-medium transition-colors duration-200 hover:text-slate-800">
-                          • {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <motion.div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto" initial={{
+            opacity: 0,
+            y: 30
+          }} animate={platformAnimation.isInView ? {
+            opacity: 1,
+            y: 0
+          } : {
+            opacity: 0,
+            y: 30
+          }} transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: "easeOut"
+          }}>
+              <Card className="bg-white/70 backdrop-blur-md border-l-4 border-blue-500 transition-all duration-300 hover:translate-x-1 hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg mb-4 text-gray-800">Operating Systems</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="font-medium">Windows Server</li>
+                    <li className="font-medium">Red Hat Enterprise Linux</li>
+                    <li className="font-medium">Oracle Enterprise Linux</li>
+                    <li className="font-medium">SUSE Linux Enterprise</li>
+                    <li className="font-medium">CentOS</li>
+                    <li className="font-medium">Ubuntu</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/70 backdrop-blur-md border-l-4 border-purple-500 transition-all duration-300 hover:translate-x-1 hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg mb-4 text-gray-800">Virtualization</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="font-medium">VMware ESXi (Native Integration)</li>
+                    <li className="font-medium">Microsoft Hyper-V (Native Integration)</li>
+                    <li className="font-medium">Any Hypervisor Platform</li>
+                    <li className="font-medium">Physical to Virtual Migration</li>
+                    <li className="font-medium">Virtual to Physical Migration</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/70 backdrop-blur-md border-l-4 border-emerald-500 transition-all duration-300 hover:translate-x-1 hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-lg mb-4 text-gray-800">Cloud Platforms</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="font-medium">Amazon Web Services (AWS)</li>
+                    <li className="font-medium">Microsoft Azure</li>
+                    <li className="font-medium">Google Cloud Platform</li>
+                    <li className="font-medium">VMware vCloud Director</li>
+                    <li className="font-medium">Hybrid Cloud Architectures</li>
+                    <li className="font-medium">Any Cloud Platform</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Advanced Features Section */}
         <motion.section 
@@ -837,56 +681,7 @@ export default function DisasterRecovery() {
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {[
-                {
-                  icon: "fas fa-lock",
-                  title: "Data Encryption",
-                  description: "Data encryption, in flight, between the source and the target",
-                  color: "blue"
-                },
-                {
-                  icon: "fas fa-magic",
-                  title: "Automatic Failover", 
-                  description: "Available automatic failover with server heartbeat monitor",
-                  color: "green"
-                },
-                {
-                  icon: "fas fa-database",
-                  title: "DNS Management",
-                  description: "Integrated DNS management",
-                  color: "purple"
-                },
-                {
-                  icon: "fas fa-compress",
-                  title: "Compression Support",
-                  description: "Support compression to minimize network impact", 
-                  color: "orange"
-                },
-                {
-                  icon: "fas fa-tachometer-alt",
-                  title: "Bandwidth Throttling",
-                  description: "Available bandwidth throttling options",
-                  color: "red"
-                },
-                {
-                  icon: "fas fa-code",
-                  title: "Comprehensive API",
-                  description: "A comprehensive API for integration",
-                  color: "indigo"
-                },
-                {
-                  icon: "fas fa-bell",
-                  title: "Alerting & Reporting", 
-                  description: "Alerting and reporting features",
-                  color: "yellow"
-                },
-                {
-                  icon: "fas fa-check-circle",
-                  title: "Non-Disruptive Testing",
-                  description: "Easy, non-disruptive testing",
-                  color: "pink"
-                }
-              ].map((feature, index) => (
+              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -917,17 +712,7 @@ export default function DisasterRecovery() {
                       transition={{ duration: 0.3 }}
                       className="mb-6"
                     >
-                      <div className={`text-4xl ${
-                        feature.color === 'blue' ? 'text-blue-500' :
-                        feature.color === 'green' ? 'text-green-500' :
-                        feature.color === 'purple' ? 'text-purple-500' :
-                        feature.color === 'orange' ? 'text-orange-500' :
-                        feature.color === 'red' ? 'text-red-500' :
-                        feature.color === 'indigo' ? 'text-indigo-500' :
-                        feature.color === 'yellow' ? 'text-yellow-500' : 'text-pink-500'
-                      }`}>
-                        <i className={feature.icon}></i>
-                      </div>
+                      <feature.icon className="h-12 w-12 text-blue-500 mx-auto" />
                     </motion.div>
                     <h3 className="text-lg font-bold mb-3">{feature.title}</h3>
                     <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
