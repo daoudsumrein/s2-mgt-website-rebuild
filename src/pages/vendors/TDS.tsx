@@ -83,7 +83,7 @@ export default function TDSPage() {
                 <div id="insight" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <div className="px-6 py-5 flex items-center justify-center" style={{ backgroundColor: '#00C6F8' }}>
                     <img 
-                      src="/lovable-uploads/848be2d4-d3f7-4af3-b8f7-7fbd803c46c3.png" 
+                      src="/lovable-uploads/transitionmanager-insight.png" 
                       alt="TransitionManager Insight" 
                       className="h-16 w-auto object-contain"
                     />
@@ -130,7 +130,7 @@ export default function TDSPage() {
                 <div id="orchestrate" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <div className="px-6 py-5 flex items-center justify-center" style={{ backgroundColor: '#9DCF65' }}>
                     <img 
-                      src="/lovable-uploads/83f22b56-803b-4339-8cb5-7c78eddcf45c.png" 
+                      src="/lovable-uploads/transitionmanager-orchestrate-green.png" 
                       alt="TransitionManager Orchestrate" 
                       className="h-16 w-auto object-contain"
                     />
@@ -177,7 +177,7 @@ export default function TDSPage() {
                 <div id="accelerate" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
                   <div className="px-6 py-5 flex items-center justify-center" style={{ backgroundColor: '#F69B5F' }}>
                     <img 
-                      src="/lovable-uploads/a3679759-c81c-410f-83ca-d6c31d7f102c.png" 
+                      src="/lovable-uploads/transitionmanager-accelerate-orange.png" 
                       alt="TransitionManager Accelerate" 
                       className="h-16 w-auto object-contain"
                     />
