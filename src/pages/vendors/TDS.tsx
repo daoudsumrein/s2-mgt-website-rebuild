@@ -175,7 +175,7 @@ export default function TDSPage() {
 
                 {/* Accelerate */}
                 <div id="accelerate" className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
-                  <div className="px-6 py-5 flex items-center justify-center" style={{ backgroundColor: '#F69B5F' }}>
+                  <div className="px-6 py-5 flex items-center justify-center" style={{ backgroundColor: 'white', borderBottom: '3px solid #F69B5F' }}>
                     <img 
                       src="/lovable-uploads/transitionmanager-accelerate-orange.png" 
                       alt="TransitionManager Accelerate" 
