@@ -333,8 +333,8 @@ export default function Contact() {
                       <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-medium">Email</p>
-                        <a href="mailto:info@s2mgt.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                          info@s2mgt.com
+                        <a href="mailto:admin@s2mgt.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                          admin@s2mgt.com
                         </a>
                       </div>
                     </div>
