@@ -209,7 +209,7 @@ export default function RiverMeadowPage() {
             </motion.div>
 
             <motion.div 
-              className="max-w-5xl mx-auto aspect-video bg-card border border-border/50 flex items-center justify-center relative overflow-hidden"
+              className="max-w-5xl mx-auto aspect-video bg-card flex items-center justify-center relative overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
