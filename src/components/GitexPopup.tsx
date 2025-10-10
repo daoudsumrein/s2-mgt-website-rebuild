@@ -234,7 +234,7 @@ export const GitexPopup = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
               >
-                <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-5 md:mb-6">
+                <p className="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-5 md:mb-6">
                   Visit Us at the OpenText Booth
                 </p>
 
