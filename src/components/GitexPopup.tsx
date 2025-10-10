@@ -196,8 +196,8 @@ export const GitexPopup = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 flex-shrink-0" />
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-2 sm:gap-3">
+                  <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 sm:mt-0.5" />
                   <div className="text-center sm:text-left">
                     <span className="block text-sm sm:text-base font-semibold">
                       Dubai World Trade Centre
