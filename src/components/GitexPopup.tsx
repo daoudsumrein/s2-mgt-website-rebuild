@@ -190,17 +190,21 @@ export const GitexPopup = () => {
                   2025
                 </motion.p>
 
-                {/* Event Details */}
-                <motion.div
-                  className="rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 transition-all duration-400 hover:-translate-y-1"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                  }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
-                >
+              {/* SEO Headers - Hidden but accessible */}
+              <h2 className="sr-only">S2 Management Solutions Attending GITEX Global 2025 Dubai</h2>
+              <h3 className="sr-only">OpenText Cybersecurity Partner Booth - Hall 7 Booth C30 Dubai World Trade Centre</h3>
+
+              {/* Event Details */}
+              <motion.div
+                className="rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 transition-all duration-400 hover:-translate-y-1"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+              >
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-5">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 flex-shrink-0" />
                   <div className="text-center sm:text-left">
