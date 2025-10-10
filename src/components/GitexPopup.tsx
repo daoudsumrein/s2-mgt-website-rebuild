@@ -41,7 +41,7 @@ export const GitexPopup = () => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-5"
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10"
           style={{
             background: 'rgba(0, 0, 0, 0.65)',
             backdropFilter: 'blur(12px)',
