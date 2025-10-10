@@ -19,10 +19,10 @@ export default function HeroSection() {
       
       {/* Animated Flowing Element */}
       <motion.div 
-        className="absolute top-[20%] right-[-10%] w-[50%] h-[60%] bg-gradient-radial from-[hsl(194,100%,62%,0.4)] via-[hsl(200,100%,50%,0.2)] to-transparent blur-[60px] rounded-full"
+        className="absolute top-[20%] right-[-10%] w-[50%] h-[60%] bg-gradient-radial from-[hsl(194,100%,62%,0.4)] via-[hsl(200,100%,50%,0.2)] to-transparent blur-[40px] rounded-full"
+        style={{ willChange: 'transform' }}
         animate={{ 
-          y: [0, -20, 0],
-          scale: [1, 1.05, 1]
+          transform: ['translate3d(0, 0, 0) scale(1)', 'translate3d(0, -20px, 0) scale(1.05)', 'translate3d(0, 0, 0) scale(1)']
         }}
         transition={{
           duration: 6,
@@ -33,10 +33,11 @@ export default function HeroSection() {
       
       {/* Decorative Flow Elements */}
       <motion.div 
-        className="absolute top-[15%] right-[15%] w-[200px] h-[200px] bg-gradient-radial from-[hsl(200,100%,50%,0.2)] to-transparent rounded-full blur-[20px] hidden md:block"
+        className="absolute top-[15%] right-[15%] w-[200px] h-[200px] bg-gradient-radial from-[hsl(200,100%,50%,0.2)] to-transparent rounded-full blur-[15px] hidden md:block"
+        style={{ willChange: 'transform, opacity' }}
         animate={{ 
           opacity: [0.3, 0.6, 0.3],
-          scale: [1, 1.1, 1]
+          transform: ['scale3d(1, 1, 1)', 'scale3d(1.1, 1.1, 1)', 'scale3d(1, 1, 1)']
         }}
         transition={{
           duration: 4,
@@ -46,10 +47,10 @@ export default function HeroSection() {
       />
       
       <motion.div 
-        className="absolute bottom-[25%] right-[5%] w-[150px] h-[300px] bg-gradient-to-t from-[hsl(194,100%,62%,0.15)] to-transparent rounded-full blur-[30px] hidden md:block"
+        className="absolute bottom-[25%] right-[5%] w-[150px] h-[300px] bg-gradient-to-t from-[hsl(194,100%,62%,0.15)] to-transparent rounded-full blur-[20px] hidden md:block"
+        style={{ willChange: 'transform' }}
         animate={{ 
-          y: [0, -20, 0],
-          scale: [1, 1.05, 1]
+          transform: ['translate3d(0, 0, 0) scale(1)', 'translate3d(0, -20px, 0) scale(1.05)', 'translate3d(0, 0, 0) scale(1)']
         }}
         transition={{
           duration: 8,

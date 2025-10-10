@@ -76,20 +76,22 @@ export const GitexPopup = () => {
                 className="absolute w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full animate-float-blob-1"
                 style={{
                   background: '#8b5cf6',
-                  filter: 'blur(60px)',
+                  filter: 'blur(40px)',
                   top: '-80px',
                   right: '-80px',
                   willChange: 'transform',
+                  transform: 'translate3d(0, 0, 0)',
                 }}
               />
               <div
                 className="absolute w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] rounded-full animate-float-blob-2"
                 style={{
                   background: '#3b82f6',
-                  filter: 'blur(60px)',
+                  filter: 'blur(40px)',
                   bottom: '-80px',
                   left: '-80px',
                   willChange: 'transform',
+                  transform: 'translate3d(0, 0, 0)',
                 }}
               />
             </div>
