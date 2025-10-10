@@ -358,7 +358,7 @@ export default function RiverMeadowPage() {
                   return (
                     <motion.div
                       key={index}
-                      className="group bg-card p-12 border border-transparent hover:border-primary hover:-translate-y-2 transition-all duration-500"
+                      className="group bg-card p-12 border border-transparent hover:border-primary hover:-translate-y-2 transition-all duration-500 flex flex-col"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -372,7 +372,7 @@ export default function RiverMeadowPage() {
                         {module.title}
                       </h3>
                       
-                      <ul className="space-y-5 mb-12">
+                      <ul className="space-y-5 mb-12 flex-grow">
                         {module.items.map((item, i) => (
                           <li key={i} className="text-muted-foreground text-sm leading-relaxed pl-6 relative">
                             <span className="absolute left-0 text-primary">—</span>
@@ -383,7 +383,7 @@ export default function RiverMeadowPage() {
                       
                       <a 
                         href="/contact" 
-                        className="inline-flex items-center gap-4 text-foreground hover:text-primary hover:gap-8 transition-all duration-300 text-sm tracking-wider group"
+                        className="inline-flex items-center gap-4 text-foreground hover:text-primary hover:gap-8 transition-all duration-300 text-sm tracking-wider group mt-auto"
                       >
                         Get Started 
                         <ArrowRight className="group-hover:translate-x-2 transition-transform" />
