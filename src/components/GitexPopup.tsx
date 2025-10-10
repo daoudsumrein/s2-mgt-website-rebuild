@@ -134,12 +134,21 @@ export const GitexPopup = () => {
                 </motion.h1>
 
                 <motion.p
-                  className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm tracking-wide sm:tracking-wider md:tracking-widest uppercase text-purple-200 mb-3 sm:mb-4 md:mb-6 lg:mb-8"
+                  className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm tracking-wide sm:tracking-wider md:tracking-widest uppercase text-purple-200 mb-2 sm:mb-2.5 md:mb-3"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
                 >
                   OpenText Cybersecurity Partner
+                </motion.p>
+
+                <motion.p
+                  className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm tracking-wide sm:tracking-wider md:tracking-widest uppercase text-purple-200 mb-3 sm:mb-4 md:mb-6 lg:mb-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.45, duration: 0.6 }}
+                >
+                  Official Distributor in the GCC Region - UAE, KSA & MEN
                 </motion.p>
 
                 {/* Badge */}
