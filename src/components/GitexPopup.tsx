@@ -170,11 +170,12 @@ export const GitexPopup = () => {
               <motion.h2
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2"
                 style={{
-                  background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #ec4899 50%, #8b5cf6 75%, #3b82f6 100%)',
+                  background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 15%, #ec4899 30%, #8b5cf6 50%, #3b82f6 70%, #fbbf24 85%, #f59e0b 100%)',
+                  backgroundSize: '200% 200%',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
-                  textShadow: '0 0 40px rgba(251, 191, 36, 0.5)',
+                  animation: 'gradient-shift 3s ease infinite',
                   filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.6))',
                 }}
                 initial={{ opacity: 0, y: 20 }}
