@@ -126,77 +126,86 @@ export const GitexPopup = () => {
             <div 
               className="relative z-1 px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-16 text-center text-white"
             >
-              {/* Company Branding */}
-              <motion.h1
-                id="gitex-popup-title"
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight sm:tracking-wide mb-2 sm:mb-3"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-              >
-                S2 Management Solutions
-              </motion.h1>
-
-              <motion.p
-                className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-5 sm:mb-6 md:mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-              >
-                OpenText Cybersecurity Partner
-              </motion.p>
-
-              {/* Badge */}
-              <motion.div
-                className="inline-block px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-[10px] sm:text-xs tracking-wider uppercase mb-5 sm:mb-6 md:mb-8"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-              >
-                We're Exhibiting at
-              </motion.div>
-
-              {/* Event Info */}
-              <motion.h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 bg-gradient-to-r from-amber-400 via-pink-500 via-purple-600 via-blue-500 to-amber-400 bg-clip-text text-transparent"
-                style={{
-                  backgroundSize: '200% auto',
-                  animation: 'gradientShift 3s ease infinite',
-                  filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.6))',
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-              >
-                GITEX GLOBAL
-              </motion.h2>
-
-              <motion.p
-                className="text-xs sm:text-sm font-semibold tracking-wider sm:tracking-widest text-amber-400 mb-6 sm:mb-7 md:mb-9"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-              >
-                2025
-              </motion.p>
-
-              {/* Event Details */}
-              <motion.div
-                className="rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 mx-auto mb-6 sm:mb-7 md:mb-9 max-w-[500px] transition-all duration-400 hover:-translate-y-1"
+              {/* Glassmorphism Container */}
+              <div
+                className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 mb-6 sm:mb-7 md:mb-9"
                 style={{
                   background: 'rgba(255, 255, 255, 0.08)',
                   backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
                   border: '1px solid rgba(255, 255, 255, 0.15)',
                 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
               >
+                {/* Company Branding */}
+                <motion.h1
+                  id="gitex-popup-title"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight sm:tracking-wide mb-2 sm:mb-3"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                >
+                  S2 Management Solutions
+                </motion.h1>
+
+                <motion.p
+                  className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-5 sm:mb-6 md:mb-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                >
+                  OpenText Cybersecurity Partner
+                </motion.p>
+
+                {/* Badge */}
+                <motion.div
+                  className="inline-block px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-[10px] sm:text-xs tracking-wider uppercase mb-5 sm:mb-6 md:mb-8"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                >
+                  We're Exhibiting at
+                </motion.div>
+
+                {/* Event Info */}
+                <motion.h2
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 bg-gradient-to-r from-amber-400 via-pink-500 via-purple-600 via-blue-500 to-amber-400 bg-clip-text text-transparent"
+                  style={{
+                    backgroundSize: '200% auto',
+                    animation: 'gradientShift 3s ease infinite',
+                    filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.6))',
+                  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                >
+                  GITEX GLOBAL
+                </motion.h2>
+
+                <motion.p
+                  className="text-xs sm:text-sm font-semibold tracking-wider sm:tracking-widest text-amber-400 mb-6 sm:mb-7 md:mb-9"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.6 }}
+                >
+                  2025
+                </motion.p>
+
+                {/* Event Details */}
+                <motion.div
+                  className="rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 transition-all duration-400 hover:-translate-y-1"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                >
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-5">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 flex-shrink-0" />
                   <div className="text-center sm:text-left">
@@ -221,6 +230,7 @@ export const GitexPopup = () => {
                   </div>
                 </div>
               </motion.div>
+              </div>
 
               {/* CTA Section */}
               <motion.div
