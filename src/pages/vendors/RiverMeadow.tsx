@@ -2,13 +2,19 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowRight, Circle, Triangle, Square, Diamond } from "lucide-react";
 import migrationImage from "@/assets/rivermeadow-migration.png";
 import cloudMigrationImage from "@/assets/rivermeadow-cloud-migration.png";
 import multiCloudGif from "@/assets/multi-cloud-migration.gif";
 
 export default function RiverMeadowPage() {
+  const heroAnimation = useScrollAnimation({
+    threshold: 0.3
+  });
+
   const gridFeatures = [
     {
       icon: Circle,
@@ -76,62 +82,113 @@ export default function RiverMeadowPage() {
         <Navigation />
         <main>
           {/* Hero Section */}
-          <section className="min-h-screen relative overflow-hidden flex items-center px-4 md:px-8 pt-20">
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background" />
-            
-            <div className="relative z-10 max-w-7xl mx-auto w-full">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center"
+          <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden min-h-screen flex items-center justify-center">
+            {/* Animated background particles */}
+            <div className="fixed inset-0 pointer-events-none z-0">
+              <div className="absolute inset-0 opacity-30" style={{
+                backgroundImage: `
+                  radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
+                  radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
+                  radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
+                  radial-gradient(1px 1px at 130px 80px, rgba(74, 144, 226, 0.3), transparent)
+                `,
+                backgroundRepeat: 'repeat',
+                backgroundSize: '150px 150px',
+                animation: 'float 20s infinite linear'
+              }} />
+            </div>
+
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <motion.div 
+                ref={heroAnimation.ref} 
+                initial={{ opacity: 0, y: 50 }}
+                animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="max-w-7xl mx-auto"
               >
-                <motion.div 
-                  className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-12"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                >
-                  Workload Mobility Platform
-                </motion.div>
-                
-                <motion.h1 
-                  className="text-5xl sm:text-6xl lg:text-8xl font-extralight leading-none mb-8 tracking-tight"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
-                  The Ultimate Workload<br />
-                  <span className="font-light text-primary">Mobility Platform</span>
-                </motion.h1>
-                
-                <motion.div 
-                  className="flex flex-col md:flex-row gap-6 md:gap-16 justify-center text-muted-foreground mb-16 text-sm"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                >
-                  <span className="hover:text-primary transition-colors cursor-default">Lift Your Workloads</span>
-                  <span className="hover:text-primary transition-colors cursor-default">Optimize Performance</span>
-                  <span className="hover:text-primary transition-colors cursor-default">Protect Your Data</span>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                >
-                  <Button 
-                    size="lg"
-                    className="group bg-foreground text-background hover:bg-primary hover:text-white border border-foreground hover:border-primary transition-all duration-500 px-12 py-6 text-sm tracking-wider"
-                    asChild
-                  >
-                    <a href="/contact">
-                      Get Started Today
-                      <ArrowRight className="ml-6 group-hover:translate-x-2 transition-transform duration-500" />
-                    </a>
-                  </Button>
-                </motion.div>
+                {/* Hero Container */}
+                <div className="relative bg-slate-900/90 border-2 border-primary rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                  
+                  {/* Content */}
+                  <div className="space-y-6 sm:space-y-8 text-center relative z-10">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={heroAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                    >
+                      <Badge 
+                        variant="outline" 
+                        className="border-primary/50 text-primary bg-primary/10 hover:bg-primary/20 hover:border-primary hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
+                        <span className="relative">Workload Mobility Platform</span>
+                      </Badge>
+                    </motion.div>
+                    
+                    <motion.h1 
+                      className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                      transition={{ duration: 0.8, delay: 0.3 }}
+                    >
+                      <span className="bg-gradient-to-r from-primary via-blue-500 to-green-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
+                        backgroundSize: '300% 300%',
+                        animation: 'gradientShift 4s ease-in-out infinite'
+                      }}>
+                        The Ultimate Workload
+                      </span>
+                      <br />
+                      <span className="bg-gradient-to-r from-green-400 via-blue-500 to-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
+                        backgroundSize: '300% 300%',
+                        animation: 'gradientShift 4s ease-in-out infinite'
+                      }}>
+                        Mobility Platform
+                      </span>
+                    </motion.h1>
+                    
+                    <motion.div 
+                      className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center text-slate-300 mb-8 text-sm sm:text-base"
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                      transition={{ duration: 0.8, delay: 0.5 }}
+                    >
+                      {[
+                        { icon: "fas fa-arrow-up", text: "Lift Your Workloads" },
+                        { icon: "fas fa-chart-line", text: "Optimize Performance" },
+                        { icon: "fas fa-shield-alt", text: "Protect Your Data" }
+                      ].map((item, index) => (
+                        <motion.span 
+                          key={index}
+                          className="flex items-center gap-2 hover:text-primary transition-all duration-300 cursor-default group/item"
+                          whileHover={{ scale: 1.05, y: -2 }}
+                        >
+                          <i className={`${item.icon} text-primary group-hover/item:rotate-12 transition-transform duration-300`} />
+                          {item.text}
+                        </motion.span>
+                      ))}
+                    </motion.div>
+                    
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                      transition={{ duration: 0.8, delay: 0.7 }}
+                    >
+                      <Button 
+                        size="lg"
+                        className="bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary text-white shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-8 sm:px-12 py-6 text-base sm:text-lg font-semibold w-full sm:w-auto"
+                        asChild
+                      >
+                        <a href="/contact">
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
+                          <span className="relative">Get Started Today</span>
+                          <ArrowRight className="ml-4 relative group-hover/btn:translate-x-2 transition-transform duration-500" />
+                        </a>
+                      </Button>
+                    </motion.div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </section>
