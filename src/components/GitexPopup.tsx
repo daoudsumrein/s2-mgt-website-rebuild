@@ -148,7 +148,7 @@ export const GitexPopup = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.45, duration: 0.6 }}
                 >
-                  Official Distributor in the GCC Region - UAE, KSA & MEN
+                  Official Distributor in the GCC Region - UAE, KSA & MENA
                 </motion.p>
 
                 {/* Badge */}
