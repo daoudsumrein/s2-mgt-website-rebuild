@@ -305,7 +305,7 @@ export default function RiverMeadowPage() {
           </section>
 
           {/* Statement Section */}
-          <section className="py-40 px-4 md:px-8 text-center">
+          <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 md:px-8 text-center">
             <div className="max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -313,10 +313,10 @@ export default function RiverMeadowPage() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extralight leading-snug mb-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extralight leading-snug mb-6 sm:mb-8 md:mb-12">
                   The Workload Mobility Company
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   RiverMeadow offers a market-leading workload mobility platform that empowers customers and partners to seamlessly lift, optimize, and protect workloads across any environment with confidence and ease.
                 </p>
               </motion.div>
@@ -324,9 +324,9 @@ export default function RiverMeadowPage() {
           </section>
 
           {/* Use Case Split Sections */}
-          <section className="grid md:grid-cols-2 min-h-[80vh]">
+          <section className="grid grid-cols-1 md:grid-cols-2 min-h-[60vh] md:min-h-[80vh]">
             <motion.div 
-              className="bg-muted relative overflow-hidden flex items-center justify-center"
+              className="bg-muted relative overflow-hidden flex items-center justify-center min-h-[300px] sm:min-h-[400px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
@@ -340,22 +340,22 @@ export default function RiverMeadowPage() {
             </motion.div>
             
             <motion.div 
-              className="bg-card p-12 lg:p-24 flex flex-col justify-center"
+              className="bg-card p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-center"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <span className="text-xs tracking-[0.2em] uppercase text-primary mb-8 inline-block">
+              <span className="text-xs tracking-[0.2em] uppercase text-primary mb-4 sm:mb-6 md:mb-8 inline-block">
                 OS Modernization
               </span>
-              <h2 className="text-3xl lg:text-4xl font-light leading-snug mb-8">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light leading-snug mb-4 sm:mb-6 md:mb-8">
                 Mitigate End of<br />Support Risk
               </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 RiverMeadow's unique OS Modernization capability can help reduce technical debt and security vulnerabilities, whether you're moving to the cloud or staying on-premise. Our proven process offers a fast and safe way to modernize workloads on the target environment while the source remains completely unimpacted.
               </p>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 Windows Server 2012 and 2012 R2 have now reached End of Support (EOS), and these products will no longer receive security updates, non-security updates, bug fixes, or technical support from Microsoft. This puts your business, data, applications, and infrastructure at significant risk from security vulnerabilities and regulatory non-compliance issues.
               </p>
               <a 
@@ -368,31 +368,31 @@ export default function RiverMeadowPage() {
             </motion.div>
           </section>
 
-          <section className="grid md:grid-cols-2 min-h-[80vh]">
+          <section className="grid grid-cols-1 md:grid-cols-2 min-h-[60vh] md:min-h-[80vh]">
             <motion.div 
-              className="bg-card p-12 lg:p-24 flex flex-col justify-center order-2 md:order-1"
+              className="bg-card p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-center order-2 md:order-1"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 Transition at speed and scale from Windows Server 2003, 2008, or 2012 to Windows Server 2016, 2019, or 2022 with complete confidence. Whether on-premise to on-premise, on-premise to cloud, or cloud to cloud—we can modernize your operating systems and potentially save you millions of dollars in Microsoft Extended Security Update (ESU) fees in one smart, efficient move with RiverMeadow OS Modernization.
               </p>
               <Button 
                 size="lg"
-                className="group bg-foreground text-background hover:bg-primary hover:text-white border border-foreground hover:border-primary transition-all duration-500 w-fit px-12 py-6 text-sm tracking-wider"
+                className="group bg-foreground text-background hover:bg-primary hover:text-white border border-foreground hover:border-primary transition-all duration-500 w-full sm:w-fit px-8 sm:px-12 py-5 sm:py-6 text-xs sm:text-sm tracking-wider"
                 asChild
               >
                 <a href="/contact">
                   Get Started Now
-                  <ArrowRight className="ml-6 group-hover:translate-x-2 transition-transform duration-500" />
+                  <ArrowRight className="ml-4 sm:ml-6 group-hover:translate-x-2 transition-transform duration-500" />
                 </a>
               </Button>
             </motion.div>
 
             <motion.div 
-              className="bg-muted relative overflow-hidden flex items-center justify-center order-1 md:order-2"
+              className="bg-muted relative overflow-hidden flex items-center justify-center order-1 md:order-2 min-h-[300px] sm:min-h-[400px]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
@@ -407,37 +407,37 @@ export default function RiverMeadowPage() {
           </section>
 
           {/* Modules Section */}
-          <section className="py-32 px-4 md:px-8 bg-muted">
+          <section className="py-12 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 bg-muted">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-24">
+              <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-8">
+                  <div className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4 sm:mb-6 md:mb-8">
                     Available Modules
                   </div>
-                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extralight">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight">
                     Lift, Optimize, Protect
                   </h2>
                 </motion.div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 lg:gap-16">
                 {modules.map((module, index) => {
                   return (
                     <motion.div
                       key={index}
-                      className="group bg-card p-12 border border-transparent hover:border-primary hover:-translate-y-2 transition-all duration-500 flex flex-col"
+                      className="group bg-card p-6 sm:p-8 md:p-10 lg:p-12 border border-transparent hover:border-primary hover:-translate-y-2 transition-all duration-500 flex flex-col"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.15 }}
                       viewport={{ once: true }}
                     >
                       <motion.div 
-                        className="w-16 h-16 border-2 border-foreground/20 rounded-lg flex items-center justify-center mb-12 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 bg-background/50"
+                        className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 border-2 border-foreground/20 rounded-lg flex items-center justify-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 bg-background/50"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
@@ -447,16 +447,16 @@ export default function RiverMeadowPage() {
                           scale: 1.15
                         }}
                       >
-                        <i className={`${module.faIcon} text-2xl ${module.color} group-hover:scale-110 transition-transform duration-300`} />
+                        <i className={`${module.faIcon} text-xl sm:text-2xl ${module.color} group-hover:scale-110 transition-transform duration-300`} />
                       </motion.div>
                       
-                      <h3 className="text-2xl font-normal mb-10">
+                      <h3 className="text-xl sm:text-2xl font-normal mb-6 sm:mb-8 md:mb-10">
                         {module.title}
                       </h3>
                       
-                      <ul className="space-y-5 mb-12 flex-grow">
+                      <ul className="space-y-3 sm:space-y-4 md:space-y-5 mb-8 sm:mb-10 md:mb-12 flex-grow">
                         {module.items.map((item, i) => (
-                          <li key={i} className="text-muted-foreground text-sm leading-relaxed pl-6 relative">
+                          <li key={i} className="text-muted-foreground text-xs sm:text-sm leading-relaxed pl-6 relative">
                             <span className="absolute left-0 text-primary">—</span>
                             {item}
                           </li>
@@ -465,7 +465,7 @@ export default function RiverMeadowPage() {
                       
                       <a 
                         href="/contact" 
-                        className="inline-flex items-center gap-4 text-foreground hover:text-primary hover:gap-8 transition-all duration-300 text-sm tracking-wider group mt-auto"
+                        className="inline-flex items-center gap-4 text-foreground hover:text-primary hover:gap-8 transition-all duration-300 text-xs sm:text-sm tracking-wider group mt-auto"
                       >
                         Get Started 
                         <ArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -478,7 +478,7 @@ export default function RiverMeadowPage() {
           </section>
 
           {/* Final CTA */}
-          <section className="py-40 px-4 md:px-8 text-center bg-foreground text-background">
+          <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 md:px-8 text-center bg-foreground text-background">
             <div className="max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -486,20 +486,20 @@ export default function RiverMeadowPage() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extralight leading-tight mb-8 text-background">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight mb-4 sm:mb-6 md:mb-8 text-background">
                   Ready to Get Started?
                 </h2>
-                <p className="text-lg text-muted mb-16 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg text-muted mb-8 sm:mb-12 md:mb-16 leading-relaxed max-w-2xl mx-auto">
                   Experience the power of automated cloud migration with RiverMeadow's comprehensive workload mobility platform and transform your infrastructure today.
                 </p>
                 <Button 
                   size="lg"
-                  className="group bg-background text-foreground hover:bg-primary hover:text-white border border-background hover:border-primary transition-all duration-500 px-12 py-6 text-sm tracking-wider"
+                  className="group bg-background text-foreground hover:bg-primary hover:text-white border border-background hover:border-primary transition-all duration-500 w-full sm:w-fit px-8 sm:px-12 py-5 sm:py-6 text-xs sm:text-sm tracking-wider"
                   asChild
                 >
                   <a href="/contact">
                     Contact Us Today
-                    <ArrowRight className="ml-6 group-hover:translate-x-2 transition-transform duration-500" />
+                    <ArrowRight className="ml-4 sm:ml-6 group-hover:translate-x-2 transition-transform duration-500" />
                   </a>
                 </Button>
               </motion.div>
