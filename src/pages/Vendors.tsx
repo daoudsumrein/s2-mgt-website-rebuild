@@ -80,6 +80,20 @@ const vendors = [
     ],
     href: "/vendors/arrosoft",
     color: "bg-cyan-50 text-cyan-700 border-cyan-200"
+  },
+  {
+    name: "RiverMeadow",
+    logo: "",
+    description: "Automated Cloud Migration",
+    tagline: "Automated workload migration platform enabling fast, secure movement of servers and applications to any cloud environment with zero downtime.",
+    solutions: [
+      "Automated Cloud Migration - Migrate physical, virtual, or cloud servers to any target environment using Collect-Convert-Deploy automation",
+      "Fast & Secure Zero-Downtime - Agentless migration in under 15 minutes with data staying behind your firewall for compliance",
+      "Fixed-Price No Lock-In - Per-instance pricing with hypervisor-agnostic technology for complete cloud flexibility",
+      "Lift & Optimize Features - Automated OS upgrades, database conversions, and full RESTful API access"
+    ],
+    href: "/vendors/rivermeadow",
+    color: "bg-orange-50 text-orange-700 border-orange-200"
   }
 ];
 
