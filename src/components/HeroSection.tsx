@@ -105,7 +105,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-white/90 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 font-normal"
           >
-            S2 drives digital transformation with consultancy-led IT modernization and trusted security solutions for global enterprises.
+            S2 Management Solutions is a Value Added Distributor based in the UAE and KSA, empowering global enterprises across the GCC and MENA regions with consultancy-led IT modernization and trusted cybersecurity solutions.
           </motion.p>
           
           <motion.div
