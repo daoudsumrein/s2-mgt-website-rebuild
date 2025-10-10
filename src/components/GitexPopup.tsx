@@ -175,7 +175,7 @@ export const GitexPopup = () => {
               <motion.h2
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 bg-clip-text text-transparent"
                 style={{
-                  backgroundImage: 'linear-gradient(to right, #fbbf24, #ec4899, #09D7FB, #3b82f6, #fbbf24)',
+                  backgroundImage: 'linear-gradient(to right, #fbbf24, #ec4899, #09D7FB, #FDDF55, #fbbf24)',
                   backgroundSize: '200% auto',
                   animation: 'gradientShift 3s ease infinite',
                   filter: 'drop-shadow(0 0 20px rgba(9, 215, 251, 0.6))',
