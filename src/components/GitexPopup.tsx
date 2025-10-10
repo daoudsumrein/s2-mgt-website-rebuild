@@ -57,7 +57,7 @@ export const GitexPopup = () => {
           aria-labelledby="gitex-popup-title"
         >
           <motion.div
-            className="relative w-[90%] max-w-[340px] sm:max-w-[480px] md:max-w-[580px] lg:max-w-[680px] rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden"
+            className="relative w-[90%] max-w-[340px] sm:max-w-[480px] md:max-w-[580px] lg:max-w-[720px] xl:max-w-[820px] rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden"
             style={{
               backgroundImage: `url(${gitexBg})`,
               backgroundSize: 'cover',
@@ -112,11 +112,11 @@ export const GitexPopup = () => {
 
             {/* Content */}
             <div 
-              className="relative z-1 px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 text-center text-white"
+              className="relative z-1 px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-12 lg:py-14 xl:px-14 xl:py-16 text-center text-white"
             >
               {/* Glassmorphism Container */}
               <div
-                className="rounded-xl sm:rounded-2xl lg:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 mb-4 sm:mb-6 md:mb-7 lg:mb-9"
+                className="rounded-xl sm:rounded-2xl lg:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 mb-4 sm:mb-6 md:mb-7 lg:mb-9 xl:mb-10"
                 style={{
                   background: 'rgba(255, 255, 255, 0.08)',
                   backdropFilter: 'blur(20px)',
@@ -199,7 +199,7 @@ export const GitexPopup = () => {
 
               {/* Event Details */}
               <motion.div
-                className="rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 transition-all duration-400 active:scale-[0.98] sm:hover:-translate-y-1"
+                className="rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 xl:p-10 transition-all duration-400 active:scale-[0.98] sm:hover:-translate-y-1"
                 style={{
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -237,11 +237,11 @@ export const GitexPopup = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
               >
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 leading-snug">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-7 leading-snug">
                   Visit Us at the OpenText Booth
                 </p>
 
-                <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 lg:gap-5 justify-center">
                   <button
                     onClick={handleWhatsApp}
                     className="inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 lg:px-8 lg:py-4 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide sm:tracking-wider uppercase transition-all duration-300 active:scale-95 sm:hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500 sm:hover:shadow-xl"
