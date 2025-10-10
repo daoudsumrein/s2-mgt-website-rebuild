@@ -70,35 +70,27 @@ export const GitexPopup = () => {
             transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Animated Background */}
-            <div className="absolute inset-0 overflow-hidden opacity-20 sm:opacity-30">
-              <motion.div
-                className="absolute w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full"
+            {/* Animated Background - Optimized for iOS */}
+            <div className="absolute inset-0 overflow-hidden opacity-20 sm:opacity-30 pointer-events-none">
+              <div
+                className="absolute w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full animate-float-blob-1"
                 style={{
                   background: '#8b5cf6',
-                  filter: 'blur(60px) sm:blur(80px)',
+                  filter: 'blur(60px)',
                   top: '-80px',
                   right: '-80px',
+                  willChange: 'transform',
                 }}
-                animate={{
-                  x: [0, -30, 0],
-                  y: [0, 30, 0],
-                }}
-                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
               />
-              <motion.div
-                className="absolute w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] rounded-full"
+              <div
+                className="absolute w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] rounded-full animate-float-blob-2"
                 style={{
                   background: '#3b82f6',
-                  filter: 'blur(60px) sm:blur(80px)',
+                  filter: 'blur(60px)',
                   bottom: '-80px',
                   left: '-80px',
+                  willChange: 'transform',
                 }}
-                animate={{
-                  x: [0, 30, 0],
-                  y: [0, -30, 0],
-                }}
-                transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
               />
             </div>
 
