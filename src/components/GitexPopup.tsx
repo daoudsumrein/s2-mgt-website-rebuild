@@ -139,7 +139,7 @@ export const GitexPopup = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                  OpenText Cybersecurity Partner
+                  OpenText Cybersecurity
                 </motion.p>
 
                 <motion.p
