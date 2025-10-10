@@ -123,7 +123,14 @@ export const GitexPopup = () => {
             </button>
 
             {/* Content */}
-            <div className="relative z-1 px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-16 text-center text-white">
+            <div 
+              className="relative z-1 px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-16 text-center text-white"
+              style={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+              }}
+            >
               {/* Company Branding */}
               <motion.h1
                 id="gitex-popup-title"
