@@ -255,7 +255,7 @@ export default function RiverMeadowPage() {
               <img 
                 src={migrationImage} 
                 alt="Server to cloud migration visualization" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain p-12"
               />
             </motion.div>
             
