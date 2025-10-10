@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, MapPin, Mail, Users } from 'lucide-react';
+import gitexBg from '@/assets/gitex-popup-bg.png';
 
 export const GitexPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +65,9 @@ export const GitexPopup = () => {
           <motion.div
             className="relative w-full max-w-[95%] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] rounded-2xl sm:rounded-3xl overflow-hidden"
             style={{
-              background: 'linear-gradient(135deg, #1a1f3a 0%, #2d3561 50%, #6b21a8 100%)',
+              backgroundImage: `url(${gitexBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
               boxShadow: '0 25px 80px rgba(0, 0, 0, 0.5)',
             }}
             initial={{ opacity: 0, scale: 0.85, y: 40 }}
