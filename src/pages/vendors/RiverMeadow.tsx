@@ -137,7 +137,7 @@ export default function RiverMeadowPage() {
                         backgroundSize: '300% 300%',
                         animation: 'gradientShift 4s ease-in-out infinite'
                       }}>
-                        The Ultimate Workload
+                        The Workload That Does It All
                       </span>
                       <br />
                       <span className="bg-gradient-to-r from-green-400 via-blue-500 to-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-default inline-block" style={{
