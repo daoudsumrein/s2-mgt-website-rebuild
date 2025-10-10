@@ -174,7 +174,7 @@ export default function RiverMeadowPage() {
           </section>
 
           {/* Migration Section */}
-          <section className="py-32 px-4 md:px-8 bg-muted">
+          <section className="py-32 px-4 md:px-8 bg-white">
             <div className="max-w-6xl mx-auto text-center mb-24">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
