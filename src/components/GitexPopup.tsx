@@ -24,14 +24,9 @@ export const GitexPopup = () => {
     document.body.style.overflow = 'auto';
   };
 
-  const handleScheduleMeeting = () => {
-    alert(
-      'Visit S2 Management Solutions at GITEX 2025:\n\n' +
-      'OpenText Cybersecurity Partner\n' +
-      'Location: Hall 7, Booth C30 (OpenText Booth)\n' +
-      'Email: info@s2management.com\n\n' +
-      'We look forward to meeting you!'
-    );
+  const handleWhatsApp = () => {
+    // Replace with actual Dubai number: https://wa.me/971XXXXXXXXX
+    window.open('https://wa.me/971XXXXXXXXX', '_blank');
   };
 
   useEffect(() => {
@@ -242,20 +237,20 @@ export const GitexPopup = () => {
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                   <button
-                    onClick={handleScheduleMeeting}
+                    onClick={handleWhatsApp}
                     className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500 hover:shadow-xl"
                     style={{
-                      background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)',
-                      color: '#1a1f3a',
-                      boxShadow: '0 8px 24px rgba(251, 191, 36, 0.4)',
+                      background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+                      color: '#ffffff',
+                      boxShadow: '0 8px 24px rgba(37, 211, 102, 0.4)',
                     }}
                   >
                     <Users className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Schedule Meeting
+                    WhatsApp Us
                   </button>
 
                   <a
-                    href="mailto:info@s2management.com"
+                    href="mailto:admin@s2mgt.com"
                     className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     style={{
                       background: 'rgba(255, 255, 255, 0.1)',
