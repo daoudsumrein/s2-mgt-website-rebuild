@@ -25,8 +25,7 @@ export const GitexPopup = () => {
   };
 
   const handleWhatsApp = () => {
-    // Replace with actual Dubai number: https://wa.me/971XXXXXXXXX
-    window.open('https://wa.me/971XXXXXXXXX', '_blank');
+    window.open('https://wa.me/97144342221', '_blank');
   };
 
   useEffect(() => {
