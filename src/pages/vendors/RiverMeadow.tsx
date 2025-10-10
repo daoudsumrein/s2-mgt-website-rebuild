@@ -49,6 +49,8 @@ export default function RiverMeadowPage() {
   const modules = [
     {
       title: "Migration",
+      faIcon: "fas fa-plane-departure",
+      color: "text-blue-500",
       items: [
         "Be up and running migrations in less than one hour with minimal setup required",
         "Complete more migrations in less time and with significantly reduced risk",
@@ -58,6 +60,8 @@ export default function RiverMeadowPage() {
     },
     {
       title: "OS Modernization",
+      faIcon: "fas fa-sync",
+      color: "text-green-500",
       items: [
         "Safely retire legacy operating systems without business disruption",
         "Avert business risk and achieve full regulatory compliance",
@@ -68,6 +72,8 @@ export default function RiverMeadowPage() {
     },
     {
       title: "Backup & Disaster Recovery",
+      faIcon: "fas fa-shield-alt",
+      color: "text-purple-500",
       items: [
         "Quick and easy deployment with intuitive setup process",
         "Low-cost object storage options for efficient data protection",
@@ -421,21 +427,28 @@ export default function RiverMeadowPage() {
 
               <div className="grid md:grid-cols-3 gap-16">
                 {modules.map((module, index) => {
-                  const icons = [Circle, Triangle, Square];
-                  const Icon = icons[index];
-                  
                   return (
                     <motion.div
                       key={index}
                       className="group bg-card p-12 border border-transparent hover:border-primary hover:-translate-y-2 transition-all duration-500 flex flex-col"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      transition={{ duration: 0.6, delay: index * 0.15 }}
                       viewport={{ once: true }}
                     >
-                      <div className="w-12 h-12 border border-foreground flex items-center justify-center mb-12 group-hover:border-primary group-hover:text-primary transition-all duration-500">
-                        <Icon className="w-6 h-6" />
-                      </div>
+                      <motion.div 
+                        className="w-16 h-16 border-2 border-foreground/20 rounded-lg flex items-center justify-center mb-12 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 bg-background/50"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
+                        viewport={{ once: true }}
+                        whileHover={{ 
+                          rotate: [0, -8, 8, -8, 0],
+                          scale: 1.15
+                        }}
+                      >
+                        <i className={`${module.faIcon} text-2xl ${module.color} group-hover:scale-110 transition-transform duration-300`} />
+                      </motion.div>
                       
                       <h3 className="text-2xl font-normal mb-10">
                         {module.title}
