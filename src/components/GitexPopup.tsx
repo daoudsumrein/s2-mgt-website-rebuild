@@ -57,7 +57,7 @@ export const GitexPopup = () => {
           aria-labelledby="gitex-popup-title"
         >
           <motion.div
-            className="relative w-full max-w-[95%] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] rounded-2xl sm:rounded-3xl overflow-hidden"
+            className="relative w-[90%] max-w-[340px] sm:max-w-[480px] md:max-w-[580px] lg:max-w-[680px] rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden"
             style={{
               backgroundImage: `url(${gitexBg})`,
               backgroundSize: 'cover',
@@ -71,14 +71,14 @@ export const GitexPopup = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Animated Background */}
-            <div className="absolute inset-0 overflow-hidden opacity-30">
+            <div className="absolute inset-0 overflow-hidden opacity-20 sm:opacity-30">
               <motion.div
-                className="absolute w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] rounded-full"
+                className="absolute w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full"
                 style={{
                   background: '#8b5cf6',
-                  filter: 'blur(80px)',
-                  top: '-100px',
-                  right: '-100px',
+                  filter: 'blur(60px) sm:blur(80px)',
+                  top: '-80px',
+                  right: '-80px',
                 }}
                 animate={{
                   x: [0, -30, 0],
@@ -87,12 +87,12 @@ export const GitexPopup = () => {
                 transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
               />
               <motion.div
-                className="absolute w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] rounded-full"
+                className="absolute w-[150px] h-[150px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] rounded-full"
                 style={{
                   background: '#3b82f6',
-                  filter: 'blur(80px)',
-                  bottom: '-100px',
-                  left: '-100px',
+                  filter: 'blur(60px) sm:blur(80px)',
+                  bottom: '-80px',
+                  left: '-80px',
                 }}
                 animate={{
                   x: [0, 30, 0],
@@ -105,24 +105,24 @@ export const GitexPopup = () => {
             {/* Close Button */}
             <button
               onClick={closePopup}
-              className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center z-10 transition-all duration-300 hover:rotate-90 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="absolute top-2 right-2 sm:top-3 sm:right-3 lg:top-4 lg:right-4 w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-full flex items-center justify-center z-10 transition-all duration-300 active:scale-95 hover:rotate-90 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500"
               style={{
-                background: 'rgba(255, 255, 255, 0.1)',
+                background: 'rgba(255, 255, 255, 0.15)',
                 backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
+                border: '1px solid rgba(255, 255, 255, 0.25)',
               }}
               aria-label="Close popup"
             >
-              <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              <X className="w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6 text-white" />
             </button>
 
             {/* Content */}
             <div 
-              className="relative z-1 px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-16 text-center text-white"
+              className="relative z-1 px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 text-center text-white"
             >
               {/* Glassmorphism Container */}
               <div
-                className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 mb-6 sm:mb-7 md:mb-9"
+                className="rounded-xl sm:rounded-2xl lg:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 mb-4 sm:mb-6 md:mb-7 lg:mb-9"
                 style={{
                   background: 'rgba(255, 255, 255, 0.08)',
                   backdropFilter: 'blur(20px)',
@@ -133,7 +133,7 @@ export const GitexPopup = () => {
                 {/* Company Branding */}
                 <motion.h1
                   id="gitex-popup-title"
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight sm:tracking-wide mb-2 sm:mb-3"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight sm:tracking-normal md:tracking-wide mb-1.5 sm:mb-2 md:mb-3 leading-tight"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
@@ -142,7 +142,7 @@ export const GitexPopup = () => {
                 </motion.h1>
 
                 <motion.p
-                  className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-5 sm:mb-6 md:mb-8"
+                  className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm tracking-wide sm:tracking-wider md:tracking-widest uppercase text-purple-200 mb-3 sm:mb-4 md:mb-6 lg:mb-8"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
@@ -152,7 +152,7 @@ export const GitexPopup = () => {
 
                 {/* Badge */}
                 <motion.div
-                  className="inline-block px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-[10px] sm:text-xs tracking-wider uppercase mb-5 sm:mb-6 md:mb-8"
+                  className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 rounded-full text-[9px] sm:text-[10px] md:text-xs tracking-wide sm:tracking-wider uppercase mb-3 sm:mb-4 md:mb-6 lg:mb-8"
                   style={{
                     background: 'rgba(255, 255, 255, 0.1)',
                     backdropFilter: 'blur(10px)',
@@ -167,12 +167,12 @@ export const GitexPopup = () => {
 
               {/* Event Info */}
               <motion.h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 bg-clip-text text-transparent"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black tracking-wide sm:tracking-wider md:tracking-widest mb-1 sm:mb-1.5 md:mb-2 bg-clip-text text-transparent leading-tight"
                 style={{
                   backgroundImage: 'linear-gradient(to right, #fbbf24, #ec4899, #09D7FB, #FDDF55, #fbbf24)',
                   backgroundSize: '200% auto',
                   animation: 'gradientShift 3s ease infinite',
-                  filter: 'drop-shadow(0 0 20px rgba(9, 215, 251, 0.6))',
+                  filter: 'drop-shadow(0 0 15px rgba(9, 215, 251, 0.5)) drop-shadow(0 0 30px rgba(9, 215, 251, 0.3))',
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -182,7 +182,7 @@ export const GitexPopup = () => {
               </motion.h2>
 
                 <motion.p
-                  className="text-xs sm:text-sm font-semibold tracking-wider sm:tracking-widest text-amber-400 mb-6 sm:mb-7 md:mb-9"
+                  className="text-xs sm:text-sm md:text-base font-semibold tracking-wide sm:tracking-wider md:tracking-widest text-amber-400 mb-4 sm:mb-5 md:mb-7 lg:mb-9"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.6 }}
@@ -196,7 +196,7 @@ export const GitexPopup = () => {
 
               {/* Event Details */}
               <motion.div
-                className="rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 transition-all duration-400 hover:-translate-y-1"
+                className="rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 transition-all duration-400 active:scale-[0.98] sm:hover:-translate-y-1"
                 style={{
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -205,22 +205,22 @@ export const GitexPopup = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
               >
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-5">
-                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 flex-shrink-0" />
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 md:gap-3 mb-3 sm:mb-4 md:mb-5">
+                  <Calendar className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-amber-400 flex-shrink-0" />
                   <div className="text-center sm:text-left">
-                    <span className="block text-xl sm:text-2xl md:text-3xl font-bold leading-tight">
+                    <span className="block text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold leading-tight">
                       October 13-17, 2025
                     </span>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-2 sm:gap-3">
-                  <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 sm:mt-0.5" />
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-1.5 sm:gap-2 md:gap-3">
+                  <MapPin className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-amber-400 flex-shrink-0 sm:mt-0.5 md:mt-1" />
                   <div className="text-center sm:text-left">
-                    <span className="block text-sm sm:text-base font-semibold">
+                    <span className="block text-xs sm:text-sm md:text-base lg:text-lg font-semibold leading-snug">
                       Dubai World Trade Centre
                     </span>
-                    <span className="block text-sm sm:text-base font-semibold text-amber-400 mt-1 sm:mt-2">
+                    <span className="block text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-amber-400 mt-1 sm:mt-1.5 md:mt-2">
                       Hall 7, Booth C30
                     </span>
                   </div>
@@ -234,34 +234,34 @@ export const GitexPopup = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
               >
-                <p className="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-5 md:mb-6">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6 leading-snug">
                   Visit Us at the OpenText Booth
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4 justify-center">
                   <button
                     onClick={handleWhatsApp}
-                    className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500 hover:shadow-xl"
+                    className="inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 lg:px-8 lg:py-4 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide sm:tracking-wider uppercase transition-all duration-300 active:scale-95 sm:hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500 sm:hover:shadow-xl"
                     style={{
                       background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
                       color: '#ffffff',
-                      boxShadow: '0 8px 24px rgba(37, 211, 102, 0.4)',
+                      boxShadow: '0 6px 20px rgba(37, 211, 102, 0.3)',
                     }}
                   >
-                    <Users className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <Users className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5" />
                     WhatsApp Us
                   </button>
 
                   <a
                     href="mailto:admin@s2mgt.com"
-                    className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 py-3 sm:px-7 sm:py-3.5 md:px-8 md:py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 lg:px-8 lg:py-4 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide sm:tracking-wider uppercase transition-all duration-300 active:scale-95 sm:hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     style={{
                       background: 'rgba(255, 255, 255, 0.1)',
                       backdropFilter: 'blur(10px)',
                       border: '2px solid rgba(255, 255, 255, 0.3)',
                     }}
                   >
-                    <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <Mail className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5" />
                     Email Us
                   </a>
                 </div>
