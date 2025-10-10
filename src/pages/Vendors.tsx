@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import nakivoLogo from "@/assets/logos/nakivo-logo-new.png";
+import rivermeadowLogo from "@/assets/logos/rivermeadow-logo.webp";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -83,7 +84,7 @@ const vendors = [
   },
   {
     name: "RiverMeadow",
-    logo: "",
+    logo: rivermeadowLogo,
     description: "Automated Cloud Migration",
     tagline: "Automated workload migration platform enabling fast, secure movement of Windows and Linux servers to any cloud environment with minimal downtime.",
     solutions: [
