@@ -85,12 +85,12 @@ const vendors = [
     name: "RiverMeadow",
     logo: "",
     description: "Automated Cloud Migration",
-    tagline: "Automated workload migration platform enabling fast, secure movement of servers and applications to any cloud environment with zero downtime.",
+    tagline: "Automated workload migration platform enabling fast, secure movement of Windows and Linux servers to any cloud environment with minimal downtime.",
     solutions: [
-      "Automated Cloud Migration - Migrate physical, virtual, or cloud servers to any target environment using Collect-Convert-Deploy automation",
-      "Fast & Secure Zero-Downtime - Agentless migration in under 15 minutes with data staying behind your firewall for compliance",
-      "Fixed-Price No Lock-In - Per-instance pricing with hypervisor-agnostic technology for complete cloud flexibility",
-      "Lift & Optimize Features - Automated OS upgrades, database conversions, and full RESTful API access"
+      "Automated Cloud Migration - Migrate physical, virtual, or cloud servers to AWS, VMware, and other clouds using Collect-Convert-Deploy automation",
+      "Rapid & Secure Migration - Get migrating in less than 15 minutes with agentless technology, short predictable downtimes, and data staying behind your firewall",
+      "Fixed-Price Service - All-inclusive fixed rate per instance pricing with volume discounts available and hypervisor-agnostic technology",
+      "Lift & Optimize Capabilities - Automated OS upgrades (Windows & Linux), SQL IaaS to AWS RDS conversion, MSSQL upgrades, and third-party software installation"
     ],
     href: "/vendors/rivermeadow",
     color: "bg-orange-50 text-orange-700 border-orange-200"
