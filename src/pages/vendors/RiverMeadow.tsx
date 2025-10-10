@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Circle, Triangle, Square, Diamond } from "lucide-react";
 import migrationImage from "@/assets/rivermeadow-migration.png";
 import cloudMigrationImage from "@/assets/rivermeadow-cloud-migration.png";
+import multiCloudGif from "@/assets/multi-cloud-migration.gif";
 
 export default function RiverMeadowPage() {
   const gridFeatures = [
@@ -214,14 +215,11 @@ export default function RiverMeadowPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="absolute inset-0 opacity-[0.03]" 
-                style={{
-                  backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 50px, hsl(var(--primary)) 50px, hsl(var(--primary)) 51px)`
-                }}
+              <img 
+                src={multiCloudGif} 
+                alt="Multi-cloud migration animated diagram showing workload mobility across platforms" 
+                className="w-full h-full object-contain"
               />
-              <span className="relative z-10 text-xs tracking-[0.15em] uppercase text-muted-foreground">
-                Platform Ecosystem Diagram
-              </span>
             </motion.div>
           </section>
 
