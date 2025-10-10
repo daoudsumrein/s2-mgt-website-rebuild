@@ -171,7 +171,7 @@ export const GitexPopup = () => {
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 bg-gradient-to-r from-amber-400 via-pink-500 via-purple-600 via-blue-500 to-amber-400 bg-clip-text text-transparent"
                 style={{
                   backgroundSize: '200% auto',
-                  animation: 'gradient-shift 3s ease infinite',
+                  animation: 'gradientShift 3s ease infinite',
                   filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.6))',
                 }}
                 initial={{ opacity: 0, y: 20 }}
