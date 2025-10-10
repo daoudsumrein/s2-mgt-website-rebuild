@@ -394,6 +394,16 @@ All colors MUST be HSL.
   }
 }
 
+/* Gradient Flow Animation */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
 .particle-container:hover .particles-bg {
   opacity: 0.5 !important;
   filter: brightness(1.6) saturate(1.2);
