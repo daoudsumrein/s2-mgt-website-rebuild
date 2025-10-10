@@ -171,20 +171,21 @@ export const GitexPopup = () => {
                   We're Exhibiting at
                 </motion.div>
 
-                {/* Event Info */}
-                <motion.h2
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 bg-gradient-to-r from-amber-400 via-pink-500 via-purple-600 via-blue-500 to-amber-400 bg-clip-text text-transparent"
-                  style={{
-                    backgroundSize: '200% auto',
-                    animation: 'gradientShift 3s ease infinite',
-                    filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.6))',
-                  }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.6 }}
-                >
-                  GITEX GLOBAL
-                </motion.h2>
+              {/* Event Info */}
+              <motion.h2
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: 'linear-gradient(to right, #fbbf24, #ec4899, #09D7FB, #3b82f6, #fbbf24)',
+                  backgroundSize: '200% auto',
+                  animation: 'gradientShift 3s ease infinite',
+                  filter: 'drop-shadow(0 0 20px rgba(9, 215, 251, 0.6))',
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+              >
+                GITEX GLOBAL
+              </motion.h2>
 
                 <motion.p
                   className="text-xs sm:text-sm font-semibold tracking-wider sm:tracking-widest text-amber-400 mb-6 sm:mb-7 md:mb-9"
