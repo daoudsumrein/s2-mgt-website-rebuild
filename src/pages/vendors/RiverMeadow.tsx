@@ -18,21 +18,29 @@ export default function RiverMeadowPage() {
   const gridFeatures = [
     {
       icon: Circle,
+      faIcon: "fas fa-sync-alt",
+      color: "text-blue-500",
       title: "Workload Mobility",
       description: "Seamlessly migrate workloads across any environment with complete automation and zero disruption to your business operations."
     },
     {
       icon: Triangle,
+      faIcon: "fas fa-rocket",
+      color: "text-green-500",
       title: "Workload Modernization",
       description: "Transform and upgrade legacy systems to modern platforms efficiently while maintaining full application functionality."
     },
     {
       icon: Square,
+      faIcon: "fas fa-cogs",
+      color: "text-purple-500",
       title: "Workload Optimization",
       description: "Maximize performance and reduce operational costs through intelligent workload placement and resource allocation."
     },
     {
       icon: Diamond,
+      faIcon: "fas fa-shield-alt",
+      color: "text-red-500",
       title: "Disaster Recovery",
       description: "Protect critical workloads with comprehensive backup solutions and restore capabilities for business continuity."
     }
@@ -211,9 +219,19 @@ export default function RiverMeadowPage() {
                       <div className="absolute bottom-0 left-0 w-full h-0 bg-primary/5 group-hover:h-full transition-all duration-500 -z-0" />
                       
                       <div className="relative z-10">
-                        <div className="w-10 h-10 border border-foreground flex items-center justify-center mb-12 group-hover:border-primary group-hover:text-primary group-hover:rotate-90 transition-all duration-500">
-                          <Icon className="w-5 h-5" />
-                        </div>
+                      <motion.div 
+                        className="w-16 h-16 border-2 border-foreground/20 rounded-lg flex items-center justify-center mb-8 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 bg-background/50"
+                        whileHover={{ 
+                          rotate: [0, -5, 5, -5, 0],
+                          scale: 1.1
+                        }}
+                        transition={{ 
+                          duration: 0.6,
+                          ease: "easeInOut"
+                        }}
+                      >
+                        <i className={`${feature.faIcon} text-2xl ${feature.color} group-hover:scale-110 transition-transform duration-300`} />
+                      </motion.div>
                         
                         <h3 className="text-xl font-normal mb-6 leading-tight">
                           {feature.title}
