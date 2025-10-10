@@ -222,9 +222,6 @@ export const GitexPopup = () => {
                     <span className="block text-sm sm:text-base font-semibold">
                       Dubai World Trade Centre
                     </span>
-                    <span className="block text-xs sm:text-sm text-purple-200">
-                      Dubai, UAE
-                    </span>
                     <span className="block text-sm sm:text-base font-semibold text-amber-400 mt-1 sm:mt-2">
                       Hall 7, Booth C30
                     </span>
