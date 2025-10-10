@@ -168,14 +168,13 @@ export const GitexPopup = () => {
 
               {/* Event Info */}
               <motion.h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 relative"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2"
                 style={{
                   background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #ec4899 50%, #8b5cf6 75%, #3b82f6 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 20px rgba(139, 92, 246, 0.6))',
-                  animation: 'rgb-glitch 2s infinite',
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
