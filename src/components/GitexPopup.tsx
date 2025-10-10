@@ -123,18 +123,16 @@ export const GitexPopup = () => {
             </button>
 
             {/* Content */}
-            <div 
-              className="relative z-1 px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-16 text-center text-white"
-              style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
-              }}
-            >
+            <div className="relative z-1 px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-16 text-center text-white">
               {/* Company Branding */}
               <motion.h1
                 id="gitex-popup-title"
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight sm:tracking-wide mb-2 sm:mb-3"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight sm:tracking-wide mb-2 sm:mb-3 px-4 py-2 rounded-2xl"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -143,7 +141,12 @@ export const GitexPopup = () => {
               </motion.h1>
 
               <motion.p
-                className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-5 sm:mb-6 md:mb-8"
+                className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-5 sm:mb-6 md:mb-8 inline-block px-4 py-2 rounded-xl"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  backdropFilter: 'blur(15px)',
+                  WebkitBackdropFilter: 'blur(15px)',
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
@@ -168,7 +171,12 @@ export const GitexPopup = () => {
 
               {/* Event Info */}
               <motion.h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider sm:tracking-widest mb-1 sm:mb-2 inline-block px-6 py-3 rounded-2xl"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.12)',
+                  backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
@@ -177,7 +185,12 @@ export const GitexPopup = () => {
               </motion.h2>
 
               <motion.p
-                className="text-xs sm:text-sm font-semibold tracking-wider sm:tracking-widest text-amber-400 mb-6 sm:mb-7 md:mb-9"
+                className="text-xs sm:text-sm font-semibold tracking-wider sm:tracking-widest text-amber-400 mb-6 sm:mb-7 md:mb-9 inline-block px-4 py-2 rounded-xl"
+                style={{
+                  background: 'rgba(251, 191, 36, 0.15)',
+                  backdropFilter: 'blur(15px)',
+                  WebkitBackdropFilter: 'blur(15px)',
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
@@ -228,7 +241,14 @@ export const GitexPopup = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
               >
-                <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-5 md:mb-6">
+                <p 
+                  className="text-base sm:text-lg md:text-xl mb-4 sm:mb-5 md:mb-6 inline-block px-5 py-2.5 rounded-xl"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    backdropFilter: 'blur(15px)',
+                    WebkitBackdropFilter: 'blur(15px)',
+                  }}
+                >
                   Visit Us at the OpenText Booth
                 </p>
 
