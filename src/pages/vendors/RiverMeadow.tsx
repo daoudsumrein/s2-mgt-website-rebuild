@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Circle, Triangle, Square, Diamond } from "lucide-react";
+import migrationImage from "@/assets/rivermeadow-migration.png";
 
 export default function RiverMeadowPage() {
   const gridFeatures = [
@@ -251,14 +252,11 @@ export default function RiverMeadowPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="absolute inset-0 opacity-[0.02]"
-                style={{
-                  backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 100px, hsl(var(--primary)) 100px, hsl(var(--primary)) 101px)`
-                }}
+              <img 
+                src={migrationImage} 
+                alt="Server to cloud migration visualization" 
+                className="w-full h-full object-cover"
               />
-              <span className="relative text-xs tracking-[0.15em] uppercase text-muted-foreground">
-                Visual Placeholder
-              </span>
             </motion.div>
             
             <motion.div 
