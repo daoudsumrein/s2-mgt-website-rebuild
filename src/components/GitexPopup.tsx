@@ -141,7 +141,7 @@ export const GitexPopup = () => {
               </motion.h1>
 
               <motion.p
-                className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-6 sm:mb-7 inline-block px-4 py-2 rounded-xl"
+                className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-8 sm:mb-10 md:mb-12 inline-block px-4 py-2 rounded-xl"
                 style={{
                   background: 'rgba(255, 255, 255, 0.08)',
                   backdropFilter: 'blur(15px)',
