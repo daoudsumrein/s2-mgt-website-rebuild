@@ -141,7 +141,7 @@ export const GitexPopup = () => {
               </motion.h1>
 
               <motion.p
-                className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-5 sm:mb-6 md:mb-8 inline-block px-4 py-2 rounded-xl"
+                className="text-[10px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest uppercase text-purple-200 mb-6 sm:mb-7 inline-block px-4 py-2 rounded-xl"
                 style={{
                   background: 'rgba(255, 255, 255, 0.08)',
                   backdropFilter: 'blur(15px)',
@@ -156,7 +156,7 @@ export const GitexPopup = () => {
 
               {/* Badge */}
               <motion.div
-                className="inline-block px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-[10px] sm:text-xs tracking-wider uppercase mb-5 sm:mb-6 md:mb-8"
+                className="inline-block px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-[10px] sm:text-xs tracking-wider uppercase mb-6 sm:mb-7"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(10px)',
@@ -224,9 +224,6 @@ export const GitexPopup = () => {
                   <div className="text-center sm:text-left">
                     <span className="block text-sm sm:text-base font-semibold">
                       Dubai World Trade Centre
-                    </span>
-                    <span className="block text-xs sm:text-sm text-purple-200">
-                      Dubai, UAE
                     </span>
                     <span className="block text-sm sm:text-base font-semibold text-amber-400 mt-1 sm:mt-2">
                       Hall 7, Booth C30
