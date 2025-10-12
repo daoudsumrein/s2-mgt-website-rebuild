@@ -17,6 +17,7 @@ import SangforPage from "./pages/vendors/Sangfor";
 import ArrosoftPage from "./pages/vendors/Arrosoft";
 import NakivoPage from "./pages/vendors/Nakivo";
 import RiverMeadowPage from "./pages/vendors/RiverMeadow";
+import CloudCasaPage from "./pages/vendors/CloudCasa";
 import DisasterRecovery from "./pages/solutions/DisasterRecovery";
 import DataProtection from "./pages/solutions/DataProtection";
 import ITDiscovery from "./pages/solutions/ITDiscovery";
@@ -67,6 +68,7 @@ const App = () => (
             <Route path="/vendors/arrosoft" element={<ArrosoftPage />} />
             <Route path="/vendors/nakivo" element={<NakivoPage />} />
             <Route path="/vendors/rivermeadow" element={<RiverMeadowPage />} />
+            <Route path="/vendors/cloudcasa" element={<CloudCasaPage />} />
           <Route path="/solutions/opentext-carbonite-availability" element={<DisasterRecovery />} />
           <Route path="/solutions/data-protection" element={<DataProtection />} />
           <Route path="/solutions/it-discovery" element={<ITDiscovery />} />
