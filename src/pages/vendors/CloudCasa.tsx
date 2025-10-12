@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import cloudCasaLogo from "@/assets/cloudcasa-logo.png";
 import "@/styles/cloudcasa.css";
 
 const CloudCasa = () => {
@@ -98,10 +99,13 @@ const CloudCasa = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(200,100%,50%,0.1)] border border-[hsl(200,100%,50%,0.3)] backdrop-blur-sm mb-6"
+                className="mb-6"
               >
-                <span className="text-2xl">☁️</span>
-                <span className="text-white/90 text-sm font-medium">CLOUDCASA BY CATALOGIC</span>
+                <img 
+                  src={cloudCasaLogo} 
+                  alt="CloudCasa Logo" 
+                  className="h-16 w-auto"
+                />
               </motion.div>
               
               <motion.h1 
