@@ -25,7 +25,8 @@ const vendors = [
     solutions: [
       "Data Protection - Availability & Migrate",
       "Secure Cloud Suite - Cloud-to-Cloud Backup",
-      "Email Continuity & Archiving"
+      "Email Continuity & Archiving",
+      "Endpoint & Threat Protection"
     ],
     href: "/vendors/opentext"
   },
@@ -33,9 +34,10 @@ const vendors = [
     name: "TDS",
     logo: tdsLogo,
     description: "Orchestration & IT Visibility",
-    tagline: "Powerful orchestration platform streamlining migration and disaster recovery",
+    tagline: "TDS is a powerful orchestration and automation platform that streamlines migration and disaster recovery, while enhancing and accelerating IT operations to drive digital transformation",
     solutions: [
       "IT Discovery & Asset Management",
+      "Dependency Mapping & Visualization",
       "Migration Wave Planning",
       "DR Orchestration & Reporting"
     ],
@@ -47,9 +49,10 @@ const vendors = [
     description: "Application Modernization",
     tagline: "Complete application transformation and modernization platform",
     solutions: [
-      "Application Assessment",
-      "App Repackaging",
-      "Desktop Modernization"
+      "Capture - Application Assessment",
+      "Studio - App Repackaging",
+      "Runtime - Secure Environments",
+      "DMT - Desktop Modernization"
     ],
     href: "https://appcure.io/"
   },
@@ -57,23 +60,25 @@ const vendors = [
     name: "NAKIVO",
     logo: nakivoLogo,
     description: "Backup & Recovery",
-    tagline: "Fast, affordable data protection for virtual, cloud, and hybrid environments",
+    tagline: "Fast, affordable data protection for virtual, cloud, and hybrid environments with comprehensive backup, replication, and disaster recovery capabilities",
     solutions: [
-      "VM Backup & Recovery",
-      "Microsoft 365 Backup",
-      "Physical Server Protection"
+      "VM Backup & Recovery - Agentless backup for VMware, Hyper-V, Nutanix AHV, and Proxmox VE",
+      "Cloud Data Protection - Direct backup to Amazon S3, Azure, Wasabi, and S3-compatible storage",
+      "Microsoft 365 Backup - Protection for Exchange Online, Teams, OneDrive, and SharePoint",
+      "Physical & File Share Backup - Image-based backup for servers and incremental file share protection"
     ],
     href: "/vendors/nakivo"
   },
   {
     name: "Arrosoft",
     logo: arrosoftLogo,
-    description: "Advanced Cybersecurity",
+    description: "Advanced Cybersecurity & Threat Protection",
     tagline: "Protecting against insider threats and ransomware attacks",
     solutions: [
-      "Kernel-Level Protection",
-      "Immutable Backup Vault",
-      "Advanced Threat Containment"
+      "Arrosoft Stealth - Kernel-Level Protection & Data Hiding",
+      "Arrosoft AirGap - Immutable Backup Vault Protection",
+      "Driver-Layer Isolation - Advanced Threat Containment",
+      "Multi-Factor Authentication - Zero-Trust Security"
     ],
     href: "/vendors/arrosoft"
   },
@@ -81,23 +86,25 @@ const vendors = [
     name: "RiverMeadow",
     logo: rivermeadowLogo,
     description: "Automated Cloud Migration",
-    tagline: "Agentless live migration with OS modernization and fixed-price per instance",
+    tagline: "Automated workload migration platform enabling fast, secure movement of Windows and Linux servers to any cloud environment with minimal downtime",
     solutions: [
-      "Collect Convert Deploy",
-      "Rapid Secure Migration",
-      "Fixed-Price Service"
+      "Automated Cloud Migration - Migrate physical, virtual, or cloud servers to AWS, VMware, and other clouds using Collect-Convert-Deploy automation",
+      "Rapid & Secure Migration - Get migrating in less than 15 minutes with agentless technology, short predictable downtimes, and data staying behind your firewall",
+      "Fixed-Price Service - All-inclusive fixed rate per instance pricing with volume discounts available and hypervisor-agnostic technology",
+      "Lift & Optimize Capabilities - Automated OS upgrades (Windows & Linux), SQL IaaS to AWS RDS conversion, MSSQL upgrades, and third-party software installation"
     ],
     href: "/vendors/rivermeadow"
   },
   {
     name: "CloudCasa",
     logo: cloudCasaLogo,
-    description: "Kubernetes Protection",
-    tagline: "Backup and disaster recovery for Kubernetes across multi-cloud environments",
+    description: "Kubernetes Data Protection & Migration",
+    tagline: "Secure, scalable backup and disaster recovery for Kubernetes environments with unified management for containers and VMs across multi-cloud and hybrid infrastructures",
     solutions: [
-      "Kubernetes Backup & Recovery",
-      "Multi-Cloud Management",
-      "Application Migration"
+      "Kubernetes Backup & Recovery - Protection for all cluster resources, persistent volumes, and databases across any CNCF distribution including OpenShift, Rancher, and Tanzu",
+      "Multi-Cloud Management - Single dashboard for unlimited clusters across AWS, Azure, GCP, on-premises, and edge with centralized policies and RBAC",
+      "Application Migration - Seamless workload mobility between any Kubernetes distributions and clouds without vendor lock-in",
+      "Flexible Deployment - SaaS or self-hosted options with immutable backups, ransomware protection, and support for 13+ storage providers including S3, Azure Blob, and MinIO"
     ],
     href: "/vendors/cloudcasa"
   }
