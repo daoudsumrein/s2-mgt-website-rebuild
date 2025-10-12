@@ -30,23 +30,22 @@
     align-items: center;
     padding: 80px 0;
     position: relative;
-    overflow: hidden;
+    background: linear-gradient(135deg, #0B163F 0%, #1a0a2e 100%);
 }
 
 .cloudcasa-hero-content {
-    text-align: left;
+    text-align: center;
     max-width: 1000px;
-    margin-left: 0;
-    padding-left: 40px;
+    margin: 0 auto;
 }
 
 .cloudcasa-hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(37, 99, 235, 0.15);
+    background: rgba(219, 38, 140, 0.15);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(37, 99, 235, 0.3);
+    border: 1px solid rgba(219, 38, 140, 0.3);
     padding: 10px 24px;
     border-radius: 50px;
     margin-bottom: 30px;
@@ -58,12 +57,12 @@
 .cloudcasa-hero-badge-icon {
     width: 28px;
     height: 28px;
-    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    background: linear-gradient(135deg, #DB268C, #ff4da6);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 4px 10px rgba(219, 38, 140, 0.4);
 }
 
 .cloudcasa-hero-title {
@@ -73,21 +72,23 @@
     margin-bottom: 25px;
     color: #fff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .cloudcasa-hero-subtitle {
-    font-size: 22px;
-    font-weight: 400;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
     line-height: 1.7;
 }
 
 .cloudcasa-hero-cta {
     display: flex;
     gap: 20px;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
 @keyframes fadeInDown {
@@ -458,8 +459,6 @@
 @media (max-width: 768px) {
     .cloudcasa-hero-content {
         text-align: center;
-        padding-left: 0;
-        margin: 0 auto;
     }
 
     .cloudcasa-hero-cta {
