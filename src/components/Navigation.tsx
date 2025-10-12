@@ -63,6 +63,11 @@ const dataProtectionSolutions = [
     title: "Container Migration",
     href: "/solutions/container-migration",
     description: "Kubernetes and OpenShift cluster migration"
+  },
+  {
+    title: "Cloud Migration & Modernization",
+    href: "/solutions/cloud-migration",
+    description: "Agentless migration and OS modernization across multi-cloud environments"
   }
 ];
 
