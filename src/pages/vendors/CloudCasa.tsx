@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import "@/styles/cloudcasa.css";
 
@@ -23,6 +25,8 @@ const CloudCasa = () => {
         description="Enterprise-grade Kubernetes backup and disaster recovery with CloudCasa. Secure, scalable protection for containers and VMs across multi-cloud and hybrid infrastructures."
         keywords="CloudCasa, Kubernetes backup, Kubernetes disaster recovery, container backup, multi-cloud backup, Kubernetes migration, CNCF, OpenShift, Rancher, Tanzu"
       />
+      
+      <Navigation />
       
       <div className="cloudcasa-page">
         {/* Hero Section */}
@@ -295,6 +299,8 @@ const CloudCasa = () => {
           </div>
         </section>
       </div>
+      
+      <Footer />
     </>
   );
 };
