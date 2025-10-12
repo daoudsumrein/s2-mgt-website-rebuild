@@ -316,7 +316,7 @@ const CloudCasa = () => {
         <section className="cloudcasa-section">
           <div className="cloudcasa-container">
             <div className="cloudcasa-section-header">
-              <span className="cloudcasa-section-badge">TESTIMONIALS</span>
+              <span className="cloudcasa-section-badge text-white">TESTIMONIALS</span>
               <h2 className="cloudcasa-section-title">Trusted by Enterprise Teams</h2>
               <p className="cloudcasa-section-subtitle">
                 See what our customers say about CloudCasa
