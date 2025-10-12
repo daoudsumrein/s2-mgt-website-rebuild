@@ -339,11 +339,11 @@ const CloudCasa = () => {
                   <p className="cloudcasa-testimonial-quote">
                     "Especially not so much cost savings, but time savings, because we didn't need to learn Velero from scratch. We're 'GUI guys' and CloudCasa's UI saved a lot of effort."
                   </p>
-                  <div className="cloudcasa-testimonial-divider">
-                    <div className="cloudcasa-testimonial-name">Christian</div>
-                    <div className="cloudcasa-testimonial-role">System Administrator</div>
-                    <div className="cloudcasa-testimonial-stars">⭐⭐⭐⭐⭐</div>
-                  </div>
+              <div className="cloudcasa-testimonial-divider" aria-label="Reviewer details">
+                <div className="cloudcasa-testimonial-name">Christian</div>
+                <div className="cloudcasa-testimonial-role">System Administrator</div>
+                <div className="cloudcasa-testimonial-stars" aria-label="5 star rating" role="img" aria-roledescription="rating">⭐⭐⭐⭐⭐</div>
+              </div>
                 </div>
               </div>
 
@@ -352,10 +352,10 @@ const CloudCasa = () => {
                   <p className="cloudcasa-testimonial-quote">
                     "Kasten didn't have a real centralized dashboard. With CloudCasa, I can just go to one console and see all our clusters. I didn't even believe that was possible at this price point."
                   </p>
-                  <div className="cloudcasa-testimonial-divider">
+                  <div className="cloudcasa-testimonial-divider" aria-label="Reviewer details">
                     <div className="cloudcasa-testimonial-name">Anonymous</div>
                     <div className="cloudcasa-testimonial-role">System Engineer</div>
-                    <div className="cloudcasa-testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div className="cloudcasa-testimonial-stars" aria-label="5 star rating" role="img" aria-roledescription="rating">⭐⭐⭐⭐⭐</div>
                   </div>
                 </div>
               </div>
@@ -365,10 +365,10 @@ const CloudCasa = () => {
                   <p className="cloudcasa-testimonial-quote">
                     "Velero can be complex and lacks support, which underscored the importance of investing in backups with solutions like CloudCasa, especially in a data company where a robust disaster recovery (DR) plan is crucial."
                   </p>
-                  <div className="cloudcasa-testimonial-divider">
+                  <div className="cloudcasa-testimonial-divider" aria-label="Reviewer details">
                     <div className="cloudcasa-testimonial-name">Francisco</div>
                     <div className="cloudcasa-testimonial-role">DevOps Manager</div>
-                    <div className="cloudcasa-testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div className="cloudcasa-testimonial-stars" aria-label="5 star rating" role="img" aria-roledescription="rating">⭐⭐⭐⭐⭐</div>
                   </div>
                 </div>
               </div>
