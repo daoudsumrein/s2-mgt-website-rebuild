@@ -382,7 +382,7 @@ const CloudCasa = () => {
               </p>
               <div className="cloudcasa-final-cta-buttons">
                 <Link to="/contact" className="cloudcasa-btn cloudcasa-btn-primary">
-                  Start Free Trial
+                  Contact Us
                   <span>→</span>
                 </Link>
               </div>
