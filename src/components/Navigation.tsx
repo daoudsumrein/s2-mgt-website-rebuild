@@ -58,6 +58,11 @@ const dataProtectionSolutions = [
     title: "Email Archiving",
     href: "/solutions/email-archiving",
     description: "Compliance and continuity"
+  },
+  {
+    title: "Container Migration",
+    href: "/solutions/container-migration",
+    description: "Kubernetes and OpenShift cluster migration"
   }
 ];
 
