@@ -311,13 +311,11 @@ const CloudCasa = () => {
 
             <div className="cloudcasa-diagram-container">
               <h3 style={{ fontSize: '28px', marginBottom: '30px', textAlign: 'center', color: '#DB268C' }}>Why CloudCasa</h3>
-              <div className="cloudcasa-diagram-placeholder">
-                <div className="cloudcasa-diagram-icon">🖼️</div>
-                <div className="cloudcasa-diagram-label">Why CloudCasa Diagram</div>
-                <p className="cloudcasa-diagram-note">
-                  [Insert "Why CloudCasa" diagram image here - showing Cloud Scale, Cloud Native, Cloud Service, Cloud Portable, Cloud Secure, and Cloud Smart benefits in circular layout]
-                </p>
-              </div>
+              <img 
+                src="/lovable-uploads/why-cloudcasa.png" 
+                alt="Why CloudCasa - Cloud Scale, Cloud Native, Cloud Service, Cloud Portable, Cloud Secure, and Cloud Smart benefits" 
+                className="cloudcasa-diagram-image"
+              />
             </div>
           </div>
         </section>
