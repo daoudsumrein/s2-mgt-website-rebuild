@@ -443,14 +443,6 @@ export default function CloudMigration() {
                 >
                   Contact Sales →
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/10 backdrop-blur-xl border-white/20 text-white hover:bg-white/20 px-8 py-6 text-lg"
-                  onClick={() => window.location.href = 'tel:+14082176498'}
-                >
-                  Call: (408) 217-6498
-                </Button>
               </div>
             </div>
           </div>
