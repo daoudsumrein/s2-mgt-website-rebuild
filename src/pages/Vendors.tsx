@@ -203,7 +203,7 @@ export default function Vendors() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={vendorsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-[#2392CF]/50 hover:shadow-xl transition-all duration-300 group"
+                  className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-[#2392CF]/50 hover:shadow-xl transition-all duration-300 group flex flex-col"
                 >
                   {/* Logo */}
                   <div className="flex items-center justify-center mb-6">
@@ -225,7 +225,7 @@ export default function Vendors() {
                   </p>
                   
                   {/* Key Solutions */}
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-6 flex-grow">
                     {vendor.solutions.map((solution, solutionIndex) => (
                       <li key={solutionIndex} className="text-sm text-[#2392CF] flex items-start">
                         <span className="w-1.5 h-1.5 bg-[#2392CF] rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -235,13 +235,15 @@ export default function Vendors() {
                   </ul>
                   
                   {/* Learn More Link */}
-                  <Link 
-                    to={vendor.href}
-                    className="inline-flex items-center text-sm font-semibold text-[#2392CF] hover:underline underline-offset-4 transition-all"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  <div className="mt-auto pt-4 border-t border-slate-200">
+                    <Link 
+                      to={vendor.href}
+                      className="inline-flex items-center text-sm font-semibold text-[#2392CF] hover:underline underline-offset-4 transition-all"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
                 </motion.div>
               ))}
             </div>
