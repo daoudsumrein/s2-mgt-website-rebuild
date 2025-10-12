@@ -31,10 +31,10 @@ export default function About() {
           <div className="fixed inset-0 pointer-events-none z-0">
             <div className="absolute inset-0 opacity-30" style={{
               backgroundImage: `
-                radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(74, 144, 226, 0.3), transparent)
+                radial-gradient(2px 2px at 20px 30px, rgba(35, 146, 207, 0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(35, 146, 207, 0.2), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(35, 146, 207, 0.4), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(35, 146, 207, 0.3), transparent)
               `,
               backgroundRepeat: 'repeat',
               backgroundSize: '150px 150px',
@@ -51,13 +51,13 @@ export default function About() {
               className="max-w-5xl mx-auto text-center"
             >
               {/* Hero Glass Container */}
-              <div className="bg-slate-900/90 border-2 border-blue-500 rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500">
-                <Badge variant="outline" className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 mb-6 text-sm px-6 py-2 font-bold uppercase tracking-wider">
+              <div className="bg-slate-900/90 border-2 border-[#2392CF] rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-2xl hover:shadow-[#2392CF]/20 transition-all duration-500">
+                <Badge variant="outline" className="border-[#2392CF]/50 text-[#2392CF] bg-[#2392CF]/10 hover:bg-[#2392CF]/20 mb-6 text-sm px-6 py-2 font-bold uppercase tracking-wider">
                   Founded 2013
                 </Badge>
                 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-                  <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-green-400 bg-clip-text text-transparent" style={{
+                  <span className="bg-gradient-to-r from-[#2392CF] via-[#1E7FB8] to-green-400 bg-clip-text text-transparent" style={{
                     backgroundSize: '300% 300%',
                     animation: 'gradientShift 4s ease-in-out infinite'
                   }}>
@@ -84,7 +84,7 @@ export default function About() {
               className="max-w-6xl mx-auto"
             >
               <div className="text-center mb-16">
-                <div className="inline-block bg-blue-500/10 backdrop-blur-xl border border-blue-500/20 text-blue-400 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                <div className="inline-block bg-[#2392CF]/10 backdrop-blur-xl border border-[#2392CF]/20 text-[#2392CF] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                   Our Mission
                 </div>
                 <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
@@ -125,9 +125,9 @@ export default function About() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="flex items-start gap-4 bg-blue-500/5 backdrop-blur-xl border border-blue-500/10 rounded-2xl p-6 hover:bg-blue-500/10 hover:border-blue-500/30 transition-all"
+                      className="flex items-start gap-4 bg-[#2392CF]/5 backdrop-blur-xl border border-[#2392CF]/10 rounded-2xl p-6 hover:bg-[#2392CF]/10 hover:border-[#2392CF]/30 transition-all"
                     >
-                      <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-[#2392CF] mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-white text-lg mb-2">{item.title}</h4>
                         <p className="text-slate-400 leading-relaxed">{item.desc}</p>
@@ -150,7 +150,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <div className="text-center mb-16">
-                <div className="inline-block bg-blue-500/10 backdrop-blur-xl border border-blue-500/20 text-blue-400 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                <div className="inline-block bg-[#2392CF]/10 backdrop-blur-xl border border-[#2392CF]/20 text-[#2392CF] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                   Why Choose S2
                 </div>
                 <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
@@ -176,10 +176,10 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 hover:border-blue-500/30 transition-all hover:-translate-y-2 group"
+                    className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 hover:border-[#2392CF]/30 transition-all hover:-translate-y-2 group"
                   >
                     <div className="flex justify-center mb-6">
-                      <capability.icon className="w-12 h-12 text-blue-400 group-hover:scale-110 transition-transform" />
+                      <capability.icon className="w-12 h-12 text-[#2392CF] group-hover:scale-110 transition-transform" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
                     <p className="text-slate-400 leading-relaxed">{capability.desc}</p>
@@ -200,7 +200,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <div className="text-center mb-16">
-                <div className="inline-block bg-blue-500/10 backdrop-blur-xl border border-blue-500/20 text-blue-400 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                <div className="inline-block bg-[#2392CF]/10 backdrop-blur-xl border border-[#2392CF]/20 text-[#2392CF] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                   What Drives Us
                 </div>
                 <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
@@ -214,13 +214,13 @@ export default function About() {
                   <h3 className="text-2xl md:text-3xl font-bold text-center text-white mb-8">Our Core</h3>
                   <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
                     <p>
-                      At our core, S2 is built on one simple principle—<span className="text-blue-400 font-semibold">total commitment to those we serve</span>.
+                      At our core, S2 is built on one simple principle—<span className="text-[#2392CF] font-semibold">total commitment to those we serve</span>.
                     </p>
                     <p>
-                      We don't push products. We <span className="text-blue-400 font-semibold">listen, we learn, and we adapt</span>. Our team takes the time to understand your challenges—whether you're a partner, a client, or both—and we craft <span className="text-blue-400 font-semibold">solutions that fit you</span>, not the other way around.
+                      We don't push products. We <span className="text-[#2392CF] font-semibold">listen, we learn, and we adapt</span>. Our team takes the time to understand your challenges—whether you're a partner, a client, or both—and we craft <span className="text-[#2392CF] font-semibold">solutions that fit you</span>, not the other way around.
                     </p>
                     <p>
-                      With a <span className="text-blue-400 font-semibold">diverse portfolio</span> across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to <span className="text-blue-400 font-semibold">mix, match, and customize</span> offerings that work for your environment—efficiently, intelligently, and always with <span className="text-blue-400 font-semibold">your goals in mind</span>.
+                      With a <span className="text-[#2392CF] font-semibold">diverse portfolio</span> across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to <span className="text-[#2392CF] font-semibold">mix, match, and customize</span> offerings that work for your environment—efficiently, intelligently, and always with <span className="text-[#2392CF] font-semibold">your goals in mind</span>.
                     </p>
                   </div>
                 </div>
@@ -251,10 +251,10 @@ export default function About() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-blue-500/30 transition-all hover:-translate-y-2"
+                    className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-[#2392CF]/30 transition-all hover:-translate-y-2"
                   >
                     <div className="flex justify-center mb-6">
-                      <value.icon className="w-12 h-12 text-blue-400" />
+                      <value.icon className="w-12 h-12 text-[#2392CF]" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4 text-center">{value.title}</h3>
                     <p className="text-slate-400 leading-relaxed text-center">{value.desc}</p>
@@ -285,7 +285,7 @@ export default function About() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-6 text-lg shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105"
+                    className="bg-gradient-to-r from-[#2392CF] to-[#1E7FB8] hover:from-[#1E7FB8] hover:to-[#1A6EA3] text-white px-8 py-6 text-lg shadow-2xl hover:shadow-[#2392CF]/50 transition-all hover:scale-105"
                     asChild
                   >
                     <a href="/contact">
