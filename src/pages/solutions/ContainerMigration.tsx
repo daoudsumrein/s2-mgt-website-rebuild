@@ -392,7 +392,7 @@ const ContainerMigration = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16 fade-in-section opacity-0 translate-y-5 transition-all duration-700">
-                <h2 className="text-4xl font-bold mb-4">Why CloudCasa?</h2>
+                <h2 className="text-4xl font-bold mb-4 text-white">Why CloudCasa?</h2>
                 <p className="text-lg opacity-95">
                   CloudCasa is trusted by enterprises worldwide for mission-critical Kubernetes migrations
                 </p>
