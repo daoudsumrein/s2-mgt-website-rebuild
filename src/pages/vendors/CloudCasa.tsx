@@ -302,7 +302,7 @@ const CloudCasa = () => {
             </div>
 
             <div className="cloudcasa-diagram-container">
-              <h3 className="invisible" style={{ fontSize: '28px', marginBottom: '30px', textAlign: 'center', color: '#DB268C' }}>Why CloudCasa</h3>
+              <h3 className="invisible h-0 m-0" style={{ fontSize: '28px', textAlign: 'center', color: '#DB268C' }}>Why CloudCasa</h3>
               <img 
                 src="/lovable-uploads/why-cloudcasa.png" 
                 alt="Why CloudCasa - Cloud Scale, Cloud Native, Cloud Service, Cloud Portable, Cloud Secure, and Cloud Smart benefits" 
