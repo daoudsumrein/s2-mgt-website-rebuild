@@ -215,7 +215,9 @@ const CloudCasa = () => {
 
             <div className="cloudcasa-features-grid">
               <div className="cloudcasa-feature-card">
-                <div className="cloudcasa-feature-icon">💾</div>
+                <div className="cloudcasa-feature-icon">
+                  <i className="fas fa-database"></i>
+                </div>
                 <h3 className="cloudcasa-feature-title">Automated Backups</h3>
                 <p className="cloudcasa-feature-description">
                   Policy-driven backup automation for all cluster resources, persistent volumes, and databases with customizable scheduling and retention policies
@@ -223,7 +225,9 @@ const CloudCasa = () => {
               </div>
 
               <div className="cloudcasa-feature-card">
-                <div className="cloudcasa-feature-icon">🌐</div>
+                <div className="cloudcasa-feature-icon">
+                  <i className="fas fa-cloud"></i>
+                </div>
                 <h3 className="cloudcasa-feature-title">Multi-Cloud Support</h3>
                 <p className="cloudcasa-feature-description">
                   Unified management across AWS, Azure, GCP, on-premises, and edge environments with centralized policies and RBAC
@@ -231,7 +235,9 @@ const CloudCasa = () => {
               </div>
 
               <div className="cloudcasa-feature-card">
-                <div className="cloudcasa-feature-icon">🔐</div>
+                <div className="cloudcasa-feature-icon">
+                  <i className="fas fa-shield-alt"></i>
+                </div>
                 <h3 className="cloudcasa-feature-title">Enterprise Security</h3>
                 <p className="cloudcasa-feature-description">
                   Immutable backups, ransomware protection, encryption at rest and in transit, and RBAC-driven access control
@@ -239,7 +245,9 @@ const CloudCasa = () => {
               </div>
 
               <div className="cloudcasa-feature-card">
-                <div className="cloudcasa-feature-icon">🚀</div>
+                <div className="cloudcasa-feature-icon">
+                  <i className="fas fa-rocket"></i>
+                </div>
                 <h3 className="cloudcasa-feature-title">Seamless Migration</h3>
                 <p className="cloudcasa-feature-description">
                   Move workloads between any Kubernetes distributions and clouds without vendor lock-in or complex manual processes
@@ -247,7 +255,9 @@ const CloudCasa = () => {
               </div>
 
               <div className="cloudcasa-feature-card">
-                <div className="cloudcasa-feature-icon">📊</div>
+                <div className="cloudcasa-feature-icon">
+                  <i className="fas fa-chart-line"></i>
+                </div>
                 <h3 className="cloudcasa-feature-title">Easy Monitoring</h3>
                 <p className="cloudcasa-feature-description">
                   Real-time monitoring, alerting, and reporting with centralized logging and guided recovery workflows
@@ -255,7 +265,9 @@ const CloudCasa = () => {
               </div>
 
               <div className="cloudcasa-feature-card">
-                <div className="cloudcasa-feature-icon">⚙️</div>
+                <div className="cloudcasa-feature-icon">
+                  <i className="fas fa-cogs"></i>
+                </div>
                 <h3 className="cloudcasa-feature-title">Flexible Deployment</h3>
                 <p className="cloudcasa-feature-description">
                   Choose between fully-managed SaaS or self-hosted options for air-gapped and regulatory-sensitive environments
@@ -263,7 +275,9 @@ const CloudCasa = () => {
               </div>
 
               <div className="cloudcasa-feature-card">
-                <div className="cloudcasa-feature-icon">🔄</div>
+                <div className="cloudcasa-feature-icon">
+                  <i className="fas fa-sync-alt"></i>
+                </div>
                 <h3 className="cloudcasa-feature-title">Disaster Recovery</h3>
                 <p className="cloudcasa-feature-description">
                   Cross-cluster, cross-account, and cross-cloud restores with high availability and failover capabilities
@@ -271,7 +285,9 @@ const CloudCasa = () => {
               </div>
 
               <div className="cloudcasa-feature-card">
-                <div className="cloudcasa-feature-icon">🤝</div>
+                <div className="cloudcasa-feature-icon">
+                  <i className="fas fa-plug"></i>
+                </div>
                 <h3 className="cloudcasa-feature-title">Vendor Integration</h3>
                 <p className="cloudcasa-feature-description">
                   Native integrations with OpenShift, Rancher, Tanzu, and major cloud providers for seamless workflows
