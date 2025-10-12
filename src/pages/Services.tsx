@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
+import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw, Server, Cloud } from "lucide-react";
 import StackingCards from "@/components/StackingCards";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -76,6 +76,32 @@ const services = [
       "Minimal downtime migration",
       "Multi-platform support",
       "Risk-managed approach"
+    ]
+  },
+  {
+    icon: Server,
+    title: "Nutanix Service Implementation Partner",
+    description: "Certified Nutanix implementation and support services",
+    content: "As a certified Nutanix Service Implementation Partner, we deliver enterprise-grade hyperconverged infrastructure solutions. Our team specializes in designing, deploying, and optimizing Nutanix environments that simplify IT operations while delivering the performance and scalability your business demands.",
+    features: [
+      "Certified Nutanix implementations",
+      "Hyperconverged infrastructure design",
+      "Migration to Nutanix platforms",
+      "Performance optimization",
+      "Ongoing support and management"
+    ]
+  },
+  {
+    icon: Cloud,
+    title: "HPE Zerto Professional Services & HPE Partners Solution Implementation",
+    description: "Enterprise disaster recovery and data protection with HPE partner solutions",
+    content: "As an HPE Zerto professional service provider, we deliver comprehensive disaster recovery and business continuity solutions. We also implement HPE partner solutions including CloudCasa for Kubernetes backup and RiverMeadow for cloud migration, ensuring your infrastructure is protected and optimized across hybrid and multi-cloud environments.",
+    features: [
+      "HPE Zerto DR implementation",
+      "CloudCasa Kubernetes backup",
+      "RiverMeadow cloud migration",
+      "Business continuity planning",
+      "Multi-cloud data protection"
     ]
   }
 ];
