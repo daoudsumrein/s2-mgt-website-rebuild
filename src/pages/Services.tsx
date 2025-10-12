@@ -5,11 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw } from "lucide-react";
+import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw, Server, Cloud } from "lucide-react";
 import StackingCards from "@/components/StackingCards";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
 
 // Auto-sliding carousel implementation
 const services = [
@@ -77,6 +78,32 @@ const services = [
       "Multi-platform support",
       "Risk-managed approach"
     ]
+  },
+  {
+    icon: Server,
+    title: "Nutanix Service Implementation Partner",
+    description: "Certified expertise in Nutanix hyperconverged infrastructure deployment",
+    content: "As a certified Nutanix Service Implementation Partner, we deliver end-to-end deployment, configuration, and optimization of Nutanix hyperconverged infrastructure. Our team ensures seamless integration with your existing environment while maximizing performance and reliability.",
+    features: [
+      "Certified Nutanix deployment",
+      "Infrastructure optimization",
+      "Seamless integration",
+      "Performance tuning",
+      "Ongoing support and maintenance"
+    ]
+  },
+  {
+    icon: Cloud,
+    title: "HPE Zerto Professional Services",
+    description: "HPE partner implementations with CloudCasa and RiverMeadow integration",
+    content: "We provide comprehensive HPE Zerto professional services as an authorized HPE partner. Our expertise extends to seamless integration with CloudCasa for Kubernetes protection and RiverMeadow for automated cloud migration, ensuring complete data protection and mobility across your hybrid environment.",
+    features: [
+      "HPE Zerto disaster recovery",
+      "CloudCasa Kubernetes backup",
+      "RiverMeadow cloud migration",
+      "Multi-platform integration",
+      "End-to-end deployment"
+    ]
   }
 ];
 
@@ -133,7 +160,7 @@ export default function Services() {
         keywords="IT Consultancy Services MENA,Disaster Recovery Planning KSA,IT Migration & Modernization Solutions,Business Continuity & SLA Management MENA,IT Migration & Modernization Solutions,IT Solutions Architecture UAE"
       />
       
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-white">
         <Navigation />
         <main>
           {/* Stacking Cards Section */}
@@ -141,73 +168,137 @@ export default function Services() {
             <StackingCards cards={services} onCardClick={handleCardClick} />
           </div>
 
+          {/* Hero Section */}
+          <section className="py-16 md:py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto text-center">
+                <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-8 md:p-12 shadow-lg">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2392CF] mb-4">
+                    Our Services in Detail
+                  </h2>
+                  <p className="text-lg md:text-xl text-[#2392CF] leading-relaxed">
+                    Comprehensive information about each of our specialized service offerings
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Service Details Section - All Services */}
           <motion.section 
             ref={detailsRef}
             initial={{ opacity: 0, y: 30 }}
             animate={detailsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
-            className="py-8 sm:py-12 lg:py-16 bg-background"
+            className="py-16 md:py-24 bg-slate-50"
           >
             <div className="container mx-auto px-4">
-               <div className="text-center mb-12 sm:mb-16">
-                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">Our Services in Detail</h2>
-                 <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-                   Comprehensive information about each of our specialized service offerings
-                 </p>
-               </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                {services.map((service, index) => {
+                  const IconComponent = service.icon;
+                  return (
+                    <motion.div 
+                      key={index} 
+                      id={`service-${index}`} 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={detailsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-[#2392CF]/50 hover:shadow-xl transition-all duration-300 flex flex-col"
+                    >
+                      {/* Icon and Title */}
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#2392CF] to-[#1E7FB8] rounded-xl flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="h-6 w-6 text-white" />
+                        </div>
+                        <h3 className="text-xl font-bold text-[#2392CF]">{service.title}</h3>
+                      </div>
 
-              {services.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <motion.div 
-                    key={index} 
-                    id={`service-${index}`} 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={detailsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="mb-8 sm:mb-12 lg:mb-16 last:mb-0"
-                  >
-                     <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-4 sm:p-6 lg:p-8">
-                       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 sm:mb-8">
-                         <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                           <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />
-                         </div>
-                         <div className="flex-1">
-                           <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2">{service.title}</h3>
-                           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">{service.description}</p>
-                         </div>
-                       </div>
+                      {/* Description */}
+                      <p className="text-sm font-semibold text-slate-700 mb-4">
+                        {service.description}
+                      </p>
 
-                       <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                         <div>
-                           <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">Overview</h4>
-                           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                             {service.content}
-                           </p>
-                         </div>
+                      {/* Overview */}
+                      <div className="mb-4 flex-grow">
+                        <h4 className="text-sm font-bold text-[#2392CF] mb-2">Overview</h4>
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                          {service.content}
+                        </p>
+                      </div>
 
-                         <div>
-                           <h4 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">Key Features</h4>
-                           <ul className="space-y-2 sm:space-y-3">
-                             {service.features.map((feature, featureIndex) => (
-                               <li key={featureIndex} className="flex items-start gap-3">
-                                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                 <span className="text-sm sm:text-base text-muted-foreground">{feature}</span>
-                               </li>
-                             ))}
-                           </ul>
-                         </div>
-                       </div>
+                      {/* Key Features */}
+                      <div className="mb-6">
+                        <h4 className="text-sm font-bold text-[#2392CF] mb-3">Key Features</h4>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 bg-[#2392CF] rounded-full mt-2 flex-shrink-0"></span>
+                              <span className="text-sm text-[#2392CF]">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-                    </div>
-                  </motion.div>
-                );
-              })}
+                      {/* CTA */}
+                      <div className="mt-auto pt-4 border-t border-slate-200 flex gap-2">
+                        <Button 
+                          size="sm"
+                          className="flex-1 bg-[#2392CF] hover:bg-[#1E7FB8] text-white text-xs"
+                          asChild
+                        >
+                          <Link to="/contact">Engage This Service</Link>
+                        </Button>
+                        <Button 
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 border-[#2392CF] text-[#2392CF] hover:bg-[#2392CF] hover:text-white text-xs"
+                          asChild
+                        >
+                          <Link to="/contact">Request Consultation</Link>
+                        </Button>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
           </motion.section>
 
-
+          {/* Global CTA Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-8 md:p-12 shadow-lg text-center">
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#2392CF] mb-4">
+                    Ready to Transform Your IT Infrastructure?
+                  </h2>
+                  <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                    Let our team help you design and implement the right solutions for your business
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button 
+                      size="lg"
+                      className="bg-[#2392CF] hover:bg-[#1E7FB8] text-white shadow-lg hover:shadow-xl transition-all"
+                      asChild
+                    >
+                      <Link to="/contact">
+                        Contact Our Team
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      className="border-[#2392CF] text-[#2392CF] hover:bg-[#2392CF] hover:text-white transition-all"
+                      asChild
+                    >
+                      <Link to="/solutions">View Our Solutions</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
         <Footer />
       </div>
