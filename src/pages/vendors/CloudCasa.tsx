@@ -300,13 +300,11 @@ const CloudCasa = () => {
 
             <div className="cloudcasa-diagram-container">
               <h3 style={{ fontSize: '28px', marginBottom: '30px', textAlign: 'center' }}>CloudCasa Architecture Overview</h3>
-              <div className="cloudcasa-diagram-placeholder">
-                <div className="cloudcasa-diagram-icon">📐</div>
-                <div className="cloudcasa-diagram-label">Architecture Diagram</div>
-                <p className="cloudcasa-diagram-note">
-                  Placeholder for CloudCasa architecture diagram showing multi-cluster management, backup flows, and storage integration
-                </p>
-              </div>
+              <img 
+                src="/lovable-uploads/cloudcasa-architecture.png" 
+                alt="CloudCasa Architecture Overview - Platform Services, Application Services, Developer Services, Cluster Services, and Kubernetes infrastructure" 
+                className="cloudcasa-diagram-image"
+              />
             </div>
 
             <div className="cloudcasa-diagram-container">

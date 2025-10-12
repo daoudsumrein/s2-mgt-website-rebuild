@@ -378,6 +378,57 @@
     border-radius: 20px;
     object-fit: contain;
     display: block;
+    margin: 0 auto;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .cloudcasa-section {
+        padding: 60px 0;
+    }
+
+    .cloudcasa-container {
+        padding: 0 20px;
+    }
+
+    .cloudcasa-section-title {
+        font-size: 32px;
+    }
+
+    .cloudcasa-section-subtitle {
+        font-size: 16px;
+    }
+
+    .cloudcasa-features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cloudcasa-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .cloudcasa-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cloudcasa-final-cta-title {
+        font-size: 32px;
+    }
+
+    .cloudcasa-final-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cloudcasa-btn {
+        width: 100%;
+    }
+
+    .cloudcasa-diagram-container h3 {
+        font-size: 24px !important;
+    }
 }
 
 /* Stats Section */
