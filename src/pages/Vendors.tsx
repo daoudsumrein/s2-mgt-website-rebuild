@@ -8,6 +8,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import nakivoLogo from "@/assets/logos/nakivo-logo-new.png";
 import rivermeadowLogo from "@/assets/logos/rivermeadow-logo.webp";
+import cloudCasaLogo from "@/assets/logos/cloudcasa-icon.png";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -98,7 +99,7 @@ const vendors = [
   },
   {
     name: "CloudCasa",
-    logo: "",
+    logo: cloudCasaLogo,
     description: "Kubernetes Data Protection & Migration",
     tagline: "Secure, scalable backup and disaster recovery for Kubernetes environments with unified management for containers and VMs across multi-cloud and hybrid infrastructures.",
     solutions: [
