@@ -95,6 +95,20 @@ const vendors = [
     ],
     href: "/vendors/rivermeadow",
     color: "bg-orange-50 text-orange-700 border-orange-200"
+  },
+  {
+    name: "CloudCasa",
+    logo: "",
+    description: "Kubernetes Data Protection & Migration",
+    tagline: "Secure, scalable backup and disaster recovery for Kubernetes environments with unified management for containers and VMs across multi-cloud and hybrid infrastructures.",
+    solutions: [
+      "Kubernetes Backup & Recovery - Protection for all cluster resources, persistent volumes, and databases across any CNCF distribution including OpenShift, Rancher, and Tanzu",
+      "Multi-Cloud Management - Single dashboard for unlimited clusters across AWS, Azure, GCP, on-premises, and edge with centralized policies and RBAC",
+      "Application Migration - Seamless workload mobility between any Kubernetes distributions and clouds without vendor lock-in",
+      "Flexible Deployment - SaaS or self-hosted options with immutable backups, ransomware protection, and support for 13+ storage providers including S3, Azure Blob, and MinIO"
+    ],
+    href: "/vendors/cloudcasa",
+    color: "bg-indigo-50 text-indigo-700 border-indigo-200"
   }
 ];
 
