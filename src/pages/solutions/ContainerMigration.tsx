@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Container, Database, Cloud, Shield, Sliders, Package, CloudUpload } from 'lucide-react';
+import { Container, Database, Cloud, Shield, Sliders, Package } from 'lucide-react';
 
 const ContainerMigration = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -198,12 +198,6 @@ const ContainerMigration = () => {
                   title: "Granular Control & Customization",
                   description: "Perform full cluster or namespace-level migrations with custom resource transformations and selective resource migration.",
                   features: ["Namespace-level migration", "Resource filtering and selection", "Custom transformations", "Pre and post-migration hooks"]
-                },
-                {
-                  icon: <CloudUpload className="w-8 h-8" />,
-                  title: "Cloud Migration & Modernization",
-                  description: "Agentless migration and OS modernization across multi-cloud environments with seamless workload transitions.",
-                  features: ["Agentless migration approach", "OS modernization support", "Multi-cloud environment support", "Zero-friction workload migration"]
                 }
               ].map((capability, index) => (
                 <div key={index} className="fade-in-section opacity-0 translate-y-5 transition-all duration-700 p-8 bg-muted/30 rounded-xl border border-border hover:border-[#DB268C] hover:shadow-lg hover:-translate-y-1 transition-all">
