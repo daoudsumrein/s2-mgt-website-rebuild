@@ -88,10 +88,16 @@ export default function CloudMigration() {
                   {/* Right Media Section */}
                   <div className="order-first lg:order-last">
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      {/* Video/Image Container */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-900/40 to-slate-900/40 backdrop-blur-sm">
-                        <CloudUpload className="w-24 h-24 md:w-32 md:h-32 text-blue-400/60" />
-                      </div>
+                      {/* Video Container */}
+                      <iframe 
+                        src="https://www.youtube.com/embed/9rXwvI7JJdY?si=PZ-Pgvy60mirCghm" 
+                        title="YouTube video player" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" 
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full rounded-lg sm:rounded-xl"
+                      />
                       
                       {/* Overlay gradient */}
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
