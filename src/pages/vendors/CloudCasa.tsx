@@ -150,7 +150,7 @@ const CloudCasa = () => {
         <section id="about" className="cloudcasa-section">
           <div className="cloudcasa-container">
             <div className="cloudcasa-section-header">
-              <span className="cloudcasa-section-badge">ABOUT CLOUDCASA</span>
+              <span className="cloudcasa-section-badge text-white">ABOUT CLOUDCASA</span>
               <h2 className="cloudcasa-section-title">Enterprise-Grade Kubernetes Protection</h2>
               <p className="cloudcasa-section-subtitle">
                 The comprehensive data protection platform designed for modern cloud-native environments
