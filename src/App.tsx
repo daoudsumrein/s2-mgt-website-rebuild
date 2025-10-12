@@ -40,6 +40,7 @@ import EmailEncryption from "./pages/solutions/EmailEncryption";
 import RansomwareProtection from "./pages/solutions/RansomwareProtection";
 import OpenTextServerBackup from "./pages/solutions/OpenTextServerBackup";
 import ServersDataProtection from "./pages/solutions/ServersDataProtection";
+import ContainerMigration from "./pages/solutions/ContainerMigration";
 import NotFound from "./pages/NotFound";
 import Clients from "./pages/Clients";
 import ScrollToTop from "./components/ScrollToTop";
@@ -91,6 +92,7 @@ const App = () => (
           <Route path="/solutions/ransomware-protection" element={<RansomwareProtection />} />
           <Route path="/solutions/OpenText-Server-Backup" element={<OpenTextServerBackup />} />
           <Route path="/solutions/servers-data-protection" element={<ServersDataProtection />} />
+          <Route path="/solutions/container-migration" element={<ContainerMigration />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
