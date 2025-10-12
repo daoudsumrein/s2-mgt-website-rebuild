@@ -15,7 +15,7 @@ export default function About() {
   const ctaAnimation = useScrollAnimation({ threshold: 0.2 });
   
   return (
-    <div className="min-h-screen flex flex-col bg-slate-900">
+    <div className="min-h-screen flex flex-col bg-white">
       <SEOHead 
         title="Data Protection & DR Specialists in UAE, KSA & MENA"
         description="Leading MENA IT consultancy since 2013, specializing in data protection, disaster recovery, backup, and business continuity for government & enterprise clients."
@@ -26,7 +26,7 @@ export default function About() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
+        <section className="bg-gradient-to-br from-slate-50 via-white to-slate-50 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
           {/* Animated background particles */}
           <div className="fixed inset-0 pointer-events-none z-0">
             <div className="absolute inset-0 opacity-30" style={{
@@ -51,13 +51,13 @@ export default function About() {
               className="max-w-5xl mx-auto text-center"
             >
               {/* Hero Glass Container */}
-              <div className="bg-slate-900/90 border-2 border-[#2392CF] rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-2xl hover:shadow-[#2392CF]/20 transition-all duration-500">
+              <div className="bg-white/90 border-2 border-[#2392CF] rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-2xl hover:shadow-[#2392CF]/20 transition-all duration-500">
                 <Badge variant="outline" className="border-[#2392CF]/50 text-[#2392CF] bg-[#2392CF]/10 hover:bg-[#2392CF]/20 mb-6 text-sm px-6 py-2 font-bold uppercase tracking-wider">
                   Founded 2013
                 </Badge>
                 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-                  <span className="bg-gradient-to-r from-[#2392CF] via-[#1E7FB8] to-green-400 bg-clip-text text-transparent" style={{
+                  <span className="bg-gradient-to-r from-[#2392CF] via-[#1E7FB8] to-[#2392CF] bg-clip-text text-transparent" style={{
                     backgroundSize: '300% 300%',
                     animation: 'gradientShift 4s ease-in-out infinite'
                   }}>
@@ -65,7 +65,7 @@ export default function About() {
                   </span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
                   Delivering secure, scalable IT transformation across MENA since 2013. We are a consultancy-led Value-Added Distributor specializing in data protection, high availability, disaster recovery, and application modernization.
                 </p>
               </div>
@@ -74,7 +74,7 @@ export default function About() {
         </section>
 
         {/* Mission Statement Section */}
-        <section className="py-24 bg-slate-900">
+        <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-4">
             <motion.div
               ref={missionAnimation.ref}
@@ -87,18 +87,18 @@ export default function About() {
                 <div className="inline-block bg-[#2392CF]/10 backdrop-blur-xl border border-[#2392CF]/20 text-[#2392CF] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                   Our Mission
                 </div>
-                <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 mb-6">
                   Architecting Enterprise Solutions
                 </h2>
               </div>
 
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Left Content */}
-                <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10">
-                  <p className="text-lg text-slate-300 leading-relaxed mb-6">
+                <div className="bg-white backdrop-blur-xl border border-slate-200 rounded-3xl p-8 md:p-10 shadow-lg">
+                  <p className="text-lg text-slate-700 leading-relaxed mb-6">
                     Since 2013, S2 Management Solutions has been at the forefront of critical IT infrastructure transformation in the Middle East. We don't just distribute technology—we architect solutions that protect, modernize, and optimize enterprise environments.
                   </p>
-                  <p className="text-lg text-slate-300 leading-relaxed">
+                  <p className="text-lg text-slate-700 leading-relaxed">
                     Our consultancy-first approach ensures every implementation is tailored to specific infrastructure requirements, compliance needs, and business objectives across government, BFSI, and critical infrastructure sectors.
                   </p>
                 </div>
@@ -129,8 +129,8 @@ export default function About() {
                     >
                       <CheckCircle className="w-6 h-6 text-[#2392CF] mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-white text-lg mb-2">{item.title}</h4>
-                        <p className="text-slate-400 leading-relaxed">{item.desc}</p>
+                        <h4 className="font-semibold text-slate-800 text-lg mb-2">{item.title}</h4>
+                        <p className="text-slate-600 leading-relaxed">{item.desc}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -141,7 +141,7 @@ export default function About() {
         </section>
 
         {/* Capabilities Grid */}
-        <section className="py-24 bg-slate-900">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               ref={capabilitiesAnimation.ref}
@@ -153,10 +153,10 @@ export default function About() {
                 <div className="inline-block bg-[#2392CF]/10 backdrop-blur-xl border border-[#2392CF]/20 text-[#2392CF] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                   Why Choose S2
                 </div>
-                <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 mb-6">
                   Our Capabilities
                 </h2>
-                <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+                <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                   Comprehensive expertise delivering enterprise-grade solutions across MENA
                 </p>
               </div>
@@ -176,13 +176,13 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 hover:border-[#2392CF]/30 transition-all hover:-translate-y-2 group"
+                    className="bg-white backdrop-blur-xl border border-slate-200 rounded-2xl p-8 text-center hover:bg-slate-50 hover:border-[#2392CF]/50 transition-all hover:-translate-y-2 group shadow-lg"
                   >
                     <div className="flex justify-center mb-6">
                       <capability.icon className="w-12 h-12 text-[#2392CF] group-hover:scale-110 transition-transform" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
-                    <p className="text-slate-400 leading-relaxed">{capability.desc}</p>
+                    <h3 className="text-xl font-bold text-slate-800 mb-3">{capability.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">{capability.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -191,7 +191,7 @@ export default function About() {
         </section>
 
         {/* Core Values Section */}
-        <section className="py-24 bg-slate-900">
+        <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-4">
             <motion.div
               ref={valuesAnimation.ref}
@@ -203,16 +203,16 @@ export default function About() {
                 <div className="inline-block bg-[#2392CF]/10 backdrop-blur-xl border border-[#2392CF]/20 text-[#2392CF] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                   What Drives Us
                 </div>
-                <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 mb-6">
                   Our Core Values
                 </h2>
               </div>
 
               {/* Our Core Narrative */}
               <div className="max-w-4xl mx-auto mb-16">
-                <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl">
-                  <h3 className="text-2xl md:text-3xl font-bold text-center text-white mb-8">Our Core</h3>
-                  <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+                <div className="bg-white backdrop-blur-xl border border-slate-200 rounded-3xl p-8 md:p-12 shadow-2xl">
+                  <h3 className="text-2xl md:text-3xl font-bold text-center text-slate-800 mb-8">Our Core</h3>
+                  <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
                     <p>
                       At our core, S2 is built on one simple principle—<span className="text-[#2392CF] font-semibold">total commitment to those we serve</span>.
                     </p>
@@ -251,13 +251,13 @@ export default function About() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-[#2392CF]/30 transition-all hover:-translate-y-2"
+                    className="bg-white backdrop-blur-xl border border-slate-200 rounded-3xl p-8 hover:bg-slate-50 hover:border-[#2392CF]/50 transition-all hover:-translate-y-2 shadow-lg"
                   >
                     <div className="flex justify-center mb-6">
                       <value.icon className="w-12 h-12 text-[#2392CF]" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-4 text-center">{value.title}</h3>
-                    <p className="text-slate-400 leading-relaxed text-center">{value.desc}</p>
+                    <h3 className="text-xl font-bold text-slate-800 mb-4 text-center">{value.title}</h3>
+                    <p className="text-slate-600 leading-relaxed text-center">{value.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -266,7 +266,7 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-slate-900">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               ref={ctaAnimation.ref}
@@ -275,11 +275,11 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
             >
-              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 md:p-16">
-                <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6">
+              <div className="bg-white backdrop-blur-xl border border-slate-200 rounded-3xl p-10 md:p-16 shadow-2xl">
+                <h2 className="text-3xl md:text-5xl font-extrabold text-slate-800 mb-6">
                   Ready to Partner with S2?
                 </h2>
-                <p className="text-xl text-slate-400 mb-10 leading-relaxed">
+                <p className="text-xl text-slate-600 mb-10 leading-relaxed">
                   Let's discuss how our expertise can help transform your IT infrastructure
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -296,7 +296,7 @@ export default function About() {
                   <Button 
                     variant="outline" 
                     size="lg"
-                    className="bg-white/10 backdrop-blur-xl border-white/20 text-white hover:bg-white/20 px-8 py-6 text-lg"
+                    className="border-[#2392CF] text-[#2392CF] hover:bg-[#2392CF] hover:text-white px-8 py-6 text-lg"
                     asChild
                   >
                     <a href="/services">
