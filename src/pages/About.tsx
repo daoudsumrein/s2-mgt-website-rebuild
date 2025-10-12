@@ -96,7 +96,7 @@ export default function About() {
                 {/* Left Content */}
                 <div className="bg-white backdrop-blur-xl border border-slate-200 rounded-3xl p-8 md:p-10 shadow-lg">
                   <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                    Since 2013, S2 Management Solutions has been at the forefront of critical IT infrastructure transformation in the Middle East. We don't just distribute technology—we architect solutions that protect, modernize, and optimize enterprise environments.
+                    Since 2013, S2 Management Solutions has been at the forefront of critical IT infrastructure transformation in the Middle East. We don't just distribute technology - we architect solutions that protect, modernize, and optimize enterprise environments.
                   </p>
                   <p className="text-lg text-slate-700 leading-relaxed">
                     Our consultancy-first approach ensures every implementation is tailored to specific infrastructure requirements, compliance needs, and business objectives across government, BFSI, and critical infrastructure sectors.
@@ -217,10 +217,10 @@ export default function About() {
                       At our core, S2 is built on one simple principle - <span className="text-[#2392CF] font-semibold">total commitment to those we serve</span>.
                     </p>
                     <p>
-                      We don't push products. We <span className="text-[#2392CF] font-semibold">listen, we learn, and we adapt</span>. Our team takes the time to understand your challenges—whether you're a partner, a client, or both—and we craft <span className="text-[#2392CF] font-semibold">solutions that fit you</span>, not the other way around.
+                      We don't push products. We <span className="text-[#2392CF] font-semibold">listen, we learn, and we adapt</span>. Our team takes the time to understand your challenges - whether you're a partner, a client, or both - and we craft <span className="text-[#2392CF] font-semibold">solutions that fit you</span>, not the other way around.
                     </p>
                     <p>
-                      With a <span className="text-[#2392CF] font-semibold">diverse portfolio</span> across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to <span className="text-[#2392CF] font-semibold">mix, match, and customize</span> offerings that work for your environment—efficiently, intelligently, and always with <span className="text-[#2392CF] font-semibold">your goals in mind</span>.
+                      With a <span className="text-[#2392CF] font-semibold">diverse portfolio</span> across cybersecurity, data protection, modernization, and continuity, we're uniquely positioned to <span className="text-[#2392CF] font-semibold">mix, match, and customize</span> offerings that work for your environment - efficiently, intelligently, and always with <span className="text-[#2392CF] font-semibold">your goals in mind</span>.
                     </p>
                   </div>
                 </div>
