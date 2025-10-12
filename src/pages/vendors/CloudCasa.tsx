@@ -385,9 +385,6 @@ const CloudCasa = () => {
                   Start Free Trial
                   <span>→</span>
                 </Link>
-                <Link to="/contact" className="cloudcasa-btn cloudcasa-btn-secondary">
-                  Schedule a Demo
-                </Link>
               </div>
             </div>
           </div>
