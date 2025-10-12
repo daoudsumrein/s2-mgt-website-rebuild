@@ -11,7 +11,7 @@ export default function TDSPage() {
     <>
       <SEOHead 
         title="TransitionManager® IT Transformation Platform UAE | TDS Partner"
-        description="Leading TransitionManager® distributor in UAE & MENA. Expert IT transformation, migration planning, dependency mapping & orchestration solutions. Insight, Orchestrate & Accelerate your digital transformation with proven methodologies."
+        description="Exclusive TDS distributor in GCC, UAE and KSA - certified TransitionManager provider for migration planning, dependency mapping and orchestration."
         keywords="TransitionManager UAE, IT transformation MENA, migration planning Middle East, dependency mapping UAE, IT orchestration Saudi Arabia, digital transformation Dubai, TDS partner UAE, enterprise migration tools, IT modernization platform, data center migration UAE"
         canonicalUrl="https://s2mgt.com/vendors/tds"
         ogImage="https://s2mgt.com/src/assets/transitionmanager-insight.png"
