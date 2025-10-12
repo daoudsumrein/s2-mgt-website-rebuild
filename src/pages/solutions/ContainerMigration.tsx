@@ -423,7 +423,7 @@ const ContainerMigration = () => {
                style={{ background: 'radial-gradient(circle, rgba(219, 38, 140, 0.3) 0%, transparent 70%)' }} />
           
           <div className="container mx-auto px-6 relative z-10 max-w-3xl">
-            <h2 className="text-5xl font-bold mb-6">Ready to Migrate?</h2>
+            <h2 className="text-5xl font-bold mb-6 text-white">Ready to Migrate?</h2>
             <p className="text-xl opacity-95 mb-10 leading-relaxed">
               Start your migration journey with CloudCasa today. Get a free assessment from our migration experts and discover how we can simplify your Kubernetes migration with minimal risk and maximum efficiency. No credit card required.
             </p>
