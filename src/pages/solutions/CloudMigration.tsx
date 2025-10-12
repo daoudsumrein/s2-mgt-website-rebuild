@@ -439,7 +439,7 @@ export default function CloudMigration() {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-6 text-lg shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105"
-                  onClick={() => window.location.href = 'mailto:sales@rivermeadow.com'}
+                  onClick={() => window.location.href = 'mailto:admin@s2mgt.com'}
                 >
                   Contact Sales →
                 </Button>
