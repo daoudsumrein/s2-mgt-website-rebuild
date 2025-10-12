@@ -121,13 +121,14 @@ const ContainerMigration = () => {
                   {/* Right Media Section */}
                   <div className="order-first lg:order-last">
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      {/* Placeholder for video - can be replaced with actual video URL */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-800 flex items-center justify-center rounded-xl">
-                        <Container className="w-24 h-24 text-blue-400 opacity-50" />
-                      </div>
-                      
-                      {/* Overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
+                      <iframe 
+                        className="absolute inset-0 w-full h-full rounded-xl"
+                        src="https://www.youtube.com/embed/SaAns_WWuLw?si=rnlgBbqNp22wPurI&amp;start=3" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" 
+                        allowFullScreen
+                      />
                     </div>
                   </div>
                 </div>
