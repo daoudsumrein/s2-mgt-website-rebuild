@@ -1,12 +1,17 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Container, Database, Cloud, Shield, Sliders, Package } from 'lucide-react';
 
 const ContainerMigration = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const heroAnimation = useScrollAnimation({ threshold: 0.3 });
 
   useEffect(() => {
     const observerOptions = {
@@ -43,30 +48,91 @@ const ContainerMigration = () => {
         <Navigation />
 
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0B163F] to-[#DB268C]">
-          <div className="absolute top-[-50%] right-[-10%] w-[600px] h-[600px] rounded-full opacity-30 animate-float"
-               style={{ background: 'radial-gradient(circle, rgba(219, 38, 140, 0.3) 0%, transparent 70%)' }} />
-          <div className="absolute bottom-[-30%] left-[-5%] w-[500px] h-[500px] rounded-full opacity-40 animate-float-reverse"
-               style={{ background: 'radial-gradient(circle, rgba(11, 22, 63, 0.4) 0%, transparent 70%)' }} />
-          
-          <div className="container mx-auto px-6 relative z-10 max-w-4xl">
-            <div className="animate-fade-in">
-              <span className="inline-block bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/30">
-                RED HAT CERTIFIED PARTNER
-              </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Effortless Kubernetes & OpenShift Migration
-              </h1>
-              <p className="text-xl text-white/95 mb-5 leading-relaxed">
-                Secure, scalable, and cloud-native migration powered by CloudCasa. Move workloads across clusters, clouds, and environments with zero vendor lock-in.
-              </p>
-              <p className="text-lg text-white/85 mb-10 leading-relaxed">
-                CloudCasa offers a powerful and intuitive solution for Kubernetes migration, making it easy to move your applications, data, and infrastructure between clusters, regions, and cloud providers. Whether you're planning a cluster migration across AWS, Azure, and GCP, or need to migrate workloads from on-premises to the cloud, CloudCasa ensures a seamless experience with robust automation and minimal disruption.
-              </p>
-              <Link to="/contact" className="inline-block bg-[#DB268C] hover:bg-[#c11e7a] text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
-                Start Your Migration
-              </Link>
-            </div>
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 relative overflow-hidden h-[75vh] flex items-center justify-center">
+          {/* Animated background particles */}
+          <div className="fixed inset-0 pointer-events-none z-0">
+            <div 
+              className="absolute inset-0 opacity-30"
+              style={{
+                backgroundImage: `
+                  radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
+                  radial-gradient(2px 2px at 40px 70px, rgba(74, 144, 226, 0.2), transparent),
+                  radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
+                  radial-gradient(1px 1px at 130px 80px, rgba(74, 144, 226, 0.3), transparent)
+                `,
+                backgroundRepeat: 'repeat',
+                backgroundSize: '150px 150px',
+                animation: 'float 20s infinite linear'
+              }}
+            />
+          </div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div 
+              ref={heroAnimation.ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="max-w-7xl mx-auto"
+            >
+              {/* Hero Container */}
+              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
+                
+                {/* Content Grid */}
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
+                  {/* Left Content */}
+                  <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
+                    <Badge 
+                      variant="outline" 
+                      className="border-blue-500/50 text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:scale-105 transition-all duration-300 px-3 sm:px-4 py-1.5 sm:py-2 relative overflow-hidden group/badge text-xs sm:text-sm"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/badge:translate-x-full transition-transform duration-500" />
+                      <span className="relative">RED HAT CERTIFIED PARTNER</span>
+                    </Badge>
+                    
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                      <span 
+                        className="bg-gradient-to-r from-blue-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-pulse hover:scale-105 transition-transform duration-300 cursor-default inline-block pb-4"
+                        style={{
+                          backgroundSize: '300% 300%',
+                          animation: 'gradientShift 4s ease-in-out infinite'
+                        }}
+                      >
+                        Kubernetes & OpenShift Migration
+                      </span>
+                    </h1>
+                    
+                    <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                      Secure, scalable, and cloud-native migration powered by CloudCasa. Move workloads across clusters, clouds, and environments with zero vendor lock-in.
+                    </p>
+                    
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 relative overflow-hidden group/btn px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg font-semibold w-full sm:w-auto"
+                      onClick={() => window.open('https://outlook.live.com/calendar/0/deeplink/compose?subject=Container%20Migration%20Consultation', '_blank')}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500" />
+                      <span className="relative">Start Your Migration</span>
+                    </Button>
+                  </div>
+                  
+                  {/* Right Media Section */}
+                  <div className="order-first lg:order-last">
+                    <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/video hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
+                      {/* Placeholder for video - can be replaced with actual video URL */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-800 flex items-center justify-center rounded-xl">
+                        <Container className="w-24 h-24 text-blue-400 opacity-50" />
+                      </div>
+                      
+                      {/* Overlay gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
