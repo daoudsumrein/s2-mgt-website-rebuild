@@ -206,7 +206,7 @@ const CloudCasa = () => {
         <section id="features" className="cloudcasa-section">
           <div className="cloudcasa-container">
             <div className="cloudcasa-section-header">
-              <span className="cloudcasa-section-badge">KEY FEATURES</span>
+              <span className="cloudcasa-section-badge text-white">KEY FEATURES</span>
               <h2 className="cloudcasa-section-title">Powerful Protection, Simplified</h2>
               <p className="cloudcasa-section-subtitle">
                 Everything you need to protect, recover, and migrate your Kubernetes workloads
