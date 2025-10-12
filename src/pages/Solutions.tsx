@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Shield, Server, Workflow, Search, Cloud, Lock, ArrowRight, CheckCircle, Database, Eye, Users, Mail, Key, Container } from "lucide-react";
+import { Shield, Server, Workflow, Search, Cloud, Lock, ArrowRight, CheckCircle, Database, Eye, Users, Mail, Key, Container, CloudUpload } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -59,6 +59,11 @@ const dataProtectionSolutions = [{
   title: "Container Migration",
   description: "Kubernetes and OpenShift cluster migration",
   link: "/solutions/container-migration"
+}, {
+  icon: CloudUpload,
+  title: "Cloud Migration & Modernization",
+  description: "Agentless migration and OS modernization across multi-cloud environments",
+  link: "/solutions/cloud-migration"
 }];
 const cybersecuritySolutions = [{
   icon: Eye,
