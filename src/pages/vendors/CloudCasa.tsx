@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { Button } from "@/components/ui/button";
 import "@/styles/cloudcasa.css";
 
 const CloudCasa = () => {
@@ -33,93 +31,26 @@ const CloudCasa = () => {
       <div className="cloudcasa-page">
         {/* Hero Section */}
         <section className="cloudcasa-hero">
-          {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(/lovable-uploads/hero-bg-compressed.png)` }}
-          />
-          
-          {/* Flowing Background Elements */}
-          <div className="absolute top-0 right-0 w-[60%] h-full">
-            <div className="absolute inset-0 bg-gradient-radial from-[hsl(200,100%,50%,0.3)] via-[hsl(200,100%,50%,0.1)] to-transparent blur-[40px]" />
-          </div>
-          
-          {/* Animated Flowing Element */}
-          <motion.div 
-            className="absolute top-[20%] right-[-10%] w-[50%] h-[60%] bg-gradient-radial from-[hsl(194,100%,62%,0.4)] via-[hsl(200,100%,50%,0.2)] to-transparent blur-[40px] rounded-full"
-            style={{ willChange: 'transform' }}
-            animate={{ 
-              transform: ['translate3d(0, 0, 0) scale(1)', 'translate3d(0, -20px, 0) scale(1.05)', 'translate3d(0, 0, 0) scale(1)']
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-
-          <div className="cloudcasa-container relative z-10">
-            <motion.div 
-              initial={{ opacity: 0, x: -60 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="cloudcasa-hero-content"
-            >
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="cloudcasa-hero-badge"
-              >
+          <div className="cloudcasa-container">
+            <div className="cloudcasa-hero-content">
+              <div className="cloudcasa-hero-badge">
                 <span className="cloudcasa-hero-badge-icon">☁️</span>
                 <span>CLOUDCASA BY CATALOGIC</span>
-              </motion.div>
-              
-              <motion.h1 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="cloudcasa-hero-title"
-              >
-                Kubernetes Data Protection & Migration
-              </motion.h1>
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="cloudcasa-hero-subtitle"
-              >
+              </div>
+              <h1 className="cloudcasa-hero-title">Kubernetes Data Protection & Migration</h1>
+              <p className="cloudcasa-hero-subtitle">
                 Secure, scalable backup and disaster recovery for Kubernetes environments with unified management across multi-cloud and hybrid infrastructures
-              </motion.p>
-              
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="cloudcasa-hero-cta"
-              >
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] hover:from-[#3b82f6] hover:to-[#2563eb] text-white px-10 py-5 text-xl font-semibold rounded-full shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_25px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-0"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Get Started →
-                  </Link>
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-10 py-5 text-xl font-semibold rounded-full transition-all duration-300"
-                  asChild
-                >
-                  <a href="#about">
-                    Learn More
-                  </a>
-                </Button>
-              </motion.div>
-            </motion.div>
+              </p>
+              <div className="cloudcasa-hero-cta">
+                <Link to="/contact" className="cloudcasa-btn cloudcasa-btn-primary">
+                  Get Started
+                  <span>→</span>
+                </Link>
+                <a href="#about" className="cloudcasa-btn cloudcasa-btn-secondary">
+                  Learn More
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 

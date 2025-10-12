@@ -69,10 +69,9 @@ export default {
 				},
 				'heading-blue': 'hsl(var(--heading-blue))'
 			},
-		backgroundImage: {
-			'gradient-metallic-blue': 'var(--gradient-metallic-blue)',
-			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-		},
+			backgroundImage: {
+				'gradient-metallic-blue': 'var(--gradient-metallic-blue)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
