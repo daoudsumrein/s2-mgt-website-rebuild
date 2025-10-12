@@ -214,7 +214,7 @@ export default function About() {
                   <h3 className="text-2xl md:text-3xl font-bold text-center text-slate-800 mb-8">Our Core</h3>
                   <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
                     <p>
-                      At our core, S2 is built on one simple principle—<span className="text-[#2392CF] font-semibold">total commitment to those we serve</span>.
+                      At our core, S2 is built on one simple principle - <span className="text-[#2392CF] font-semibold">total commitment to those we serve</span>.
                     </p>
                     <p>
                       We don't push products. We <span className="text-[#2392CF] font-semibold">listen, we learn, and we adapt</span>. Our team takes the time to understand your challenges—whether you're a partner, a client, or both—and we craft <span className="text-[#2392CF] font-semibold">solutions that fit you</span>, not the other way around.
