@@ -36,7 +36,7 @@ const CloudCasa = () => {
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(/lovable-uploads/hero-bg-compressed.png)` }}
+            style={{ backgroundImage: `url(/lovable-uploads/cloudcasa-hero-bg.png)` }}
           />
           
           {/* Flowing Background Elements */}
