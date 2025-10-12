@@ -414,6 +414,7 @@
     gap: 30px;
     margin-top: 50px;
     align-items: stretch;
+    grid-auto-rows: 1fr;
 }
 
 .cloudcasa-testimonial-card {
@@ -431,6 +432,12 @@
 .cloudcasa-testimonial-card:hover {
     transform: translateY(-5px);
     border-color: rgba(219, 38, 140, 0.4);
+}
+
+.cloudcasa-testimonial-card > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .cloudcasa-testimonial-quote {
