@@ -141,16 +141,6 @@ const CloudCasa = () => {
                     Get Started
                   </Link>
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 px-10 py-5 text-xl font-semibold rounded-full backdrop-blur-sm transition-all duration-300"
-                  asChild
-                >
-                  <a href="#about">
-                    Learn More
-                  </a>
-                </Button>
               </motion.div>
             </motion.div>
           </div>
