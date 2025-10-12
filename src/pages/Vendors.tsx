@@ -19,7 +19,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const vendors = [
   {
     name: "OpenText",
-    logo: opentextLogo,
+    logo: "https://www.opentext.com/assets/images/favicon.png",
     description: "Core Data Protection Platform",
     tagline: "Enterprise-grade data protection, availability, and secure cloud solutions",
     solutions: [
@@ -32,7 +32,7 @@ const vendors = [
   },
   {
     name: "TDS",
-    logo: tdsLogo,
+    logo: "https://www.transitionaldata.com/uploads/2024/06/TDS-Website-Favicon-100x100.png",
     description: "Orchestration & IT Visibility",
     tagline: "TDS is a powerful orchestration and automation platform that streamlines migration and disaster recovery, while enhancing and accelerating IT operations to drive digital transformation",
     solutions: [
@@ -45,7 +45,7 @@ const vendors = [
   },
   {
     name: "appCURE",
-    logo: appcureLogo,
+    logo: "https://appcure.io/wp-content/uploads/2025/04/light-logo.png",
     description: "Application Modernization",
     tagline: "Complete application transformation and modernization platform",
     solutions: [
@@ -71,7 +71,7 @@ const vendors = [
   },
   {
     name: "Arrosoft",
-    logo: arrosoftLogo,
+    logo: "https://www.arrosoft.com/favicon.svg",
     description: "Advanced Cybersecurity & Threat Protection",
     tagline: "Protecting against insider threats and ransomware attacks",
     solutions: [
