@@ -23,45 +23,16 @@ const CloudCasa = () => {
   return (
     <>
       <SEOHead
-        title="CloudCasa Kubernetes Backup & Disaster Recovery Solutions | S2 Management"
-        description="CloudCasa by Catalogic delivers enterprise-grade Kubernetes backup, disaster recovery, and migration for containerized applications. Protect workloads across AWS, Azure, GCP with automated backups, ransomware protection, and seamless multi-cloud management."
-        keywords="CloudCasa Kubernetes backup, Kubernetes disaster recovery, container backup solution, Kubernetes data protection, multi-cloud backup, K8s backup, OpenShift backup, Rancher backup, AKS backup, EKS backup, GKE backup, Kubernetes migration, cloud-native backup, CNCF backup, Velero alternative"
+        title="CloudCasa - Kubernetes Data Protection & Migration | S2 Management"
+        description="Enterprise-grade Kubernetes backup and disaster recovery with CloudCasa. Secure, scalable protection for containers and VMs across multi-cloud and hybrid infrastructures."
+        keywords="CloudCasa, Kubernetes backup, Kubernetes disaster recovery, container backup, multi-cloud backup, Kubernetes migration, CNCF, OpenShift, Rancher, Tanzu"
       />
-      
-      {/* Enhanced Schema Markup for SEO */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "CloudCasa",
-          "applicationCategory": "BusinessApplication",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          },
-          "operatingSystem": "Cloud, Linux, Windows",
-          "description": "Enterprise-grade Kubernetes backup and disaster recovery solution with automated protection for containerized applications across multi-cloud environments.",
-          "provider": {
-            "@type": "Organization",
-            "name": "Catalogic Software"
-          },
-          "featureList": [
-            "Kubernetes Backup",
-            "Disaster Recovery",
-            "Multi-Cloud Support",
-            "Ransomware Protection",
-            "Automated Backups",
-            "Cross-Cluster Recovery"
-          ]
-        })}
-      </script>
       
       <Navigation />
       
-      <main className="cloudcasa-page">
+      <div className="cloudcasa-page">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="CloudCasa Hero Section">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -139,7 +110,7 @@ const CloudCasa = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 tracking-tight"
               >
-                CloudCasa: Enterprise Kubernetes Backup & Disaster Recovery Platform
+                Kubernetes Data Protection & Migration
               </motion.h1>
               
               <motion.p 
@@ -182,15 +153,15 @@ const CloudCasa = () => {
         </section>
 
         {/* About CloudCasa Section */}
-        <section id="about" className="cloudcasa-section" aria-labelledby="about-cloudcasa">
+        <section id="about" className="cloudcasa-section">
           <div className="cloudcasa-container">
-            <header className="cloudcasa-section-header">
+            <div className="cloudcasa-section-header">
               <span className="cloudcasa-section-badge">ABOUT CLOUDCASA</span>
-              <h2 id="about-cloudcasa" className="cloudcasa-section-title">What is CloudCasa? Enterprise-Grade Kubernetes Data Protection</h2>
+              <h2 className="cloudcasa-section-title">Enterprise-Grade Kubernetes Protection</h2>
               <p className="cloudcasa-section-subtitle">
-                Comprehensive backup, disaster recovery, and migration platform for modern cloud-native Kubernetes environments
+                The comprehensive data protection platform designed for modern cloud-native environments
               </p>
-            </header>
+            </div>
 
             <div className="cloudcasa-about-content">
               <p className="cloudcasa-about-text">
@@ -238,15 +209,15 @@ const CloudCasa = () => {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="cloudcasa-section" aria-labelledby="cloudcasa-features">
+        <section id="features" className="cloudcasa-section">
           <div className="cloudcasa-container">
-            <header className="cloudcasa-section-header">
+            <div className="cloudcasa-section-header">
               <span className="cloudcasa-section-badge">KEY FEATURES</span>
-              <h2 id="cloudcasa-features" className="cloudcasa-section-title">CloudCasa Features: Powerful Kubernetes Protection Made Simple</h2>
+              <h2 className="cloudcasa-section-title">Powerful Protection, Simplified</h2>
               <p className="cloudcasa-section-subtitle">
-                Complete toolkit to backup, recover, and migrate Kubernetes workloads across any cloud platform
+                Everything you need to protect, recover, and migrate your Kubernetes workloads
               </p>
-            </header>
+            </div>
 
             <div className="cloudcasa-features-grid">
               <div className="cloudcasa-feature-card">
@@ -317,17 +288,17 @@ const CloudCasa = () => {
         </section>
 
         {/* Architecture Section */}
-        <section id="architecture" className="cloudcasa-section" aria-labelledby="cloudcasa-architecture">
+        <section id="architecture" className="cloudcasa-section">
           <div className="cloudcasa-container">
-            <header className="cloudcasa-section-header">
+            <div className="cloudcasa-section-header">
               <span className="cloudcasa-section-badge">ARCHITECTURE</span>
-              <h2 id="cloudcasa-architecture" className="cloudcasa-section-title">How CloudCasa Works: Architecture & Workflow</h2>
+              <h2 className="cloudcasa-section-title">How CloudCasa Works</h2>
               <p className="cloudcasa-section-subtitle">
-                Deep dive into CloudCasa's architecture and data protection workflow for Kubernetes environments
+                Understand the architecture and workflow behind CloudCasa's data protection
               </p>
-            </header>
+            </div>
 
-            <article className="cloudcasa-diagram-container">
+            <div className="cloudcasa-diagram-container">
               <h3 style={{ fontSize: '28px', marginBottom: '30px', textAlign: 'center' }}>CloudCasa Architecture Overview</h3>
               <div className="cloudcasa-diagram-placeholder">
                 <div className="cloudcasa-diagram-icon">📐</div>
@@ -336,10 +307,10 @@ const CloudCasa = () => {
                   Placeholder for CloudCasa architecture diagram showing multi-cluster management, backup flows, and storage integration
                 </p>
               </div>
-            </article>
+            </div>
 
-            <article className="cloudcasa-diagram-container">
-              <h3 style={{ fontSize: '28px', marginBottom: '30px', textAlign: 'center', color: '#DB268C' }}>Why Choose CloudCasa for Kubernetes Backup</h3>
+            <div className="cloudcasa-diagram-container">
+              <h3 style={{ fontSize: '28px', marginBottom: '30px', textAlign: 'center', color: '#DB268C' }}>Why CloudCasa</h3>
               <div className="cloudcasa-diagram-placeholder">
                 <div className="cloudcasa-diagram-icon">🖼️</div>
                 <div className="cloudcasa-diagram-label">Why CloudCasa Diagram</div>
@@ -347,20 +318,20 @@ const CloudCasa = () => {
                   [Insert "Why CloudCasa" diagram image here - showing Cloud Scale, Cloud Native, Cloud Service, Cloud Portable, Cloud Secure, and Cloud Smart benefits in circular layout]
                 </p>
               </div>
-            </article>
+            </div>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="cloudcasa-section" aria-labelledby="cloudcasa-testimonials">
+        <section className="cloudcasa-section">
           <div className="cloudcasa-container">
-            <header className="cloudcasa-section-header">
+            <div className="cloudcasa-section-header">
               <span className="cloudcasa-section-badge">TESTIMONIALS</span>
-              <h2 id="cloudcasa-testimonials" className="cloudcasa-section-title">CloudCasa Reviews: Trusted by Enterprise DevOps Teams</h2>
+              <h2 className="cloudcasa-section-title">Trusted by Enterprise Teams</h2>
               <p className="cloudcasa-section-subtitle">
-                Real customer experiences and success stories with CloudCasa Kubernetes backup
+                See what our customers say about CloudCasa
               </p>
-            </header>
+            </div>
 
             <div className="cloudcasa-testimonials-grid">
               <div className="cloudcasa-testimonial-card">
@@ -406,10 +377,10 @@ const CloudCasa = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section id="contact" className="cloudcasa-section" aria-labelledby="get-started">
+        <section id="contact" className="cloudcasa-section">
           <div className="cloudcasa-container">
-            <aside className="cloudcasa-final-cta">
-              <h2 id="get-started" className="cloudcasa-final-cta-title">Get Started with CloudCasa Kubernetes Backup Today</h2>
+            <div className="cloudcasa-final-cta">
+              <h2 className="cloudcasa-final-cta-title">Ready to Protect Your Kubernetes Workloads?</h2>
               <p className="cloudcasa-final-cta-text">
                 Join enterprise teams worldwide who trust CloudCasa for Kubernetes data protection, disaster recovery, and migration across any cloud environment.
               </p>
@@ -422,10 +393,10 @@ const CloudCasa = () => {
                   Schedule a Demo
                 </Link>
               </div>
-            </aside>
+            </div>
           </div>
         </section>
-      </main>
+      </div>
       
       <Footer />
     </>
