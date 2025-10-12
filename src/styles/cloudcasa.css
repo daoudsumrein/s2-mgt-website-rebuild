@@ -460,6 +460,7 @@
     column-gap: 16px;
     row-gap: 2px;
     align-items: start;
+    min-height: 48px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
     margin-top: auto;
@@ -480,19 +481,23 @@
     margin: 0;
     line-height: 1.3;
     grid-area: role;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cloudcasa-testimonial-stars {
     color: #FFD700;
     font-size: 18px;
-    line-height: 1;
     grid-area: stars;
-    align-self: start;
+    grid-row: 1 / span 2;
+    align-self: center;
     justify-self: end;
     white-space: nowrap;
     text-align: right;
     display: inline-flex;
-    padding-top: 1px;
+    align-items: center;
+    padding-top: 0;
 }
 
 /* Final CTA */
