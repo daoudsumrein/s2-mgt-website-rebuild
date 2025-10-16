@@ -280,7 +280,7 @@ export default function RiverMeadowPage() {
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extralight leading-tight">
                   Migrate any source to
                   <br />
-                  public or private cloud
+                  supported public or private cloud
                 </h2>
               </motion.div>
             </div>
