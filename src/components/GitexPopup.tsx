@@ -125,7 +125,7 @@ export const GitexPopup = () => {
                 }}
               >
                 {/* Company Branding */}
-                <motion.p
+                <motion.h2
                   id="gitex-popup-title"
                   className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tight sm:tracking-normal md:tracking-wide mb-1.5 sm:mb-2 md:mb-3 leading-tight"
                   initial={{ opacity: 0, y: 20 }}
@@ -133,7 +133,7 @@ export const GitexPopup = () => {
                   transition={{ delay: 0.3, duration: 0.6 }}
                 >
                   S2 Management Solutions
-                </motion.p>
+                </motion.h2>
 
                 <motion.p
                   className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm tracking-wide sm:tracking-wider md:tracking-widest uppercase text-purple-200 mb-2 sm:mb-2.5 md:mb-3"
@@ -195,7 +195,7 @@ export const GitexPopup = () => {
 
               {/* SEO Headers - Hidden but accessible */}
               <h2 className="sr-only">S2 Management Solutions Attending GITEX Global 2025 Dubai</h2>
-              <h4 className="sr-only">OpenText Cybersecurity Partner Booth - Hall 7 Booth C30 Dubai World Trade Centre</h4>
+              <h2 className="sr-only">OpenText Cybersecurity Partner Booth - Hall 7 Booth C30 Dubai World Trade Centre</h2>
 
               {/* Event Details */}
               <motion.div
