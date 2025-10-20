@@ -11,7 +11,7 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building, Users, Globe, CheckCircle } from "lucide-react";
+import { ArrowRight, Building, Users, Globe, CheckCircle, Calendar, MapPin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -39,6 +39,88 @@ const Index = () => {
       </motion.div>
       <main>
         <HeroSection />
+        
+        {/* GITEX Global 2025 Section */}
+        <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <Badge className="mb-4">Event Announcement</Badge>
+              
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                S2 Management Solutions
+              </h2>
+              
+              <p className="text-sm text-muted-foreground tracking-wider uppercase">
+                OpenText Cybersecurity
+              </p>
+              
+              <p className="text-sm text-muted-foreground tracking-wider uppercase">
+                Official Distributor in the GCC Region - UAE, KSA & MENA
+              </p>
+              
+              <div className="inline-block px-6 py-3 bg-primary/10 rounded-full text-sm font-semibold tracking-wide uppercase my-6">
+                We're Exhibiting at
+              </div>
+              
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
+                GITEX GLOBAL
+              </h2>
+              
+              <p className="text-xl sm:text-2xl font-semibold text-accent">
+                2025
+              </p>
+              
+              <h2 className="text-lg sm:text-xl font-semibold pt-4">
+                S2 Management Solutions Attending GITEX Global 2025 Dubai
+              </h2>
+              
+              <Card className="max-w-2xl mx-auto mt-8">
+                <CardContent className="p-8 space-y-6">
+                  <div className="flex items-center justify-center gap-3">
+                    <Calendar className="w-5 h-5 text-primary" />
+                    <span className="text-xl font-bold">
+                      October 13-17, 2025
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-start justify-center gap-3">
+                    <MapPin className="w-5 h-5 text-primary mt-1" />
+                    <div>
+                      <p className="text-base font-semibold">
+                        Dubai World Trade Centre
+                      </p>
+                      <h2 className="text-base font-semibold text-primary mt-2">
+                        OpenText Cybersecurity Partner Booth - Hall 7 Booth C30 Dubai World Trade Centre
+                      </h2>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <div className="pt-8">
+                <p className="text-xl font-bold mb-6">
+                  Visit Us at the OpenText Booth
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" asChild>
+                    <a href="https://wa.me/97144342221" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                      <Users className="w-5 h-5" />
+                      WhatsApp Us
+                    </a>
+                  </Button>
+                  
+                  <Button variant="outline" size="lg" asChild>
+                    <a href="mailto:admin@s2mgt.com" className="inline-flex items-center gap-2">
+                      <Mail className="w-5 h-5" />
+                      Email Us
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <TrustedCompanies />
         <TechServicesSection />
         <OurServicesSection />
