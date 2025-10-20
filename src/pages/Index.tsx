@@ -8,7 +8,6 @@ import OurLocationSection from "@/components/OurLocationSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
-import { GitexPopup } from "@/components/GitexPopup";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -30,7 +29,6 @@ const Index = () => {
         author="S2 Management Solutions"
       />
       <LocalBusinessSchema />
-      <GitexPopup />
       <motion.div
         ref={navigationRef}
         initial={{ opacity: 0, y: -20 }}
