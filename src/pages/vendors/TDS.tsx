@@ -10,7 +10,7 @@ export default function TDSPage() {
   return (
     <>
       <SEOHead
-        title="TDS TransitionManager GCC | Official Partner for UAE & Saudi Arabia"
+        title="TDS TransitionManager | Official Partner UAE & KSA"
         description="Official TDS TransitionManager partner in the UAE, Saudi Arabia & GCC. Plan and orchestrate IT migrations with certified support, dependency mapping & automation."
         keywords="TDS TransitionManager, TransitionManager UAE, TransitionManager Saudi Arabia, TransitionManager GCC partner, IT migration orchestration, dependency mapping software, digital transformation UAE, data center migration Saudi Arabia, IT modernization GCC"
         canonicalUrl="https://s2mgt.com/vendors/tds"
