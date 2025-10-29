@@ -15,8 +15,6 @@ export default function TDSPage() {
         keywords="TDS TransitionManager, TransitionManager UAE, TransitionManager Saudi Arabia, TransitionManager GCC partner, IT migration orchestration, dependency mapping software, digital transformation UAE, data center migration Saudi Arabia, IT modernization GCC"
         canonicalUrl="https://s2mgt.com/vendors/tds"
         ogImage="https://s2mgt.com/src/assets/transitionmanager-insight.png"
-        ogTitle="Official TDS TransitionManager Partner for GCC"
-        ogDescription="Certified TransitionManager partner in UAE & Saudi Arabia offering migration planning, orchestration, and dependency mapping for enterprise IT modernization."
       />
       <div className="min-h-screen bg-background">
         <Navigation />
