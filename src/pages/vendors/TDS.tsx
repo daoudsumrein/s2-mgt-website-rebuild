@@ -24,11 +24,72 @@ export default function TDSPage() {
             className="pt-24 sm:pt-32 pb-16 sm:pb-20 bg-background relative bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url(/lovable-uploads/1f2a065f-da31-4139-963d-9275169e01e8.png)" }}
           >
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/40"></div>
+            {/* Modern gradient background with effects */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460]">
+              {/* Geometric grid pattern */}
+              <div className="absolute inset-0 opacity-10" style={{
+                backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                                 linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                backgroundSize: '50px 50px'
+              }}></div>
+              
+              {/* Animated flowing particles */}
+              <div className="absolute inset-0 overflow-hidden">
+                {[...Array(15)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-1 h-1 bg-cyan-400/30 rounded-full animate-float"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 5}s`,
+                      animationDuration: `${15 + Math.random() * 10}s`
+                    }}
+                  />
+                ))}
+              </div>
+              
+              {/* Hexagonal shapes */}
+              <div className="absolute inset-0 opacity-5">
+                {[...Array(8)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute border border-white/20 rotate-45"
+                    style={{
+                      width: `${100 + Math.random() * 200}px`,
+                      height: `${100 + Math.random() * 200}px`,
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                      clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+                    }}
+                  />
+                ))}
+              </div>
+              
+              {/* Circuit board pattern */}
+              <svg className="absolute inset-0 w-full h-full opacity-5">
+                <defs>
+                  <pattern id="circuit" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+                    <circle cx="50" cy="50" r="3" fill="currentColor" className="text-cyan-400"/>
+                    <circle cx="150" cy="50" r="3" fill="currentColor" className="text-purple-400"/>
+                    <circle cx="50" cy="150" r="3" fill="currentColor" className="text-blue-400"/>
+                    <circle cx="150" cy="150" r="3" fill="currentColor" className="text-indigo-400"/>
+                    <line x1="50" y1="50" x2="150" y2="50" stroke="currentColor" strokeWidth="1" className="text-cyan-400/50"/>
+                    <line x1="50" y1="50" x2="50" y2="150" stroke="currentColor" strokeWidth="1" className="text-purple-400/50"/>
+                    <line x1="150" y1="50" x2="150" y2="150" stroke="currentColor" strokeWidth="1" className="text-blue-400/50"/>
+                    <line x1="50" y1="150" x2="150" y2="150" stroke="currentColor" strokeWidth="1" className="text-indigo-400/50"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#circuit)"/>
+              </svg>
+              
+              {/* Radial glow effects */}
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+            </div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 items-center">
-                <div className="lg:col-span-2">
+              <div className="lg:col-span-2 backdrop-blur-sm bg-black/20 rounded-2xl p-6 sm:p-8 border border-white/10">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 leading-tight text-cyan-300">
                     TransitionManager®
                   </h1>
@@ -54,7 +115,7 @@ export default function TDSPage() {
 
                 <div className="flex flex-col gap-3 sm:gap-4 mt-6 lg:mt-0">
                   <Button
-                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6"
+                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all"
                     style={{ backgroundColor: "#00C6F8" }}
                     onClick={() =>
                       document.getElementById("insight")?.scrollIntoView({ behavior: "smooth", block: "center" })
@@ -64,7 +125,7 @@ export default function TDSPage() {
                     <span className="absolute right-3 sm:right-5 text-lg sm:text-xl">↓</span>
                   </Button>
                   <Button
-                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6"
+                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6 shadow-lg shadow-lime-500/30 hover:shadow-lime-500/50 transition-all"
                     style={{ backgroundColor: "#9DCF65" }}
                     onClick={() =>
                       document.getElementById("orchestrate")?.scrollIntoView({ behavior: "smooth", block: "center" })
@@ -74,7 +135,7 @@ export default function TDSPage() {
                     <span className="absolute right-3 sm:right-5 text-lg sm:text-xl">↓</span>
                   </Button>
                   <Button
-                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6"
+                    className="h-12 sm:h-14 lg:h-16 text-left justify-start text-white font-semibold text-sm sm:text-base relative px-4 sm:px-6 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all"
                     style={{ backgroundColor: "#F69B5F" }}
                     onClick={() =>
                       document.getElementById("accelerate")?.scrollIntoView({ behavior: "smooth", block: "center" })
