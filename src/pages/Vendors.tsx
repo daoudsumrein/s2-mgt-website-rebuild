@@ -123,8 +123,7 @@ export default function Vendors() {
         {/* Hero Section */}
         <motion.section 
           ref={heroRef}
-          initial={{ opacity: 0, y: 30 }}
-          animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden"
         >
@@ -146,8 +145,7 @@ export default function Vendors() {
                   {vendors.map((vendor, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       className="w-16 h-16 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
                     >
@@ -174,8 +172,7 @@ export default function Vendors() {
         {/* Partner Grid */}
         <motion.section 
           ref={vendorsRef}
-          initial={{ opacity: 0, y: 30 }}
-          animate={vendorsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="py-16 md:py-24 bg-slate-50"
         >
@@ -193,8 +190,7 @@ export default function Vendors() {
               {vendors.map((vendor, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={vendorsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-6 hover:bg-white hover:border-[#2392CF]/50 hover:shadow-xl transition-all duration-300 group flex flex-col"
                 >
@@ -246,8 +242,7 @@ export default function Vendors() {
         {/* Partnership Approach */}
         <motion.section 
           ref={partnershipRef}
-          initial={{ opacity: 0, y: 30 }}
-          animate={partnershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="py-16 md:py-24 bg-white"
         >
@@ -264,8 +259,7 @@ export default function Vendors() {
               
               <div className="grid md:grid-cols-3 gap-6">
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={partnershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-8 hover:bg-white hover:border-[#2392CF]/50 hover:shadow-xl transition-all"
                 >
@@ -281,8 +275,7 @@ export default function Vendors() {
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={partnershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-8 hover:bg-white hover:border-[#2392CF]/50 hover:shadow-xl transition-all"
                 >
@@ -298,8 +291,7 @@ export default function Vendors() {
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={partnershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-8 hover:bg-white hover:border-[#2392CF]/50 hover:shadow-xl transition-all"
                 >
@@ -321,8 +313,7 @@ export default function Vendors() {
         {/* Partner Portal & CTA */}
         <motion.section 
           ref={portalRef}
-          initial={{ opacity: 0, y: 30 }}
-          animate={portalInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="py-16 md:py-24 bg-slate-50"
         >

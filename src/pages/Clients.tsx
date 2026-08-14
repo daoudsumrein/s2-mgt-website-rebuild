@@ -18,8 +18,7 @@ export default function Clients() {
           {/* Hero Section */}
           <motion.div 
             ref={heroRef}
-            initial={{ opacity: 0, y: 30 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -36,8 +35,7 @@ export default function Clients() {
           {/* Client Carousel */}
           <motion.section 
             ref={carouselRef}
-            initial={{ opacity: 0, y: 30 }}
-            animate={carouselInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
@@ -48,8 +46,7 @@ export default function Clients() {
           {/* Trust Indicators */}
           <motion.section 
             ref={trustRef}
-            initial={{ opacity: 0, y: 30 }}
-            animate={trustInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-muted/50 rounded-lg p-8 text-center"
           >

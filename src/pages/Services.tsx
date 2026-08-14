@@ -163,8 +163,7 @@ export default function Services() {
           {/* Service Details Section - All Services */}
           <motion.section 
             ref={detailsRef}
-            initial={{ opacity: 0, y: 30 }}
-            animate={detailsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="py-8 sm:py-12 lg:py-16 bg-background"
           >
@@ -182,8 +181,7 @@ export default function Services() {
                   <motion.div 
                     key={index} 
                     id={`service-${index}`} 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={detailsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="mb-8 sm:mb-12 lg:mb-16 last:mb-0"
                   >
