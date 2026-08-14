@@ -15,14 +15,13 @@ import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
-  const { ref: navigationRef, isInView: navigationInView } = useScrollAnimation();
+  const { ref: navigationRef } = useScrollAnimation();
   
   return (
     <div className="min-h-screen bg-background">
       <motion.div
         ref={navigationRef}
-        initial={{ opacity: 0, y: -20 }}
-        animate={navigationInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <Navigation />
