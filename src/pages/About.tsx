@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Building2, Globe, Award, CheckCircle, ArrowRight, Target, Lightbulb, Heart } from "lucide-react";
@@ -16,12 +15,6 @@ export default function About() {
   
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <SEOHead 
-        title="Data Protection & DR Specialists in UAE, KSA & MENA"
-        description="Leading MENA IT consultancy since 2013, specializing in data protection, disaster recovery, backup, and business continuity for government & enterprise clients."
-        keywords="OpenText Data Protection Distributor MENA,Business Continuity & Resilience KSA,Disaster Recovery Services UAE,DR Orchestration & Automation MENA, Cybersecurity & Endpoint Protection UAE, High Availability Solutions KSA"
-        canonicalUrl="https://s2mgt.com/about"
-      />
       <Navigation />
       
       <main className="flex-1">

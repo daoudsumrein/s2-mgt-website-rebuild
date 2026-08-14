@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -46,12 +45,6 @@ const deliverables = [
 export default function EmailEncryption() {
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Email Encryption Solutions | Secure Communications MENA"
-        description="Enterprise email encryption solutions for MENA region. End-to-end encryption, digital signatures, and secure document exchange for business communications."
-        keywords="email encryption MENA, secure email UAE, encrypted communications Middle East, email security Saudi Arabia"
-        canonicalUrl="https://s2mgt.com/solutions/email-encryption"
-      />
       <Navigation />
       
       <main className="flex-1">

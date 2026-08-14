@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -81,12 +80,6 @@ const deliverables = [
 export default function EmailProtection() {
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Email Protection Solutions | Advanced Email Security MENA"
-        description="Comprehensive email protection for MENA enterprises. Advanced threat protection, anti-phishing, and email security solutions for business communication."
-        keywords="email protection MENA, email security UAE, anti-phishing Middle East, email threat protection Saudi Arabia"
-        canonicalUrl="https://s2mgt.com/solutions/email-protection"
-      />
       <Navigation />
       
       <main className="flex-1">

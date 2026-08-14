@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import cloudCasaLogo from "@/assets/cloudcasa-logo.png";
 import "@/styles/cloudcasa.css";
 
@@ -23,12 +22,6 @@ const CloudCasa = () => {
 
   return (
     <>
-      <SEOHead
-        title="CloudCasa - Kubernetes Data Protection & Migration | S2 Management"
-        description="Enterprise-grade Kubernetes backup and disaster recovery with CloudCasa. Secure, scalable protection for containers and VMs across multi-cloud and hybrid infrastructures."
-        keywords="CloudCasa, Kubernetes backup, Kubernetes disaster recovery, container backup, multi-cloud backup, Kubernetes migration, CNCF, OpenShift, Rancher, Tanzu"
-      />
-      
       <Navigation />
       
       <div className="cloudcasa-page">

@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -44,12 +43,6 @@ export default function ServerMigrationOrchestration() {
     threshold: 0.3
   });
   return <div className="min-h-screen flex flex-col">
-      <SEOHead 
-        title="TDS TransitionManager Migration Orchestration | MENA" 
-        description="S2 Management delivers TDS TransitionManager in MENA, enabling automated migration orchestration with runbooks, dependency mapping & workflow automation" 
-        keywords="TDS TransitionManager MENA, migration orchestration UAE, automated server migration Saudi Arabia, migration workflow Qatar, workload transition Kuwait, dependency mapping Bahrain, migration automation Gulf, BC/DR orchestration Middle East, server migration MENA, infrastructure migration UAE, orchestrated cutover Saudi Arabia, cloud migration Qatar, migration runbooks Kuwait, data center transition Bahrain, enterprise migration automation Gulf" 
-        canonicalUrl="https://s2mgt.com/solutions/server-migration-orchestration" 
-      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
@@ -10,12 +9,6 @@ export default function SecurityAwareness() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Security Awareness Training | Human Firewall Development MENA"
-        description="Comprehensive security awareness training programs for MENA enterprises. Phishing simulations, interactive training, and human risk management solutions."
-        keywords="security awareness training MENA, cybersecurity training UAE, phishing simulation Middle East, security education Saudi Arabia"
-        canonicalUrl="https://s2mgt.com/solutions/security-awareness"
-      />
       <Navigation />
       
       <main className="flex-1">

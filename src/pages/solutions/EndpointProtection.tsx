@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -183,12 +182,6 @@ export default function EndpointProtection() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Endpoint Protection with EDR Solutions | Advanced Security for MENA Enterprises"
-        description="Comprehensive endpoint protection with EDR functionality for MENA region. Real-time threat detection, automated remediation, and cloud-based management for enterprise endpoints."
-        keywords="endpoint protection EDR MENA, endpoint security UAE, cybersecurity Middle East, threat protection Saudi Arabia, automated remediation"
-        canonicalUrl="https://s2mgt.com/solutions/endpoint-protection"
-      />
       <Navigation />
       
       <main className="flex-1">

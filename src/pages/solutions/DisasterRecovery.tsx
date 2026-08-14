@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -81,7 +80,6 @@ export default function DisasterRecovery() {
     threshold: 0.2
   });
   return <div className="min-h-screen flex flex-col">
-      <SEOHead title="OpenText (Carbonite) Distributor MENA | UAE, KSA, Qatar" description="S2 Management Official MENA distributor of OpenText Carbonite Availability. Real-time replication, automated failover & 24/7 protection." keywords="Carbonite MENA, OpenText Availability, Carbonite distributor UAE, Carbonite distributor Saudi Arabia, Carbonite Qatar, Carbonite Oman, Carbonite Bahrain, Carbonite Kuwait, disaster recovery MENA, business continuity UAE, real-time replication, automated failover, enterprise data protection, RPO RTO solutions, OpenText partner Middle East" canonicalUrl="https://s2mgt.com/solutions/opentext-carbonite-availability" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
@@ -90,12 +89,6 @@ export default function RiverMeadowPage() {
 
   return (
     <>
-      <SEOHead
-        title="RiverMeadow Workload Mobility Platform | S2 Management"
-        description="Automated workload migration platform enabling fast, secure movement of Windows and Linux servers to any cloud environment with minimal downtime."
-        keywords="RiverMeadow partner, cloud migration, workload mobility, OS modernization, automated migration, disaster recovery"
-        canonicalUrl="https://s2mgt.com/vendors/rivermeadow"
-      />
       <div className="min-h-screen bg-background">
         <Navigation />
         <main>

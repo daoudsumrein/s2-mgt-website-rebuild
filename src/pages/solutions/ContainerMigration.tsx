@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import SEOHead from '@/components/SEOHead';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Container, Database, Cloud, Shield, Sliders, Package } from 'lucide-react';
@@ -39,11 +38,6 @@ const ContainerMigration = () => {
 
   return (
     <>
-      <SEOHead
-        title="Container Migration - Kubernetes & OpenShift Migration | S2 Technologies"
-        description="Effortless Kubernetes and OpenShift migration with CloudCasa. Secure, scalable, and cloud-native migration across clusters, clouds, and environments with zero vendor lock-in."
-        keywords="kubernetes migration, openshift migration, container migration, cloudcasa, cluster migration, multi-cloud migration"
-      />
       <div className="min-h-screen bg-background">
         <Navigation />
 

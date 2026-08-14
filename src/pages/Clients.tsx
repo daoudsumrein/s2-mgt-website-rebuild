@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import ClientCarousel from "@/components/ClientCarousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
@@ -12,7 +11,6 @@ export default function Clients() {
 
   return (
     <>
-      <SEOHead title="Our Clients - S2 Management Solutions" description="Discover the diverse range of clients we serve across healthcare, finance, education, and manufacturing sectors with our data protection and cybersecurity solutions." keywords="S2 clients, cybersecurity clients, data protection customers, IT solutions clients" />
       <div className="min-h-screen bg-background">
         <Navigation />
         

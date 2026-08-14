@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -147,12 +146,6 @@ export default function EmailArchiving() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Email Archiving Solutions MENA - Compliance & Data Retention | S2 Solutions"
-        description="Professional email archiving solutions for MENA enterprises. Complete email archiving with compliance features, data retention policies, and secure storage. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="email archiving MENA, email compliance UAE, data retention Middle East, email storage Saudi Arabia, archiving solutions, compliance archiving"
-        canonicalUrl="https://s2mgt.com/solutions/email-archiving"
-      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

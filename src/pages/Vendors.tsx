@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -118,12 +117,6 @@ export default function Vendors() {
 
   return (
     <>
-      <SEOHead 
-        title="Technology Vendors & Partners | S2 Management Solutions"
-        description="Explore S2's strategic technology partnerships with OpenText, TDS, AppCURE, NAKIVO, and Arrosoft. Expert solutions for data protection and cybersecurity."
-        keywords="S2 vendors, OpenText partner, TDS distributor, AppCURE reseller, NAKIVO solutions, Arrosoft backup, technology partners MENA"
-        canonicalUrl="https://s2mgt.com/vendors"
-      />
       <div className="min-h-screen bg-white">
         <Navigation />
       <main>

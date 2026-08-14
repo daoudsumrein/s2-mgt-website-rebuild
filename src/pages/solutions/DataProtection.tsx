@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -92,12 +91,6 @@ const idealFor = [
 export default function DataProtection() {
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Data Protection & Backup Solutions MENA - Enterprise Data Security | S2 Solutions"
-        description="Comprehensive data protection and backup solutions for MENA enterprises. Carbonite partner offering endpoint, server, cloud-to-cloud backup with advanced cybersecurity features across UAE and Middle East."
-        keywords="data protection MENA, backup solutions UAE, Carbonite backup Middle East, endpoint backup Saudi Arabia, cloud backup solutions, data security MENA, enterprise backup, ransomware protection"
-        canonicalUrl="https://s2mgt.com/solutions/data-protection"
-      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

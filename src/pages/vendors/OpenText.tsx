@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -55,13 +54,6 @@ export default function OpenTextPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Official OpenText Distributor in Middle East, GCC & Africa"
-        description="Official OpenText distributor for the Middle East, GCC & Africa. We specialise in secure cloud, business continuity, and seamless migrations with expert regional support."
-        keywords="official opentext distributor mena, opentext partner saudi arabia uae, opentext cybersecurity solutions gcc, opentext distributor middle east, opentext enterprise solutions mena region"
-        canonicalUrl="https://s2mgt.com/vendors/opentext"
-        ogImage="https://s2mgt.com/assets/opentext-og.png"
-      />
       <Navigation />
       <main>
         {/* Hero Section */}

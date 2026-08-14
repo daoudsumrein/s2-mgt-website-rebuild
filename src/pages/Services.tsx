@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -153,12 +152,6 @@ export default function Services() {
 
   return (
     <>
-      <SEOHead 
-        title="IT Consultancy & Professional Services – UAE, KSA & MENA"
-        description="Consultancy-led IT services in MENA: strategy, solutions architecture, DR planning, migration, SLAs & modernization. Vendor-neutral, enterprise-focused delivery."
-        keywords="IT Consultancy Services MENA,Disaster Recovery Planning KSA,IT Migration & Modernization Solutions,Business Continuity & SLA Management MENA,IT Migration & Modernization Solutions,IT Solutions Architecture UAE"
-      />
-      
       <div className="min-h-screen bg-background">
         <Navigation />
         <main>

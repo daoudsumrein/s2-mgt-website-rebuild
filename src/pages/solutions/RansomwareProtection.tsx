@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -86,7 +85,6 @@ export default function RansomwareProtection() {
     threshold: 0.3
   });
   return <>
-      <SEOHead title="Ransomware Protection Solutions | S2 Management Solutions" description="Advanced ransomware protection with isolated backup vaults, smart monitoring, and tamper-resistant storage. Your last line of defense against cyber threats." keywords="ransomware protection, backup security, cyber resilience, data vault, immutable backups, threat detection" />
       <div className="min-h-screen flex flex-col">
         <Navigation />
         

@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, CloudUpload, Database, Shield, Workflow, Server, HardDrive, Cloud, Timer, Target, Repeat, Settings, Zap, Lock, TrendingUp, CheckSquare, DollarSign, RefreshCw, Layers, FileText, Wrench, Clock } from "lucide-react";
@@ -14,12 +13,6 @@ export default function CloudMigration() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-900">
-      <SEOHead
-        title="Cloud Migration & Modernization - Agentless Multi-Cloud Platform"
-        description="Enterprise cloud migration platform with zero agents. Migrate physical, virtual, or cloud workloads to AWS, Azure, VMware, Google Cloud with OS modernization."
-        keywords="cloud migration, agentless migration, OS modernization, multi-cloud migration, AWS migration, Azure migration"
-        canonicalUrl="https://s2mgt.com/solutions/cloud-migration"
-      />
       <Navigation />
 
       <main className="flex-1">

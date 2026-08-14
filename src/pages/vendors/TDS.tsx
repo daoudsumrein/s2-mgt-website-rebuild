@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import ContactForm from "@/components/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,13 +8,6 @@ import { ArrowRight } from "lucide-react";
 export default function TDSPage() {
   return (
     <>
-      <SEOHead
-        title="TDS TransitionManager | Official Partner UAE & KSA"
-        description="Exclusive TDS TransitionManager partner for the Middle East, including UAE, Saudi Arabia & GCC. Plan and orchestrate IT migrations with certified support, dependency mapping & automation."
-        keywords="TDS TransitionManager, TransitionManager UAE, TransitionManager Saudi Arabia, TransitionManager GCC partner, IT migration orchestration, dependency mapping software, digital transformation UAE, data center migration Saudi Arabia, IT modernization GCC"
-        canonicalUrl="https://s2mgt.com/vendors/tds"
-        ogImage="https://s2mgt.com/src/assets/transitionmanager-insight.png"
-      />
       <div className="min-h-screen bg-background">
         <Navigation />
         <main>
