@@ -250,19 +250,19 @@ export default function DROrchestration() {
               <div className="tds-grid tds-grid-auto" style={{ marginTop: "50px" }}>
                 <div className="stat-card interactive-card animate-on-scroll">
                   <span className="stat-number animated-counter" data-count="99.9">
-                    0
+                    99.9%
                   </span>
                   <p className="stat-label">System Uptime Target</p>
                 </div>
                 <div className="stat-card interactive-card animate-on-scroll">
                   <span className="stat-number animated-counter" data-count="75">
-                    0
+                    75%
                   </span>
                   <p className="stat-label">Faster Recovery Times</p>
                 </div>
                 <div className="stat-card interactive-card animate-on-scroll">
                   <span className="stat-number animated-counter" data-count="24">
-                    0
+                    24/7
                   </span>
                   <p className="stat-label">Continuous Monitoring</p>
                 </div>
@@ -578,7 +578,7 @@ export default function DROrchestration() {
                     style={{ background: "#93C14F", color: "white" }}
                   >
                     <span className="stat-number animated-counter" data-count="75" style={{ color: "white" }}>
-                      0
+                      75%
                     </span>
                     <p className="stat-label" style={{ color: "rgba(255,255,255,0.9)" }}>
                       Reduction in Time
@@ -589,7 +589,7 @@ export default function DROrchestration() {
                     style={{ background: "#93C14F", color: "white" }}
                   >
                     <span className="stat-number animated-counter" data-count="98" style={{ color: "white" }}>
-                      0
+                      98%
                     </span>
                     <p className="stat-label" style={{ color: "rgba(255,255,255,0.9)" }}>
                       Fewer Manual Errors
@@ -622,7 +622,7 @@ export default function DROrchestration() {
                     style={{ background: "#93C14F", color: "white" }}
                   >
                     <span className="stat-number animated-counter" data-count="50" style={{ color: "white" }}>
-                      0
+                      50%
                     </span>
                     <p className="stat-label" style={{ color: "rgba(255,255,255,0.9)" }}>
                       Reduction in Planning
