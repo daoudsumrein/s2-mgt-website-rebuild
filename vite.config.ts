@@ -63,7 +63,7 @@ export default defineConfig({
       { path: "/404", prerender: { enabled: true, outputPath: "/404.html" } },
     ],
   },
-  nitro: { preset: "static" },
+  nitro: false,
   vite: {
     plugins: [mcpPlugin()],
   },
