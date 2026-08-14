@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Link } from '@/lib/router-compat';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -9,32 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Container, Database, Cloud, Shield, Sliders, Package } from 'lucide-react';
 
 const ContainerMigration = () => {
-  const observerRef = useRef<IntersectionObserver | null>(null);
   const heroAnimation = useScrollAnimation({ threshold: 0.3 });
-
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    observerRef.current = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-          entry.target.classList.remove('opacity-0', 'translate-y-5');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in-section').forEach(el => {
-      observerRef.current?.observe(el);
-    });
-
-    return () => {
-      observerRef.current?.disconnect();
-    };
-  }, []);
 
   return (
     <>
@@ -133,7 +107,7 @@ const ContainerMigration = () => {
         {/* Introduction Section */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center fade-in-section opacity-0 translate-y-5 transition-all duration-700">
+            <div className="max-w-4xl mx-auto text-center transition-all duration-700">
               <p className="text-lg text-muted-foreground mb-5 leading-relaxed">
                 Modern enterprises are increasingly adopting multi-cloud strategies and hybrid environments to optimize costs, improve resilience, and avoid vendor lock-in. However, <span className="text-[#DB268C] font-semibold">migrating Kubernetes workloads across different platforms remains one of the most challenging tasks</span> for DevOps and platform engineering teams.
               </p>
@@ -147,7 +121,7 @@ const ContainerMigration = () => {
         {/* Migration Capabilities */}
         <section className="py-24 bg-background">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16 fade-in-section opacity-0 translate-y-5 transition-all duration-700">
+            <div className="text-center mb-16 transition-all duration-700">
               <h2 className="text-4xl font-bold text-foreground mb-4">Migration Capabilities</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 CloudCasa provides comprehensive migration capabilities designed to handle the most complex Kubernetes workload migrations with minimal downtime and maximum reliability
@@ -193,7 +167,7 @@ const ContainerMigration = () => {
                   features: ["Namespace-level migration", "Resource filtering and selection", "Custom transformations", "Pre and post-migration hooks"]
                 }
               ].map((capability, index) => (
-                <div key={index} className="fade-in-section opacity-0 translate-y-5 transition-all duration-700 p-8 bg-muted/30 rounded-xl border border-border hover:border-[#DB268C] hover:shadow-lg hover:-translate-y-1 transition-all">
+                <div key={index} className="transition-all duration-700 p-8 bg-muted/30 rounded-xl border border-border hover:border-[#DB268C] hover:shadow-lg hover:-translate-y-1 transition-all">
                   <div className="w-14 h-14 bg-gradient-to-br from-[#DB268C] to-[#c11e7a] rounded-xl flex items-center justify-center text-white mb-6 transition-transform hover:scale-110">
                     {capability.icon}
                   </div>
@@ -215,7 +189,7 @@ const ContainerMigration = () => {
         {/* Benefits Section */}
         <section className="py-24 bg-gradient-to-b from-muted/20 to-pink-50/30">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16 fade-in-section opacity-0 translate-y-5 transition-all duration-700">
+            <div className="text-center mb-16 transition-all duration-700">
               <h2 className="text-4xl font-bold text-foreground mb-4">Key Benefits</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 CloudCasa's Kubernetes migration solution delivers measurable business value and operational efficiency
@@ -229,7 +203,7 @@ const ContainerMigration = () => {
                 { number: "100%", title: "Data Integrity", description: "Ensure complete data integrity with automated validation checks, consistency verification, and immutable backup copies." },
                 { number: "Multi", title: "Cloud Flexibility", description: "Enjoy true multi-cloud freedom with the ability to migrate workloads across any Kubernetes platform without vendor lock-in." }
               ].map((benefit, index) => (
-                <div key={index} className="fade-in-section opacity-0 translate-y-5 transition-all duration-700 bg-background p-8 rounded-xl shadow-md border-l-4 border-[#DB268C] hover:shadow-xl hover:-translate-y-1 transition-all">
+                <div key={index} className="transition-all duration-700 bg-background p-8 rounded-xl shadow-md border-l-4 border-[#DB268C] hover:shadow-xl hover:-translate-y-1 transition-all">
                   <div className="text-5xl font-bold text-[#DB268C] mb-3">{benefit.number}</div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">{benefit.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
@@ -242,7 +216,7 @@ const ContainerMigration = () => {
         {/* Timeline Section */}
         <section className="py-24 bg-background">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16 fade-in-section opacity-0 translate-y-5 transition-all duration-700">
+            <div className="text-center mb-16 transition-all duration-700">
               <h2 className="text-4xl font-bold text-foreground mb-4">How It Works</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
                 CloudCasa's migration process is designed for simplicity and efficiency, guiding you through each step with automated workflows and intelligent defaults
@@ -274,7 +248,7 @@ const ContainerMigration = () => {
                     steps: ["Resource verification", "Application health checks", "Performance validation", "Final cutover execution", "Post-migration optimization"]
                   }
                 ].map((step, index) => (
-                  <div key={index} className="fade-in-section opacity-0 translate-y-5 transition-all duration-700 text-center relative">
+                  <div key={index} className="transition-all duration-700 text-center relative">
                     <div className="w-16 h-16 bg-gradient-to-br from-[#DB268C] to-[#c11e7a] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg relative z-10">
                       {step.number}
                     </div>
@@ -300,7 +274,7 @@ const ContainerMigration = () => {
         {/* Use Cases Section */}
         <section className="py-24 bg-gradient-to-b from-muted/20 to-pink-50/30">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16 fade-in-section opacity-0 translate-y-5 transition-all duration-700">
+            <div className="text-center mb-16 transition-all duration-700">
               <h2 className="text-4xl font-bold text-foreground mb-4">Common Use Cases</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 CloudCasa supports a wide range of Kubernetes migration scenarios across different industries and use cases
@@ -334,7 +308,7 @@ const ContainerMigration = () => {
                   example: "Example: Creating staging environments that mirror production for comprehensive testing before deploying new features to production clusters."
                 }
               ].map((useCase, index) => (
-                <div key={index} className="fade-in-section opacity-0 translate-y-5 transition-all duration-700 bg-background p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
+                <div key={index} className="transition-all duration-700 bg-background p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
                   <div className="text-5xl mb-5">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">{useCase.title}</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">{useCase.description}</p>
@@ -350,7 +324,7 @@ const ContainerMigration = () => {
         {/* Supported Platforms */}
         <section className="py-24 bg-background">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16 fade-in-section opacity-0 translate-y-5 transition-all duration-700">
+            <div className="text-center mb-16 transition-all duration-700">
               <h2 className="text-4xl font-bold text-foreground mb-4">Supported Platforms</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
                 CloudCasa works seamlessly across all major Kubernetes distributions and cloud providers
@@ -369,7 +343,7 @@ const ContainerMigration = () => {
                 { icon: <i className="fab fa-google text-5xl" />, name: "Google GKE", desc: "Managed Kubernetes on GCP" },
                 { icon: <i className="fas fa-server text-5xl" />, name: "On-Premises", desc: "Self-hosted & private cloud" }
               ].map((platform, index) => (
-                <div key={index} className="fade-in-section opacity-0 translate-y-5 transition-all duration-700 flex flex-col items-center justify-center p-8 bg-muted/30 rounded-xl border-2 border-border hover:border-[#DB268C] hover:shadow-lg hover:-translate-y-1 transition-all min-h-[180px]">
+                <div key={index} className="transition-all duration-700 flex flex-col items-center justify-center p-8 bg-muted/30 rounded-xl border-2 border-border hover:border-[#DB268C] hover:shadow-lg hover:-translate-y-1 transition-all min-h-[180px]">
                   <div className="text-[#DB268C] mb-4 hover:scale-110 transition-transform">
                     {platform.icon}
                   </div>
@@ -385,7 +359,7 @@ const ContainerMigration = () => {
         <section className="py-24 bg-gradient-to-br from-[#0B163F] to-[#DB268C] text-white">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16 fade-in-section opacity-0 translate-y-5 transition-all duration-700">
+              <div className="text-center mb-16 transition-all duration-700">
                 <h2 className="text-4xl font-bold mb-4 text-white">Why CloudCasa?</h2>
                 <p className="text-lg opacity-95">
                   CloudCasa is trusted by enterprises worldwide for mission-critical Kubernetes migrations
@@ -399,7 +373,7 @@ const ContainerMigration = () => {
                   { icon: <i className="fas fa-rocket text-2xl" />, title: "Easy to Use", description: "Intuitive wizard-based interface with smart defaults and automated workflows makes complex migrations accessible to teams of all skill levels." },
                   { icon: <i className="fas fa-headset text-2xl" />, title: "Expert Support", description: "Access to experienced technical support team, comprehensive documentation, and professional services for complex migration projects." }
                 ].map((item, index) => (
-                  <div key={index} className="fade-in-section opacity-0 translate-y-5 transition-all duration-700 bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20">
+                  <div key={index} className="transition-all duration-700 bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20">
                     <h3 className="text-xl font-semibold mb-3 flex items-center gap-3">
                       {item.icon} {item.title}
                     </h3>

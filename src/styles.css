@@ -504,3 +504,28 @@
 @keyframes particle15 {
   100% { transform: translate3d(16vw, 31vh, 36px); }
 }
+/* OpenText Server Backup page — glassmorphism cards (moved out of runtime injection) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark-card {
+  background: rgba(26, 106, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(26, 106, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px 0 rgba(26, 106, 255, 0.15);
+}
+
+@keyframes ot-server-backup-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.ot-server-backup-float {
+  animation: ot-server-backup-float 3s ease-in-out infinite;
+}

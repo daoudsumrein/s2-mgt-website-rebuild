@@ -16,7 +16,7 @@ export default function TypewriterText({
   delayBetweenTexts = 2000
 }: TypewriterTextProps) {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState(() => texts[0] ?? '');
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
