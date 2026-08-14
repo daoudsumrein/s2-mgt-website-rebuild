@@ -19,7 +19,6 @@ const Index = () => {
   
   return (
     <div className="min-h-screen bg-background">
-      <LocalBusinessSchema />
       <motion.div
         ref={navigationRef}
         initial={{ opacity: 0, y: -20 }}
