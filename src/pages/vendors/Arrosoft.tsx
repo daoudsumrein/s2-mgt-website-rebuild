@@ -28,20 +28,14 @@ const Arrosoft = () => {
         }} />
           
           {/* Content */}
-          <motion.div className="relative z-30 max-w-2xl text-white ml-4 md:ml-10 mr-auto text-center md:text-left" initial={{
-          opacity: 0,
-          y: 30
-        }} animate={{
+          <motion.div className="relative z-30 max-w-2xl text-white ml-4 md:ml-10 mr-auto text-center md:text-left" animate={{
           opacity: 1,
           y: 0
         }} transition={{
           duration: 0.8,
           ease: "easeOut"
         }}>
-            <motion.h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-6 tracking-tight" initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
+            <motion.h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight mb-6 tracking-tight" animate={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -52,10 +46,7 @@ const Arrosoft = () => {
               Redefining the standard in data security for your clients
             </motion.h1>
             
-            <motion.p className="text-base md:text-lg lg:text-xl leading-relaxed mb-10 text-white/80 max-w-lg mx-auto md:mx-0" initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
+            <motion.p className="text-base md:text-lg lg:text-xl leading-relaxed mb-10 text-white/80 max-w-lg mx-auto md:mx-0" animate={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -66,10 +57,7 @@ const Arrosoft = () => {
               Partnering with you to deliver excellent data protection solutions and services.
             </motion.p>
             
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
+            <motion.div animate={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -99,10 +87,7 @@ const Arrosoft = () => {
         {/* Partner Carousel Section */}
         <section className="py-20 bg-black text-white relative overflow-hidden">
           <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
-            <motion.h2 className="text-2xl md:text-4xl font-light mb-16 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent leading-tight" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.h2 className="text-2xl md:text-4xl font-light mb-16 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent leading-tight" whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -113,9 +98,7 @@ const Arrosoft = () => {
               Empowering 100+ global partners with data protection solutions
             </motion.h2>
             
-            <motion.div className="mb-10 overflow-hidden partner-carousel-mask" initial={{
-            opacity: 0
-          }} whileInView={{
+            <motion.div className="mb-10 overflow-hidden partner-carousel-mask" whileInView={{
             opacity: 1
           }} transition={{
             duration: 0.8,
@@ -248,7 +231,6 @@ const Arrosoft = () => {
             {/* Content 1: Protect Data */}
             <div className={`max-w-4xl ${activeSection === 'protect-data' ? 'block' : 'hidden'}`}>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
@@ -272,7 +254,6 @@ const Arrosoft = () => {
             {/* Content 2: Recover Businesses */}
             <div className={`max-w-4xl ${activeSection === 'recover-businesses' ? 'block' : 'hidden'}`}>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
@@ -296,7 +277,6 @@ const Arrosoft = () => {
             {/* Content 3: Empower Partners (Default Active) */}
             <div className={`max-w-4xl ${activeSection === 'empower-partners' ? 'block' : 'hidden'}`}>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
@@ -322,10 +302,7 @@ const Arrosoft = () => {
         {/* Contact Section */}
         <section id="contact" className="py-16 md:py-20 bg-muted/50">
           <div className="container mx-auto px-4 text-center">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{

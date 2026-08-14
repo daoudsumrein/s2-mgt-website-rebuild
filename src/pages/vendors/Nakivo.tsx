@@ -46,13 +46,11 @@ export default function NakivoPage() {
               {/* Content Section */}
               <motion.div 
                 className="text-white lg:pr-8"
-                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <motion.h1 
                   className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
@@ -62,7 +60,6 @@ export default function NakivoPage() {
 
                 <motion.p 
                   className="text-lg lg:text-xl leading-relaxed mb-8 text-white/95 max-w-2xl"
-                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 >
@@ -72,7 +69,6 @@ export default function NakivoPage() {
 
                 <motion.ul 
                   className="space-y-4 mb-10"
-                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                 >
@@ -87,7 +83,6 @@ export default function NakivoPage() {
                 </motion.ul>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
                 >
@@ -107,7 +102,6 @@ export default function NakivoPage() {
               {/* Video Section */}
               <motion.div 
                 className="lg:pl-8"
-                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               >
@@ -141,7 +135,6 @@ export default function NakivoPage() {
           <div className="container mx-auto px-4 max-w-8xl">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -192,7 +185,6 @@ export default function NakivoPage() {
                 <motion.div
                   key={index}
                   className="group bg-card border border-border rounded-2xl p-12 text-left shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -237,7 +229,6 @@ export default function NakivoPage() {
         <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
