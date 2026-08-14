@@ -695,7 +695,6 @@ export default function EmailProtection() {
           </div>
         </section>
       
-      <Footer />
       </main>
       
       <Footer />

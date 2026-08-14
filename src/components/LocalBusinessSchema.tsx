@@ -35,11 +35,6 @@ export default function LocalBusinessSchema() {
         "opens": "08:00",
         "closes": "18:00"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "127"
-      },
       "areaServed": [
         {
           "@type": "Country",
