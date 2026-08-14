@@ -9,7 +9,6 @@ const OurLocationSection = () => {
       {/* Background overlay for better text readability */}
       <motion.div 
         className="absolute inset-0 bg-black/20 backdrop-blur-[1px]"
-        initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       ></motion.div>
@@ -17,7 +16,6 @@ const OurLocationSection = () => {
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-5 md:px-6 overflow-x-hidden">
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center w-full max-w-full"
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
@@ -25,7 +23,6 @@ const OurLocationSection = () => {
           {/* Content Section */}
           <motion.div 
             className="order-2 lg:order-1 text-center lg:text-left bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/20 shadow-2xl"
-            initial={{ opacity: 0, x: -50, scale: 0.9 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ 
               duration: 0.8, 
@@ -40,7 +37,6 @@ const OurLocationSection = () => {
           >
             <motion.h2 
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-5 md:mb-6 lg:mb-7 leading-tight text-white"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
@@ -58,7 +54,6 @@ const OurLocationSection = () => {
             </h3>
             <motion.p 
               className="text-sm sm:text-base md:text-lg leading-relaxed text-white/90"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
@@ -70,7 +65,6 @@ const OurLocationSection = () => {
           {/* Map Section */}
           <motion.div 
             className="order-1 lg:order-2 relative rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden shadow-2xl"
-            initial={{ opacity: 0, x: 50, rotateY: -15 }}
             whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ 
               duration: 0.8, 

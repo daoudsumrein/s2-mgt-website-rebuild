@@ -76,7 +76,6 @@ const TechForwardSection = () => {
         {/* Services Grid */}
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
@@ -85,7 +84,6 @@ const TechForwardSection = () => {
             <motion.div
               key={category.title}
               className="group relative bg-gradient-to-br from-white/90 via-white/80 to-cyan-50/60 backdrop-blur-xs border border-[#2392CF]/20 rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-500 hover:bg-gradient-to-br hover:from-[#2392CF]/5 hover:via-teal-50/80 hover:to-purple-50/40 hover:border-[#2392CF]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(35,146,207,0.15),0_0_20px_rgba(20,184,166,0.1)] overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}

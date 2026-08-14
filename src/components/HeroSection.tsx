@@ -62,7 +62,6 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 w-full px-8 sm:px-12 lg:px-16 xl:px-20 -mt-32 sm:-mt-16 md:mt-0">
         <motion.div 
-          initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl"
@@ -81,7 +80,6 @@ export default function HeroSection() {
           
           {/* Visible H2 with Typewriter Effect */}
           <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 tracking-tight"
@@ -101,7 +99,6 @@ export default function HeroSection() {
           </motion.h2>
           
           <motion.p 
-            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-white/90 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 font-normal"
@@ -110,7 +107,6 @@ export default function HeroSection() {
           </motion.p>
           
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
@@ -127,7 +123,6 @@ export default function HeroSection() {
           
           {/* Trusted by enterprises section */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mt-8 sm:mt-12 lg:mt-16 bg-white/10 backdrop-blur-xs rounded-lg sm:rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20"
