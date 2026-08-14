@@ -126,7 +126,6 @@ export default function EmailProtection() {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
@@ -211,7 +210,6 @@ export default function EmailProtection() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div 
               className="text-center mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -227,7 +225,6 @@ export default function EmailProtection() {
             {/* Challenge Section */}
             <motion.div 
               className="backdrop-blur-lg bg-red-500/10 border border-red-200/30 rounded-2xl p-8 mb-20 shadow-xl"
-              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               whileHover={{ y: -10, scale: 1.02 }}
@@ -272,7 +269,6 @@ export default function EmailProtection() {
             {/* Core Protection Features */}
             <motion.div 
               className="mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
@@ -280,7 +276,6 @@ export default function EmailProtection() {
               <div className="grid md:grid-cols-2 gap-8">
                 <motion.div
                   className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -296,7 +291,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -312,7 +306,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -328,7 +321,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -347,7 +339,6 @@ export default function EmailProtection() {
             {/* How It Works */}
             <motion.div 
               className="mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -369,7 +360,6 @@ export default function EmailProtection() {
             {/* Differentiators */}
             <motion.div 
               className="mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -377,7 +367,6 @@ export default function EmailProtection() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <motion.div
                   className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg text-center"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -392,7 +381,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg text-center"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -407,7 +395,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg text-center"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -422,7 +409,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg text-center"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                   whileHover={{ y: -10, scale: 1.02 }}
@@ -440,7 +426,6 @@ export default function EmailProtection() {
             {/* Key Benefits */}
             <motion.div 
               className="mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -448,7 +433,6 @@ export default function EmailProtection() {
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <motion.div
                   className="flex items-start gap-4 backdrop-blur-lg bg-white/25 border border-white/25 rounded-lg p-6"
-                  initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   whileHover={{ x: 10 }}
@@ -464,7 +448,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="flex items-start gap-4 backdrop-blur-lg bg-white/25 border border-white/25 rounded-lg p-6"
-                  initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   whileHover={{ x: -10 }}
@@ -480,7 +463,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="flex items-start gap-4 backdrop-blur-lg bg-white/25 border border-white/25 rounded-lg p-6"
-                  initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   whileHover={{ x: 10 }}
@@ -496,7 +478,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="flex items-start gap-4 backdrop-blur-lg bg-white/25 border border-white/25 rounded-lg p-6"
-                  initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                   whileHover={{ x: -10 }}
@@ -515,7 +496,6 @@ export default function EmailProtection() {
             {/* Implementation Features */}
             <motion.div 
               className="mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -523,7 +503,6 @@ export default function EmailProtection() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <motion.div
                   className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-xl p-6 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   whileHover={{ scale: 1.03, y: -5 }}
@@ -539,7 +518,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-xl p-6 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   whileHover={{ scale: 1.03, y: -5 }}
@@ -555,7 +533,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-xl p-6 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   whileHover={{ scale: 1.03, y: -5 }}
@@ -571,7 +548,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-xl p-6 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                   whileHover={{ scale: 1.03, y: -5 }}
@@ -587,7 +563,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-xl p-6 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.7 }}
                   whileHover={{ scale: 1.03, y: -5 }}
@@ -603,7 +578,6 @@ export default function EmailProtection() {
 
                 <motion.div
                   className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-xl p-6 shadow-lg"
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 }}
                   whileHover={{ scale: 1.03, y: -5 }}
@@ -622,7 +596,6 @@ export default function EmailProtection() {
             {/* Cyber Resilience */}
             <motion.div 
               className="backdrop-blur-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200/30 rounded-2xl p-12 shadow-xl text-center"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >

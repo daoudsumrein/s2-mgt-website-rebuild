@@ -133,8 +133,7 @@ export default function RansomwareProtection() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <motion.div 
                 ref={heroAnimation.ref}
-                initial={{ opacity: 0, y: 50 }}
-                animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="max-w-7xl mx-auto"
               >
@@ -226,7 +225,6 @@ export default function RansomwareProtection() {
 
           {/* Problem Statement */}
           <motion.section 
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -234,7 +232,6 @@ export default function RansomwareProtection() {
           >
             <div className="container mx-auto px-4">
               <motion.div 
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
@@ -262,7 +259,6 @@ export default function RansomwareProtection() {
 
           {/* Solution Overview */}
           <motion.section 
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -271,7 +267,6 @@ export default function RansomwareProtection() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
@@ -316,7 +311,6 @@ export default function RansomwareProtection() {
                   ].map((pillar, index) => (
                     <motion.div 
                       key={index}
-                      initial={{ opacity: 0, y: 50, scale: 0.9 }}
                       whileInView={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                       whileHover={{ 
@@ -355,7 +349,6 @@ export default function RansomwareProtection() {
 
           {/* Architecture Diagram */}
           <motion.section 
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -364,7 +357,6 @@ export default function RansomwareProtection() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <motion.h3 
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
@@ -373,7 +365,6 @@ export default function RansomwareProtection() {
                   Example Architecture
                 </motion.h3>
                 <motion.div 
-                  initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   whileHover={{ scale: 1.02, y: -5 }}
@@ -388,7 +379,6 @@ export default function RansomwareProtection() {
 
           {/* Technical Details */}
           <motion.section 
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -397,7 +387,6 @@ export default function RansomwareProtection() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
@@ -431,7 +420,6 @@ export default function RansomwareProtection() {
 
           {/* CTA Section */}
           <motion.section 
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -440,7 +428,6 @@ export default function RansomwareProtection() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <motion.h2 
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
@@ -449,7 +436,6 @@ export default function RansomwareProtection() {
                   Contact us today to find out how Arrosoft AirGap can be your last line of defense against ransomware attacks.
                 </motion.h2>
                 <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}

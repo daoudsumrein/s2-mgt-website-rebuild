@@ -91,7 +91,6 @@ export default function EmailEncryption() {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
@@ -177,7 +176,6 @@ export default function EmailEncryption() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div 
               className="text-center mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -193,7 +191,6 @@ export default function EmailEncryption() {
             {/* Remote Work Challenge */}
             <motion.div 
               className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-2xl p-8 mb-20 shadow-xl"
-              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               whileHover={{ y: -10, scale: 1.02 }}
@@ -226,7 +223,6 @@ export default function EmailEncryption() {
             {/* Key Features Grid */}
             <motion.div 
               className="mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
@@ -267,7 +263,6 @@ export default function EmailEncryption() {
                   <motion.div
                     key={index}
                     className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-6 shadow-lg"
-                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     whileHover={{ y: -10, scale: 1.02 }}
@@ -287,7 +282,6 @@ export default function EmailEncryption() {
             {/* Delivery Options */}
             <motion.div 
               className="mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -316,7 +310,6 @@ export default function EmailEncryption() {
                   <motion.div
                     key={index}
                     className="backdrop-blur-lg bg-white/25 border border-white/25 rounded-xl p-8 shadow-lg text-center"
-                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     whileHover={{ y: -10, scale: 1.02 }}
@@ -334,7 +327,6 @@ export default function EmailEncryption() {
             {/* Trust Indicators */}
             <motion.div 
               className="backdrop-blur-lg bg-white/20 border border-white/20 rounded-2xl p-8 mb-20 shadow-xl"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -349,7 +341,6 @@ export default function EmailEncryption() {
                   <motion.div
                     key={index}
                     className="text-center"
-                    initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   >
@@ -370,7 +361,6 @@ export default function EmailEncryption() {
             {/* Business Benefits */}
             <motion.div 
               className="mb-20"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -385,7 +375,6 @@ export default function EmailEncryption() {
                   <motion.div
                     key={index}
                     className="flex items-start gap-4 backdrop-blur-lg bg-white/25 border border-white/25 rounded-lg p-6"
-                    initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     whileHover={{ x: 10 }}
@@ -399,7 +388,6 @@ export default function EmailEncryption() {
 
             {/* Case Studies */}
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -428,7 +416,6 @@ export default function EmailEncryption() {
                   <motion.div
                     key={index}
                     className="backdrop-blur-lg bg-white/30 border border-white/30 rounded-xl p-8 shadow-lg"
-                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     whileHover={{ y: -10, scale: 1.02 }}
@@ -450,7 +437,6 @@ export default function EmailEncryption() {
             {/* Regulatory Compliance */}
             <motion.div 
               className="mt-20 text-center backdrop-blur-lg bg-white/20 border border-white/20 rounded-2xl p-12 shadow-xl"
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
