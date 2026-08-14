@@ -111,7 +111,7 @@ export default function Solutions() {
     speed: number,
     direction: number
   }>>([]);
-  const { ref: solutionsRef, isInView: solutionsInView } = useScrollAnimation();
+  const { ref: solutionsRef } = useScrollAnimation();
 
   useEffect(() => {
     // Detect performance preference and adjust particle count accordingly
@@ -342,8 +342,7 @@ export default function Solutions() {
         {/* Solution Categories Grid */}
         <motion.section 
           ref={solutionsRef}
-          initial={{ opacity: 0, y: 30 }}
-          animate={solutionsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           id="solutions-grid" 
           className="py-12 md:py-20 bg-muted/50"

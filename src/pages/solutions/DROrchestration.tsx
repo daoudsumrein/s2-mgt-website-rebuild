@@ -155,8 +155,7 @@ export default function DROrchestration() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               ref={heroAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
             >
