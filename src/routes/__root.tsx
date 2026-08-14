@@ -24,7 +24,7 @@ const organizationJsonLd = JSON.stringify({
   name: "S2 Management Solutions",
   alternateName: "S2 Solutions",
   url: "https://s2mgt.com",
-  logo: "https://s2mgt.com/assets/s2-logo.png",
+  logo: "https://s2mgt.com/brand/s2-logo.png",
   description:
     "S2 Management Solutions is the official MENA distributor for OpenText, TDS, appCURE, NAKIVO, and Arrosoft. We deliver enterprise backup & replication, data protection, disaster recovery orchestration, business continuity, and IT resilience solutions.",
   foundingDate: "2013",
