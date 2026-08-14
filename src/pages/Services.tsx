@@ -194,7 +194,7 @@ export default function Services() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="mb-8 sm:mb-12 lg:mb-16 last:mb-0"
                   >
-                     <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-4 sm:p-6 lg:p-8">
+                     <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur-xs border border-primary/20 rounded-2xl p-4 sm:p-6 lg:p-8">
                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 sm:mb-8">
                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                            <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />

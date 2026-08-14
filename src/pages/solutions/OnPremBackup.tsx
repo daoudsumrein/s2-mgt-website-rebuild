@@ -51,7 +51,7 @@ export default function OnPremBackup() {
             >
               {/* Hero Container */}
               <motion.div 
-                className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden"
+                className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden"
                 whileHover={{ y: -8, scale: 1.01 }}
                 transition={{ duration: 0.3 }}
               >
@@ -178,7 +178,7 @@ export default function OnPremBackup() {
                           transition: { duration: 0.3 }
                         }}
                         viewport={{ once: true }}
-                        className="backdrop-blur-sm bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 transition-all duration-300 group cursor-pointer relative overflow-hidden"
+                        className="backdrop-blur-xs bg-primary/10 border border-primary/20 p-6 rounded-2xl hover:bg-primary/15 transition-all duration-300 group cursor-pointer relative overflow-hidden"
                       >
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         <motion.div

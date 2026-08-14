@@ -129,7 +129,7 @@ export default function AppCUREVendorPage() {
             title: "Execute",
             description: "Deliver applications to your chosen vendor/platform.",
             delay: 0.4
-          }].map((item, index) => <motion.div key={index} className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl border border-gray-200/50" initial={{
+          }].map((item, index) => <motion.div key={index} className="bg-white/90 backdrop-blur-xs p-8 rounded-3xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl border border-gray-200/50" initial={{
             opacity: 0,
             y: 30
           }} whileInView={{

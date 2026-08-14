@@ -118,7 +118,7 @@ export default function NakivoPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               >
-                <div className="bg-white rounded-xl p-6 lg:p-8 shadow-2xl backdrop-blur-sm">
+                <div className="bg-white rounded-xl p-6 lg:p-8 shadow-2xl backdrop-blur-xs">
                   <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-6">
                     NAKIVO Overview
                   </h2>

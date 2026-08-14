@@ -130,7 +130,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-8 sm:mt-12 lg:mt-16 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20"
+            className="mt-8 sm:mt-12 lg:mt-16 bg-white/10 backdrop-blur-xs rounded-lg sm:rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20"
           >
             <h3 className="text-white/90 text-center text-base sm:text-lg lg:text-xl font-medium mb-3 sm:mb-4">
               Trusted by enterprises across

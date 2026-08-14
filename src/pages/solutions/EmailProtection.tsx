@@ -139,7 +139,7 @@ export default function EmailProtection() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
                 const particles = document.querySelectorAll('.particle');
                 particles.forEach(particle => {
                   (particle as HTMLElement).style.opacity = '1';
@@ -187,7 +187,7 @@ export default function EmailProtection() {
                   {/* Right Video */}
                   <div className="order-first lg:order-last">
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      <div className="w-full h-full rounded-lg overflow-hidden bg-slate-900/50 backdrop-blur-sm border border-blue-500/20">
+                      <div className="w-full h-full rounded-lg overflow-hidden bg-slate-900/50 backdrop-blur-xs border border-blue-500/20">
                         <iframe
                           src="https://player.vimeo.com/video/779421319?badge=0&autopause=0&player_id=0&app_id=58479"
                           className="w-full h-full object-cover"

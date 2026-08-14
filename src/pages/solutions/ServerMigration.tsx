@@ -70,7 +70,7 @@ export default function ServerMigration() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-7xl mx-auto">
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
@@ -525,7 +525,7 @@ export default function ServerMigration() {
             </div>
             
             <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
+              <Card className="bg-white/5 border-white/10 backdrop-blur-xs">
                 <CardContent className="p-4 sm:p-6">
                   <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Key Features</h3>
                   <ul className="space-y-2 sm:space-y-3">
@@ -541,7 +541,7 @@ export default function ServerMigration() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
+              <Card className="bg-white/5 border-white/10 backdrop-blur-xs">
                 <CardContent className="p-4 sm:p-6">
                   <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Business Benefits</h3>
                   <ul className="space-y-2 sm:space-y-3">
@@ -574,7 +574,7 @@ export default function ServerMigration() {
             
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center max-w-7xl mx-auto">
               <div>
-                <div className="bg-white/10 border-2 border-white/20 rounded-lg sm:rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
+                <div className="bg-white/10 border-2 border-white/20 rounded-lg sm:rounded-2xl p-6 sm:p-8 backdrop-blur-xs">
                   <div className="flex items-center mb-4 sm:mb-6">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
                       <span className="text-white font-bold text-lg sm:text-2xl">✓</span>
@@ -614,7 +614,7 @@ export default function ServerMigration() {
               </div>
             </div>
             
-            <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg sm:rounded-2xl p-6 sm:p-8 mt-8 sm:mt-12 text-center backdrop-blur-sm">
+            <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg sm:rounded-2xl p-6 sm:p-8 mt-8 sm:mt-12 text-center backdrop-blur-xs">
               <h3 className="text-lg sm:text-2xl font-bold text-amber-400 mb-3 sm:mb-4">⚠️ Avoid Unauthorized Resellers</h3>
               <p className="text-sm sm:text-base text-white/90 mb-4 sm:mb-6 max-w-4xl mx-auto">
                 Ensure your migration projects are protected with genuine OpenText Migrate licenses. 

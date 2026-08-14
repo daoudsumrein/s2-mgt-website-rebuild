@@ -201,7 +201,7 @@ const Arrosoft = () => {
               }, {
                 src: "https://www.arrosoft.com/_next/image?url=https%3A%2F%2Fold.arrosoft.com%2Fwp-content%2Fuploads%2FePlus-Technology.png&w=128&q=75&dpl=dpl_Az22Nx4AgfZkMx3AXcFv5Yhsntgr",
                 alt: "ePlus Technology"
-              }]).map((logo, index) => <div key={index} className="flex-none w-50 h-20 flex items-center justify-center mx-5 px-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
+              }]).map((logo, index) => <div key={index} className="flex-none w-50 h-20 flex items-center justify-center mx-5 px-4 bg-white/5 rounded-xl border border-white/10 backdrop-blur-xs">
                     <img src={logo.src} alt={logo.alt} className="max-w-full max-h-12 object-contain brightness-90 contrast-125" loading="lazy" />
                   </div>)}
               </div>

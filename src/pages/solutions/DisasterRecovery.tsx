@@ -116,7 +116,7 @@ export default function DisasterRecovery() {
             ease: "easeOut"
           }} className="max-w-7xl mx-auto">
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
@@ -317,7 +317,7 @@ export default function DisasterRecovery() {
                   transition: { duration: 0.3 }
                 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-xs transition-all duration-300 relative overflow-hidden group cursor-pointer"
               >
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -342,7 +342,7 @@ export default function DisasterRecovery() {
                   transition: { duration: 0.3 }
                 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-xs transition-all duration-300 relative overflow-hidden group cursor-pointer"
               >
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -367,7 +367,7 @@ export default function DisasterRecovery() {
                   transition: { duration: 0.3 }
                 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-xs transition-all duration-300 relative overflow-hidden group cursor-pointer"
               >
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -392,7 +392,7 @@ export default function DisasterRecovery() {
                   transition: { duration: 0.3 }
                 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                className="text-center p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur-xs transition-all duration-300 relative overflow-hidden group cursor-pointer"
               >
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -426,7 +426,7 @@ export default function DisasterRecovery() {
                     transition: { duration: 0.3 }
                   }}
                   viewport={{ once: true }}
-                  className="bg-white/5 border-white/10 backdrop-blur-sm rounded-xl p-6 relative overflow-hidden group cursor-pointer"
+                  className="bg-white/5 border-white/10 backdrop-blur-xs rounded-xl p-6 relative overflow-hidden group cursor-pointer"
                 >
                   {/* Background gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-slate-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

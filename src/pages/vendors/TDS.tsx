@@ -89,7 +89,7 @@ export default function TDSPage() {
             </div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 items-center">
-              <div className="lg:col-span-2 backdrop-blur-sm bg-black/20 rounded-2xl p-6 sm:p-8 border border-white/10">
+              <div className="lg:col-span-2 backdrop-blur-xs bg-black/20 rounded-2xl p-6 sm:p-8 border border-white/10">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 leading-tight text-cyan-300">
                     TransitionManager®
                   </h1>
