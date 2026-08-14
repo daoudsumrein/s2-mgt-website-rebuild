@@ -8,28 +8,20 @@ export default function AppCUREVendorPage() {
       
       <motion.section className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center p-4 md:p-8 relative" style={{
       backgroundImage: `url('https://appcure.io/wp-content/uploads/2025/07/home-page-section-1.1.jpg')`
-    }} initial={{
-      opacity: 0
     }} animate={{
       opacity: 1
     }} transition={{
       duration: 0.8
     }}>
         <div className="max-w-7xl mx-auto flex items-center w-full">
-          <motion.div className="bg-white/95 backdrop-blur-lg rounded-2xl md:rounded-3xl p-6 md:p-12 shadow-2xl max-w-full md:max-w-2xl" initial={{
-          opacity: 0,
-          x: -50
-        }} animate={{
+          <motion.div className="bg-white/95 backdrop-blur-lg rounded-2xl md:rounded-3xl p-6 md:p-12 shadow-2xl max-w-full md:max-w-2xl" animate={{
           opacity: 1,
           x: 0
         }} transition={{
           duration: 0.8,
           delay: 0.2
         }}>
-            <motion.h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-6 md:mb-8 text-gray-800" initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
+            <motion.h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-6 md:mb-8 text-gray-800" animate={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -42,10 +34,7 @@ export default function AppCUREVendorPage() {
               + Industry Leaders Accelerate Migration to Modern Windows
             </motion.h1>
             
-            <motion.p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 md:mb-10 text-gray-600" initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
+            <motion.p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 md:mb-10 text-gray-600" animate={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -59,10 +48,7 @@ export default function AppCUREVendorPage() {
               is partnering with the leading names in the industry to support your digital transformation projects at speed.
             </motion.p>
             
-            <motion.a href="/contact" className="inline-flex items-center gap-2 md:gap-3 bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group" initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
+            <motion.a href="/contact" className="inline-flex items-center gap-2 md:gap-3 bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group" animate={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -84,9 +70,7 @@ export default function AppCUREVendorPage() {
       
 
       {/* CURE Methodology Section */}
-      <motion.section className="bg-white py-24 px-4" initial={{
-      opacity: 0
-    }} whileInView={{
+      <motion.section className="bg-white py-24 px-4" whileInView={{
       opacity: 1
     }} transition={{
       duration: 0.8
@@ -94,10 +78,7 @@ export default function AppCUREVendorPage() {
       once: true
     }}>
         <div className="max-w-6xl mx-auto">
-          <motion.h2 className="text-center text-4xl md:text-5xl font-bold text-purple-600 mb-16" initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
+          <motion.h2 className="text-center text-4xl md:text-5xl font-bold text-purple-600 mb-16" whileInView={{
           opacity: 1,
           y: 0
         }} transition={{
@@ -129,10 +110,7 @@ export default function AppCUREVendorPage() {
             title: "Execute",
             description: "Deliver applications to your chosen vendor/platform.",
             delay: 0.4
-          }].map((item, index) => <motion.div key={index} className="bg-white/90 backdrop-blur-xs p-8 rounded-3xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl border border-gray-200/50" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+          }].map((item, index) => <motion.div key={index} className="bg-white/90 backdrop-blur-xs p-8 rounded-3xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl border border-gray-200/50" whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -162,9 +140,7 @@ export default function AppCUREVendorPage() {
       </motion.section>
 
       {/* Quote Section */}
-      <motion.section className="bg-black text-white py-16 px-4 relative overflow-hidden" initial={{
-      opacity: 0
-    }} whileInView={{
+      <motion.section className="bg-black text-white py-16 px-4 relative overflow-hidden" whileInView={{
       opacity: 1
     }} transition={{
       duration: 0.8
@@ -179,10 +155,7 @@ export default function AppCUREVendorPage() {
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8" />
-          <motion.p className="text-2xl md:text-3xl font-light italic opacity-90" initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
+          <motion.p className="text-2xl md:text-3xl font-light italic opacity-90" whileInView={{
           opacity: 1,
           y: 0
         }} transition={{
@@ -197,9 +170,7 @@ export default function AppCUREVendorPage() {
       </motion.section>
 
       {/* Production Section */}
-      <motion.section className="bg-black text-white py-24 px-4 relative overflow-hidden" initial={{
-      opacity: 0
-    }} whileInView={{
+      <motion.section className="bg-black text-white py-24 px-4 relative overflow-hidden" whileInView={{
       opacity: 1
     }} transition={{
       duration: 0.8
@@ -215,10 +186,7 @@ export default function AppCUREVendorPage() {
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{
-            opacity: 0,
-            x: -50
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             x: 0
           }} transition={{
@@ -235,10 +203,7 @@ export default function AppCUREVendorPage() {
               </p>
               
               <ul className="space-y-4">
-                {["Accelerated migration timelines", "Automated package creation", "Comprehensive issue resolution", "Scalable volume processing"].map((feature, index) => <motion.li key={index} className="flex items-center text-lg text-gray-200" initial={{
-                opacity: 0,
-                x: -20
-              }} whileInView={{
+                {["Accelerated migration timelines", "Automated package creation", "Comprehensive issue resolution", "Scalable volume processing"].map((feature, index) => <motion.li key={index} className="flex items-center text-lg text-gray-200" whileInView={{
                 opacity: 1,
                 x: 0
               }} transition={{
@@ -253,10 +218,7 @@ export default function AppCUREVendorPage() {
               </ul>
             </motion.div>
 
-            <motion.div className="text-center" initial={{
-            opacity: 0,
-            x: 50
-          }} whileInView={{
+            <motion.div className="text-center" whileInView={{
             opacity: 1,
             x: 0
           }} transition={{

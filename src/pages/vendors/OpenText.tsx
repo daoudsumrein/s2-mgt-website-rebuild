@@ -63,13 +63,11 @@ export default function OpenTextPage() {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <motion.div 
                 className="text-left"
-                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 <motion.div 
                   className="flex items-center justify-center lg:justify-start gap-3 mb-6"
-                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
@@ -103,7 +101,6 @@ export default function OpenTextPage() {
                 
                 <motion.h1 
                   className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-bold mb-4 lg:mb-6 leading-tight text-center lg:text-left"
-                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 >
@@ -113,7 +110,6 @@ export default function OpenTextPage() {
                 
                 <motion.p 
                   className="text-base sm:text-lg lg:text-xl text-blue-100 mb-6 lg:mb-8 leading-relaxed text-center lg:text-left"
-                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                 >
@@ -122,7 +118,6 @@ export default function OpenTextPage() {
                 
                 <motion.div 
                   className="flex justify-center lg:justify-start"
-                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
                 >
@@ -135,7 +130,6 @@ export default function OpenTextPage() {
               
               <motion.div 
                 className="relative order-first lg:order-last"
-                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               >
@@ -161,7 +155,6 @@ export default function OpenTextPage() {
             <div className="max-w-6xl mx-auto text-center p-8 sm:p-16 bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 shadow-2xl">
               <motion.h2 
                 className="text-white text-3xl sm:text-4xl lg:text-5xl font-light mb-4 tracking-wide leading-tight"
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
@@ -171,7 +164,6 @@ export default function OpenTextPage() {
               </motion.h2>
               <motion.p 
                 className="text-white/80 text-lg sm:text-xl font-light mt-4 mb-12"
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
                 viewport={{ once: true }}
@@ -183,7 +175,6 @@ export default function OpenTextPage() {
                 {/* Carbonite */}
                 <motion.div
                   className="relative bg-white/8 backdrop-blur-xs rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-blue-400/50 hover:shadow-[0_20px_40px_rgba(74,158,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                   viewport={{ once: true }}
@@ -224,7 +215,6 @@ export default function OpenTextPage() {
                 {/* Webroot */}
                 <motion.div
                   className="relative bg-white/8 backdrop-blur-xs rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-green-400/50 hover:shadow-[0_20px_40px_rgba(76,175,80,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                   viewport={{ once: true }}
@@ -269,7 +259,6 @@ export default function OpenTextPage() {
                 {/* MailStore */}
                 <motion.div
                   className="relative bg-white/8 backdrop-blur-xs rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-orange-400/50 hover:shadow-[0_20px_40px_rgba(255,107,53,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                   viewport={{ once: true }}
@@ -331,7 +320,6 @@ export default function OpenTextPage() {
                 {/* Cloudally */}
                 <motion.div
                   className="relative bg-white/8 backdrop-blur-xs rounded-2xl p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-cyan-400/50 hover:shadow-[0_20px_40px_rgba(0,212,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
                   viewport={{ once: true }}
@@ -355,7 +343,6 @@ export default function OpenTextPage() {
             <div className="max-w-6xl mx-auto">
               <motion.div 
                 className="text-center mb-8 sm:mb-12"
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -370,7 +357,6 @@ export default function OpenTextPage() {
                 <motion.div 
                   key={categoryIndex} 
                   className="mb-8 sm:mb-12"
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                   viewport={{ once: true }}
@@ -380,7 +366,6 @@ export default function OpenTextPage() {
                     {category.products.map((product, productIndex) => (
                       <motion.div
                         key={productIndex}
-                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: productIndex * 0.1 }}
                         viewport={{ once: true }}
@@ -416,7 +401,6 @@ export default function OpenTextPage() {
             <div className="max-w-4xl mx-auto">
               <motion.h2 
                 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center"
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -444,7 +428,6 @@ export default function OpenTextPage() {
                 ].map((useCase, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
@@ -466,7 +449,6 @@ export default function OpenTextPage() {
         <section className="py-12 sm:py-16 bg-blue-50">
           <div className="container mx-auto px-4 sm:px-6 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
