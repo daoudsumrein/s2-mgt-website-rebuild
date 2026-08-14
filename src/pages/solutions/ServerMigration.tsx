@@ -164,7 +164,6 @@ export default function ServerMigration() {
 
         {/* Key Benefits Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -172,7 +171,6 @@ export default function ServerMigration() {
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -227,7 +225,6 @@ export default function ServerMigration() {
               ].map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   whileHover={{ 
@@ -263,7 +260,6 @@ export default function ServerMigration() {
 
         {/* Migration Types Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -271,7 +267,6 @@ export default function ServerMigration() {
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -289,7 +284,6 @@ export default function ServerMigration() {
               {["Physical-to-Physical", "Physical-to-Virtual", "Virtual-to-Virtual", "Onsite-to-Cloud", "Cloud-to-Cloud", "Cloud-back-Onsite"].map((type, index) => (
                 <motion.div 
                   key={index}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                   whileHover={{ 
@@ -311,7 +305,6 @@ export default function ServerMigration() {
 
         {/* Platform Support Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -319,7 +312,6 @@ export default function ServerMigration() {
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -353,7 +345,6 @@ export default function ServerMigration() {
               ].map((platform, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   whileHover={{ 
@@ -381,7 +372,6 @@ export default function ServerMigration() {
                     {platform.items.map((item, itemIndex) => (
                       <motion.li
                         key={itemIndex}
-                        initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.4, delay: 0.5 + itemIndex * 0.1 }}
                         viewport={{ once: true }}

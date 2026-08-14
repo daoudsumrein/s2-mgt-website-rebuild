@@ -171,8 +171,7 @@ export default function EmailArchiving() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
               ref={heroAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
             >
@@ -246,7 +245,6 @@ export default function EmailArchiving() {
 
         {/* Main Value Proposition */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -254,7 +252,6 @@ export default function EmailArchiving() {
         >
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -290,7 +287,6 @@ export default function EmailArchiving() {
               ].map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   whileHover={{ 
@@ -323,7 +319,6 @@ export default function EmailArchiving() {
 
         {/* Features Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -331,7 +326,6 @@ export default function EmailArchiving() {
         >
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -348,7 +342,6 @@ export default function EmailArchiving() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -389,7 +382,6 @@ export default function EmailArchiving() {
 
         {/* Deliverables Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -397,7 +389,6 @@ export default function EmailArchiving() {
         >
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -414,7 +405,6 @@ export default function EmailArchiving() {
               {deliverables.map((deliverable, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -462,7 +452,6 @@ export default function EmailArchiving() {
 
         {/* Benefits & Use Cases */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -472,7 +461,6 @@ export default function EmailArchiving() {
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12">
                 <motion.div
-                  initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
@@ -485,7 +473,6 @@ export default function EmailArchiving() {
                     {keyBenefits.map((benefit, index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                         whileHover={{ x: 10, transition: { duration: 0.2 } }}
@@ -500,7 +487,6 @@ export default function EmailArchiving() {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
@@ -513,7 +499,6 @@ export default function EmailArchiving() {
                     {idealFor.map((item, index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                         whileHover={{ x: -10, transition: { duration: 0.2 } }}
@@ -533,7 +518,6 @@ export default function EmailArchiving() {
 
         {/* CTA Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -541,7 +525,6 @@ export default function EmailArchiving() {
         >
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}

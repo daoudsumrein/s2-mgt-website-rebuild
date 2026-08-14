@@ -36,8 +36,7 @@ export default function CloudMigration() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
               ref={heroAnimation.ref} 
-              initial={{ opacity: 0, y: 50 }} 
-              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} 
+              animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.8, ease: "easeOut" }} 
               className="max-w-7xl mx-auto"
             >
@@ -114,7 +113,6 @@ export default function CloudMigration() {
               ].map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -156,7 +154,6 @@ export default function CloudMigration() {
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -202,7 +199,6 @@ export default function CloudMigration() {
               ].map((capability, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -245,7 +241,6 @@ export default function CloudMigration() {
               ].map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -294,7 +289,6 @@ export default function CloudMigration() {
               ].map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
@@ -405,7 +399,6 @@ export default function CloudMigration() {
               {["AWS", "Microsoft Azure", "VMware", "Google Cloud", "IBM Cloud", "Oracle Cloud", "OpenStack", "Alibaba Cloud"].map((platform, index) => (
                 <motion.span
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
