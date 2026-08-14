@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -85,7 +86,7 @@ export default function ITDiscovery() {
               <p className="text-xl text-muted-foreground mb-8">
                 Infrastructure Awareness, App Dependency, Risk Elimination
               </p>
-              <Button size="lg">Book Discovery Session</Button>
+              <Button size="lg" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>Book Discovery Session</Button>
             </div>
           </div>
         </section>
@@ -232,8 +233,8 @@ export default function ITDiscovery() {
                     Let S2 unify your data sources into one live, actionable map. Book your discovery mapping session today.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg">Book Discovery Session</Button>
-                    <Button variant="outline" size="lg">Learn More About Mapping</Button>
+                    <Button size="lg" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>Book Discovery Session</Button>
+                    <Button variant="outline" size="lg" asChild><Link to="/vendors/tds">Learn More About Mapping</Link></Button>
                   </div>
                 </CardContent>
               </Card>
