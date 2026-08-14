@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import BackupPlatforms from "@/components/BackupPlatforms";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -15,12 +14,6 @@ export default function NakivoPage() {
 
   return (
     <>
-      <SEOHead 
-        title="NAKIVO Backup & Replication Solutions | S2 Management"
-        description="Comprehensive data protection with NAKIVO's enterprise backup and replication platform. Trusted by organizations with strict cybersecurity standards."
-        keywords="NAKIVO partner, data protection, backup replication, enterprise backup, VM backup, cloud data protection"
-        canonicalUrl="https://s2mgt.com/vendors/nakivo"
-      />
       <div className="min-h-screen bg-background">
         <Navigation />
       <main>

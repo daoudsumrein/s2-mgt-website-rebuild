@@ -184,49 +184,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { title: "Solutions Distributor | Backup, DR, Cybersecurity & Orchestrator" },
-      {
-        name: "description",
-        content:
-          "S2 Management delivers Disaster Recovery & Backup, Data protection, DR orchestration, Application Modernization, business continuity & resilience.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Disaster recovery solutions UAE, KSA, MENA, OpenText distributor Middle East, Enterprise data protection KSA, application modernization MENA, Carbonite solutions, IT orchestration, data protection MENA, Migration Orchestration Dubai & KSA, DR Orchestration Dubai & Riyadh",
-      },
-      { name: "author", content: "S2 Management Solutions" },
       { name: "robots", content: "index, follow" },
       { name: "geo.region", content: "AE-DU" },
       { name: "geo.placename", content: "Dubai, UAE" },
       { name: "geo.position", content: "25.276987;55.296249" },
       { name: "ICBM", content: "25.276987, 55.296249" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://s2mgt.com/" },
-      {
-        property: "og:title",
-        content: "S2 Management Solutions - Leading IT Transformation & Cybersecurity in MENA",
-      },
-      {
-        property: "og:description",
-        content:
-          "Transform your IT infrastructure with S2's expert disaster recovery, cybersecurity, and digital transformation solutions across the Middle East and North Africa.",
-      },
-      { property: "og:image", content: "https://s2mgt.com/assets/s2-logo.png" },
       { property: "og:locale", content: "en_US" },
       { property: "og:site_name", content: "S2 Management Solutions" },
       { property: "twitter:card", content: "summary_large_image" },
-      { property: "twitter:url", content: "https://s2mgt.com/" },
-      {
-        property: "twitter:title",
-        content: "S2 Management Solutions - IT Transformation & Cybersecurity MENA",
-      },
-      {
-        property: "twitter:description",
-        content:
-          "Leading provider of disaster recovery, cybersecurity, and IT transformation services in the Middle East and North Africa region.",
-      },
-      { property: "twitter:image", content: "https://s2mgt.com/assets/s2-logo.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -243,10 +209,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap",
       },
-      { rel: "canonical", href: "https://s2mgt.com/" },
-      { rel: "alternate", hrefLang: "en", href: "https://s2mgt.com/" },
-      { rel: "alternate", hrefLang: "en-ae", href: "https://s2mgt.com/" },
-      { rel: "alternate", hrefLang: "en-sa", href: "https://s2mgt.com/" },
     ],
     scripts: [
       { src: "https://www.google.com/recaptcha/api.js", async: true, defer: true },

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation, useCounterAnimation, useScrollProgress } from "@/hooks/useScrollAnimation";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -272,13 +271,6 @@ export default function OpenTextServerBackup() {
       <div 
         className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-700 z-50 origin-left transition-transform duration-100"
         style={{ transform: `scaleX(${progress})` }}
-      />
-      
-      <SEOHead 
-        title="OpenText Server Backup Solutions MENA - Enterprise Server Protection | S2 Solutions"
-        description="Enterprise OpenText server backup solutions for MENA region. Complete server backup and replication with unlimited storage, ransomware protection, and compliance features. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="server backup MENA, OpenText server backup UAE, server backup Middle East, server replication Saudi Arabia, server data protection, enterprise backup, server disaster recovery"
-        canonicalUrl="https://s2mgt.com/solutions/OpenText-Server-Backup"
       />
       
       <Navigation />

@@ -1,6 +1,5 @@
 import { useLocation } from "@/lib/router-compat";
 import { useEffect } from "react";
-import SEOHead from "@/components/SEOHead";
 
 const NotFound = () => {
   const location = useLocation();
@@ -14,12 +13,6 @@ const NotFound = () => {
 
   return (
     <>
-      <SEOHead 
-        title="Page Not Found - S2 Management Solutions"
-        description="The page you're looking for doesn't exist. Return to S2 Management Solutions homepage for IT transformation and cybersecurity solutions."
-        keywords="404 error, page not found, S2 Management Solutions"
-        canonicalUrl="https://s2mgt.com/404"
-      />
       <div className="min-h-screen flex items-center justify-center bg-background px-4">
         <div className="text-center max-w-md mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">404</h1>

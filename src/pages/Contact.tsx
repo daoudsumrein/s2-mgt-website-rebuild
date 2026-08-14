@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -151,12 +150,6 @@ export default function Contact() {
   };
   return (
     <>
-      <SEOHead 
-        title="Contact S2 Management Solutions - Expert IT Consultation MENA"
-        description="Get in touch with S2's expert team for IT transformation, data protection, and cybersecurity solutions. 24-hour response time. MENA region coverage."
-        keywords="contact S2 Management, IT consultation MENA, data protection expert contact, disaster recovery consultation, UAE IT support"
-        canonicalUrl="https://s2mgt.com/contact"
-      />
       <div className="min-h-screen bg-background">
         <Navigation />
       <main>

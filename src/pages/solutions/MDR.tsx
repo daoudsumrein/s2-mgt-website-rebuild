@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,12 +16,6 @@ export default function MDR() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Managed Detection and Response (MDR) Services | MENA Cybersecurity"
-        description="Professional MDR services for MENA enterprises. 24/7 security monitoring, threat hunting, and incident response by expert security analysts."
-        keywords="MDR services MENA, managed detection response UAE, cybersecurity monitoring Middle East, security operations Saudi Arabia"
-        canonicalUrl="https://s2mgt.com/solutions/mdr"
-      />
       <Navigation />
       
       <main className="flex-1">

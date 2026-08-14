@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -171,12 +170,6 @@ export default function Solutions() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <SEOHead 
-        title="Data Protection & Cybersecurity Solutions – UAE, KSA, MENA" 
-        description="Comprehensive data protection & cybersecurity solutions in UAE, KSA & MENA. DR, backup, migration, endpoint security, email protection & ransomware defense." 
-        keywords="Data Protection Solutions MENA,Cybersecurity Solutions UAE,Disaster Recovery Planning KSA,Server Migration Services MENA,Cloud Backup & Replication UAE" 
-        canonicalUrl="https://s2mgt.com/solutions" 
-      />
       <Navigation />
       
       <main className="flex-1">

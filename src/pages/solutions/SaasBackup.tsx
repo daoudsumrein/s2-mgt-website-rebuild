@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -64,7 +63,6 @@ export default function ServerBackup() {
     threshold: 0.3
   });
   return <div className="min-h-screen flex flex-col">
-      <SEOHead title="Server Cloud Backup Solutions MENA - Enterprise Server Protection | S2 Solutions" description="Professional server cloud backup solutions for MENA enterprises. Secure Windows and Linux server protection with ransomware recovery and enterprise-grade security. Serving UAE, Saudi Arabia, and Middle East." keywords="server backup MENA, cloud server backup UAE, enterprise backup Middle East, Windows server backup Saudi Arabia, Linux backup, virtual machine backup, database backup" canonicalUrl="https://s2mgt.com/solutions/saas-backup" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

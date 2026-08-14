@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -15,12 +14,6 @@ export default function ServersDataProtection() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Servers and Data Protection Solutions MENA - Insider Threat Protection | S2 Solutions"
-        description="Advanced servers and data protection solutions for MENA region. Protect against insider threats with invisibility technology and access controls. Serving UAE, Saudi Arabia, and Middle East."
-        keywords="server protection MENA, data protection UAE, insider threats Middle East, cybersecurity Saudi Arabia, access control, data security"
-        canonicalUrl="https://s2mgt.com/solutions/servers-data-protection"
-      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

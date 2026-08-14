@@ -1,4 +1,3 @@
-import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -7,7 +6,6 @@ const Arrosoft = () => {
   const [activeSection, setActiveSection] = useState('empower-partners');
   
   return <>
-      <SEOHead title="Arrosoft - Data Security Solutions | S2 Technical Solutions" description="Partner with Arrosoft for excellent data protection solutions and services. Redefining the standard in data security for your clients." keywords="Arrosoft, data security, data protection, cybersecurity solutions, S2 Technical Solutions" />
       <Navigation />
       
       <div className="min-h-screen">

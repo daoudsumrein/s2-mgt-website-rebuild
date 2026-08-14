@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -55,7 +54,6 @@ const keyBenefits = ["Automated backup for all endpoint devices", "Protection ac
 const idealFor = ["Organizations with distributed workforce", "Companies with remote employees", "Enterprises with BYOD policies", "Businesses requiring compliance with data regulations", "Organizations seeking to reduce data loss risks"];
 export default function EndpointBackup() {
   return <div className="min-h-screen flex flex-col">
-      <SEOHead title="Official Distributor of OpenText Core Endpoint Backup Solutions" description="S2, the official MENA distributor for OpenText Core Endpoint Backup, delivers automated device & data protection against human error, malware & theft." keywords="endpoint backup MENA, cloud backup UAE, device protection Middle East, automated backup Saudi Arabia, endpoint security, remote device backup, enterprise endpoint protection" canonicalUrl="https://s2mgt.com/solutions/endpoint-backup" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

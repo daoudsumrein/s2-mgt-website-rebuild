@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
@@ -131,13 +130,6 @@ export default function DROrchestration() {
   };
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Disaster Recovery Automation & Runbooks"
-        description="Automate DR validation, failover, and orchestration using TDS TransitionManager. Certified partner in UAE & KSA delivering zero-downtime recovery and dependency-aware automation."
-        keywords="TDS TransitionManager MENA, disaster recovery orchestration UAE, automated DR Saudi Arabia, business continuity Qatar, failover testing Kuwait, DR runbooks Bahrain, recovery automation Gulf, BC/DR orchestration Middle East"
-        canonicalUrl="https://s2mgt.com/solutions/disaster-recovery-orchestration"
-        author="S2 Management Solutions"
-      />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}

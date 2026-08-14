@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -42,12 +41,6 @@ const capabilities = [
 export default function EDR() {
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead
-        title="Endpoint Detection and Response (EDR) Solutions | MENA Cybersecurity"
-        description="Advanced EDR solutions for MENA enterprises. Real-time threat detection, behavioral analytics, and automated incident response for comprehensive endpoint security."
-        keywords="EDR solutions MENA, endpoint detection response UAE, cybersecurity Middle East, threat hunting Saudi Arabia, incident response"
-        canonicalUrl="https://s2mgt.com/solutions/edr"
-      />
       <Navigation />
       
       <main className="flex-1">
