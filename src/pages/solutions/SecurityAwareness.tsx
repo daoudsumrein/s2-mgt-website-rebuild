@@ -5,6 +5,15 @@ import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 import { Shield, Zap, Clock, Target, BarChart, CheckCircle, BookOpen, Users, RefreshCw, TrendingDown, Server, Settings, Monitor, Award, Cloud, Globe, ShieldCheck, UserCog } from "lucide-react";
 
+const statsParticles = [
+  { left: "11%", top: "23%", duration: 3.4, delay: 0.2 },
+  { left: "27%", top: "68%", duration: 4.1, delay: 1.1 },
+  { left: "44%", top: "16%", duration: 3.7, delay: 1.6 },
+  { left: "61%", top: "74%", duration: 4.6, delay: 0.7 },
+  { left: "78%", top: "35%", duration: 3.2, delay: 1.9 },
+  { left: "91%", top: "59%", duration: 4.3, delay: 0.4 },
+];
+
 export default function SecurityAwareness() {
 
   return (
@@ -138,13 +147,13 @@ export default function SecurityAwareness() {
         >
           {/* Floating background particles */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(6)].map((_, i) => (
+            {statsParticles.map((p, i) => (
               <motion.div
                 key={i}
                 className="absolute w-2 h-2 bg-blue-400/20 rounded-full"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
+                  left: p.left,
+                  top: p.top,
                 }}
                 animate={{
                   y: [0, -30, 0],
@@ -152,9 +161,9 @@ export default function SecurityAwareness() {
                   scale: [1, 1.5, 1],
                 }}
                 transition={{
-                  duration: 3 + Math.random() * 2,
+                  duration: p.duration,
                   repeat: Infinity,
-                  delay: Math.random() * 2,
+                  delay: p.delay,
                 }}
               />
             ))}
