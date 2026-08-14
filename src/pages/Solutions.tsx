@@ -36,9 +36,9 @@ const dataProtectionSolutions = [{
   link: "/solutions/endpoint-backup"
 }, {
   icon: Server,
-  title: "Servers Cloud Backup",
-  description: "Server backup and replication",
-  link: "/solutions/server-backup"
+    title: "Cloud to Cloud Backup",
+    description: "SaaS backup and protection",
+    link: "/solutions/saas-backup"
 }, {
   icon: Database,
   title: "On Prem Backup",

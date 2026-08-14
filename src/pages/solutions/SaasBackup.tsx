@@ -64,7 +64,7 @@ export default function ServerBackup() {
     threshold: 0.3
   });
   return <div className="min-h-screen flex flex-col">
-      <SEOHead title="Server Cloud Backup Solutions MENA - Enterprise Server Protection | S2 Solutions" description="Professional server cloud backup solutions for MENA enterprises. Secure Windows and Linux server protection with ransomware recovery and enterprise-grade security. Serving UAE, Saudi Arabia, and Middle East." keywords="server backup MENA, cloud server backup UAE, enterprise backup Middle East, Windows server backup Saudi Arabia, Linux backup, virtual machine backup, database backup" canonicalUrl="https://s2mgt.com/solutions/server-backup" />
+      <SEOHead title="Server Cloud Backup Solutions MENA - Enterprise Server Protection | S2 Solutions" description="Professional server cloud backup solutions for MENA enterprises. Secure Windows and Linux server protection with ransomware recovery and enterprise-grade security. Serving UAE, Saudi Arabia, and Middle East." keywords="server backup MENA, cloud server backup UAE, enterprise backup Middle East, Windows server backup Saudi Arabia, Linux backup, virtual machine backup, database backup" canonicalUrl="https://s2mgt.com/solutions/saas-backup" />
       <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
