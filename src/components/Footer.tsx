@@ -2,8 +2,6 @@ import { Link } from "@/lib/router-compat";
 import { ExternalLink, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { motion } from "framer-motion";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const solutions = [{
   name: "All Services",
   href: "/services"
@@ -49,22 +47,7 @@ const vendors = [{
   href: "/vendors/cloudcasa"
 }];
 export default function Footer() {
-  const {
-    ref: footerRef,
-    isInView: footerInView
-  } = useScrollAnimation();
-  return <motion.footer ref={footerRef} initial={{
-    opacity: 0,
-    y: 30
-  }} animate={footerInView ? {
-    opacity: 1,
-    y: 0
-  } : {
-    opacity: 0,
-    y: 30
-  }} transition={{
-    duration: 0.6
-  }} className="bg-muted border-t">
+  return <footer className="bg-muted border-t">
       <div className="container mx-auto px-5 pt-10 pb-4">
         {/* Mobile View */}
         <div className="lg:hidden space-y-6">
@@ -326,5 +309,5 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </motion.footer>;
+    </footer>;
 }
