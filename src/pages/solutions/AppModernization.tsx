@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -107,7 +108,7 @@ export default function AppModernization() {
                 Legacy to Modern — Without Rewriting, Rebuilding, or Risk
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Book Application Assessment</Button>
+                <Button size="lg" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>Book Application Assessment</Button>
                 <Button variant="outline" size="lg">Download Datasheet</Button>
               </div>
             </div>
@@ -254,8 +255,8 @@ export default function AppModernization() {
                 Let S2 modernize your apps — fast, secure, and disruption-free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Book Application Assessment</Button>
-                <Button variant="outline" size="lg">Contact Modernization Team</Button>
+                <Button size="lg" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>Book Application Assessment</Button>
+                <Button variant="outline" size="lg" asChild><Link to="/contact">Contact Modernization Team</Link></Button>
               </div>
             </div>
           </div>

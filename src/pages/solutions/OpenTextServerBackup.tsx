@@ -328,6 +328,7 @@ export default function OpenTextServerBackup() {
               <Button 
                 size="lg" 
                 className="mt-8 text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explore Features
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -338,6 +339,7 @@ export default function OpenTextServerBackup() {
 
         {/* Key Features Section */}
         <motion.section 
+          id="features"
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -568,6 +570,7 @@ export default function OpenTextServerBackup() {
             <Button 
               size="lg" 
               className="text-lg px-8 py-4 bg-white text-blue-900 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 font-semibold"
+              onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}
             >
               Get Started Now
               <ArrowRight className="ml-2 h-5 w-5" />

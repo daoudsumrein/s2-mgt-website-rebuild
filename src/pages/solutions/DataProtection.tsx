@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -107,7 +108,7 @@ export default function DataProtection() {
                 Servers, Endpoints, Cloud – Always Covered with end-to-end data protection ensuring your critical systems are secure, recoverable, and compliant.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-lg px-8">Request Backup Audit</Button>
+                <Button size="lg" className="text-lg px-8" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>Request Backup Audit</Button>
                 <Button variant="outline" size="lg" className="text-lg px-8 bg-white text-slate-900 border-white hover:bg-white/90">Learn More</Button>
               </div>
             </div>
@@ -286,8 +287,8 @@ export default function DataProtection() {
                     Let S2 modernize your protection stack from edge to cloud. Request a backup audit or free POC today.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg">Request Backup Audit</Button>
-                    <Button variant="outline" size="lg">Start Free POC</Button>
+                    <Button size="lg" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>Request Backup Audit</Button>
+                    <Button variant="outline" size="lg" asChild><Link to="/contact">Start Free POC</Link></Button>
                   </div>
                 </CardContent>
               </Card>

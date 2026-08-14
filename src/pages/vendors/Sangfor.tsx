@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,9 +27,11 @@ export default function SangforPage() {
                 for modern enterprise environments.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
-                  Request Information
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" asChild>
+                  <Link to="/contact">
+                    Request Information
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button variant="outline" size="lg">
                   <Download className="mr-2 h-4 w-4" />
@@ -201,8 +204,8 @@ export default function SangforPage() {
               modernization strategy alongside our core platform offerings.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
-                Discuss Infrastructure Requirements
+              <Button size="lg" asChild>
+                <Link to="/contact">Discuss Infrastructure Requirements</Link>
               </Button>
               <Button variant="outline" size="lg">
                 <ExternalLink className="mr-2 h-4 w-4" />

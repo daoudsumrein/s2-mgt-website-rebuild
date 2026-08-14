@@ -466,7 +466,7 @@ export default function EmailEncryption() {
                 Contact us to learn how our email encryption solution can protect your sensitive communications and ensure secure messaging.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="text-lg px-8">
+                <Button size="lg" className="text-lg px-8" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>
                   Schedule Consultation
                 </Button>
                 <Button 

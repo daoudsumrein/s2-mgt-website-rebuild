@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -125,7 +126,7 @@ export default function SecureCloud() {
                 Complete SaaS & Endpoint Protection for Cloud-First Businesses and MSPs
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Book White-Label Demo</Button>
+                <Button size="lg" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>Book White-Label Demo</Button>
                 <Button variant="outline" size="lg">Download Datasheet</Button>
               </div>
             </div>
@@ -271,8 +272,8 @@ export default function SecureCloud() {
                 Let S2 help you deliver a complete service — under your brand.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">Book White-Label Secure Cloud MSP Demo</Button>
-                <Button variant="outline" size="lg">Contact Specialist</Button>
+                <Button size="lg" onClick={() => window.open('https://n365.com/book/S2VideoBooking@s2mgt.com/?ismsaljsauthenabled=true', '_blank')}>Book White-Label Secure Cloud MSP Demo</Button>
+                <Button variant="outline" size="lg" asChild><Link to="/contact">Contact Specialist</Link></Button>
               </div>
             </div>
           </div>
