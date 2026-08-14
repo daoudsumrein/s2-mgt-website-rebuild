@@ -43,7 +43,7 @@ const organizationJsonLd = JSON.stringify({
         latitude: "25.096883822536483",
         longitude: "55.16362955334217",
       },
-      telephone: "+97141234567",
+      telephone: "+97144342221",
     },
     {
       "@type": "Place",
@@ -92,7 +92,7 @@ const organizationJsonLd = JSON.stringify({
     {
       "@type": "ContactPoint",
       contactType: "sales",
-      telephone: "+97141234567",
+      telephone: "+97144342221",
       areaServed: "AE",
       url: "https://s2mgt.com/contact",
     },
