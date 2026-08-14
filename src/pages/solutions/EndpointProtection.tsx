@@ -308,14 +308,12 @@ export default function EndpointProtection() {
         <motion.section
           ref={heroContentRef}
           className="py-16 md:py-24 bg-background"
-          initial={{ opacity: 0 }}
           animate={heroContentInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
         >
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 50 }}
               animate={heroContentInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -331,14 +329,13 @@ export default function EndpointProtection() {
             <motion.div
               ref={benefitsRef}
               variants={containerVariants}
-              initial="hidden"
-              animate={benefitsInView ? "visible" : "hidden"}
+              initial="visible"
+              animate="visible"
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
             >
               {benefitCards.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -381,14 +378,12 @@ export default function EndpointProtection() {
         <motion.section
           ref={featuresRef}
           className="py-16 md:py-24 bg-muted/30"
-          initial={{ opacity: 0 }}
           animate={featuresInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
         >
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 50 }}
               animate={featuresInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -402,14 +397,13 @@ export default function EndpointProtection() {
 
             <motion.div
               variants={containerVariants}
-              initial="hidden"
-              animate={featuresInView ? "visible" : "hidden"}
+              initial="visible"
+              animate="visible"
               className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16"
             >
               {securityFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6,
@@ -460,14 +454,12 @@ export default function EndpointProtection() {
         <motion.section
           ref={resilienceRef}
           className="py-16 md:py-24 bg-background"
-          initial={{ opacity: 0 }}
           animate={resilienceInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
         >
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 50 }}
               animate={resilienceInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -481,14 +473,13 @@ export default function EndpointProtection() {
 
             <motion.div
               variants={containerVariants}
-              initial="hidden"
-              animate={resilienceInView ? "visible" : "hidden"}
+              initial="visible"
+              animate="visible"
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
             >
               {resilienceFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6,
@@ -539,14 +530,12 @@ export default function EndpointProtection() {
         <motion.section
           ref={stagesRef}
           className="py-16 md:py-24 bg-muted/30"
-          initial={{ opacity: 0 }}
           animate={stagesInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
         >
           <div className="container mx-auto px-4">
             <motion.div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 50 }}
               animate={stagesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -562,8 +551,8 @@ export default function EndpointProtection() {
                 <CardContent>
                   <motion.div
                     variants={containerVariants}
-                    initial="hidden"
-                    animate={stagesInView ? "visible" : "hidden"}
+                    initial="visible"
+                    animate="visible"
                     className="grid md:grid-cols-3 gap-8"
                   >
                     {protectionStages.map((stage, index) => (
@@ -605,14 +594,12 @@ export default function EndpointProtection() {
         <motion.section
           ref={ctaRef}
           className="py-16 md:py-24 bg-background"
-          initial={{ opacity: 0 }}
           animate={ctaInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
         >
           <div className="container mx-auto px-4">
             <motion.div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 50 }}
               animate={ctaInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
@@ -628,8 +615,8 @@ export default function EndpointProtection() {
                 <CardContent>
                   <motion.div
                     variants={containerVariants}
-                    initial="hidden"
-                    animate={ctaInView ? "visible" : "hidden"}
+                    initial="visible"
+                    animate="visible"
                     className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center"
                   >
                     {trustStats.map((stat, index) => (
@@ -644,7 +631,6 @@ export default function EndpointProtection() {
                         className="space-y-2"
                       >
                         <motion.div
-                          initial={{ scale: 0 }}
                           animate={ctaInView ? { scale: 1 } : {}}
                           transition={{ 
                             duration: 0.5,
