@@ -133,7 +133,7 @@
     </url>
 
     <url>
-        <loc>https://s2mgt.com/solutions/server-backup</loc>
+        <loc>https://s2mgt.com/solutions/saas-backup</loc>
         <lastmod>2025-09-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -147,7 +147,7 @@
     </url>
 
     <url>
-        <loc>https://s2mgt.com/solutions/cloud-to-cloud-backup</loc>
+        <loc>https://s2mgt.com/solutions/OpenText-Server-Backup</loc>
         <lastmod>2025-09-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
