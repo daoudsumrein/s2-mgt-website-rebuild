@@ -38,8 +38,7 @@ export default function About() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
               ref={heroAnimation.ref} 
-              initial={{ opacity: 0, y: 50 }} 
-              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} 
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }} 
               className="max-w-5xl mx-auto text-center"
             >
@@ -71,8 +70,7 @@ export default function About() {
           <div className="container mx-auto px-4">
             <motion.div
               ref={missionAnimation.ref}
-              initial={{ opacity: 0, y: 30 }}
-              animate={missionAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="max-w-6xl mx-auto"
             >
@@ -114,7 +112,6 @@ export default function About() {
                   ].map((item, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                       viewport={{ once: true }}
@@ -138,8 +135,7 @@ export default function About() {
           <div className="container mx-auto px-4">
             <motion.div
               ref={capabilitiesAnimation.ref}
-              initial={{ opacity: 0, y: 30 }}
-              animate={capabilitiesAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               <div className="text-center mb-16">
@@ -165,7 +161,6 @@ export default function About() {
                 ].map((capability, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
@@ -188,8 +183,7 @@ export default function About() {
           <div className="container mx-auto px-4">
             <motion.div
               ref={valuesAnimation.ref}
-              initial={{ opacity: 0, y: 30 }}
-              animate={valuesAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               <div className="text-center mb-16">
@@ -240,7 +234,6 @@ export default function About() {
                 ].map((value, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
@@ -263,8 +256,7 @@ export default function About() {
           <div className="container mx-auto px-4">
             <motion.div
               ref={ctaAnimation.ref}
-              initial={{ opacity: 0, y: 30 }}
-              animate={ctaAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
             >
