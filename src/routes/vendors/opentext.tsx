@@ -10,6 +10,5 @@ export const Route = createFileRoute("/vendors/opentext")({
       description: "Official OpenText distributor for the Middle East, GCC & Africa. We specialise in secure cloud, business continuity, and seamless migrations with expert regional support.",
       keywords: "official opentext distributor mena, opentext partner saudi arabia uae, opentext cybersecurity solutions gcc, opentext distributor middle east, opentext enterprise solutions mena region",
       canonical: "https://s2mgt.com/vendors/opentext",
-      ogImage: "https://s2mgt.com/assets/opentext-og.png",
     }),
 });
