@@ -61,8 +61,7 @@ export default function MDR() {
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div 
-              initial={{ opacity: 0, y: 50 }}
+            <motion.div
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
@@ -143,8 +142,7 @@ export default function MDR() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-20"
-              initial={{ opacity: 0, y: 50 }}
-              animate={introInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
@@ -163,7 +161,6 @@ export default function MDR() {
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-stretch">
                 <motion.div
-                  initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -188,7 +185,6 @@ export default function MDR() {
                           <motion.li 
                             key={index}
                             className="flex items-start space-x-2"
-                            initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -203,7 +199,6 @@ export default function MDR() {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -228,7 +223,6 @@ export default function MDR() {
                           <motion.li 
                             key={index}
                             className="flex items-start space-x-2"
-                            initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
@@ -257,8 +251,7 @@ export default function MDR() {
             <div className="max-w-6xl mx-auto">
               <motion.h2 
                 className="text-3xl font-bold text-center mb-12"
-                initial={{ opacity: 0, y: 50 }}
-                animate={benefitsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Comprehensive Security Benefits
@@ -305,7 +298,6 @@ export default function MDR() {
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
@@ -343,8 +335,7 @@ export default function MDR() {
             <div className="max-w-6xl mx-auto">
               <motion.h2 
                 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
-                initial={{ opacity: 0, y: 50 }}
-                animate={featuresInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Advanced Security Capabilities
@@ -391,7 +382,6 @@ export default function MDR() {
                 ].map((feature, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
@@ -433,16 +423,14 @@ export default function MDR() {
             <div className="max-w-6xl mx-auto">
               <motion.h2 
                 className="text-3xl font-bold text-center mb-12"
-                initial={{ opacity: 0, y: 50 }}
-                animate={dashboardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Comprehensive Security Dashboard
               </motion.h2>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={dashboardInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   <h3 className="text-2xl font-semibold text-blue-600 mb-4">Real-Time Visibility & Control</h3>
@@ -459,8 +447,7 @@ export default function MDR() {
                       <motion.li 
                         key={index}
                         className="flex items-start space-x-2"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={dashboardInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                       >
                         <motion.div
@@ -475,8 +462,7 @@ export default function MDR() {
                   </ul>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, x: 50, scale: 0.9 }}
-                  animate={dashboardInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0, x: 50, scale: 0.9 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                   whileHover={{ scale: 1.02 }}
                 >
@@ -498,8 +484,7 @@ export default function MDR() {
                             <motion.div 
                               key={index}
                               className="text-center bg-blue-50 rounded-lg p-4 border border-blue-200"
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={dashboardInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
                               transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                               whileHover={{ scale: 1.05, backgroundColor: "rgb(239 246 255)" }}
                             >
@@ -523,8 +508,7 @@ export default function MDR() {
             <div className="max-w-6xl mx-auto">
               <motion.h2 
                 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
-                initial={{ opacity: 0, y: 50 }}
-                animate={reasonsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Top 5 Reasons MSPs Choose OpenText Core MDR
@@ -565,7 +549,6 @@ export default function MDR() {
                 ].map((reason, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 60, scale: 0.8 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.15 }}
@@ -603,7 +586,6 @@ export default function MDR() {
             <div className="max-w-6xl mx-auto">
               <motion.h2 
                 className="text-3xl font-bold text-center mb-12"
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -633,7 +615,6 @@ export default function MDR() {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.2 }}
@@ -671,7 +652,6 @@ export default function MDR() {
             <div className="max-w-6xl mx-auto">
               <motion.h2 
                 className="text-3xl font-bold text-center mb-12"
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -703,7 +683,6 @@ export default function MDR() {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
@@ -729,7 +708,6 @@ export default function MDR() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -741,7 +719,6 @@ export default function MDR() {
                 <CardContent className="p-12 relative z-10">
                   <motion.h2 
                     className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
-                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.4 }}
@@ -750,7 +727,6 @@ export default function MDR() {
                   </motion.h2>
                   <motion.p 
                     className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto"
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.6 }}
@@ -759,7 +735,6 @@ export default function MDR() {
                   </motion.p>
                   <motion.div 
                     className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.8 }}
@@ -777,7 +752,6 @@ export default function MDR() {
                   </motion.div>
                   <motion.p 
                     className="text-sm text-muted-foreground"
-                    initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 1.0 }}

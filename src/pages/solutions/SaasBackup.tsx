@@ -83,15 +83,9 @@ export default function ServerBackup() {
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div ref={heroAnimation.ref} initial={{
-            opacity: 0,
-            y: 50
-          }} animate={heroAnimation.isInView ? {
+            <motion.div ref={heroAnimation.ref} animate={{
             opacity: 1,
             y: 0
-          } : {
-            opacity: 0,
-            y: 50
           }} transition={{
             duration: 0.8,
             ease: "easeOut"
@@ -153,10 +147,7 @@ export default function ServerBackup() {
         </section>
 
         {/* Main Value Proposition */}
-        <motion.section initial={{
-        opacity: 0,
-        y: 50
-      }} whileInView={{
+        <motion.section whileInView={{
         opacity: 1,
         y: 0
       }} transition={{
@@ -165,10 +156,7 @@ export default function ServerBackup() {
         once: true
       }} className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -201,10 +189,7 @@ export default function ServerBackup() {
               title: "Stringent Security",
               description: "Bank-grade AES-256 encryption, OAuth authentication, and compliance with HIPAA, GDPR, and SOC 2 standards ensure your data remains secure and compliant.",
               color: "purple"
-            }].map((benefit, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              y: 50
-            }} whileInView={{
+            }].map((benefit, index) => <motion.div key={index} whileInView={{
               opacity: 1,
               y: 0
             }} transition={{
@@ -236,10 +221,7 @@ export default function ServerBackup() {
         </motion.section>
 
         {/* Official Distributor Section */}
-        <motion.section initial={{
-        opacity: 0,
-        y: 50
-      }} whileInView={{
+        <motion.section whileInView={{
         opacity: 1,
         y: 0
       }} transition={{
@@ -248,10 +230,7 @@ export default function ServerBackup() {
         once: true
       }} className="py-16 bg-white border-t-4 border-blue-600">
           <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -284,11 +263,7 @@ export default function ServerBackup() {
               title: "Dedicated Local Support",
               description: "Arabic and English speaking technical experts providing implementation, training, and ongoing support across Dubai, Saudi Arabia, Egypt, and the entire MENA region.",
               color: "purple"
-            }].map((card, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              y: 50,
-              scale: 0.9
-            }} whileInView={{
+            }].map((card, index) => <motion.div key={index} whileInView={{
               opacity: 1,
               y: 0,
               scale: 1
@@ -326,10 +301,7 @@ export default function ServerBackup() {
         </motion.section>
 
         {/* Platform Coverage Section */}
-        <motion.section initial={{
-        opacity: 0,
-        y: 50
-      }} whileInView={{
+        <motion.section whileInView={{
         opacity: 1,
         y: 0
       }} transition={{
@@ -338,10 +310,7 @@ export default function ServerBackup() {
         once: true
       }} className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -383,11 +352,7 @@ export default function ServerBackup() {
               subtitle: "Complete Coverage:",
               features: ["Files & Folders", "Shared Links & Permissions", "Version History", "Team Folders & Metadata"],
               color: "#1a6aff"
-            }].map((platform, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              y: 50,
-              rotateY: -15
-            }} whileInView={{
+            }].map((platform, index) => <motion.div key={index} whileInView={{
               opacity: 1,
               y: 0,
               rotateY: 0
@@ -420,10 +385,7 @@ export default function ServerBackup() {
                   <h3 className="text-xl font-bold mb-2 relative z-10">{platform.title}</h3>
                   <p className="font-semibold mb-4 relative z-10">{platform.subtitle}</p>
                   <ul className="text-left space-y-1 relative z-10">
-                    {platform.features.map((feature, featureIndex) => <motion.li key={featureIndex} initial={{
-                  opacity: 0,
-                  x: -10
-                }} whileInView={{
+                    {platform.features.map((feature, featureIndex) => <motion.li key={featureIndex} whileInView={{
                   opacity: 1,
                   x: 0
                 }} transition={{
@@ -444,10 +406,7 @@ export default function ServerBackup() {
         </motion.section>
 
         {/* Key Features Section */}
-        <motion.section initial={{
-        opacity: 0,
-        y: 50
-      }} whileInView={{
+        <motion.section whileInView={{
         opacity: 1,
         y: 0
       }} transition={{
@@ -456,10 +415,7 @@ export default function ServerBackup() {
         once: true
       }} className="py-16 bg-gradient-to-br from-slate-50 to-green-50">
           <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -507,10 +463,7 @@ export default function ServerBackup() {
               title: "Export Flexibility",
               description: "Export data in multiple formats (PST, EML, PDF, native formats) for compliance, legal discovery, or migration purposes.",
               color: "indigo"
-            }].map((feature, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              x: index % 2 === 0 ? -50 : 50
-            }} whileInView={{
+            }].map((feature, index) => <motion.div key={index} whileInView={{
               opacity: 1,
               x: 0
             }} transition={{
@@ -544,10 +497,7 @@ export default function ServerBackup() {
         </motion.section>
 
         {/* Security & Compliance Section */}
-        <motion.section initial={{
-        opacity: 0,
-        y: 50
-      }} whileInView={{
+        <motion.section whileInView={{
         opacity: 1,
         y: 0
       }} transition={{
@@ -556,10 +506,7 @@ export default function ServerBackup() {
         once: true
       }} className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -607,11 +554,7 @@ export default function ServerBackup() {
               title: "Immutable Storage",
               desc: "Ransomware Protection",
               color: "teal"
-            }].map((badge, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              scale: 0.8,
-              rotateY: -20
-            }} whileInView={{
+            }].map((badge, index) => <motion.div key={index} whileInView={{
               opacity: 1,
               scale: 1,
               rotateY: 0
@@ -641,10 +584,7 @@ export default function ServerBackup() {
                 </motion.div>)}
             </div>
             
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -667,10 +607,7 @@ export default function ServerBackup() {
                 title: "Global Data Centers",
                 description: "Choose your data location with AWS regions worldwide for data residency compliance",
                 icon: "fas fa-globe"
-              }].map((feature, index) => <motion.div key={index} initial={{
-                opacity: 0,
-                y: 30
-              }} whileInView={{
+              }].map((feature, index) => <motion.div key={index} whileInView={{
                 opacity: 1,
                 y: 0
               }} transition={{
@@ -698,10 +635,7 @@ export default function ServerBackup() {
         </motion.section>
 
         {/* Why Choose CloudAlly Section */}
-        <motion.section initial={{
-        opacity: 0,
-        y: 50
-      }} whileInView={{
+        <motion.section whileInView={{
         opacity: 1,
         y: 0
       }} transition={{
@@ -710,10 +644,7 @@ export default function ServerBackup() {
         once: true
       }} className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -761,11 +692,7 @@ export default function ServerBackup() {
               title: "Enterprise Ready",
               description: "SSO integration, custom contracts, and dedicated customer success managers for enterprise accounts.",
               color: "indigo"
-            }].map((item, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              y: 50,
-              rotateX: -15
-            }} whileInView={{
+            }].map((item, index) => <motion.div key={index} whileInView={{
               opacity: 1,
               y: 0,
               rotateX: 0
@@ -805,10 +732,7 @@ export default function ServerBackup() {
         </motion.section>
 
         {/* Industry Solutions Section */}
-        <motion.section initial={{
-        opacity: 0,
-        y: 50
-      }} whileInView={{
+        <motion.section whileInView={{
         opacity: 1,
         y: 0
       }} transition={{
@@ -817,10 +741,7 @@ export default function ServerBackup() {
         once: true
       }} className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
+            <motion.div whileInView={{
             opacity: 1,
             y: 0
           }} transition={{
@@ -868,11 +789,7 @@ export default function ServerBackup() {
               title: "Non-Profit",
               description: "Special pricing for non-profit organizations with the same enterprise-level features and support.",
               color: "#f59e0b"
-            }].map((industry, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              scale: 0.8,
-              rotateY: -20
-            }} whileInView={{
+            }].map((industry, index) => <motion.div key={index} whileInView={{
               opacity: 1,
               scale: 1,
               rotateY: 0
