@@ -114,7 +114,7 @@ export default function Services() {
   const [hoveredService, setHoveredService] = useState(null);
   const { ref: detailsRef, isInView: detailsInView } = useScrollAnimation();
 
-  const handleCardClick = (service: (typeof services)[number], index: number) => {
+  const handleCardClick = (service: { title: string }, index: number) => {
     // Scroll to the specific service section
     setTimeout(() => {
       const serviceSection = document.querySelector(`#service-${index}`);
