@@ -7,7 +7,9 @@ import type { ReCAPTCHAProps } from "react-google-recaptcha";
 // namespace object during SSR, so load it lazily and render client-only.
 const LazyReCAPTCHA = lazy(async () => {
   const mod: any = await import("react-google-recaptcha");
-  return { default: mod.default?.default ?? mod.default ?? mod };
+  return {
+    default: (mod.default?.default ?? mod.default ?? mod) as typeof ReCAPTCHA,
+  };
 });
 
 const fallback = <div style={{ minHeight: 78 }} />;
