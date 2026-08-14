@@ -115,8 +115,7 @@ export default function RiverMeadowPage() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <motion.div
                 ref={heroAnimation.ref}
-                initial={{ opacity: 0, y: 50 }}
-                animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="max-w-7xl mx-auto"
               >
@@ -128,8 +127,7 @@ export default function RiverMeadowPage() {
                   {/* Content */}
                   <div className="space-y-6 sm:space-y-8 text-center relative z-10">
                     <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={heroAnimation.isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
                     >
                       <Badge
@@ -143,8 +141,7 @@ export default function RiverMeadowPage() {
 
                     <motion.h1
                       className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.3 }}
                     >
                       <span
@@ -170,8 +167,7 @@ export default function RiverMeadowPage() {
 
                     <motion.div
                       className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center text-slate-300 mb-8 text-sm sm:text-base"
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.5 }}
                     >
                       {[
@@ -193,8 +189,7 @@ export default function RiverMeadowPage() {
                     </motion.div>
 
                     <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.7 }}
                     >
                       <Button
@@ -225,7 +220,6 @@ export default function RiverMeadowPage() {
                     <motion.div
                       key={index}
                       className="group bg-card p-12 lg:p-16 hover:-translate-y-4 transition-all duration-500 relative"
-                      initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       viewport={{ once: true }}
@@ -264,7 +258,6 @@ export default function RiverMeadowPage() {
           <section className="py-32 px-4 md:px-8 bg-white">
             <div className="max-w-6xl mx-auto text-center mb-24">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -280,7 +273,6 @@ export default function RiverMeadowPage() {
 
             <motion.div
               className="flex flex-col md:flex-row gap-8 justify-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -297,7 +289,6 @@ export default function RiverMeadowPage() {
 
             <motion.div
               className="max-w-5xl mx-auto aspect-video bg-card flex items-center justify-center relative overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -314,7 +305,6 @@ export default function RiverMeadowPage() {
           <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 md:px-8 text-center">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
@@ -334,7 +324,6 @@ export default function RiverMeadowPage() {
           <section className="grid grid-cols-1 md:grid-cols-2 min-h-[60vh] md:min-h-[80vh]">
             <motion.div
               className="bg-muted relative overflow-hidden flex items-center justify-center min-h-[300px] sm:min-h-[400px]"
-              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -348,7 +337,6 @@ export default function RiverMeadowPage() {
 
             <motion.div
               className="bg-card p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-center"
-              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -386,7 +374,6 @@ export default function RiverMeadowPage() {
           <section className="grid grid-cols-1 md:grid-cols-2 min-h-[60vh] md:min-h-[80vh]">
             <motion.div
               className="bg-card p-6 sm:p-8 md:p-12 lg:p-16 xl:p-24 flex flex-col justify-center order-2 md:order-1"
-              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -411,7 +398,6 @@ export default function RiverMeadowPage() {
 
             <motion.div
               className="bg-muted relative overflow-hidden flex items-center justify-center order-1 md:order-2 min-h-[300px] sm:min-h-[400px]"
-              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -429,7 +415,6 @@ export default function RiverMeadowPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
@@ -449,14 +434,12 @@ export default function RiverMeadowPage() {
                     <motion.div
                       key={index}
                       className="group bg-card p-6 sm:p-8 md:p-10 lg:p-12 border border-transparent hover:border-primary hover:-translate-y-2 transition-all duration-500 flex flex-col"
-                      initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.15 }}
                       viewport={{ once: true }}
                     >
                       <motion.div
                         className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 border-2 border-foreground/20 rounded-lg flex items-center justify-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-500 bg-background/50"
-                        initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
                         viewport={{ once: true }}
@@ -502,7 +485,6 @@ export default function RiverMeadowPage() {
           <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 md:px-8 text-center bg-foreground text-background">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}

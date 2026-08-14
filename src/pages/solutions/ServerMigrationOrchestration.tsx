@@ -64,15 +64,9 @@ export default function ServerMigrationOrchestration() {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-7xl mx-auto">
-              <motion.div ref={heroAnimation.ref} initial={{
-              opacity: 0,
-              y: 50
-            }} animate={heroAnimation.isInView ? {
+              <motion.div ref={heroAnimation.ref}animate={{
               opacity: 1,
               y: 0
-            } : {
-              opacity: 0,
-              y: 50
             }} transition={{
               duration: 0.8,
               ease: "easeOut"
@@ -145,10 +139,7 @@ export default function ServerMigrationOrchestration() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div {...useScrollAnimation()} className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="p-8">
-                <motion.div className="text-5xl lg:text-6xl font-black mb-3 bg-gradient-to-b from-white to-blue-100 bg-clip-text text-transparent" initial={{
-                scale: 0.5,
-                opacity: 0
-              }} whileInView={{
+                <motion.div className="text-5xl lg:text-6xl font-black mb-3 bg-gradient-to-b from-white to-blue-100 bg-clip-text text-transparent"whileInView={{
                 scale: 1,
                 opacity: 1
               }} transition={{
@@ -160,10 +151,7 @@ export default function ServerMigrationOrchestration() {
                 <p className="text-sm uppercase tracking-wider font-medium opacity-90">Years Migration Expertise</p>
               </div>
               <div className="p-8">
-                <motion.div className="text-5xl lg:text-6xl font-black mb-3 bg-gradient-to-b from-white to-blue-100 bg-clip-text text-transparent" initial={{
-                scale: 0.5,
-                opacity: 0
-              }} whileInView={{
+                <motion.div className="text-5xl lg:text-6xl font-black mb-3 bg-gradient-to-b from-white to-blue-100 bg-clip-text text-transparent"whileInView={{
                 scale: 1,
                 opacity: 1
               }} transition={{
@@ -175,10 +163,7 @@ export default function ServerMigrationOrchestration() {
                 <p className="text-sm uppercase tracking-wider font-medium opacity-90">Average Time Reduction</p>
               </div>
               <div className="p-8">
-                <motion.div className="text-5xl lg:text-6xl font-black mb-3 bg-gradient-to-b from-white to-blue-100 bg-clip-text text-transparent" initial={{
-                scale: 0.5,
-                opacity: 0
-              }} whileInView={{
+                <motion.div className="text-5xl lg:text-6xl font-black mb-3 bg-gradient-to-b from-white to-blue-100 bg-clip-text text-transparent"whileInView={{
                 scale: 1,
                 opacity: 1
               }} transition={{
@@ -246,10 +231,7 @@ export default function ServerMigrationOrchestration() {
             }, {
               title: "Limited Tools & Methodology",
               description: "Organizations lack experience and access to best tools and methodologies for managing complex projects, leaving them vulnerable to costly mistakes and extended timelines."
-            }].map((challenge, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              x: -30
-            }} whileInView={{
+            }].map((challenge, index) => <motion.div key={index}whileInView={{
               opacity: 1,
               x: 0
             }} transition={{
@@ -308,10 +290,7 @@ export default function ServerMigrationOrchestration() {
               title: "Accelerated Execution",
               description: "Achieve 50% average time reduction through rigorous planning, automated orchestration, and proven execution methodologies with full visibility and control.",
               color: "bg-orange-500"
-            }].map((feature, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
+            }].map((feature, index) => <motion.div key={index}whileInView={{
               opacity: 1,
               y: 0
             }} transition={{
@@ -375,10 +354,7 @@ export default function ServerMigrationOrchestration() {
               benefits: ["50% reduction in migration time on average", "Automated runbook generation for proper sequencing", "Clear task ownership and timely communication", "Full visibility and quick response to changes", "Maintained command and control throughout execution"],
               color: "bg-orange-500",
               textColor: "text-orange-500"
-            }].map((phase, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
+            }].map((phase, index) => <motion.div key={index}whileInView={{
               opacity: 1,
               y: 0
             }} transition={{
@@ -446,10 +422,7 @@ export default function ServerMigrationOrchestration() {
               color: "border-l-orange-500",
               titleColor: "text-orange-500",
               features: ["Connect and automate third-party migration tools", "Create reliable execution plans with proven methods", "Calculate resource needs to get maximum results", "Monitor and control all activities in real-time", "Speed up projects by coordinating multiple work streams", "Spot potential problems before they cause delays"]
-            }].map((capability, index) => <motion.div key={index} initial={{
-              opacity: 0,
-              y: 30
-            }} whileInView={{
+            }].map((capability, index) => <motion.div key={index}whileInView={{
               opacity: 1,
               y: 0
             }} transition={{
@@ -487,10 +460,7 @@ export default function ServerMigrationOrchestration() {
               </h2>
               
               <motion.div {...useScrollAnimation()} className="bg-primary/10 p-12 lg:p-16 rounded-3xl border border-primary/20 backdrop-blur-xs max-w-4xl mx-auto mb-12">
-                <motion.div className="text-6xl lg:text-8xl font-black text-primary mb-4" initial={{
-                scale: 0.5,
-                opacity: 0
-              }} whileInView={{
+                <motion.div className="text-6xl lg:text-8xl font-black text-primary mb-4"whileInView={{
                 scale: 1,
                 opacity: 1
               }} transition={{

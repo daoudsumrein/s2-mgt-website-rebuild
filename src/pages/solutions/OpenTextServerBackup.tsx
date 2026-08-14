@@ -388,7 +388,6 @@ export default function OpenTextServerBackup() {
 
         {/* Key Features Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -396,7 +395,6 @@ export default function OpenTextServerBackup() {
         >
           <div className="container mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -413,7 +411,6 @@ export default function OpenTextServerBackup() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -454,7 +451,6 @@ export default function OpenTextServerBackup() {
 
         {/* Deliverables Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -462,7 +458,6 @@ export default function OpenTextServerBackup() {
         >
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -479,7 +474,6 @@ export default function OpenTextServerBackup() {
               {deliverables.map((deliverable, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -527,7 +521,6 @@ export default function OpenTextServerBackup() {
 
         {/* Protection Features Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -535,7 +528,6 @@ export default function OpenTextServerBackup() {
         >
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -552,7 +544,6 @@ export default function OpenTextServerBackup() {
               {protectionFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6,

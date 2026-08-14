@@ -60,8 +60,7 @@ export default function ServersDataProtection() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
               ref={heroAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
             >
@@ -138,7 +137,6 @@ export default function ServersDataProtection() {
 
         {/* Main Value Proposition */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -146,7 +144,6 @@ export default function ServersDataProtection() {
         >
           <div className="container mx-auto px-4">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -162,7 +159,6 @@ export default function ServersDataProtection() {
               </p>
               
               <motion.div 
-                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
@@ -176,7 +172,6 @@ export default function ServersDataProtection() {
 
             {/* Insider Threat Problem - Enhanced */}
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
@@ -234,7 +229,6 @@ export default function ServersDataProtection() {
                     return (
                       <motion.div 
                         key={index}
-                        initial={{ opacity: 0, y: 50, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                         whileHover={{ 
@@ -266,7 +260,6 @@ export default function ServersDataProtection() {
 
             {/* Solution Approach - Enhanced */}
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
@@ -298,7 +291,6 @@ export default function ServersDataProtection() {
                   return (
                     <motion.div 
                       key={index}
-                      initial={{ opacity: 0, y: 50, scale: 0.9 }}
                       whileInView={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{ duration: 0.6, delay: 0.3 + index * 0.2 }}
                       whileHover={{ 
@@ -329,7 +321,6 @@ export default function ServersDataProtection() {
 
             {/* Core Capabilities - Enhanced */}
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
@@ -370,7 +361,6 @@ export default function ServersDataProtection() {
                   return (
                     <motion.div 
                       key={index}
-                      initial={{ opacity: 0, y: 50, scale: 0.9 }}
                       whileInView={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                       whileHover={{ 
@@ -401,7 +391,6 @@ export default function ServersDataProtection() {
 
             {/* Technical Features */}
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
@@ -444,7 +433,6 @@ export default function ServersDataProtection() {
                   return (
                     <motion.div 
                       key={index}
-                      initial={{ opacity: 0, y: 50, scale: 0.9 }}
                       whileInView={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                       whileHover={{ 
@@ -478,7 +466,6 @@ export default function ServersDataProtection() {
 
             {/* Benefits Section */}
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
@@ -518,7 +505,6 @@ export default function ServersDataProtection() {
                   return (
                     <motion.div 
                       key={index}
-                      initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                       whileHover={{ 
@@ -548,7 +534,6 @@ export default function ServersDataProtection() {
 
             {/* Architecture Diagram Section */}
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
@@ -577,7 +562,6 @@ export default function ServersDataProtection() {
 
             {/* Call to Action */}
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}

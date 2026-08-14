@@ -37,8 +37,7 @@ export default function OnPremBackup() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
               ref={heroAnimation.ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroAnimation.isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
             >
@@ -119,7 +118,6 @@ export default function OnPremBackup() {
 
         {/* Value Proposition Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -162,7 +160,6 @@ export default function OnPremBackup() {
                     ].map((stat, index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 30, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                         whileHover={{ 
@@ -194,7 +191,6 @@ export default function OnPremBackup() {
 
         {/* Platform Overview */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -203,7 +199,6 @@ export default function OnPremBackup() {
         >
           <div className="container mx-auto px-4">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -238,7 +233,6 @@ export default function OnPremBackup() {
               ].map((card, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
                   whileHover={{ 
@@ -277,7 +271,6 @@ export default function OnPremBackup() {
 
         {/* Universal Platform Support */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -286,7 +279,6 @@ export default function OnPremBackup() {
         >
           <div className="container mx-auto px-4">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -342,7 +334,6 @@ export default function OnPremBackup() {
               ].map((platform, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
                   whileHover={{ 
@@ -375,7 +366,6 @@ export default function OnPremBackup() {
 
         {/* Fast and Efficient Backup */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -384,7 +374,6 @@ export default function OnPremBackup() {
         >
           <div className="container mx-auto px-4">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -438,7 +427,6 @@ export default function OnPremBackup() {
               ].map((backup, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
                   whileHover={{ 
@@ -473,7 +461,6 @@ export default function OnPremBackup() {
 
         {/* Call to Action */}
         <motion.section 
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -490,7 +477,6 @@ export default function OnPremBackup() {
           
           <div className="container mx-auto px-4 relative z-10">
             <motion.div 
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
