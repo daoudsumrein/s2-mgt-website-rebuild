@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useScrollAnimation, useCounterAnimation, useScrollProgress } from "@/hooks/useScrollAnimation";
+import { useScrollAnimation, useScrollProgress } from "@/hooks/useScrollAnimation";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -143,7 +142,7 @@ const FeatureCard = ({ icon, title, description, delay }: {
       }`}
       style={{ transitionDelay: `${delay}s` }}
     >
-      <div className="text-5xl mb-6 animate-float">{icon}</div>
+      <div className="text-5xl mb-6 ot-server-backup-float">{icon}</div>
       <h3 className="text-xl font-semibold text-blue-900 mb-4">{title}</h3>
       <p className="text-slate-700 leading-relaxed">{description}</p>
     </div>
@@ -203,66 +202,17 @@ const StatCard = ({ number, label, suffix = '', special }: {
   suffix?: string; 
   special?: string; 
 }) => {
-  const { ref, isInView } = useScrollAnimation({ threshold: 0.3 });
-  const count = useCounterAnimation(number, isInView);
-  
   return (
-    <div 
-      ref={ref}
-      className={`glass-card p-8 text-center transition-all duration-700 ${
-        isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
-    >
+    <div className="glass-card p-8 text-center transition-all duration-700">
       <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-        {special || `${count}${suffix}`}
+        {special || `${number}${suffix}`}
       </div>
       <div className="text-lg text-slate-700 font-medium">{label}</div>
     </div>
   );
 };
 
-// Add custom CSS styles to index.css for glass morphism effects
-const customStyles = `
-  .glass-card {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 16px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  }
-
-  .glass-dark-card {
-    background: rgba(26, 106, 255, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(26, 106, 255, 0.2);
-    border-radius: 20px;
-    box-shadow: 0 12px 40px 0 rgba(26, 106, 255, 0.15);
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-`;
-
 export default function OpenTextServerBackup() {
-  // Add custom styles to head
-  useEffect(() => {
-    const styleSheet = document.createElement("style");
-    styleSheet.innerText = customStyles;
-    document.head.appendChild(styleSheet);
-    
-    return () => {
-      document.head.removeChild(styleSheet);
-    };
-  }, []);
-
   const progress = useScrollProgress();
 
   return (
