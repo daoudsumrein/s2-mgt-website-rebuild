@@ -100,15 +100,9 @@ export default function DisasterRecovery() {
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div ref={heroAnimation.ref} initial={{
-            opacity: 0,
-            y: 50
-          }} animate={heroAnimation.isInView ? {
+            <motion.div ref={heroAnimation.ref} animate={{
             opacity: 1,
             y: 0
-          } : {
-            opacity: 0,
-            y: 50
           }} transition={{
             duration: 0.8,
             ease: "easeOut"
@@ -166,16 +160,14 @@ export default function DisasterRecovery() {
         </section>
 
         {/* Problem & Solution Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
+        <motion.section
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="py-16 bg-gradient-to-br from-slate-50 to-blue-50"
         >
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -191,7 +183,6 @@ export default function DisasterRecovery() {
             
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 whileHover={{ 
@@ -227,7 +218,6 @@ export default function DisasterRecovery() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 whileHover={{ 
@@ -268,15 +258,9 @@ export default function DisasterRecovery() {
         {/* Key Benefits Section */}
         <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
           <div className="container mx-auto px-4">
-            <motion.div ref={benefitsAnimation.ref} initial={{
-            opacity: 0,
-            y: 50
-          }} animate={benefitsAnimation.isInView ? {
+            <motion.div ref={benefitsAnimation.ref} animate={{
             opacity: 1,
             y: 0
-          } : {
-            opacity: 0,
-            y: 50
           }} transition={{
             duration: 0.8,
             ease: "easeOut"
@@ -290,22 +274,15 @@ export default function DisasterRecovery() {
             </motion.div>
             
             {/* Stats Grid */}
-            <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" initial={{
-            opacity: 0,
-            scale: 0.9
-          }} animate={benefitsAnimation.isInView ? {
+            <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" animate={{
             opacity: 1,
             scale: 1
-          } : {
-            opacity: 0,
-            scale: 0.9
           }} transition={{
             duration: 0.6,
             delay: 0.2,
             ease: "easeOut"
           }}>
-              <motion.div 
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              <motion.div
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
                 whileHover={{ 
@@ -329,8 +306,7 @@ export default function DisasterRecovery() {
                 </div>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              <motion.div
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                 whileHover={{ 
@@ -354,8 +330,7 @@ export default function DisasterRecovery() {
                 </div>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              <motion.div
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
                 whileHover={{ 
@@ -379,8 +354,7 @@ export default function DisasterRecovery() {
                 </div>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              <motion.div
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                 whileHover={{ 
@@ -410,7 +384,6 @@ export default function DisasterRecovery() {
               {deliverables.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -452,16 +425,14 @@ export default function DisasterRecovery() {
         </section>
 
         {/* How It Works Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
+        <motion.section
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="py-16 bg-white"
         >
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -503,7 +474,6 @@ export default function DisasterRecovery() {
               ].map((step, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -540,16 +510,14 @@ export default function DisasterRecovery() {
         </motion.section>
 
         {/* Failover Diagram Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
+        <motion.section
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="py-16 bg-gradient-to-br from-gray-50 to-gray-100"
         >
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -564,7 +532,6 @@ export default function DisasterRecovery() {
             
             <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
@@ -592,7 +559,6 @@ export default function DisasterRecovery() {
                 ].map((step, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ 
                       duration: 0.6, 
@@ -663,7 +629,6 @@ export default function DisasterRecovery() {
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -712,16 +677,14 @@ export default function DisasterRecovery() {
         </motion.section>
 
         {/* Platform Support Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
+        <motion.section
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="py-16 bg-white"
         >
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -757,7 +720,6 @@ export default function DisasterRecovery() {
               ].map((platform, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -812,16 +774,14 @@ export default function DisasterRecovery() {
         </motion.section>
 
         {/* Advanced Features Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
+        <motion.section
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="py-16 bg-gradient-to-br from-slate-50 to-blue-50"
         >
           <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
@@ -887,7 +847,6 @@ export default function DisasterRecovery() {
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
                     duration: 0.6, 
@@ -948,15 +907,9 @@ export default function DisasterRecovery() {
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div ref={distributorAnimation.ref} initial={{
-            opacity: 0,
-            y: 50
-          }} animate={distributorAnimation.isInView ? {
+            <motion.div ref={distributorAnimation.ref} animate={{
             opacity: 1,
             y: 0
-          } : {
-            opacity: 0,
-            y: 50
           }} transition={{
             duration: 0.8,
             ease: "easeOut"
@@ -965,15 +918,9 @@ export default function DisasterRecovery() {
               <p className="text-lg text-blue-100 max-w-4xl mx-auto">We are the preferred Official OpenText/Carbonite Availability distributor, ensuring authentic licensing and professional support</p>
             </motion.div>
             
-            <motion.div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto" initial={{
-            opacity: 0,
-            scale: 0.95
-          }} animate={distributorAnimation.isInView ? {
+            <motion.div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto" animate={{
             opacity: 1,
             scale: 1
-          } : {
-            opacity: 0,
-            scale: 0.95
           }} transition={{
             duration: 0.8,
             delay: 0.3,
@@ -1040,15 +987,9 @@ export default function DisasterRecovery() {
               </div>
             </motion.div>
             
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} animate={distributorAnimation.isInView ? {
+            <motion.div animate={{
             opacity: 1,
             y: 0
-          } : {
-            opacity: 0,
-            y: 30
           }} transition={{
             duration: 0.8,
             delay: 0.6,

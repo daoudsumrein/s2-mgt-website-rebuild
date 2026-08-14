@@ -54,8 +54,7 @@ export default function SecurityAwareness() {
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.div 
-              initial={{ opacity: 0, y: 50 }}
+            <motion.div
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-7xl mx-auto"
@@ -133,7 +132,6 @@ export default function SecurityAwareness() {
         {/* Enhanced Hero Statistics with Advanced Animations */}
         <motion.section 
           className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative overflow-hidden"
-          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, staggerChildren: 0.1 }}
@@ -163,8 +161,7 @@ export default function SecurityAwareness() {
           </div>
 
           <div className="max-w-7xl mx-auto relative z-10">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -196,7 +193,6 @@ export default function SecurityAwareness() {
               </motion.h1>
               <motion.p 
                 className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2"
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -217,7 +213,6 @@ export default function SecurityAwareness() {
                 return (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     whileHover={{
                       y: -20,
@@ -274,8 +269,7 @@ export default function SecurityAwareness() {
             </div>
 
             {/* Enhanced additional quick stats */}
-            <motion.div 
-              initial={{ opacity: 0 }}
+            <motion.div
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ staggerChildren: 0.05, delayChildren: 0.3 }}
@@ -290,8 +284,7 @@ export default function SecurityAwareness() {
                 const Icon = stat.icon;
                 return (
                   <motion.div 
-                    key={index} 
-                    initial={{ opacity: 0, y: 20 }}
+                    key={index}
                     whileInView={{ opacity: 1, y: 0 }}
                     whileHover={{
                       scale: 1.1,
@@ -319,7 +312,6 @@ export default function SecurityAwareness() {
         {/* Enhanced Core Features with Advanced Animations */}
         <motion.section 
           className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-white/50 relative overflow-hidden"
-          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
         >
@@ -327,8 +319,7 @@ export default function SecurityAwareness() {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-green-50/50" />
           
           <div className="max-w-7xl mx-auto relative z-10">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -398,7 +389,6 @@ export default function SecurityAwareness() {
                 return (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, rotateX: -15 }}
                     whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                     whileHover={{
                       y: -15,
@@ -451,7 +441,6 @@ export default function SecurityAwareness() {
         {/* Enhanced Process Flow with 3D Effects */}
         <motion.section 
           className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative overflow-hidden"
-          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
         >
@@ -476,8 +465,7 @@ export default function SecurityAwareness() {
           </div>
 
           <div className="max-w-7xl mx-auto relative z-10">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -531,7 +519,6 @@ export default function SecurityAwareness() {
                 return (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, rotateX: -30 }}
                     whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                     whileHover={{ 
                       scale: 1.05, 
@@ -590,7 +577,6 @@ export default function SecurityAwareness() {
                       <div className="flex-1 flex flex-col justify-center">
                         <motion.h3 
                           className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 relative z-10 leading-tight"
-                          initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.1 + 0.2 }}
                         >
@@ -598,7 +584,6 @@ export default function SecurityAwareness() {
                         </motion.h3>
                         <motion.p 
                           className="text-white/90 text-sm sm:text-base leading-relaxed relative z-10 mb-3"
-                          initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.1 + 0.3 }}
                         >
@@ -606,7 +591,6 @@ export default function SecurityAwareness() {
                         </motion.p>
                         <motion.div 
                           className="text-xs sm:text-sm text-white/75 font-medium"
-                          initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.1 + 0.4 }}
                         >
@@ -630,13 +614,11 @@ export default function SecurityAwareness() {
         {/* Enhanced Results with Interactive Circular Progress */}
         <motion.section 
           className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-white/50 relative overflow-hidden"
-          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
         >
           <div className="max-w-7xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -680,7 +662,6 @@ export default function SecurityAwareness() {
                 ].map((result, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 50, scale: 0.8 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     whileHover={{ scale: 1.05, y: -5 }}
                     viewport={{ once: true }}
@@ -747,8 +728,7 @@ export default function SecurityAwareness() {
                 ))}
               </div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
+              <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
@@ -777,7 +757,6 @@ export default function SecurityAwareness() {
         {/* Enhanced Platform Benefits with 3D Cards */}
         <motion.section 
           className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative overflow-hidden"
-          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
         >
@@ -804,8 +783,7 @@ export default function SecurityAwareness() {
                 }}
               />
               
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
+              <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
@@ -855,7 +833,6 @@ export default function SecurityAwareness() {
                   return (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 30, rotateX: -10 }}
                       whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                       whileHover={{ 
                         y: -8, 
@@ -919,8 +896,7 @@ export default function SecurityAwareness() {
               </div>
 
               {/* Enhanced CTA with 3D button effect */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
+              <motion.div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
@@ -963,7 +939,6 @@ export default function SecurityAwareness() {
                 
                 <motion.p 
                   className="text-slate-400 text-xs sm:text-sm mt-3 sm:mt-4"
-                  initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
                 >
