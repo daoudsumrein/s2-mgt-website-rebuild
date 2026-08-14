@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const companies = [
   { name: "A", url: "https://i.postimg.cc/bJCLnpdR/A.png" },
@@ -76,8 +75,6 @@ const companies = [
 ];
 
 export default function TrustedCompanies() {
-  const { ref, isInView } = useScrollAnimation();
-
   // Duplicate companies for seamless infinite loop
   const duplicatedCompanies = [...companies, ...companies];
 
@@ -106,9 +103,7 @@ export default function TrustedCompanies() {
       <section className="py-8 sm:py-12 lg:py-16 overflow-hidden bg-card">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-8 sm:mb-12 lg:mb-16"
           >

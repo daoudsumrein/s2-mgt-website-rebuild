@@ -99,7 +99,6 @@ const BackupPlatforms = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -117,7 +116,6 @@ const BackupPlatforms = () => {
             <motion.div 
               key={platform.className}
               className="group bg-card border border-border rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
