@@ -63,6 +63,9 @@ export default defineConfig({
       { path: "/404", prerender: { enabled: true, outputPath: "/404.html" } },
     ],
   },
+  // Static export target (Hostinger/LiteSpeed): no runtime server is deployed,
+  // so the nitro deploy plugin is disabled and the prerendered HTML in
+  // dist/client is the deployable artifact.
   nitro: false,
   vite: {
     plugins: [mcpPlugin()],
