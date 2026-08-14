@@ -5,7 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from "react-google-recaptcha";
+import type ReCAPTCHA from "react-google-recaptcha";
+import RecaptchaField from "@/components/RecaptchaField";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -208,7 +209,7 @@ export default function ContactForm() {
           
           {/* reCAPTCHA */}
           <div className="flex justify-center">
-            <ReCAPTCHA
+            <RecaptchaField
               ref={recaptchaRef}
               sitekey={RECAPTCHA_SITE_KEY}
               onChange={(value) => setRecaptchaValue(value)}
