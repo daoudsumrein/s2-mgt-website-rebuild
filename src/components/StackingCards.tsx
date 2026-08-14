@@ -19,24 +19,14 @@ interface StackingCardsProps {
 }
 
 export default function StackingCards({ cards, onCardClick }: StackingCardsProps) {
-  const [isMobile, setIsMobile] = useState(false);
   const [currentCard, setCurrentCard] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  useEffect(() => {
-    if (isMobile) return; // Skip scroll animation on mobile
+    const isDesktop = () => window.matchMedia('(min-width: 768px)').matches;
 
     const handleScroll = () => {
+      if (!isDesktop()) return;
       const cards = document.querySelectorAll(".desktop-card");
       const stackArea = document.querySelector(".stack-area");
 
@@ -82,25 +72,33 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
       rotateCards();
     };
 
-    // Initial setup for desktop
-    const cards = document.querySelectorAll(".desktop-card");
-    let angle = 0;
-    cards.forEach((card, index) => {
-      const cardElement = card as HTMLElement;
-      cardElement.style.transform = ` rotate(${angle}deg)`;
-      angle = angle - 10;
-      cardElement.style.zIndex = (cards.length - index).toString();
-    });
+    const initDesktop = () => {
+      if (!isDesktop()) return;
+      const cardEls = document.querySelectorAll(".desktop-card");
+      let angle = 0;
+      cardEls.forEach((card, index) => {
+        const cardElement = card as HTMLElement;
+        cardElement.style.transform = ` rotate(${angle}deg)`;
+        angle = angle - 10;
+        cardElement.style.zIndex = (cardEls.length - index).toString();
+      });
+      handleScroll();
+    };
 
-    // Initial call to set up the state correctly
-    handleScroll();
+    initDesktop();
+
+    const mql = window.matchMedia('(min-width: 768px)');
+    mql.addEventListener("change", initDesktop);
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMobile, cards.length, currentCard]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      mql.removeEventListener("change", initDesktop);
+    };
+  }, [cards.length, currentCard]);
 
   const scrollToCard = (cardIndex: number) => {
-    if (isMobile) return;
+    if (!window.matchMedia('(min-width: 768px)').matches) return;
     
     const stackArea = document.querySelector(".stack-area") as HTMLElement;
     if (!stackArea) return;
@@ -127,10 +125,10 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
     }
   };
 
-  // Mobile Design
-  if (isMobile) {
-    return (
-      <section className="py-16 bg-background">
+  return (
+    <>
+      {/* Mobile Design */}
+      <section className="md:hidden py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-foreground">Our Services</h2>
@@ -179,12 +177,7 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
 
         </div>
       </section>
-    );
-  }
 
-  // Desktop Design
-  return (
-    <>
       {/* Add the required CSS styles for desktop */}
       <style>{`
         .stack-area {
@@ -297,6 +290,7 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
          }
        `}</style>
 
+      <div className="hidden md:block">
       <div className="stack-area">
         <div className="left">
           <div className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
@@ -364,6 +358,7 @@ export default function StackingCards({ cards, onCardClick }: StackingCardsProps
             <ChevronDown className="h-5 w-5" />
           </button>
         </div>
+      </div>
       </div>
     </>
   );
