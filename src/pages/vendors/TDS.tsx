@@ -5,6 +5,35 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+const heroParticles = [
+  { left: "6%", top: "18%", delay: "0.4s", duration: "17s" },
+  { left: "14%", top: "72%", delay: "2.1s", duration: "21s" },
+  { left: "22%", top: "41%", delay: "3.6s", duration: "16s" },
+  { left: "29%", top: "88%", delay: "1.3s", duration: "23s" },
+  { left: "35%", top: "12%", delay: "4.2s", duration: "19s" },
+  { left: "43%", top: "57%", delay: "0.9s", duration: "24s" },
+  { left: "51%", top: "31%", delay: "2.8s", duration: "15s" },
+  { left: "58%", top: "79%", delay: "3.1s", duration: "22s" },
+  { left: "64%", top: "24%", delay: "1.7s", duration: "18s" },
+  { left: "71%", top: "63%", delay: "4.6s", duration: "20s" },
+  { left: "77%", top: "9%", delay: "0.2s", duration: "25s" },
+  { left: "83%", top: "48%", delay: "2.4s", duration: "16s" },
+  { left: "88%", top: "84%", delay: "3.9s", duration: "21s" },
+  { left: "93%", top: "37%", delay: "1.1s", duration: "19s" },
+  { left: "97%", top: "67%", delay: "4.9s", duration: "23s" },
+];
+
+const heroShapes = [
+  { width: "180px", height: "220px", left: "8%", top: "62%" },
+  { width: "140px", height: "160px", left: "21%", top: "15%" },
+  { width: "260px", height: "120px", left: "37%", top: "74%" },
+  { width: "110px", height: "240px", left: "49%", top: "28%" },
+  { width: "200px", height: "180px", left: "63%", top: "58%" },
+  { width: "150px", height: "290px", left: "74%", top: "11%" },
+  { width: "230px", height: "140px", left: "86%", top: "69%" },
+  { width: "120px", height: "200px", left: "94%", top: "34%" },
+];
+
 export default function TDSPage() {
   return (
     <>
@@ -27,15 +56,15 @@ export default function TDSPage() {
               
               {/* Animated flowing particles */}
               <div className="absolute inset-0 overflow-hidden">
-                {[...Array(15)].map((_, i) => (
+                {heroParticles.map((p, i) => (
                   <div
                     key={i}
                     className="absolute w-1 h-1 bg-cyan-400/30 rounded-full animate-float"
                     style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 5}s`,
-                      animationDuration: `${15 + Math.random() * 10}s`
+                      left: p.left,
+                      top: p.top,
+                      animationDelay: p.delay,
+                      animationDuration: p.duration
                     }}
                   />
                 ))}
@@ -43,15 +72,15 @@ export default function TDSPage() {
               
               {/* Hexagonal shapes */}
               <div className="absolute inset-0 opacity-5">
-                {[...Array(8)].map((_, i) => (
+                {heroShapes.map((s, i) => (
                   <div
                     key={i}
                     className="absolute border border-white/20 rotate-45"
                     style={{
-                      width: `${100 + Math.random() * 200}px`,
-                      height: `${100 + Math.random() * 200}px`,
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
+                      width: s.width,
+                      height: s.height,
+                      left: s.left,
+                      top: s.top,
                       clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
                     }}
                   />
