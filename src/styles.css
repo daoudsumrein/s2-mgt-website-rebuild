@@ -1,0 +1,506 @@
+/* FontAwesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * S2 design system — ported from the Classic stack's index.css + tailwind.config.ts.
+ * Color values stay as HSL triplets (consumed as hsl(var(--x))) because components
+ * also reference them directly via hsl(var(--primary)) etc.
+ */
+
+@theme inline {
+  --font-inter: 'Inter', sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-light: hsl(var(--primary-light));
+  --color-primary-muted: hsl(var(--primary-muted));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-ring-offset-background: hsl(var(--background));
+  --color-heading-blue: hsl(var(--heading-blue));
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --animate-gradient-shift: gradient-shift 8s ease-in-out infinite;
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}
+
+/* v3 container config port: centered, 2rem padding, capped at 1400px */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (min-width: 96rem) {
+    max-width: 1400px;
+  }
+}
+
+/* v3 backgroundImage extend port */
+@utility bg-gradient-metallic-blue {
+  background-image: var(--gradient-metallic-blue);
+}
+
+:root {
+  /* Light, professional color palette for S2 */
+  --background: 0 0% 99%;
+  --foreground: 210 12% 16%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 210 12% 16%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 12% 16%;
+
+  /* S2 Brand Colors - Logo Color Palette */
+  --primary: 206 80% 54%; /* Main Logo Color #27A3E8 */
+  --primary-foreground: 0 0% 100%;
+  --primary-light: 204 69% 95%;
+  --primary-muted: 204 40% 85%;
+
+  --secondary: 220 4% 51%; /* Secondary Logo Color #7B8083 */
+  --secondary-foreground: 0 0% 100%;
+
+  /* Legacy secondary for backwards compatibility */
+  --secondary-legacy: 210 16% 96%;
+  --secondary-legacy-foreground: 210 12% 16%;
+
+  --muted: 210 16% 97%;
+  --muted-foreground: 210 12% 16%; /* Changed from gray to black for better readability */
+
+  --accent: 204 50% 94%;
+  --accent-foreground: 210 12% 16%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 8% 88%;
+  --input: 220 8% 90%;
+  --ring: 204 69% 50%;
+
+  /* S2 Design System Tokens - Logo Color Palette */
+  --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(204 69% 65%));
+  --gradient-light: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+  --gradient-metallic-blue: linear-gradient(135deg, hsl(204 80% 70%), hsl(204 69% 50%), hsl(220 15% 35%));
+
+  /* Custom gradient backgrounds */
+  --gradient-blue-deep: linear-gradient(135deg, hsl(210, 15%, 97%), hsl(210, 20%, 94%));
+  --gradient-dark: linear-gradient(135deg, hsl(210, 15%, 97%), hsl(210, 20%, 94%));
+  --gradient-blue-bright: linear-gradient(135deg, hsl(210, 25%, 96%), hsl(210, 30%, 92%));
+  --gradient-light-custom: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(210, 16%, 98%));
+  --gradient-orange-section: linear-gradient(135deg, hsl(210, 20%, 96%), hsl(210, 25%, 93%));
+  --gradient-blue-vibrant: linear-gradient(135deg, hsl(210, 30%, 95%), hsl(210, 35%, 91%));
+  --gradient-orange-button: linear-gradient(135deg, hsl(20, 97%, 59%), hsl(20, 95%, 42%));
+
+  --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+  --shadow-card: 0 2px 8px -2px hsl(220 4% 51% / 0.08);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --radius: 0.75rem;
+
+  /* Custom heading color */
+  --heading-blue: 199 89% 48%; /* #0EA5E9 */
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 204 69% 50%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 204 69% 65%; /* Lighter version for dark mode */
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 220 8% 65%; /* Lighter secondary for dark mode */
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 204 69% 65%;
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 204 69% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 204 69% 50%;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  /* H2 styling - blue color, larger and bolder */
+  h2 {
+    color: #0066FF;
+    font-size: 3rem; /* Larger than default */
+    font-weight: 900; /* Extra bold */
+    background: none;
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 4rem; /* Even larger on desktop */
+    }
+  }
+
+  /* Navigation Performance Optimizations */
+  .navigation-menu-content {
+    contain: layout style paint;
+    will-change: transform, opacity;
+  }
+
+  .navigation-menu-trigger {
+    will-change: background-color, color;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  .navigation-menu-item:hover {
+    transform: translateZ(0);
+  }
+
+  /* Optimize dropdown animations */
+  [data-radix-navigation-menu-content] {
+    animation-fill-mode: forwards;
+    transform: translateZ(0);
+  }
+
+  /* Hardware acceleration for smooth interactions */
+  .hover\:bg-accent:hover,
+  .hover\:text-accent-foreground:hover {
+    transform: translateZ(0);
+  }
+}
+
+/* Floating particle animations */
+@keyframes floatMove {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-50px) translateX(30px) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-80px) translateX(-20px) rotate(180deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-30px) translateX(-40px) rotate(270deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes floatCircle {
+  0% {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Partner carousel animation */
+@keyframes partner-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Partner carousel styles */
+.partner-carousel-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  pointer-events: none;
+}
+
+.partner-track {
+  width: calc(200% + 200px);
+}
+
+.animate-partner-slide {
+  animation: partner-slide 30s linear infinite;
+}
+
+/* Trusted Companies Carousel Animations */
+@keyframes trusted-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-trusted-scroll {
+  animation: trusted-scroll 15s linear infinite;
+}
+
+.animate-trusted-scroll-paused {
+  animation-play-state: paused;
+}
+
+@media (max-width: 1024px) {
+  .animate-trusted-scroll {
+    animation-duration: 12s;
+  }
+}
+
+@media (max-width: 768px) {
+  .animate-trusted-scroll {
+    animation-duration: 10s;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-trusted-scroll {
+    animation-duration: 8s;
+  }
+}
+
+/* Optimized blob animations for iOS performance */
+@keyframes floatBlob1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-30px, 30px, 0);
+  }
+}
+
+@keyframes floatBlob2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(30px, -30px, 0);
+  }
+}
+
+.animate-float-blob-1 {
+  animation: floatBlob1 8s ease-in-out infinite;
+}
+
+.animate-float-blob-2 {
+  animation: floatBlob2 10s ease-in-out infinite;
+}
+
+/* Float animation for background particles */
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(15px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* Particle animations for individual floating particles */
+@keyframes particleFloat0 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, -15px) rotate(90deg); }
+  50% { transform: translate(-5px, -25px) rotate(180deg); }
+  75% { transform: translate(-15px, -10px) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes particleFloat1 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-12px, 8px) rotate(120deg); }
+  66% { transform: translate(8px, -18px) rotate(240deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes particleFloat2 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(15px, 10px) rotate(72deg); }
+  40% { transform: translate(-8px, 20px) rotate(144deg); }
+  60% { transform: translate(-18px, -5px) rotate(216deg); }
+  80% { transform: translate(5px, -22px) rotate(288deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Orbiting particle animations */
+@keyframes orbit0 {
+  0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+}
+
+@keyframes orbit1 {
+  0% { transform: rotate(0deg) translateX(45px) rotate(0deg); }
+  100% { transform: rotate(-360deg) translateX(45px) rotate(360deg); }
+}
+
+/* Perfect circle particles */
+.particle-dot {
+  border-radius: 50% !important;
+  aspect-ratio: 1 / 1;
+  width: var(--particle-size) !important;
+  height: var(--particle-size) !important;
+  display: block;
+  overflow: hidden;
+}
+
+/* Particle brightness effect on hover */
+.particle-container:hover .particle-dot {
+  opacity: 1 !important;
+  filter: brightness(1.8) saturate(1.4);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.9) !important;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.particle-container:hover .particles-bg {
+  opacity: 0.5 !important;
+  filter: brightness(1.6) saturate(1.2);
+  transition: all 0.3s ease;
+}
+
+.particle-container:hover .particle-orbit {
+  filter: brightness(1.5);
+  transition: all 0.3s ease;
+}
+
+/* Smooth particle animations for hero sections */
+@keyframes particle1 {
+  100% { transform: translate3d(80vw, 51vh, 9px); }
+}
+@keyframes particle2 {
+  100% { transform: translate3d(31vw, 35vh, 87px); }
+}
+@keyframes particle3 {
+  100% { transform: translate3d(42vw, 66vh, 40px); }
+}
+@keyframes particle4 {
+  100% { transform: translate3d(78vw, 4vh, 55px); }
+}
+@keyframes particle5 {
+  100% { transform: translate3d(2vw, 47vh, 68px); }
+}
+@keyframes particle6 {
+  100% { transform: translate3d(80vw, 35vh, 11px); }
+}
+@keyframes particle7 {
+  100% { transform: translate3d(63vw, 15vh, 59px); }
+}
+@keyframes particle8 {
+  100% { transform: translate3d(30vw, 64vh, 91px); }
+}
+@keyframes particle9 {
+  100% { transform: translate3d(60vw, 80vh, 97px); }
+}
+@keyframes particle10 {
+  100% { transform: translate3d(18vw, 5vh, 7px); }
+}
+@keyframes particle11 {
+  100% { transform: translate3d(88vw, 14vh, 71px); }
+}
+@keyframes particle12 {
+  100% { transform: translate3d(46vw, 5vh, 3px); }
+}
+@keyframes particle13 {
+  100% { transform: translate3d(51vw, 75vh, 18px); }
+}
+@keyframes particle14 {
+  100% { transform: translate3d(45vw, 46vh, 28px); }
+}
+@keyframes particle15 {
+  100% { transform: translate3d(16vw, 31vh, 36px); }
+}
