@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw, Server, Cloud } from "lucide-react";
 import StackingCards from "@/components/StackingCards";
 import { useEffect, useState } from "react";
@@ -107,14 +107,14 @@ const services = [
 ];
 
 export default function Services() {
-  const [carouselApi, setCarouselApi] = useState(null);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   const [direction, setDirection] = useState('forward'); // Track direction
   const [isPaused, setIsPaused] = useState(false); // Track pause state
   const [selectedService, setSelectedService] = useState(services[0]); // Default to first service
   const [hoveredService, setHoveredService] = useState(null);
   const { ref: detailsRef, isInView: detailsInView } = useScrollAnimation();
 
-  const handleCardClick = (service, index) => {
+  const handleCardClick = (service: (typeof services)[number], index: number) => {
     // Scroll to the specific service section
     setTimeout(() => {
       const serviceSection = document.querySelector(`#service-${index}`);
