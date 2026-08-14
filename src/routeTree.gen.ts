@@ -9,27 +9,870 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ClientsRouteImport } from './routes/clients'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SolutionsIndexRouteImport } from './routes/solutions/index'
+import { Route as SolutionsOpenTextServerBackupRouteImport } from './routes/solutions/OpenText-Server-Backup'
+import { Route as SolutionsAppModernizationRouteImport } from './routes/solutions/app-modernization'
+import { Route as SolutionsCloudMigrationRouteImport } from './routes/solutions/cloud-migration'
+import { Route as SolutionsContainerMigrationRouteImport } from './routes/solutions/container-migration'
+import { Route as SolutionsDataProtectionRouteImport } from './routes/solutions/data-protection'
+import { Route as SolutionsDisasterRecoveryOrchestrationRouteImport } from './routes/solutions/disaster-recovery-orchestration'
+import { Route as SolutionsEdrRouteImport } from './routes/solutions/edr'
+import { Route as SolutionsEmailArchivingRouteImport } from './routes/solutions/email-archiving'
+import { Route as SolutionsEmailEncryptionRouteImport } from './routes/solutions/email-encryption'
+import { Route as SolutionsEmailProtectionRouteImport } from './routes/solutions/email-protection'
+import { Route as SolutionsEndpointBackupRouteImport } from './routes/solutions/endpoint-backup'
+import { Route as SolutionsEndpointProtectionRouteImport } from './routes/solutions/endpoint-protection'
+import { Route as SolutionsItDiscoveryRouteImport } from './routes/solutions/it-discovery'
+import { Route as SolutionsMdrRouteImport } from './routes/solutions/mdr'
+import { Route as SolutionsOnpremBackupRouteImport } from './routes/solutions/onprem-backup'
+import { Route as SolutionsOpentextCarboniteAvailabilityRouteImport } from './routes/solutions/opentext-carbonite-availability'
+import { Route as SolutionsOpentextCarboniteMigrateRouteImport } from './routes/solutions/opentext-carbonite-migrate'
+import { Route as SolutionsRansomwareProtectionRouteImport } from './routes/solutions/ransomware-protection'
+import { Route as SolutionsSaasBackupRouteImport } from './routes/solutions/saas-backup'
+import { Route as SolutionsSecureCloudRouteImport } from './routes/solutions/secure-cloud'
+import { Route as SolutionsSecurityRouteImport } from './routes/solutions/security'
+import { Route as SolutionsSecurityAwarenessRouteImport } from './routes/solutions/security-awareness'
+import { Route as SolutionsServerMigrationOrchestrationRouteImport } from './routes/solutions/server-migration-orchestration'
+import { Route as SolutionsServersDataProtectionRouteImport } from './routes/solutions/servers-data-protection'
+import { Route as VendorsIndexRouteImport } from './routes/vendors/index'
+import { Route as VendorsAppcureRouteImport } from './routes/vendors/appcure'
+import { Route as VendorsArrosoftRouteImport } from './routes/vendors/arrosoft'
+import { Route as VendorsCloudcasaRouteImport } from './routes/vendors/cloudcasa'
+import { Route as VendorsNakivoRouteImport } from './routes/vendors/nakivo'
+import { Route as VendorsOpentextRouteImport } from './routes/vendors/opentext'
+import { Route as VendorsRivermeadowRouteImport } from './routes/vendors/rivermeadow'
+import { Route as VendorsSangforRouteImport } from './routes/vendors/sangfor'
+import { Route as VendorsTdsRouteImport } from './routes/vendors/tds'
 
-export interface FileRoutesByFullPath {}
-export interface FileRoutesByTo {}
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClientsRoute = ClientsRouteImport.update({
+  id: '/clients',
+  path: '/clients',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
+  id: '/solutions/',
+  path: '/solutions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsOpenTextServerBackupRoute =
+  SolutionsOpenTextServerBackupRouteImport.update({
+    id: '/solutions/OpenText-Server-Backup',
+    path: '/solutions/OpenText-Server-Backup',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsAppModernizationRoute =
+  SolutionsAppModernizationRouteImport.update({
+    id: '/solutions/app-modernization',
+    path: '/solutions/app-modernization',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsCloudMigrationRoute = SolutionsCloudMigrationRouteImport.update({
+  id: '/solutions/cloud-migration',
+  path: '/solutions/cloud-migration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsContainerMigrationRoute =
+  SolutionsContainerMigrationRouteImport.update({
+    id: '/solutions/container-migration',
+    path: '/solutions/container-migration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsDataProtectionRoute = SolutionsDataProtectionRouteImport.update({
+  id: '/solutions/data-protection',
+  path: '/solutions/data-protection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsDisasterRecoveryOrchestrationRoute =
+  SolutionsDisasterRecoveryOrchestrationRouteImport.update({
+    id: '/solutions/disaster-recovery-orchestration',
+    path: '/solutions/disaster-recovery-orchestration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsEdrRoute = SolutionsEdrRouteImport.update({
+  id: '/solutions/edr',
+  path: '/solutions/edr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsEmailArchivingRoute = SolutionsEmailArchivingRouteImport.update({
+  id: '/solutions/email-archiving',
+  path: '/solutions/email-archiving',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsEmailEncryptionRoute =
+  SolutionsEmailEncryptionRouteImport.update({
+    id: '/solutions/email-encryption',
+    path: '/solutions/email-encryption',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsEmailProtectionRoute =
+  SolutionsEmailProtectionRouteImport.update({
+    id: '/solutions/email-protection',
+    path: '/solutions/email-protection',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsEndpointBackupRoute = SolutionsEndpointBackupRouteImport.update({
+  id: '/solutions/endpoint-backup',
+  path: '/solutions/endpoint-backup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsEndpointProtectionRoute =
+  SolutionsEndpointProtectionRouteImport.update({
+    id: '/solutions/endpoint-protection',
+    path: '/solutions/endpoint-protection',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsItDiscoveryRoute = SolutionsItDiscoveryRouteImport.update({
+  id: '/solutions/it-discovery',
+  path: '/solutions/it-discovery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsMdrRoute = SolutionsMdrRouteImport.update({
+  id: '/solutions/mdr',
+  path: '/solutions/mdr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsOnpremBackupRoute = SolutionsOnpremBackupRouteImport.update({
+  id: '/solutions/onprem-backup',
+  path: '/solutions/onprem-backup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsOpentextCarboniteAvailabilityRoute =
+  SolutionsOpentextCarboniteAvailabilityRouteImport.update({
+    id: '/solutions/opentext-carbonite-availability',
+    path: '/solutions/opentext-carbonite-availability',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsOpentextCarboniteMigrateRoute =
+  SolutionsOpentextCarboniteMigrateRouteImport.update({
+    id: '/solutions/opentext-carbonite-migrate',
+    path: '/solutions/opentext-carbonite-migrate',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsRansomwareProtectionRoute =
+  SolutionsRansomwareProtectionRouteImport.update({
+    id: '/solutions/ransomware-protection',
+    path: '/solutions/ransomware-protection',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsSaasBackupRoute = SolutionsSaasBackupRouteImport.update({
+  id: '/solutions/saas-backup',
+  path: '/solutions/saas-backup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsSecureCloudRoute = SolutionsSecureCloudRouteImport.update({
+  id: '/solutions/secure-cloud',
+  path: '/solutions/secure-cloud',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsSecurityRoute = SolutionsSecurityRouteImport.update({
+  id: '/solutions/security',
+  path: '/solutions/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsSecurityAwarenessRoute =
+  SolutionsSecurityAwarenessRouteImport.update({
+    id: '/solutions/security-awareness',
+    path: '/solutions/security-awareness',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsServerMigrationOrchestrationRoute =
+  SolutionsServerMigrationOrchestrationRouteImport.update({
+    id: '/solutions/server-migration-orchestration',
+    path: '/solutions/server-migration-orchestration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsServersDataProtectionRoute =
+  SolutionsServersDataProtectionRouteImport.update({
+    id: '/solutions/servers-data-protection',
+    path: '/solutions/servers-data-protection',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VendorsIndexRoute = VendorsIndexRouteImport.update({
+  id: '/vendors/',
+  path: '/vendors/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsAppcureRoute = VendorsAppcureRouteImport.update({
+  id: '/vendors/appcure',
+  path: '/vendors/appcure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsArrosoftRoute = VendorsArrosoftRouteImport.update({
+  id: '/vendors/arrosoft',
+  path: '/vendors/arrosoft',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsCloudcasaRoute = VendorsCloudcasaRouteImport.update({
+  id: '/vendors/cloudcasa',
+  path: '/vendors/cloudcasa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsNakivoRoute = VendorsNakivoRouteImport.update({
+  id: '/vendors/nakivo',
+  path: '/vendors/nakivo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsOpentextRoute = VendorsOpentextRouteImport.update({
+  id: '/vendors/opentext',
+  path: '/vendors/opentext',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsRivermeadowRoute = VendorsRivermeadowRouteImport.update({
+  id: '/vendors/rivermeadow',
+  path: '/vendors/rivermeadow',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsSangforRoute = VendorsSangforRouteImport.update({
+  id: '/vendors/sangfor',
+  path: '/vendors/sangfor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsTdsRoute = VendorsTdsRouteImport.update({
+  id: '/vendors/tds',
+  path: '/vendors/tds',
+  getParentRoute: () => rootRouteImport,
+} as any)
+
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/clients': typeof ClientsRoute
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/solutions/OpenText-Server-Backup': typeof SolutionsOpenTextServerBackupRoute
+  '/solutions/app-modernization': typeof SolutionsAppModernizationRoute
+  '/solutions/cloud-migration': typeof SolutionsCloudMigrationRoute
+  '/solutions/container-migration': typeof SolutionsContainerMigrationRoute
+  '/solutions/data-protection': typeof SolutionsDataProtectionRoute
+  '/solutions/disaster-recovery-orchestration': typeof SolutionsDisasterRecoveryOrchestrationRoute
+  '/solutions/edr': typeof SolutionsEdrRoute
+  '/solutions/email-archiving': typeof SolutionsEmailArchivingRoute
+  '/solutions/email-encryption': typeof SolutionsEmailEncryptionRoute
+  '/solutions/email-protection': typeof SolutionsEmailProtectionRoute
+  '/solutions/endpoint-backup': typeof SolutionsEndpointBackupRoute
+  '/solutions/endpoint-protection': typeof SolutionsEndpointProtectionRoute
+  '/solutions/it-discovery': typeof SolutionsItDiscoveryRoute
+  '/solutions/mdr': typeof SolutionsMdrRoute
+  '/solutions/onprem-backup': typeof SolutionsOnpremBackupRoute
+  '/solutions/opentext-carbonite-availability': typeof SolutionsOpentextCarboniteAvailabilityRoute
+  '/solutions/opentext-carbonite-migrate': typeof SolutionsOpentextCarboniteMigrateRoute
+  '/solutions/ransomware-protection': typeof SolutionsRansomwareProtectionRoute
+  '/solutions/saas-backup': typeof SolutionsSaasBackupRoute
+  '/solutions/secure-cloud': typeof SolutionsSecureCloudRoute
+  '/solutions/security': typeof SolutionsSecurityRoute
+  '/solutions/security-awareness': typeof SolutionsSecurityAwarenessRoute
+  '/solutions/server-migration-orchestration': typeof SolutionsServerMigrationOrchestrationRoute
+  '/solutions/servers-data-protection': typeof SolutionsServersDataProtectionRoute
+  '/vendors/appcure': typeof VendorsAppcureRoute
+  '/vendors/arrosoft': typeof VendorsArrosoftRoute
+  '/vendors/cloudcasa': typeof VendorsCloudcasaRoute
+  '/vendors/nakivo': typeof VendorsNakivoRoute
+  '/vendors/opentext': typeof VendorsOpentextRoute
+  '/vendors/rivermeadow': typeof VendorsRivermeadowRoute
+  '/vendors/sangfor': typeof VendorsSangforRoute
+  '/vendors/tds': typeof VendorsTdsRoute
+  '/solutions/': typeof SolutionsIndexRoute
+  '/vendors/': typeof VendorsIndexRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/clients': typeof ClientsRoute
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/solutions/OpenText-Server-Backup': typeof SolutionsOpenTextServerBackupRoute
+  '/solutions/app-modernization': typeof SolutionsAppModernizationRoute
+  '/solutions/cloud-migration': typeof SolutionsCloudMigrationRoute
+  '/solutions/container-migration': typeof SolutionsContainerMigrationRoute
+  '/solutions/data-protection': typeof SolutionsDataProtectionRoute
+  '/solutions/disaster-recovery-orchestration': typeof SolutionsDisasterRecoveryOrchestrationRoute
+  '/solutions/edr': typeof SolutionsEdrRoute
+  '/solutions/email-archiving': typeof SolutionsEmailArchivingRoute
+  '/solutions/email-encryption': typeof SolutionsEmailEncryptionRoute
+  '/solutions/email-protection': typeof SolutionsEmailProtectionRoute
+  '/solutions/endpoint-backup': typeof SolutionsEndpointBackupRoute
+  '/solutions/endpoint-protection': typeof SolutionsEndpointProtectionRoute
+  '/solutions/it-discovery': typeof SolutionsItDiscoveryRoute
+  '/solutions/mdr': typeof SolutionsMdrRoute
+  '/solutions/onprem-backup': typeof SolutionsOnpremBackupRoute
+  '/solutions/opentext-carbonite-availability': typeof SolutionsOpentextCarboniteAvailabilityRoute
+  '/solutions/opentext-carbonite-migrate': typeof SolutionsOpentextCarboniteMigrateRoute
+  '/solutions/ransomware-protection': typeof SolutionsRansomwareProtectionRoute
+  '/solutions/saas-backup': typeof SolutionsSaasBackupRoute
+  '/solutions/secure-cloud': typeof SolutionsSecureCloudRoute
+  '/solutions/security': typeof SolutionsSecurityRoute
+  '/solutions/security-awareness': typeof SolutionsSecurityAwarenessRoute
+  '/solutions/server-migration-orchestration': typeof SolutionsServerMigrationOrchestrationRoute
+  '/solutions/servers-data-protection': typeof SolutionsServersDataProtectionRoute
+  '/vendors/appcure': typeof VendorsAppcureRoute
+  '/vendors/arrosoft': typeof VendorsArrosoftRoute
+  '/vendors/cloudcasa': typeof VendorsCloudcasaRoute
+  '/vendors/nakivo': typeof VendorsNakivoRoute
+  '/vendors/opentext': typeof VendorsOpentextRoute
+  '/vendors/rivermeadow': typeof VendorsRivermeadowRoute
+  '/vendors/sangfor': typeof VendorsSangforRoute
+  '/vendors/tds': typeof VendorsTdsRoute
+  '/solutions': typeof SolutionsIndexRoute
+  '/vendors': typeof VendorsIndexRoute
+}
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/clients': typeof ClientsRoute
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/solutions/OpenText-Server-Backup': typeof SolutionsOpenTextServerBackupRoute
+  '/solutions/app-modernization': typeof SolutionsAppModernizationRoute
+  '/solutions/cloud-migration': typeof SolutionsCloudMigrationRoute
+  '/solutions/container-migration': typeof SolutionsContainerMigrationRoute
+  '/solutions/data-protection': typeof SolutionsDataProtectionRoute
+  '/solutions/disaster-recovery-orchestration': typeof SolutionsDisasterRecoveryOrchestrationRoute
+  '/solutions/edr': typeof SolutionsEdrRoute
+  '/solutions/email-archiving': typeof SolutionsEmailArchivingRoute
+  '/solutions/email-encryption': typeof SolutionsEmailEncryptionRoute
+  '/solutions/email-protection': typeof SolutionsEmailProtectionRoute
+  '/solutions/endpoint-backup': typeof SolutionsEndpointBackupRoute
+  '/solutions/endpoint-protection': typeof SolutionsEndpointProtectionRoute
+  '/solutions/it-discovery': typeof SolutionsItDiscoveryRoute
+  '/solutions/mdr': typeof SolutionsMdrRoute
+  '/solutions/onprem-backup': typeof SolutionsOnpremBackupRoute
+  '/solutions/opentext-carbonite-availability': typeof SolutionsOpentextCarboniteAvailabilityRoute
+  '/solutions/opentext-carbonite-migrate': typeof SolutionsOpentextCarboniteMigrateRoute
+  '/solutions/ransomware-protection': typeof SolutionsRansomwareProtectionRoute
+  '/solutions/saas-backup': typeof SolutionsSaasBackupRoute
+  '/solutions/secure-cloud': typeof SolutionsSecureCloudRoute
+  '/solutions/security': typeof SolutionsSecurityRoute
+  '/solutions/security-awareness': typeof SolutionsSecurityAwarenessRoute
+  '/solutions/server-migration-orchestration': typeof SolutionsServerMigrationOrchestrationRoute
+  '/solutions/servers-data-protection': typeof SolutionsServersDataProtectionRoute
+  '/vendors/appcure': typeof VendorsAppcureRoute
+  '/vendors/arrosoft': typeof VendorsArrosoftRoute
+  '/vendors/cloudcasa': typeof VendorsCloudcasaRoute
+  '/vendors/nakivo': typeof VendorsNakivoRoute
+  '/vendors/opentext': typeof VendorsOpentextRoute
+  '/vendors/rivermeadow': typeof VendorsRivermeadowRoute
+  '/vendors/sangfor': typeof VendorsSangforRoute
+  '/vendors/tds': typeof VendorsTdsRoute
+  '/solutions/': typeof SolutionsIndexRoute
+  '/vendors/': typeof VendorsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: never
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/clients'
+    | '/contact'
+    | '/services'
+    | '/solutions/OpenText-Server-Backup'
+    | '/solutions/app-modernization'
+    | '/solutions/cloud-migration'
+    | '/solutions/container-migration'
+    | '/solutions/data-protection'
+    | '/solutions/disaster-recovery-orchestration'
+    | '/solutions/edr'
+    | '/solutions/email-archiving'
+    | '/solutions/email-encryption'
+    | '/solutions/email-protection'
+    | '/solutions/endpoint-backup'
+    | '/solutions/endpoint-protection'
+    | '/solutions/it-discovery'
+    | '/solutions/mdr'
+    | '/solutions/onprem-backup'
+    | '/solutions/opentext-carbonite-availability'
+    | '/solutions/opentext-carbonite-migrate'
+    | '/solutions/ransomware-protection'
+    | '/solutions/saas-backup'
+    | '/solutions/secure-cloud'
+    | '/solutions/security'
+    | '/solutions/security-awareness'
+    | '/solutions/server-migration-orchestration'
+    | '/solutions/servers-data-protection'
+    | '/vendors/appcure'
+    | '/vendors/arrosoft'
+    | '/vendors/cloudcasa'
+    | '/vendors/nakivo'
+    | '/vendors/opentext'
+    | '/vendors/rivermeadow'
+    | '/vendors/sangfor'
+    | '/vendors/tds'
+    | '/solutions/'
+    | '/vendors/'
   fileRoutesByTo: FileRoutesByTo
-  to: never
-  id: '__root__'
+  to:
+    | '/'
+    | '/about'
+    | '/clients'
+    | '/contact'
+    | '/services'
+    | '/solutions/OpenText-Server-Backup'
+    | '/solutions/app-modernization'
+    | '/solutions/cloud-migration'
+    | '/solutions/container-migration'
+    | '/solutions/data-protection'
+    | '/solutions/disaster-recovery-orchestration'
+    | '/solutions/edr'
+    | '/solutions/email-archiving'
+    | '/solutions/email-encryption'
+    | '/solutions/email-protection'
+    | '/solutions/endpoint-backup'
+    | '/solutions/endpoint-protection'
+    | '/solutions/it-discovery'
+    | '/solutions/mdr'
+    | '/solutions/onprem-backup'
+    | '/solutions/opentext-carbonite-availability'
+    | '/solutions/opentext-carbonite-migrate'
+    | '/solutions/ransomware-protection'
+    | '/solutions/saas-backup'
+    | '/solutions/secure-cloud'
+    | '/solutions/security'
+    | '/solutions/security-awareness'
+    | '/solutions/server-migration-orchestration'
+    | '/solutions/servers-data-protection'
+    | '/vendors/appcure'
+    | '/vendors/arrosoft'
+    | '/vendors/cloudcasa'
+    | '/vendors/nakivo'
+    | '/vendors/opentext'
+    | '/vendors/rivermeadow'
+    | '/vendors/sangfor'
+    | '/vendors/tds'
+    | '/solutions'
+    | '/vendors'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/clients'
+    | '/contact'
+    | '/services'
+    | '/solutions/OpenText-Server-Backup'
+    | '/solutions/app-modernization'
+    | '/solutions/cloud-migration'
+    | '/solutions/container-migration'
+    | '/solutions/data-protection'
+    | '/solutions/disaster-recovery-orchestration'
+    | '/solutions/edr'
+    | '/solutions/email-archiving'
+    | '/solutions/email-encryption'
+    | '/solutions/email-protection'
+    | '/solutions/endpoint-backup'
+    | '/solutions/endpoint-protection'
+    | '/solutions/it-discovery'
+    | '/solutions/mdr'
+    | '/solutions/onprem-backup'
+    | '/solutions/opentext-carbonite-availability'
+    | '/solutions/opentext-carbonite-migrate'
+    | '/solutions/ransomware-protection'
+    | '/solutions/saas-backup'
+    | '/solutions/secure-cloud'
+    | '/solutions/security'
+    | '/solutions/security-awareness'
+    | '/solutions/server-migration-orchestration'
+    | '/solutions/servers-data-protection'
+    | '/vendors/appcure'
+    | '/vendors/arrosoft'
+    | '/vendors/cloudcasa'
+    | '/vendors/nakivo'
+    | '/vendors/opentext'
+    | '/vendors/rivermeadow'
+    | '/vendors/sangfor'
+    | '/vendors/tds'
+    | '/solutions/'
+    | '/vendors/'
   fileRoutesById: FileRoutesById
 }
-export interface RootRouteChildren {}
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {}
+export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ClientsRoute: typeof ClientsRoute
+  ContactRoute: typeof ContactRoute
+  ServicesRoute: typeof ServicesRoute
+  SolutionsOpenTextServerBackupRoute: typeof SolutionsOpenTextServerBackupRoute
+  SolutionsAppModernizationRoute: typeof SolutionsAppModernizationRoute
+  SolutionsCloudMigrationRoute: typeof SolutionsCloudMigrationRoute
+  SolutionsContainerMigrationRoute: typeof SolutionsContainerMigrationRoute
+  SolutionsDataProtectionRoute: typeof SolutionsDataProtectionRoute
+  SolutionsDisasterRecoveryOrchestrationRoute: typeof SolutionsDisasterRecoveryOrchestrationRoute
+  SolutionsEdrRoute: typeof SolutionsEdrRoute
+  SolutionsEmailArchivingRoute: typeof SolutionsEmailArchivingRoute
+  SolutionsEmailEncryptionRoute: typeof SolutionsEmailEncryptionRoute
+  SolutionsEmailProtectionRoute: typeof SolutionsEmailProtectionRoute
+  SolutionsEndpointBackupRoute: typeof SolutionsEndpointBackupRoute
+  SolutionsEndpointProtectionRoute: typeof SolutionsEndpointProtectionRoute
+  SolutionsItDiscoveryRoute: typeof SolutionsItDiscoveryRoute
+  SolutionsMdrRoute: typeof SolutionsMdrRoute
+  SolutionsOnpremBackupRoute: typeof SolutionsOnpremBackupRoute
+  SolutionsOpentextCarboniteAvailabilityRoute: typeof SolutionsOpentextCarboniteAvailabilityRoute
+  SolutionsOpentextCarboniteMigrateRoute: typeof SolutionsOpentextCarboniteMigrateRoute
+  SolutionsRansomwareProtectionRoute: typeof SolutionsRansomwareProtectionRoute
+  SolutionsSaasBackupRoute: typeof SolutionsSaasBackupRoute
+  SolutionsSecureCloudRoute: typeof SolutionsSecureCloudRoute
+  SolutionsSecurityRoute: typeof SolutionsSecurityRoute
+  SolutionsSecurityAwarenessRoute: typeof SolutionsSecurityAwarenessRoute
+  SolutionsServerMigrationOrchestrationRoute: typeof SolutionsServerMigrationOrchestrationRoute
+  SolutionsServersDataProtectionRoute: typeof SolutionsServersDataProtectionRoute
+  VendorsAppcureRoute: typeof VendorsAppcureRoute
+  VendorsArrosoftRoute: typeof VendorsArrosoftRoute
+  VendorsCloudcasaRoute: typeof VendorsCloudcasaRoute
+  VendorsNakivoRoute: typeof VendorsNakivoRoute
+  VendorsOpentextRoute: typeof VendorsOpentextRoute
+  VendorsRivermeadowRoute: typeof VendorsRivermeadowRoute
+  VendorsSangforRoute: typeof VendorsSangforRoute
+  VendorsTdsRoute: typeof VendorsTdsRoute
+  SolutionsIndexRoute: typeof SolutionsIndexRoute
+  VendorsIndexRoute: typeof VendorsIndexRoute
 }
 
-const rootRouteChildren: RootRouteChildren = {}
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clients': {
+      id: '/clients'
+      path: '/clients'
+      fullPath: '/clients'
+      preLoaderRoute: typeof ClientsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/': {
+      id: '/solutions/'
+      path: '/solutions'
+      fullPath: '/solutions/'
+      preLoaderRoute: typeof SolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/OpenText-Server-Backup': {
+      id: '/solutions/OpenText-Server-Backup'
+      path: '/solutions/OpenText-Server-Backup'
+      fullPath: '/solutions/OpenText-Server-Backup'
+      preLoaderRoute: typeof SolutionsOpenTextServerBackupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/app-modernization': {
+      id: '/solutions/app-modernization'
+      path: '/solutions/app-modernization'
+      fullPath: '/solutions/app-modernization'
+      preLoaderRoute: typeof SolutionsAppModernizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/cloud-migration': {
+      id: '/solutions/cloud-migration'
+      path: '/solutions/cloud-migration'
+      fullPath: '/solutions/cloud-migration'
+      preLoaderRoute: typeof SolutionsCloudMigrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/container-migration': {
+      id: '/solutions/container-migration'
+      path: '/solutions/container-migration'
+      fullPath: '/solutions/container-migration'
+      preLoaderRoute: typeof SolutionsContainerMigrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/data-protection': {
+      id: '/solutions/data-protection'
+      path: '/solutions/data-protection'
+      fullPath: '/solutions/data-protection'
+      preLoaderRoute: typeof SolutionsDataProtectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/disaster-recovery-orchestration': {
+      id: '/solutions/disaster-recovery-orchestration'
+      path: '/solutions/disaster-recovery-orchestration'
+      fullPath: '/solutions/disaster-recovery-orchestration'
+      preLoaderRoute: typeof SolutionsDisasterRecoveryOrchestrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/edr': {
+      id: '/solutions/edr'
+      path: '/solutions/edr'
+      fullPath: '/solutions/edr'
+      preLoaderRoute: typeof SolutionsEdrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/email-archiving': {
+      id: '/solutions/email-archiving'
+      path: '/solutions/email-archiving'
+      fullPath: '/solutions/email-archiving'
+      preLoaderRoute: typeof SolutionsEmailArchivingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/email-encryption': {
+      id: '/solutions/email-encryption'
+      path: '/solutions/email-encryption'
+      fullPath: '/solutions/email-encryption'
+      preLoaderRoute: typeof SolutionsEmailEncryptionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/email-protection': {
+      id: '/solutions/email-protection'
+      path: '/solutions/email-protection'
+      fullPath: '/solutions/email-protection'
+      preLoaderRoute: typeof SolutionsEmailProtectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/endpoint-backup': {
+      id: '/solutions/endpoint-backup'
+      path: '/solutions/endpoint-backup'
+      fullPath: '/solutions/endpoint-backup'
+      preLoaderRoute: typeof SolutionsEndpointBackupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/endpoint-protection': {
+      id: '/solutions/endpoint-protection'
+      path: '/solutions/endpoint-protection'
+      fullPath: '/solutions/endpoint-protection'
+      preLoaderRoute: typeof SolutionsEndpointProtectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/it-discovery': {
+      id: '/solutions/it-discovery'
+      path: '/solutions/it-discovery'
+      fullPath: '/solutions/it-discovery'
+      preLoaderRoute: typeof SolutionsItDiscoveryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/mdr': {
+      id: '/solutions/mdr'
+      path: '/solutions/mdr'
+      fullPath: '/solutions/mdr'
+      preLoaderRoute: typeof SolutionsMdrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/onprem-backup': {
+      id: '/solutions/onprem-backup'
+      path: '/solutions/onprem-backup'
+      fullPath: '/solutions/onprem-backup'
+      preLoaderRoute: typeof SolutionsOnpremBackupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/opentext-carbonite-availability': {
+      id: '/solutions/opentext-carbonite-availability'
+      path: '/solutions/opentext-carbonite-availability'
+      fullPath: '/solutions/opentext-carbonite-availability'
+      preLoaderRoute: typeof SolutionsOpentextCarboniteAvailabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/opentext-carbonite-migrate': {
+      id: '/solutions/opentext-carbonite-migrate'
+      path: '/solutions/opentext-carbonite-migrate'
+      fullPath: '/solutions/opentext-carbonite-migrate'
+      preLoaderRoute: typeof SolutionsOpentextCarboniteMigrateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/ransomware-protection': {
+      id: '/solutions/ransomware-protection'
+      path: '/solutions/ransomware-protection'
+      fullPath: '/solutions/ransomware-protection'
+      preLoaderRoute: typeof SolutionsRansomwareProtectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/saas-backup': {
+      id: '/solutions/saas-backup'
+      path: '/solutions/saas-backup'
+      fullPath: '/solutions/saas-backup'
+      preLoaderRoute: typeof SolutionsSaasBackupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/secure-cloud': {
+      id: '/solutions/secure-cloud'
+      path: '/solutions/secure-cloud'
+      fullPath: '/solutions/secure-cloud'
+      preLoaderRoute: typeof SolutionsSecureCloudRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/security': {
+      id: '/solutions/security'
+      path: '/solutions/security'
+      fullPath: '/solutions/security'
+      preLoaderRoute: typeof SolutionsSecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/security-awareness': {
+      id: '/solutions/security-awareness'
+      path: '/solutions/security-awareness'
+      fullPath: '/solutions/security-awareness'
+      preLoaderRoute: typeof SolutionsSecurityAwarenessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/server-migration-orchestration': {
+      id: '/solutions/server-migration-orchestration'
+      path: '/solutions/server-migration-orchestration'
+      fullPath: '/solutions/server-migration-orchestration'
+      preLoaderRoute: typeof SolutionsServerMigrationOrchestrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/servers-data-protection': {
+      id: '/solutions/servers-data-protection'
+      path: '/solutions/servers-data-protection'
+      fullPath: '/solutions/servers-data-protection'
+      preLoaderRoute: typeof SolutionsServersDataProtectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/': {
+      id: '/vendors/'
+      path: '/vendors'
+      fullPath: '/vendors/'
+      preLoaderRoute: typeof VendorsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/appcure': {
+      id: '/vendors/appcure'
+      path: '/vendors/appcure'
+      fullPath: '/vendors/appcure'
+      preLoaderRoute: typeof VendorsAppcureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/arrosoft': {
+      id: '/vendors/arrosoft'
+      path: '/vendors/arrosoft'
+      fullPath: '/vendors/arrosoft'
+      preLoaderRoute: typeof VendorsArrosoftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/cloudcasa': {
+      id: '/vendors/cloudcasa'
+      path: '/vendors/cloudcasa'
+      fullPath: '/vendors/cloudcasa'
+      preLoaderRoute: typeof VendorsCloudcasaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/nakivo': {
+      id: '/vendors/nakivo'
+      path: '/vendors/nakivo'
+      fullPath: '/vendors/nakivo'
+      preLoaderRoute: typeof VendorsNakivoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/opentext': {
+      id: '/vendors/opentext'
+      path: '/vendors/opentext'
+      fullPath: '/vendors/opentext'
+      preLoaderRoute: typeof VendorsOpentextRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/rivermeadow': {
+      id: '/vendors/rivermeadow'
+      path: '/vendors/rivermeadow'
+      fullPath: '/vendors/rivermeadow'
+      preLoaderRoute: typeof VendorsRivermeadowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/sangfor': {
+      id: '/vendors/sangfor'
+      path: '/vendors/sangfor'
+      fullPath: '/vendors/sangfor'
+      preLoaderRoute: typeof VendorsSangforRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors/tds': {
+      id: '/vendors/tds'
+      path: '/vendors/tds'
+      fullPath: '/vendors/tds'
+      preLoaderRoute: typeof VendorsTdsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
+}
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ClientsRoute: ClientsRoute,
+  ContactRoute: ContactRoute,
+  ServicesRoute: ServicesRoute,
+  SolutionsOpenTextServerBackupRoute: SolutionsOpenTextServerBackupRoute,
+  SolutionsAppModernizationRoute: SolutionsAppModernizationRoute,
+  SolutionsCloudMigrationRoute: SolutionsCloudMigrationRoute,
+  SolutionsContainerMigrationRoute: SolutionsContainerMigrationRoute,
+  SolutionsDataProtectionRoute: SolutionsDataProtectionRoute,
+  SolutionsDisasterRecoveryOrchestrationRoute:
+    SolutionsDisasterRecoveryOrchestrationRoute,
+  SolutionsEdrRoute: SolutionsEdrRoute,
+  SolutionsEmailArchivingRoute: SolutionsEmailArchivingRoute,
+  SolutionsEmailEncryptionRoute: SolutionsEmailEncryptionRoute,
+  SolutionsEmailProtectionRoute: SolutionsEmailProtectionRoute,
+  SolutionsEndpointBackupRoute: SolutionsEndpointBackupRoute,
+  SolutionsEndpointProtectionRoute: SolutionsEndpointProtectionRoute,
+  SolutionsItDiscoveryRoute: SolutionsItDiscoveryRoute,
+  SolutionsMdrRoute: SolutionsMdrRoute,
+  SolutionsOnpremBackupRoute: SolutionsOnpremBackupRoute,
+  SolutionsOpentextCarboniteAvailabilityRoute:
+    SolutionsOpentextCarboniteAvailabilityRoute,
+  SolutionsOpentextCarboniteMigrateRoute:
+    SolutionsOpentextCarboniteMigrateRoute,
+  SolutionsRansomwareProtectionRoute: SolutionsRansomwareProtectionRoute,
+  SolutionsSaasBackupRoute: SolutionsSaasBackupRoute,
+  SolutionsSecureCloudRoute: SolutionsSecureCloudRoute,
+  SolutionsSecurityRoute: SolutionsSecurityRoute,
+  SolutionsSecurityAwarenessRoute: SolutionsSecurityAwarenessRoute,
+  SolutionsServerMigrationOrchestrationRoute:
+    SolutionsServerMigrationOrchestrationRoute,
+  SolutionsServersDataProtectionRoute: SolutionsServersDataProtectionRoute,
+  VendorsAppcureRoute: VendorsAppcureRoute,
+  VendorsArrosoftRoute: VendorsArrosoftRoute,
+  VendorsCloudcasaRoute: VendorsCloudcasaRoute,
+  VendorsNakivoRoute: VendorsNakivoRoute,
+  VendorsOpentextRoute: VendorsOpentextRoute,
+  VendorsRivermeadowRoute: VendorsRivermeadowRoute,
+  VendorsSangforRoute: VendorsSangforRoute,
+  VendorsTdsRoute: VendorsTdsRoute,
+  SolutionsIndexRoute: SolutionsIndexRoute,
+  VendorsIndexRoute: VendorsIndexRoute,
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
