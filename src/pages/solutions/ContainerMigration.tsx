@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/router-compat';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navigation from '@/components/Navigation';

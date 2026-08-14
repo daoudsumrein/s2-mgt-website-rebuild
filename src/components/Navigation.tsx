@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/router-compat";
 import { ChevronDown, Menu, X, ExternalLink, Shield, Database, Home, Plus, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
