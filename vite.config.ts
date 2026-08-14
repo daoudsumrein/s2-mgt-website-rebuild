@@ -64,7 +64,11 @@ export default defineConfig({
     ],
   },
   // Static export target (Hostinger/LiteSpeed): no runtime server is deployed.
-  nitro: { preset: "static" },
+  // Note: the build environment forces nitro's cloudflare-module preset, which
+  // breaks the prerender preview server ("Cannot find module dist/server/server.js").
+  // Disabling nitro entirely is the working equivalent of a static preset here:
+  // the prerendered HTML in dist/client is the deployable artifact.
+  nitro: false,
   vite: {
     plugins: [mcpPlugin()],
   },
