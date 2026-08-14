@@ -99,7 +99,7 @@ export default function ServerBackup() {
             ease: "easeOut"
           }} className="max-w-7xl mx-auto">
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+              <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                 
@@ -686,7 +686,7 @@ export default function ServerBackup() {
                 }
               }} viewport={{
                 once: true
-              }} className="bg-slate-50 hover:bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group">
+              }} className="bg-slate-50 hover:bg-white rounded-xl p-6 shadow-xs hover:shadow-lg transition-all duration-300 relative overflow-hidden group">
                     <motion.i whileHover={{
                   scale: 1.1
                 }} className={`${feature.icon} text-3xl text-blue-500 mb-4`} />

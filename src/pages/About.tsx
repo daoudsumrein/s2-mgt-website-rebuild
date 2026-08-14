@@ -51,7 +51,7 @@ export default function About() {
               className="max-w-5xl mx-auto text-center"
             >
               {/* Hero Glass Container */}
-              <div className="bg-white/90 border-2 border-[#2392CF] rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-2xl hover:shadow-[#2392CF]/20 transition-all duration-500">
+              <div className="bg-white/90 border-2 border-[#2392CF] rounded-2xl p-8 md:p-12 backdrop-blur-xs shadow-2xl hover:shadow-[#2392CF]/20 transition-all duration-500">
                 <Badge variant="outline" className="border-[#2392CF]/50 text-[#2392CF] bg-[#2392CF]/10 hover:bg-[#2392CF]/20 mb-6 text-sm px-6 py-2 font-bold uppercase tracking-wider">
                   Founded 2013
                 </Badge>

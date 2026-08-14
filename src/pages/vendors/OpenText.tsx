@@ -81,8 +81,8 @@ export default function OpenTextPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
-                  <div className="bg-white backdrop-blur-sm rounded-lg flex items-center justify-center p-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="42" viewBox="0 0 200 32" fill="none" className="w-48 sm:w-56 lg:w-72 h-auto rounded-sm">
+                  <div className="bg-white backdrop-blur-xs rounded-lg flex items-center justify-center p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="42" viewBox="0 0 200 32" fill="none" className="w-48 sm:w-56 lg:w-72 h-auto rounded-xs">
                        <g clipPath="url(#ot-logo-clip-path)">
                           <path d="M64.1399 15.9434C64.1399 20.8204 61.3318 26.1042 53.7955 26.1042C48.3674 26.1042 43.416 23.073 43.416 15.9434C43.416 10.0342 47.147 5.48963 54.5347 5.89641C62.4034 6.33818 64.1399 12.4355 64.1399 15.9434ZM50.1038 12.2343C49.404 13.3147 49.1415 14.6137 49.1415 15.9128C49.1415 18.9046 50.6199 21.6121 53.7955 21.6121C56.971 21.6121 58.375 19.1189 58.375 16.1621C58.375 14.0714 57.8589 12.4486 56.7873 11.4382C55.6063 10.3579 54.2766 10.3229 53.463 10.3929C51.8359 10.5022 50.878 11.0402 50.0994 12.2299H50.1038V12.2343Z" fill="#101C2F"></path>
                           <path d="M114.581 8.07472C115.136 7.48424 115.503 7.04247 116.501 6.56133C117.389 6.19391 118.644 5.89648 120.009 5.89648C121.155 5.89648 122.445 6.08019 123.447 6.63569C125.48 7.70731 125.997 9.44378 125.997 12.4356V25.6231H120.345V14.7625C120.345 13.0261 120.31 12.3962 120.087 11.8801C119.646 10.8478 118.648 10.4017 117.537 10.4017C114.546 10.4017 114.546 12.803 114.546 15.2043V25.6231H108.855V6.37762H114.581V8.0791V8.07472Z" fill="#101C2F"></path>
@@ -147,7 +147,7 @@ export default function OpenTextPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               >
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-white/20 ">
+                <div className="bg-white/10 backdrop-blur-xs rounded-2xl p-4 lg:p-8 border border-white/20 ">
                   <div className="vidyard-player-wrap">
                     <img className="vidyard-player-embed js-embed-vidyard w-full h-auto rounded-xl object-cover" 
                          data-uuid="b6xu2sAXPMQNB1bgy4CrQz"
@@ -190,7 +190,7 @@ export default function OpenTextPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-12">
                 {/* Carbonite */}
                 <motion.div
-                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-blue-400/50 hover:shadow-[0_20px_40px_rgba(74,158,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
+                  className="relative bg-white/8 backdrop-blur-xs rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-blue-400/50 hover:shadow-[0_20px_40px_rgba(74,158,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -231,7 +231,7 @@ export default function OpenTextPage() {
 
                 {/* Webroot */}
                 <motion.div
-                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-green-400/50 hover:shadow-[0_20px_40px_rgba(76,175,80,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
+                  className="relative bg-white/8 backdrop-blur-xs rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-green-400/50 hover:shadow-[0_20px_40px_rgba(76,175,80,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -276,7 +276,7 @@ export default function OpenTextPage() {
 
                 {/* MailStore */}
                 <motion.div
-                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-orange-400/50 hover:shadow-[0_20px_40px_rgba(255,107,53,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
+                  className="relative bg-white/8 backdrop-blur-xs rounded-2xl p-6 sm:p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-orange-400/50 hover:shadow-[0_20px_40px_rgba(255,107,53,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group h-40 sm:h-48"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
@@ -338,7 +338,7 @@ export default function OpenTextPage() {
 
                 {/* Cloudally */}
                 <motion.div
-                  className="relative bg-white/8 backdrop-blur-sm rounded-2xl p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-cyan-400/50 hover:shadow-[0_20px_40px_rgba(0,212,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
+                  className="relative bg-white/8 backdrop-blur-xs rounded-2xl p-10 border border-white/10 transition-all duration-500 hover:bg-white/12 hover:border-cyan-400/50 hover:shadow-[0_20px_40px_rgba(0,212,255,0.2)] hover:-translate-y-3 hover:scale-105 overflow-hidden group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}

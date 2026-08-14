@@ -73,7 +73,7 @@ export default function ServersDataProtection() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-               <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
+               <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
                  const particles = document.querySelectorAll('.particle');
                  particles.forEach(particle => {
                    (particle as HTMLElement).style.opacity = '1';

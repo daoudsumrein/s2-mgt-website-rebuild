@@ -75,7 +75,7 @@ export default function MDR() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
                 const particles = document.querySelectorAll('.particle');
                 particles.forEach(particle => {
                   (particle as HTMLElement).style.opacity = '1';
@@ -487,7 +487,7 @@ export default function MDR() {
                   transition={{ duration: 0.8, delay: 0.6 }}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <Card className="bg-muted/50 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-500 relative group overflow-hidden">
+                  <Card className="bg-muted/50 backdrop-blur-xs shadow-xl hover:shadow-2xl transition-all duration-500 relative group overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
                     <CardContent className="p-6 relative z-10">
@@ -742,7 +742,7 @@ export default function MDR() {
               transition={{ duration: 0.8, delay: 0.2 }}
               whileHover={{ scale: 1.02 }}
             >
-              <Card className="max-w-4xl mx-auto text-center bg-muted/50 backdrop-blur-sm shadow-xl relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100">
+              <Card className="max-w-4xl mx-auto text-center bg-muted/50 backdrop-blur-xs shadow-xl relative group overflow-hidden border-0 bg-gradient-to-br from-white via-gray-50 to-gray-100">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:left-full transition-all duration-1000 transform skew-x-12"></div>
                 <CardContent className="p-12 relative z-10">

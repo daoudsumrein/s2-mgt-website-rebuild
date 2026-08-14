@@ -241,7 +241,7 @@ export default function EndpointProtection() {
               className="max-w-7xl mx-auto"
             >
                 {/* Hero Container */}
-                <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
+                <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
                   const particles = document.querySelectorAll('.particle');
                   particles.forEach(particle => {
                     (particle as HTMLElement).style.opacity = '1';
@@ -557,7 +557,7 @@ export default function EndpointProtection() {
               animate={stagesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Card className="backdrop-blur-sm border-primary/20">
+              <Card className="backdrop-blur-xs border-primary/20">
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
                     Three-Stage Protection Model
@@ -623,7 +623,7 @@ export default function EndpointProtection() {
               animate={ctaInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Card className="backdrop-blur-sm border-primary/20">
+              <Card className="backdrop-blur-xs border-primary/20">
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
                     Award-Winning Endpoint Security

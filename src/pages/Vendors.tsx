@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink, Users, Target, Headphones } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import nakivoLogo from "@/assets/logos/nakivo-logo-new.png";
 import rivermeadowLogo from "@/assets/logos/rivermeadow-logo.webp";
 import cloudCasaLogo from "@/assets/logos/cloudcasa-icon.png";

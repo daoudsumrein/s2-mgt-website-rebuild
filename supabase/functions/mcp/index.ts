@@ -7,7 +7,7 @@ import { defineMcp } from "npm:@lovable.dev/mcp-js@0.26.2";
 
 // src/lib/mcp/tools/list-solutions.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.2";
-import { z } from "npm:zod@^3.25.76";
+import { z } from "npm:zod@^3.24.2";
 
 // src/lib/mcp/data.ts
 var SITE_URL = "https://s2mgt.com";
@@ -76,7 +76,7 @@ var list_solutions_default = defineTool({
 
 // src/lib/mcp/tools/get-solution.ts
 import { defineTool as defineTool2, ToolError } from "npm:@lovable.dev/mcp-js@0.26.2";
-import { z as z2 } from "npm:zod@^3.25.76";
+import { z as z2 } from "npm:zod@^3.24.2";
 var get_solution_default = defineTool2({
   name: "get_solution",
   title: "Get solution details",
@@ -101,7 +101,7 @@ var get_solution_default = defineTool2({
 
 // src/lib/mcp/tools/list-vendors.ts
 import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.26.2";
-import { z as z3 } from "npm:zod@^3.25.76";
+import { z as z3 } from "npm:zod@^3.24.2";
 var list_vendors_default = defineTool3({
   name: "list_vendors",
   title: "List technology partners",
@@ -147,6 +147,7 @@ var mcp_default = defineMcp({
   title: "s2-mgt-website-rebuild",
   version: "0.1.0",
   instructions: "Public tools for the S2 Management Solutions website. Use `list_solutions` and `get_solution` for data protection and cybersecurity offerings, `list_vendors` for technology partners, and `get_company_info` for services, offices and contact details.",
+  // @ts-expect-error upstream @lovable.dev/mcp-js types outputSchema as non-optional under exactOptionalPropertyTypes; tools without outputSchema are valid at runtime
   tools: [list_solutions_default, get_solution_default, list_vendors_default, get_company_info_default]
 });
 

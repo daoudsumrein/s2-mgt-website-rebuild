@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Server, Workflow, Search, Cloud, Lock, ArrowRight, CheckCircle, Database, Eye, Users, Mail, Key, Container, CloudUpload } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -236,7 +236,7 @@ export default function Solutions() {
             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center w-full">
               {/* Left Content */}
               <div className="z-10 text-center lg:text-left">
-                <Badge variant="outline" className="mb-4 md:mb-6 border-primary/40 text-primary bg-primary/10 backdrop-blur-sm">
+                <Badge variant="outline" className="mb-4 md:mb-6 border-primary/40 text-primary bg-primary/10 backdrop-blur-xs">
                   Solutions Portfolio
                 </Badge>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-primary via-blue-400 to-teal-400 bg-clip-text text-transparent">
@@ -327,13 +327,13 @@ export default function Solutions() {
                   <div className={`absolute -bottom-16 md:-bottom-20 left-1/2 transform -translate-x-1/2 hidden sm:flex gap-4 md:gap-6 transition-all duration-500 ${
                     activeSection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}>
-                    <Card className="w-36 sm:w-40 md:w-48 bg-slate-800/80 backdrop-blur-sm border-primary/30">
+                    <Card className="w-36 sm:w-40 md:w-48 bg-slate-800/80 backdrop-blur-xs border-primary/30">
                       <CardContent className="p-3 md:p-4 text-center">
                         <h4 className="font-semibold text-primary mb-1 md:mb-2 text-sm md:text-base">Data Protection</h4>
                         <p className="text-xs md:text-sm text-slate-300">Advanced backup & recovery solutions</p>
                       </CardContent>
                     </Card>
-                    <Card className="w-36 sm:w-40 md:w-48 bg-slate-800/80 backdrop-blur-sm border-teal-500/30">
+                    <Card className="w-36 sm:w-40 md:w-48 bg-slate-800/80 backdrop-blur-xs border-teal-500/30">
                       <CardContent className="p-3 md:p-4 text-center">
                         <h4 className="font-semibold text-teal-400 mb-1 md:mb-2 text-sm md:text-base">Cyber Security</h4>
                         <p className="text-xs md:text-sm text-slate-300">Comprehensive threat protection</p>

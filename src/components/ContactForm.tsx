@@ -128,7 +128,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="bg-card/50 backdrop-blur-sm border-border/20">
+    <Card className="bg-card/50 backdrop-blur-xs border-border/20">
       <CardContent className="p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">

@@ -68,7 +68,7 @@ export default function SecurityAwareness() {
               className="max-w-7xl mx-auto"
             >
               {/* Hero Container */}
-              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
+              <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
                 const particles = document.querySelectorAll('.particle');
                 particles.forEach(particle => {
                   (particle as HTMLElement).style.opacity = '1';
@@ -116,7 +116,7 @@ export default function SecurityAwareness() {
                   {/* Right Video */}
                   <div className="order-first lg:order-last">
                     <div className="relative overflow-hidden h-[200px] sm:h-[280px] md:h-[320px] lg:h-[360px] group/media hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-400 rounded-lg sm:rounded-xl">
-                      <div className="w-full h-full rounded-lg overflow-hidden bg-slate-900/50 backdrop-blur-sm border border-blue-500/20">
+                      <div className="w-full h-full rounded-lg overflow-hidden bg-slate-900/50 backdrop-blur-xs border border-blue-500/20">
                         <iframe
                           src="https://player.vimeo.com/video/386842077?badge=0&autopause=0&player_id=0&app_id=58479"
                           title="Vimeo video player"
@@ -414,7 +414,7 @@ export default function SecurityAwareness() {
                       boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.15)"
                     }}
                     viewport={{ once: true }}
-                    className={`${feature.color} backdrop-blur-lg rounded-xl sm:rounded-2xl p-6 sm:p-8 border shadow-sm hover:shadow-lg transition-all duration-500 relative overflow-hidden group cursor-pointer transform-gpu`}
+                    className={`${feature.color} backdrop-blur-lg rounded-xl sm:rounded-2xl p-6 sm:p-8 border shadow-xs hover:shadow-lg transition-all duration-500 relative overflow-hidden group cursor-pointer transform-gpu`}
                     transition={{
                       delay: index * 0.08,
                       duration: 0.8,
@@ -429,7 +429,7 @@ export default function SecurityAwareness() {
                     />
                     
                     <motion.div 
-                      className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-lg sm:rounded-xl mb-4 sm:mb-6 mx-auto shadow-sm relative z-10"
+                      className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-lg sm:rounded-xl mb-4 sm:mb-6 mx-auto shadow-xs relative z-10"
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     >
@@ -889,7 +889,7 @@ export default function SecurityAwareness() {
                       
                       {/* Icon container - Mobile optimized sizing */}
                       <motion.div 
-                        className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/10 hover:bg-white/20 rounded-lg sm:rounded-xl lg:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3 lg:mb-4 backdrop-blur-sm transition-colors relative z-10"
+                        className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/10 hover:bg-white/20 rounded-lg sm:rounded-xl lg:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3 lg:mb-4 backdrop-blur-xs transition-colors relative z-10"
                         whileHover={{ rotate: 15, scale: 1.1 }}
                         whileTap={{ rotate: 0, scale: 0.95 }}
                         transition={{ duration: 0.4 }}

@@ -141,7 +141,7 @@ export default function RansomwareProtection() {
                 className="max-w-7xl mx-auto"
               >
                   {/* Hero Container */}
-                  <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
+                  <div className="relative bg-slate-900/90 border-2 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden hero-card" style={{ borderColor: "#14B8A6" }} onMouseEnter={() => {
                     const particles = document.querySelectorAll('.particle');
                     particles.forEach(particle => {
                       (particle as HTMLElement).style.opacity = '1';
@@ -380,9 +380,9 @@ export default function RansomwareProtection() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   whileHover={{ scale: 1.02, y: -5 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg p-4 shadow-sm border hover:shadow-lg transition-all duration-300"
+                  className="bg-white rounded-lg p-4 shadow-xs border hover:shadow-lg transition-all duration-300"
                 >
-                  <img src="/lovable-uploads/254b6e8a-1f01-4f1f-842c-1e5098b969c3.png" alt="AirGap Ransomware Protection Architecture Diagram showing Primary Site, Secondary Site, Software Integration, Backup Data flow, and AirGap Vault with security features" className="w-full h-auto rounded" />
+                  <img src="/lovable-uploads/254b6e8a-1f01-4f1f-842c-1e5098b969c3.png" alt="AirGap Ransomware Protection Architecture Diagram showing Primary Site, Secondary Site, Software Integration, Backup Data flow, and AirGap Vault with security features" className="w-full h-auto rounded-sm" />
                 </motion.div>
               </div>
             </div>

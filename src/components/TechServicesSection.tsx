@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 const TechServicesSection = () => {
   const [activeSection, setActiveSection] = useState<'data-protection' | 'cybersecurity'>('data-protection');
@@ -87,8 +87,8 @@ const TechServicesSection = () => {
             </h2>
             
             <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8 md:grid md:grid-cols-2 md:gap-8 md:mb-10 lg:gap-10 lg:mb-12 xl:gap-12 max-w-full sm:max-w-[800px]">
-              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
-                {dataProtectionServices[0].map((service, index) => (
+              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-xs">
+                {(dataProtectionServices[0] ?? []).map((service, index) => (
                   <Link 
                     key={index} 
                     to={getServiceUrl(service)}
@@ -98,8 +98,8 @@ const TechServicesSection = () => {
                   </Link>
                 ))}
               </div>
-              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
-                {dataProtectionServices[1].map((service, index) => (
+              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-xs">
+                {(dataProtectionServices[1] ?? []).map((service, index) => (
                   <Link 
                     key={index} 
                     to={getServiceUrl(service)}
@@ -131,8 +131,8 @@ const TechServicesSection = () => {
             </h2>
             
             <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8 md:grid md:grid-cols-2 md:gap-8 md:mb-10 lg:gap-10 lg:mb-12 xl:gap-12 max-w-full sm:max-w-[800px]">
-              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
-                {cybersecurityServices[0].map((service, index) => (
+              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-xs">
+                {(cybersecurityServices[0] ?? []).map((service, index) => (
                   <Link 
                     key={index} 
                     to={getServiceUrl(service)}
@@ -142,8 +142,8 @@ const TechServicesSection = () => {
                   </Link>
                 ))}
               </div>
-              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-sm">
-                {cybersecurityServices[1].map((service, index) => (
+              <div className="flex flex-col gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg bg-white/5 backdrop-blur-xs">
+                {(cybersecurityServices[1] ?? []).map((service, index) => (
                   <Link 
                     key={index} 
                     to={getServiceUrl(service)}

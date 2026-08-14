@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import { ArrowRight, Users, Building, Wrench, Shield, Zap, RefreshCw, Server, Cloud } from "lucide-react";
 import StackingCards from "@/components/StackingCards";
 import { useEffect, useState } from "react";
@@ -107,14 +107,14 @@ const services = [
 ];
 
 export default function Services() {
-  const [carouselApi, setCarouselApi] = useState(null);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   const [direction, setDirection] = useState('forward'); // Track direction
   const [isPaused, setIsPaused] = useState(false); // Track pause state
   const [selectedService, setSelectedService] = useState(services[0]); // Default to first service
   const [hoveredService, setHoveredService] = useState(null);
   const { ref: detailsRef, isInView: detailsInView } = useScrollAnimation();
 
-  const handleCardClick = (service, index) => {
+  const handleCardClick = (service: { title: string }, index: number) => {
     // Scroll to the specific service section
     setTimeout(() => {
       const serviceSection = document.querySelector(`#service-${index}`);
@@ -194,7 +194,7 @@ export default function Services() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="mb-8 sm:mb-12 lg:mb-16 last:mb-0"
                   >
-                     <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-4 sm:p-6 lg:p-8">
+                     <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur-xs border border-primary/20 rounded-2xl p-4 sm:p-6 lg:p-8">
                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 sm:mb-8">
                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                            <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />

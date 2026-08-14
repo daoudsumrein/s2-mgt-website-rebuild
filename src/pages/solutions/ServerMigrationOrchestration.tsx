@@ -85,7 +85,7 @@ export default function ServerMigrationOrchestration() {
               ease: "easeOut"
             }}>
                 {/* Hero Container */}
-                <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-sm shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+                <div className="relative bg-slate-900/90 border-2 border-blue-500 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 backdrop-blur-xs shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
                   {/* Shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />
                   
@@ -493,7 +493,7 @@ export default function ServerMigrationOrchestration() {
                 Proven Results That Transform Your Business
               </h2>
               
-              <motion.div {...useScrollAnimation()} className="bg-primary/10 p-12 lg:p-16 rounded-3xl border border-primary/20 backdrop-blur-sm max-w-4xl mx-auto mb-12">
+              <motion.div {...useScrollAnimation()} className="bg-primary/10 p-12 lg:p-16 rounded-3xl border border-primary/20 backdrop-blur-xs max-w-4xl mx-auto mb-12">
                 <motion.div className="text-6xl lg:text-8xl font-black text-primary mb-4" initial={{
                 scale: 0.5,
                 opacity: 0
@@ -513,7 +513,7 @@ export default function ServerMigrationOrchestration() {
                 </p>
               </motion.div>
               
-              <motion.div {...useScrollAnimation()} className="bg-white/10 p-8 lg:p-12 rounded-2xl max-w-4xl mx-auto backdrop-blur-sm">
+              <motion.div {...useScrollAnimation()} className="bg-white/10 p-8 lg:p-12 rounded-2xl max-w-4xl mx-auto backdrop-blur-xs">
                 <h3 className="text-green-400 text-2xl lg:text-3xl font-semibold mb-6">
                   Complete Command & Control
                 </h3>

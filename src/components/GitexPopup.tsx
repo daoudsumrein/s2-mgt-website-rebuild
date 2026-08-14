@@ -99,7 +99,7 @@ export const GitexPopup = () => {
             {/* Close Button */}
             <button
               onClick={closePopup}
-              className="absolute top-2 right-2 sm:top-3 sm:right-3 lg:top-4 lg:right-4 w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-full flex items-center justify-center z-10 transition-all duration-300 active:scale-95 hover:rotate-90 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="absolute top-2 right-2 sm:top-3 sm:right-3 lg:top-4 lg:right-4 w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 rounded-full flex items-center justify-center z-10 transition-all duration-300 active:scale-95 hover:rotate-90 hover:scale-110 focus:outline-hidden focus:ring-2 focus:ring-purple-500"
               style={{
                 background: 'rgba(255, 255, 255, 0.15)',
                 backdropFilter: 'blur(10px)',
@@ -244,7 +244,7 @@ export const GitexPopup = () => {
                 <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 lg:gap-5 justify-center">
                   <button
                     onClick={handleWhatsApp}
-                    className="inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 lg:px-8 lg:py-4 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide sm:tracking-wider uppercase transition-all duration-300 active:scale-95 sm:hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500 sm:hover:shadow-xl"
+                    className="inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 lg:px-8 lg:py-4 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide sm:tracking-wider uppercase transition-all duration-300 active:scale-95 sm:hover:-translate-y-1 focus:outline-hidden focus:ring-2 focus:ring-purple-500 sm:hover:shadow-xl"
                     style={{
                       background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
                       color: '#ffffff',
@@ -257,7 +257,7 @@ export const GitexPopup = () => {
 
                   <a
                     href="mailto:admin@s2mgt.com"
-                    className="inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 lg:px-8 lg:py-4 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide sm:tracking-wider uppercase transition-all duration-300 active:scale-95 sm:hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="inline-flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 lg:px-8 lg:py-4 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide sm:tracking-wider uppercase transition-all duration-300 active:scale-95 sm:hover:-translate-y-1 focus:outline-hidden focus:ring-2 focus:ring-purple-500"
                     style={{
                       background: 'rgba(255, 255, 255, 0.1)',
                       backdropFilter: 'blur(10px)',

@@ -21,7 +21,7 @@ export default function TypewriterText({
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      const fullText = texts[currentTextIndex];
+      const fullText = texts[currentTextIndex] ?? '';
       
       if (isDeleting) {
         setCurrentText(fullText.substring(0, currentText.length - 1));

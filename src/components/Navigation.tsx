@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/router-compat";
 import { ChevronDown, Menu, X, ExternalLink, Shield, Database, Home, Plus, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -150,7 +150,7 @@ export default function Navigation() {
   const handleSheetClose = useCallback(() => setIsOpen(false), []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 will-change-transform">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60 will-change-transform">
       <div className="container flex h-24 items-center">
         {/* Mobile Logo */}
         <Link to="/" className="mr-4 flex items-center md:hidden">
@@ -167,7 +167,7 @@ export default function Navigation() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/"
-                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 ${
+                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 gap-2 ${
                       isActive("/") ? "text-primary" : ""
                     }`}
                   >
@@ -185,7 +185,7 @@ export default function Navigation() {
                       <NavigationMenuLink asChild>
                         <Link
                           to="/about"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">All About S2</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
@@ -198,7 +198,7 @@ export default function Navigation() {
                       <NavigationMenuLink asChild>
                         <Link
                           to="/vendors"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Our Vendors</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
@@ -211,7 +211,7 @@ export default function Navigation() {
                       <NavigationMenuLink asChild>
                         <Link
                           to="/clients"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
                           <div className="text-sm font-medium leading-none">Our Clients</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
@@ -228,7 +228,7 @@ export default function Navigation() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/services"
-                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
+                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 ${
                       isActive("/services") ? "text-primary" : ""
                     }`}
                   >
@@ -259,7 +259,7 @@ export default function Navigation() {
                               <NavigationMenuLink asChild>
                                 <Link
                                   to={solution.href}
-                                  className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                  className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                 >
                                   <div className="text-xs font-medium leading-none">{solution.title}</div>
                                   <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
@@ -284,7 +284,7 @@ export default function Navigation() {
                               <NavigationMenuLink asChild>
                                 <Link
                                   to={solution.href}
-                                  className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                  className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                 >
                                   <div className="text-xs font-medium leading-none">{solution.title}</div>
                                   <p className="line-clamp-1 text-xs leading-snug text-muted-foreground">
@@ -305,7 +305,7 @@ export default function Navigation() {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/contact"
-                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2 ${
+                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 gap-2 ${
                       isActive("/contact") ? "text-primary" : ""
                     }`}
                   >
