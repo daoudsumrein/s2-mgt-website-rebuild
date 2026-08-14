@@ -317,9 +317,9 @@ export default function EndpointProtection() {
               animate={heroContentInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
                 Advanced Endpoint Protection
-              </h1>
+              </h2>
               <p className="text-xl text-muted-foreground max-width-3xl mx-auto">
                 Secure users anywhere with AI-powered, real-time threat detection and automated remediation against malware, ransomware, phishing, cryptomining, and zero-day attacks.
               </p>

@@ -176,7 +176,7 @@ export default function SecurityAwareness() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12 sm:mb-16"
             >
-              <motion.h1 
+              <motion.h2 
                 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight"
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -199,7 +199,7 @@ export default function SecurityAwareness() {
                 <br className="hidden sm:block" />
                 <span className="block sm:inline"> Into Your </span>
                 <span className="text-green-600">Strongest Defense</span>
-              </motion.h1>
+              </motion.h2>
               <motion.p 
                 className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2"
                 whileInView={{ opacity: 1, y: 0 }}

@@ -1,0 +1,31 @@
+# S2 Management - static export (flat .html, no SPA fallback)
+
+Options -Indexes -MultiViews
+
+# /solutions and /vendors exist as BOTH a page and a real directory.
+# DirectorySlash would 301 /solutions -> /solutions/ before our .html rewrite runs.
+DirectorySlash Off
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # A. Legacy 301 redirects (browser-visible)
+  RewriteRule ^solutions/server-backup/?$ /solutions/saas-backup [R=301,L,QSA]
+  RewriteRule ^solutions/cloud-to-cloud-backup/?$ /solutions/OpenText-Server-Backup [R=301,L,QSA]
+
+  # C. Never touch real files (assets, verify-recaptcha.php, 404.html, ...)
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # C. Never rewrite PHP endpoints
+  RewriteRule \.php$ - [L]
+
+  # B. Extensionless URL -> matching .html, internal rewrite only (URL unchanged)
+  RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]+$
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ /$1.html [L,QSA]
+
+  # F. No SPA catch-all. Anything unmatched falls through to ErrorDocument 404.
+</IfModule>

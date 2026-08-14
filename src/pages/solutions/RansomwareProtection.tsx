@@ -212,9 +212,9 @@ export default function RansomwareProtection() {
           <section className="pt-6 pb-0 bg-white">
             <div className="max-w-4xl mx-auto px-6">
               <div className="text-center mb-24">
-                <h1 className="text-5xl font-light text-gray-900 mb-6">
+                <h2 className="text-5xl font-light text-gray-900 mb-6">
                   AirGap Ransomware Protection
-                </h1>
+                </h2>
                 <p className="text-xl text-gray-600 mb-8 font-light">
                   Your Last Line of Defence Against Ransomware
                 </p>

@@ -1,255 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-    <!-- Main Pages -->
-    <url>
-        <loc>https://s2mgt.com/</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/services</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/vendors</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/about</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/contact</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/clients</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- Solutions Pages -->
-    <url>
-        <loc>https://s2mgt.com/solutions/opentext-carbonite-availability</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions/opentext-carbonite-migrate</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions/disaster-recovery-orchestration</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/server-migration-orchestration</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions/security</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions/data-protection</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions/app-modernization</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions/it-discovery</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions/secure-cloud</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://s2mgt.com/solutions/email-archiving</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/endpoint-backup</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/saas-backup</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/onprem-backup</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/OpenText-Server-Backup</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/servers-data-protection</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/endpoint-protection</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/edr</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/mdr</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/security-awareness</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/email-protection</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/email-encryption</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/solutions/ransomware-protection</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Vendor Pages -->
-    <url>
-        <loc>https://s2mgt.com/vendors/opentext</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/vendors/nakivo</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/vendors/appcure</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/vendors/sangfor</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/vendors/tds</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://s2mgt.com/vendors/arrosoft</loc>
-        <lastmod>2025-09-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://s2mgt.com/</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/about</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/clients</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/contact</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/services</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/OpenText-Server-Backup</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/app-modernization</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/cloud-migration</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/container-migration</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/data-protection</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/disaster-recovery-orchestration</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/edr</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/email-archiving</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/email-encryption</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/email-protection</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/endpoint-backup</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/endpoint-protection</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/it-discovery</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/mdr</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/onprem-backup</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/opentext-carbonite-availability</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/opentext-carbonite-migrate</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/ransomware-protection</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/saas-backup</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/secure-cloud</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/security</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/security-awareness</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/server-migration-orchestration</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/solutions/servers-data-protection</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors/appcure</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors/arrosoft</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors/cloudcasa</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors/nakivo</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors/opentext</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors/rivermeadow</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors/sangfor</loc>
+  </url>
+  <url>
+    <loc>https://s2mgt.com/vendors/tds</loc>
+  </url>
 </urlset>

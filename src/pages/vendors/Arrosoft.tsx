@@ -234,9 +234,9 @@ const Arrosoft = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
+                <h2 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
                   Managed security for total peace of mind
-                </h1>
+                </h2>
                 <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
                   Cyber threats are evolving—your security should be too. Our comprehensive managed security solutions provide 24/7 protection, threat detection, and rapid response to keep your data safe from emerging cyber threats.
                 </p>
@@ -257,9 +257,9 @@ const Arrosoft = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
+                <h2 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
                   Managed data protection for unstoppable business continuity
-                </h1>
+                </h2>
                 <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
                   Data loss isn't an option—rapid recovery is. Our enterprise-grade backup and disaster recovery solutions ensure your business operations continue seamlessly, even in the face of unexpected disruptions.
                 </p>
@@ -280,9 +280,9 @@ const Arrosoft = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
+                <h2 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
                   Empowering partners with cutting-edge technology solutions
-                </h1>
+                </h2>
                 <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
                   Success is a shared journey. We provide our partners with industry-leading tools, comprehensive training, and dedicated support to help them deliver exceptional results and grow their businesses.
                 </p>
