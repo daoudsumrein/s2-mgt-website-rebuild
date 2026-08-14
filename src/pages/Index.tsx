@@ -6,7 +6,6 @@ import OurServicesSection from "@/components/OurServicesSection";
 import TechForwardSection from "@/components/TechForwardSection";
 import OurLocationSection from "@/components/OurLocationSection";
 import Footer from "@/components/Footer";
-import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
