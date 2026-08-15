@@ -9,7 +9,7 @@ import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
 // Static export (Hostinger) is opt-in via STATIC_EXPORT=1; the default build is
 // Lovable's runtime SSR build, where Nitro is owned by the shared config.
-const staticExport = process.env.STATIC_EXPORT === "1";
+const staticExport = process.env['STATIC_EXPORT'] === "1";
 
 const STATIC_PAGES = [
       { path: "/" },
