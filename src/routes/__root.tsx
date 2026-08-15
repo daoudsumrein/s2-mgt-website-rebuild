@@ -34,14 +34,14 @@ const organizationJsonLd = JSON.stringify({
       name: "UAE Office",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Office 101, Building 10, Dubai Internet City",
+        streetAddress: "Publishing Pavilion by Tecom Group - Office 208 - Me'aisem First - Dubai Production City",
         addressLocality: "Dubai",
         addressCountry: "United Arab Emirates",
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: "25.096883822536483",
-        longitude: "55.16362955334217",
+        latitude: "25.0318",
+        longitude: "55.1900",
       },
       telephone: "+97144342221",
     },
@@ -83,8 +83,8 @@ const organizationJsonLd = JSON.stringify({
     "@type": "GeoCircle",
     geoMidpoint: {
       "@type": "GeoCoordinates",
-      latitude: "25.096883822536483",
-      longitude: "55.16362955334217",
+      latitude: "25.0318",
+      longitude: "55.1900",
     },
     geoRadius: "4000",
   },

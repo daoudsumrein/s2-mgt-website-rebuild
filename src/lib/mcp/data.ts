@@ -57,7 +57,7 @@ export const services = [
 export const contact = {
   email: "admin@s2mgt.com",
   offices: [
-    { country: "United Arab Emirates", address: "Office 101, Building 10, Dubai Internet City, UAE", phone: "+971 4 434 2221" },
+    { country: "United Arab Emirates", address: "Publishing Pavilion by Tecom Group - Office 208 - Me'aisem First - Dubai Production City - Dubai", phone: "+971 4 434 2221" },
     { country: "Saudi Arabia", phone: "+966 55 084 6532" },
   ],
   contactPage: "/contact",

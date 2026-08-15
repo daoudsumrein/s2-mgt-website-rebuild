@@ -71,7 +71,7 @@ export default function Footer() {
               <div className="space-y-2">
                 <div className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-primary">📍</span>
-                  <span>Office 101, Building 10, Dubai Internet City, UAE</span>
+                  <span>Publishing Pavilion by Tecom Group - Office 208 - Me'aisem First - Dubai Production City - Dubai</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-primary">📞</span>
@@ -196,7 +196,7 @@ export default function Footer() {
               <div className="space-y-2">
                 <div className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-primary mt-0.5">📍</span>
-                  <span>Office 101, Building 10, Dubai Internet City, UAE</span>
+                  <span>Publishing Pavilion by Tecom Group - Office 208 - Me'aisem First - Dubai Production City - Dubai</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-primary">📞</span>
