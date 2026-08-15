@@ -7,20 +7,11 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
-export default defineConfig({
-  tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
-    prerender: {
-      enabled: true,
-      crawlLinks: false,
-      autoStaticPathsDiscovery: false,
-      failOnError: true,
-      autoSubfolderIndex: false,
-      concurrency: 4,
-    },
-    pages: [
+// Static export (Hostinger) is opt-in via STATIC_EXPORT=1; the default build is
+// Lovable's runtime SSR build, where Nitro is owned by the shared config.
+const staticExport = process.env.STATIC_EXPORT === "1";
+
+const STATIC_PAGES = [
       { path: "/" },
       { path: "/about" },
       { path: "/clients" },
@@ -61,14 +52,31 @@ export default defineConfig({
       { path: "/vendors/sangfor" },
       { path: "/vendors/tds" },
       { path: "/404", prerender: { enabled: true, outputPath: "/404.html" } },
-    ],
+];
+
+export default defineConfig({
+  tanstackStart: {
+    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+    // nitro/vite builds from this
+    server: { entry: "server" },
+    ...(staticExport
+      ? {
+          prerender: {
+            enabled: true,
+            crawlLinks: false,
+            autoStaticPathsDiscovery: false,
+            failOnError: true,
+            autoSubfolderIndex: false,
+            concurrency: 4,
+          },
+          pages: STATIC_PAGES,
+        }
+      : { prerender: { enabled: false } }),
   },
-  // Static export target (Hostinger/LiteSpeed): no runtime server is deployed.
-  // Note: the build environment forces nitro's cloudflare-module preset, which
-  // breaks the prerender preview server ("Cannot find module dist/server/server.js").
-  // Disabling nitro entirely is the working equivalent of a static preset here:
-  // the prerendered HTML in dist/client is the deployable artifact.
-  nitro: false,
+  // Static export target (Hostinger/LiteSpeed): no runtime server is deployed,
+  // so nitro is overridden off. In the default Lovable build the key is omitted
+  // entirely so the shared config's nitro setup stays in charge.
+  ...(staticExport ? { nitro: false as const } : {}),
   vite: {
     plugins: [mcpPlugin()],
   },
